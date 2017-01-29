@@ -34,6 +34,9 @@ plugins.push(
         filename: 'index.html',
         template: 'app.html'
     }),
+    new ExtractTextPlugin('[name].[hash].css', {
+        allChunks: true
+    }),
     new HtmlWebpackPlugin({
         minimize: true,
         filename: 'index.html',
@@ -46,9 +49,6 @@ if (isProd) {
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             cutCode: JSON.stringify(true)
-        }),
-        new ExtractTextPlugin('[name].[hash].css', {
-            allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
             children: true,
@@ -110,6 +110,10 @@ module.exports = {
 
     resolveLoader: {
         root: path.join(_root_, 'node_modules')
+    },
+
+    devServer: {
+        historyApiFallback: true
     },
     
     module: {
