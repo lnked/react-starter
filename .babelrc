@@ -1,0 +1,19 @@
+{
+    "presets": [
+        "react",
+        "es2015",
+        "stage-1",
+        "stage-2"
+    ],
+    "env": {
+        "development": {
+            "presets": []
+        },
+        "production": {
+            "plugins": [
+                "transform-react-constant-elements",
+                "transform-react-remove-prop-types"
+            ]
+        }
+    }
+}
