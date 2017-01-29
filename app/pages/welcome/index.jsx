@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Navbar from '../components/navbar/index';
 
-class App extends Component {
+class Welcome extends Component {
     constructor (props) {
         super(props);
     }
@@ -9,13 +10,9 @@ class App extends Component {
     render () {
         return (
             <div className="container">
-                <h1>App</h1>
+                <Navbar />
 
-                <ul>
-                    <li><Link to="/users">users</Link></li>
-                    <li><Link to="/user">user</Link></li>
-                    <li><Link to="/home">home</Link></li>
-                </ul>
+                <h1>Welcome</h1>
 
                 {this.props.children}
             </div>
@@ -23,8 +20,8 @@ class App extends Component {
     }
 }
 
-App.propTypes = {
+Welcome.propTypes = {
     children: React.PropTypes.string
 };
 
-export default App;
+export default Welcome;
