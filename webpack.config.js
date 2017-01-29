@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const args = require('yargs').argv;
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -10,7 +11,9 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const _root_ = path.resolve(__dirname, 'app');
 const _dist_ = path.resolve(__dirname, 'dist');
 
-const AUTOPREFIXER_BROWSERS = [
+const isProd = args.prod;
+
+const AUTOPREFIXER_BROWSERS = !isProd ? [] : [
     'last 2 version',
     'ie >= 8',
     'ie_mob >= 10',
@@ -23,6 +26,59 @@ const AUTOPREFIXER_BROWSERS = [
     'bb >= 10'
 ];
 
+const plugins = [];
+
+plugins.push(
+    new HtmlWebpackPlugin({
+        minimize: true,
+        filename: 'index.html',
+        template: 'app.html'
+    }),
+    new HtmlWebpackPlugin({
+        minimize: true,
+        filename: 'index.html',
+        template: 'app.html'
+    })
+);
+
+if (isProd) {
+    plugins.push(
+        new webpack.NoErrorsPlugin(),
+        new webpack.DefinePlugin({
+            cutCode: JSON.stringify(true)
+        }),
+        new ExtractTextPlugin('[name].[hash].css', {
+            allChunks: true
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            children: true,
+            async: true,
+        }),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new CompressionPlugin({
+            asset: '[path].gz[query]',
+            algorithm: 'gzip',
+            test: /\.js$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            beautify: false,
+            comments: false,
+            compress: {
+                sequences     : true,
+                booleans      : true,
+                loops         : true,
+                unused      : true,
+                warnings    : false,
+                drop_console: true,
+                unsafe      : true
+            }
+        })
+    );
+}
+        
 module.exports = {
 
     context: _root_,
@@ -106,44 +162,5 @@ module.exports = {
         require('postcss-custom-properties')
     ],
 
-    plugins: [
-        new webpack.NoErrorsPlugin(),
-        new HtmlWebpackPlugin({
-            minimize: true,
-            filename: 'index.html',
-            template: 'app.html'
-        }),
-        new ExtractTextPlugin('[name].[hash].css', {
-            allChunks: true
-        }),
-        // new CompressionPlugin({
-        //     asset: '[path].gz[query]',
-        //     algorithm: 'gzip',
-        //     test: /\.js$|\.html$/,
-        //     threshold: 10240,
-        //     minRatio: 0.8
-        // }),
-        new webpack.DefinePlugin({
-            cutCode: JSON.stringify(true)
-        }),
-        new webpack.optimize.DedupePlugin(),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     beautify: false,
-        //     comments: false,
-        //     compress: {
-        //         sequences     : true,
-        //         booleans      : true,
-        //         loops         : true,
-        //         unused      : true,
-        //         warnings    : false,
-        //         drop_console: true,
-        //         unsafe      : true
-        //     }
-        // }),
-        new webpack.optimize.CommonsChunkPlugin({
-            children: true,
-            async: true,
-        }),
-        new webpack.optimize.OccurrenceOrderPlugin()
-    ]
+    plugins: plugins
 }
