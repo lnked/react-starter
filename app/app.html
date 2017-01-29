@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="no-js">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui" />
+    
+    <title>React template</title>
+
+    <script>!function(s){function e(o){if(t[o])return t[o].exports;var a=t[o]={exports:{},id:o,loaded:!1};return s[o].call(a.exports,a,a.exports,e),a.loaded=!0,a.exports}var t={};return e.m=s,e.c=t,e.p="",e(0)}([function(s,e){"use strict";var t=document.documentElement;t.classList.remove("no-js"),t.classList.add("js"),t.classList.add("animate"),setTimeout(function(){window.isJsLoaded||(t.classList.remove("js"),t.classList.remove("animate"),t.classList.add("no-js"))},8e3)}]);</script>
 </head>
 <body>
     <div id="react-app"></div>
-    <script src="bundle.js" charset="utf-8"></script>
+
+    <script>!function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={exports:{},id:r,loaded:!1};return e[r].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t){"use strict";var n=function(){var e=document.getElementById("deferred-styles"),t=document.createElement("div");t.innerHTML=e.textContent,document.body.appendChild(t),e.parentElement.removeChild(e)},r=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;r?r(function(){return window.setTimeout(n,0)}):window.addEventListener("load",n)}]);</script>
+    <script src="bundle.js" async defer></script>
 </body>
 </html>
