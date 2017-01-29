@@ -5,7 +5,7 @@ export default class Users extends Component {
     render () {
         return (
             <div>
-                <h1>Users</h1>
+                <h1>User list</h1>
                 <div className="master">
                     <ul />
                 </div>

@@ -29,6 +29,12 @@ const AUTOPREFIXER_BROWSERS = !isProd ? [] : [
 const plugins = [];
 
 plugins.push(
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+        cutCode: JSON.stringify(true)
+    }),
     new HtmlWebpackPlugin({
         minimize: true,
         filename: 'index.html',
@@ -46,16 +52,10 @@ plugins.push(
 
 if (isProd) {
     plugins.push(
-        new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({
-            cutCode: JSON.stringify(true)
-        }),
         new webpack.optimize.CommonsChunkPlugin({
             children: true,
             async: true,
         }),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.OccurrenceOrderPlugin(),
         new CompressionPlugin({
             asset: '[path].gz[query]',
             algorithm: 'gzip',

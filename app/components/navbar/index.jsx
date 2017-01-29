@@ -13,6 +13,7 @@ export default class Navbar extends Component {
             <Router history={browserHistory} className={styles.navbar}>
                 <Route path="/" component={App}>
                     <IndexRoute component={Home} />
+                    <Route path="home" component={Home} />
                     <Route path="users" component={Users} />
                     <Route path="user" component={User} />
                 </Route>
@@ -20,6 +21,7 @@ export default class Navbar extends Component {
         );
     }
 }
+
 // export default class Navbar extends Component {
 //     render () {
 //         return (

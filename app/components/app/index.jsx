@@ -10,10 +10,13 @@ class App extends Component {
         return (
             <div className="container">
                 <h1>App</h1>
+
                 <ul>
                     <li><Link to="/users">users</Link></li>
                     <li><Link to="/user">user</Link></li>
+                    <li><Link to="/home">home</Link></li>
                 </ul>
+
                 {this.props.children}
             </div>
         );
