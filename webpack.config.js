@@ -7,6 +7,7 @@ const args = require('yargs').argv;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const BowerWebpackPlugin = require('bower-webpack-plugin');
 
 const _root_ = path.resolve(__dirname, 'app');
 const _dist_ = path.resolve(__dirname, 'dist');
@@ -47,6 +48,12 @@ plugins.push(
         minimize: true,
         filename: 'index.html',
         template: 'app.html'
+    }),
+    new BowerWebpackPlugin({
+        modulesDirectories: ['bower_components'],
+        manifestFiles: ['bower.json', '.bower.json'],
+        includes: /.*/,
+        excludes: /.*\.less$/
     })
 );
 
@@ -98,14 +105,16 @@ module.exports = {
 
     resolve: {
         root: _root_,
-        extensions: ['', '.jsx', '.js', '.scss'],
-        modulesDirectories: ['node_modules', 'components']
-        // alias: {
-        //     'css': join(client, 'styles'),
-        //     'containers': join(client, 'containers'),
-        //     'components': join(client, 'components'),
-        //     'utils': join(client, 'utils')
-        // }
+        extensions: ['', '.jsx', '.js', '.json', '.scss'],
+        modulesDirectories: ['node_modules', 'components', 'layouts'],
+        enforceExtension: false,
+        alias:{
+            pages: path.resolve(_root_, 'pages'),
+            utils: path.resolve(_root_, 'utils'),
+            layouts: path.resolve(_root_, 'layouts'),
+            containers: path.resolve(_root_, 'containers'),
+            components: path.resolve(_root_, 'components')
+        }
     },
 
     resolveLoader: {
