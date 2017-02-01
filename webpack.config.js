@@ -4,9 +4,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BowerWebpackPlugin = require('bower-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const _root_ = path.resolve(__dirname, 'app');
 const _dist_ = path.resolve(__dirname, 'dist');
@@ -25,50 +26,28 @@ const plugins = [];
 
 plugins.push(
     new webpack.DefinePlugin({
-        cutCode: JSON.stringify(true)
+        __PROD__: isVerbose,
+        __API_HOST__: isDebug ? JSON.stringify('http://127.0.0.1:8081') : isVerbose ? JSON.stringify('') : JSON.stringify('http://site.dev')
     }),
-    new ExtractTextPlugin('[name].[hash].css', {
+    new webpack.optimize.CommonsChunkPlugin('vendor', isVerbose ? 'vendor.[hash].js' : 'vendor.js'),
+    new ExtractTextPlugin(isVerbose ? '[name].[hash].css' : '[name].css', {
         allChunks: true
     }),
     new HtmlWebpackPlugin({
         minimize: true,
-        filename: 'index.html',
-        template: 'app.html'
+        template: 'app.html',
+        filename: 'index.html'
     }),
     new BowerWebpackPlugin({
         modulesDirectories: ['bower_components'],
         manifestFiles: ['bower.json', '.bower.json'],
         includes: /.*/,
         excludes: /.*\.(less|scss|css)$/
-    })
-
-    // new webpack.ProvidePlugin({
-    //     $: "jquery",
-    //     jQuery: "jquery",
-    //     "window.jQuery": "jquery",
-    //     Rekapi: "rekapi/dist/rekapi",
-    //     AnimationFrame: "animation-frame",
-    //     Parse: "parse",
-    // }),
-    // new webpack.EnvironmentPlugin({
-        
-    // }),
-    // new webpack.DefinePlugin({
-    //     __PROD__: isProd,
-    //     __API_HOST__: localServer ? JSON.stringify('http://127.0.0.1:8081') : isProd ? JSON.stringify('') : JSON.stringify('http://iwill.dev.uprock.pro'),
-    // }),
-    // new webpack.optimize.CommonsChunkPlugin('vendor', isProd ? 'vendor.[hash].js' : 'vendor.js'),
-    // new ExtractTextPlugin(isProd ? '[name].[hash].css' : '[name].css'),
-    // new HtmlWebpackPlugin({
-    //     template: 'jade!./source/app/index.jade',
-    //     chunks: ['app', 'vendor'],
-    //     favicon: 'source/app/assets/img/favicon_32.png',
-    //     appName: appName
-    // }),
-    // new CopyWebpackPlugin([
-    //     { from: 'node_modules/babel-core/browser-polyfill.min.js', to: 'polyfill.js' },
-    //     { from: 'source/app/assets/svgstore', to: 'assets/images/svgstore' }
-    // ])
+    }),
+    new CopyWebpackPlugin([
+        // { from: 'node_modules/babel-core/browser-polyfill.min.js', to: 'polyfill.js' },
+        // { from: 'source/app/assets/svgstore', to: 'assets/images/svgstore' }
+    ])
 );
 
 if (isVerbose) {
