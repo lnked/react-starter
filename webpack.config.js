@@ -1,7 +1,5 @@
 'use strict';
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
-
 const path = require('path');
 const webpack = require('webpack');
 
@@ -13,10 +11,10 @@ const BowerWebpackPlugin = require('bower-webpack-plugin');
 const _root_ = path.resolve(__dirname, 'app');
 const _dist_ = path.resolve(__dirname, 'dist');
 
-const isDEV = NODE_ENV === 'development';
-const isPROD = NODE_ENV === 'production';
+const isDebug = !process.argv.includes('--release');
+const isVerbose = process.argv.includes('--verbose');
 
-const AUTOPREFIXER_BROWSERS = !isPROD ? [] : [
+const AUTOPREFIXER_BROWSERS = !isVerbose ? [] : [
     '>1%',
     'last 4 versions',
     'Firefox ESR',
@@ -26,16 +24,8 @@ const AUTOPREFIXER_BROWSERS = !isPROD ? [] : [
 const plugins = [];
 
 plugins.push(
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
         cutCode: JSON.stringify(true)
-    }),
-    new HtmlWebpackPlugin({
-        minimize: true,
-        filename: 'index.html',
-        template: 'app.html'
     }),
     new ExtractTextPlugin('[name].[hash].css', {
         allChunks: true
@@ -49,15 +39,45 @@ plugins.push(
         modulesDirectories: ['bower_components'],
         manifestFiles: ['bower.json', '.bower.json'],
         includes: /.*/,
-        excludes: /.*\.less$/
+        excludes: /.*\.(less|scss|css)$/
     })
+
+    // new webpack.ProvidePlugin({
+    //     $: "jquery",
+    //     jQuery: "jquery",
+    //     "window.jQuery": "jquery",
+    //     Rekapi: "rekapi/dist/rekapi",
+    //     AnimationFrame: "animation-frame",
+    //     Parse: "parse",
+    // }),
+    // new webpack.EnvironmentPlugin({
+        
+    // }),
+    // new webpack.DefinePlugin({
+    //     __PROD__: isProd,
+    //     __API_HOST__: localServer ? JSON.stringify('http://127.0.0.1:8081') : isProd ? JSON.stringify('') : JSON.stringify('http://iwill.dev.uprock.pro'),
+    // }),
+    // new webpack.optimize.CommonsChunkPlugin('vendor', isProd ? 'vendor.[hash].js' : 'vendor.js'),
+    // new ExtractTextPlugin(isProd ? '[name].[hash].css' : '[name].css'),
+    // new HtmlWebpackPlugin({
+    //     template: 'jade!./source/app/index.jade',
+    //     chunks: ['app', 'vendor'],
+    //     favicon: 'source/app/assets/img/favicon_32.png',
+    //     appName: appName
+    // }),
+    // new CopyWebpackPlugin([
+    //     { from: 'node_modules/babel-core/browser-polyfill.min.js', to: 'polyfill.js' },
+    //     { from: 'source/app/assets/svgstore', to: 'assets/images/svgstore' }
+    // ])
 );
 
-if (isPROD) {
+if (isVerbose) {
     plugins.push(
+        new webpack.NoErrorsPlugin(),
+        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            children: true,
             async: true,
+            children: true
         }),
         new CompressionPlugin({
             asset: '[path].gz[query]',
@@ -66,14 +86,10 @@ if (isPROD) {
             threshold: 10240,
             minRatio: 0.8
         }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
         new webpack.optimize.UglifyJsPlugin({
             beautify: false,
             comments: false,
+            mangle: false,
             compress: {
                 sequences     : true,
                 booleans      : true,
@@ -83,7 +99,8 @@ if (isPROD) {
                 drop_console: true,
                 unsafe      : true
             }
-        })
+        }),
+        new webpack.optimize.OccurrenceOrderPlugin()
     );
 }
 
@@ -138,7 +155,7 @@ postcss.push(
     require('postcss-flexbugs-fixes')(),
 );
 
-if (isPROD) {
+if (isVerbose) {
     postcss.push(
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
@@ -154,7 +171,7 @@ module.exports = {
 
     entry: {
         bundle: [_root_, 'app'].join('/'),
-        // styles: [_root_, 'app.css'].join('/')
+        styles: [_root_, 'app.scss'].join('/')
     },
 
     output: {
@@ -169,7 +186,7 @@ module.exports = {
         aggregateTimeout: 100
     },
 
-    devtool: isDEV ? "cheap-inline-module-source-map" : (isPROD ? '#source-map' : null),
+    devtool: isVerbose ? 'source-map' : null,
 
     resolve: {
         root: _root_,
@@ -190,9 +207,18 @@ module.exports = {
     },
 
     devServer: {
-        historyApiFallback: true
+        contentBase: base + 'dist',
+        historyApiFallback: true,
+        stats: {
+            modules: false,
+            cached: false,
+            colors: true,
+            chunk: false
+        },
+        host: '0.0.0.0',
+        port: 8080
     },
-    
+
     module: {
         preLoaders: [
             {
@@ -204,8 +230,8 @@ module.exports = {
         loaders: [
             {
                 test: /\.js[x]?$/,
-                include: _root_,
                 loader: 'babel-loader',
+                include: _root_,
                 exclude: /(node_modules|bower_components)/,
                 query: {
                     presets: ['es2015', 'react', 'stage-0', 'stage-1', 'stage-2']
@@ -229,6 +255,23 @@ module.exports = {
                 loader: 'file-loader'
             }
         ]
+    },
+
+    bail: !isDebug,
+
+    cache: isDebug,
+    debug: isDebug,
+
+    stats: {
+        colors: true,
+        reasons: isDebug,
+        hash: isVerbose,
+        version: isVerbose,
+        timings: true,
+        chunks: isVerbose,
+        chunkModules: isVerbose,
+        cached: isVerbose,
+        cachedAssets: isVerbose,
     },
 
     postcss: postcss,

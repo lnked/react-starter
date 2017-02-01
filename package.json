@@ -6,8 +6,8 @@
   "scripts": {
     "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test mocha --compilers js:babel-register --recursive",
     "clean": "rm -rf dist",
-    "start": "webpack-dev-server --content-base ./dist --port 3002",
-    "server": "webpack-dev-server --progress --colors --port 3001 --watch & open http://localhost:3001",
+    "start": "webpack-dev-server --release --content-base ./dist --port 3002",
+    "server": "webpack-dev-server --progress --colors --verbose --port 3001 --watch & open http://localhost:3001",
     "build": "npm run clean && webpack --prod",
     "deploy": "npm run build && gh-pages -d dist -m 'Updates --skip-ci'"
   },
