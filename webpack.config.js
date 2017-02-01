@@ -12,10 +12,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const _root_ = path.resolve(__dirname, 'app');
 const _dist_ = path.resolve(__dirname, 'dist');
 
-const isDebug = !process.argv.includes('--release');
-const isVerbose = process.argv.includes('--verbose');
+const isDevelop = process.argv.includes('--develop') || !process.argv.includes('--release');
+const isRelease = process.argv.includes('--release');
 
-const AUTOPREFIXER_BROWSERS = !isVerbose ? [] : [
+const AUTOPREFIXER_BROWSERS = !isRelease ? [] : [
     '>1%',
     'last 4 versions',
     'Firefox ESR',
@@ -26,11 +26,10 @@ const plugins = [];
 
 plugins.push(
     new webpack.DefinePlugin({
-        __PROD__: isVerbose,
-        __API_HOST__: isDebug ? JSON.stringify('http://127.0.0.1:8081') : isVerbose ? JSON.stringify('') : JSON.stringify('http://site.dev')
+        __PROD__: isRelease,
+        __API_HOST__: isDevelop ? JSON.stringify('http://0.0.0.1:7777') : isRelease ? JSON.stringify('') : JSON.stringify('http://site.dev')
     }),
-    // new webpack.optimize.CommonsChunkPlugin('vendor', isVerbose ? 'vendor.[hash].js' : 'vendor.js'),
-    new ExtractTextPlugin(isVerbose ? '[name].[hash].css' : '[name].css', {
+    new ExtractTextPlugin(isRelease ? '[name].[hash].css' : '[name].css', {
         allChunks: true
     }),
     new HtmlWebpackPlugin({
@@ -51,7 +50,7 @@ plugins.push(
     new webpack.HotModuleReplacementPlugin()
 );
 
-if (isVerbose) {
+if (isRelease) {
     plugins.push(
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.DedupePlugin(),
@@ -135,7 +134,7 @@ postcss.push(
     require('postcss-flexbugs-fixes')()
 );
 
-if (isVerbose) {
+if (isRelease) {
     postcss.push(
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
@@ -157,16 +156,17 @@ module.exports = {
     output: {
         path: _dist_,
         publicPath: '/',
-        filename: 'bundle.js' // '[name].js',
+        // filename: 'bundle.js' // '[name].js',
+        filename: '[name].js' // '[name].js',
     },
 
-    watch: isDebug,
+    watch: isDevelop,
 
     watchOptions: {
         aggregateTimeout: 100
     },
 
-    devtool: isVerbose ? 'source-map' : null,
+    devtool: isRelease ? 'source-map' : null,
 
     resolve: {
         root: _root_,
@@ -189,22 +189,19 @@ module.exports = {
     devServer: {
         contentBase: _dist_,
         historyApiFallback: true,
-        watchContentBase: true,
+        watchContentBase: isDevelop,
+        clientLogLevel: "info",
         stats: {
             modules: false,
             cached: false,
             colors: true,
             chunk: false
         },
-        hot: true,
-        compress: true,
+        // hot: isDevelop,
+        compress: isRelease,
         host: '0.0.0.0',
-        port: 3000,
-        proxy: {
-            "**": "http://localhost:3000"
-        },
-        clientLogLevel: "info",
-        lazy: true,
+        port: 7777,
+        lazy: true
     },
 
     module: {
@@ -222,8 +219,26 @@ module.exports = {
                 include: _root_,
                 exclude: /(node_modules|bower_components)/,
                 query: {
-                    presets: ['es2015', 'react', 'stage-0', 'stage-1', 'stage-2']
-                } 
+                    babelrc: false,
+                    cacheDirectory: isDevelop,
+                    presets: [
+                        'es2015',
+                        'react',
+                        'stage-0',
+                        'stage-1',
+                        'stage-2',
+                        ...isDevelop ? [] : [
+                            'react-optimize'
+                        ]
+                    ],
+                    plugins: [
+                        'transform-runtime',
+                        ...!isDevelop ? [] : [
+                            'transform-react-jsx-source',
+                            'transform-react-jsx-self'
+                        ]
+                    ]
+                }
             },
             {
                 test: /\.(scss|css)$/,
@@ -245,22 +260,22 @@ module.exports = {
         ]
     },
 
-    bail: !isDebug,
+    bail: !isDevelop,
 
-    cache: isDebug,
+    cache: isDevelop,
 
-    debug: isDebug,
+    debug: isDevelop,
 
     stats: {
         colors: true,
-        reasons: isDebug,
-        hash: isVerbose,
-        version: isVerbose,
+        reasons: isDevelop,
+        hash: isRelease,
+        version: isRelease,
         timings: true,
-        chunks: isVerbose,
-        chunkModules: isVerbose,
-        cached: isVerbose,
-        cachedAssets: isVerbose,
+        chunks: isRelease,
+        chunkModules: isRelease,
+        cached: isRelease,
+        cachedAssets: isRelease,
     },
 
     postcss: postcss,
