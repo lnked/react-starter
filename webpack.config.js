@@ -29,7 +29,7 @@ plugins.push(
         __PROD__: isVerbose,
         __API_HOST__: isDebug ? JSON.stringify('http://127.0.0.1:8081') : isVerbose ? JSON.stringify('') : JSON.stringify('http://site.dev')
     }),
-    new webpack.optimize.CommonsChunkPlugin('vendor', isVerbose ? 'vendor.[hash].js' : 'vendor.js'),
+    // new webpack.optimize.CommonsChunkPlugin('vendor', isVerbose ? 'vendor.[hash].js' : 'vendor.js'),
     new ExtractTextPlugin(isVerbose ? '[name].[hash].css' : '[name].css', {
         allChunks: true
     }),
@@ -47,7 +47,8 @@ plugins.push(
     new CopyWebpackPlugin([
         // { from: 'node_modules/babel-core/browser-polyfill.min.js', to: 'polyfill.js' },
         // { from: 'source/app/assets/svgstore', to: 'assets/images/svgstore' }
-    ])
+    ]),
+    new webpack.HotModuleReplacementPlugin()
 );
 
 if (isVerbose) {
@@ -198,7 +199,12 @@ module.exports = {
         hot: true,
         compress: true,
         host: '0.0.0.0',
-        port: 3000
+        port: 3000,
+        proxy: {
+            "**": "http://localhost:3000"
+        },
+        clientLogLevel: "info",
+        lazy: true,
     },
 
     module: {
@@ -242,6 +248,7 @@ module.exports = {
     bail: !isDebug,
 
     cache: isDebug,
+
     debug: isDebug,
 
     stats: {

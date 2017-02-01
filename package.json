@@ -6,7 +6,7 @@
   "scripts": {
     "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test mocha --compilers js:babel-register --recursive",
     "clean": "rm -rf dist",
-    "start": "webpack-dev-server --content-base ./dist --release",
+    "start": "webpack-dev-server --hot --inline --release --content-base ./dist",
     "server": "webpack-dev-server --progress --colors --release",
     "build": "npm run clean && webpack --verbose",
     "deploy": "npm run build && gh-pages -d dist -m 'Updates --skip-ci'"
