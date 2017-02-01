@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import Form from '../components/form/index';
 
 export default class MainLayout extends Component {
 
@@ -52,12 +53,12 @@ export default class MainLayout extends Component {
                     </ul>
                 </aside>
 
-                <form onSubmit={this.handleSubmit} expanded={this.state.expanded} onExpand={this.handleExpand}>
+                <Form onSubmit={this.handleSubmit} expanded={this.state.expanded} onExpand={this.handleExpand}>
                     <div>
                         <h1>{title}</h1>
                         <input type="text" value={model.name} onChange={this.handleChange} placeholder="Your Name"/>
                     </div>
-                </form>
+                </Form>
 
                 <main>
                     {this.props.children}
