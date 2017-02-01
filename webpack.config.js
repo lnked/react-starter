@@ -131,7 +131,7 @@ postcss.push(
     require('postcss-selector-not')(),
     // Postcss flexbox bug fixer
     // https://github.com/luisrudge/postcss-flexbugs-fixes
-    require('postcss-flexbugs-fixes')(),
+    require('postcss-flexbugs-fixes')()
 );
 
 if (isVerbose) {
@@ -159,7 +159,7 @@ module.exports = {
         filename: 'bundle.js' // '[name].js',
     },
 
-    watch: NODE_ENV=='development',
+    watch: isDebug,
 
     watchOptions: {
         aggregateTimeout: 100
@@ -186,16 +186,19 @@ module.exports = {
     },
 
     devServer: {
-        contentBase: base + 'dist',
+        contentBase: _dist_,
         historyApiFallback: true,
+        watchContentBase: true,
         stats: {
             modules: false,
             cached: false,
             colors: true,
             chunk: false
         },
+        hot: true,
+        compress: true,
         host: '0.0.0.0',
-        port: 8080
+        port: 3000
     },
 
     module: {
