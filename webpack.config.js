@@ -33,9 +33,13 @@ plugins.push(
         allChunks: true
     }),
     new HtmlWebpackPlugin({
-        minimize: true,
-        template: 'app.html',
+        filetype: 'pug',
+        minimize: isDevelop,
+        template: 'app.pug',
         filename: 'index.html'
+        // chunks: ['app', 'vendor'],
+        // favicon: 'source/app/assets/img/favicon_32.png',
+        // appName: appName
     }),
     new BowerWebpackPlugin({
         modulesDirectories: ['bower_components'],
@@ -149,7 +153,7 @@ module.exports = {
     context: _root_,
 
     entry: {
-        bundle: [_root_, 'app'].join('/'),
+        bundle: [_root_, 'app.pug'].join('/'),
         styles: [_root_, 'app.scss'].join('/')
     },
 
@@ -239,6 +243,10 @@ module.exports = {
                         ]
                     ]
                 }
+            },
+            {
+                test: /\.(pug|jade)/,
+                loader: 'pug-html-loader'
             },
             {
                 test: /\.(scss|css)$/,

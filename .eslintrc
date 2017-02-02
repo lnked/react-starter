@@ -15,12 +15,14 @@
         "jquery": true,
         "mocha": true
     },
-    "plugins": ["react", "import"],
+    "plugins": ["react"],
     "settings": {
-        "import/resolver": "webpack"
-      },
+        "import/ignore": [".coffee", ".css", ".scss"],
+        "import/resolver": "webpack",
+        "import/extensions": [".js", ".jsx"]
+    },
     "extends": ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
-        "rules": {
+    "rules": {
         "no-debugger": 1,
         "no-alert": 0,
         "no-lone-blocks": 0,

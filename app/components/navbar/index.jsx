@@ -2,6 +2,8 @@ import styles from './styles.scss';
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
+// https://github.com/kriasoft/react-starter-kit/blob/master/src/client.js
+
 import Routes from '../routes';
 
 export default class Navbar extends Component {
@@ -15,6 +17,23 @@ export default class Navbar extends Component {
         );
     }
 }
+// import React, { Component } from 'react';
+// import { Link } from 'react-router';
+
+// export default class Router extends Component {
+//     render () {
+//         return (
+//             <ul className="user-list">
+//                 <li><Link to="/dashboard" onlyActiveOnIndex={false} activeClassName="active">Index</Link></li>
+//                 <li><Link to="/users/1" onlyActiveOnIndex={true} activeClassName="active">Ryan</Link></li>
+//                 <li><Link to="/users/3" onlyActiveOnIndex={false} activeClassName="active">Dan</Link></li>
+//                 <li><Link to="/users/4" onlyActiveOnIndex={true} activeClassName="active">Matt</Link></li>
+//                 <li><Link to="/users/5" onlyActiveOnIndex={false} activeClassName="active">Tobias</Link></li>
+//                 <li><Link to="/users/6" onlyActiveOnIndex={true} activeClassName="active">Sebastian</Link></li>
+//             </ul>
+//         );
+//     }
+// }
 
 // import AppBar from 'react-toolbox/lib/app_bar';
 // import Navigation from 'react-toolbox/lib/navigation';

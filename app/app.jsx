@@ -10,24 +10,26 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Router from './router';
 
-class App extends Component {
-    render () {
-        return (
-            <div>
-                <header>
-                    <h1>React It works.</h1>
-                </header>
+render(Router, document.getElementById('react-root'));
 
-                <aside className="primary-aside">
-                    Aside
-                </aside>
+// class App extends Component {
+//     render () {
+//         return (
+//             <div>
+//                 <header>
+//                     <h1>React It works.</h1>
+//                 </header>
 
-                <main>
-                    <Router />
-                </main>
-            </div>
-        );
-    }
-}
+//                 <aside className="primary-aside">
+//                     Aside
+//                 </aside>
 
-render(<App />, document.getElementById('react-root'));
+//                 <main>
+//                     <Router />
+//                 </main>
+//             </div>
+//         );
+//     }
+// }
+
+// render(<App />, document.getElementById('react-root'));
