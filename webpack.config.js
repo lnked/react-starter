@@ -48,8 +48,9 @@ plugins.push(
         excludes: /.*\.(less|scss|css)$/
     }),
     new CopyWebpackPlugin([
-        // { from: 'node_modules/babel-core/browser-polyfill.min.js', to: 'polyfill.js' },
-        // { from: 'source/app/assets/svgstore', to: 'assets/images/svgstore' }
+        { from: 'assets/scripts', to: 'js' },
+        { from: 'assets/images', to: 'images' },
+        { from: 'assets/favicon/', to: 'favicon' }
     ]),
     new webpack.HotModuleReplacementPlugin()
 );
