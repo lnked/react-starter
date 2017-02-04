@@ -8,10 +8,12 @@ html(
     head
         title React template
 
+        link(rel='canonical', href='')
+
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimal-ui')
-        
+
         meta(name='description', content='')
         meta(name='keywords', content='')
 
@@ -19,9 +21,47 @@ html(
 
         base(href='/')
 
-        script.
-            window.prerenderReady = false
+        //- meta(property='og:title', content='')
+        //- meta(property='og:description', content='')
+        //- meta(property='og:image', content='')
+        //- meta(property='og:type', content='website')
+        //- meta(property='og:url', content='')
+        //- meta(property='og:site_name', content='')
+        //- meta(property='og:email', content='')
+
+        //- meta(property='twitter:card', content='summary_large_image')
+        //- meta(property='twitter:site', content='@')
+        //- meta(property='twitter:creator', content='@')
+        //- meta(property='twitter:url', content='')
+        //- meta(property='twitter:title', content='')
+        //- meta(property='twitter:description', content='')
+        //- meta(property='twitter:image', content='')
+
+        //- // favicon
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_32.png' size='32x32')
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_57.png' size='57x57')
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_72.png' size='72x72')
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_114.png' size='114x114')
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_120.png' size='120x120')
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_144.png' size='144x144')
+        //- link(rel='icon' type='image/png' href='assets/images/favicon_152.png' size='152x152')
+
+        //- // apple-touch icon 
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_32.png' size='32x32')
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_57.png' size='57x57')
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_72.png' size='72x72')
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_114.png' size='114x114')
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_120.png' size='120x120')
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_144.png' size='144x144')
+        //- link(rel='apple-touch-icon' href='assets/images/favicon_152.png' size='152x152')
+        
+        //- meta(property='fb:app_id', content='111111111')
+        
+        script(src="polyfill.js")
     body
         //- img(src=require("./my/image.png"))
 
         #react-root
+
+        script.
+            window.prerenderReady = false
