@@ -1,56 +1,47 @@
 'use strict';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const BowerWebpackPlugin = require('bower-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const isDevelop = process.argv.includes('--develop') || !process.argv.includes('--release');
-const isRelease = process.argv.includes('--release');
-
 const plugins = [];
 
+const webpack = require('webpack');
+const define = require('./define');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+
 plugins.push(
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-        __PROD__: isRelease,
-        __API_HOST__: isDevelop ? JSON.stringify('http://0.0.0.1:7777') : isRelease ? JSON.stringify('') : JSON.stringify('http://site.dev')
+        __PROD__: define.rs_release,
+        __API_HOST__: define.rs_develop ? JSON.stringify('http://0.0.0.0:7777') : define.rs_release ? JSON.stringify('') : JSON.stringify('http://site.dev')
     }),
-    new ExtractTextPlugin(isRelease ? '[name].[hash].css' : '[name].css', {
+    new ExtractTextPlugin({
+        filename: define.rs_release ? '[name].[hash].css' : '[name].css',
+        disable: false,
         allChunks: true
     }),
     new HtmlWebpackPlugin({
         filetype: 'pug',
-        minimize: isDevelop,
+        minimize: define.rs_release,
         template: 'app.pug',
         filename: 'index.html'
-        // chunks: ['app', 'vendor'],
-        // favicon: 'source/app/assets/img/favicon_32.png',
-        // appName: appName
-    }),
-    new BowerWebpackPlugin({
-        modulesDirectories: ['bower_components'],
-        manifestFiles: ['bower.json', '.bower.json'],
-        includes: /.*/,
-        excludes: /.*\.(less|scss|css)$/
     }),
     new CopyWebpackPlugin([
         { from: 'assets/scripts', to: 'js' },
         { from: 'assets/images', to: 'images' },
         { from: 'assets/favicon/', to: 'favicon' }
-    ]),
-    new webpack.HotModuleReplacementPlugin()
+    ])
 );
 
-if (isRelease) {
+if (define.rs_release) {
     plugins.push(
-        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             async: true,
             children: true,
-            minChuncs: 3,
-            // name: 'vendor'
+            minChuncs: 3
         }),
         new CompressionPlugin({
             asset: '[path].gz[query]',
@@ -77,4 +68,4 @@ if (isRelease) {
     );
 }
 
-export default plugins;
+module.exports.config = plugins;

@@ -2,124 +2,105 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const argv = require('minimist')(process.argv.slice(2));
+const define = require('./define');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const _root_ = path.resolve(__dirname, '../app');
-const _dist_ = path.resolve(__dirname, '../dist');
-
-const isDevelop = argv.env === 'develop' || argv.env !== 'release';
-const isRelease = argv.env === 'release';
-
-// const postcss = require('./postcss');
-// const plugins = require('./plugins');
-// const loaders = require('./loaders');
-
-console.log( path.resolve(__dirname) );
+const rules = require('./rules');
+const plugins = require('./plugins');
 
 module.exports = {
     
-    context: _root_,
+    context: define.rs_root,
 
-    entry: './app/test',
-    
+    devtool: define.rs_release ? 'inline-source-map' : null,
+
+    entry: {
+        // bundle: [define.rs_root, 'app.jsx'].join('/'),
+        styles: [define.rs_root, 'app.scss'].join('/')
+    },
+
+    // entry: {
+    //     bundle: define.rs_root,
+    //     // vendor: ['react', 'react-dom', 'react-router'],
+    // },
+
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, '../dist')
-    }
+        filename: '[name].[hash].js',
+        path: define.rs_dist,
+        publicPath: '/'
+    },
+
+    resolve: {
+        modules: [
+            define.rs_root, 'node_modules', 'bower_components', 'components', 'layouts', 'pages', 'utils', 'containers'
+        ],
+        enforceExtension: false,
+        enforceModuleExtension: false,
+        extensions: ['.js', '.jsx', '.json', '.scss'],
+        descriptionFiles: ['package.json', 'bower.json'],
+        mainFiles: ['index', 'app']
+    },
+
+    resolveLoader: {
+        modules: ['node_modules']
+    },
+
+    module: {
+        rules: rules.config
+    },
+
+    performance: {
+        maxAssetSize: 100000,
+        maxEntrypointSize: 300000,
+        hints: false
+    },
+
+    devServer: {
+        contentBase: define.rs_dist,
+        // watchContentBase: define.rs_develop,
+        historyApiFallback: { disableDotRule: true },
+        compress: true,
+        host: '0.0.0.0',
+        port: 7777,
+        lazy: true,
+        hot: true,
+        hotOnly: true,
+        public: '0.0.0.0:7777'
+    },
+
+    plugins: plugins.config
+
+    // module: {
+    //     rules: webpackRules
+    // },
+
+    // watch: define.rs_develop,
+
+    // watchOptions: {
+    //     aggregateTimeout: 100
+    // },
+
+    // bail: !define.rs_develop,
+
+    // cache: define.rs_develop,
+
+    // debug: define.rs_develop,
+
+    // stats: {
+    //     colors: true,
+    //     reasons: define.rs_develop,
+    //     hash: define.rs_release,
+    //     version: define.rs_release,
+    //     timings: true,
+    //     chunks: define.rs_release,
+    //     chunkModules: define.rs_release,
+    //     cached: define.rs_release,
+    //     cachedAssets: define.rs_release,
+    // },
+
+    // 
+
+    // 
 };
 
-// module.exports = {
-
-//     context: _root_,
-
-//     entry: {
-//         bundle: [_root_, 'app.pug'].join('/'),
-//         styles: [_root_, 'app.scss'].join('/')
-//     },
-
-//     output: {
-//         path: _dist_,
-//         publicPath: '/',
-//         // filename: 'bundle.js' // '[name].js',
-//         filename: '[name].js' // '[name].js',
-//     },
-
-//     watch: isDevelop,
-
-//     watchOptions: {
-//         aggregateTimeout: 100
-//     },
-
-//     devtool: isRelease ? 'source-map' : null,
-
-//     resolve: {
-//         root: _root_,
-//         extensions: ['', '.jsx', '.js', '.json', '.scss'],
-//         modulesDirectories: ['node_modules', 'components', 'layouts'],
-//         enforceExtension: false,
-//         alias:{
-//             pages: path.resolve(_root_, 'pages'),
-//             utils: path.resolve(_root_, 'utils'),
-//             layouts: path.resolve(_root_, 'layouts'),
-//             containers: path.resolve(_root_, 'containers'),
-//             components: path.resolve(_root_, 'components')
-//         }
-//     },
-
-//     resolveLoader: {
-//         root: path.join(_root_, 'node_modules')
-//     },
-
-//     devServer: {
-//         contentBase: _dist_,
-//         historyApiFallback: true,
-//         watchContentBase: isDevelop,
-//         clientLogLevel: "info",
-//         stats: {
-//             modules: false,
-//             cached: false,
-//             colors: true,
-//             chunk: false
-//         },
-//         // hot: isDevelop,
-//         compress: isRelease,
-//         host: '0.0.0.0',
-//         port: 7777,
-//         lazy: true
-//     },
-
-//     module: {
-//         preLoaders: [
-//             {
-//                 test: /\.(js|jsx)?$/,
-//                 loader: 'eslint',
-//                 exclude: /node_modules/
-//             }
-//         ],
-//         loaders: loaders
-//     },
-
-//     bail: !isDevelop,
-
-//     cache: isDevelop,
-
-//     debug: isDevelop,
-
-//     stats: {
-//         colors: true,
-//         reasons: isDevelop,
-//         hash: isRelease,
-//         version: isRelease,
-//         timings: true,
-//         chunks: isRelease,
-//         chunkModules: isRelease,
-//         cached: isRelease,
-//         cachedAssets: isRelease,
-//     },
-
-//     postcss: postcss,
-
-//     plugins: plugins
-// }
+// const server = new WebpackDevServer(webpack(webpackConfig(env)), devServerConfig);
+// server.listen(7777, '0.0.0.0');

@@ -1,11 +1,10 @@
 'use strict';
 
-const isDevelop = process.argv.includes('--develop') || !process.argv.includes('--release');
-const isRelease = process.argv.includes('--release');
-
 const postcss = [];
 
-const AUTOPREFIXER_BROWSERS = !isRelease ? [] : [
+const define = require('./define');
+
+const AUTOPREFIXER_BROWSERS = !define.rs_release ? [] : [
     '>1%',
     'last 4 versions',
     'Firefox ESR',
@@ -43,6 +42,7 @@ postcss.push(
     require('postcss-nested')(),
     // W3C color() function, e.g. div { background: color(red alpha(90%)); }
     // https://github.com/postcss/postcss-color-function
+    require('postcss-hexrgba')(),
     require('postcss-color-function')(),
     // Convert CSS shorthand filters to SVG equivalent, e.g. .blur { filter: blur(4px); }
     // https://github.com/iamvdo/pleeease-filters
@@ -61,7 +61,7 @@ postcss.push(
     require('postcss-flexbugs-fixes')()
 );
 
-if (isRelease) {
+if (define.rs_release) {
     postcss.push(
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
@@ -71,4 +71,4 @@ if (isRelease) {
     );
 }
 
-export default postcss;
+module.exports.config = postcss;

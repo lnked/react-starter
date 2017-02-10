@@ -1,20 +1,15 @@
 {
     "presets": [
-        "es2015",
-        "react",
-        "stage-0",
-        "stage-1",
-        "stage-2"
+        [
+            "es2015",
+            {
+                "modules": false
+            }
+        ],
+        "stage-2",
+        "react"
     ],
-    "env": {
-        "development": {
-            "presets": []
-        },
-        "production": {
-            "plugins": [
-                "transform-react-constant-elements",
-                "transform-react-remove-prop-types"
-            ]
-        }
+    "plugins": {
+        "react-hot-loader/babel"
     }
 }
