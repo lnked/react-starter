@@ -11,17 +11,12 @@ module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_release ? 'inline-source-map' : null,
+    devtool: define.rs_release ? 'cheap-module-source-map' : 'eval',
 
     entry: {
-        // bundle: [define.rs_root, 'app.jsx'].join('/'),
+        bundle: [define.rs_root, 'app.jsx'].join('/'),
         styles: [define.rs_root, 'app.scss'].join('/')
     },
-
-    // entry: {
-    //     bundle: define.rs_root,
-    //     // vendor: ['react', 'react-dom', 'react-router'],
-    // },
 
     output: {
         filename: '[name].[hash].js',
@@ -56,7 +51,7 @@ module.exports = {
 
     devServer: {
         contentBase: define.rs_dist,
-        // watchContentBase: define.rs_develop,
+        watchContentBase: define.rs_develop,
         historyApiFallback: { disableDotRule: true },
         compress: true,
         host: '0.0.0.0',
@@ -67,40 +62,27 @@ module.exports = {
         public: '0.0.0.0:7777'
     },
 
-    plugins: plugins.config
+    watch: define.rs_develop,
 
-    // module: {
-    //     rules: webpackRules
-    // },
+    watchOptions: {
+        aggregateTimeout: 100
+    },
 
-    // watch: define.rs_develop,
+    plugins: plugins.config,
 
-    // watchOptions: {
-    //     aggregateTimeout: 100
-    // },
+    bail: !define.rs_develop,
 
-    // bail: !define.rs_develop,
+    cache: define.rs_develop,
 
-    // cache: define.rs_develop,
-
-    // debug: define.rs_develop,
-
-    // stats: {
-    //     colors: true,
-    //     reasons: define.rs_develop,
-    //     hash: define.rs_release,
-    //     version: define.rs_release,
-    //     timings: true,
-    //     chunks: define.rs_release,
-    //     chunkModules: define.rs_release,
-    //     cached: define.rs_release,
-    //     cachedAssets: define.rs_release,
-    // },
-
-    // 
-
-    // 
+    stats: {
+        colors: true,
+        reasons: define.rs_develop,
+        hash: define.rs_release,
+        version: define.rs_release,
+        timings: true,
+        chunks: define.rs_release,
+        chunkModules: define.rs_release,
+        cached: define.rs_release,
+        cachedAssets: define.rs_release,
+    }
 };
-
-// const server = new WebpackDevServer(webpack(webpackConfig(env)), devServerConfig);
-// server.listen(7777, '0.0.0.0');

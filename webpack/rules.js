@@ -15,6 +15,13 @@ rules.push(
 
 rules.push(
     {
+        test: /\.pug/,
+        use: ['pug-loader']
+    }
+);
+
+rules.push(
+    {
         test: /\.js[x]?$/,
         use: [
             {
@@ -66,13 +73,6 @@ rules.push(
                 }
             }
         ]
-    }
-);
-
-rules.push(
-    {
-        test: /\.pug/,
-        use: ['pug-loader']
     }
 );
 

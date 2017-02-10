@@ -15,13 +15,15 @@ plugins.push(
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-        __PROD__: define.rs_release,
-        __API_HOST__: define.rs_develop ? JSON.stringify('http://0.0.0.0:7777') : define.rs_release ? JSON.stringify('') : JSON.stringify('http://site.dev')
+        'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+        }
     }),
     new ExtractTextPlugin({
         filename: define.rs_release ? '[name].[hash].css' : '[name].css',
         disable: false,
-        allChunks: true
+        allChunks: false
+        // allChunks: true
     }),
     new HtmlWebpackPlugin({
         filetype: 'pug',
@@ -43,28 +45,40 @@ if (define.rs_release) {
             children: true,
             minChuncs: 3
         }),
+        new webpack.optimize.AggressiveMergingPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            mangle: true,
+            compress: {
+                unused          : true,
+                dead_code       : true,
+                warnings        : false,
+                drop_debugger   : true,
+                conditionals    : true,
+                evaluate        : true,
+                drop_console    : true,
+                sequences       : true,
+                booleans        : true,
+                loops           : true,
+                unsafe          : true,
+                unsafe_comps    : true,
+                screw_ie8       : true,
+                pure_getters    : true
+            },
+            output: {
+                beautify: false,
+                comments: false
+            },
+            exclude: [/\.min\.js$/gi]
+        }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
         new CompressionPlugin({
             asset: '[path].gz[query]',
             algorithm: 'gzip',
-            test: /\.js$|\.html$/,
+            test: /\.js$|\.css$|\.html$/,
             threshold: 10240,
-            minRatio: 0.8
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            beautify: false,
-            comments: false,
-            mangle: false,
-            compress: {
-                sequences     : true,
-                booleans      : true,
-                loops         : true,
-                unused      : true,
-                warnings    : false,
-                drop_console: true,
-                unsafe      : true
-            }
-        }),
-        new webpack.optimize.OccurrenceOrderPlugin()
+            minRatio: 0
+        })
     );
 }
 
