@@ -23,7 +23,6 @@ plugins.push(
         filename: define.rs_release ? '[name].[hash].css' : '[name].css',
         disable: false,
         allChunks: false
-        // allChunks: true
     }),
     new HtmlWebpackPlugin({
         filetype: 'pug',

@@ -22,6 +22,13 @@ rules.push(
 
 rules.push(
     {
+        test: /\.json$/,
+        use: ['json-loader']
+    }
+);
+
+rules.push(
+    {
         test: /\.js[x]?$/,
         use: [
             {

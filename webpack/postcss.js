@@ -40,9 +40,11 @@ postcss.push(
     // Unwraps nested rules like how Sass does it
     // https://github.com/postcss/postcss-nested
     require('postcss-nested')(),
+    // adds shorthand hex methods to rgba() values div { color: rgba(red,0.5) }
+    // https://github.com/seaneking/postcss-hexrgba
+    require('postcss-hexrgba')(),
     // W3C color() function, e.g. div { background: color(red alpha(90%)); }
     // https://github.com/postcss/postcss-color-function
-    require('postcss-hexrgba')(),
     require('postcss-color-function')(),
     // Convert CSS shorthand filters to SVG equivalent, e.g. .blur { filter: blur(4px); }
     // https://github.com/iamvdo/pleeease-filters
