@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 // import Router from './router';
 
-render(
-    <h1>Hello, World!</h1>,
-    document.getElementById('app-root')
-);
+class HelloMessage extends Component {
+    static propTypes = {
+        name: React.PropTypes.string
+    }
 
-// render(<Router />, document.getElementById('app-root'));
+    static defaultProps = {
+        name: 'User'
+    }
+
+    render () {
+        return <div>Hello {this.props.name}</div>;
+    }
+}
+
+render(
+    <HelloMessage name="Mariana + Amiran" />, document.getElementById('app-root')
+);

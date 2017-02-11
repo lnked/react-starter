@@ -2,37 +2,48 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const define = require('./define');
 
 const rules = require('./rules');
+const define = require('./define');
 const plugins = require('./plugins');
 
 module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_release ? 'cheap-module-source-map' : 'eval',
+    // devtool: define.rs_release ? 'cheap-module-source-map' : 'eval-source-map',
+    devtool: define.rs_release ? false : 'eval-source-map',
 
     entry: {
         bundle: [define.rs_root, 'app.jsx'].join('/'),
         styles: [define.rs_root, 'app.scss'].join('/')
     },
 
+    target: 'web', // electron-main | electron-renderer
+
     output: {
-        filename: '[name].[hash].js',
+        publicPath: '/',
         path: define.rs_dist,
-        publicPath: '/'
+        filename: '[name].[hash].js',
+        crossOriginLoading: "use-credentials"
     },
 
     resolve: {
         modules: [
-            define.rs_root, 'node_modules', 'bower_components', 'components', 'layouts', 'pages', 'utils', 'containers'
+            define.rs_root, 'node_modules', 'components', 'layouts', 'pages', 'utils'
         ],
+        unsafeCache: true,
         enforceExtension: false,
         enforceModuleExtension: false,
         extensions: ['.js', '.jsx', '.json', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
-        mainFiles: ['index', 'app']
+        mainFiles: ['index', 'app'],
+        alias: {
+            utils: path.resolve(__dirname, '../app/utils/'),
+            pages: path.resolve(__dirname, '../app/pages/'),
+            layouts: path.resolve(__dirname, '../app/layouts/'),
+            components: path.resolve(__dirname, '../app/components/')
+        }
     },
 
     resolveLoader: {
@@ -40,6 +51,7 @@ module.exports = {
     },
 
     module: {
+        noParse: /jquery|lodash/,
         rules: rules.config
     },
 
@@ -53,12 +65,15 @@ module.exports = {
         contentBase: define.rs_dist,
         watchContentBase: define.rs_develop,
         historyApiFallback: { disableDotRule: true },
+        stats: {
+            modules: false,
+            cached: false,
+            colors: true,
+            chunk: false
+        },
         compress: true,
         host: '0.0.0.0',
         port: 7777,
-        lazy: true,
-        hot: true,
-        hotOnly: true,
         public: '0.0.0.0:7777'
     },
 
@@ -69,10 +84,6 @@ module.exports = {
     },
 
     plugins: plugins.config,
-
-    bail: !define.rs_develop,
-
-    cache: define.rs_develop,
 
     stats: {
         colors: true,

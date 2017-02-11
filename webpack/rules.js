@@ -66,7 +66,11 @@ rules.push(
                 loader: 'style-loader'
             },
             {
-                loader: 'css-loader?modules'
+                loader: 'css-loader',
+                options: {
+                    modules: true,
+                    importLoaders: 1
+                }
             },
             {
                 loader: 'sass-loader'
@@ -86,11 +90,25 @@ rules.push(
 rules.push(
     {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: /node_modules/,
         use: [
-            'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=true'
-        ]
+            {
+                loader: 'file-loader',
+                options: {
+                    hash: 'sha512',
+                    digest: 'hex',
+                    name: '[hash].[ext]'
+                }
+            },
+            {
+                loader: 'image-webpack',
+                options: {
+                    bypassOnDebug: true,
+                    optimizationLevel: 7,
+                    interlaced: true
+                }
+            }
+        ],
+        exclude: /node_modules/
     }
 );
 

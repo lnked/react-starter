@@ -12,21 +12,17 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 plugins.push(
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-        'process.env': {
-            'NODE_ENV': JSON.stringify('production')
-        }
+        'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new ExtractTextPlugin({
         filename: define.rs_release ? '[name].[hash].css' : '[name].css',
-        disable: false,
-        allChunks: false
+        allChunks: true
     }),
     new HtmlWebpackPlugin({
-        filetype: 'pug',
         minimize: define.rs_release,
+        filetype: 'pug',
         template: 'app.pug',
         filename: 'index.html'
     }),
@@ -34,7 +30,8 @@ plugins.push(
         { from: 'assets/scripts', to: 'js' },
         { from: 'assets/images', to: 'images' },
         { from: 'assets/favicon/', to: 'favicon' }
-    ])
+    ]),
+    new webpack.HotModuleReplacementPlugin()
 );
 
 if (define.rs_release) {
