@@ -13,9 +13,7 @@ module.exports = {
 
     devtool: define.rs_release ? 'cheap-module-source-map' : 'eval-source-map',
 
-    entry: {
-        bundle: [define.rs_root, 'app.jsx'].join('/')
-    },
+    entry: path.resolve(define.rs_root, 'app.jsx'),
 
     target: 'web', // electron-main | electron-renderer
 
@@ -33,7 +31,7 @@ module.exports = {
         unsafeCache: true,
         enforceExtension: false,
         enforceModuleExtension: false,
-        extensions: ['.js', '.jsx', '.json', '.scss'],
+        extensions: ['.jsx', '.js'],
         descriptionFiles: ['package.json', 'bower.json'],
         mainFiles: ['index', 'app'],
         alias: {

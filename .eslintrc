@@ -21,7 +21,7 @@
         "import/resolver": "webpack",
         "import/extensions": [".js", ".jsx"]
     },
-    "extends": ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
+    "extends": ["eslint:recommended",  "plugin:import/warnings"],
     "rules": {
         "no-debugger": 1,
         "no-alert": 0,
@@ -58,10 +58,9 @@
         "react/prefer-es6-class": 1,
         "react/prop-types": 1,
         "react/react-in-jsx-scope": 1,
-        "react/require-extension": 1,
         "react/self-closing-comp": 1,
         "react/sort-comp": 1,
-        "react/wrap-multilines": 1,
+        "react/jsx-wrap-multilines": 1,
         // Possible Errors
         "no-console": 0,
         // Strict Mode

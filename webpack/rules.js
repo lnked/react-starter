@@ -7,23 +7,26 @@ const postcss = require('./postcss');
 
 rules.push(
     {
-        test: /\.js[x]?$/,
-        enforce: "pre",
-        loader: "eslint-loader"
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules|bower_components)/
     }
 );
 
 rules.push(
     {
         test: /\.pug/,
-        use: ['pug-loader']
+        use: ['pug-loader'],
+        include: define.rs_root
     }
 );
 
 rules.push(
     {
         test: /\.json$/,
-        use: ['json-loader']
+        use: ['json-loader'],
+        include: define.rs_root
     }
 );
 
@@ -83,7 +86,8 @@ rules.push(
                     }
                 }
             }
-        ]
+        ],
+        include: define.rs_root
     }
 );
 

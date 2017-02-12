@@ -1,16 +1,29 @@
 .navbar {
-    padding: 0 20px;
     position: relative;
     white-space: nowrap;
     margin-bottom: 2.5em;
     background-color: #808080;
     
+    &__logo {
+        float: left;
+        color: white;
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 44px;
+        position: relative;
+        z-index: 10;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            text-align: center;
+            float: none;
+        }
+    }
+
     &__menu {
         width: 100%;
-        line-height: 44px;
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-font-smoothing: antialiased;
+        padding: 0 20px;
 
         &_top {
             height: 44px;
@@ -23,12 +36,9 @@
             padding: 0 60px;
             transform: translateY(-44px);
 
-            @media (max-width: 62em) {
-                position: absolute;
-                width: 100%;
-                border-top: 1px solid #eee;
-                background-color: #808080\9;
-                z-index: 100;
+            @media (max-width: 768px) {
+                border-top: 1px solid rgba(white, .5);
+                transform: translateY(0px);
             }
         }
     }
@@ -36,14 +46,20 @@
     &__list {
         margin: 0;
         padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            z-index: 10;
+        }
 
         &__item {
-            display: inline-block;
+            margin: 0 20px;
             vertical-align: top;
-
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
 
             &__link {
                 color: #fff;
@@ -57,46 +73,58 @@
 
     &__screen {
         width: 100%;
+        height: 44px;
         transition: all 0.5s;
         position: absolute;
         top: 0;
+        left: 0;
+        right: 0;
         z-index: -1;
         background-color: rgba(black, .5);
-    }
 
-    &__logo {
-        color: white;
-        display: block;
-        // text-align: center;
-        position: relative;
+        @media (max-width: 768px) {
+            z-index: 0;
+        }
     }
 
     &__trigger {
-        width: 44px;
+        width: 20px;
         height: 44px;
         display: block;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 20px;
+        z-index: 10;
+        cursor: pointer;
         display: none;
 
-        &__line {
+        @media (max-width: 768px) {
             display: block;
+        }
+
+        &__line {
             width: 20px;
             height: 2px;
-            border-radius: 100px;
+            display: block;
+            border-radius: 1px;
             position: absolute;
-            top: 24px;
-            right: 12px;
+            top: 50%;
+            left: 50%;
+            margin-top: -1px;
+            margin-left: -10px;
             transition: all 0.5s;
             background-color: white;
 
             &:first-child {
-                transform: translateY(-6px);
+                transform: translateY(-3px);
+            }
+
+            &:last-child {
+                transform: translateY(3px);
             }
         }
 
-        &.is-open &__line {
+        &_open &__line {
             transform: rotate(45deg);
 
             &:first-child {

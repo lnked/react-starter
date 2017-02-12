@@ -1,7 +1,7 @@
-import styles from './app.scss';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Navbar from './components/navbar/index.jsx';
+import Navbar from 'components/navbar';
+import styles from './app.scss';
 
 class HelloMessage extends Component {
     static propTypes = {
