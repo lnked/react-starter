@@ -1,23 +1,107 @@
 .navbar {
-    margin: 0;
-    height: 40px;
-    display: flex;
     padding: 0 20px;
-    flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-start;
-    background-color: #000;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: 2.5em;
+    background-color: #808080;
+    
+    &__menu {
+        width: 100%;
+        line-height: 44px;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-font-smoothing: antialiased;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 20px;
+        &_top {
+            height: 44px;
+            position: relative;
+        }
+
+        &_bottom {
+            width: 100%;
+            float: left;
+            padding: 0 60px;
+            transform: translateY(-44px);
+
+            @media (max-width: 62em) {
+                position: absolute;
+                width: 100%;
+                border-top: 1px solid #eee;
+                background-color: #808080\9;
+                z-index: 100;
+            }
         }
     }
 
-    &__link {
-        color: #fff;
-        cursor: pointer;
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            display: inline-block;
+            vertical-align: top;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &__link {
+                color: #fff;
+                cursor: pointer;
+                display: block;
+                font-size: 1.4rem;
+                line-height: 44px;
+            }
+        }
+    }
+
+    &__screen {
+        width: 100%;
+        transition: all 0.5s;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background-color: rgba(black, .5);
+    }
+
+    &__logo {
+        color: white;
         display: block;
+        // text-align: center;
+        position: relative;
+    }
+
+    &__trigger {
+        width: 44px;
+        height: 44px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+
+        &__line {
+            display: block;
+            width: 20px;
+            height: 2px;
+            border-radius: 100px;
+            position: absolute;
+            top: 24px;
+            right: 12px;
+            transition: all 0.5s;
+            background-color: white;
+
+            &:first-child {
+                transform: translateY(-6px);
+            }
+        }
+
+        &.is-open &__line {
+            transform: rotate(45deg);
+
+            &:first-child {
+                transform: rotate(-45deg);
+            }
+        }
     }
 }
