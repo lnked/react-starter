@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-// import Router from './router';
+import Navbar from './components/navbar/index.jsx';
 
 class HelloMessage extends Component {
     static propTypes = {
@@ -12,7 +12,12 @@ class HelloMessage extends Component {
     }
 
     render () {
-        return <div>Hello {this.props.name}</div>;
+        return (
+            <div>
+                <Navbar />
+                <div>Hello {this.props.name}</div>
+            </div>
+        );
     }
 }
 

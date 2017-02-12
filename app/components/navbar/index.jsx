@@ -1,25 +1,29 @@
 import styles from './styles.scss';
 import React, { Component } from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-
-// https://github.com/kriasoft/react-starter-kit/blob/master/src/client.js
-
-import Routes from '../routes';
+import { Link } from 'react-router';
 
 export default class Navbar extends Component {
     render () {
         return (
-            <ul>
-                <li><Link to="/users" label='Users label' icon='inbox' /></li>
-                <li><Link to="/user">user</Link></li>
-                <li><Link to="/home">home</Link></li>
+            <ul className={styles.navbar}>
+                <li className={styles.navbar__item}>
+                    <Link to="/users" label="Users label" icon="inbox" className={styles.navbar__link}>Main page</Link>
+                </li>
+                <li className={styles.navbar__item}>
+                    <Link to="/home" className={styles.navbar__link}>Home page</Link>
+                </li>
+                <li className={styles.navbar__item}>
+                    <Link to="/users" className={styles.navbar__link}>Users</Link>
+                </li>
             </ul>
         );
     }
 }
+// import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+// https://github.com/kriasoft/react-starter-kit/blob/master/src/client.js
+// import Routes from '../routes';
 // import React, { Component } from 'react';
 // import { Link } from 'react-router';
-
 // export default class Router extends Component {
 //     render () {
 //         return (
@@ -34,7 +38,6 @@ export default class Navbar extends Component {
 //         );
 //     }
 // }
-
 // import AppBar from 'react-toolbox/lib/app_bar';
 // import Navigation from 'react-toolbox/lib/navigation';
 // import Link from 'react-toolbox/lib/Link';

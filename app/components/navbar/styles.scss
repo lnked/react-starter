@@ -1,19 +1,22 @@
 .navbar {
+    margin: 0;
     height: 40px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     align-content: center;
     justify-content: flex-start;
-    
-    margin-bottom: 20px;
-    border: 1px solid blue;
+    background-color: #000;
 
     &__item {
-        border: 1px solid red;
-                
         &:not(:last-child) {
             margin-right: 20px;
         }
+    }
+
+    &__link {
+        color: #fff;
+        cursor: pointer;
+        display: block;
     }
 }
