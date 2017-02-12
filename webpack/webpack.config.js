@@ -11,12 +11,10 @@ module.exports = {
     
     context: define.rs_root,
 
-    // devtool: define.rs_release ? 'cheap-module-source-map' : 'eval-source-map',
-    devtool: define.rs_release ? false : 'eval-source-map',
+    devtool: define.rs_release ? 'cheap-module-source-map' : 'eval-source-map',
 
     entry: {
-        bundle: [define.rs_root, 'app.jsx'].join('/'),
-        styles: [define.rs_root, 'app.scss'].join('/')
+        bundle: [define.rs_root, 'app.jsx'].join('/')
     },
 
     target: 'web', // electron-main | electron-renderer

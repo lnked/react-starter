@@ -1,3 +1,4 @@
+import styles from './app.scss';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Navbar from './components/navbar/index.jsx';
@@ -15,7 +16,7 @@ class HelloMessage extends Component {
         return (
             <div>
                 <Navbar />
-                <div>Hello {this.props.name}</div>
+                <div className={styles.wrapper}>Hello {this.props.name}</div>
             </div>
         );
     }
