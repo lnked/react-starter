@@ -14,7 +14,8 @@ module.exports = {
     devtool: define.rs_production ? 'cheap-module-source-map' : 'eval-source-map',
 
     entry: {
-        app: path.resolve(define.rs_root, 'app.jsx')
+        app: path.resolve(define.rs_root, 'app.jsx'),
+        styles: path.resolve(define.rs_root, 'app.scss')
     },
 
     target: 'web', // electron-main | electron-renderer
