@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
-// import { PageLayout } from 'layouts';
+
+import PageLayout from 'layouts/PageLayout';
 
 // require('./components/Hello').default
 // const routes = [{
@@ -54,42 +55,6 @@ class App extends Component {
         )
     }
 };
-
-class PageLayout extends Component {
-
-    static propTypes = {
-        children: React.PropTypes.object.isRequired,
-        title: React.PropTypes.string
-    }
-
-    static defaultProps = {
-        title: 'Your Title'
-    }
-
-    render () {
-        return (
-            <div className="app">
-                <header className="primary-header">
-                    <h1>Page Layout</h1>
-                </header>
-
-                <aside className="primary-aside">
-                    <ul>
-                        <li><Link to="/" activeClassName="active">Home</Link></li>
-                        <li><Link to="/page" activeClassName="active">Page</Link></li>
-                        <li><Link to="/page/page1" activeClassName="active">Page1</Link></li>
-                        <li><Link to="/page/page2" activeClassName="active">Page2</Link></li>
-                        <li><Link to="/page/page3" activeClassName="active">Page3</Link></li>
-                    </ul>
-                </aside>
-
-                <main>
-                    {this.props.children}
-                </main>
-            </div>
-        );
-    }
-}
 
 class Page1 extends Component {
     render () {
