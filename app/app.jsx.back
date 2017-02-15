@@ -1,0 +1,101 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { Route } from 'react-router';
+
+// import styles from './app.scss';
+// import Navbar from 'components/navbar';
+
+// Pages
+import Main from 'pages/main';
+import Home from 'pages/home';
+import Hello from 'pages/hello';
+
+// class App extends Component {
+//     static propTypes = {
+//         name: React.PropTypes.string
+//     }
+
+//     static defaultProps = {
+//         name: 'User'
+//     }
+
+//     render () {
+//         return (
+//             <div>
+//                 <Routes />
+//                 <Navbar />
+//                 <div className={styles.wrapper}>Hello {this.props.name}</div>
+//             </div>
+//         );
+//     }
+// }
+
+// render(
+//     <App name="Mariana + Amiran" />, document.getElementById('app-root')
+// );
+
+class Router extends Component {
+    render () {
+        return (
+            <Route path="/" component={Home}>
+                <Route path="/main" component={Main} />
+                <Route path="/hello" component={Hello} />
+            </Route>
+        );
+    }
+}
+
+render(
+    <Router />, document.getElementById('app-root')
+);
+
+// import React, { Component } from 'react';
+// import { render } from 'react-dom';
+// import { Route } from 'react-router';
+
+// // import styles from './app.scss';
+// // import Navbar from 'components/navbar';
+
+// // Pages
+// import Main from 'pages/main';
+// import Home from 'pages/home';
+// import Hello from 'pages/hello';
+
+// // class App extends Component {
+// //     static propTypes = {
+// //         name: React.PropTypes.string
+// //     }
+
+// //     static defaultProps = {
+// //         name: 'User'
+// //     }
+
+// //     render () {
+// //         return (
+// //             <div>
+// //                 <Routes />
+// //                 <Navbar />
+// //                 <div className={styles.wrapper}>Hello {this.props.name}</div>
+// //             </div>
+// //         );
+// //     }
+// // }
+
+// // render(
+// //     <App name="Mariana + Amiran" />, document.getElementById('app-root')
+// // );
+
+// class Router extends Component {
+//     render () {
+//         return (
+//             <Route path="/" component={Home}>
+//                 <Route path="/main" component={Main} />
+//                 <Route path="/hello" component={Hello} />
+//             </Route>
+//         );
+//     }
+// }
+
+// render(
+//     <Router />, document.getElementById('app-root')
+// );

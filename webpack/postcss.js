@@ -4,7 +4,7 @@ const postcss = [];
 
 const define = require('./define');
 
-const AUTOPREFIXER_BROWSERS = !define.rs_release ? [] : [
+const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
     '>1%',
     'last 4 versions',
     'Firefox ESR',
@@ -63,7 +63,7 @@ postcss.push(
     require('postcss-flexbugs-fixes')()
 );
 
-if (define.rs_release) {
+if (define.rs_production) {
     postcss.push(
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer

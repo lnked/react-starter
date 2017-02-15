@@ -11,9 +11,11 @@ module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_release ? 'cheap-module-source-map' : 'eval-source-map',
+    devtool: define.rs_production ? 'cheap-module-source-map' : 'eval-source-map',
 
-    entry: path.resolve(define.rs_root, 'app.jsx'),
+    entry: {
+        app: path.resolve(define.rs_root, 'app.jsx')
+    },
 
     target: 'web', // electron-main | electron-renderer
 
@@ -26,18 +28,25 @@ module.exports = {
 
     resolve: {
         modules: [
-            define.rs_root, 'node_modules', 'components', 'layouts', 'pages', 'utils'
+            define.rs_root,
+            'node_modules',
+            'components',
+            'reducers',
+            'layouts',
+            'pages',
+            'utils'
         ],
+        mainFiles: ['index', 'app'],
         unsafeCache: true,
         enforceExtension: false,
         enforceModuleExtension: false,
         extensions: ['.jsx', '.js'],
         descriptionFiles: ['package.json', 'bower.json'],
-        mainFiles: ['index', 'app'],
         alias: {
             utils: path.resolve(__dirname, '../app/utils/'),
             pages: path.resolve(__dirname, '../app/pages/'),
             layouts: path.resolve(__dirname, '../app/layouts/'),
+            reducers: path.resolve(__dirname, '../app/reducers/'),
             components: path.resolve(__dirname, '../app/components/')
         }
     },
@@ -59,7 +68,7 @@ module.exports = {
 
     devServer: {
         contentBase: define.rs_dist,
-        watchContentBase: define.rs_develop,
+        watchContentBase: define.rs_development,
         historyApiFallback: { disableDotRule: true },
         stats: {
             modules: false,
@@ -73,7 +82,7 @@ module.exports = {
         public: '0.0.0.0:7777'
     },
 
-    watch: define.rs_develop,
+    watch: define.rs_development,
 
     watchOptions: {
         aggregateTimeout: 100
@@ -83,13 +92,13 @@ module.exports = {
 
     stats: {
         colors: true,
-        reasons: define.rs_develop,
-        hash: define.rs_release,
-        version: define.rs_release,
         timings: true,
-        chunks: define.rs_release,
-        chunkModules: define.rs_release,
-        cached: define.rs_release,
-        cachedAssets: define.rs_release,
+        reasons: define.rs_development,
+        hash: define.rs_production,
+        version: define.rs_production,
+        chunks: define.rs_production,
+        chunkModules: define.rs_production,
+        cached: define.rs_production,
+        cachedAssets: define.rs_production
     }
 };

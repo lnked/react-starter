@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Navbar from '../components/navbar/index';
+import Navbar from 'components/navbar/index';
 
 export default class Welcome extends Component {
     constructor (props) {

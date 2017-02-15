@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Form from '../components/form/index';
+import Form from 'components/form/index';
 
-export default class MainLayout extends Component {
+export default class ProductLayout extends Component {
 
     static propTypes = {
         children: React.PropTypes.object.isRequired,

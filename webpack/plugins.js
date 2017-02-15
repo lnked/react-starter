@@ -13,15 +13,12 @@ const CompressionPlugin = require('compression-webpack-plugin');
 plugins.push(
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     new ExtractTextPlugin({
-        filename: define.rs_release ? '[name].[hash].css' : '[name].css',
+        filename: define.rs_production ? '[name].[hash].css' : '[name].css',
         allChunks: true
     }),
     new HtmlWebpackPlugin({
-        minimize: define.rs_release,
+        minimize: define.rs_production,
         filetype: 'pug',
         template: 'app.pug',
         filename: 'index.html'
@@ -34,7 +31,21 @@ plugins.push(
     new webpack.HotModuleReplacementPlugin()
 );
 
-if (define.rs_release) {
+if (define.rs_production) {
+    plugins.push(
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    );
+} else {
+    plugins.push(
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
+        })
+    );
+}
+
+if (define.rs_production) {
     plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
             async: true,

@@ -2,7 +2,7 @@
     position: relative;
     white-space: nowrap;
     margin-bottom: 2.5em;
-    background-color: #808080;
+    background-color: rgba(black, .5);
     
     &__logo {
         float: left;
@@ -16,8 +16,8 @@
         text-transform: uppercase;
 
         @media (max-width: 768px) {
-            text-align: center;
             float: none;
+            text-align: center;
         }
     }
 
@@ -37,8 +37,9 @@
             transform: translateY(-44px);
 
             @media (max-width: 768px) {
-                border-top: 1px solid rgba(white, .5);
+                display: none;
                 transform: translateY(0px);
+                border-top: 1px solid rgba(white, .5);
             }
         }
     }
@@ -55,16 +56,16 @@
         @media (max-width: 768px) {
             position: absolute;
             z-index: 10;
+            display: none;
         }
 
         &__item {
-            margin: 0 20px;
-            vertical-align: top;
+            margin: 0 5px;
 
             &__link {
                 color: #fff;
-                cursor: pointer;
                 display: block;
+                cursor: pointer;
                 font-size: 1.4rem;
                 line-height: 44px;
             }
@@ -84,6 +85,7 @@
 
         @media (max-width: 768px) {
             z-index: 0;
+            display: none;
         }
     }
 

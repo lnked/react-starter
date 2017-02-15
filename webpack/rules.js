@@ -5,14 +5,14 @@ const rules = [];
 const define = require('./define');
 const postcss = require('./postcss');
 
-rules.push(
-    {
-        enforce: 'pre',
-        test: /\.jsx?$/,
-        loader: 'eslint-loader',
-        exclude: /(node_modules|bower_components)/
-    }
-);
+// rules.push(
+//     {
+//         enforce: 'pre',
+//         test: /\.jsx?$/,
+//         loader: 'eslint-loader',
+//         exclude: /(node_modules|bower_components)/
+//     }
+// );
 
 rules.push(
     {
@@ -42,13 +42,13 @@ rules.push(
                         'es2015',
                         'react',
                         'stage-2',
-                        ...define.rs_develop ? [] : [
+                        ...define.rs_development ? [] : [
                             'react-optimize'
                         ]
                     ],
                     plugins: [
                         'transform-runtime',
-                        ...!define.rs_develop ? [] : [
+                        ...!define.rs_development ? [] : [
                             'transform-react-jsx-source',
                             'transform-react-jsx-self'
                         ]
