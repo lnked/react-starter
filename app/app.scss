@@ -1,3 +1,6 @@
+@import 'reset-css/reset.css';
+/* @import '/styles/_variables.scss'; */
+
 * {
     -webkit-touch-callout: none;
     -webkit-overflow-scrolling: touch;
@@ -31,6 +34,7 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
     overflow: hidden;
     min-width: 320px;
     line-height: 1.42857143;
@@ -48,15 +52,8 @@ body, input, textarea, select, button {
     text-align: left;
 }
 
-.wrapper {
-    padding: 20px;
-    
-    &__item {
-        border: 1px solid rgba(red, .5);
-    
-        &__block {
-            background-color: #f00;
-            border: 1px solid rgba(lime, .5);
-        }
-    }
+.layout-wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
 }

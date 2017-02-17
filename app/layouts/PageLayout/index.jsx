@@ -14,14 +14,14 @@ export default class PageLayout extends Component {
     }
 
     static defaultProps = {
-        title: 'Your Title'
+        title: 'Page Layout title'
     }
 
     render () {
         return (
             <div className="app">
                 <header className="primary-header">
-                    <h1>Page Layout</h1>
+                    <h1>{this.props.title}</h1>
                 </header>
 
                 <aside className="primary-aside">

@@ -1,0 +1,33 @@
+.layout {
+    min-height: 100%;
+    overflow: hidden;
+
+    &__header {
+        padding: 15px 20px;
+        background-color: #2d2d2d;
+
+        &__title {
+            color: #fff;
+            margin: 0;
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+    }
+
+    &__navbar {
+        width: 200px;
+        padding: 10px 20px;
+        background-color: #fefefe;
+    }
+
+    &__main {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}

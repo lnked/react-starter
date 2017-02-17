@@ -5,11 +5,7 @@ import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
 import PageLayout from 'layouts/PageLayout';
 import MainLayout from 'layouts/MainLayout';
 
-class Home extends Component {
-    render () {
-        return (<h1>Welcome to Home Page</h1>);
-    }
-};
+import Home from 'pages/home';
 
 class Users extends Component {
     render () {

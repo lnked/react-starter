@@ -1,0 +1,138 @@
+// Screen
+// Max size
+$max-iphone:                    379px;
+$max-tablet:                    719px;
+$max-desktop:                   1023px;
+$max-medium:                    1374px;
+$max-large:                     1679px;
+
+// Min size
+$min-phone:                     320px;
+$min-iphone:                    380px;
+$min-tablet:                    720px;
+$min-desktop:                   1024px;
+$min-medium:                    1375px;
+$min-large:                     1680px;
+
+// Animation
+$a-time:                        .3s;
+$a-micro-time:                  .15s;
+$a-long-time:                   .7s;
+
+// Fonts
+$font-base:                     10px;
+$font-family:                   Verdana, Arial, Helvetica, sans-serif;
+$font-arial:                    Arial, Helvetica, sans-serif;
+$font-forms:                    Arial, Helvetica, sans-serif;
+
+// Colors
+$c-border:                      #eee;
+$c-input-color:                 #000;
+$c-label-color:                 #000;
+$c-label-error:                 #f00;
+$c-radio-border:                #0f0;
+$c-radio-fill:                  #f00;
+$c-radio-color:                 #000;
+$c-radio-checked:               #f00;
+$c-star-color:                  #f00;
+$c-switcher-border:             #000;
+$c-switcher-fill:               #f00;
+$c-switcher-label:              #000;
+$c-switcher-checked:            #f00;
+$c-switcher-checked-color:      #f00;
+$c-webflow-blue:                #4353ff;
+
+$c-select-color:                #f00;
+$c-select-background:           #000;
+
+$c-text:                        #121212;
+$c-body-background:             #fff !default;
+
+$c-placeholder-color:           #000;
+$c-placeholder-opacity:         .5;
+
+$c-sandwich-overlay:            #000;
+$c-sandwich-background:         #2b65b6;
+$c-sandwich-background-active:  #fff;
+
+$c-lime:                        lime;
+$c-white:                       #fff;
+$c-black:                       #000;
+$c-green:                       #00f;
+$c-whisper:                     #E7E7E7;
+$c-lavender:                    #f0f0f2;
+$c-very-light-grey:             #c8c8c8;
+$c-pink-swan:                   #B4B4B4;
+
+$c-pacific-blue:                #0091cf;
+$c-gamboge:                     #f0980c;
+
+$c-jordy-blue:                  #7baaf7;
+$c-maya-blue:                   #76B5FF;
+$c-hawkes-blue:                 #d4e4f8;
+$c-ultramarine-blue:            #5477F7;
+
+$c-electric-indigo:             #6100EA;
+
+$c-silver-tree:                 #57BB8A;
+$c-geraldine:                   #e67c73;
+$c-kournikova:                  #f7cb4d;
+$c-night-rider:                 #323232;
+$c-royal-blue:                  #3367d6;
+$c-salem:                       #0b8043;
+$c-rersian-red:                 #c53929;
+$c-persimmon:                   #ea6100;
+
+// Alerts
+
+// Dark
+$c-background:                  $c-night-rider;
+$c-primary:                     $c-white;
+$c-secondary:                   rgba(255,255,255,.54);
+$c-disabled:                    rgba(255,255,255,.26);
+$c-link:                        $c-jordy-blue;
+$c-positive:                    $c-silver-tree;
+$c-negative:                    $c-geraldine;
+$c-warning:                     $c-kournikova;
+
+// Light
+$c-primary:                     $c-black;
+$c-secondary:                   rgba(0,0,0,.54);
+$c-disabled:                    rgba(0,0,0,.26);
+$c-link:                        $c-royal-blue;
+$c-positive:                    $c-salem;
+$c-negative:                    $c-rersian-red;
+$c-warning:                     $c-persimmon;
+
+// SIZE
+$layout-width:                  1260px;
+$layout-margin:                 10px;
+
+$header-height:                 159px;
+
+$footer-margin:                 20px;
+$footer-height:                 100px;
+
+$sidebar-width:                 200px;
+$sidebar-margin:                20px;
+
+// CMS SET http://www.htmlcsscolor.com/hex/4353ff
+// #4353FF
+// #43FF53
+// #5343FF
+// #53FF43
+// #FF4353
+// #FF5343
+// 
+// Triadic Colors
+
+//  #FF4353  #53FF43
+// Analogous Colors
+
+//  #9143FF  #43B1FF
+// Split complements Colors
+
+//  #FF9143  #B1FF43
+// Complementary Color
+
+//  #FFEF43
