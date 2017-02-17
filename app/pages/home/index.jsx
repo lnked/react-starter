@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-// import { render } from 'react-dom';
+import { Component } from 'react';
 
 export default class Home extends Component {
     render () {

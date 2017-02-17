@@ -25,6 +25,7 @@ plugins.push(
     }),
     new CopyWebpackPlugin([
         { from: 'assets/scripts', to: 'js' },
+        { from: 'assets/styles/', to: 'css' },
         { from: 'assets/images', to: 'images' },
         { from: 'assets/favicon/', to: 'favicon' }
     ]),

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Link } from 'react-router';
-
-// <IndexLink to="/" activeClassName="active">Home</IndexLink>
-// <Link to="/" activeClassName="active" onlyActiveOnIndex={true}>Home</Link>
-// <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
+import styles from './styles.scss';
 
 export default class PageLayout extends Component {
 
@@ -14,30 +11,32 @@ export default class PageLayout extends Component {
     }
 
     static defaultProps = {
-        title: 'Page Layout title'
+        title: 'Main Layout title'
     }
 
-    render () {
+    render() {
         return (
-            <div className="app">
-                <header className="primary-header">
-                    <h1>{this.props.title}</h1>
+            <div className={styles.layout}>
+                <header className={styles.layout__header}>
+                    <h1 className={styles.layout__header__title}>{this.props.title}</h1>
                 </header>
 
-                <aside className="primary-aside">
-                    <ul>
-                        <li><Link to="/" activeClassName="active">Home</Link></li>
-                        <li><Link to="/page" activeClassName="active">Page</Link></li>
-                        <li><Link to="/page/page1" activeClassName="active">Page1</Link></li>
-                        <li><Link to="/page/page2" activeClassName="active">Page2</Link></li>
-                        <li><Link to="/page/page3" activeClassName="active">Page3</Link></li>
-                    </ul>
-                </aside>
+                <div className={styles.layout__row}>
+                    <aside className={styles.layout__navbar}>
+                        <ul>
+                            <li><Link to="/" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Main</Link></li>
+                            <li><Link to="/page" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page</Link></li>
+                            <li><Link to="/page/page1" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page1</Link></li>
+                            <li><Link to="/page/page2" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page2</Link></li>
+                            <li><Link to="/page/page3" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page3</Link></li>
+                        </ul>
+                    </aside>
 
-                <main>
-                    {this.props.children}
-                </main>
+                    <main className={styles.layout__main}>
+                        {this.props.children}
+                    </main>
+                </div>
             </div>
-        );
+        )
     }
 }
