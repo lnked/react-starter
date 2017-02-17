@@ -3,16 +3,7 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
 
 import PageLayout from 'layouts/PageLayout';
-
-// require('./components/Hello').default
-// const routes = [{
-//     path:"/",
-//     getComponents(location, callback) {
-//         require.ensure([], function (require) {
-//             callback(null, require('./components/Hello').default)
-//         })
-//     }
-// }];
+import MainLayout from 'layouts/MainLayout';
 
 class Home extends Component {
     render () {
@@ -35,24 +26,6 @@ class Widgets extends Component {
 class NoMatch extends Component {
     render () {
         return (<h1>:( 404 error</h1>);
-    }
-};
-
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>React Router Tutorial</h1>
-                <ul role="nav">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/page"> > Page</Link></li>
-                    <li><Link to="/main">Main</Link></li>
-                    <li><Link to="/users">Users</Link></li>
-                    <li><Link to="/widgets">Widgets</Link></li>
-                </ul>
-                {this.props.children}
-            </div>
-        )
     }
 };
 
@@ -85,7 +58,7 @@ render((
             <Route path="page3" component={Page3} />
         </Route>
 
-        <Route path="/" component={App}>
+        <Route path="/" component={MainLayout}>
             <IndexRoute component={Home} />
 
             <Route path="/main" component={Home} />
