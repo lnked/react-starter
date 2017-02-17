@@ -24,8 +24,11 @@ export default class PageLayout extends Component {
                 <div className={styles.layout__row}>
                     <aside className={styles.layout__navbar}>
                         <ul>
-                            <li><Link to="/" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Main</Link></li>
-                            <li><Link to="/page" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page</Link></li>
+                            <li>
+                                <Link to="/" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Main</Link>
+                                <span className={styles.layout__navbar__separator}>|</span>
+                                <Link to="/page" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page</Link>
+                            </li>
                             <li><Link to="/page/page1" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page1</Link></li>
                             <li><Link to="/page/page2" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page2</Link></li>
                             <li><Link to="/page/page3" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page3</Link></li>

@@ -29,6 +29,13 @@
             font-size: 1.6rem;
         }
 
+        &__separator {
+            font-size: 1.6rem;
+            margin: 0 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         &__active {
             color: #FF4353;
         }

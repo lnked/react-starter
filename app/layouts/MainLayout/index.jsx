@@ -24,8 +24,11 @@ export default class MainLayout extends Component {
                 <div className={styles.layout__row}>
                     <aside className={styles.layout__navbar}>
                         <ul>
-                            <li><Link to="/" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Home</Link></li>
-                            <li><Link to="/page" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page</Link></li>
+                            <li>
+                                <Link to="/" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Main</Link>
+                                <span className={styles.layout__navbar__separator}>|</span>
+                                <Link to="/page" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page</Link>
+                            </li>
                             <li><Link to="/main" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Main</Link></li>
                             <li><Link to="/users" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Users</Link></li>
                             <li><Link to="/widgets" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Widgets</Link></li>
