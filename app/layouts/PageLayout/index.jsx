@@ -10,7 +10,7 @@ export default class PageLayout extends Component {
     }
 
     static defaultProps = {
-        title: 'Main Layout title'
+        title: 'Page Layout title'
     }
 
     render () {

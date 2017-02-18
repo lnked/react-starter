@@ -72,7 +72,9 @@ rules.push(
                 loader: 'css-loader',
                 options: {
                     modules: true,
+                    sourceMap: define.rs_development,
                     importLoaders: 1
+                    // localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
                 }
             },
             {
@@ -93,7 +95,7 @@ rules.push(
 
 rules.push(
     {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
         use: [
             {
                 loader: 'file-loader',
@@ -104,11 +106,29 @@ rules.push(
                 }
             },
             {
-                loader: 'image-webpack',
+                loader: 'image-webpack-loader',
                 options: {
+                    interlaced: true,
                     bypassOnDebug: true,
                     optimizationLevel: 7,
-                    interlaced: true
+                    progressive: true,
+                    mozjpeg: {
+                        quality: 65
+                    },
+                    pngquant:{
+                        quality: "65-90",
+                        speed: 4
+                    },
+                    svgo: {
+                        plugins: [
+                            {
+                                removeViewBox: false
+                            },
+                            {
+                                removeEmptyAttrs: false
+                            }
+                        ]
+                    }
                 }
             }
         ],
@@ -116,11 +136,11 @@ rules.push(
     }
 );
 
-rules.push(
-    {
-        test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png|\.jpe?g|\.gif$/,
-        use: ['file-loader']
-    }
-);
+// rules.push(
+//     {
+//         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png|\.jpe?g|\.gif$/,
+//         use: ['file-loader']
+//     }
+// );
 
 module.exports.config = rules;

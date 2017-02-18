@@ -1,5 +1,19 @@
 @import 'reset-css/reset.css';
-/* @import '/styles/_variables.scss'; */
+/*
+@import '/styles/_variables.scss';
+
+:root {
+  --img-border-radius: 3px;
+}
+
+.imageContainer {
+  border-radius: var(--img-border-radius);
+}
+
+.image {
+  border-radius: var(--img-border-radius);
+}
+*/
 
 * {
     -webkit-touch-callout: none;
@@ -50,4 +64,12 @@ body, input, textarea, select, button {
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
     text-align: left;
+}
+
+:global {
+    .layout-wrapper {
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+    }
 }

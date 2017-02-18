@@ -44,12 +44,14 @@ module.exports = {
         extensions: ['.jsx', '.js'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
-            utils: path.resolve(__dirname, '../app/utils/'),
-            pages: path.resolve(__dirname, '../app/pages/'),
-            assets: path.resolve(__dirname, '../app/assets/'),
-            layouts: path.resolve(__dirname, '../app/layouts/'),
-            reducers: path.resolve(__dirname, '../app/reducers/'),
-            components: path.resolve(__dirname, '../app/components/')
+            utils: path.resolve(__dirname, '../app/utils'),
+            pages: path.resolve(__dirname, '../app/pages'),
+            assets: path.resolve(__dirname, '../app/assets'),
+            layouts: path.resolve(__dirname, '../app/layouts'),
+            reducers: path.resolve(__dirname, '../app/reducers'),
+            components: path.resolve(__dirname, '../app/components'),
+            images: path.resolve(__dirname, '../app/assets/images'),
+            scripts: path.resolve(__dirname, '../app/assets/scripts')
         }
     },
 

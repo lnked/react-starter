@@ -15,7 +15,7 @@ plugins.push(
     new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({
         filename: define.rs_production ? '[name].[hash].css' : '[name].css',
-        allChunks: true
+        allChunks: define.rs_production
     }),
     new HtmlWebpackPlugin({
         minimize: define.rs_production,
