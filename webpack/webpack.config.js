@@ -19,9 +19,9 @@ module.exports = {
     },
 
     target: 'web', // electron-main | electron-renderer
-
+    
     output: {
-        publicPath: '/',
+        publicPath: './',
         path: define.rs_dist,
         filename: '[name].[hash].js',
         crossOriginLoading: "use-credentials"

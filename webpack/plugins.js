@@ -26,8 +26,7 @@ plugins.push(
     new CopyWebpackPlugin([
         { from: 'assets/scripts', to: 'js' },
         { from: 'assets/styles/', to: 'css' },
-        { from: 'assets/images', to: 'images' },
-        { from: 'assets/favicon/', to: 'favicon' }
+        { from: 'assets/images', to: 'images' }
     ]),
     new webpack.HotModuleReplacementPlugin()
 );
@@ -57,6 +56,7 @@ if (define.rs_production) {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             mangle: true,
+            sourceMap: define.rs_development,
             compress: {
                 unused          : true,
                 dead_code       : true,

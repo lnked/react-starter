@@ -10,6 +10,7 @@ const isDev = argv.env === 'development' || argv.env !== 'production';
 const isPro = argv.env === 'production';
 
 module.exports = {
+    rs_deploy_path: '/react-starter/',
     rs_root: _root_,
     rs_dist: _dist_,
     rs_production: isPro,

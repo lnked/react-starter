@@ -25,14 +25,6 @@ rules.push(
 
 rules.push(
     {
-        test: /\.json$/,
-        use: ['json-loader'],
-        include: define.rs_root
-    }
-);
-
-rules.push(
-    {
         test: /\.js[x]?$/,
         use: [
             {
@@ -40,7 +32,12 @@ rules.push(
                 options: {
                     babelrc: false,
                     presets: [
-                        'es2015',
+                        [
+                            'es2015',
+                            {
+                                'modules': false
+                            }
+                        ],
                         'react',
                         'stage-2',
                         ...define.rs_development ? [] : [
@@ -96,14 +93,14 @@ rules.push(
 
 rules.push(
     {
-        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        test: /.*\.(gif|ico|png|jpe?g|svg)$/i,
         use: [
             {
                 loader: 'file-loader',
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
-                    name: '[hash].[ext]'
+                    name: '[name]-[hash].[ext]'
                 }
             },
             {
@@ -154,6 +151,51 @@ rules.push(
             }
         ],
         exclude: /node_modules/
+    }
+);
+
+rules.push(
+    {
+        test: /.*\.(doc(x)|xls(l))$/i,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
+                }
+            }
+        ]
+    }
+);
+
+rules.push(
+    {
+        test: /\.json$/,
+        use: [
+            {
+                loader: 'file-loader', // 'json-loader',
+                options: {
+                    hash: 'sha512',
+                    digest: 'hex',
+                    name: '[name]-[hash].[ext]'
+                }
+            }
+        ]
+    }
+);
+
+rules.push(
+    {
+        test: /\.xml$/,
+        use: [
+            {
+                loader: 'xml-loader',
+                options: {
+                    name: '[name].[ext]',
+                    explicitChildren: false
+                }
+            }
+        ]
     }
 );
 
