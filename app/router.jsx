@@ -14,6 +14,7 @@ import NoMatch from 'pages/nomatch';
 import Page1 from 'pages/page1';
 import Page2 from 'pages/page2';
 import Page3 from 'pages/page3';
+import CreatePageView from 'pages/createPageView';
 
 export default class App extends Component {
     render () {
@@ -35,8 +36,10 @@ export default class App extends Component {
                     <Route path="page1" component={Page1} />
                     <Route path="page2" component={Page2} />
                     <Route path="page3" component={Page3} />
+                    <Route path=":slug" name="pages" component={CreatePageView} />
 
                     {/*
+                        <Route path="/:slug" name="ideas" handler={CreateIdeaView} />
                         <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
                         <Route path="users/:userId" component={UserProfile} />
                         <Route name="ideas/:value" handler={CreateIdeaView} />

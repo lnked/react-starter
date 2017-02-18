@@ -52,6 +52,13 @@ export default class PageLayout extends Component {
                                     className={styles.layout__navbar__link}
                                     activeClassName={styles.layout__navbar__active}>Page3</Link>
                             </li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="pages"
+                                    params={{ slug: 'hello' }}
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Create page</Link>
+                            </li>
                         </ul>
                     </aside>
 
