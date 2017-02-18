@@ -4,6 +4,13 @@ import styles from './styles.scss';
 
 export default class PageLayout extends Component {
 
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         color: props.initialColor
+    //     };
+    // }
+
     static propTypes = {
         children: React.PropTypes.object.isRequired,
         title: React.PropTypes.string
@@ -58,6 +65,12 @@ export default class PageLayout extends Component {
                                     params={{ slug: 'hello' }}
                                     className={styles.layout__navbar__link}
                                     activeClassName={styles.layout__navbar__active}>Create page</Link>
+                            </li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="/load"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Load</Link>
                             </li>
                         </ul>
                     </aside>

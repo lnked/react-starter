@@ -11,6 +11,8 @@ import Users from 'pages/users';
 import Widgets from 'pages/widgets';
 import NoMatch from 'pages/nomatch';
 
+import Load from 'pages/load';
+
 import Page1 from 'pages/page1';
 import Page2 from 'pages/page2';
 import Page3 from 'pages/page3';
@@ -25,7 +27,7 @@ export default class App extends Component {
                     <IndexRoute component={Home} />
 
                     <Route path="/main" component={Home} />
-
+                    <Route path="/load" component={Load} />
                     <Route path="/users" component={Users} />
                     <Route path="/widgets" component={Widgets} />
                 </Route>
@@ -36,7 +38,7 @@ export default class App extends Component {
                     <Route path="page1" component={Page1} />
                     <Route path="page2" component={Page2} />
                     <Route path="page3" component={Page3} />
-                    <Route path=":slug" name="pages" component={CreatePageView} />
+                    <Route path="/page/:slug" name="pages" component={CreatePageView} />
 
                     {/*
                         <Route path="/:slug" name="ideas" handler={CreateIdeaView} />

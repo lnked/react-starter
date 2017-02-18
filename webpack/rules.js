@@ -2,6 +2,7 @@
 
 const rules = [];
 
+const path = require('path');
 const define = require('./define');
 const postcss = require('./postcss');
 
@@ -108,25 +109,45 @@ rules.push(
             {
                 loader: 'image-webpack-loader',
                 options: {
-                    interlaced: true,
                     bypassOnDebug: true,
-                    optimizationLevel: 7,
-                    progressive: true,
                     mozjpeg: {
-                        quality: 65
+                        quality: 70,
+                        progressive: true
                     },
                     pngquant:{
                         quality: "65-90",
                         speed: 4
                     },
+                    gifsicle: {
+                        interlaced: true,
+                    },
+                    optipng: {
+                        optimizationLevel: 7
+                    },
                     svgo: {
                         plugins: [
-                            {
-                                removeViewBox: false
-                            },
-                            {
-                                removeEmptyAttrs: false
-                            }
+                            {removeTitle:true},
+                            {removeEmptyAttrs:false},
+                            {removeDesc:true},
+                            {removeViewBox:false},
+                            {removeDoctype:true},
+                            {removeMetadata:true},
+                            {removeComments:true},
+                            {removeUselessDefs:true},
+                            {removeXMLProcInst:true},
+                            {removeDimensions:true},
+                            {cleanupNumericValues: {
+                                floatPrecision: 2
+                            }},
+                            {cleanupIDs: {
+                                prefix: '-',
+                                minify: false
+                            }},
+                            {convertColors: {
+                                names2hex: true,
+                                rgb2hex: true
+                            }},
+                            {removeUselessStrokeAndFill:false}
                         ]
                     }
                 }
@@ -136,11 +157,19 @@ rules.push(
     }
 );
 
-// rules.push(
-//     {
-//         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png|\.jpe?g|\.gif$/,
-//         use: ['file-loader']
-//     }
-// );
+rules.push(
+    {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]'
+                }
+            }
+        ],
+        include: path.resolve(define.rs_root, '/assets/fonts')
+    }
+);
 
 module.exports.config = rules;
