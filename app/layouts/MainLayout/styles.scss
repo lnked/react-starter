@@ -23,6 +23,15 @@
         width: 200px;
         padding: 10px 20px;
         background-color: #fefefe;
+
+        &__item {
+            clear: both;
+            
+            &:not(:last-child) {
+                margin-bottom: 10px;
+                outline: 1px solid #f2f2f2;
+            }
+        }
     
         &__link {
             colro: #4353FF;
@@ -31,13 +40,14 @@
 
         &__separator {
             font-size: 1.6rem;
-            margin: 0 5px;
+            margin: 0 10px;
             display: inline-block;
             vertical-align: middle;
         }
 
         &__active {
             color: #FF4353;
+            font-weight: 700;
         }
     }
 

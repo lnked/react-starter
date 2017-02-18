@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import { Link } from 'react-router';
 import styles from './styles.scss';
 
@@ -14,7 +13,7 @@ export default class PageLayout extends Component {
         title: 'Main Layout title'
     }
 
-    render() {
+    render () {
         return (
             <div className={styles.layout}>
                 <header className={styles.layout__header}>
@@ -24,14 +23,35 @@ export default class PageLayout extends Component {
                 <div className={styles.layout__row}>
                     <aside className={styles.layout__navbar}>
                         <ul>
-                            <li>
-                                <Link to="/" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Main</Link>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="/"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Main</Link>
                                 <span className={styles.layout__navbar__separator}>|</span>
-                                <Link to="/page" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page</Link>
+                                <Link
+                                    to="/page"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Page</Link>
                             </li>
-                            <li><Link to="/page/page1" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page1</Link></li>
-                            <li><Link to="/page/page2" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page2</Link></li>
-                            <li><Link to="/page/page3" className={styles.layout__navbar__link} activeClassName={styles.layout__navbar__active}>Page3</Link></li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="/page/page1"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Page1</Link>
+                            </li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="/page/page2"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Page2</Link>
+                            </li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="/page/page3"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Page3</Link>
+                            </li>
                         </ul>
                     </aside>
 
@@ -40,6 +60,6 @@ export default class PageLayout extends Component {
                     </main>
                 </div>
             </div>
-        )
+        );
     }
 }

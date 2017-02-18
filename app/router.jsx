@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
+import React, { Component } from 'react';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 // Layouts
 import PageLayout from 'layouts/PageLayout';
@@ -35,6 +35,14 @@ export default class App extends Component {
                     <Route path="page1" component={Page1} />
                     <Route path="page2" component={Page2} />
                     <Route path="page3" component={Page3} />
+
+                    {/*
+                        <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
+                        <Route path="users/:userId" component={UserProfile} />
+                        <Route name="ideas/:value" handler={CreateIdeaView} />
+                        <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
+                        <Route name="ideas" path="/:testvalue" handler={CreateIdeaView} />
+                    */}
                 </Route>
 
                 <Route path="*" component={NoMatch} />

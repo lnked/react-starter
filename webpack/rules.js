@@ -5,14 +5,14 @@ const rules = [];
 const define = require('./define');
 const postcss = require('./postcss');
 
-// rules.push(
-//     {
-//         enforce: 'pre',
-//         test: /\.jsx?$/,
-//         loader: 'eslint-loader',
-//         exclude: /(node_modules|bower_components)/
-//     }
-// );
+rules.push(
+    {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules|bower_components)/
+    }
+);
 
 rules.push(
     {
