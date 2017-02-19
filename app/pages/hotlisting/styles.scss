@@ -1,0 +1,13 @@
+.post {
+    clear: both;
+    color: #3367d6;
+    font-size: 1.5rem;
+    list-style-type: none;
+
+    &__item {
+        clear: both;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+}

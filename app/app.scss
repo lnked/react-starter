@@ -1,19 +1,4 @@
 @import 'reset-css/reset.css';
-/*
-@import '/styles/_variables.scss';
-
-:root {
-  --img-border-radius: 3px;
-}
-
-.imageContainer {
-  border-radius: var(--img-border-radius);
-}
-
-.image {
-  border-radius: var(--img-border-radius);
-}
-*/
 
 * {
     -webkit-touch-callout: none;
@@ -39,7 +24,7 @@ html, body { height: 100%; }
 html {
     quotes: "“" "”";
     font-size: 10px;
-    font-family: sans-serif;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -49,6 +34,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    color: #000;
     min-width: 320px;
     line-height: 1.42857143;
     font-kerning: none;
@@ -71,4 +57,28 @@ body, input, textarea, select, button {
         min-height: 100%;
         overflow: hidden;
     }
+
+    .is-overflow {
+        overflow: hidden;
+    }
 }
+
+/*
+@import '/styles/_variables.scss';
+
+:root {
+  --img-border-radius: 3px;
+}
+
+.imageContainer {
+  border-radius: var(--img-border-radius);
+}
+
+.image {
+  border-radius: var(--img-border-radius);
+}
+*/
+
+/*
+@import 'assets/styles/nuclear-reset.css';
+*/

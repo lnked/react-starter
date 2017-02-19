@@ -57,6 +57,8 @@ html(
         link(rel='shortcut icon', href=require('./assets/favicon/favicon.ico'))
         meta(name='msapplication-config', content=require('./assets/favicon/browserconfig.xml'))
         meta(name='theme-color', content='#222222')
+        
+        script(src='js/polyfill.js')
     body
 
         main.layout-wrapper#root
@@ -70,6 +72,5 @@ html(
                     a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
                     | , Safari or Firefox for a better experience.
 
-        script(src='js/polyfill.js')
         script.
             window.prerenderReady = false

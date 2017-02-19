@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { IndexLink, Link } from 'react-router';
 import styles from './styles.scss';
 
 export default class PageLayout extends Component {
@@ -20,6 +20,26 @@ export default class PageLayout extends Component {
         title: 'Page Layout title'
     }
 
+    // static propTypes = {
+    //     isDark: React.PropTypes.bool
+    // }
+
+    // static defaultProps = {
+    //     isDark: true
+    // }
+
+    // componentDidMount () {
+    //     document.body.classList.toggle('darkClass', this.props.isDark);
+    // }
+
+    // componentWillReceiveProps (nextProps) {
+    //     document.body.classList.toggle('darkClass', nextProps.isDark);
+    // }
+
+    // componentWillUnmount () {
+    //     document.body.classList.remove('darkClass');
+    // }
+
     render () {
         return (
             <div className={styles.layout}>
@@ -31,10 +51,10 @@ export default class PageLayout extends Component {
                     <aside className={styles.layout__navbar}>
                         <ul>
                             <li className={styles.layout__navbar__item}>
-                                <Link
+                                <IndexLink
                                     to="/"
                                     className={styles.layout__navbar__link}
-                                    activeClassName={styles.layout__navbar__active}>Main</Link>
+                                    activeClassName={styles.layout__navbar__active}>Main</IndexLink>
                                 <span className={styles.layout__navbar__separator}>|</span>
                                 <Link
                                     to="/page"
@@ -61,8 +81,7 @@ export default class PageLayout extends Component {
                             </li>
                             <li className={styles.layout__navbar__item}>
                                 <Link
-                                    to="pages"
-                                    params={{ slug: 'hello' }}
+                                    to="/pages"
                                     className={styles.layout__navbar__link}
                                     activeClassName={styles.layout__navbar__active}>Create page</Link>
                             </li>
@@ -71,6 +90,12 @@ export default class PageLayout extends Component {
                                     to="/load"
                                     className={styles.layout__navbar__link}
                                     activeClassName={styles.layout__navbar__active}>Load</Link>
+                            </li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
+                                    to="/404"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Error page</Link>
                             </li>
                         </ul>
                     </aside>

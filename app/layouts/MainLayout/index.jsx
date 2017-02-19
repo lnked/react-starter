@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 import styles from './styles.scss';
 
 export default class MainLayout extends Component {
@@ -20,6 +20,26 @@ export default class MainLayout extends Component {
         title: 'Main Layout title'
     }
 
+    // static propTypes = {
+    //     isDark: React.PropTypes.bool
+    // }
+
+    // static defaultProps = {
+    //     isDark: true
+    // }
+
+    // componentDidMount () {
+    //     document.body.classList.toggle('darkClass', this.props.isDark);
+    // }
+
+    // componentWillReceiveProps (nextProps) {
+    //     document.body.classList.toggle('darkClass', nextProps.isDark);
+    // }
+
+    // componentWillUnmount () {
+    //     document.body.classList.remove('darkClass');
+    // }
+
     render () {
         return (
             <div className={styles.layout}>
@@ -31,11 +51,10 @@ export default class MainLayout extends Component {
                     <aside className={styles.layout__navbar}>
                         <ul>
                             <li className={styles.layout__navbar__item}>
-                                <Link
+                                <IndexLink
                                     to="/"
                                     className={styles.layout__navbar__link}
-                                    activeClassName={styles.layout__navbar__active}
-                                >Main</Link>
+                                    activeClassName={styles.layout__navbar__active}>Main</IndexLink>
                                 <span className={styles.layout__navbar__separator}>|</span>
                                 <Link
                                     to="/page"
