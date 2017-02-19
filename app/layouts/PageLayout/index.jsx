@@ -93,6 +93,12 @@ export default class PageLayout extends Component {
                             </li>
                             <li className={styles.layout__navbar__item}>
                                 <Link
+                                    to="/auth"
+                                    className={styles.layout__navbar__link}
+                                    activeClassName={styles.layout__navbar__active}>Auth</Link>
+                            </li>
+                            <li className={styles.layout__navbar__item}>
+                                <Link
                                     to="/404"
                                     className={styles.layout__navbar__link}
                                     activeClassName={styles.layout__navbar__active}>Error page</Link>

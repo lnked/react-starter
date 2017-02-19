@@ -1,31 +1,37 @@
 import React, { Component } from 'react';
 import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+
+// const store = createStore([]);
 
 // Layouts
 import PageLayout from 'layouts/PageLayout';
 import MainLayout from 'layouts/MainLayout';
 
 // Pages
-import Home from 'pages/home';
-import Users from 'pages/users';
-import Widgets from 'pages/widgets';
-import NoMatch from 'pages/nomatch';
+import Home from 'containers/home';
+import Users from 'containers/users';
+import Widgets from 'containers/widgets';
+import NoMatch from 'containers/nomatch';
 
-import Load from 'pages/load';
+import Load from 'containers/load';
 
-import Page1 from 'pages/page1';
-import Page2 from 'pages/page2';
-import Page3 from 'pages/page3';
-import CreatePageView from 'pages/createPageView';
+import Page1 from 'containers/page1';
+import Page2 from 'containers/page2';
+import Page3 from 'containers/page3';
+import CreatePageView from 'containers/createPageView';
 
 export default class App extends Component {
 
     static propTypes = {
+        // store: React.PropTypes.object.isRequired,
         isOverflow: React.PropTypes.bool
     }
 
     static defaultProps = {
-        isOverflow: true
+        // store: [],
+        isOverflow: false
     }
 
     componentDidMount () {
@@ -33,20 +39,30 @@ export default class App extends Component {
     }
 
     componentWillReceiveProps (nextProps) {
+        // var sameQuery = this.props.query.page === nextProps.query.page;
         document.body.classList.toggle('is-overflow', nextProps.isOverflow);
+    }
+
+    componentDidUpdate (prevProps, prevState) {
+        alert(prevProps);
+        alert(prevState);
+        // if (this.state.selectedPage !== this.getQuery().page) {
+        //     this.setState({ selectedPage: this.getQuery().page });
+        // }
+        // if (prevProps.query.page != this.getActiveQuery().page) {
+        console.log(prevProps, prevState);
+        // if (!this.state.isLoading && this.getActiveQuery().page != this.state.currentPage && this.state.currentPage > 0) {
+        //     console.log(prevProps, prevState);
+        // }
     }
 
     componentWillUnmount () {
         document.body.classList.remove('is-overflow');
     }
 
-    requireAuth ({ getStore, nextState, replaceState }) {
-    // requireAuth (nextState, transition) {
-        if (getStore().auth.grant.expired) {
-            console.log(replaceState);
-            alert(nextState.location.pathname);
-            // replaceState({ nextPathname: nextState.location.pathname });
-        }
+    requireAuth (nextState, replace) {
+        console.log(replace);
+        console.log(nextState.location.pathname);
     }
 
     // requireAuth(nextState, replace) {
@@ -88,6 +104,12 @@ export default class App extends Component {
                     <Route path="page3" component={Page3} />
                     <Route path="/page/:slug" name="pages" component={CreatePageView} />
 
+                    <Route
+                        path="/auth"
+                        component={Home}
+                        onEnter={this.requireAuth}
+                    />
+
                     <Redirect from="/pages" to="/page/hello"/>
 
                     {/*
@@ -98,13 +120,20 @@ export default class App extends Component {
                         <Route name="ideas/:value" handler={CreateIdeaView} />
                         <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
                         <Route name="ideas" path="/:testvalue" handler={CreateIdeaView} />
+                        <Route path="/auth" component={Home} onEnter={this.requireAuth} />
 
                         <Route path="/" component={SecretStuffComponent}
                             onEnter={(nextState, replace, callback) => { this.requireAuth(nextState, replace, callback) }}>
+
+                        <Route path="inbox" component={Inbox}>
+                            <Redirect from="messages/:id" to="/messages/:id" />
+                        </Route>
+
+                        <Route component={Inbox}>
+                            <Route path="messages/:id" component={Message} />
+                        </Route>
                     */}
                 </Route>
-
-                <Route path="/auth" component={Home} onEnter={this.requireAuth} />
 
                 <Route
                     path="*"

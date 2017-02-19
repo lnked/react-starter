@@ -81,6 +81,7 @@ rules.push(
             {
                 loader: 'postcss-loader',
                 options: {
+                    sourceMap: define.rs_development ? 'inline' : false,
                     plugins: function () {
                         return postcss.config;
                     }

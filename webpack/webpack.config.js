@@ -28,16 +28,8 @@ module.exports = {
     },
 
     resolve: {
-        modules: [
-            define.rs_root,
-            'node_modules',
-            'components',
-            'reducers',
-            'layouts',
-            'pages',
-            'utils'
-        ],
-        mainFiles: ['index', 'app'],
+        modules: [ define.rs_root, 'node_modules' ],
+        mainFiles: ['index'],
         unsafeCache: true,
         enforceExtension: false,
         enforceModuleExtension: false,
@@ -45,10 +37,10 @@ module.exports = {
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
             utils: path.resolve(__dirname, '../app/utils'),
-            pages: path.resolve(__dirname, '../app/pages'),
             assets: path.resolve(__dirname, '../app/assets'),
             layouts: path.resolve(__dirname, '../app/layouts'),
             reducers: path.resolve(__dirname, '../app/reducers'),
+            containers: path.resolve(__dirname, '../app/containers'),
             components: path.resolve(__dirname, '../app/components'),
             images: path.resolve(__dirname, '../app/assets/images'),
             scripts: path.resolve(__dirname, '../app/assets/scripts')
@@ -98,7 +90,6 @@ module.exports = {
         chunks: define.rs_production,
         chunkModules: define.rs_production,
         cached: define.rs_production,
-        exclude: define.rs_production,
         origins: define.rs_production,
         usedExports: define.rs_production,
         hideModules: define.rs_production,

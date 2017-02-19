@@ -13,6 +13,9 @@ const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
 
 postcss.push(
     require('postcss-bem-linter'),
+    // PostCSS plugin to import CSS/SugarSS files
+    // https://www.npmjs.com/package/postcss-smart-import
+    require('postcss-smart-import'),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/jonathantneal/postcss-partial-import
     require('postcss-partial-import')(),
@@ -60,11 +63,26 @@ postcss.push(
     require('postcss-selector-not')(),
     // Postcss flexbox bug fixer
     // https://github.com/luisrudge/postcss-flexbugs-fixes
-    require('postcss-flexbugs-fixes')()
+    require('postcss-flexbugs-fixes')(),
+    require('postcss-quantity-queries'),
+    require('postcss-flexboxfixer'),
+    require('postcss-gradientfixer')
 );
 
 if (define.rs_production) {
     postcss.push(
+        require('postcss-discard-comments'),
+        require('postcss-emptymediaqueries'),
+        require('css-mqpacker'),
+        require('cssnano')({
+            safe: true,
+            calc: false,
+            zindex: false,
+            autoprefixer: false,
+            normalizeCharset: true,
+            convertValues: { length: false },
+            colormin: true
+        }),
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
         require('autoprefixer')({
