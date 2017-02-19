@@ -99,7 +99,7 @@ export default class App extends Component {
                         <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
                         <Route name="ideas" path="/:testvalue" handler={CreateIdeaView} />
 
-                        <Route path="/" component={SecretStuffComponent} 
+                        <Route path="/" component={SecretStuffComponent}
                             onEnter={(nextState, replace, callback) => { this.requireAuth(nextState, replace, callback) }}>
                     */}
                 </Route>

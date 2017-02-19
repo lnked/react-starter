@@ -75,9 +75,7 @@ module.exports = {
         watchContentBase: define.rs_development,
         historyApiFallback: { disableDotRule: true },
         compress: true,
-        host: '0.0.0.0',
-        port: 7777,
-        public: '0.0.0.0:7777'
+        host: '0.0.0.0'
     },
 
     watch: define.rs_development,
@@ -91,14 +89,20 @@ module.exports = {
     stats: {
         colors: true,
         timings: true,
+        errorDetails: true,
         chunk: define.rs_production,
         modules: define.rs_production,
         reasons: define.rs_development,
         hash: define.rs_production,
         version: define.rs_production,
-        chunks: !define.rs_production,
+        chunks: define.rs_production,
         chunkModules: define.rs_production,
         cached: define.rs_production,
+        exclude: define.rs_production,
+        origins: define.rs_production,
+        usedExports: define.rs_production,
+        hideModules: define.rs_production,
+        entrypoints: define.rs_production,
         cachedAssets: define.rs_production
     }
 };
