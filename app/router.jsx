@@ -20,6 +20,7 @@ import Load from 'containers/load';
 import Page1 from 'containers/page1';
 import Page2 from 'containers/page2';
 import Page3 from 'containers/page3';
+
 import CreatePageView from 'containers/createPageView';
 
 export default class App extends Component {
@@ -100,7 +101,7 @@ export default class App extends Component {
                     <Route path="page2" component={Page2} />
                     <Route path="page3" component={Page3} />
 
-                    <Route path="/page/:slug" name="pages" component={CreatePageView} />
+                    <Route path="/page/:slug" component={CreatePageView} />
 
                     <Route
                         path="/auth"

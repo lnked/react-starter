@@ -70,6 +70,10 @@ module.exports = {
         host: '0.0.0.0'
     },
 
+    node: {
+        Buffer: false
+    },
+
     watch: define.rs_development,
 
     watchOptions: {

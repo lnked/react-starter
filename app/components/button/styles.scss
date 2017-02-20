@@ -1,0 +1,52 @@
+.button {
+    margin: 0;
+    outline: none;
+    border: 0 none;
+    cursor: pointer;
+    overflow: visible;
+    user-select: none;
+    text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    background: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    transition: border-color .3s, background-color .3s, color .3s;
+
+    height: 32px;
+    padding: 0 20px;
+    line-height: 30px;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+    
+    &:global.is-green {
+        color: #fff;
+        background-color: #57BB8A;
+    }
+
+    &:global.is-dark {
+        color: #fff;
+        background-color: #3f536e;
+    }
+
+    &:global.is-link {
+        color: #656d79;
+        height: auto;
+        padding: 0 2px;
+        line-height: .9;
+        margin-top: 3px;
+        background: none;
+        padding-bottom: 1px;
+        border-bottom: 1px solid #9aa0aa;
+    }
+}
