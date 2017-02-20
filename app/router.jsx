@@ -25,35 +25,50 @@ import CreatePageView from 'containers/createPageView';
 
 export default class App extends Component {
 
-    static propTypes = {
-        // store: React.PropTypes.object.isRequired,
-        isOverflow: React.PropTypes.bool
-    }
+    // static propTypes = {
+    //     isOverflow: React.PropTypes.bool
+    // }
 
-    static defaultProps = {
-        // store: [],
-        isOverflow: false
+    // static defaultProps = {
+    //     isOverflow: false
+    // }
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            isOverflow: false
+        };
     }
 
     componentDidMount () {
-        document.body.classList.toggle('is-overflow', this.props.isOverflow);
+        // document.body.classList.toggle('is-overflow', this.props.isOverflow);
+        document.body.classList.toggle('is-overflow', this.state.isOverflow);
     }
 
-    componentWillReceiveProps (nextProps) {
-        // var sameQuery = this.props.query.page === nextProps.query.page;
-        document.body.classList.toggle('is-overflow', nextProps.isOverflow);
+    // componentWillReceiveProps (nextProps) {
+    //     // var sameQuery = this.props.query.page === nextProps.query.page;
+    //     document.body.classList.toggle('is-overflow', nextProps.isOverflow);
+    // }
+
+    // shouldComponentUpdate (nextProps, nextState) {
+    //     console.log('shouldComponentUpdate: ', nextProps, nextState);
+    // }
+
+    componentWillUpdate (nextProps, nextState) {
+        document.body.classList.toggle('is-overflow', nextState.isOverflow);
     }
 
-    componentDidUpdate (prevProps, prevState) {
-        // if (this.state.selectedPage !== this.getQuery().page) {
-        //     this.setState({ selectedPage: this.getQuery().page });
-        // }
-        // if (prevProps.query.page != this.getActiveQuery().page) {
-        console.log(prevProps, prevState);
-        // if (!this.state.isLoading && this.getActiveQuery().page != this.state.currentPage && this.state.currentPage > 0) {
-        //     console.log(prevProps, prevState);
-        // }
-    }
+    // componentDidUpdate (prevProps, prevState) {
+    //     // if (this.state.selectedPage !== this.getQuery().page) {
+    //     //     this.setState({ selectedPage: this.getQuery().page });
+    //     // }
+    //     // if (prevProps.query.page != this.getActiveQuery().page) {
+    //     console.log(prevProps, prevState);
+    //     console.log('leave:', this.state.isOverflow);
+    //     // if (!this.state.isLoading && this.getActiveQuery().page != this.state.currentPage && this.state.currentPage > 0) {
+    //     //     console.log(prevProps, prevState);
+    //     // }
+    // }
 
     componentWillUnmount () {
         document.body.classList.remove('is-overflow');
@@ -137,8 +152,16 @@ export default class App extends Component {
                 <Route
                     path="*"
                     component={NoMatch}
-                    onEnter={() => {}}
-                    onLeave={() => {}}
+                    onEnter={() => {
+                        this.setState({
+                            isOverflow: true
+                        });
+                    }}
+                    onLeave={() => {
+                        this.setState({
+                            isOverflow: false
+                        });
+                    }}
                 />
 
             </Router>
