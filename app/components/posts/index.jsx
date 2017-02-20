@@ -18,9 +18,11 @@ export default class Posts extends Component {
         return (
             <li className={styles.post__item} key={post.id}>
                 {['self', 'default'].indexOf(post.thumbnail) < 0 && (
-                    <img src={post.thumbnail} alt="" />
+                    <div>
+                        <img src={post.thumbnail} alt="" />
+                        <br />
+                    </div>
                 )}
-                <br />
                 <Link to={post.url} target="_blank">{post.title}</Link>
                 <p>{post.author_flair_text}</p>
             </li>

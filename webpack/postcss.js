@@ -78,6 +78,7 @@ if (define.rs_production) {
             safe: true,
             calc: false,
             zindex: false,
+            sourcemap: true,
             autoprefixer: false,
             normalizeCharset: true,
             convertValues: { length: false },

@@ -52,40 +52,56 @@ if (define.rs_production) {
             children: true,
             minChuncs: 3
         }),
-        new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
-            mangle: true,
-            sourceMap: define.rs_development,
+            minimize: true,
+            sourceMap: false,
             compress: {
-                unused          : true,
-                dead_code       : true,
-                warnings        : false,
-                drop_debugger   : true,
-                conditionals    : true,
-                evaluate        : true,
-                drop_console    : true,
-                sequences       : true,
-                booleans        : true,
-                loops           : true,
-                unsafe          : true,
+                warnings: false,
+                properties: true,
+                sequences: true,
+                dead_code: true,
+                conditionals: true,
+                comparisons: true,
+                evaluate: true,
+                booleans: true,
+                unused: true,
+                loops: true,
+                hoist_funs: true,
+                cascade: true,
+                if_return: true,
+                join_vars: true,
+                // drop_console: true,
+                // side_effects: true,
+                drop_debugger: true,
+                unsafe: true,
+                hoist_vars: true,
+                negate_iife: true,
                 unsafe_comps    : true,
                 screw_ie8       : true,
                 pure_getters    : true
             },
+            mangle: {
+                toplevel: true,
+                sort: true,
+                eval: true,
+                properties: true
+            },
             output: {
+                comments: false,
                 beautify: false,
-                comments: false
+                space_colon: false
             },
             exclude: [/\.min\.js$/gi]
         }),
+        new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
         new CompressionPlugin({
             asset: '[path].gz[query]',
             algorithm: 'gzip',
             test: /\.js$|\.css$|\.html$/,
             threshold: 10240,
-            minRatio: 0
+            minRatio: 0.8
         })
     );
 }

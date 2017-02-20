@@ -44,8 +44,6 @@ export default class App extends Component {
     }
 
     componentDidUpdate (prevProps, prevState) {
-        alert(prevProps);
-        alert(prevState);
         // if (this.state.selectedPage !== this.getQuery().page) {
         //     this.setState({ selectedPage: this.getQuery().page });
         // }
@@ -61,8 +59,7 @@ export default class App extends Component {
     }
 
     requireAuth (nextState, replace) {
-        console.log(replace);
-        console.log(nextState.location.pathname);
+        console.log(replace, nextState.location.pathname);
     }
 
     // requireAuth(nextState, replace) {
@@ -102,6 +99,7 @@ export default class App extends Component {
                     <Route path="page1" component={Page1} />
                     <Route path="page2" component={Page2} />
                     <Route path="page3" component={Page3} />
+
                     <Route path="/page/:slug" name="pages" component={CreatePageView} />
 
                     <Route

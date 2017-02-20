@@ -47,8 +47,10 @@ rules.push(
                     plugins: [
                         'transform-runtime',
                         ...!define.rs_development ? [] : [
+                            'transform-react-jsx-self',
                             'transform-react-jsx-source',
-                            'transform-react-jsx-self'
+                            'transform-react-inline-elements',
+                            'transform-react-constant-elements'
                         ]
                     ]
                 }
