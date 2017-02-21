@@ -13,14 +13,14 @@ export default class CreatePageView extends Component {
         return(
             <div>
                 <h1>Create Post: {this.props.params.slug}</h1>
-                <Button label="test" type="button" />
-                <Button label="test" type="button" mod="default" />
-                <Button label="test" type="button" mod="primary" />
-                <Button label="test" type="button" mod="success" />
-                <Button label="test" type="button" mod="info" />
-                <Button label="test" type="button" mod="warning" />
-                <Button label="test" type="button" mod="danger" />
-                <Button label="test" type="button" mod="link" />
+                <Button label="Button test" type="button" />
+                <Button label="Button test" type="button" mod="default" />
+                <Button label="Button test" type="button" mod="primary" />
+                <Button label="Button test" type="button" mod="success" />
+                <Button label="Button test" type="button" mod="info" />
+                <Button label="Button test" type="button" mod="warning" />
+                <Button label="Button test" type="button" mod="danger" />
+                <Button label="Button test" type="button" mod="link" />
             </div>
         );
     }
