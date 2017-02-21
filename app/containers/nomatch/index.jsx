@@ -2,6 +2,11 @@ import styles from './styles.scss';
 import React, { Component } from 'react';
 
 export default class NoMatch extends Component {
+
+    componentWillMount () {
+        document.title = '404 Not Found';
+    }
+
     render () {
         return (
             <div className={styles['not-found']}>

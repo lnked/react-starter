@@ -160,6 +160,7 @@ rules.push(
                             {removeEmptyAttrs:false},
                             {removeDesc:true},
                             {removeViewBox:false},
+                            {convertPathData:false},
                             {removeDoctype:true},
                             {removeMetadata:true},
                             {removeComments:true},
@@ -175,6 +176,7 @@ rules.push(
                             }},
                             {convertColors: {
                                 names2hex: true,
+                                shorthex: false,
                                 rgb2hex: true
                             }},
                             {removeUselessStrokeAndFill:false}
@@ -184,20 +186,6 @@ rules.push(
             }
         ],
         exclude: /node_modules/
-    }
-);
-
-rules.push(
-    {
-        test: /.*\.(doc(x)|xls(l))$/i,
-        use: [
-            {
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]'
-                }
-            }
-        ]
     }
 );
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 import styles from './styles.scss';
-
+// import LoadingBar from 'react-redux-loading-bar';
+// <LoadingBar />
 export default class MainLayout extends Component {
 
     // constructor(props) {

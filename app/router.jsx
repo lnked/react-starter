@@ -164,6 +164,7 @@ export default class App extends Component {
                             isOverflow: false
                         });
                     }}
+                    status={404}
                 />
 
             </Router>
