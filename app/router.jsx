@@ -101,12 +101,9 @@ export default class App extends Component {
         return (
             <Router history={browserHistory}>
 
-                <Route path="/" component={MainLayout}>
-                    <IndexRoute component={Home} />
-
-                    <Route path="/main" component={Home} />
-                    <Route path="/users" component={Users} />
-                    <Route path="/widgets" component={Widgets} />
+                <Route path="/" component={AuthLayout}>
+                    <IndexRoute component={Auth} />
+                    <Route path="/" component={Auth} />
                 </Route>
 
                 <Route path="/page" component={PageLayout}>
