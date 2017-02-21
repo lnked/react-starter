@@ -50,20 +50,40 @@ rules.push(
                             'transform-react-jsx-self',
                             'transform-react-jsx-source',
                             'transform-react-inline-elements',
-                            'transform-react-constant-elements'
+                            'transform-react-constant-elements',
+                            'transform-react-remove-prop-types',
+                            'transform-react-pure-class-to-function',
+                            'transform-es2015-template-literals',
+                            'transform-es2015-literals',
+                            'transform-es2015-function-name',
+                            'transform-es2015-arrow-functions',
+                            'transform-es2015-block-scoped-functions',
+                            'transform-es2015-classes',
+                            'transform-es2015-object-super',
+                            'transform-es2015-shorthand-properties',
+                            'transform-es2015-computed-properties',
+                            'transform-es2015-for-of',
+                            'transform-es2015-sticky-regex',
+                            'transform-es2015-unicode-regex',
+                            'check-es2015-constants',
+                            'transform-es2015-spread',
+                            'transform-es2015-parameters',
+                            'transform-es2015-destructuring',
+                            'transform-es2015-block-scoping',
+                            'transform-es2015-typeof-symbol',
+                            ['transform-regenerator', { async: false, asyncGenerators: false }]
                         ]
                     ]
                 }
             }
         ],
-        include: define.rs_root,
         exclude: /(node_modules|bower_components)/
     }
 );
 
 rules.push(
     {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(css|s[a|c]ss)$/,
         use: [
             {
                 loader: 'style-loader'
@@ -72,9 +92,18 @@ rules.push(
                 loader: 'css-loader',
                 options: {
                     modules: true,
+                    importLoaders: 1,
                     sourceMap: define.rs_development,
-                    importLoaders: 1
-                    // localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+                    localIdentName: define.rs_production ? '_[hash:5]' : '[name]__[local]___[hash:base64:5]'
+                }
+            },
+            {
+                loader: 'sasslint-loader',
+                options: {
+                    quiet: true,
+                    emitError: true,
+                    failOnError: true,
+                    failOnWarning: true
                 }
             },
             {
@@ -90,7 +119,8 @@ rules.push(
                 }
             }
         ],
-        include: define.rs_root
+        include: define.rs_root,
+        exclude: /node_modules/
     }
 );
 
@@ -103,7 +133,7 @@ rules.push(
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
-                    name: '[name]-[hash].[ext]'
+                    name: '[name]-[hash:11].[ext]'
                 }
             },
             {
@@ -180,7 +210,7 @@ rules.push(
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
-                    name: '[name]-[hash].[ext]'
+                    name: '[name]-[hash:11].[ext]'
                 }
             }
         ]

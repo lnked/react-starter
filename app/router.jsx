@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router';
-// import { createStore } from 'redux';
-// import { Provider } from 'react-redux';
 
-// const store = createStore([]);
+// import { Router, Route, Redirect, IndexRoute } from 'react-router';
+// import { createHistory, useBasename } from 'history';
+// const browserHistory = useBasename(createHistory)({
+//     basename: '/react-starter'
+// });
 
 // Layouts
 import PageLayout from 'layouts/PageLayout';

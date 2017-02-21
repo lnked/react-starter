@@ -27,7 +27,7 @@ export default class Button extends Component {
         return (
             <button
                 type={this.props.type}
-                className={[styles.button, ['is', this.props.mod].join('-')].join(' ')}
+                className={[styles.button, ['button', this.props.mod].join('--')].join(' ')}
                 onClick={this.handleClick}
             >
                 {this.props.label}

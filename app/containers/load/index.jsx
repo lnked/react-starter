@@ -26,7 +26,7 @@ export default class Load extends Component {
     }
 
     handleRedditLoad (type) {
-        axios.get(`http://www.reddit.com/r/${type}.json`)
+        axios.get(`https://www.reddit.com/r/${type}.json`)
             .then((res) => {
                 const posts = res.data.data.children.map((obj) => obj.data);
                 this.setState({ posts });

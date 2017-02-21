@@ -21,10 +21,11 @@ module.exports = {
     target: 'web', // electron-main | electron-renderer
     
     output: {
-        publicPath: '/',
+        publicPath: './',
         path: define.rs_dist,
-        filename: '[name].[hash].js',
-        crossOriginLoading: "use-credentials"
+        crossOriginLoading: "use-credentials",
+        filename: define.rs_production ? '[name].[hash:5].js' : '[name].js',
+        chunkFilename: define.rs_production ? 'chunk.[name].[chunkhash:5].js' : '[name].chunk.js'
     },
 
     resolve: {
@@ -85,6 +86,7 @@ module.exports = {
     stats: {
         colors: true,
         timings: true,
+        children: false,
         errorDetails: true,
         chunk: define.rs_production,
         modules: define.rs_production,

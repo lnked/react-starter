@@ -1,90 +1,6 @@
 @import 'reset-css/reset.css';
-/* @import 'assets/styles/_variables.scss'; */
-
-* {
-    -webkit-touch-callout: none;
-    -webkit-overflow-scrolling: touch;
-    
-    &, &:before, &:after {
-        box-sizing: border-box;
-    }
-    
-    &[dir="ltr"] {
-        direction: ltr;
-        unicode-bidi: embed;
-    }
-
-    &[dir="rtl"] {
-        direction: rtl;
-        unicode-bidi: embed;
-    }
-}
-
-html, body { height: 100%; }
-
-html {
-    quotes: "“" "”";
-    font-size: 10px;
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-
-    @media (max-width: 1680px) {
-        font-size: 9.5px;
-    }
-    @media (max-width: 1440px) {
-        font-size: 9px;
-    }
-    @media (max-width: 1280px) {
-        font-size: 8.5px;
-    }
-    @media (max-width: 1024px) {
-        font-size: 8px;
-    }
-    @media (max-width: 768px) {
-        font-size: 8.5px;
-    }
-    @media (max-width: 480px) {
-        font-size: 7px;
-    }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    color: #121212;
-    min-width: 320px;
-    line-height: 1.44;
-    overflow-x: hidden;
-    font-kerning: none;
-    background-color: #ecf5fd;
-}
-    
-body, input, textarea, select, button {
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "liga", "kern";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-    text-align: left;
-}
-
-:global {
-    .layout-wrapper {
-        width: 100%;
-        min-height: 100%;
-        overflow: hidden;
-    }
-
-    .is-overflow {
-        overflow: hidden;
-    }
-}
-
 /*
+@import 'assets/styles/_variables.scss';
 @import '/styles/_variables.scss';
 
 :root {
@@ -98,8 +14,89 @@ body, input, textarea, select, button {
 .image {
   border-radius: var(--img-border-radius);
 }
-*/
 
-/*
 @import 'assets/styles/nuclear-reset.css';
 */
+
+:global {
+    * {
+        -webkit-touch-callout: none;
+        -webkit-overflow-scrolling: touch;
+        
+        &, &:before, &:after {
+            box-sizing: border-box;
+        }
+        
+        &[dir="ltr"] {
+            direction: ltr;
+            unicode-bidi: embed;
+        }
+
+        &[dir="rtl"] {
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+    }
+
+    html, body { height: 100%; }
+
+    html {
+        quotes: "“" "”";
+        font-size: 10px;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+
+        @media (max-width: 1680px) {
+            font-size: 9.5px;
+        }
+        @media (max-width: 1440px) {
+            font-size: 9px;
+        }
+        @media (max-width: 1280px) {
+            font-size: 8.5px;
+        }
+        @media (max-width: 1024px) {
+            font-size: 8px;
+        }
+        @media (max-width: 768px) {
+            font-size: 8.5px;
+        }
+        @media (max-width: 480px) {
+            font-size: 7px;
+        }
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        color: #121212;
+        min-width: 320px;
+        line-height: 1.44;
+        overflow-x: hidden;
+        font-kerning: none;
+        background-color: #ecf5fd;
+    }
+        
+    body, input, textarea, select, button {
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "liga", "kern";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
+        text-align: left;
+    }
+
+    .layout-wrapper {
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .is-overflow {
+        overflow: hidden;
+    }
+}
