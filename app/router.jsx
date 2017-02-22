@@ -38,14 +38,16 @@ export default class App extends Component {
     render () {
         return (
             <Router history={browserHistory}>
-                <Redirect from="/" to="/cp"/>
-
                 <Route path="/" component={AuthLayout}>
+                    <Redirect from="/" to="/cp/site" />
+
                     <IndexRoute component={Auth} />
                     <Route path="/cp" component={Auth} onEnter={this.requireAuth} />
                 </Route>
 
                 <Route path="/cp" component={CoreLayout}>
+                    <Redirect from="/cp" to="/cp/site" />
+
                     <IndexRoute component={Page1} />
 
                     <Route path="site" component={Page1} />

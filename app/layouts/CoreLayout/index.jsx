@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Sidebar from 'components/sidebar';
-import Navigation from 'components/navigation';
-import styles from './styles.scss';
+import React, { Component } from 'react'
+import Sidebar from 'components/sidebar'
+import Navigation from 'components/navigation'
+import styles from './styles.scss'
 
 export default class CoreLayout extends Component {
 
