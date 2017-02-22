@@ -25,8 +25,19 @@ plugins.push(
     }),
     new HtmlWebpackPlugin({
         hash        : false,
-        minimize    : define.rs_production,
-        minify      : { collapseWhitespace : define.rs_production },
+        minify: {
+            removeComments: define.rs_production,
+            collapseWhitespace: define.rs_production,
+            removeRedundantAttributes: define.rs_production,
+            useShortDoctype: define.rs_production,
+            removeEmptyAttributes: define.rs_production,
+            removeStyleLinkTypeAttributes: define.rs_production,
+            keepClosingSlash: define.rs_production,
+            minifyJS: define.rs_production,
+            minifyCSS: define.rs_production,
+            minifyURLs: define.rs_production
+        },
+        inject: true,
         filetype    : 'pug',
         template    : 'app.pug',
         inject      : 'body',

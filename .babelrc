@@ -6,14 +6,23 @@
             }
         ],
         "react",
-        "stage-0",
-        "react-optimize"
+        "stage-0"
     ],
     "plugins": [
-        "transform-runtime",
         "transform-react-jsx",
-        "transform-react-jsx-self",
-        "transform-react-jsx-source",
-        "transform-class-properties"
-    ]
+        "transform-react-jsx-self"
+    ],
+    "env": {
+        "development": {},
+        "production": {
+            "presets": [
+                "react-optimize"
+            ],
+            "plugins": [
+                "transform-runtime",
+                "transform-react-jsx-source",
+                "transform-class-properties"
+            ]
+        }
+    }
 }
