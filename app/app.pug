@@ -57,8 +57,6 @@ html(
         link(rel='shortcut icon', href=require('./assets/favicon/favicon.ico'))
         meta(name='msapplication-config', content=require('./assets/favicon/browserconfig.xml'))
         meta(name='theme-color', content='#222222')
-
-        script(src='js/polyfill.js', async, defer)
     body
         include ./svgstore.html
 
@@ -75,3 +73,5 @@ html(
 
         script.
             window.prerenderReady = false
+
+        script(src='./js/polyfill.js', async, defer)

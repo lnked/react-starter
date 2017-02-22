@@ -52,7 +52,11 @@ plugins.push(
         filename    : 'index.html'
     }),
     new ScriptExtHtmlWebpackPlugin({
-        defaultAttribute: 'async'
+        async: /\.js$/,
+        preload: {
+            test: /\.js$/,
+            chunks: 'async'
+        }
     }),
     new CopyWebpackPlugin([
         { from: 'assets/scripts', to: 'js' },
