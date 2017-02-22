@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import Sidebar from 'components/sidebar';
 import Navigation from 'components/navigation';
-import Button from 'components/button';
 import styles from './styles.scss';
 
 export default class CoreLayout extends Component {
@@ -16,9 +16,17 @@ export default class CoreLayout extends Component {
     render () {
         return (
             <div className={styles.layout}>
-                <Navigation />
-                <Button />
-                {this.props.children}
+                <header className={styles.layout__header}>
+                    <Navigation />
+                </header>
+
+                <sidebar className={styles.layout__sidebar}>
+                    <Sidebar />
+                </sidebar>
+
+                <section className={styles.layout__main}>
+                    {this.props.children}
+                </section>
             </div>
         );
     }

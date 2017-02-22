@@ -38,10 +38,8 @@
         }
     }
 
-    html, body { height: 100%; }
-
     html {
-        quotes: "“" "”";
+        height: 100%;
         font-size: 10px;
         font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         -webkit-text-size-adjust: 100%;
@@ -70,16 +68,18 @@
     }
 
     body {
+        width: 100%;
+        height: 100%;
         margin: 0;
         padding: 0;
         color: #121212;
-        min-width: 320px;
+        overflow: hidden;
+        min-width: 987px;
         line-height: 1.44;
-        overflow-x: hidden;
         font-kerning: none;
-        background-color: #ecf5fd;
+        background-color: #fafafa;
     }
-        
+
     body, input, textarea, select, button {
         font-synthesis: none;
         text-rendering: optimizeLegibility;
