@@ -1,39 +1,16 @@
 import React, { Component } from 'react';
 import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router';
 
-// import { Router, Route, Redirect, IndexRoute } from 'react-router';
-// import { createHistory, useBasename } from 'history';
-// const browserHistory = useBasename(createHistory)({
-//     basename: '/react-starter'
-// });
-
 // Layouts
-import PageLayout from 'layouts/PageLayout';
-import MainLayout from 'layouts/MainLayout';
+import CoreLayout from 'layouts/CoreLayout';
+import AuthLayout from 'layouts/AuthLayout';
 
 // Pages
-import Home from 'containers/home';
-import Users from 'containers/users';
-import Widgets from 'containers/widgets';
+import Auth from 'containers/auth';
+import Page1 from 'containers/page1';
 import NoMatch from 'containers/nomatch';
 
-import Load from 'containers/load';
-
-import Page1 from 'containers/page1';
-import Page2 from 'containers/page2';
-import Page3 from 'containers/page3';
-
-import CreatePageView from 'containers/createPageView';
-
 export default class App extends Component {
-
-    // static propTypes = {
-    //     isOverflow: React.PropTypes.bool
-    // }
-
-    // static defaultProps = {
-    //     isOverflow: false
-    // }
 
     constructor (props) {
         super(props);
@@ -43,34 +20,12 @@ export default class App extends Component {
     }
 
     componentDidMount () {
-        // document.body.classList.toggle('is-overflow', this.props.isOverflow);
         document.body.classList.toggle('is-overflow', this.state.isOverflow);
     }
-
-    // componentWillReceiveProps (nextProps) {
-    //     // var sameQuery = this.props.query.page === nextProps.query.page;
-    //     document.body.classList.toggle('is-overflow', nextProps.isOverflow);
-    // }
-
-    // shouldComponentUpdate (nextProps, nextState) {
-    //     console.log('shouldComponentUpdate: ', nextProps, nextState);
-    // }
 
     componentWillUpdate (nextProps, nextState) {
         document.body.classList.toggle('is-overflow', nextState.isOverflow);
     }
-
-    // componentDidUpdate (prevProps, prevState) {
-    //     // if (this.state.selectedPage !== this.getQuery().page) {
-    //     //     this.setState({ selectedPage: this.getQuery().page });
-    //     // }
-    //     // if (prevProps.query.page != this.getActiveQuery().page) {
-    //     console.log(prevProps, prevState);
-    //     console.log('leave:', this.state.isOverflow);
-    //     // if (!this.state.isLoading && this.getActiveQuery().page != this.state.currentPage && this.state.currentPage > 0) {
-    //     //     console.log(prevProps, prevState);
-    //     // }
-    // }
 
     componentWillUnmount () {
         document.body.classList.remove('is-overflow');
@@ -80,52 +35,29 @@ export default class App extends Component {
         console.log(replace, nextState.location.pathname);
     }
 
-    // requireAuth(nextState, replace) {
-    //     const { store } = this.props;
-    //     const { getState, dispatch } = store;
-
-    //     if (!isLoggedIn(getState())) {
-
-    //       dispatch(hasSession())
-    //         .catch((error) => {
-    //           console.log('Replace');
-    //           replace('/login');
-    //         });
-
-    //     } else {
-    //       console.log('OK');
-    //     }
-    //   }
-
     render () {
         return (
             <Router history={browserHistory}>
+                <Redirect from="/" to="/cp"/>
 
                 <Route path="/" component={AuthLayout}>
                     <IndexRoute component={Auth} />
-                    <Route path="/" component={Auth} />
+                    <Route path="/cp" component={Auth} onEnter={this.requireAuth} />
                 </Route>
 
-                <Route path="/page" component={PageLayout}>
+                <Route path="/cp" component={CoreLayout}>
                     <IndexRoute component={Page1} />
 
-                    <Route path="/load" component={Load} />
-
-                    <Route path="page1" component={Page1} />
-                    <Route path="page2" component={Page2} />
-                    <Route path="page3" component={Page3} />
-
-                    <Route path="/page/:slug" component={CreatePageView} />
-
-                    <Route
-                        path="/auth"
-                        component={Home}
-                        onEnter={this.requireAuth}
-                    />
-
-                    <Redirect from="/pages" to="/page/hello"/>
+                    <Route path="site" component={Page1} />
+                    <Route path="marketing" component={Page1} />
+                    <Route path="seo" component={Page1} />
+                    <Route path="users" component={Page1} />
+                    <Route path="shop" component={Page1} />
+                    <Route path="system" component={Page1} />
 
                     {/*
+                        <Route path="/page/:slug" component={CreatePageView} />
+
                         <Redirect from="/some/where/:id" to="/somewhere/else/2"/>
                         <Route path="/:slug" name="ideas" handler={CreateIdeaView} />
                         <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
@@ -168,32 +100,3 @@ export default class App extends Component {
         );
     }
 }
-
-// /* eslint-disable global-require */
-
-// // The top-level (parent) route
-// export default {
-//     path: '/',
-
-//     children: [
-//         require('./home').default,
-//         require('./contact').default,
-//         require('./login').default,
-//         require('./register').default,
-//         require('./about').default,
-//         require('./privacy').default,
-//         require('./admin').default,
-//         require('./notFound').default,
-//     ],
-
-//     async action({ next }) {
-//         // Execute each child route until one of them return the result
-//         const route = await next();
-
-//         // Provide default values for title, description etc.
-//         route.title = `${route.title || 'Untitled Page'} - www.reactstarterkit.com`;
-//         route.description = route.description || '';
-
-//         return route;
-//     }
-// };

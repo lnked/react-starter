@@ -1,5 +1,16 @@
-$height: 50px;
+$height: 36px;
 
 .navigation {
     height: $height;
+    position: relative;
+    background-color: #fafafa;
+    border: 1px solid blue;
+
+    &__link {
+        border: 1px solid red;
+
+        &_active {
+            border: 1px solid green;
+        }
+    }
 }

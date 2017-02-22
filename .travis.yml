@@ -1,7 +1,18 @@
 sudo: false
 language: node_js
 node_js:
-- stable
-branches:
-  only:
-  - master
+  - "6"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - npm run deploy:dev
+  - npm run deploy:prod
+
+after_success:
+  - npm run codecov

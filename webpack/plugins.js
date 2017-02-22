@@ -24,16 +24,18 @@ plugins.push(
         allChunks: define.rs_production
     }),
     new HtmlWebpackPlugin({
-        minimize: define.rs_production,
-        inject: true,
-        filetype: 'pug',
-        template: 'app.pug',
-        filename: 'index.html'
+        hash        : false,
+        minimize    : define.rs_production,
+        minify      : { collapseWhitespace : define.rs_production },
+        filetype    : 'pug',
+        template    : 'app.pug',
+        inject      : 'body',
+        filename    : 'index.html'
     }),
     new CopyWebpackPlugin([
-        // { from: 'assets/scripts', to: 'js' },
-        // { from: 'assets/styles/', to: 'css' }
-        // { from: 'assets/images', to: 'images' }
+        { from: 'assets/scripts', to: 'js' },
+        { from: 'assets/styles/', to: 'css' },
+        { from: 'assets/images', to: 'images' }
     ]),
     // new FaviconsPlugin({
     //     // Your source logo
@@ -81,7 +83,7 @@ plugins.push(
     new webpack.HotModuleReplacementPlugin()
 );
 
-console.log(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'));
+// console.log(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'));
 
 // <svg class="svg-icon">
 // <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-name"></use>

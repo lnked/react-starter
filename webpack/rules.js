@@ -30,50 +30,7 @@ rules.push(
             {
                 loader: 'babel-loader',
                 options: {
-                    babelrc: false,
-                    presets: [
-                        [
-                            'es2015',
-                            {
-                                'modules': false
-                            }
-                        ],
-                        'react',
-                        'stage-2',
-                        ...define.rs_development ? [] : [
-                            'react-optimize'
-                        ]
-                    ],
-                    plugins: [
-                        'transform-runtime',
-                        ...!define.rs_development ? [] : [
-                            'transform-react-jsx-self',
-                            'transform-react-jsx-source',
-                            'transform-react-inline-elements',
-                            'transform-react-constant-elements',
-                            'transform-react-remove-prop-types',
-                            'transform-react-pure-class-to-function',
-                            'transform-es2015-template-literals',
-                            'transform-es2015-literals',
-                            'transform-es2015-function-name',
-                            'transform-es2015-arrow-functions',
-                            'transform-es2015-block-scoped-functions',
-                            'transform-es2015-classes',
-                            'transform-es2015-object-super',
-                            'transform-es2015-shorthand-properties',
-                            'transform-es2015-computed-properties',
-                            'transform-es2015-for-of',
-                            'transform-es2015-sticky-regex',
-                            'transform-es2015-unicode-regex',
-                            'check-es2015-constants',
-                            'transform-es2015-spread',
-                            'transform-es2015-parameters',
-                            'transform-es2015-destructuring',
-                            'transform-es2015-block-scoping',
-                            'transform-es2015-typeof-symbol',
-                            ['transform-regenerator', { async: false, asyncGenerators: false }]
-                        ]
-                    ]
+                    babelrc: true
                 }
             }
         ],

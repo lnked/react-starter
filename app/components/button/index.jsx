@@ -4,9 +4,9 @@ import styles from './styles.scss';
 export default class Button extends Component {
 
     static propTypes = {
-        mod: React.PropTypes.string.isRequired,
-        type: React.PropTypes.string.isRequired,
-        label: React.PropTypes.string.isRequired
+        mod: React.PropTypes.string,
+        type: React.PropTypes.string,
+        label: React.PropTypes.string
     }
 
     static defaultProps = {

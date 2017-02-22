@@ -5,10 +5,23 @@
                 "modules": false
             }
         ],
+        "react",
         "stage-2",
-        "react"
     ],
-    "plugins": {
-        "react-hot-loader/babel"
+    "plugins": [
+        "transform-runtime",
+        "transform-react-jsx"
+    ],
+    "env": {
+        "production": {
+            "sourceMaps": false,
+            "presets": ["react-optimize"],
+            "plugins": [
+                "transform-react-jsx-self",
+                "transform-react-jsx-source",
+                "transform-class-properties"
+            ]
+        },
+        "development": {}
     }
 }
