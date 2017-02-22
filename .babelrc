@@ -5,22 +5,25 @@
                 "modules": false
             }
         ],
-        "react",
-        "stage-0"
+        "stage-0",
+        "react"
     ],
     "plugins": [
-        "transform-react-jsx",
-        "transform-react-jsx-self"
+        "transform-react-jsx"
     ],
     "env": {
-        "development": {},
+        "development": {
+            "plugins": [
+                "transform-react-jsx-self",
+                "transform-react-jsx-source"
+            ]
+        },
         "production": {
             "presets": [
                 "react-optimize"
             ],
             "plugins": [
                 "transform-runtime",
-                "transform-react-jsx-source",
                 "transform-class-properties"
             ]
         }

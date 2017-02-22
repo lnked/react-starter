@@ -13,6 +13,10 @@ export default class CoreLayout extends Component {
         super(props);
     }
 
+    componentWillMount () {
+        window.prerenderReady = true;
+    }
+
     render () {
         return (
             <div className={styles.layout}>

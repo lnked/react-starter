@@ -17,6 +17,13 @@ rules.push(
 
 rules.push(
     {
+        test: /\.txt$/,
+        use: ['raw-loader']
+    }
+);
+
+rules.push(
+    {
         test: /\.pug/,
         use: ['pug-loader'],
         include: define.rs_root
@@ -30,7 +37,8 @@ rules.push(
             {
                 loader: 'babel-loader',
                 options: {
-                    babelrc: true
+                    babelrc: true,
+                    cacheDirectory: define.rs_development
                 }
             }
         ],
@@ -50,8 +58,9 @@ rules.push(
                 options: {
                     modules: true,
                     importLoaders: 1,
+                    minimize: define.rs_production,
                     sourceMap: define.rs_development,
-                    localIdentName: define.rs_production ? '_[hash:5]' : '[name]__[local]___[hash:base64:5]'
+                    localIdentName: define.rs_production ? '_[hash:base64:5]' : '[name]-[local]-[hash:base64:5]'
                 }
             },
             {
@@ -179,16 +188,31 @@ rules.push(
 
 rules.push(
     {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(eot|otf|webp|svg|ttf|woff(2)?)(\?.*)?$/,
         use: [
             {
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[name].[ext]'
+                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]'
                 }
             }
         ],
         include: path.resolve(define.rs_root, '/assets/fonts')
+    }
+);
+
+rules.push(
+    {
+        test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
+        use: [
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]'
+                }
+            }
+        ]
     }
 );
 

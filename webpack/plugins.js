@@ -11,12 +11,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+
+if (define.rs_development) {
+    plugins.push(
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+    );
+}
 
 plugins.push(
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-        cutCode: JSON.stringify(true),
         'process.env.NODE_ENV': define.rs_production ? "'production'" : "'development'"
     }),
     new ExtractTextPlugin({
@@ -25,7 +33,7 @@ plugins.push(
     }),
     new HtmlWebpackPlugin({
         hash        : false,
-        minify: {
+        minify: define.rs_development ? false : {
             removeComments: define.rs_production,
             collapseWhitespace: define.rs_production,
             removeRedundantAttributes: define.rs_production,
@@ -37,89 +45,31 @@ plugins.push(
             minifyCSS: define.rs_production,
             minifyURLs: define.rs_production
         },
-        inject: true,
+        cache       : define.rs_production,
+        inject      : 'body',
         filetype    : 'pug',
         template    : 'app.pug',
-        inject      : 'body',
         filename    : 'index.html'
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+        defaultAttribute: 'async'
     }),
     new CopyWebpackPlugin([
         { from: 'assets/scripts', to: 'js' },
         { from: 'assets/styles/', to: 'css' },
-        { from: 'assets/images', to: 'images' }
-    ]),
-    // new FaviconsPlugin({
-    //     // Your source logo
-    //     logo: 'my-logo.png',
-    //     // The prefix for all image files (might be a folder or a name)
-    //     prefix: 'icons-[hash]/',
-    //     // Emit all stats of the generated icons
-    //     emitStats: false,
-    //     // The name of the json containing all favicon information
-    //     statsFilename: 'iconstats-[hash].json',
-    //     // Generate a cache file with control hashes and
-    //     // don't rebuild the favicons until those hashes change
-    //     persistentCache: true,
-    //     // Inject the html into the html-webpack-plugin
-    //     inject: true,
-    //     // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-    //     background: '#fff',
-    //     // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-    //     title: 'Webpack App',
-
-    //     // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
-    //     icons: {
-    //         android: true,
-    //         appleIcon: true,
-    //         appleStartup: true,
-    //         coast: false,
-    //         favicons: true,
-    //         firefox: true,
-    //         opengraph: false,
-    //         twitter: false,
-    //         yandex: false,
-    //         windows: false
-    //     }
-    // }),
-    // new SvgStore(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'), path.join(define.rs_dist, 'svg'), {
-    //     name: '[hash].sprite.svg',
-    //     chunk: 'app',
-    //     prefix: 'icon-',
-    //     svgoOptions: {
-    //         plugins: [
-    //             { removeTitle: true }
-    //         ]
-    //     }
-    // }),
-    new webpack.HotModuleReplacementPlugin()
+        { from: 'assets/images', to: 'images' },
+        { from: '../node_modules/babel-polyfill/dist/polyfill.min.js', to: 'js/polyfill.js' }
+    ])
 );
 
-// console.log(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'));
-
-// <svg class="svg-icon">
-// <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-name"></use>
-// </svg>
-// new SvgStore(path.join(sourcePath, 'svg', '**/*.svg'), path.join(distPath, 'svg'), {
-//   name: '[hash].sprite.svg',
-//   chunk: 'app',
-//   baseUrl: '//path-to-cdn:port/'
-//   prefix: 'myprefix-',
-//   svgoOptions: {
-//     // options for svgo, optional
-//   }
-// })
-
-
-// var __svg__           = { path: './assets/svg/**/*.svg', name: 'assets/svg/[hash].logos.svg' };
-// // will overwrite to var __svg__ = { filename: "assets/svg/1466687804854.logos.svg" }; 
- 
-// // also you can use next variables for sprite compile 
-// // var __sprite__     = { path: './assets/svg/minify/*.svg', name: 'assets/svg/[hash].icons.svg' }; 
-// // var __svgstore__   = { path: './assets/svg/minify/*.svg', name: 'assets/svg/[hash].stuff.svg' }; 
-// // var __svgsprite__  = { path: './assets/svg/minify/*.svg', name: 'assets/svg/[hash].1logos.svg' }; 
- 
-// // require basic or custom sprite loader 
-// require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+if (define.rs_development) {
+    plugins.push(
+        new CircularDependencyPlugin({
+            exclude: /a\.js|node_modules/,
+            failOnError: false
+        })
+    );
+}
 
 if (define.rs_production) {
     plugins.push(
@@ -170,6 +120,49 @@ if (define.rs_production) {
             },
             exclude: [/\.min\.js$/gi]
         }),
+        // new FaviconsPlugin({
+        //     // Your source logo
+        //     logo: 'my-logo.png',
+        //     // The prefix for all image files (might be a folder or a name)
+        //     prefix: 'icons-[hash]/',
+        //     // Emit all stats of the generated icons
+        //     emitStats: false,
+        //     // The name of the json containing all favicon information
+        //     statsFilename: 'iconstats-[hash].json',
+        //     // Generate a cache file with control hashes and
+        //     // don't rebuild the favicons until those hashes change
+        //     persistentCache: true,
+        //     // Inject the html into the html-webpack-plugin
+        //     inject: true,
+        //     // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
+        //     background: '#fff',
+        //     // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
+        //     title: 'Webpack App',
+
+        //     // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
+        //     icons: {
+        //         android: true,
+        //         appleIcon: true,
+        //         appleStartup: true,
+        //         coast: false,
+        //         favicons: true,
+        //         firefox: true,
+        //         opengraph: false,
+        //         twitter: false,
+        //         yandex: false,
+        //         windows: false
+        //     }
+        // }),
+        // new SvgStore(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'), path.join(define.rs_dist, 'svg'), {
+        //     name: '[hash].sprite.svg',
+        //     chunk: 'app',
+        //     prefix: 'icon-',
+        //     svgoOptions: {
+        //         plugins: [
+        //             { removeTitle: true }
+        //         ]
+        //     }
+        // }),
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
         new CompressionPlugin({
@@ -183,3 +176,30 @@ if (define.rs_production) {
 }
 
 module.exports.config = plugins;
+
+// console.log(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'));
+
+// <svg class="svg-icon">
+// <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-name"></use>
+// </svg>
+// new SvgStore(path.join(sourcePath, 'svg', '**/*.svg'), path.join(distPath, 'svg'), {
+//   name: '[hash].sprite.svg',
+//   chunk: 'app',
+//   baseUrl: '//path-to-cdn:port/'
+//   prefix: 'myprefix-',
+//   svgoOptions: {
+//     // options for svgo, optional
+//   }
+// })
+
+
+// var __svg__           = { path: './assets/svg/**/*.svg', name: 'assets/svg/[hash].logos.svg' };
+// // will overwrite to var __svg__ = { filename: "assets/svg/1466687804854.logos.svg" }; 
+ 
+// // also you can use next variables for sprite compile 
+// // var __sprite__     = { path: './assets/svg/minify/*.svg', name: 'assets/svg/[hash].icons.svg' }; 
+// // var __svgstore__   = { path: './assets/svg/minify/*.svg', name: 'assets/svg/[hash].stuff.svg' }; 
+// // var __svgsprite__  = { path: './assets/svg/minify/*.svg', name: 'assets/svg/[hash].1logos.svg' }; 
+ 
+// // require basic or custom sprite loader 
+// require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
