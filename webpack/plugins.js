@@ -17,7 +17,7 @@ plugins.push(
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
         cutCode: JSON.stringify(true),
-        'process.env.NODE_ENV': JSON.stringify(define.rs_production ? 'production' : 'development')
+        'process.env.NODE_ENV': define.rs_production ? "'production'" : "'development'"
     }),
     new ExtractTextPlugin({
         filename: define.rs_production ? '[name].[hash].css' : '[name].css',
