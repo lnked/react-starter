@@ -52,7 +52,6 @@ rules.push(
                     ],
                     plugins: [
                         "transform-react-jsx",
-                        "add-module-exports",
                         "transform-decorators-legacy",
                         "transform-class-properties",
                         ...define.rs_development ? [
