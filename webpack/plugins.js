@@ -13,10 +13,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 if (define.rs_development) {
     plugins.push(
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new LiveReloadPlugin()
     );
 }
 

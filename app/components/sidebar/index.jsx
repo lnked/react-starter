@@ -9,6 +9,7 @@ export default class Sidebar extends Component {
 
         return (
             <Link
+                key={page.id}
                 icon={page.system}
                 label={page.title}
                 to={[base, page.system].join('/')}
@@ -21,22 +22,27 @@ export default class Sidebar extends Component {
     render () {
         const pages = [
             {
+                id: 1,
                 system: 'structure',
                 title: 'structure'
             },
             {
+                id: 2,
                 system: 'menu',
                 title: 'menu'
             },
             {
+                id: 3,
                 system: 'module',
                 title: 'module'
             },
             {
+                id: 4,
                 system: 'storage',
                 title: 'storage'
             },
             {
+                id: 5,
                 system: 'settings',
                 title: 'settings'
             }

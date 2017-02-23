@@ -60,13 +60,6 @@ rules.push(
                                 "polyfill": false, // defaults to true
                                 "regenerator": true, // defaults to true
                                 "moduleName": "babel-runtime" // defaults to "babel-runtime"
-                            }],
-                            ["react-transform", {
-                                "transforms": [{
-                                    "transform": "react-transform-catch-errors",
-                                    "imports": ["react"]
-                                  }
-                                ]
                             }]
                         ] : []
                     ],
@@ -92,7 +85,7 @@ rules.push(
                     importLoaders: 1,
                     minimize: define.rs_production,
                     sourceMap: define.rs_development,
-                    localIdentName: define.rs_production ? '_[hash:base64:5]' : '[name]-[local]-[hash:base64:5]'
+                    localIdentName: define.rs_production ? '_[hash:5]' : '[name]-[local]-[hash:base64:5]'
                 }
             },
             {
