@@ -16,7 +16,7 @@ $height: 36px;
             bottom: 0;
             left: 0;
             position: absolute;
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(black,0.1);
         }
     }
 
@@ -28,12 +28,16 @@ $height: 36px;
         top: 0;
         z-index: 21;
         min-height: 398px;
-        background-color: #222222;
+        background-color: #222;
     }
 
     &__main {
         width: 100%;
-        padding: 13px 24px 24px 12px;
+        padding-left: 48px;
         height: calc(100% - $height);
+
+        &__content {
+            padding: 13px 24px 24px 12px;
+        }
     }
 }

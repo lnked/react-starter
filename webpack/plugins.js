@@ -16,13 +16,12 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 if (define.rs_development) {
     plugins.push(
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.HotModuleReplacementPlugin()
     );
 }
 
 plugins.push(
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': define.rs_production ? "'production'" : "'development'"
@@ -33,7 +32,7 @@ plugins.push(
     }),
     new HtmlWebpackPlugin({
         hash        : false,
-        minify: define.rs_development ? false : {
+        minify: define.rs_development ? {} : {
             removeComments: define.rs_production,
             collapseWhitespace: define.rs_production,
             removeRedundantAttributes: define.rs_production,

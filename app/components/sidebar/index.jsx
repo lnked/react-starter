@@ -5,16 +5,40 @@ import styles from './styles.scss';
 export default class Sidebar extends Component {
     render () {
         return (
-            <nav className={styles.navigation}>
+            <nav className={styles.sidebar}>
                 <IndexLink
                     to="/cp/site"
-                    className={styles.navigation__link}
-                    activeClassName={styles.navigation__link_active} icon="icon1" />
+                    className={[styles.sidebar__section, styles.sidebar__logo].join(' ')}
+                    activeClassName={styles.sidebar__logo_active}
+                />
 
                 <Link
-                    to="/cp/marketing"
-                    className={styles.navigation__link}
-                    activeClassName={styles.navigation__link_active} icon="icon2" />
+                    icon="icon2"
+                    to="/cp/seo"
+                    className={styles.sidebar__section}
+                    activeClassName={styles.sidebar__section_active}
+                />
+
+                <Link
+                    icon="icon2"
+                    to="/cp/system"
+                    className={styles.sidebar__section}
+                    activeClassName={styles.sidebar__section_active}
+                />
+
+                <Link
+                    icon="icon2"
+                    to="/cp/shop"
+                    className={styles.sidebar__section}
+                    activeClassName={styles.sidebar__section_active}
+                />
+
+                <Link
+                    icon="icon2"
+                    to="/cp/users"
+                    className={styles.sidebar__section}
+                    activeClassName={styles.sidebar__section_active}
+                />
             </nav>
         );
     }

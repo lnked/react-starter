@@ -29,7 +29,9 @@ export default class CoreLayout extends Component {
                 </sidebar>
 
                 <section className={styles.layout__main}>
-                    {this.props.children}
+                    <div className={styles.layout__main__content}>
+                        {this.props.children}
+                    </div>
                 </section>
             </div>
         );

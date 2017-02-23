@@ -37,8 +37,41 @@ rules.push(
             {
                 loader: 'babel-loader',
                 options: {
-                    babelrc: true,
-                    cacheDirectory: define.rs_development
+                    babelrc: false,
+                    presets: [
+                        "react",
+                        [
+                            "es2015", {
+                                "modules": false
+                            }
+                        ],
+                        "stage-0",
+                        ...define.rs_development ? [] : [
+                            "react-optimize"
+                        ]
+                    ],
+                    plugins: [
+                        "transform-react-jsx",
+                        "add-module-exports",
+                        "transform-decorators-legacy",
+                        "transform-class-properties",
+                        ...define.rs_development ? [
+                            ["transform-runtime", {
+                                "helpers": false, // defaults to true
+                                "polyfill": false, // defaults to true
+                                "regenerator": true, // defaults to true
+                                "moduleName": "babel-runtime" // defaults to "babel-runtime"
+                            }],
+                            ["react-transform", {
+                                "transforms": [{
+                                    "transform": "react-transform-catch-errors",
+                                    "imports": ["react"]
+                                  }
+                                ]
+                            }]
+                        ] : []
+                    ],
+                    cacheDirectory: define.rs_development,
                 }
             }
         ],
