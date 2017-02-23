@@ -58,8 +58,8 @@ plugins.push(
         }
     }),
     new CopyWebpackPlugin([
-        { from: 'assets/scripts', to: 'js' },
-        { from: 'assets/styles/', to: 'css' },
+        // { from: 'assets/scripts', to: 'js' },
+        // { from: 'assets/styles/', to: 'css' },
         { from: 'assets/images', to: 'images' },
         { from: '../node_modules/babel-polyfill/dist/polyfill.min.js', to: 'js/polyfill.js' }
     ])
