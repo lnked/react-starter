@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import styles from './styles.scss';
+import css from './styles.scss';
 
 export default class Posts extends Component {
 
@@ -16,7 +16,7 @@ export default class Posts extends Component {
 
     createListItem (post) {
         return (
-            <li className={styles.post__item} key={post.id}>
+            <li className={css.post__item} key={post.id}>
                 {['self', 'default'].indexOf(post.thumbnail) < 0 && (
                     <div>
                         <img src={post.thumbnail} alt="" />
@@ -33,7 +33,7 @@ export default class Posts extends Component {
         return (
             <div>
                 <h1>{`/r/${this.props.title}`}</h1>
-                <ul className={styles.post}>
+                <ul className={css.post}>
                     {this.props.data.map(this.createListItem)}
                 </ul>
             </div>

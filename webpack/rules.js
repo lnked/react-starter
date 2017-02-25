@@ -42,6 +42,7 @@ rules.push(
                         "react",
                         [
                             "es2015", {
+                                "loose": true,
                                 "modules": false
                             }
                         ],
@@ -63,7 +64,7 @@ rules.push(
                             }]
                         ] : []
                     ],
-                    cacheDirectory: define.rs_development,
+                    cacheDirectory: true
                 }
             }
         ],

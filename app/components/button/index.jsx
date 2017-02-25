@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './styles.scss';
+import css from './styles.scss';
 
 export default class Button extends Component {
 
@@ -10,7 +10,7 @@ export default class Button extends Component {
     }
 
     static defaultProps = {
-        mod: 'green',
+        mod: 'default',
         type: 'button',
         label: 'Button'
     }
@@ -27,7 +27,7 @@ export default class Button extends Component {
         return (
             <button
                 type={this.props.type}
-                className={[styles.button, ['button', this.props.mod].join('--')].join(' ')}
+                className={[css.button, ['button', this.props.mod].join('--')].join(' ')}
                 onClick={this.handleClick}
             >
                 {this.props.label}

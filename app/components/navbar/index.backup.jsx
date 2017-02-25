@@ -1,19 +1,19 @@
-import styles from './styles.scss';
+import css from './styles.scss';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 export default class Navbar extends Component {
     render () {
         return (
-            <ul className={styles.navbar}>
-                <li className={styles.navbar__item}>
-                    <Link to="/users" label="Users label" icon="inbox" className={styles.navbar__link}>Main page</Link>
+            <ul className={css.navbar}>
+                <li className={css.navbar__item}>
+                    <Link to="/users" label="Users label" icon="inbox" className={css.navbar__link}>Main page</Link>
                 </li>
-                <li className={styles.navbar__item}>
-                    <Link to="/home" className={styles.navbar__link}>Home page</Link>
+                <li className={css.navbar__item}>
+                    <Link to="/home" className={css.navbar__link}>Home page</Link>
                 </li>
-                <li className={styles.navbar__item}>
-                    <Link to="/users" className={styles.navbar__link}>Users</Link>
+                <li className={css.navbar__item}>
+                    <Link to="/users" className={css.navbar__link}>Users</Link>
                 </li>
             </ul>
         );
@@ -60,15 +60,15 @@ export default class Navbar extends Component {
 // export default class Navbar extends Component {
 //     render () {
 //         return (
-//             <Router history={browserHistory} className={styles.navbar}>
-//                 <Route className={styles.navbar__item} path="about" component={About}/>
-//                 <Route className={styles.navbar__item} path="users" component={Users} />
+//             <Router history={browserHistory} className={css.navbar}>
+//                 <Route className={css.navbar__item} path="about" component={About}/>
+//                 <Route className={css.navbar__item} path="users" component={Users} />
 //                 <Route path="/" component={App}>
-//                     <Route className={styles.navbar__item} path="about" component={About}/>
-//                     <Route className={styles.navbar__item} path="users" component={Users}>
+//                     <Route className={css.navbar__item} path="about" component={About}/>
+//                     <Route className={css.navbar__item} path="users" component={Users}>
 //                         <Route path="/user/:userId" component={User}/>
 //                     </Route>
-//                     <Route className={styles.navbar__item} path="*" component={NoMatch}/>
+//                     <Route className={css.navbar__item} path="*" component={NoMatch}/>
 //                 </Route>
 //             </Router>
 //         );

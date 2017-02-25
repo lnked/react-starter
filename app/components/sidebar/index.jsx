@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
-import styles from './styles.scss';
+import css from './styles.scss';
+// import Icon from 'react-svg-use';
+// <Icon id="logo" color="#D71421" />
 
 export default class Sidebar extends Component {
 
@@ -13,9 +15,11 @@ export default class Sidebar extends Component {
                 icon={page.system}
                 label={page.title}
                 to={[base, page.system].join('/')}
-                className={styles.sidebar__section}
-                activeClassName={styles.sidebar__section_active}
-            />
+                className={css.sidebar__section}
+                activeClassName={css.sidebar__section_active}
+            >
+                <span />
+            </Link>
         );
     }
 
@@ -49,13 +53,32 @@ export default class Sidebar extends Component {
         ];
 
         return (
-            <nav className={styles.sidebar}>
+            <nav className={css.sidebar}>
                 <IndexLink
                     to="/cp"
-                    className={[styles.sidebar__section, styles.sidebar__logo].join(' ')}
-                    activeClassName={styles.sidebar__logo_active}
-                />
+                    className={[css.sidebar__section, css.sidebar__logo].join(' ')}
+                    activeClassName={css.sidebar__logo_active}
+                >
+                    <img
+                        src={require('images/lightning.svg')}
+                        className={css['not-found__figure__image']}
+                        alt="Error: 4xx" />
+                </IndexLink>
+
                 {pages.map(this.createLinkItem)}
+
+                <Link
+                    icon="settings"
+                    label="Settings"
+                    to="/cp/system"
+                    className={[css.sidebar__section, css.sidebar__settings].join(' ')}
+                    activeClassName={css.sidebar__system_active}
+                >
+                    <img
+                        src={require('images/icons/settings.svg')}
+                        className={css['not-found__figure__image']}
+                        alt="" />
+                </Link>
             </nav>
         );
     }

@@ -6,47 +6,48 @@ html(
     itemtype='http://schema.org/WebPage'
 )
     head
-        title(itemprop='name') React template
-
-        link(rel='canonical', href='')
-
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimal-ui')
+        
+        title(itemprop='name') React template
 
-        meta(name='title', itemprop='name', content='React template')
-        meta(name='description', itemprop='description', content='')
-        meta(name='keywords', content='')
-        meta(name='robots', content='index,follow')
-        meta(name='author', content='Edik Bulikyan')
+        meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0')
+
+        meta(name='fragment', content='!')
+        base(href='/')
 
         meta(name='mobile-web-app-capable', content='yes')
         meta(name='format-detection', content='telephone=no')
         meta(name='HandheldFriendly', content='true')
         meta(name='google', value='notranslate')
+        
+        //- <!--Article Specific Metadata-->
+        meta(name='description', itemprop='description', content='')
 
-        //- meta(property='og:title', content='')
-        //- meta(property='og:site_name', content='')
+        meta(name='keywords', content='')
+        meta(name='robots', content='index,follow')
+        meta(name='author', content='Edik Bulikyan <ed.proff@gmail.com>')
+
+        //- <!--Open Graph Metadata-->
         //- meta(property='og:type', content='website')
+        //- meta(property='og:title', content='')
         //- meta(property='og:description', content='')
         //- meta(property='og:image', content='')
         //- meta(property='og:image:width' content='1200')
         //- meta(property='og:image:height' content='630')
+        //- meta(property='og:site_name', content='')
         //- meta(property='og:url', content='')
         //- meta(property='og:email', content='')
-
-        //- meta(property='twitter:card', content='summary_large_image')
+        
+        //- <!--Twitter Card Metadata-->
+        //- meta(property='twitter:card', content='summary')
+        //- meta(property='twitter:url', content='')
         //- meta(property='twitter:title', content='')
         //- meta(property='twitter:description', content='')
-        //- meta(property='twitter:site', content='@')
-        //- meta(property='twitter:image', content='')
-        //- meta(property='twitter:url', content='')
-        //- meta(property='twitter:creator', content='@')
-
-        meta(property='fb:app_id', content='')
-
-        meta(name='fragment', content='!')
-        base(href='/')
+        //- meta(property='twitter:image:src', content='')
+        //- meta(property='twitter:site', content='@celebroru')
+    
+        //- meta(property='fb:app_id', content='500712019984442')
     body
         include ./svgstore.html
 

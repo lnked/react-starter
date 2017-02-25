@@ -1,4 +1,4 @@
-import styles from './styles.scss';
+import css from './styles.scss';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
@@ -22,65 +22,65 @@ export default class Navbar extends Component {
         const isOpened = this.state.isOpened;
 
         return (
-            <nav className={styles.navbar}>
-                <div className={[styles.navbar__menu, styles.navbar__menu_top].join(' ')}>
-                    <Link to="#" className={styles.navbar__logo}>Logo</Link>
+            <nav className={css.navbar}>
+                <div className={[css.navbar__menu, css.navbar__menu_top].join(' ')}>
+                    <Link to="#" className={css.navbar__logo}>Logo</Link>
                     <span className={
                             !isOpened
-                                ? styles.navbar__trigger
-                                : [styles.navbar__trigger, styles.navbar__trigger_open].join(' ')}
+                                ? css.navbar__trigger
+                                : [css.navbar__trigger, css.navbar__trigger_open].join(' ')}
                         onClick={this.handleOpenMenu.bind(this)}>
-                        <s className={styles.navbar__trigger__line} />
-                        <s className={styles.navbar__trigger__line} />
+                        <s className={css.navbar__trigger__line} />
+                        <s className={css.navbar__trigger__line} />
                     </span>
                 </div>
 
-                <div className={[styles.navbar__menu, styles.navbar__menu_bottom].join(' ')}>
-                    <div className={styles.navbar__screen} />
+                <div className={[css.navbar__menu, css.navbar__menu_bottom].join(' ')}>
+                    <div className={css.navbar__screen} />
 
-                    <ul className={styles.navbar__list}>
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/home" className={styles.navbar__list__item__link}>Home</Link>
+                    <ul className={css.navbar__list}>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/home" className={css.navbar__list__item__link}>Home</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/reviews" className={styles.navbar__list__item__link}>Reviews</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/reviews" className={css.navbar__list__item__link}>Reviews</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/video" className={styles.navbar__list__item__link}>Video</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/video" className={css.navbar__list__item__link}>Video</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/gallery" className={styles.navbar__list__item__link}>Gallery</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/gallery" className={css.navbar__list__item__link}>Gallery</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/article" className={styles.navbar__list__item__link}>Article</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/article" className={css.navbar__list__item__link}>Article</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/news" className={styles.navbar__list__item__link}>News</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/news" className={css.navbar__list__item__link}>News</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/catalog" className={styles.navbar__list__item__link}>Catalog</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/catalog" className={css.navbar__list__item__link}>Catalog</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/about" className={styles.navbar__list__item__link}>About</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/about" className={css.navbar__list__item__link}>About</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/contacts" className={styles.navbar__list__item__link}>Contact us</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/contacts" className={css.navbar__list__item__link}>Contact us</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/blog" className={styles.navbar__list__item__link}>Blog</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/blog" className={css.navbar__list__item__link}>Blog</Link>
                         </li>
 
-                        <li className={styles.navbar__list__item}>
-                            <Link to="/basket" className={styles.navbar__list__item__link}>Basket</Link>
+                        <li className={css.navbar__list__item}>
+                            <Link to="/basket" className={css.navbar__list__item__link}>Basket</Link>
                         </li>
                     </ul>
                 </div>

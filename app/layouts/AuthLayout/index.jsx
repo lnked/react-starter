@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './styles.scss';
+import css from './styles.scss';
 
 export default class AuthLayout extends Component {
 
@@ -13,8 +13,10 @@ export default class AuthLayout extends Component {
 
     render () {
         return (
-            <div className={styles.layout}>
-                {this.props.children}
+            <div className={css.layout}>
+                <section className={css.layout__form}>
+                    {this.props.children}
+                </section>
             </div>
         );
     }

@@ -11,7 +11,7 @@ module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_production ? 'cheap-module-source-map' : 'eval-source-map',
+    devtool: define.rs_production ? false : 'eval-source-map',
 
     entry: {
         app: path.resolve(define.rs_root, 'app.jsx'),
@@ -23,7 +23,6 @@ module.exports = {
     output: {
         publicPath: '/',
         path: define.rs_dist,
-        crossOriginLoading: "use-credentials",
         filename: define.rs_production ? '[name].[chunkhash:5].js' : '[name].js',
         chunkFilename: define.rs_production ? 'chunk.[name].[chunkhash:5].js' : '[name].chunk.js'
     },
@@ -64,10 +63,12 @@ module.exports = {
     },
 
     devServer: {
+        compress: false,
         contentBase: define.rs_dist,
         watchContentBase: define.rs_development,
         historyApiFallback: { disableDotRule: true },
-        compress: true,
+        inline: true,
+        hot: true,
         host: '0.0.0.0'
     },
 

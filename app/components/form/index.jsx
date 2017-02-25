@@ -1,4 +1,4 @@
-// import styles from './styles.scss';
+// import css from './styles.scss';
 import React from 'react';
 
 function Form ({ onSubmit, expanded = false, children }) {

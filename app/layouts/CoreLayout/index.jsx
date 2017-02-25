@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Sidebar from 'components/sidebar'
-import Navigation from 'components/navigation'
-import styles from './styles.scss'
+import React, { Component } from 'react';
+import Sidebar from 'components/sidebar';
+import Navigation from 'components/navigation';
+import css from './styles.scss';
 
 export default class CoreLayout extends Component {
 
@@ -19,17 +19,17 @@ export default class CoreLayout extends Component {
 
     render () {
         return (
-            <div className={styles.layout}>
-                <header className={styles.layout__header}>
+            <div className={css.layout}>
+                <header className={css.layout__header}>
                     <Navigation />
                 </header>
 
-                <sidebar className={styles.layout__sidebar}>
+                <sidebar className={css.layout__sidebar}>
                     <Sidebar />
                 </sidebar>
 
-                <section className={styles.layout__main}>
-                    <div className={styles.layout__main__content}>
+                <section className={css.layout__main}>
+                    <div className={css.layout__main__content}>
                         {this.props.children}
                     </div>
                 </section>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import AuthForm from 'components/auth'
 
 export default class Auth extends Component {
     render () {
-        return (<h1>Welcome to Auth Page</h1>);
+        return (<AuthForm />);
     }
 }

@@ -1,4 +1,4 @@
-import styles from './styles.scss';
+import css from './styles.scss';
 import React, { Component } from 'react';
 
 export default class NoMatch extends Component {
@@ -9,17 +9,17 @@ export default class NoMatch extends Component {
 
     render () {
         return (
-            <div className={styles['not-found']}>
-                <div className={styles['not-found__figure']}>
+            <div className={css['not-found']}>
+                <div className={css['not-found__figure']}>
                     <img
                         src={require('images/react.svg')}
-                        className={styles['not-found__figure__image']}
+                        className={css['not-found__figure__image']}
                         alt="Error: 4xx" />
                 </div>
 
-                <div className={styles['not-found__content']}>
-                    <h1 className={styles['not-found__content__title']}>Ошибка (4xx)</h1>
-                    <p className={styles['not-found__content__description']}>
+                <div className={css['not-found__content']}>
+                    <h1 className={css['not-found__content__title']}>Ошибка (4xx)</h1>
+                    <p className={css['not-found__content__description']}>
                         Не удалось найти страницу, которую вы ищете.
                     </p>
                 </div>

@@ -1,4 +1,4 @@
-import styles from './styles.scss';
+import css from './styles.scss';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
