@@ -68,7 +68,14 @@ rules.push(
                 }
             }
         ],
-        exclude: /(node_modules|bower_components)/
+        include: [
+            define.rs_root
+        ],
+        exclude: [
+            path.resolve(__dirname, "../node_modules"),
+            path.resolve(__dirname, "../bower_components")
+        ]
+        // exclude: /(node_modules|bower_components)/
     }
 );
 

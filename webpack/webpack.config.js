@@ -28,12 +28,12 @@ module.exports = {
     },
 
     resolve: {
-        modules: [ define.rs_root, 'node_modules' ],
+        modules: [ 'node_modules', define.rs_root ],
         mainFiles: ['index'],
         unsafeCache: true,
         enforceExtension: false,
         enforceModuleExtension: false,
-        extensions: ['.jsx', '.js'],
+        extensions: ['.js', '.jsx', '.json', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
             utils: path.resolve(__dirname, '../app/utils'),
@@ -44,6 +44,15 @@ module.exports = {
             components: path.resolve(__dirname, '../app/components'),
             images: path.resolve(__dirname, '../app/assets/images'),
             scripts: path.resolve(__dirname, '../app/assets/scripts')
+        }
+    },
+
+    performance: {
+        hints: true, // "warning",
+        maxAssetSize: 200000,
+        maxEntrypointSize: 400000,
+        assetFilter: (assetFilename) => {
+            return assetFilename.endsWith('.css') || assetFilename.endsWith('.js');
         }
     },
 

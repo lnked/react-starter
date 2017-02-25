@@ -1,5 +1,8 @@
 {
-    "extends": ["plugin:react/recommended", "standard", "eslint:recommended",  "plugin:import/warnings"],
+    "parser": "babel-eslint",
+    "extends": [
+        "plugin:react/recommended", "standard", "plugin:import/warnings"
+    ],
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -15,7 +18,6 @@
         "es6": true,
         "node": true
     },
-    "parser": "babel-eslint",
     "plugins": [
         "react"
     ],
@@ -29,9 +31,9 @@
         "xit": true
     },
     "settings": {
-        "import/ignore": [".coffee", ".css", ".scss"],
         "import/resolver": "webpack",
-        "import/extensions": [".js", ".jsx"]
+        "import/extensions": [".js", ".jsx"],
+        "import/ignore": [".coffee", ".css", ".scss"]
     },
     "rules": {
         "no-debugger": 1,

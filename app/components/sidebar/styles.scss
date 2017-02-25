@@ -113,8 +113,8 @@
         right: 0;
 
         img, svg {
-            width: 23px;
-            height: 23px;
+            width: 22px;
+            height: 22px;
         }
 
         &:hover {
@@ -125,12 +125,12 @@
 
     &__section {
         span {
-            width: 23px;
-            height: 23px;
+            width: 22px;
+            height: 22px;
             content: "";
             opacity: .4;
             border-radius: 50%;
-            background-color: #fff;
+            background-color: rgba(#fff,.4);
         }
     }
 }

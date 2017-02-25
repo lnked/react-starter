@@ -9,6 +9,7 @@
     "serve": "http-server ./dist -a 0.0.0.0 -p 7777",
     "dev": "set NODE_ENV=development && webpack-dev-server --env development --config ./webpack/webpack.config.js",
     "build": "set NODE_ENV=production && npm run clean & webpack --env production --config ./webpack/webpack.config.js",
+    "lint-fix": "eslint --fix",
     "deploy": "npm run build --deploy deploy && gh-pages -d ./dist -m 'Updates --skip-ci'",
     "analyzer": "webpack --config ./webpack/webpack.config.js --json | webpack-bundle-size-analyzer"
   },
@@ -63,7 +64,6 @@
     "eslint-import-resolver-webpack": "0.8.1",
     "eslint-loader": "1.6.3",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0",
     "eslint-watch": "3.0.0",
     "extract-text-webpack-plugin": "2.0.0",
