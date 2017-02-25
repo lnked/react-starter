@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import Form from 'components/form/index';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
+import Form from 'components/form/index'
 
 export default class MainLayout extends Component {
 
@@ -20,24 +20,24 @@ export default class MainLayout extends Component {
     state = { expanded: false }
 
     handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.model.save();
+        e.preventDefault()
+        this.props.model.save()
     }
 
     handleNameChange = (e) => {
-        this.props.model.name = e.target.value;
+        this.props.model.name = e.target.value
     }
 
     handleExpand = (e) => {
-        e.preventDefault();
-        this.setState({ expanded: !this.state.expanded });
+        e.preventDefault()
+        this.setState({ expanded: !this.state.expanded })
     }
 
     render () {
         const {
             model,
             title
-        } = this.props;
+        } = this.props
 
         return (
             <div className="app">
@@ -64,6 +64,6 @@ export default class MainLayout extends Component {
                     {this.props.children}
                 </main>
             </div>
-        );
+        )
     }
 }

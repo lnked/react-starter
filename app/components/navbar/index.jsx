@@ -1,25 +1,25 @@
-import css from './styles.scss';
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import css from './styles.scss'
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 export default class Navbar extends Component {
 
     constructor (props) {
-        super(props);
+        super(props)
 
         this.state = {
             isOpened: false
-        };
+        }
     }
 
     handleOpenMenu () {
         this.setState({
             isOpened: !this.state.isOpened
-        });
+        })
     }
 
     render () {
-        const isOpened = this.state.isOpened;
+        const isOpened = this.state.isOpened
 
         return (
             <nav className={css.navbar}>
@@ -85,6 +85,6 @@ export default class Navbar extends Component {
                     </ul>
                 </div>
             </nav>
-        );
+        )
     }
 }

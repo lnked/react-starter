@@ -1,38 +1,38 @@
-import React, { Component } from 'react';
-import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router';
+import React, { Component } from 'react'
+import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router'
 
 // Layouts
-import CoreLayout from 'layouts/CoreLayout';
-import AuthLayout from 'layouts/AuthLayout';
+import CoreLayout from 'layouts/CoreLayout'
+import AuthLayout from 'layouts/AuthLayout'
 
 // Pages
-import Auth from 'containers/auth';
-import Page1 from 'containers/page1';
-import NoMatch from 'containers/nomatch';
+import Auth from 'containers/auth'
+import Page1 from 'containers/page1'
+import NoMatch from 'containers/nomatch'
 
 export default class App extends Component {
 
     constructor (props) {
-        super(props);
+        super(props)
         this.state = {
             isOverflow: false
-        };
+        }
     }
 
     componentDidMount () {
-        document.body.classList.toggle('is-overflow', this.state.isOverflow);
+        document.body.classList.toggle('is-overflow', this.state.isOverflow)
     }
 
     componentWillUpdate (nextProps, nextState) {
-        document.body.classList.toggle('is-overflow', nextState.isOverflow);
+        document.body.classList.toggle('is-overflow', nextState.isOverflow)
     }
 
     componentWillUnmount () {
-        document.body.classList.remove('is-overflow');
+        document.body.classList.remove('is-overflow')
     }
 
     requireAuth (nextState, replace) {
-        console.log(replace, nextState.location.pathname);
+        console.log(replace, nextState.location.pathname)
     }
 
     render () {
@@ -134,17 +134,17 @@ export default class App extends Component {
                     onEnter={() => {
                         this.setState({
                             isOverflow: true
-                        });
+                        })
                     }}
                     onLeave={() => {
                         this.setState({
                             isOverflow: false
-                        });
+                        })
                     }}
                     status={404}
                 />
 
             </Router>
-        );
+        )
     }
 }

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
-export default class UserList  extends Component {
+export default class UserList extends Component {
     render () {
         return (
             <ul className="user-list">
@@ -12,6 +12,6 @@ export default class UserList  extends Component {
                 <li><Link to="users/5">Tobias</Link></li>
                 <li><Link to="users/6">Sebastian</Link></li>
             </ul>
-        );
+        )
     }
 }

@@ -9,7 +9,7 @@
     "serve": "http-server ./dist -a 0.0.0.0 -p 7777",
     "dev": "set NODE_ENV=development && webpack-dev-server --env development --config ./webpack/webpack.config.js",
     "build": "set NODE_ENV=production && npm run clean & webpack --env production --config ./webpack/webpack.config.js",
-    "lint-fix": "eslint --fix",
+    "lint-fix": "eslint --fix ./app/components/**/*.js[x] ./app/containers/**/*.js[x] ./app/layouts/**/*.js[x]",
     "deploy": "npm run build --deploy deploy && gh-pages -d ./dist -m 'Updates --skip-ci'",
     "analyzer": "webpack --config ./webpack/webpack.config.js --json | webpack-bundle-size-analyzer"
   },

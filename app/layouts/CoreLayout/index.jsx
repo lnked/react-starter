@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Sidebar from 'components/sidebar';
-import Navigation from 'components/navigation';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import Sidebar from 'components/sidebar'
+import Navigation from 'components/navigation'
+import css from './styles.scss'
 
 export default class CoreLayout extends Component {
 
@@ -9,12 +9,8 @@ export default class CoreLayout extends Component {
         children: React.PropTypes.element.isRequired
     }
 
-    constructor (props) {
-        super(props);
-    }
-
     componentWillMount () {
-        window.prerenderReady = true;
+        window.prerenderReady = true
     }
 
     render () {
@@ -34,6 +30,6 @@ export default class CoreLayout extends Component {
                     </div>
                 </section>
             </div>
-        );
+        )
     }
 }

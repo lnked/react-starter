@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Button from 'components/button';
+import React, { Component } from 'react'
+import Button from 'components/button'
 
 export default class CreatePageView extends Component {
 
@@ -10,7 +10,7 @@ export default class CreatePageView extends Component {
     }
 
     render () {
-        return(
+        return (
             <div>
                 <h1>Create Post: {this.props.params.slug}</h1>
                 <Button label="Button test" type="button" />
@@ -22,6 +22,6 @@ export default class CreatePageView extends Component {
                 <Button label="Button test" type="button" mod="danger" />
                 <Button label="Button test" type="button" mod="link" />
             </div>
-        );
+        )
     }
 }

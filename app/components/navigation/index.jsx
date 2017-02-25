@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { IndexLink, Link } from 'react-router';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import { IndexLink, Link } from 'react-router'
+import css from './styles.scss'
 
 export default class Navigation extends Component {
     render () {
@@ -36,6 +36,6 @@ export default class Navigation extends Component {
                     className={css.navigation__link}
                     activeClassName={css.navigation__link_active}>Система</Link>
             </nav>
-        );
+        )
     }
 }

@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
-import Button from 'components/button';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import Button from 'components/button'
+import css from './styles.scss'
 
 export default class AuthForm extends Component {
 
-    constructor (props) {
-        super(props);
-    }
-
     handleSubmit (e) {
-        e.preventDefault();
-        console.log('handleSubmit');
-        return false;
+        e.preventDefault()
+        console.log('handleSubmit')
+        return false
     }
 
     render () {
@@ -45,6 +41,6 @@ export default class AuthForm extends Component {
                     </div>
                 </div>
             </form>
-        );
+        )
     }
 }

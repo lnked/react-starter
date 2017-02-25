@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import { Link, IndexLink } from 'react-router'
+import css from './styles.scss'
 // import Icon from 'react-svg-use';
 // <Icon id="logo" color="#D71421" />
 
 export default class Sidebar extends Component {
 
     createLinkItem (page) {
-        const base = '/cp/site';
+        const base = '/cp/site'
 
         return (
             <Link
@@ -20,7 +20,7 @@ export default class Sidebar extends Component {
             >
                 <span />
             </Link>
-        );
+        )
     }
 
     render () {
@@ -50,7 +50,7 @@ export default class Sidebar extends Component {
                 system: 'settings',
                 title: 'settings'
             }
-        ];
+        ]
 
         return (
             <nav className={css.sidebar}>
@@ -80,7 +80,7 @@ export default class Sidebar extends Component {
                         alt="" />
                 </Link>
             </nav>
-        );
+        )
     }
 }
 // <Route path="site" component={Page1}>

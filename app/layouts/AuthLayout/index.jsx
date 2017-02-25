@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import css from './styles.scss'
 
 export default class AuthLayout extends Component {
 
@@ -14,6 +14,6 @@ export default class AuthLayout extends Component {
                     {this.props.children}
                 </section>
             </div>
-        );
+        )
     }
 }

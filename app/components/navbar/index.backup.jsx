@@ -1,6 +1,6 @@
-import css from './styles.scss';
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import css from './styles.scss'
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 export default class Navbar extends Component {
     render () {
@@ -16,7 +16,7 @@ export default class Navbar extends Component {
                     <Link to="/users" className={css.navbar__link}>Users</Link>
                 </li>
             </ul>
-        );
+        )
     }
 }
 // import { Router, Route, IndexRoute, browserHistory } from 'react-router';

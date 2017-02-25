@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
+import css from './styles.scss'
 
 export default class Posts extends Component {
 
@@ -26,7 +26,7 @@ export default class Posts extends Component {
                 <Link to={post.url} target="_blank">{post.title}</Link>
                 <p>{post.author_flair_text}</p>
             </li>
-        );
+        )
     }
 
     render () {
@@ -37,6 +37,6 @@ export default class Posts extends Component {
                     {this.props.data.map(this.createListItem)}
                 </ul>
             </div>
-        );
+        )
     }
 }

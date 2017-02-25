@@ -1,10 +1,10 @@
-import css from './styles.scss';
-import React, { Component } from 'react';
+import css from './styles.scss'
+import React, { Component } from 'react'
 
 export default class NoMatch extends Component {
 
     componentWillMount () {
-        document.title = '404 Not Found';
+        document.title = '404 Not Found'
     }
 
     render () {
@@ -24,6 +24,6 @@ export default class NoMatch extends Component {
                     </p>
                 </div>
             </div>
-        );
+        )
     }
 }

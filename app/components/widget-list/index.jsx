@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class WidgetList extends Component {
     render () {
@@ -8,6 +8,6 @@ export default class WidgetList extends Component {
                 <li>Widget 2</li>
                 <li>Widget 3</li>
             </ul>
-        );
+        )
     }
 }

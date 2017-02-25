@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import css from './styles.scss';
+import React, { Component } from 'react'
+import css from './styles.scss'
 
 export default class Button extends Component {
 
@@ -15,12 +15,8 @@ export default class Button extends Component {
         label: 'Button'
     }
 
-    constructor (props) {
-        super(props);
-    }
-
     handleClick () {
-        console.log('click');
+        console.log('click')
     }
 
     render () {
@@ -32,6 +28,6 @@ export default class Button extends Component {
             >
                 {this.props.label}
             </button>
-        );
+        )
     }
 }
