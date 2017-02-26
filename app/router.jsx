@@ -47,6 +47,7 @@ export default class App extends Component {
 
                 <Route path="/cp" component={CoreLayout}>
                     <IndexRoute component={Page1} />
+                    <Route path="settings" component={Page1} />
 
                     <Route path="site" component={Page1}>
                         <Route path="structure" component={Page1} />

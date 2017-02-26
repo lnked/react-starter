@@ -10,6 +10,7 @@
     line-height: 1;
     
     &__logo,
+    &__system,
     &__section {
         width: 100%;
         display: flex;
@@ -32,15 +33,13 @@
         }
 
         &:after {
-            width: 100%;
+            width: 3px;
             position: absolute;
             left: 0;
             top: 0;
             opacity: 0;
-            backface-visibility: hidden;
-            transform: translate3d(100%,0,0);
-            transition: opacity .5s ease-in-out, transform .4s cubic-bezier(1,.01,.07,.64);
-            will-change: transform, opacity;
+            transition: opacity .5s ease-in-out;
+            will-change: opacity;
         }
         
         &:nth-child(1) {
@@ -94,7 +93,6 @@
         &_active {
             &:after {
                 opacity: 1;
-                transform: translate3d(-46px,0,0);
             }
         }
     }
@@ -119,7 +117,10 @@
 
         &:hover {
             color: #F8C52C;
-            animation: spinner 1s infinite linear;
+
+            img, svg {
+                animation: spinner 1s infinite linear;
+            }
         }
     }
 

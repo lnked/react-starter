@@ -70,7 +70,7 @@ export default class Sidebar extends Component {
                 <Link
                     icon="settings"
                     label="Settings"
-                    to="/cp/system"
+                    to="/cp/settings"
                     className={[css.sidebar__section, css.sidebar__settings].join(' ')}
                     activeClassName={css.sidebar__system_active}
                 >

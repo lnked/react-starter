@@ -40,12 +40,7 @@ rules.push(
                     babelrc: false,
                     presets: [
                         "react",
-                        [
-                            "es2015", {
-                                "loose": true,
-                                "modules": false
-                            }
-                        ],
+                        ["es2015", { "loose": true, "modules": false }],
                         "stage-0",
                         ...define.rs_development ? [] : [
                             "react-optimize"
@@ -62,20 +57,19 @@ rules.push(
                                 "regenerator": true, // defaults to true
                                 "moduleName": "babel-runtime" // defaults to "babel-runtime"
                             }]
-                        ] : []
+                        ] : [
+                            "dynamic-import-webpack"
+                        ]
                     ],
                     cacheDirectory: true
                 }
             }
         ],
-        include: [
-            define.rs_root
-        ],
+        include: [ define.rs_root ],
         exclude: [
-            path.resolve(__dirname, "../node_modules"),
-            path.resolve(__dirname, "../bower_components")
+            path.resolve(define.rs_root, "../node_modules"),
+            path.resolve(define.rs_root, "../bower_components")
         ]
-        // exclude: /(node_modules|bower_components)/
     }
 );
 
@@ -118,8 +112,11 @@ rules.push(
                 }
             }
         ],
-        include: define.rs_root,
-        exclude: /node_modules/
+        include: [ define.rs_root ],
+        exclude: [
+            path.resolve(define.rs_root, "../node_modules"),
+            path.resolve(define.rs_root, "../bower_components")
+        ]
     }
 );
 
@@ -184,7 +181,11 @@ rules.push(
                 }
             }
         ],
-        exclude: /node_modules/
+        include: [ define.rs_root ],
+        exclude: [
+            path.resolve(define.rs_root, "../node_modules"),
+            path.resolve(define.rs_root, "../bower_components")
+        ]
     }
 );
 

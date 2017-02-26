@@ -73,6 +73,7 @@ bower_components
 # Node.JS
 node_modules
 npm-debug.log
+npm-shrinkwrap.json
 
 # Directories potentially created on remote AFP share
 Network Trash Folder

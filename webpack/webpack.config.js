@@ -18,8 +18,8 @@ module.exports = {
         styles: path.resolve(define.rs_root, 'app.scss')
     },
 
-    target: 'web', // electron-main | electron-renderer
-    
+    target: 'web', // 'node' | electron-main | electron-renderer
+
     output: {
         publicPath: '/',
         path: define.rs_dist,
