@@ -8,6 +8,7 @@ import AuthLayout from 'layouts/AuthLayout'
 // Pages
 import Auth from 'containers/auth'
 import Page1 from 'containers/page1'
+import Load from 'containers/load'
 import NoMatch from 'containers/nomatch'
 
 export default class App extends Component {
@@ -47,7 +48,7 @@ export default class App extends Component {
 
                 <Route path="/cp" component={CoreLayout}>
                     <IndexRoute component={Page1} />
-                    <Route path="settings" component={Page1} />
+                    <Route path="settings" component={Load} />
 
                     <Route path="site" component={Page1}>
                         <Route path="structure" component={Page1} />

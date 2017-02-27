@@ -47,19 +47,7 @@ rules.push(
                         ]
                     ],
                     plugins: [
-                        "transform-react-jsx",
-                        "transform-decorators-legacy",
-                        "transform-class-properties",
-                        ...define.rs_development ? [
-                            ["transform-runtime", {
-                                "helpers": false, // defaults to true
-                                "polyfill": false, // defaults to true
-                                "regenerator": true, // defaults to true
-                                "moduleName": "babel-runtime" // defaults to "babel-runtime"
-                            }]
-                        ] : [
-                            "dynamic-import-webpack"
-                        ]
+                        "transform-react-jsx"
                     ],
                     cacheDirectory: true
                 }

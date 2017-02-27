@@ -25,10 +25,10 @@ $c-danger-background:           #fc2929;
 .button {
     margin: 0;
     outline: none;
-    border: 0 none;
     cursor: pointer;
     overflow: visible;
     user-select: none;
+    border: 1px solid;
     text-align: center;
     text-transform: none;
     text-decoration: none;
@@ -39,14 +39,15 @@ $c-danger-background:           #fc2929;
     border-color: rgba(0, 0, 0, 0);
     transition: border-color .3s, background-color .3s, box-shadow .3s, color .3s;
 
-    height: 30px;
+    height: 32px;
     padding: 0 15px;
     font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 30px;
+    font-weight: 600;
+    line-height: 32px;
 
     color: $c-default-color;
     background-color: $c-default-background;
+    border-color: darken($c-default-background, $p-variations-percent);
 
     &:focus {
         outline: 0;
@@ -56,7 +57,7 @@ $c-danger-background:           #fc2929;
         box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
         &:active {
-            box-shadow: inset 0 2px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.1);
+            box-shadow: inset 0 2px 0 rgba(0,0,0,.05),0 1px 2px 0 rgba(0,0,0,.05);
         }
     }
 
@@ -78,6 +79,7 @@ $c-danger-background:           #fc2929;
     :global &--default {
         color: $c-default-color;
         background-color: $c-default-background;
+        border-color: darken($c-default-background, $p-variations-percent);
     
         &:hover {
             background-color: darken($c-default-background, $p-variations-percent / 3);
@@ -87,6 +89,7 @@ $c-danger-background:           #fc2929;
     :global &--primary {
         color: $c-primary-color;
         background-color: $c-primary-background;
+        border-color: darken($c-primary-background, $p-variations-percent);
     
         &:hover {
             background-color: darken($c-primary-background, $p-variations-percent);
@@ -96,6 +99,7 @@ $c-danger-background:           #fc2929;
     :global &--success {
         color: $c-success-color;
         background-color: $c-success-background;
+        border-color: darken($c-success-background, $p-variations-percent);
         
         &:hover {
             background-color: darken($c-success-background, $p-variations-percent);
@@ -105,6 +109,7 @@ $c-danger-background:           #fc2929;
     :global &--info {
         color: $c-info-color;
         background-color: $c-info-background;
+        border-color: darken($c-info-background, $p-variations-percent);
         
         &:hover {
             background-color: darken($c-info-background, $p-variations-percent);
@@ -114,6 +119,7 @@ $c-danger-background:           #fc2929;
     :global &--warning {
         color: $c-warning-color;
         background-color: $c-warning-background;
+        border-color: darken($c-warning-background, $p-variations-percent);
         
         &:hover {
             background-color: lighten($c-warning-background, $p-variations-percent);
@@ -123,6 +129,7 @@ $c-danger-background:           #fc2929;
     :global &--danger {
         color: $c-danger-color;
         background-color: $c-danger-background;
+        border-color: darken($c-danger-background, $p-variations-percent);
         
         &:hover {
             background-color: darken($c-danger-background, $p-variations-percent);

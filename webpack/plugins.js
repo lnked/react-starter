@@ -14,6 +14,8 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
 
 if (define.rs_development) {
     plugins.push(
@@ -76,6 +78,10 @@ if (define.rs_development) {
 
 if (define.rs_production) {
     plugins.push(
+        new WebpackCleanupPlugin({
+            quiet: true,
+            preview: true
+        }),
         new webpack.LoaderOptionsPlugin({
             minimize: true,
             debug: false
@@ -86,6 +92,7 @@ if (define.rs_production) {
             minChuncs: 2
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: false,
@@ -158,7 +165,10 @@ if (define.rs_production) {
                 windows: false
             }
         }),
-        new webpack.optimize.AggressiveMergingPlugin(),
+        new ClosureCompilerPlugin({
+            compilation_level: 'ADVANCED',
+            create_source_map: false
+        }),
         new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
         new CompressionPlugin({
             asset: '[path].gz[query]',
