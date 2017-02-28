@@ -1,50 +1,32 @@
-// import Input from 'react-toolbox/lib/input'
+import React, { Component } from 'react'
+import css from './styles.scss'
 
-// class InputTest extends React.Component {
-//     state = { name: '', phone: '', email: '', hint: '' };
+export default class Button extends Component {
 
-//     handleChange = (name, value) => {
-//         this.setState({...this.state, [name]: value})
-//     };
+    static propTypes = {
+        type: React.PropTypes.string,
+        name: React.PropTypes.string,
+        value: React.PropTypes.string,
+        className: React.PropTypes.string,
+        handleChange: React.PropTypes.func
+    }
 
-//     render () {
-//         return (
-//       <section>
-//         <Input type="text" label="Name" name="name" value={this.state.name} onChange={this.handleChange.bind(this, 'name')} maxLength={16 } />
-//         <Input type="text" label="Disabled field" disabled />
-//         <Input type="email" label="Email address" icon="email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
-//         <Input type="tel" label="Phone" name="phone" icon="phone" value={this.state.phone} onChange={this.handleChange.bind(this, 'phone')} />
-//         <Input type="text" value={this.state.hint} label="Required Field" hint="With Hint" required onChange={this.handleChange.bind(this, 'hint')} icon={<span>J</span>} />
-//       </section>
-//         )
-//     }
-// }
+    static defaultProps = {
+        type: 'text',
+        value: '',
+        className: '',
+        handleChange: false
+    }
 
-// class CustomTextInput extends React.Component {
-//     constructor (props) {
-//         super(props)
-//         this.focus = this.focus.bind(this)
-//     }
-
-//     focus () {
-//     // Explicitly focus the text input using the raw DOM API
-//         this.textInput.focus()
-//     }
-
-//     render () {
-//     // Use the `ref` callback to store a reference to the text input DOM
-//     // element in an instance field (for example, this.textInput).
-//         return (
-//       <div>
-//         <input
-//           type="text"
-//           ref={(input) => { this.textInput = input }} />
-//         <input
-//           type="button"
-//           value="Focus the text input"
-//           onClick={this.focus}
-//         />
-//       </div>
-//         )
-//     }
-// }
+    render () {
+        return (
+            <input
+                type={this.props.type}
+                name={this.props.name}
+                value={this.props.value}
+                onChange={this.props.handleChange}
+                className={[css.input, this.props.className].join(' ')}
+            />
+        )
+    }
+}

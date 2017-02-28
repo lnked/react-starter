@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Input from 'components/input'
 import Button from 'components/button'
 import css from './styles.scss'
 import WebStorage from 'react-webstorage'
@@ -50,7 +51,32 @@ export default class AuthForm extends Component {
         }
     }
 
+    inputItem (item) {
+        return (
+            <div className={css.login__row}>
+                <Input
+                    key={item.id}
+                    type={item.type}
+                    name={item.name}
+                    value={this.state[item.name]}
+                    handleChange={this.handleChange}
+                />
+            </div>
+        )
+    }
+
     render () {
+        const inputs = [
+            {
+                type: 'text',
+                name: 'login'
+            },
+            {
+                type: 'password',
+                name: 'password'
+            }
+        ]
+
         return (
             <form action="" onSubmit={this.handleSubmit} className={css.login} method="POST">
                 <div className={css.login__logo}>
@@ -61,25 +87,7 @@ export default class AuthForm extends Component {
                 </div>
 
                 <div className={css.login__body}>
-                    <div className={css.login__row}>
-                        <input
-                            type="text"
-                            name="login"
-                            value={this.state.login}
-                            onChange={this.handleChange}
-                            className={css.login__input}
-                        />
-                    </div>
-
-                    <div className={css.login__row}>
-                        <input
-                            type="password"
-                            name="password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                            className={css.login__input}
-                        />
-                    </div>
+                    {inputs.map(this.inputItem)}
 
                     <div className={css.login__row}>
                         <div className={css.login__row__col}>
