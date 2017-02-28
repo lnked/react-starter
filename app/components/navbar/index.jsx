@@ -18,8 +18,62 @@ export default class Navbar extends Component {
         })
     }
 
+    navbarItem (item) {
+        return (
+            <li className={css.navbar__list__item} key={item.id}>
+                <Link to={item.url} className={css.navbar__list__item__link}>{item.title}</Link>
+            </li>
+        )
+    }
+
     render () {
         const isOpened = this.state.isOpened
+        const navbar = [
+            {
+                url: '/home',
+                title: 'Home'
+            },
+            {
+                url: '/reviews',
+                title: 'Reviews'
+            },
+            {
+                url: '/video',
+                title: 'Video'
+            },
+            {
+                url: '/gallery',
+                title: 'Gallery'
+            },
+            {
+                url: '/article',
+                title: 'Article'
+            },
+            {
+                url: '/news',
+                title: 'News'
+            },
+            {
+                url: '/catalog',
+                title: 'Catalog'
+            },
+            {
+                url: '/about',
+                title: 'About'
+            },
+            {
+                url: '/contacts',
+                title: 'Contact us'
+            },
+            {
+                url: '/blog',
+                title: 'Blog'
+            },
+            {
+                url: '/basket',
+                title: 'Basket'
+            }
+        ]
 
         return (
             <nav className={css.navbar}>
@@ -39,49 +93,7 @@ export default class Navbar extends Component {
                     <div className={css.navbar__screen} />
 
                     <ul className={css.navbar__list}>
-                        <li className={css.navbar__list__item}>
-                            <Link to="/home" className={css.navbar__list__item__link}>Home</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/reviews" className={css.navbar__list__item__link}>Reviews</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/video" className={css.navbar__list__item__link}>Video</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/gallery" className={css.navbar__list__item__link}>Gallery</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/article" className={css.navbar__list__item__link}>Article</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/news" className={css.navbar__list__item__link}>News</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/catalog" className={css.navbar__list__item__link}>Catalog</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/about" className={css.navbar__list__item__link}>About</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/contacts" className={css.navbar__list__item__link}>Contact us</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/blog" className={css.navbar__list__item__link}>Blog</Link>
-                        </li>
-
-                        <li className={css.navbar__list__item}>
-                            <Link to="/basket" className={css.navbar__list__item__link}>Basket</Link>
-                        </li>
+                        {navbar.map(this.navbarItem)}
                     </ul>
                 </div>
             </nav>

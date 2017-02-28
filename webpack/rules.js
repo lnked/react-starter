@@ -10,8 +10,11 @@ rules.push(
     {
         enforce: 'pre',
         test: /\.jsx?$/,
+        options: {
+            fix: define.rs_production
+        },
         loader: 'eslint-loader',
-        exclude: /(node_modules|bower_components)/
+        include: define.rs_root
     }
 );
 
@@ -47,17 +50,21 @@ rules.push(
                         ]
                     ],
                     plugins: [
+                        "transform-object-assign",
+                        ["transform-runtime", {
+                            "helpers": false, // defaults to true
+                            "polyfill": false, // defaults to true
+                            "regenerator": true, // defaults to true
+                            "moduleName": "babel-runtime" // defaults to "babel-runtime"
+                        }],
                         "transform-react-jsx"
                     ],
                     cacheDirectory: true
                 }
             }
         ],
-        include: [ define.rs_root ],
-        exclude: [
-            path.resolve(define.rs_root, "../node_modules"),
-            path.resolve(define.rs_root, "../bower_components")
-        ]
+        exclude: /node_modules/,
+        include: [ define.rs_root ]
     }
 );
 
@@ -101,10 +108,7 @@ rules.push(
             }
         ],
         include: [ define.rs_root ],
-        exclude: [
-            path.resolve(define.rs_root, "../node_modules"),
-            path.resolve(define.rs_root, "../bower_components")
-        ]
+        exclude: /(node_modules|bower_components)/
     }
 );
 

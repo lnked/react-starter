@@ -10,7 +10,7 @@ export default class Load extends Component {
     }
 
     static defaultProps = {
-        subreddit: 'frontend'
+        subreddit: 'reactjs'
     }
 
     constructor (props) {

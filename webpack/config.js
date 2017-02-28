@@ -15,7 +15,10 @@ module.exports = {
 
     entry: {
         app: path.resolve(define.rs_root, 'app.jsx'),
-        styles: path.resolve(define.rs_root, 'app.scss')
+        styles: path.resolve(define.rs_root, 'app.scss'),
+        polyfill: ['babel-polyfill'],
+        vendor: ['react', 'react-dom', 'react-router'] // , 'redux', 'react-router-redux'
+        // vendor: Object.keys(require('../package.json').dependencies)
     },
 
     target: 'web', // 'node' | electron-main | electron-renderer
@@ -23,8 +26,9 @@ module.exports = {
     output: {
         publicPath: '/',
         path: define.rs_dist,
-        filename: define.rs_production ? '[name].[chunkhash:5].js' : '[name].js',
-        chunkFilename: define.rs_production ? 'chunk.[name].[chunkhash:5].js' : '[name].chunk.js'
+        pathinfo: define.rs_development,
+        filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
+        chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },
 
     resolve: {
@@ -36,23 +40,14 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
-            utils: path.resolve(__dirname, '../app/utils'),
-            assets: path.resolve(__dirname, '../app/assets'),
-            layouts: path.resolve(__dirname, '../app/layouts'),
-            reducers: path.resolve(__dirname, '../app/reducers'),
-            containers: path.resolve(__dirname, '../app/containers'),
-            components: path.resolve(__dirname, '../app/components'),
-            images: path.resolve(__dirname, '../app/assets/images'),
-            scripts: path.resolve(__dirname, '../app/assets/scripts')
-        }
-    },
-
-    performance: {
-        hints: true, // "warning",
-        maxAssetSize: 200000,
-        maxEntrypointSize: 400000,
-        assetFilter: (assetFilename) => {
-            return assetFilename.endsWith('.css') || assetFilename.endsWith('.js');
+            utils: path.resolve(define.rs_root, 'utils'),
+            assets: path.resolve(define.rs_root, 'assets'),
+            layouts: path.resolve(define.rs_root, 'layouts'),
+            reducers: path.resolve(define.rs_root, 'reducers'),
+            containers: path.resolve(define.rs_root, 'containers'),
+            components: path.resolve(define.rs_root, 'components'),
+            images: path.resolve(define.rs_root, 'assets/images'),
+            scripts: path.resolve(define.rs_root, 'assets/scripts')
         }
     },
 
@@ -66,9 +61,9 @@ module.exports = {
     },
 
     performance: {
-        maxAssetSize: 100000,
-        maxEntrypointSize: 300000,
-        hints: false
+        hints: define.rs_production ? "warning" : false,
+        maxAssetSize: 200000,
+        maxEntrypointSize: 400000
     },
 
     devServer: {

@@ -6,7 +6,6 @@ const path = require('path');
 const webpack = require('webpack');
 const define = require('./define');
 
-const FaviconsPlugin = require('favicons-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -16,26 +15,29 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 if (define.rs_development) {
     plugins.push(
-        new webpack.HotModuleReplacementPlugin(),
         new LiveReloadPlugin()
     );
 }
 
 plugins.push(
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(define.rs_environment)
-    }),
-    new ExtractTextPlugin({
-        filename: define.rs_production ? '[name].[hash].css' : '[name].css',
-        allChunks: define.rs_production
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'process.env.DEBUG': JSON.stringify(false)
     }),
     new HtmlWebpackPlugin({
         hash        : false,
+        cache       : define.rs_production,
+        inject      : 'body',
+        filetype    : 'pug',
+        template    : 'app.pug',
+        filename    : 'index.html',
         minify: define.rs_development ? {} : {
             removeComments: define.rs_production,
             collapseWhitespace: define.rs_production,
@@ -47,12 +49,11 @@ plugins.push(
             minifyJS: define.rs_production,
             minifyCSS: define.rs_production,
             minifyURLs: define.rs_production
-        },
-        cache       : define.rs_production,
-        inject      : 'body',
-        filetype    : 'pug',
-        template    : 'app.pug',
-        filename    : 'index.html'
+        }
+    }),
+    new ExtractTextPlugin({
+        filename: define.rs_production ? '[name].[hash].css' : '[name].css',
+        allChunks: define.rs_production
     }),
     new ScriptExtHtmlWebpackPlugin({
         async: /\.js$/,
@@ -62,8 +63,7 @@ plugins.push(
         }
     }),
     new CopyWebpackPlugin([
-        { from: 'assets/images', to: 'images' },
-        { from: '../node_modules/babel-polyfill/dist/polyfill.min.js', to: 'js/polyfill.js' }
+        { from: 'assets/images', to: 'images' }
     ])
 );
 
@@ -78,21 +78,28 @@ if (define.rs_development) {
 
 if (define.rs_production) {
     plugins.push(
-        new WebpackCleanupPlugin({
-            quiet: true,
-            preview: true
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug: false
-        }),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        // new WebpackCleanupPlugin({
+        //     quiet: true,
+        //     preview: true
+        // }),
+        // new webpack.LoaderOptionsPlugin({
+        //     minimize: true,
+        //     debug: false
+        // }),
+        new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
             async: true,
             children: true,
-            minChuncs: 2
+            filename: 'vendor-[hash:5].min.js',
+            minChunks: (module) => {
+                return (
+                    module.resource &&
+                    module.resource.indexOf(path.resolve('node_modules')) === 0
+                );
+            }
         }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: false,
@@ -134,7 +141,8 @@ if (define.rs_production) {
             },
             exclude: [/\.min\.js$/gi]
         }),
-        new FaviconsPlugin({
+        new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+        new FaviconsWebpackPlugin({
             logo: 'assets/favicon/favicon.svg',
             // The prefix for all image files (might be a folder or a name)
             prefix: 'fav-[hash:8]/',
@@ -165,11 +173,10 @@ if (define.rs_production) {
                 windows: false
             }
         }),
-        new ClosureCompilerPlugin({
-            compilation_level: 'ADVANCED',
-            create_source_map: false
-        }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+        // new ClosureCompilerPlugin({
+        //     compilation_level: 'ADVANCED',
+        //     create_source_map: false
+        // }),
         new CompressionPlugin({
             asset: '[path].gz[query]',
             algorithm: 'gzip',
