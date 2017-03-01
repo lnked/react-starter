@@ -1,6 +1,7 @@
 
-[![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork)]()
-[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star)]()
+[![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)]()
+[![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)]()
+[![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)]()
 
 ---
 
@@ -13,5 +14,5 @@
 ---
 
 [![Code Climate](https://codeclimate.com/github/lnked/react-starter/badges/gpa.svg)](https://codeclimate.com/github/lnked/react-starter)
-[![Test Coverage](https://codeclimate.com/github/lnked/react-starter/badges/coverage.svg)](https://codeclimate.com/github/lnked/react-starter/coverage)
 [![Issue Count](https://codeclimate.com/github/lnked/react-starter/badges/issue_count.svg)](https://codeclimate.com/github/lnked/react-starter)
+eclimate.com/github/lnked/react-starter)
