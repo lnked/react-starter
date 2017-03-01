@@ -1,11 +1,8 @@
 
-# React-starter
-
-[![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)](https://github.com/lnked/react-starter)
-[![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)](https://github.com/lnked/react-starter)
-[![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)](https://github.com/lnked/react-starter)
-
----
+[![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)]()
+[![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)]()
+[![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)]()
+>>>>>>> 53ecf35... update
 
 [![npm (scoped)](https://img.shields.io/npm/v/@cycle/core.svg)](https://github.com/lnked/react-starter)
 [![GitHub issues](https://img.shields.io/github/issues/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
