@@ -2,7 +2,8 @@
 
 const plugins = [];
 
-const path = require('path');
+const { resolve } = require('path');
+
 const webpack = require('webpack');
 const define = require('./define');
 
@@ -13,9 +14,13 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
+// const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
+const ClosureCompilerPlugin = require('webpack-closure-compiler');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
+const LodashPlugin = require('babel-plugin-lodash');
+const WebpackChunkHash = require('webpack-chunk-hash');
+const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 
 if (define.rs_development) {
     plugins.push(
@@ -24,6 +29,10 @@ if (define.rs_development) {
 }
 
 plugins.push(
+    new webpack.LoaderOptionsPlugin({
+        minimize: define.rs_production,
+        debug: true
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
@@ -32,12 +41,12 @@ plugins.push(
         'process.env.DEBUG': JSON.stringify(false)
     }),
     new HtmlWebpackPlugin({
-        hash        : false,
-        cache       : define.rs_production,
-        inject      : 'body',
-        filetype    : 'pug',
-        template    : 'app.pug',
-        filename    : 'index.html',
+        hash: false,
+        cache: define.rs_production,
+        inject: 'body',
+        filetype: 'pug',
+        template: 'app.pug',
+        filename: 'index.html',
         minify: define.rs_development ? {} : {
             removeComments: define.rs_production,
             collapseWhitespace: define.rs_production,
@@ -78,28 +87,36 @@ if (define.rs_development) {
 
 if (define.rs_production) {
     plugins.push(
+        new WebpackChunkHash(),
+        new ChunkManifestPlugin({
+            filename: "chunk-manifest.json",
+            manifestVariable: "webpackManifest"
+        }),
+        new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
-        // new WebpackCleanupPlugin({
-        //     quiet: true,
-        //     preview: true
-        // }),
-        // new webpack.LoaderOptionsPlugin({
-        //     minimize: true,
-        //     debug: false
-        // }),
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            async: true,
-            children: true,
-            filename: 'vendor-[hash:5].min.js',
+            // filename: 'vendor.[hash:5].js',
             minChunks: (module) => {
-                return (
-                    module.resource &&
-                    module.resource.indexOf(path.resolve('node_modules')) === 0
-                );
-            }
+                return module.context && module.context.includes("node_modules");
+            },
+            // chunks: ['app', 'vendor'],
+            // async: true, // или вынести в отдельный асинхронный чанк
+            // children: true // смотреть ли в дочерние чанки и выносить модули в родительский
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "runtime",
+            chunks: ['vendor'],
+            minChunks: Infinity,
+        }),
+        new webpack.ContextReplacementPlugin(
+            /moment[\/\\]locale$/,
+            /(en-gb|ru)\.js/
+        ),
+        // new LodashPlugin({
+        //     paths: false
+        // }),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: false,
@@ -124,9 +141,9 @@ if (define.rs_production) {
                 unsafe: true,
                 hoist_vars: true,
                 negate_iife: true,
-                unsafe_comps    : true,
-                screw_ie8       : true,
-                pure_getters    : true
+                unsafe_comps: true,
+                screw_ie8: true,
+                pure_getters: true
             },
             mangle: {
                 toplevel: true,
@@ -141,7 +158,6 @@ if (define.rs_production) {
             },
             exclude: [/\.min\.js$/gi]
         }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
         new FaviconsWebpackPlugin({
             logo: 'assets/favicon/favicon.svg',
             // The prefix for all image files (might be a folder or a name)
@@ -173,10 +189,16 @@ if (define.rs_production) {
                 windows: false
             }
         }),
-        // new ClosureCompilerPlugin({
-        //     compilation_level: 'ADVANCED',
-        //     create_source_map: false
-        // }),
+        new ClosureCompilerPlugin({
+            // compilation_level: 'ADVANCED',
+            // create_source_map: false
+            compiler: {
+                language_in: 'ECMASCRIPT6',
+                language_out: 'ECMASCRIPT5',
+                compilation_level: 'ADVANCED'
+            },
+            concurrency: 3
+        }),
         new CompressionPlugin({
             asset: '[path].gz[query]',
             algorithm: 'gzip',

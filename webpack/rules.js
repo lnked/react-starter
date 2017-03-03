@@ -2,7 +2,8 @@
 
 const rules = [];
 
-const path = require('path');
+const { resolve } = require('path');
+
 const define = require('./define');
 const postcss = require('./postcss');
 
@@ -43,21 +44,29 @@ rules.push(
                     babelrc: false,
                     presets: [
                         "react",
-                        ["es2015", { "loose": true, "modules": false }],
+                        [
+                            "es2015", {
+                                "loose": true,
+                                "modules": false
+                            }
+                        ],
                         "stage-0",
-                        ...define.rs_development ? [] : [
-                            "react-optimize"
-                        ]
+                        ...define.rs_production ? [
+                            "react-optimize",
+                            ["babili", {
+                                "mangle": {
+                                    "blacklist": ["MyCustomError"]
+                                },
+                                "unsafe": {
+                                    "typeConstructors": false
+                                },
+                                "keepFnName": true
+                            }]
+                        ] : []
                     ],
                     plugins: [
-                        "transform-object-assign",
-                        ["transform-runtime", {
-                            "helpers": false, // defaults to true
-                            "polyfill": false, // defaults to true
-                            "regenerator": true, // defaults to true
-                            "moduleName": "babel-runtime" // defaults to "babel-runtime"
-                        }],
-                        "transform-react-jsx"
+                        "transform-react-jsx",
+                        "syntax-dynamic-import"
                     ],
                     cacheDirectory: true
                 }
@@ -79,6 +88,7 @@ rules.push(
                 loader: 'css-loader',
                 options: {
                     modules: true,
+                    minimize: true,
                     importLoaders: 1,
                     minimize: define.rs_production,
                     sourceMap: define.rs_development,
@@ -175,8 +185,8 @@ rules.push(
         ],
         include: [ define.rs_root ],
         exclude: [
-            path.resolve(define.rs_root, "../node_modules"),
-            path.resolve(define.rs_root, "../bower_components")
+            resolve(define.rs_root, "../node_modules"),
+            resolve(define.rs_root, "../bower_components")
         ]
     }
 );
@@ -223,7 +233,7 @@ rules.push(
                 }
             }
         ],
-        include: path.resolve(define.rs_root, '/assets/fonts')
+        include: resolve(define.rs_root, '/assets/fonts')
     }
 );
 

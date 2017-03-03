@@ -27,7 +27,9 @@ export default class Navbar extends Component {
     }
 
     render () {
-        const isOpened = this.state.isOpened
+        // const isOpened = this.state.isOpened
+        const { isOpened } = this.state;
+
         const navbar = [
             {
                 url: '/home',

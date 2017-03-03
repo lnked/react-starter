@@ -104,30 +104,6 @@ export default class App extends Component {
                         <Route path="mailers" component={Page1} />
                         <Route path="settings" component={Page1} />
                     </Route>
-
-                    {/*
-                        <Route path="/page/:slug" component={CreatePageView} />
-
-                        <Redirect from="/some/where/:id" to="/somewhere/else/2"/>
-                        <Route path="/:slug" name="ideas" handler={CreateIdeaView} />
-                        <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
-                        <Route path="users/:userId" component={UserProfile} />
-                        <Route name="ideas/:value" handler={CreateIdeaView} />
-                        <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
-                        <Route name="ideas" path="/:testvalue" handler={CreateIdeaView} />
-                        <Route path="/auth" component={Home} onEnter={this.requireAuth} />
-
-                        <Route path="/" component={SecretStuffComponent}
-                            onEnter={(nextState, replace, callback) => { this.requireAuth(nextState, replace, callback) }}>
-
-                        <Route path="inbox" component={Inbox}>
-                            <Redirect from="messages/:id" to="/messages/:id" />
-                        </Route>
-
-                        <Route component={Inbox}>
-                            <Route path="messages/:id" component={Message} />
-                        </Route>
-                    */}
                 </Route>
 
                 <Route
@@ -150,3 +126,36 @@ export default class App extends Component {
         )
     }
 }
+// {
+//     # needle
+//     <Route
+//       path="books/:bookId"
+//       getComponent={(nextState, callback) => {
+//         import('./components/Book').then(module =>
+//           callback(null, module.default)
+//         )
+//       }}
+//     />
+
+//     <Route path="/page/:slug" component={CreatePageView} />
+
+//     <Redirect from="/some/where/:id" to="/somewhere/else/2"/>
+//     <Route path="/:slug" name="ideas" handler={CreateIdeaView} />
+//     <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
+//     <Route path="users/:userId" component={UserProfile} />
+//     <Route name="ideas/:value" handler={CreateIdeaView} />
+//     <Link to={{ pathname: '/foo', query: { the: 'query' } }}/>
+//     <Route name="ideas" path="/:testvalue" handler={CreateIdeaView} />
+//     <Route path="/auth" component={Home} onEnter={this.requireAuth} />
+
+//     <Route path="/" component={SecretStuffComponent}
+//         onEnter={(nextState, replace, callback) => { this.requireAuth(nextState, replace, callback) }}>
+
+//     <Route path="inbox" component={Inbox}>
+//         <Redirect from="messages/:id" to="/messages/:id" />
+//     </Route>
+
+//     <Route component={Inbox}>
+//         <Route path="messages/:id" component={Message} />
+//     </Route>
+// }

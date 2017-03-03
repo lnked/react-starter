@@ -1,24 +1,25 @@
 'use strict';
 
-const path = require('path');
 const webpack = require('webpack');
+const { resolve } = require('path');
 
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_production ? false : 'eval-source-map',
+    devtool: define.rs_production ? 'hidden-source-map' : 'cheap-module-eval-source-map',
 
     entry: {
-        app: path.resolve(define.rs_root, 'app.jsx'),
-        styles: path.resolve(define.rs_root, 'app.scss'),
-        polyfill: ['babel-polyfill'],
-        vendor: ['react', 'react-dom', 'react-router'] // , 'redux', 'react-router-redux'
-        // vendor: Object.keys(require('../package.json').dependencies)
+        vendor: ['react', 'react-dom', 'react-router', 'react-webstorage'],
+        app: resolve(define.rs_root, 'app.jsx'),
+        styles: resolve(define.rs_root, 'app.scss'),
+        // polyfill: ['babel-polyfill'],
+        // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 
     target: 'web', // 'node' | electron-main | electron-renderer
@@ -28,9 +29,13 @@ module.exports = {
         path: define.rs_dist,
         pathinfo: define.rs_development,
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
-        chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js',
-        // libraryTarget: 'umd'
+        chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },
+
+    // externals: [nodeExternals({
+    //     // whitelist: ['react', 'react-router', 'react-dom', 'react-webstorage']
+    //     whitelist: [/\.(?!(?:jsx?|json)$).{1,5}$/i]
+    // })],
 
     resolve: {
         modules: [ 'node_modules', define.rs_root ],
@@ -41,14 +46,14 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
-            utils: path.resolve(define.rs_root, 'utils'),
-            assets: path.resolve(define.rs_root, 'assets'),
-            layouts: path.resolve(define.rs_root, 'layouts'),
-            reducers: path.resolve(define.rs_root, 'reducers'),
-            containers: path.resolve(define.rs_root, 'containers'),
-            components: path.resolve(define.rs_root, 'components'),
-            images: path.resolve(define.rs_root, 'assets/images'),
-            scripts: path.resolve(define.rs_root, 'assets/scripts')
+            utils: resolve(define.rs_root, 'utils'),
+            assets: resolve(define.rs_root, 'assets'),
+            layouts: resolve(define.rs_root, 'layouts'),
+            reducers: resolve(define.rs_root, 'reducers'),
+            containers: resolve(define.rs_root, 'containers'),
+            components: resolve(define.rs_root, 'components'),
+            images: resolve(define.rs_root, 'assets/images'),
+            scripts: resolve(define.rs_root, 'assets/scripts')
         }
     },
 
@@ -63,7 +68,7 @@ module.exports = {
 
     performance: {
         hints: define.rs_production ? "warning" : false,
-        maxAssetSize: 200000,
+        maxAssetSize: 300000,
         maxEntrypointSize: 400000
     },
 
