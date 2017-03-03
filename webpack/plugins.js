@@ -189,16 +189,16 @@ if (define.rs_production) {
                 windows: false
             }
         }),
-        new ClosureCompilerPlugin({
-            // compilation_level: 'ADVANCED',
-            // create_source_map: false
-            compiler: {
-                language_in: 'ECMASCRIPT6',
-                language_out: 'ECMASCRIPT5',
-                compilation_level: 'ADVANCED'
-            },
-            concurrency: 3
-        }),
+        // new ClosureCompilerPlugin({
+        //     // compilation_level: 'ADVANCED',
+        //     // create_source_map: false
+        //     compiler: {
+        //         language_in: 'ECMASCRIPT6',
+        //         language_out: 'ECMASCRIPT5',
+        //         compilation_level: 'ADVANCED'
+        //     },
+        //     concurrency: 3
+        // }),
         new CompressionPlugin({
             asset: '[path].gz[query]',
             algorithm: 'gzip',
