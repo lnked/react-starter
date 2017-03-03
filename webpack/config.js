@@ -15,11 +15,11 @@ module.exports = {
     devtool: define.rs_production ? 'hidden-source-map' : 'cheap-module-eval-source-map',
 
     entry: {
-        vendor: ['react', 'react-dom', 'react-router', 'react-webstorage'],
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        // polyfill: ['babel-polyfill'],
-        // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
+        polyfill: ['babel-polyfill'],
+        // vendor: ['react', 'react-dom', 'react-router', 'react-webstorage']
+        vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 
     target: 'web', // 'node' | electron-main | electron-renderer
