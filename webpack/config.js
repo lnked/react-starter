@@ -18,8 +18,8 @@ module.exports = {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
         polyfill: ['babel-polyfill'],
-        // vendor: ['react', 'react-dom', 'react-router', 'react-webstorage']
-        vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
+        vendor: ['react', 'react-dom', 'react-router', 'react-webstorage']
+        // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 
     target: 'web', // 'node' | electron-main | electron-renderer
@@ -27,6 +27,7 @@ module.exports = {
     output: {
         publicPath: '/',
         path: define.rs_dist,
+        // libraryTarget: 'CommonJS',
         pathinfo: define.rs_development,
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
@@ -38,9 +39,8 @@ module.exports = {
     // })],
 
     resolve: {
-        modules: [ 'node_modules', define.rs_root ],
+        modules: [define.rs_root, 'node_modules'],
         mainFiles: ['index'],
-        unsafeCache: true,
         enforceExtension: false,
         enforceModuleExtension: false,
         extensions: ['.js', '.jsx', '.json', '.scss'],

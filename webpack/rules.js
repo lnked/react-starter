@@ -3,7 +3,6 @@
 const rules = [];
 
 const { resolve } = require('path');
-
 const define = require('./define');
 const postcss = require('./postcss');
 
@@ -92,7 +91,7 @@ rules.push(
                     importLoaders: 1,
                     minimize: define.rs_production,
                     sourceMap: define.rs_development,
-                    localIdentName: define.rs_production ? '_[hash:5]' : '[name]-[local]-[hash:base64:5]'
+                    localIdentName: define.rs_production ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:5]'
                 }
             },
             {
@@ -224,7 +223,7 @@ rules.push(
 
 rules.push(
     {
-        test: /\.(eot|otf|webp|svg|ttf|woff(2)?)(\?.*)?$/,
+        test: /\.(eot|otf|webp|svg|ttf|woff(2)?)$/,
         use: [
             {
                 loader: 'file-loader',
@@ -239,7 +238,7 @@ rules.push(
 
 rules.push(
     {
-        test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
+        test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)$/,
         use: [
             {
                 loader: 'url-loader',

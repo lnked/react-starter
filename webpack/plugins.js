@@ -22,6 +22,8 @@ const LodashPlugin = require('babel-plugin-lodash');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+
 if (define.rs_development) {
     plugins.push(
         new LiveReloadPlugin()
@@ -95,21 +97,21 @@ if (define.rs_production) {
         new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            // filename: 'vendor.[hash:5].js',
-            minChunks: (module) => {
-                return module.context && module.context.includes("node_modules");
-            },
-            // chunks: ['app', 'vendor'],
-            // async: true, // или вынести в отдельный асинхронный чанк
-            // children: true // смотреть ли в дочерние чанки и выносить модули в родительский
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "runtime",
-            chunks: ['vendor'],
-            minChunks: Infinity,
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor',
+        //     // filename: 'vendor.[hash:5].js',
+        //     minChunks: (module) => {
+        //         return module.context && module.context.includes("node_modules");
+        //     },
+        //     // chunks: ['app', 'vendor'],
+        //     // async: true, // или вынести в отдельный асинхронный чанк
+        //     // children: true // смотреть ли в дочерние чанки и выносить модули в родительский
+        // }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: "runtime",
+        //     chunks: ['vendor'],
+        //     minChunks: Infinity,
+        // }),
         new webpack.ContextReplacementPlugin(
             /moment[\/\\]locale$/,
             /(en-gb|ru)\.js/
@@ -146,9 +148,9 @@ if (define.rs_production) {
                 pure_getters: true
             },
             mangle: {
-                toplevel: true,
                 sort: true,
                 eval: true,
+                toplevel: true,
                 properties: true
             },
             output: {
@@ -208,5 +210,20 @@ if (define.rs_production) {
         })
     );
 }
+
+// import reactRouterToArray from 'react-router-to-array';
+
+// new StaticSiteGeneratorPlugin({
+//   paths: [
+//     '/hello/',
+//     '/world/'
+//   ],
+//   locals: {
+//     // Properties here are merged into `locals` 
+//     // passed to the exported render function 
+//     greet: 'Hello'
+//   }
+// })
+
 
 module.exports.config = plugins;
