@@ -97,21 +97,21 @@ if (define.rs_production) {
         new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vendor',
-        //     // filename: 'vendor.[hash:5].js',
-        //     minChunks: (module) => {
-        //         return module.context && module.context.includes("node_modules");
-        //     },
-        //     // chunks: ['app', 'vendor'],
-        //     // async: true, // или вынести в отдельный асинхронный чанк
-        //     // children: true // смотреть ли в дочерние чанки и выносить модули в родительский
-        // }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: "runtime",
-        //     chunks: ['vendor'],
-        //     minChunks: Infinity,
-        // }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            // filename: 'vendor.[hash:5].js',
+            minChunks: (module) => {
+                return module.context && module.context.includes("node_modules");
+            },
+            // chunks: ['app', 'vendor'],
+            // async: true, // или вынести в отдельный асинхронный чанк
+            // children: true // смотреть ли в дочерние чанки и выносить модули в родительский
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "runtime",
+            chunks: ['vendor'],
+            minChunks: Infinity,
+        }),
         new webpack.ContextReplacementPlugin(
             /moment[\/\\]locale$/,
             /(en-gb|ru)\.js/

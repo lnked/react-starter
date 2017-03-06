@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router'
 
 // Layouts
-import CoreLayout from 'layouts/CoreLayout'
-import AuthLayout from 'layouts/AuthLayout'
+import {CoreLayout, AuthLayout} from 'layouts'
 
 // Pages
 import Auth from 'containers/auth'

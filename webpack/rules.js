@@ -65,7 +65,17 @@ rules.push(
                     ],
                     plugins: [
                         "transform-react-jsx",
-                        "syntax-dynamic-import"
+                        "syntax-dynamic-import",
+                        ["module-resolver", {
+                            "root": ["./app"],
+                            "alias": {
+                                "assets": "./assets",
+                                "config": "./config",
+                                "layouts": "./layouts",
+                                "containers": "./containers",
+                                "components": "./components"
+                            }
+                        }]
                     ],
                     cacheDirectory: true
                 }
@@ -223,7 +233,7 @@ rules.push(
 
 rules.push(
     {
-        test: /\.(eot|otf|webp|svg|ttf|woff(2)?)$/,
+        test: /\.(eot|otf|webp|ttf|woff(2)?)$/,
         use: [
             {
                 loader: 'file-loader',
