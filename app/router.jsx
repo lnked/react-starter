@@ -5,10 +5,7 @@ import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-route
 import {CoreLayout, AuthLayout} from 'layouts'
 
 // Pages
-import Auth from 'containers/auth'
-import Page1 from 'containers/page1'
-import Load from 'containers/load'
-import NoMatch from 'containers/nomatch'
+import {Auth, Page1, Load, NoMatch} from 'containers'
 
 export default class App extends Component {
 
