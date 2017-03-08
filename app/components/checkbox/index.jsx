@@ -1,31 +1,38 @@
-// import Checkbox from 'react-toolbox/lib/checkbox'
+import React, { Component } from 'react'
+import css from './styles.scss'
 
-// class TestCheckbox extends React.Component {
-//     state = { check1: true, check2: false };
+export default class Button extends Component {
 
-//     handleChange = (field, value) => {
-//         this.setState({...this.state, [field]: value})
-//     };
+    static propTypes = {
+        label: React.PropTypes.string,
+        checked: React.PropTypes.bool
+    }
 
-//     render () {
-//         return (
-//       <div>
-//         <Checkbox
-//           checked={this.state.check1}
-//           label="Checked option"
-//           onChange={this.handleChange.bind(this, 'check1')}
-//         />
-//         <Checkbox
-//           checked={this.state.check2}
-//           label="Unchecked option"
-//           onChange={this.handleChange.bind(this, 'check2')}
-//         />
-//         <Checkbox
-//           checked
-//           disabled
-//           label="Disabled checkbox"
-//         />
-//       </div>
-//         )
-//     }
-// }
+    static defaultProps = {
+        bool: false,
+        label: ''
+    }
+
+    state = { save: false };
+
+    handleChange (field, value) {
+        console.log(field, value)
+        this.setState({...this.state, [field]: value})
+    }
+
+    render () {
+        return (
+            <label className={css.checkbox}>
+                <input
+                    type="checkbox"
+                    name="save"
+                    value="1"
+                    checked={this.state.save}
+                    onChange={this.handleChange.bind(this, 'save')}
+                />
+                <span className="c-checkbox__label__middle">{this.props.label}</span>
+            </label>
+        )
+        // checked={this.props.checked}
+    }
+}

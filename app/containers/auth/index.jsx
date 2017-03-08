@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import WebStorage from 'react-webstorage'
-import { Input, Button } from 'components'
+import { Input, Checkbox, Button } from 'components'
 import css from './styles.scss'
 
 const webStorage = new WebStorage(window.localStorage ||
@@ -89,16 +89,7 @@ export default class AuthForm extends Component {
 
                     <div className={css.login__row}>
                         <div className={css.login__row__col}>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="save"
-                                    value="1"
-                                    onChange={this.handleChange}
-                                />
-                                {/* ckecked={this.state.save} */ }
-                                <span className="c-checkbox__label__middle">Запомнить меня</span>
-                            </label>
+                            <Checkbox label="Запомнить меня" checked={this.state.save} />
                         </div>
 
                         <div className={[css.login__row__col, css.login__row__col_last].join(' ')}>
