@@ -15,10 +15,11 @@ export default class Button extends Component {
         type: 'text',
         value: '',
         className: '',
-        handleChange: false
+        handleChange: null
     }
 
     render () {
+        console.log(this.props)
         return (
             <input
                 type={this.props.type}
