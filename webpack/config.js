@@ -12,7 +12,8 @@ module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_production ? 'hidden-source-map' : 'cheap-module-eval-source-map',
+    // devtool: define.rs_production ? 'hidden-source-map' : 'cheap-module-eval-source-map',
+    devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
 
     entry: {
         app: resolve(define.rs_root, 'app.jsx'),

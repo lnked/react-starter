@@ -7,6 +7,19 @@ import {CoreLayout, AuthLayout} from 'layouts'
 // Pages
 import {Auth, Page1, Load, NoMatch} from 'containers'
 
+// import reactRouterToArray from 'react-router-to-array'
+// console.log(reactRouterToArray(
+//     <Route path="/" component={Page1}>
+//         <IndexRoute component={Page1} />
+//             <Route path="about" component={Page1}>
+//             <Route path="home" component={Page1} />
+//             <Route path="/home/:userId" component={Page1} />
+//         </Route>
+//         <Route path="users" component={Page1} />
+//         <Route path="*" component={Page1} />
+//     </Route>)
+// )
+
 export default class App extends Component {
 
     constructor (props) {

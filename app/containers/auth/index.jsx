@@ -3,7 +3,7 @@ import WebStorage from 'react-webstorage'
 import { Input, Checkbox, Button } from 'components'
 import css from './styles.scss'
 
-const webStorage = new WebStorage(window.localStorage ||
+const store = new WebStorage(window.localStorage ||
     window.sessionStorage
 )
 
@@ -20,15 +20,15 @@ export default class AuthForm extends Component {
 
     componentWillMount () {
         this.setState({
-            save: webStorage.getItem('save') === 'on'
+            save: store.getItem('save') === 'on'
         })
 
         this.setState({
-            login: webStorage.getItem('login')
+            login: store.getItem('login')
         })
 
         this.setState({
-            password: webStorage.getItem('password')
+            password: store.getItem('password')
         })
     }
 
@@ -42,11 +42,11 @@ export default class AuthForm extends Component {
         event.preventDefault()
 
         if (this.state.save) {
-            webStorage.setItem('save', this.state.save)
-            webStorage.setItem('login', this.state.login)
-            webStorage.setItem('password', this.state.password)
+            store.setItem('save', this.state.save)
+            store.setItem('login', this.state.login)
+            store.setItem('password', this.state.password)
         } else {
-            webStorage.clear()
+            store.clear()
         }
     }
 

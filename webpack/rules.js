@@ -49,6 +49,7 @@ rules.push(
                                 "modules": false
                             }
                         ],
+                        "airbnb",
                         "stage-0",
                         ...define.rs_production ? [
                             "react-optimize",
@@ -64,6 +65,8 @@ rules.push(
                         ] : []
                     ],
                     plugins: [
+                        "dynamic-import-webpack",
+                        "dynamic-import-node",
                         "transform-react-jsx",
                         "syntax-dynamic-import",
                         ["module-resolver", {
@@ -97,7 +100,6 @@ rules.push(
                 loader: 'css-loader',
                 options: {
                     modules: true,
-                    minimize: true,
                     importLoaders: 1,
                     minimize: define.rs_production,
                     sourceMap: define.rs_development,

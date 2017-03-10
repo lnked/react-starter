@@ -4,15 +4,15 @@ import css from './styles.scss'
 export default class Button extends Component {
 
     static propTypes = {
-        mod: React.PropTypes.string,
         type: React.PropTypes.string,
-        label: React.PropTypes.string
+        label: React.PropTypes.string,
+        variant: React.PropTypes.string
     }
 
     static defaultProps = {
-        mod: 'default',
         type: 'button',
-        label: 'Button'
+        label: 'Button',
+        variant: 'default'
     }
 
     handleClick () {
@@ -23,7 +23,7 @@ export default class Button extends Component {
         return (
             <button
                 type={this.props.type}
-                className={[css.button, ['button', this.props.mod].join('--')].join(' ')}
+                className={[css.button, ['button', this.props.variant].join('--')].join(' ')}
                 onClick={this.handleClick}
             >
                 {this.props.label}
