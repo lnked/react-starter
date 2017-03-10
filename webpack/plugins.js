@@ -14,14 +14,17 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-// const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
-const ClosureCompilerPlugin = require('webpack-closure-compiler');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const WebpackChunkHash = require('webpack-chunk-hash');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+// const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+// const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
+const ClosureCompilerPlugin = require('webpack-closure-compiler');
+
+const SplitByPathPlugin = require('split-by-path-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 if (define.rs_development) {
     plugins.push(
@@ -112,6 +115,17 @@ if (define.rs_production) {
             /moment[\/\\]locale$/,
             /(en-gb|ru)\.js/
         ),
+        // new SplitByPathPlugin({
+        //     buckets: [{
+        //         name: 'common',
+        //         regex: /node_modules/,
+        //         // regex: /(node_modules\/|app\/common\/)/
+        //     }]
+        // }),
+        new WebpackCleanupPlugin({
+            quiet: true,
+            exclude: ["chunk-manifest.json", "fonts/**/*"]
+        }),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: false,
