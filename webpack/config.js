@@ -18,18 +18,17 @@ module.exports = {
     entry: {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        polyfill: ['babel-polyfill'],
-        vendor: ['react', 'react-dom', 'react-router', 'react-webstorage']
+        // polyfill: ['babel-polyfill'],
+        vendor: ['axios', 'react', 'react-dom', 'react-router', 'react-webstorage']
         // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 
     target: 'web', // 'node' | electron-main | electron-renderer
 
     output: {
-        publicPath: '/',
-        path: define.rs_dist,
-        // libraryTarget: 'CommonJS',
-        pathinfo: define.rs_development,
+        path: resolve(define.rs_dist, 'static'),
+        publicPath: '/static/',
+        // library: '[name]',
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },
@@ -96,17 +95,18 @@ module.exports = {
         colors: true,
         timings: true,
         children: false,
-        errorDetails: true,
-        modules: false,
-        displayModules: false,
         hideModules: true,
-        chunkModules: false,
-        displayExclude: false,
-        displayReasons: false,
-        reasons: false,
-        chunks: false,
-        exclude: false,
-        maxModules: false,
+        errorDetails: true,
+
+        modules: define.rs_development,
+        displayModules: define.rs_development,
+        chunkModules: define.rs_development,
+        displayExclude: define.rs_development,
+        displayReasons: define.rs_development,
+        reasons: define.rs_development,
+        chunks: define.rs_development,
+        exclude: define.rs_development,
+        maxModules: define.rs_development,
 
         chunk: define.rs_production,
         hash: define.rs_production,

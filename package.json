@@ -5,15 +5,15 @@
   "description": "React skeleton",
   "scripts": {
     "prebuild": "del-cli dist -f",
-    "build": "NODE_ENV=production webpack --env production --config ./webpack/config.js",
+    "build": "NODE_ENV=production webpack --config ./webpack/config.js",
     "serve": "http-server ./dist -a 0.0.0.0 -p 7777",
     "start": "npm run serve | npm run dev",
+    "stats": "NODE_ENV=production webpack --config ./webpack/config.js --json --profile > stats.json",
     "lint": "eslint ./app --ext .js[x]",
     "lint2": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache",
     "lint-fix": "eslint ./app --fix .js[x]",
-    "dev": "NODE_ENV=development webpack-dev-server --env development --config ./webpack/config.js",
-    "deploy": "npm run build && gh-pages -d ./dist -m 'Updates --skip-ci'",
-    "analyzer": "webpack --config ./webpack/config.js --json | webpack-bundle-size-analyzer"
+    "dev": "NODE_ENV=development webpack-dev-server --config ./webpack/config.js",
+    "deploy": "npm run build && gh-pages -d ./dist -m 'Updates --skip-ci'"
   },
   "keywords": [
     "react"
@@ -47,7 +47,6 @@
     "babel-loader": "6.3.2",
     "babel-plugin-dynamic-import-node": "1.0.0",
     "babel-plugin-dynamic-import-webpack": "1.0.1",
-    "babel-plugin-lodash": "3.2.11",
     "babel-plugin-module-resolver": "2.5.0",
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-polyfill": "6.23.0",

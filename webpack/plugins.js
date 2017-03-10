@@ -18,7 +18,6 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ClosureCompilerPlugin = require('webpack-closure-compiler');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-const LodashPlugin = require('babel-plugin-lodash');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 
@@ -48,7 +47,7 @@ plugins.push(
         inject: 'body',
         filetype: 'pug',
         template: 'app.pug',
-        filename: 'index.html',
+        filename: resolve(define.rs_dist, 'index.html'),
         minify: define.rs_development ? {} : {
             removeComments: define.rs_production,
             collapseWhitespace: define.rs_production,
@@ -99,26 +98,20 @@ if (define.rs_production) {
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            // filename: 'vendor.[hash:5].js',
-            minChunks: (module) => {
-                return module.context && module.context.includes("node_modules");
-            },
-            // chunks: ['app', 'vendor'],
-            // async: true, // или вынести в отдельный асинхронный чанк
-            // children: true // смотреть ли в дочерние чанки и выносить модули в родительский
+            filename: 'vendor.[hash:5].js',
+            // minChunks: (module) => {
+            //     return module.context && module.context.includes("node_modules");
+            // }
+            minChunks: 2
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "runtime",
-            chunks: ['vendor'],
-            minChunks: Infinity,
+            minChunks: Infinity
         }),
         new webpack.ContextReplacementPlugin(
             /moment[\/\\]locale$/,
             /(en-gb|ru)\.js/
         ),
-        // new LodashPlugin({
-        //     paths: false
-        // }),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: false,
@@ -224,6 +217,5 @@ if (define.rs_production) {
 //     greet: 'Hello'
 //   }
 // })
-
 
 module.exports.config = plugins;
