@@ -59,33 +59,15 @@ Then in JSX:
 
 ```js
 export default class MyComponent extends Component {
-
-    constructor(props, context) {
-        super(props, context);
-        this.onCreditCardChange = this.onCreditCardChange.bind(this);
-        this.onCreditCardFocus = this.onCreditCardFocus.bind(this);
-    }
-    
-    onCreditCardChange(event) {
-        // formatted pretty value
-        console.log(event.target.value);
-        
-        // raw value
-        console.log(event.target.rawValue);
-    }
-    
-    onCreditCardFocus(event) {
-        // update some state
-    }
-
     render() {
         return (
-            <Cleave placeholder="" />
+            
         )
     }
 }
 ```
 
+<!--
 ## Playground
 
 - [Plain JSFiddle (Basic usage)](https://jsfiddle.net/)
@@ -93,6 +75,7 @@ export default class MyComponent extends Component {
 ## Documentation
 
 - [ReactJS component usage](https://github.com/nosir/cleave.js/blob/master/doc/reactjs-component-usage.md)
+-->
 
 ## Run tasks
 
@@ -134,5 +117,3 @@ npm run publish
 ## Licence
 
 React-starter is licensed under the [![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
-
-- Google [libphonenumber](https://github.com/googlei18n/libphonenumber) is included under its [MIT](https://opensource.org/licenses/MIT)
