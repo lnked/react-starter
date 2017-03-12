@@ -1,17 +1,17 @@
 
 # React-starter
 
-[![npm](https://img.shields.io/npm/v/npm.svg)]()
-[![npm version](https://github.com/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://github.com/lnked/react-starter)
+[![npm (scoped)](https://img.shields.io/npm/v/@cycle/core.svg)](https://github.com/lnked/react-starter)
 
 ---
 
-[![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)]()
-[![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)]()
-[![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)]()
-[![GitHub issues](https://img.shields.io/github/issues/lnked/react-starter.svg)]()
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/lnked/react-starter.svg)]()
-[![Github All Releases](https://img.shields.io/github/downloads/lnked/react-starter/total.svg)]()
+[![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)](https://github.com/lnked/react-starter)
+[![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)](https://github.com/lnked/react-starter)
+[![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)](https://github.com/lnked/react-starter)
+[![GitHub issues](https://img.shields.io/github/issues/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
+[![Github All Releases](https://img.shields.io/github/downloads/lnked/react-starter/total.svg)](https://github.com/lnked/react-starter)
 
 ---
 
@@ -40,7 +40,7 @@ npm install --save react-starter.js
 - ReactJS component
 - AngularJS directive (1.x)
 
-**TL;DR** [the demo page](http://nosir.github.io/cleave.js/)
+**TL;DR** [the demo page](https://github.com/lnked/react-starter)
 
 
 ## ReactJS component usage
@@ -128,6 +128,6 @@ npm run publish
 
 ## Licence
 
-React-starter is licensed under the [![license](https://img.shields.io/github/license/lnked/react-starter.svg)]()
+React-starter is licensed under the [![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
 
 - Google [libphonenumber](https://github.com/googlei18n/libphonenumber) is included under its [MIT](https://opensource.org/licenses/MIT)
