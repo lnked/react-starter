@@ -76,6 +76,7 @@ plugins.push(
         }
     }),
     new CopyWebpackPlugin([
+        { from: 'assets/fonts', to: 'fonts' },
         { from: 'assets/images', to: 'images' }
     ])
 );
