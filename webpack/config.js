@@ -18,8 +18,8 @@ module.exports = {
     entry: {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        // polyfill: ['babel-polyfill'],
         vendor: ['axios', 'react', 'react-dom', 'react-router', 'react-webstorage']
+        // polyfill: ['babel-polyfill'],
         // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 
@@ -31,6 +31,14 @@ module.exports = {
         // library: '[name]',
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
+    },
+
+    externals: {
+        'axios': 'axios',
+        'react': 'react',
+        'react-dom': 'react-dom',
+        'react-router': 'react-router',
+        'react-webstorage': 'react-webstorage'
     },
 
     // externals: [nodeExternals({
