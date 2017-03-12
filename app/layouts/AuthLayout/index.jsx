@@ -7,6 +7,10 @@ export default class AuthLayout extends Component {
         children: React.PropTypes.object.isRequired
     }
 
+    componentWillMount () {
+        window.prerenderReady = true
+    }
+
     render () {
         return (
             <div className={css.layout}>

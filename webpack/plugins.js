@@ -34,8 +34,8 @@ if (define.rs_development) {
 
 plugins.push(
     new webpack.LoaderOptionsPlugin({
-        minimize: define.rs_production,
-        debug: true
+        debug: define.rs_development,
+        minimize: define.rs_production
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
@@ -76,7 +76,7 @@ plugins.push(
         }
     }),
     new CopyWebpackPlugin([
-        { from: 'assets/fonts', to: 'fonts' },
+        // { from: 'assets/fonts', to: 'fonts' },
         { from: 'assets/images', to: 'images' }
     ])
 );

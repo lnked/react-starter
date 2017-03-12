@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "del-cli dist -f",
     "build": "NODE_ENV=production webpack --config ./webpack/config.js",
-    "serve": "http-server ./dist -a 0.0.0.0 -p 7777",
+    "serve": "nohup http-server ./dist -a 0.0.0.0 -p 7777",
     "start": "npm run serve | npm run dev",
     "stats": "NODE_ENV=production webpack --config ./webpack/config.js --json --profile > stats.json",
     "tests": "",

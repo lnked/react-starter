@@ -6,7 +6,8 @@ export default class Button extends Component {
     static propTypes = {
         type: React.PropTypes.string,
         label: React.PropTypes.string,
-        variant: React.PropTypes.string
+        variant: React.PropTypes.string,
+        children: React.PropTypes.element.isRequired
     }
 
     static defaultProps = {
@@ -26,7 +27,7 @@ export default class Button extends Component {
                 className={[css.button, ['button', this.props.variant].join('--')].join(' ')}
                 onClick={this.handleClick}
             >
-                {this.props.label}
+                {this.props.children || this.props.label}
             </button>
         )
     }

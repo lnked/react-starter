@@ -32,30 +32,29 @@ export default class Button extends Component {
     }
 }
 
+// class Input extends React.Component {
+//     constructor (props) {
+//         super(props)
+//         this.id = getNextId()
 
-class Input extends React.Component {
-  constructor(props) {
-    super(props);
-    this.id = getNextId();
-    
-    this.onChange = this.onChange.bind(this);
-  }
-  
-  onChange(e) {
-    this.props.onChange(e.target.value);
-  }
-  
-  render() {
-    return (
-      <label htmlFor={this.id}>
-        {this.props.label}
-        
-        <input
-          id={this.id}
-          value={this.props.value} 
-          onChange={this.onChange}
-          />
-      </label>
-    );
-  }
-}
+//         this.onChange = this.onChange.bind(this)
+//     }
+
+//     onChange (e) {
+//         this.props.onChange(e.target.value)
+//     }
+
+//     render () {
+//         return (
+//       <label htmlFor={this.id}>
+//         {this.props.label}
+
+//         <input
+//           id={this.id}
+//           value={this.props.value}
+//           onChange={this.onChange}
+//           />
+//       </label>
+//         )
+//     }
+// }
