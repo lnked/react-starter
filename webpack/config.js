@@ -12,34 +12,39 @@ module.exports = {
     
     context: define.rs_root,
 
-    // devtool: define.rs_production ? 'hidden-source-map' : 'cheap-module-eval-source-map',
     devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
+
+    target: 'web', // 'node' | electron-main | electron-renderer
 
     entry: {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        vendor: ['axios', 'react', 'react-dom', 'react-router', 'react-webstorage']
-        // polyfill: ['babel-polyfill'],
+        // vendor: [
+        //     'axios',
+        //     'react',
+        //     'react-dom',
+        //     'immutable',
+        //     'react-router',
+        //     'react-webstorage'
+        // ],
+        // polyfill: ['babel-polyfill']
         // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
-
-    target: 'web', // 'node' | electron-main | electron-renderer
 
     output: {
         path: resolve(define.rs_dist, 'static'),
         publicPath: '/static/',
-        // library: '[name]',
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },
 
-    externals: {
-        'axios': 'axios',
-        'react': 'react',
-        'react-dom': 'react-dom',
-        'react-router': 'react-router',
-        'react-webstorage': 'react-webstorage'
-    },
+    // externals: {
+    //     axios: 'axios',
+    //     react: 'react',
+    //     'react-dom': 'react-dom',
+    //     'react-router': 'react-router',
+    //     'react-webstorage': 'react-webstorage'
+    // },
 
     // externals: [nodeExternals({
     //     // whitelist: ['react', 'react-router', 'react-dom', 'react-webstorage']
@@ -71,7 +76,9 @@ module.exports = {
     },
 
     module: {
-        noParse: /jquery|lodash/,
+        // noParse: /(react\/react\.js|react\-dom\/dist\/react-dom\.js)/,
+        noParse: /(react\-dom\/dist\/react-dom\.js)/,
+        // noParse: /jquery|axios|react|react-dom|immutable|react-router|react-webstorage|lodash/,
         rules: rules.config
     },
 
@@ -103,19 +110,19 @@ module.exports = {
         colors: true,
         timings: true,
         children: false,
-        hideModules: true,
         errorDetails: true,
 
-        modules: define.rs_development,
-        displayModules: define.rs_development,
-        chunkModules: define.rs_development,
-        displayExclude: define.rs_development,
-        displayReasons: define.rs_development,
-        reasons: define.rs_development,
         chunks: define.rs_development,
         exclude: define.rs_development,
-        maxModules: define.rs_development,
 
+        reasons: define.rs_development,
+        profile: define.rs_development,
+        modules: define.rs_development,
+        
+        maxModules: define.rs_development,
+        chunkModules: define.rs_development,
+
+        hideModules: define.rs_production,
         chunk: define.rs_production,
         hash: define.rs_production,
         version: define.rs_production,

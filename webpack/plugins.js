@@ -23,7 +23,7 @@ const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 // const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
 const ClosureCompilerPlugin = require('webpack-closure-compiler');
 
-const SplitByPathPlugin = require('split-by-path-webpack-plugin');
+// const SplitByPathPlugin = require('split-by-path-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 
 if (define.rs_development) {
@@ -33,6 +33,14 @@ if (define.rs_development) {
 }
 
 plugins.push(
+    new webpack.ProvidePlugin({
+        'axios': 'axios',
+        'react': 'react',
+        'immutable': 'immutable',
+        'react-dom': 'react-dom',
+        'react-router': 'react-router',
+        'react-webstorage': 'react-webstorage'
+    }),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production
@@ -42,6 +50,7 @@ plugins.push(
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'process.env.BROWSER': JSON.stringify(true),
         'process.env.DEBUG': JSON.stringify(false)
     }),
     new HtmlWebpackPlugin({
@@ -103,10 +112,10 @@ if (define.rs_production) {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             filename: 'vendor.[hash:5].js',
-            // minChunks: (module) => {
-            //     return module.context && module.context.includes("node_modules");
-            // }
-            minChunks: 2
+            minChunks: (module) => {
+                return module.context && module.context.includes("node_modules");
+            }
+            // minChunks: 2
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "runtime",
@@ -123,10 +132,10 @@ if (define.rs_production) {
         //         // regex: /(node_modules\/|app\/common\/)/
         //     }]
         // }),
-        new WebpackCleanupPlugin({
-            quiet: true,
-            exclude: ["chunk-manifest.json", "fonts/**/*"]
-        }),
+        // new WebpackCleanupPlugin({
+        //     quiet: true,
+        //     exclude: ["chunk-manifest.json", "fonts/**/*"]
+        // }),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             sourceMap: false,

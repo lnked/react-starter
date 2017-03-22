@@ -6,7 +6,7 @@ import App from 'router'
 // import store from './store'
 // import router from './router'
 
-require('es6-promise').polyfill()
+// require('es6-promise').polyfill()
 
 render(<App />, document.getElementById('root'))
 // render(<Provider store={store}>{router}</Provider>,, document.getElementById('root'))

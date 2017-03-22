@@ -77,6 +77,8 @@ export default class AuthForm extends Component {
 
         return (
             <form action="" onSubmit={this.handleSubmit} className={css.login} method="POST">
+                <span>'https://codeclimate.com/login'</span>
+
                 <div className={css.login__logo}>
                     <img
                         src={require('images/lightning.svg')}

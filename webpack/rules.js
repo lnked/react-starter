@@ -84,8 +84,11 @@ rules.push(
                 }
             }
         ],
-        exclude: /node_modules/,
-        include: [ define.rs_root ]
+        include: [ define.rs_root ],
+        exclude: [
+            resolve(define.rs_root, "../node_modules"),
+            resolve(define.rs_root, "../bower_components")
+        ]
     }
 );
 
@@ -129,9 +132,22 @@ rules.push(
             }
         ],
         include: [ define.rs_root ],
-        exclude: /(node_modules|bower_components)/
+        exclude: [
+            resolve(define.rs_root, "../node_modules"),
+            resolve(define.rs_root, "../bower_components")
+        ]
     }
 );
+
+// rules.push(
+//     {
+//         test: /\.svg/,
+//         use: {
+//             loader: 'svg-url-loader',
+//             options: {}
+//         }
+//     }
+// );
 
 rules.push(
     {
