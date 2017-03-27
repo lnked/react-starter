@@ -29,17 +29,19 @@ export default class App extends Component {
     }
 
     requireAuth (nextState, replace) {
-        // console.log(replace, nextState.location.pathname)
+        console.log(replace, nextState.location.pathname)
     }
 
     render () {
+        // <Router history={browserHistory} routes={routes} />,
+        // <Route path="/cp" component={Auth} onEnter={this.requireAuth} />
         return (
             <Router history={browserHistory}>
                 <Redirect from="/" to="/cp/site" />
 
                 <Route path="/" component={AuthLayout}>
                     <IndexRoute component={Auth} />
-                    <Route path="/cp" component={Auth} onEnter={this.requireAuth} />
+                    <Route path="/cp" component={Auth} />
                 </Route>
 
                 <Route path="/cp" component={CoreLayout}>

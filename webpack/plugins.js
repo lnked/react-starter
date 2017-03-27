@@ -33,14 +33,14 @@ if (define.rs_development) {
 }
 
 plugins.push(
-    new webpack.ProvidePlugin({
-        'axios': 'axios',
-        'react': 'react',
-        'immutable': 'immutable',
-        'react-dom': 'react-dom',
-        'react-router': 'react-router',
-        'react-webstorage': 'react-webstorage'
-    }),
+    // new webpack.ProvidePlugin({
+    //     'axios': 'axios',
+    //     'react': 'react',
+    //     'immutable': 'immutable',
+    //     'react-dom': 'react-dom',
+    //     'react-router': 'react-router',
+    //     'react-webstorage': 'react-webstorage'
+    // }),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production
@@ -115,7 +115,6 @@ if (define.rs_production) {
             minChunks: (module) => {
                 return module.context && module.context.includes("node_modules");
             }
-            // minChunks: 2
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "runtime",

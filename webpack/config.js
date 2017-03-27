@@ -19,15 +19,15 @@ module.exports = {
     entry: {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        // vendor: [
-        //     'axios',
-        //     'react',
-        //     'react-dom',
-        //     'immutable',
-        //     'react-router',
-        //     'react-webstorage'
-        // ],
-        // polyfill: ['babel-polyfill']
+        vendor: [
+            'axios',
+            'react',
+            'react-dom',
+            'immutable',
+            'react-router',
+            'react-webstorage'
+        ],
+        polyfill: ['babel-polyfill']
         // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 
@@ -77,7 +77,7 @@ module.exports = {
 
     module: {
         // noParse: /(react\/react\.js|react\-dom\/dist\/react-dom\.js)/,
-        noParse: /(react\-dom\/dist\/react-dom\.js)/,
+        // noParse: /(react\-dom\/dist\/react-dom\.js)/,
         // noParse: /jquery|axios|react|react-dom|immutable|react-router|react-webstorage|lodash/,
         rules: rules.config
     },
@@ -89,6 +89,12 @@ module.exports = {
     },
 
     devServer: {
+        // proxy: {
+        //     '/api': {
+        //         target: 'https://other-server.example.com',
+        //         secure: false
+        //     }
+        // },
         compress: false,
         contentBase: define.rs_dist,
         watchContentBase: define.rs_development,
