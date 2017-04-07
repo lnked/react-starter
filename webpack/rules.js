@@ -65,6 +65,7 @@ rules.push(
                         ] : []
                     ],
                     plugins: [
+                        "transform-class-properties",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
                         "transform-react-jsx",
@@ -83,12 +84,12 @@ rules.push(
                     cacheDirectory: true
                 }
             }
-        ],
-        include: [ define.rs_root ],
-        exclude: [
-            resolve(define.rs_root, "../node_modules"),
-            resolve(define.rs_root, "../bower_components")
         ]
+        // include: [ define.rs_root ],
+        // exclude: [
+        //     resolve(define.rs_root, "../node_modules"),
+        //     resolve(define.rs_root, "../bower_components")
+        // ]
     }
 );
 
@@ -131,11 +132,7 @@ rules.push(
                 }
             }
         ],
-        include: [ define.rs_root ],
-        exclude: [
-            resolve(define.rs_root, "../node_modules"),
-            resolve(define.rs_root, "../bower_components")
-        ]
+        include: [ define.rs_root ]
     }
 );
 
@@ -151,8 +148,14 @@ rules.push(
 
 rules.push(
     {
-        test: /.*\.(gif|ico|png|jpe?g|svg)$/i,
+        test: /.*\.(jpe?g|png|gif|ico|svg)$/i,
         use: [
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 10000
+                }
+            },
             {
                 loader: 'file-loader',
                 options: {
@@ -170,11 +173,13 @@ rules.push(
                         progressive: true
                     },
                     pngquant:{
-                        quality: "65-90",
+                        quality: '65-90',
                         speed: 4
                     },
                     gifsicle: {
-                        interlaced: true,
+                        colors: 256,
+                        interlaced: false,
+                        optimizationLevel: 3
                     },
                     optipng: {
                         optimizationLevel: 7
@@ -182,10 +187,10 @@ rules.push(
                     svgo: {
                         plugins: [
                             {removeTitle:true},
-                            {removeEmptyAttrs:false},
                             {removeDesc:true},
                             {removeViewBox:false},
                             {convertPathData:false},
+                            {removeEmptyAttrs:false},
                             {removeDoctype:true},
                             {removeMetadata:true},
                             {removeComments:true},
@@ -210,11 +215,7 @@ rules.push(
                 }
             }
         ],
-        include: [ define.rs_root ],
-        exclude: [
-            resolve(define.rs_root, "../node_modules"),
-            resolve(define.rs_root, "../bower_components")
-        ]
+        include: [ define.rs_root ]
     }
 );
 
@@ -269,9 +270,8 @@ rules.push(
         test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)$/,
         use: [
             {
-                loader: 'url-loader',
+                loader: 'file-loader',
                 options: {
-                    limit: 10000,
                     name: define.rs_development ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]'
                 }
             }
