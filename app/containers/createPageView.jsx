@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Button from 'components/button'
 
 export default class CreatePageView extends Component {
 
     static propTypes = {
-        params: React.PropTypes.shape({
-            slug: React.PropTypes.string.isRequired
+        params: PropTypes.shape({
+            slug: PropTypes.string.isRequired
         })
     }
 

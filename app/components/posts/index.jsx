@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 import css from './styles.scss'
 
 export default class Posts extends Component {
 
     static propTypes = {
-        data: React.PropTypes.object.isRequired,
-        title: React.PropTypes.string.isRequired
+        data: PropTypes.object.isRequired,
+        title: PropTypes.string.isRequired
     }
 
     static defaultProps = {

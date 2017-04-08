@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 import Form from 'components/form/index'
 
 export default class MainLayout extends Component {
 
     static propTypes = {
-        children: React.PropTypes.object.isRequired,
-        model: React.PropTypes.object.isRequired,
-        title: React.PropTypes.string
+        children: PropTypes.object.isRequired,
+        model: PropTypes.object.isRequired,
+        title: PropTypes.string
     }
 
     static defaultProps = {

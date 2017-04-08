@@ -6,6 +6,8 @@ const { resolve } = require('path');
 const define = require('./define');
 const postcss = require('./postcss');
 
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 rules.push(
     {
         enforce: 'pre',
@@ -43,12 +45,7 @@ rules.push(
                     babelrc: false,
                     presets: [
                         "react",
-                        [
-                            "es2015", {
-                                "loose": true,
-                                "modules": false
-                            }
-                        ],
+                        ['es2015', {'loose': true, 'modules': false}],
                         "airbnb",
                         "stage-0",
                         ...define.rs_production ? [
@@ -84,12 +81,12 @@ rules.push(
                     cacheDirectory: true
                 }
             }
-        ]
+        ],
         // include: [ define.rs_root ],
-        // exclude: [
-        //     resolve(define.rs_root, "../node_modules"),
-        //     resolve(define.rs_root, "../bower_components")
-        // ]
+        exclude: [
+            resolve(define.rs_root, "../node_modules"),
+            resolve(define.rs_root, "../bower_components")
+        ]
     }
 );
 
@@ -100,6 +97,9 @@ rules.push(
             {
                 loader: 'style-loader'
             },
+            // use: ExtractTextPlugin.extract({
+            //     use: 'css-loader'
+            // }),
             {
                 loader: 'css-loader',
                 options: {
@@ -151,17 +151,17 @@ rules.push(
         test: /.*\.(jpe?g|png|gif|ico|svg)$/i,
         use: [
             {
-                loader: 'url-loader',
-                options: {
-                    limit: 10000
-                }
-            },
-            {
                 loader: 'file-loader',
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
                     name: '[name]-[hash:11].[ext]'
+                }
+            },
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 10000
                 }
             },
             {

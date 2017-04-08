@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class AuthLayout extends Component {
 
     static propTypes = {
-        children: React.PropTypes.object.isRequired
+        children: PropTypes.object.isRequired
     }
 
     componentWillMount () {

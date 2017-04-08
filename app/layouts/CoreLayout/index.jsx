@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Sidebar from 'components/sidebar'
 import Navigation from 'components/navigation'
 import css from './styles.scss'
@@ -6,7 +7,7 @@ import css from './styles.scss'
 export default class CoreLayout extends Component {
 
     static propTypes = {
-        children: React.PropTypes.element.isRequired
+        children: PropTypes.element.isRequired
     }
 
     componentWillMount () {

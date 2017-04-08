@@ -24,8 +24,8 @@ module.exports = {
             'react',
             'react-dom',
             'immutable',
-            'react-router',
-            'react-webstorage'
+            'react-router'
+            // 'react-webstorage'
         ],
         polyfill: ['babel-polyfill']
         // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
@@ -34,6 +34,7 @@ module.exports = {
     output: {
         path: resolve(define.rs_dist, 'static'),
         publicPath: '/static/',
+        pathinfo: define.rs_development,
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },

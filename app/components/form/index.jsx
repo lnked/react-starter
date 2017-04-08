@@ -1,4 +1,5 @@
-// // import css from './styles.scss';
+// import css from './styles.scss';
+// import PropTypes from 'prop-types'
 // import React from 'react'
 
 // function Form ({ onSubmit, expanded = false, children }) {
@@ -11,9 +12,9 @@
 // }
 
 // Form.propTypes = {
-//     children: React.PropTypes.object.isRequired,
-//     onSubmit: React.PropTypes.func.isRequired,
-//     expanded: React.PropTypes.bool
+//     children: PropTypes.object.isRequired,
+//     onSubmit: PropTypes.func.isRequired,
+//     expanded: PropTypes.bool
 // }
 
 // export default Form

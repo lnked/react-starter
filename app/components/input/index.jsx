@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class Button extends Component {
 
     static propTypes = {
-        type: React.PropTypes.string,
-        name: React.PropTypes.string,
-        value: React.PropTypes.string,
-        className: React.PropTypes.string,
-        handleChange: React.PropTypes.func
+        type: PropTypes.string,
+        name: PropTypes.string,
+        value: PropTypes.string,
+        className: PropTypes.string,
+        handleChange: PropTypes.func
     }
 
     static defaultProps = {

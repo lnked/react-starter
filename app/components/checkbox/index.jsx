@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class Button extends Component {
 
     static propTypes = {
-        label: React.PropTypes.string,
-        checked: React.PropTypes.bool
+        label: PropTypes.string,
+        checked: PropTypes.bool
     }
 
     static defaultProps = {

@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 import Posts from 'components/posts'
 
 export default class Load extends Component {
 
     static propTypes = {
-        posts: React.PropTypes.object.isRequired,
-        subreddit: React.PropTypes.string
+        posts: PropTypes.object.isRequired,
+        subreddit: PropTypes.string
     }
 
     static defaultProps = {
