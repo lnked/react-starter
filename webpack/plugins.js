@@ -23,9 +23,6 @@ const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 // const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
 const ClosureCompilerPlugin = require('webpack-closure-compiler');
 
-// const SplitByPathPlugin = require('split-by-path-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-
 if (define.rs_development) {
     plugins.push(
         new LiveReloadPlugin()
@@ -102,38 +99,21 @@ if (define.rs_development) {
 if (define.rs_production) {
     plugins.push(
         new WebpackChunkHash(),
-        new ChunkManifestPlugin({
-            filename: "chunk-manifest.json",
-            manifestVariable: "webpackManifest"
-        }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.[hash:5].js',
-            minChunks: (module) => {
-                return module.context && module.context.includes("node_modules");
-            }
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "runtime",
-            minChunks: Infinity
-        }),
         new webpack.ContextReplacementPlugin(
             /moment[\/\\]locale$/,
             /(en-gb|ru)\.js/
         ),
-        // new SplitByPathPlugin({
-        //     buckets: [{
-        //         name: 'common',
-        //         regex: /node_modules/,
-        //         // regex: /(node_modules\/|app\/common\/)/
-        //     }]
-        // }),
-        // new WebpackCleanupPlugin({
-        //     quiet: true,
-        //     exclude: ["chunk-manifest.json", "fonts/**/*"]
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendor.[hash:5].js',
+            minChunks: Infinity
+        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: "runtime",
+        //     minChunks: Infinity
         // }),
         new webpack.optimize.UglifyJsPlugin({
             minimize: true,
@@ -175,6 +155,10 @@ if (define.rs_production) {
                 space_colon: false
             },
             exclude: [/\.min\.js$/gi]
+        }),
+        new ChunkManifestPlugin({
+            filename: "chunk-manifest.json",
+            manifestVariable: "webpackManifest"
         }),
         new FaviconsWebpackPlugin({
             logo: 'assets/favicon/favicon.svg',

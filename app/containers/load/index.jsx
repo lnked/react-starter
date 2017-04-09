@@ -7,7 +7,7 @@ export default class Load extends Component {
 
     static propTypes = {
         posts: PropTypes.object.isRequired,
-        subreddit: PropTypes.string
+        subreddit: PropTypes.string.isRequired
     }
 
     static defaultProps = {

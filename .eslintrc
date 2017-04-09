@@ -110,7 +110,7 @@
         "consistent-this": [2, "self"],
         "eol-last": 2,
         "func-names": 0,
-        "func-style": [2, "declaration"],
+        "func-style": [0, "declaration"],
         "id-length": 0,
         "id-match": 0,
         "indent": [2, 4, {
@@ -155,7 +155,7 @@
         "spaced-comment": [2, "always"],
         "wrap-regex": 0,
         // ECMAScript 6
-        "arrow-parens": 2,
+        "arrow-parens": 0,
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": [2, "before"],

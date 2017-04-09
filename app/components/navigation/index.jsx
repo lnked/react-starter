@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { IndexLink, Link } from 'react-router'
+import { IndexLink, Link } from 'react-router-dom'
 import css from './styles.scss'
 
 export default class Navigation extends Component {

@@ -1,14 +1,99 @@
 import React, { Component } from 'react'
-import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router'
+
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    // Redirect,
+    IndexRoute
+} from 'react-router-dom'
 
 // Layouts
-import {CoreLayout, AuthLayout} from 'layouts'
+import {CoreLayout} from 'layouts'
+// import {CoreLayout, AuthLayout} from 'layouts'
 
 // Pages
-import {Auth, Page1, Load, NoMatch} from 'containers'
+// import {Auth, Page1, Load, NoMatch} from 'containers'
+import {Page1, Load, NoMatch} from 'containers'
+
+// const routes = [
+//     { path: '/',
+//         component: Page1
+//     },
+//     { path: '/tacos',
+//         component: Load,
+//         routes: [
+//             { path: '/tacos/bus',
+//                 component: Load
+//             },
+//             { path: '/tacos/cart',
+//                 component: Load
+//             }
+//         ]
+//     }
+// ]
+
+// <Route path="/cp" component={CoreLayout}>
+//     <IndexRoute component={Page1} />
+//     <Route path="settings" component={Load} />
+
+//     <Route path="site" component={Page1}>
+//         <Route path="structure" component={Page1} />
+//         <Route path="menu" component={Page1} />
+//         <Route path="module" component={Page1} />
+//         <Route path="storage" component={Page1} />
+//         <Route path="settings" component={Page1} />
+//     </Route>
+
+//     <Route path="marketing" component={Page1}>
+//         <Route path="dashboard" component={Page1} />
+//         <Route path="invoices" component={Page1} />
+//         <Route path="leads" component={Page1} />
+//         <Route path="contacts" component={Page1} />
+//         <Route path="todo" component={Page1} />
+//         <Route path="analytics" component={Page1} />
+//     </Route>
+
+//     <Route path="seo" component={Page1}>
+//         <Route path="analytics" component={Page1} />
+//         <Route path="pageWeight" component={Page1} />
+//         <Route path="meta" component={Page1} />
+//         <Route path="hfu" component={Page1} />
+//         <Route path="social" component={Page1} />
+//         <Route path="sitemap" component={Page1} />
+//         <Route path="robots" component={Page1} />
+//         <Route path="counters" component={Page1} />
+//     </Route>
+
+//     <Route path="users" component={Page1}>
+//         <Route path="list" component={Page1} />
+//         <Route path="permissions" component={Page1} />
+//         <Route path="roles" component={Page1} />
+//         <Route path="settings" component={Page1} />
+//     </Route>
+
+//     <Route path="shop" component={Page1}>
+//         <Route path="orders" component={Page1} />
+//         <Route path="catalog" component={Page1} />
+//         <Route path="customers" component={Page1} />
+//         <Route path="affiliate" component={Page1} />
+//         <Route path="discounts" component={Page1} />
+//         <Route path="exchange" component={Page1} />
+//         <Route path="taxes" component={Page1} />
+//         <Route path="settings" component={Page1} />
+//     </Route>
+
+//     <Route path="system" component={Page1}>
+//         <Route path="extensions" component={Page1} />
+//         <Route path="themes" component={Page1} />
+//         <Route path="update" component={Page1} />
+//         <Route path="info" component={Page1} />
+//         <Route path="mailers" component={Page1} />
+//         <Route path="settings" component={Page1} />
+//     </Route>
+// </Route>
 
 export default class App extends Component {
-
     constructor (props) {
         super(props)
         this.state = {
@@ -33,94 +118,159 @@ export default class App extends Component {
     }
 
     render () {
-        // <Router history={browserHistory} routes={routes} />,
-        // <Route path="/cp" component={Auth} onEnter={this.requireAuth} />
         return (
-            <Router history={browserHistory}>
-                <Redirect from="/" to="/cp/site" />
+            <Router>
+                <Switch>
+                    {/* <Redirect from="/" to="/cp/site" /> */}
 
-                <Route path="/" component={AuthLayout}>
-                    <IndexRoute component={Auth} />
-                    <Route path="/cp" component={Auth} />
-                </Route>
+                    <Route exact path="/" component={Page1}/>
+                    <Route path="/cp" component={Load}/>
 
-                <Route path="/cp" component={CoreLayout}>
-                    <IndexRoute component={Page1} />
-                    <Route path="settings" component={Load} />
+                    <Route path="/cp" component={CoreLayout}>
+                        <IndexRoute component={Page1} />
 
-                    <Route path="site" component={Page1}>
-                        <Route path="structure" component={Page1} />
-                        <Route path="menu" component={Page1} />
-                        <Route path="module" component={Page1} />
-                        <Route path="storage" component={Page1} />
-                        <Route path="settings" component={Page1} />
+                        <Route path="site" component={Page1}>
+                            <Route path="structure" component={Page1} />
+                            <Route path="menu" component={Page1} />
+                            <Route path="module" component={Page1} />
+                            <Route path="storage" component={Page1} />
+                            <Route path="settings" component={Page1} />
+                        </Route>
                     </Route>
 
-                    <Route path="marketing" component={Page1}>
-                        <Route path="dashboard" component={Page1} />
-                        <Route path="invoices" component={Page1} />
-                        <Route path="leads" component={Page1} />
-                        <Route path="contacts" component={Page1} />
-                        <Route path="todo" component={Page1} />
-                        <Route path="analytics" component={Page1} />
+                    <Route
+                        component={NoMatch}
+                        onEnter={() => {
+                            this.setState({
+                                isOverflow: true
+                            })
+                        }}
+                        onLeave={() => {
+                            this.setState({
+                                isOverflow: false
+                            })
+                        }}
+                        status={404}
+                    />
+                </Switch>
+
+                {/*
+                {routes.map((route, i) => (
+                    <Route key={i} path={route.path} render={props => (
+                        <route.component {...props} routes={route.routes}/>
+                    )}/>
+                ))}
+
+                <RouteWithSubRoutes key={i} {...route}/>
+                <Switch>
+
+                    <Route path="/cp" component={CoreLayout} />
+
+                    <Route path="/" component={AuthLayout}>
+                        <IndexRoute component={Auth} />
+                        <Route path="/cp" component={Auth} />
                     </Route>
 
-                    <Route path="seo" component={Page1}>
-                        <Route path="analytics" component={Page1} />
-                        <Route path="pageWeight" component={Page1} />
-                        <Route path="meta" component={Page1} />
-                        <Route path="hfu" component={Page1} />
-                        <Route path="social" component={Page1} />
-                        <Route path="sitemap" component={Page1} />
-                        <Route path="robots" component={Page1} />
-                        <Route path="counters" component={Page1} />
+                    <Redirect from="/" to="/cp/site" />
+                    <Route path="/cp" component={CoreLayout}>
+                        <IndexRoute component={Page1} />
+
+                        <Route path="settings" component={Load} />
+
+                        <Route path="site" component={Page1}>
+                            <Route path="structure" component={Page1} />
+                            <Route path="menu" component={Page1} />
+                            <Route path="module" component={Page1} />
+                            <Route path="storage" component={Page1} />
+                            <Route path="settings" component={Page1} />
+                        </Route>
                     </Route>
 
-                    <Route path="users" component={Page1}>
-                        <Route path="list" component={Page1} />
-                        <Route path="permissions" component={Page1} />
-                        <Route path="roles" component={Page1} />
-                        <Route path="settings" component={Page1} />
-                    </Route>
+                    <Route path="main" component={Page1}/>
+                    <Route path="company" component={Load}/>
 
-                    <Route path="shop" component={Page1}>
-                        <Route path="orders" component={Page1} />
-                        <Route path="catalog" component={Page1} />
-                        <Route path="customers" component={Page1} />
-                        <Route path="affiliate" component={Page1} />
-                        <Route path="discounts" component={Page1} />
-                        <Route path="exchange" component={Page1} />
-                        <Route path="taxes" component={Page1} />
-                        <Route path="settings" component={Page1} />
-                    </Route>
-
-                    <Route path="system" component={Page1}>
-                        <Route path="extensions" component={Page1} />
-                        <Route path="themes" component={Page1} />
-                        <Route path="update" component={Page1} />
-                        <Route path="info" component={Page1} />
-                        <Route path="mailers" component={Page1} />
-                        <Route path="settings" component={Page1} />
-                    </Route>
-                </Route>
-
-                <Route
-                    path="*"
-                    component={NoMatch}
-                    onEnter={() => {
-                        this.setState({
-                            isOverflow: true
-                        })
-                    }}
-                    onLeave={() => {
-                        this.setState({
-                            isOverflow: false
-                        })
-                    }}
-                    status={404}
-                />
+                </Switch>
+                */}
 
             </Router>
         )
     }
 }
+
+/*
+export default class App extends Component {
+    render () {
+        // <Router history={browserHistory} routes={routes} />,
+        // <Route path="/cp" component={Auth} onEnter={this.requireAuth} />
+        return (
+            <Router>
+                <div>
+                    <Route path="/cp" component={CoreLayout}>
+                        <IndexRoute component={Page1} />
+                        <Route path="settings" component={Load} />
+
+                        <Route path="site" component={Page1}>
+                            <Route path="structure" component={Page1} />
+                            <Route path="menu" component={Page1} />
+                            <Route path="module" component={Page1} />
+                            <Route path="storage" component={Page1} />
+                            <Route path="settings" component={Page1} />
+                        </Route>
+
+                        <Route path="marketing" component={Page1}>
+                            <Route path="dashboard" component={Page1} />
+                            <Route path="invoices" component={Page1} />
+                            <Route path="leads" component={Page1} />
+                            <Route path="contacts" component={Page1} />
+                            <Route path="todo" component={Page1} />
+                            <Route path="analytics" component={Page1} />
+                        </Route>
+
+                        <Route path="seo" component={Page1}>
+                            <Route path="analytics" component={Page1} />
+                            <Route path="pageWeight" component={Page1} />
+                            <Route path="meta" component={Page1} />
+                            <Route path="hfu" component={Page1} />
+                            <Route path="social" component={Page1} />
+                            <Route path="sitemap" component={Page1} />
+                            <Route path="robots" component={Page1} />
+                            <Route path="counters" component={Page1} />
+                        </Route>
+
+                        <Route path="users" component={Page1}>
+                            <Route path="list" component={Page1} />
+                            <Route path="permissions" component={Page1} />
+                            <Route path="roles" component={Page1} />
+                            <Route path="settings" component={Page1} />
+                        </Route>
+
+                        <Route path="shop" component={Page1}>
+                            <Route path="orders" component={Page1} />
+                            <Route path="catalog" component={Page1} />
+                            <Route path="customers" component={Page1} />
+                            <Route path="affiliate" component={Page1} />
+                            <Route path="discounts" component={Page1} />
+                            <Route path="exchange" component={Page1} />
+                            <Route path="taxes" component={Page1} />
+                            <Route path="settings" component={Page1} />
+                        </Route>
+
+                        <Route path="system" component={Page1}>
+                            <Route path="extensions" component={Page1} />
+                            <Route path="themes" component={Page1} />
+                            <Route path="update" component={Page1} />
+                            <Route path="info" component={Page1} />
+                            <Route path="mailers" component={Page1} />
+                            <Route path="settings" component={Page1} />
+                        </Route>
+                    </Route>
+
+                    * /}
+                </div>
+
+            </Router>
+        )
+    }
+}
+*/
+

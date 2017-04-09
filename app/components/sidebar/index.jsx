@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, IndexLink } from 'react-router'
+import { Link, IndexLink } from 'react-router-dom'
 import css from './styles.scss'
 // import Icon from 'react-svg-use';
 // <Icon id="logo" color="#D71421" />

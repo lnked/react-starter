@@ -20,14 +20,18 @@ module.exports = {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
         vendor: [
-            'axios',
-            'react',
-            'react-dom',
-            'immutable',
-            'react-router'
-            // 'react-webstorage'
-        ],
-        polyfill: ['babel-polyfill']
+          'react',
+          'react-dom',
+          'react-router-dom'
+        ]
+        // vendor: [
+        //     'axios',
+        //     'react',
+        //     'react-dom',
+        //     'immutable',
+        //     'react-router-dom'
+        // ],
+        // polyfill: ['babel-polyfill']
         // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
     },
 

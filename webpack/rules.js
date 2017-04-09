@@ -148,7 +148,7 @@ rules.push(
 
 rules.push(
     {
-        test: /.*\.(jpe?g|png|gif|ico|svg)$/i,
+        test: /.*\.(jpe?g|png|gif|ico|webp|svg)$/i,
         use: [
             {
                 loader: 'file-loader',
@@ -161,6 +161,7 @@ rules.push(
             {
                 loader: 'url-loader',
                 options: {
+                    name: 'images/[hash].[ext]',
                     limit: 10000
                 }
             },
@@ -215,7 +216,8 @@ rules.push(
                 }
             }
         ],
-        include: [ define.rs_root ]
+        include: [ define.rs_root ],
+        exclude: resolve(define.rs_root, '/assets/fonts')
     }
 );
 
@@ -224,7 +226,7 @@ rules.push(
         test: /\.json$/,
         use: [
             {
-                loader: 'file-loader', // 'json-loader',
+                loader: 'json-loader', // 'file-loader'
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
@@ -252,7 +254,21 @@ rules.push(
 
 rules.push(
     {
-        test: /\.(eot|otf|webp|ttf|woff(2)?)$/,
+        test: /\.(woff(2)?)$/,
+        use: [
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    mimetype: 'application/font-woff',
+                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]'
+                }
+            }
+        ],
+        include: resolve(define.rs_root, '/assets/fonts')
+    },
+    {
+        test: /\.(ttf|eot|svg)$/,
         use: [
             {
                 loader: 'file-loader',

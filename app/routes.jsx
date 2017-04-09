@@ -1,5 +1,4 @@
 import React from 'react'
-import { Router, browserHistory } from 'react-router/es6'
 import App from 'containers/App'
 
 // import reactRouterToArray from 'react-router-to-array'

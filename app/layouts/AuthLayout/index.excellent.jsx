@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router'
+import React, { Component, PropTypes } from 'react'
+// import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import Form from 'components/form/index'
 
 export default class MainLayout extends Component {

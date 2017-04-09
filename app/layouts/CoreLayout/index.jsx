@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, PropTypes } from 'react'
+// import PropTypes from 'prop-types'
 import Sidebar from 'components/sidebar'
 import Navigation from 'components/navigation'
 import css from './styles.scss'
