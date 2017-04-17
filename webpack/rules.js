@@ -78,7 +78,7 @@ rules.push(
                             }
                         }]
                     ],
-                    cacheDirectory: true
+                    cacheDirectory: define.rs_development
                 }
             }
         ],

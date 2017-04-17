@@ -19,7 +19,8 @@
         "browser": true
     },
     "plugins": [
-        "react"
+        "react",
+        "security"
     ],
     "globals": {
         "beforeEach": true,

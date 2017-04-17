@@ -8,6 +8,8 @@ const define = require('./define');
 const plugins = require('./plugins');
 const nodeExternals = require('webpack-node-externals');
 
+process.traceDeprecation = true;
+
 module.exports = {
     
     context: define.rs_root,

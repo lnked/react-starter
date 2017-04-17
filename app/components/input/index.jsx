@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 // import PropTypes from 'prop-types'
 import css from './styles.scss'
 
-export default class Button extends Component {
+export default class Input extends Component {
 
     static propTypes = {
         type: PropTypes.string,
@@ -19,6 +19,13 @@ export default class Button extends Component {
         handleChange: null
     }
 
+    static defaultProps: Props = {
+        value: ''
+    }
+
+    handleChange = event => 
+       this.props.onChange(event.nativeEvent.target.value);
+
     render () {
         console.log(this.props)
         return (
@@ -26,7 +33,7 @@ export default class Button extends Component {
                 type={this.props.type}
                 name={this.props.name}
                 value={this.props.value}
-                onChange={this.props.handleChange}
+                onChange={this.handleChange}
                 className={[css.input, this.props.className].join(' ')}
             />
         )

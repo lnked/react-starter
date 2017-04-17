@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
     Route,
-    Switch,
+    Switch
     // Redirect,
-    IndexRoute
+    // IndexRoute
 } from 'react-router-dom'
 
 // Layouts
@@ -121,22 +121,24 @@ export default class App extends Component {
         return (
             <Router>
                 <Switch>
-                    {/* <Redirect from="/" to="/cp/site" /> */}
-
-                    <Route exact path="/" component={Page1}/>
-                    <Route path="/cp" component={Load}/>
-
-                    <Route path="/cp" component={CoreLayout}>
+                    {/*
                         <IndexRoute component={Page1} />
+                        <Redirect from="/" to="/cp/site" />
+                        <Route path="/cp" component={Load}/>
+                    */}
 
-                        <Route path="site" component={Page1}>
-                            <Route path="structure" component={Page1} />
-                            <Route path="menu" component={Page1} />
-                            <Route path="module" component={Page1} />
-                            <Route path="storage" component={Page1} />
-                            <Route path="settings" component={Page1} />
-                        </Route>
-                    </Route>
+                    <Route exact path="/" component={CoreLayout}/>
+
+                    <Route path="/test" component={Load}/>
+
+                    <Route path="/cp" component={Page1} />
+
+                    <Route path="/cp/site" component={Page1} />
+                    <Route path="/cp/site/structure" component={Page1} />
+                    <Route path="/cp/site/menu" component={Page1} />
+                    <Route path="/cp/site/module" component={Page1} />
+                    <Route path="/cp/site/storage" component={Page1} />
+                    <Route path="/cp/site/settings" component={Page1} />
 
                     <Route
                         component={NoMatch}
