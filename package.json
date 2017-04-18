@@ -7,14 +7,15 @@
     "prebuild": "del-cli dist -f",
     "build": "NODE_ENV=production webpack --config ./webpack/config.js",
     "serve": "nohup http-server ./dist -a 0.0.0.0 -p 7777",
-    "start": "npm run serve | npm run dev",
+    "start1": "npm run serve | npm run dev",
+    "start": "nodemon --watch ./webpack/config.js --exec 'webpack-dev-server --env development --config ./webpack/config.js'",
     "stats": "NODE_ENV=production webpack --config ./webpack/config.js --json --profile > stats.json",
     "tests": "",
     "lint": "eslint ./app --ext .js[x]",
     "lint2": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache",
     "lint-fix": "eslint ./app --fix .js[x]",
     "publish": "npm run lint-fix | npm run tests | npm run build",
-    "dev": "NODE_ENV=development webpack-dev-server --config ./webpack/config.js",
+    "dev": "NODE_ENV=development webpack-dev-server --open --config ./webpack/config.js",
     "deploy": "npm run build && gh-pages -d ./dist -m 'Updates --skip-ci'"
   },
   "keywords": [

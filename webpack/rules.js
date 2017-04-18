@@ -97,9 +97,6 @@ rules.push(
             {
                 loader: 'style-loader'
             },
-            // use: ExtractTextPlugin.extract({
-            //     use: 'css-loader'
-            // }),
             {
                 loader: 'css-loader',
                 options: {
@@ -136,16 +133,6 @@ rules.push(
     }
 );
 
-// rules.push(
-//     {
-//         test: /\.svg/,
-//         use: {
-//             loader: 'svg-url-loader',
-//             options: {}
-//         }
-//     }
-// );
-
 rules.push(
     {
         test: /.*\.(jpe?g|png|gif|ico|webp|svg)$/i,
@@ -156,13 +143,6 @@ rules.push(
                     hash: 'sha512',
                     digest: 'hex',
                     name: '[name]-[hash:11].[ext]'
-                }
-            },
-            {
-                loader: 'url-loader',
-                options: {
-                    name: 'images/[hash].[ext]',
-                    limit: 10000
                 }
             },
             {

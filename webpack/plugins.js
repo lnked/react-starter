@@ -12,16 +12,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const WebpackChunkHash = require('webpack-chunk-hash');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 
-// const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-// const ClosureCompilerPlugin = require('closure-compiler-webpack-plugin');
-const ClosureCompilerPlugin = require('webpack-closure-compiler');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const ClosureCompilerPlugin = require('webpack-closure-compiler');
 
 if (define.rs_development) {
     plugins.push(
@@ -30,21 +27,23 @@ if (define.rs_development) {
 }
 
 plugins.push(
-    // new webpack.ProvidePlugin({
-    //     'axios': 'axios',
-    //     'react': 'react',
-    //     'immutable': 'immutable',
-    //     'react-dom': 'react-dom',
-    //     'react-router': 'react-router',
-    //     'react-webstorage': 'react-webstorage'
-    // }),
+    new WebpackChunkHash(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HashedModuleIdsPlugin(),
+    new webpack.ContextReplacementPlugin(
+        /moment[\/\\]locale$/,
+        /(en-gb|ru)\.js/
+    ),
+    new ChunkManifestPlugin({
+        filename: "chunk-manifest.json",
+        manifestVariable: "webpackManifest"
+    }),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         'process.env.BROWSER': JSON.stringify(true),
@@ -82,30 +81,16 @@ plugins.push(
         }
     }),
     new CopyWebpackPlugin([
-        // { from: 'assets/fonts', to: 'fonts' },
         { from: 'assets/images', to: 'images' }
     ])
 );
 
-if (define.rs_development) {
-    plugins.push(
-        new CircularDependencyPlugin({
-            exclude: /a\.js|node_modules/,
-            failOnError: false
-        })
-    );
-}
+const flag = false;
 
-if (define.rs_production) {
+if (define.rs_production && flag) {
     plugins.push(
-        new WebpackChunkHash(),
-        new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.ContextReplacementPlugin(
-            /moment[\/\\]locale$/,
-            /(en-gb|ru)\.js/
-        ),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             filename: 'vendor.[hash:5].js',
@@ -156,41 +141,37 @@ if (define.rs_production) {
             },
             exclude: [/\.min\.js$/gi]
         }),
-        new ChunkManifestPlugin({
-            filename: "chunk-manifest.json",
-            manifestVariable: "webpackManifest"
-        }),
-        new FaviconsWebpackPlugin({
-            logo: 'assets/favicon/favicon.svg',
-            // The prefix for all image files (might be a folder or a name)
-            prefix: 'fav-[hash:8]/',
-            // Emit all stats of the generated icons
-            emitStats: false,
-            // The name of the json containing all favicon information
-            statsFilename: 'iconstats-[hash].json',
-            // Generate a cache file with control hashes and
-            // don't rebuild the favicons until those hashes change
-            persistentCache: true,
-            // Inject the html into the html-webpack-plugin
-            inject: true,
-            // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-            background: '#222222',
-            // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-            title: 'React starter',
-            // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
-            icons: {
-                android: true,
-                appleIcon: true,
-                appleStartup: false,
-                coast: false,
-                favicons: true,
-                firefox: true,
-                opengraph: false,
-                twitter: false,
-                yandex: false,
-                windows: false
-            }
-        }),
+        // new FaviconsWebpackPlugin({
+        //     logo: 'assets/favicon/favicon.svg',
+        //     // The prefix for all image files (might be a folder or a name)
+        //     prefix: 'fav-[hash:8]/',
+        //     // Emit all stats of the generated icons
+        //     emitStats: false,
+        //     // The name of the json containing all favicon information
+        //     statsFilename: 'iconstats-[hash].json',
+        //     // Generate a cache file with control hashes and
+        //     // don't rebuild the favicons until those hashes change
+        //     persistentCache: true,
+        //     // Inject the html into the html-webpack-plugin
+        //     inject: true,
+        //     // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
+        //     background: '#222222',
+        //     // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
+        //     title: 'React starter',
+        //     // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
+        //     icons: {
+        //         android: true,
+        //         appleIcon: true,
+        //         appleStartup: false,
+        //         coast: false,
+        //         favicons: true,
+        //         firefox: true,
+        //         opengraph: false,
+        //         twitter: false,
+        //         yandex: false,
+        //         windows: false
+        //     }
+        // }),
         // new ClosureCompilerPlugin({
         //     // compilation_level: 'ADVANCED',
         //     // create_source_map: false
@@ -210,19 +191,5 @@ if (define.rs_production) {
         })
     );
 }
-
-// import reactRouterToArray from 'react-router-to-array';
-
-// new StaticSiteGeneratorPlugin({
-//   paths: [
-//     '/hello/',
-//     '/world/'
-//   ],
-//   locals: {
-//     // Properties here are merged into `locals` 
-//     // passed to the exported render function 
-//     greet: 'Hello'
-//   }
-// })
 
 module.exports.config = plugins;

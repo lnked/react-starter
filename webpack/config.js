@@ -6,9 +6,6 @@ const { resolve } = require('path');
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
-const nodeExternals = require('webpack-node-externals');
-
-process.traceDeprecation = true;
 
 module.exports = {
     
@@ -21,42 +18,15 @@ module.exports = {
     entry: {
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        vendor: [
-          'react',
-          'react-dom',
-          'react-router-dom'
-        ]
-        // vendor: [
-        //     'axios',
-        //     'react',
-        //     'react-dom',
-        //     'immutable',
-        //     'react-router-dom'
-        // ],
-        // polyfill: ['babel-polyfill']
-        // vendor: Object.keys(require(resolve(define.rs_root, '../package.json')).dependencies)
+        polyfill: ['babel-polyfill']
     },
 
     output: {
-        path: resolve(define.rs_dist, 'static'),
-        publicPath: '/static/',
+        path: define.rs_dist,
         pathinfo: define.rs_development,
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },
-
-    // externals: {
-    //     axios: 'axios',
-    //     react: 'react',
-    //     'react-dom': 'react-dom',
-    //     'react-router': 'react-router',
-    //     'react-webstorage': 'react-webstorage'
-    // },
-
-    // externals: [nodeExternals({
-    //     // whitelist: ['react', 'react-router', 'react-dom', 'react-webstorage']
-    //     whitelist: [/\.(?!(?:jsx?|json)$).{1,5}$/i]
-    // })],
 
     resolve: {
         modules: [define.rs_root, 'node_modules'],
@@ -74,6 +44,7 @@ module.exports = {
             containers: resolve(define.rs_root, 'containers'),
             components: resolve(define.rs_root, 'components'),
             images: resolve(define.rs_root, 'assets/images'),
+            styles: resolve(define.rs_root, 'assets/styles'),
             scripts: resolve(define.rs_root, 'assets/scripts')
         }
     },
@@ -83,39 +54,40 @@ module.exports = {
     },
 
     module: {
-        // noParse: /(react\/react\.js|react\-dom\/dist\/react-dom\.js)/,
-        // noParse: /(react\-dom\/dist\/react-dom\.js)/,
-        // noParse: /jquery|axios|react|react-dom|immutable|react-router|react-webstorage|lodash/,
         rules: rules.config
     },
 
     performance: {
-        hints: define.rs_production ? "warning" : false,
+        hints: define.rs_production ? 'warning' : false,
         maxAssetSize: 300000,
         maxEntrypointSize: 400000
     },
 
     devServer: {
-        // proxy: {
-        //     '/api': {
-        //         target: 'https://other-server.example.com',
-        //         secure: false
-        //     }
-        // },
         compress: false,
         contentBase: define.rs_dist,
         watchContentBase: define.rs_development,
-        historyApiFallback: { disableDotRule: true },
-        inline: true,
+        historyApiFallback: true,
+        watchOptions: {
+            aggregateTimeout: 100,
+            poll: 1000
+        },
+        overlay: {
+            warnings: true,
+            errors: true
+        },
+        stats: {
+            modules: false,
+            cached: false,
+            colors: true,
+            chunk: false
+        },
         hot: true,
+        inline: true,
         host: '0.0.0.0'
     },
 
     watch: define.rs_development,
-
-    watchOptions: {
-        aggregateTimeout: 100
-    },
 
     plugins: plugins.config,
 
