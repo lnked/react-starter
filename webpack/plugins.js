@@ -85,9 +85,7 @@ plugins.push(
     ])
 );
 
-const flag = false;
-
-if (define.rs_production && flag) {
+if (define.rs_production) {
     plugins.push(
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
