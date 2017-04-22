@@ -5,4 +5,11 @@ import Navigation from 'components/navigation'
 import Posts from 'components/posts'
 import Sidebar from 'components/sidebar'
 
-export {Button, Checkbox, Input, Navigation, Posts, Sidebar}
+export {
+    Button,
+    Checkbox,
+    Input,
+    Navigation,
+    Posts,
+    Sidebar
+}

@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-// import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class Button extends Component {
@@ -8,12 +8,14 @@ export default class Button extends Component {
         type: PropTypes.string,
         label: PropTypes.string,
         variant: PropTypes.string,
-        children: PropTypes.element.isRequired
+        children: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.object
+        ])
     }
 
     static defaultProps = {
         type: 'button',
-        label: 'Button',
         variant: 'default'
     }
 
@@ -25,10 +27,10 @@ export default class Button extends Component {
         return (
             <button
                 type={this.props.type}
-                className={[css.button, ['button', this.props.variant].join('--')].join(' ')}
+                className={`${css.button} ${css[`button_${this.props.variant}`]}`}
                 onClick={this.handleClick}
             >
-                {this.props.children || this.props.label}
+                {this.props.label || this.props.children}
             </button>
         )
     }

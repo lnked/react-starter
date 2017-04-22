@@ -1,4 +1,4 @@
-// import React, { Component, PropTypes } from 'react'
+// import React, { Component } from 'react'
 // import WebStorage from 'react-webstorage'
 // import { Input, Checkbox, Button } from 'components'
 // import css from './styles.scss'

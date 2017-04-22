@@ -55,6 +55,7 @@ plugins.push(
         inject: 'body',
         filetype: 'pug',
         template: 'app.pug',
+        // chunks: ['request', 'vendor', 'styles', 'polyfill'],
         filename: resolve(define.rs_dist, 'index.html'),
         minify: define.rs_development ? {} : {
             removeComments: define.rs_production,

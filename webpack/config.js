@@ -44,6 +44,7 @@ module.exports = {
             containers: resolve(define.rs_root, 'containers'),
             components: resolve(define.rs_root, 'components'),
             images: resolve(define.rs_root, 'assets/images'),
+            svgstore: resolve(define.rs_root, 'assets/svgstore'),
             styles: resolve(define.rs_root, 'assets/styles'),
             scripts: resolve(define.rs_root, 'assets/scripts')
         }
@@ -61,6 +62,13 @@ module.exports = {
         hints: define.rs_production ? 'warning' : false,
         maxAssetSize: 300000,
         maxEntrypointSize: 400000
+    },
+
+    node: {
+        module: false,
+        process: true,
+        setImmediate: false,
+        clearImmediate: false
     },
 
     devServer: {
@@ -83,7 +91,7 @@ module.exports = {
             chunk: false
         },
         hot: true,
-        inline: true,
+        // inline: true,
         host: '0.0.0.0'
     },
 

@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-// import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class Input extends Component {

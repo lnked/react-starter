@@ -29,7 +29,7 @@ rules.push(
 
 rules.push(
     {
-        test: /\.pug/,
+        test: /\.pug$/,
         use: ['pug-loader'],
         include: define.rs_root
     }
@@ -62,6 +62,7 @@ rules.push(
                         ] : []
                     ],
                     plugins: [
+                        'transform-react-inline-elements',
                         "transform-class-properties",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
@@ -82,7 +83,6 @@ rules.push(
                 }
             }
         ],
-        // include: [ define.rs_root ],
         exclude: [
             resolve(define.rs_root, "../node_modules"),
             resolve(define.rs_root, "../bower_components")
@@ -117,7 +117,10 @@ rules.push(
                 }
             },
             {
-                loader: 'sass-loader'
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: define.rs_development
+                }
             },
             {
                 loader: 'postcss-loader',
@@ -134,6 +137,21 @@ rules.push(
 );
 
 rules.push(
+    {
+        test: /\.svg$/,
+        use: [
+            {
+                loader: 'raw-loader',
+                options: {
+                    svgo: {
+                        plugins: [{removeTitle: false}],
+                        floatPrecision: 2
+                    }
+                }
+            }
+        ],
+        include: [ resolve(define.rs_root, '/assets/svgstore') ]
+    },
     {
         test: /.*\.(jpe?g|png|gif|ico|webp|svg)$/i,
         use: [
@@ -197,7 +215,10 @@ rules.push(
             }
         ],
         include: [ define.rs_root ],
-        exclude: resolve(define.rs_root, '/assets/fonts')
+        exclude: [
+            resolve(define.rs_root, '/assets/fonts'),
+            resolve(define.rs_root, '/assets/svgstore')
+        ]
     }
 );
 
