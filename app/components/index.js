@@ -1,15 +1,17 @@
-import Button from 'components/button'
-import Checkbox from 'components/checkbox'
+import Form from 'components/form'
 import Input from 'components/input'
-import Navigation from 'components/navigation'
-import Posts from 'components/posts'
-import Sidebar from 'components/sidebar'
+import Radio from 'components/radio'
+import Button from 'components/button'
+import Switch from 'components/switch'
+import Select from 'components/select'
+import Checkbox from 'components/checkbox'
 
 export {
-    Button,
-    Checkbox,
+    Form,
     Input,
-    Navigation,
-    Posts,
-    Sidebar
+    Radio,
+    Switch,
+    Select,
+    Button,
+    Checkbox
 }

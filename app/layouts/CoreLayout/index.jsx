@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Sidebar from 'components/sidebar'
-import Navigation from 'components/navigation'
 import css from './styles.scss'
+
+import { Navigation, Sidebar } from 'segments'
 
 export default class CoreLayout extends Component {
 

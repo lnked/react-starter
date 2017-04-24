@@ -41,6 +41,7 @@ module.exports = {
             config: resolve(define.rs_root, 'config'),
             layouts: resolve(define.rs_root, 'layouts'),
             reducers: resolve(define.rs_root, 'reducers'),
+            segments: resolve(define.rs_root, 'segments'),
             containers: resolve(define.rs_root, 'containers'),
             components: resolve(define.rs_root, 'components'),
             images: resolve(define.rs_root, 'assets/images'),

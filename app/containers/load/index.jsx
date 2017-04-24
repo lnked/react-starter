@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import Posts from 'components/posts'
+
+import { Posts } from 'segments'
 
 export default class Load extends Component {
 
