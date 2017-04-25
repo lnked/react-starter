@@ -44,19 +44,9 @@ rules.push(
                     presets: [
                         "react",
                         ['es2015', {'loose': true, 'modules': false}],
-                        "airbnb",
                         "stage-0",
                         ...define.rs_production ? [
-                            "react-optimize",
-                            ["babili", {
-                                "mangle": {
-                                    "blacklist": ["MyCustomError"]
-                                },
-                                "unsafe": {
-                                    "typeConstructors": false
-                                },
-                                "keepFnName": true
-                            }]
+                            "react-optimize"
                         ] : []
                     ],
                     plugins: [

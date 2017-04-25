@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { IndexLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import css from './styles.scss'
 
 export default class Navigation extends Component {
     render () {
         return (
             <nav className={css.navigation}>
-                <IndexLink
+                <Link
                     to="/cp/site"
                     className={css.navigation__link}
-                    activeClassName={css.navigation__link_active}>Сайт</IndexLink>
+                    activeClassName={css.navigation__link_active}>Сайт</Link>
 
                 <Link
                     to="/cp/marketing"

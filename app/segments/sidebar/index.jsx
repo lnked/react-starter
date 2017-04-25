@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, IndexLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import css from './styles.scss'
 // import Icon from 'react-svg-use';
 // <Icon id="logo" color="#D71421" />
@@ -54,7 +54,7 @@ export default class Sidebar extends Component {
 
         return (
             <nav className={css.sidebar}>
-                <IndexLink
+                <Link
                     to="/cp"
                     className={[css.sidebar__section, css.sidebar__logo].join(' ')}
                     activeClassName={css.sidebar__logo_active}
@@ -63,7 +63,7 @@ export default class Sidebar extends Component {
                         src={require('images/lightning.svg')}
                         className={css['not-found__figure__image']}
                         alt="Error: 4xx" />
-                </IndexLink>
+                </Link>
 
                 {pages.map(this.createLinkItem)}
 
