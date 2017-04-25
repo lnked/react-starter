@@ -16,9 +16,13 @@ module.exports = {
     target: 'web', // 'node' | electron-main | electron-renderer
 
     entry: {
+        polyfill: ['babel-polyfill'],
+        vendor: [
+            'react',
+            'react-dom'
+        ],
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
-        polyfill: ['babel-polyfill']
     },
 
     output: {
