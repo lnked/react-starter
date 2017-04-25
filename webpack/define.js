@@ -5,8 +5,8 @@ const { resolve } = require('path');
 const _root_ = resolve(__dirname, '../app');
 const _dist_ = resolve(__dirname, '../dist');
 
-const isPro = process.env.NODE_ENV === 'production';
-const isDev = process.env.NODE_ENV === 'development' || !isPro;
+const isDev = process.env.NODE_ENV === 'development';
+const isPro = process.env.NODE_ENV === 'production' || !isDev;
 
 module.exports = {
     rs_deploy_path: '/react-starter/',

@@ -13,6 +13,10 @@ const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
 
 postcss.push(
     require('postcss-bem-linter'),
+    require('postcss-import')({
+        root: define.rs_root,
+        path: define.rs_root
+    }),
     // PostCSS plugin to import CSS/SugarSS files
     // https://www.npmjs.com/package/postcss-smart-import
     require('postcss-smart-import'),

@@ -6,8 +6,6 @@ const { resolve } = require('path');
 const define = require('./define');
 const postcss = require('./postcss');
 
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 rules.push(
     {
         enforce: 'pre',
@@ -74,6 +72,7 @@ rules.push(
                                 "assets": "./assets",
                                 "config": "./config",
                                 "layouts": "./layouts",
+                                "segments": "./segments",
                                 "containers": "./containers",
                                 "components": "./components"
                             }
