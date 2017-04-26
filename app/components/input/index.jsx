@@ -23,17 +23,24 @@ export default class Input extends Component {
         value: ''
     }
 
-    handleChange = event => 
-       this.props.onChange(event.nativeEvent.target.value);
+    componentDidMount () {
+        this._input.focus()
+    }
+
+    handleChange (event) {
+       this.props.onChange(event.nativeEvent.target.value)
+    }
 
     render () {
         console.log(this.props)
+
         return (
             <input
                 type={this.props.type}
                 name={this.props.name}
                 value={this.props.value}
                 onChange={this.handleChange}
+                ref={(c) => this._input = c}
                 className={[css.input, this.props.className].join(' ')}
             />
         )

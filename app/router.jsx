@@ -16,6 +16,17 @@ import {CoreLayout} from 'layouts'
 // import {Auth, Page1, Load, NoMatch} from 'containers'
 import {Page1, Load, NoMatch} from 'containers'
 
+// function def(promise) {
+//   return promise.then(cmp => {
+//     console.info('Dynamic loaded by route: ', cmp.default.displayName) // для тестирования можете логировать имя компонента
+//     return cmp.default
+//   })
+// }
+
+// ...
+// <Route path='/signin' getComponent={() => def(import('../containers/SigninContainer'))} />
+// ...
+
 // const routes = [
 //     { path: '/',
 //         component: Page1

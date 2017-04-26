@@ -138,6 +138,7 @@
     "webpack-dev-server": "2.4.4",
     "webpack-livereload-plugin": "0.11.0",
     "webpack-node-externals": "1.5.4",
+    "why-did-you-update": "0.0.8",
     "xml-loader": "1.2.1"
   },
   "repository": {
