@@ -50,8 +50,6 @@ rules.push(
                         ] : []
                     ],
                     plugins: [
-                        'transform-react-inline-elements',
-                        "transform-class-properties",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
                         "transform-react-jsx",
