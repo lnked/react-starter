@@ -5,7 +5,7 @@
   "description": "React skeleton",
   "scripts": {
     "prebuild": "rm -rf ./dist",
-    "build": "NODE_ENV=production webpack --env production --config ./webpack/config.js",
+    "build": "NODE_ENV=production webpack --config ./webpack/config.js",
     "serve": "nohup http-server ./dist &",
     "serve2": "nohup http-server ./dist -a 0.0.0.0 -p 9000",
     "start": "npm run serve | npm run dev",
