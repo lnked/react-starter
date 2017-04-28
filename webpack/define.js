@@ -10,6 +10,7 @@ const isPro = process.env.NODE_ENV === 'production' || !isDev;
 
 module.exports = {
     rs_deploy_path: '/react-starter/',
+    rs_generate_css: false,
     rs_root: _root_,
     rs_dist: _dist_,
     rs_environment: isPro ? 'production' : 'development',

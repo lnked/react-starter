@@ -77,6 +77,7 @@ module.exports = {
     },
 
     devServer: {
+        headers: { 'Access-Control-Allow-Origin': '*' },
         compress: false,
         contentBase: define.rs_dist,
         watchContentBase: define.rs_development,
