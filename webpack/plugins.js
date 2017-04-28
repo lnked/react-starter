@@ -6,6 +6,7 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 const define = require('./define');
+const helpers = require('./helpers');
 
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -49,27 +50,7 @@ plugins.push(
         'process.env.BROWSER': JSON.stringify(true),
         'process.env.DEBUG': JSON.stringify(false)
     }),
-    new HtmlWebpackPlugin({
-        hash: false,
-        cache: define.rs_production,
-        inject: 'body',
-        filetype: 'pug',
-        template: 'app.pug',
-        // chunks: ['request', 'vendor', 'styles', 'polyfill'],
-        filename: resolve(define.rs_dist, 'index.html'),
-        minify: define.rs_development ? {} : {
-            removeComments: define.rs_production,
-            collapseWhitespace: define.rs_production,
-            removeRedundantAttributes: define.rs_production,
-            useShortDoctype: define.rs_production,
-            removeEmptyAttributes: define.rs_production,
-            removeStyleLinkTypeAttributes: define.rs_production,
-            keepClosingSlash: define.rs_production,
-            minifyJS: define.rs_production,
-            minifyCSS: define.rs_production,
-            minifyURLs: define.rs_production
-        }
-    }),
+    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app')),
     new ExtractTextPlugin({
         filename: define.rs_production ? '[name].[hash].css' : '[name].css',
         allChunks: define.rs_production
