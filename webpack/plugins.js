@@ -19,7 +19,7 @@ if (define.rs_production) {
         ...require('./plugins/production').config,
         ...require('./plugins/uglify').config,
         // ...require('./plugins/favicon').config,
-        ...require('./plugins/closure').config,
+        // ...require('./plugins/closure').config,
         ...require('./plugins/compression').config
     );
 }

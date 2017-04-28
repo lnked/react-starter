@@ -10,10 +10,10 @@ const plugins = [
         filename: 'vendor.[hash:5].js',
         minChunks: Infinity
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: "runtime",
-    //     minChunks: Infinity
-    // }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: "runtime",
+        minChunks: Infinity
+    })
 ];
 
 module.exports.config = plugins;
