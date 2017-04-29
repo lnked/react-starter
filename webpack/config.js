@@ -26,7 +26,7 @@ module.exports = {
     },
 
     output: {
-        path: define.rs_dist,
+        path: define.rs_dist, // rs_deploy_path
         pathinfo: define.rs_development,
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
@@ -42,10 +42,10 @@ module.exports = {
         alias: {
             utils: resolve(define.rs_root, 'utils'),
             assets: resolve(define.rs_root, 'assets'),
-            config: resolve(define.rs_root, 'config'),
             layouts: resolve(define.rs_root, 'layouts'),
             reducers: resolve(define.rs_root, 'reducers'),
             segments: resolve(define.rs_root, 'segments'),
+            settings: resolve(define.rs_root, 'settings'),
             containers: resolve(define.rs_root, 'containers'),
             components: resolve(define.rs_root, 'components'),
             images: resolve(define.rs_root, 'assets/images'),
@@ -116,15 +116,20 @@ module.exports = {
         chunk: false,
         cached: false,
 
-        exclude: define.rs_development,
+        // exclude: define.rs_development,
+        exclude: false,
 
-        reasons: define.rs_development,
-        profile: define.rs_development,
+        // reasons: define.rs_development,
+        // profile: define.rs_development,
+        // chunkModules: define.rs_development,
+        // hideModules: define.rs_production,
         
-        maxModules: define.rs_development,
-        chunkModules: define.rs_development,
+        reasons: false,
+        profile: false,
+        maxModules: false,
+        hideModules: false,
+        chunkModules: false,
 
-        hideModules: define.rs_production,
         hash: define.rs_production,
         version: define.rs_production,
         origins: define.rs_production,
