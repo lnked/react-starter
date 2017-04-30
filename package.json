@@ -50,7 +50,8 @@
     "react-select": "1.0.0-rc.3",
     "react-side-effect": "1.1.0",
     "react-svg-use": "2.1.0",
-    "redux": "3.6.0"
+    "redux": "3.6.0",
+    "zepto": "1.2.0"
   },
   "devDependencies": {
     "autoprefixer": "6.7.7",

@@ -12,6 +12,9 @@ const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 const plugins = [
+    new webpack.ProvidePlugin({
+        $: "zepto"
+    }),
     new WebpackChunkHash(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),

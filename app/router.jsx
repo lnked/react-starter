@@ -4,7 +4,7 @@ import {
     BrowserRouter as Router,
     Route,
     Switch
-    // Redirect,
+    // Redirect
     // IndexRoute
 } from 'react-router-dom'
 
@@ -13,8 +13,7 @@ import {CoreLayout} from 'layouts'
 // import {CoreLayout, AuthLayout} from 'layouts'
 
 // Pages
-// import {Auth, Page1, Load, NoMatch} from 'containers'
-import {Page1, Load, NoMatch} from 'containers'
+import {Auth, Page1, Load, NoMatch} from 'containers'
 
 // function def(promise) {
 //   return promise.then(cmp => {
@@ -134,22 +133,22 @@ export default class App extends Component {
                 <Switch>
                     {/*
                         <IndexRoute component={Page1} />
-                        <Redirect from="/" to="/cp/site" />
                         <Route path="/cp" component={Load}/>
+                        <Route exact path="/" component={Page1}/>
+                        <Redirect from="/" to="/cp" />
                     */}
 
-                    <Route exact path="/" component={CoreLayout}/>
+                    <Route exact path="/" component={Page1}/>
 
-                    <Route path="/test" component={Load}/>
-
-                    <Route path="/cp" component={Page1} />
-
-                    <Route path="/cp/site" component={Page1} />
-                    <Route path="/cp/site/structure" component={Page1} />
-                    <Route path="/cp/site/menu" component={Page1} />
-                    <Route path="/cp/site/module" component={Page1} />
-                    <Route path="/cp/site/storage" component={Page1} />
-                    <Route path="/cp/site/settings" component={Page1} />
+                    <CoreLayout>
+                        <Route exact path="/cp" component={Auth} />
+                        <Route path="/cp/site" component={Load} />
+                        <Route path="/cp/site/structure" component={Page1} />
+                        <Route path="/cp/site/menu" component={Page1} />
+                        <Route path="/cp/site/module" component={Page1} />
+                        <Route path="/cp/site/storage" component={Page1} />
+                        <Route path="/cp/site/settings" component={Page1} />
+                    </CoreLayout>
 
                     <Route
                         component={NoMatch}

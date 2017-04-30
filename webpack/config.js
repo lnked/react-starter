@@ -19,7 +19,8 @@ module.exports = {
         polyfill: ['babel-polyfill'],
         vendor: [
             'react',
-            'react-dom'
+            'react-dom',
+            'zepto'
         ],
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
