@@ -6,20 +6,20 @@
     user-select: none;
     align-items: center;
     justify-content: flex-end;
+}
 
-    &__link {
-        color: #666;
-        display: block;
-        cursor: pointer;
-        font-size: 1.4rem;
-        text-decoration: none;
-        
-        &:not(:last-child) {
-            margin-right: 10px;
-        }
+.link {
+    color: #666;
+    display: block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-decoration: none;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 
-        &_active {
-            color: #f00;
-        }
+    &_active {
+        color: #f00;
     }
 }

@@ -20,7 +20,8 @@
     },
     "plugins": [
         "react",
-        "security"
+        "security",
+        "immutable"
     ],
     "globals": {
         "beforeEach": true,
@@ -47,6 +48,9 @@
         "react/forbid-prop-types": [1, {
             "forbid": ["any"]
         }],
+        "immutable/no-let": 0,
+        "immutable/no-this": 0,
+        "immutable/no-mutation": 0,
         "react/jsx-boolean-value": 0,
         "react/jsx-closing-bracket-location": 0,
         "react/jsx-curly-spacing": 0,

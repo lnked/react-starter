@@ -8,7 +8,7 @@ export default class CoreLayout extends Component {
 
     static propTypes = {
         children: PropTypes.oneOfType([
-            PropTypes.string,
+            PropTypes.array,
             PropTypes.object
         ])
     }

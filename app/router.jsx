@@ -104,8 +104,10 @@ import {Auth, Page1, Load, NoMatch} from 'containers'
 // </Route>
 
 export default class App extends Component {
+
     constructor (props) {
         super(props)
+
         this.state = {
             isOverflow: false
         }

@@ -3,18 +3,45 @@
 const { resolve } = require('path');
 const define = require('../define');
 
+const svgoConfig = {
+    plugins: [
+        {removeTitle:true},
+        {removeDesc:true},
+        {removeViewBox:false},
+        {convertPathData:false},
+        {removeEmptyAttrs:false},
+        {removeDoctype:true},
+        {removeMetadata:true},
+        {removeComments:true},
+        {removeUselessDefs:true},
+        {removeXMLProcInst:true},
+        {removeDimensions:true},
+        {cleanupNumericValues: {
+            floatPrecision: 2
+        }},
+        {cleanupIDs: {
+            prefix: '-',
+            minify: false
+        }},
+        {convertColors: {
+            names2hex: true,
+            shorthex: false,
+            rgb2hex: true
+        }},
+        {removeUselessStrokeAndFill:false}
+    ]
+}
+
 const rules = [
     {
-        test: /\.svg$/,
+        test: /.*\.svg$/i,
         use: [
             {
-                loader: 'raw-loader',
-                options: {
-                    svgo: {
-                        plugins: [{removeTitle: false}],
-                        floatPrecision: 2
-                    }
-                }
+                loader: 'svg-sprite-loader'
+            },
+            {
+                loader: 'svgo-loader',
+                options: svgoConfig
             }
         ],
         include: [ resolve(define.rs_root, '/assets/svgstore') ]
@@ -50,38 +77,11 @@ const rules = [
                     optipng: {
                         optimizationLevel: 7
                     },
-                    svgo: {
-                        plugins: [
-                            {removeTitle:true},
-                            {removeDesc:true},
-                            {removeViewBox:false},
-                            {convertPathData:false},
-                            {removeEmptyAttrs:false},
-                            {removeDoctype:true},
-                            {removeMetadata:true},
-                            {removeComments:true},
-                            {removeUselessDefs:true},
-                            {removeXMLProcInst:true},
-                            {removeDimensions:true},
-                            {cleanupNumericValues: {
-                                floatPrecision: 2
-                            }},
-                            {cleanupIDs: {
-                                prefix: '-',
-                                minify: false
-                            }},
-                            {convertColors: {
-                                names2hex: true,
-                                shorthex: false,
-                                rgb2hex: true
-                            }},
-                            {removeUselessStrokeAndFill:false}
-                        ]
-                    }
+                    svgo: svgoConfig
                 }
             }
         ],
-        include: [ define.rs_root ],
+        // include: [ define.rs_root ],
         exclude: [
             resolve(define.rs_root, '/assets/fonts'),
             resolve(define.rs_root, '/assets/svgstore')

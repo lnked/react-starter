@@ -20,7 +20,8 @@ module.exports = {
         vendor: [
             'react',
             'react-dom',
-            'zepto'
+            'svgxuse'
+            // 'zepto'
         ],
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),

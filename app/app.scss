@@ -103,4 +103,13 @@
     .is-overflow {
         overflow: hidden;
     }
+
+    svg {
+        fill: currentColor;
+        shape-rendering: geometricPrecision; /* auto | optimizeSpeed | crispEdges | geometricPrecision | inherit; */
+
+        &:not(:root) {
+            overflow: hidden;
+        }
+    }
 }

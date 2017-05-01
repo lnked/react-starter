@@ -31,9 +31,11 @@ export default class Posts extends Component {
     }
 
     render () {
+        const title = this.props.title
+
         return (
             <div>
-                <h1>{`/r/${this.props.title}`}</h1>
+                <h1>{`/r/${title}`}</h1>
                 <ul className={css.post}>
                     {this.props.data.map(this.createListItem)}
                 </ul>

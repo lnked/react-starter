@@ -7,9 +7,9 @@ export default class Navbar extends Component {
     constructor (props) {
         super(props)
 
-        this.state = {
+        this.setState({
             isOpened: false
-        }
+        })
     }
 
     handleOpenMenu () {
