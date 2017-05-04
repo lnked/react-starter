@@ -130,6 +130,24 @@ export default class App extends Component {
     }
 
     render () {
+        // <Router history={this.props.history}>
+        //     <div>
+        //         <Route exact path="/" name="Home" component={Index} />
+        //         <Route path="/colors" component={Palette} />
+        //         <Route path="/icons" component={Icons} />
+        //         <Route path="/forms" component={Forms} />
+        //         <Route path="/other" component={Other} />
+        //         <Route path="/dashboard" component={Dashboard} />
+
+        //         <Switch>
+        //             <Redirect from="/dashboard" to="/dashboard/my-account" />
+        //             <Route exact path="/dashboard/my-account" />
+        //             <Route exact path="/dashboard/service-request" />
+        //             <Route exact path="/dashboard/payments" />
+        //             <Route exact path="/dashboard/settings" />
+        //         </Switch>
+        //     </div>
+        // </Router>
         return (
             <Router>
                 <Switch>
