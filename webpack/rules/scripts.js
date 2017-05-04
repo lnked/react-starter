@@ -22,35 +22,27 @@ const rules = [
                     babelrc: false,
                     presets: [
                         "react",
-                        ['es2015', {'loose': true, 'modules': false}],
+                        ["es2015", {
+                            "loose": true,
+                            "modules": false
+                        }],
                         "stage-0"
-                        // ,
-                        // ...define.rs_production ? [
-                        //     "react-optimize"
-                        // ] : []
                     ],
                     plugins: [
                         ...define.rs_production ? [
+                            "transform-react-inline-elements",
                             "transform-react-constant-elements",
-                            "transform-react-inline-elements"
+                            "transform-react-pure-class-to-function",
+                            ["transform-react-remove-prop-types", {
+                                "mode": "wrap",
+                                "ignoreFilenames": ["node_modules"]
+                            }]
                         ]: [],
                         "transform-decorators-legacy",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
                         "transform-react-jsx",
                         "syntax-dynamic-import"
-                        // ,
-                        // ["module-resolver", {
-                        //     "root": ["./app"],
-                        //     "alias": {
-                        //         "assets": "./assets",
-                        //         "config": "./config",
-                        //         "layouts": "./layouts",
-                        //         "segments": "./segments",
-                        //         "containers": "./containers",
-                        //         "components": "./components"
-                        //     }
-                        // }]
                     ],
                     cacheDirectory: define.rs_development
                 }
