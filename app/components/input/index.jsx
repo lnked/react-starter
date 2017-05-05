@@ -19,57 +19,34 @@ export default class Input extends Component {
         handleChange: null
     }
 
-    static defaultProps: Props = {
-        value: ''
+    constructor (props) {
+        super(props)
+
+        this.handleChange = this.handleChange.bind(this)
     }
 
     componentDidMount () {
         this._input.focus()
     }
 
-    handleChange (event) {
-       this.props.onChange(event.nativeEvent.target.value)
+    handleChange (e) {
+        this.props.handleChange(e.nativeEvent.target.value)
+        // this.props.handleChange(e.target.value)
     }
 
     render () {
-        console.log(this.props)
-
         return (
             <input
                 type={this.props.type}
                 name={this.props.name}
                 value={this.props.value}
                 onChange={this.handleChange}
-                ref={(c) => this._input = c}
+                ref={(c) => {
+                    this._input = c
+                }}
                 className={[css.input, this.props.className].join(' ')}
             />
         )
     }
 }
 
-// class Input extends React.Component {
-//     constructor (props) {
-//         super(props)
-//         this.id = getNextId()
-
-//         this.onChange = this.onChange.bind(this)
-//     }
-
-//     onChange (e) {
-//         this.props.onChange(e.target.value)
-//     }
-
-//     render () {
-//         return (
-//       <label htmlFor={this.id}>
-//         {this.props.label}
-
-//         <input
-//           id={this.id}
-//           value={this.props.value}
-//           onChange={this.onChange}
-//           />
-//       </label>
-//         )
-//     }
-// }

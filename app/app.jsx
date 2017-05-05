@@ -31,5 +31,5 @@ render(<App />, document.getElementById('root'))
 //         </div>
 //     </Router>
 // </Provider>,
-// document.getElementById('app')  
+// document.getElementById('app')
 // );

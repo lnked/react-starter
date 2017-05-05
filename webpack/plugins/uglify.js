@@ -43,7 +43,8 @@ const plugins = [
             space_colon: false
         },
         exclude: [/\.min\.js$/gi]
-    })
+    }),
+    new webpack.optimize.AggressiveMergingPlugin()
 ];
 
 module.exports.config = plugins;

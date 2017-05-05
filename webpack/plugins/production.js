@@ -4,7 +4,6 @@ const webpack = require('webpack');
 
 const plugins = [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         filename: 'vendor.[hash:5].js',
