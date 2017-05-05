@@ -17,9 +17,6 @@ postcss.push(
         root: define.rs_root,
         path: define.rs_root
     }),
-    // PostCSS plugin to import CSS/SugarSS files
-    // https://www.npmjs.com/package/postcss-smart-import
-    // require('postcss-smart-import'),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/jonathantneal/postcss-partial-import
     require('postcss-partial-import')(),
