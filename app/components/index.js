@@ -5,6 +5,7 @@ import Button from 'components/button'
 import Switch from 'components/switch'
 import Select from 'components/select'
 import Checkbox from 'components/checkbox'
+import SvgFixer from 'components/svg-fixer'
 
 export {
     Form,
@@ -13,5 +14,6 @@ export {
     Switch,
     Select,
     Button,
+    SvgFixer,
     Checkbox
 }
