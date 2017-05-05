@@ -17,10 +17,10 @@ export default class CoreLayout extends Component {
 
     componentWillMount () {
         window.prerenderReady = true
+    }
 
-        setTimeout(() => {
-            SvgFixer()
-        }, 300)
+    componentDidMount () {
+        SvgFixer()
     }
 
     render () {
