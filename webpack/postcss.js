@@ -77,7 +77,6 @@ if (define.rs_production) {
     postcss.push(
         require('postcss-discard-comments'),
         require('postcss-emptymediaqueries'),
-        require('css-mqpacker'),
         require('cssnano')({
             safe: true,
             calc: false,

@@ -72,7 +72,6 @@
     "compression-webpack-plugin": "0.4.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.28.1",
-    "css-mqpacker": "5.0.1",
     "cssnano": "3.10.0",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.1",
