@@ -117,20 +117,15 @@ module.exports = {
         chunk: false,
         cached: false,
 
-        // exclude: define.rs_development,
-        exclude: false,
+        exclude: define.rs_development,
 
-        // reasons: define.rs_development,
-        // profile: define.rs_development,
-        // chunkModules: define.rs_development,
-        // hideModules: define.rs_production,
+        reasons: define.rs_development,
+        profile: define.rs_development,
         
-        reasons: false,
-        profile: false,
-        maxModules: false,
-        hideModules: false,
-        chunkModules: false,
+        maxModules: define.rs_development,
+        chunkModules: define.rs_development,
 
+        hideModules: define.rs_production,
         hash: define.rs_production,
         version: define.rs_production,
         origins: define.rs_production,
