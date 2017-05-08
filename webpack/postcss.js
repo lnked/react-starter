@@ -17,6 +17,9 @@ postcss.push(
         root: define.rs_root,
         path: define.rs_root
     }),
+    // PostCSS plugin to import CSS/SugarSS files
+    // https://www.npmjs.com/package/postcss-smart-import
+    require('postcss-smart-import'),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/jonathantneal/postcss-partial-import
     require('postcss-partial-import')(),
@@ -72,6 +75,23 @@ postcss.push(
 
 if (define.rs_production) {
     postcss.push(
+        require('postcss-svg-fallback')({
+            // base path for the images found in the css
+            // this is most likely the path to the css file you're processing
+            // not setting this option might lead to unexpected behavior
+            basePath: '',
+
+            // destination for the generated SVGs
+            // this is most likely the path to where the generated css file is outputted
+            // not setting this option might lead to unexpected behavior
+            dest: '',
+
+            // selector that gets prefixed to selector
+            fallbackSelector: '.no-svg',
+
+            // when `true` only the css is changed (no new files created)
+            disableConvert: false
+        }),
         require('postcss-discard-comments'),
         require('postcss-emptymediaqueries'),
         require('cssnano')({

@@ -8,13 +8,11 @@ export default class Navigation extends Component {
             <nav className={css.navigation}>
                 <Link
                     to="/cp/site"
-                    className={css.link}
-                    activeClassName={css.link_active}>Сайт</Link>
+                    className={css.link}>Сайт</Link>
 
                 <Link
                     to="/cp/marketing"
-                    className={css.link}
-                    activeClassName={css.link_active}>Маркетинг</Link>
+                    className={css.link}>Маркетинг</Link>
 
                 <Link
                     to="/cp/seo"
@@ -22,18 +20,15 @@ export default class Navigation extends Component {
 
                 <Link
                     to="/cp/users"
-                    className={css.link}
-                    activeClassName={css.link_active}>Пользователи</Link>
+                    className={css.link}>Пользователи</Link>
 
                 <Link
                     to="/cp/shop"
-                    className={css.link}
-                    activeClassName={css.link_active}>Магазин</Link>
+                    className={css.link}>Магазин</Link>
 
                 <Link
                     to="/cp/system"
-                    className={css.link}
-                    activeClassName={css.link_active}>Система</Link>
+                    className={css.link}>Система</Link>
             </nav>
         )
     }

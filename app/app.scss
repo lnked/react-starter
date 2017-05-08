@@ -1,30 +1,11 @@
 @import 'reset-css/reset.css';
-@import "assets/styles/_variable.scss";
-
-/*
-@import 'assets/styles/_variables.scss';
-@import '/styles/_variables.scss';
-
-:root {
-  --img-border-radius: 3px;
-}
-
-.imageContainer {
-  border-radius: var(--img-border-radius);
-}
-
-.image {
-  border-radius: var(--img-border-radius);
-}
-
-@import 'assets/styles/nuclear-reset.css';
-*/
+@import "assets/styles/_global.scss";
 
 :global {
     * {
         -webkit-touch-callout: none;
         -webkit-overflow-scrolling: touch;
-        
+
         &, &:before, &:after {
             box-sizing: border-box;
         }
@@ -40,48 +21,26 @@
         }
     }
 
-    html {
+    html, body {
         height: 100%;
-        font-size: 10px;
-        font-family: 'Open Sans', sans-serif;
+    }
+
+    html {
+        font-size: $font-base;
+        font-family: $font-family;
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         -webkit-tap-highlight-color: transparent;
-
-        /*
-        @media (max-width: 1680px) {
-            font-size: 9.5px;
-        }
-        @media (max-width: 1440px) {
-            font-size: 9px;
-        }
-        @media (max-width: 1280px) {
-            font-size: 8.5px;
-        }
-        @media (max-width: 1024px) {
-            font-size: 8px;
-        }
-        @media (max-width: 768px) {
-            font-size: 8.5px;
-        }
-        @media (max-width: 480px) {
-            font-size: 7px;
-        } */
     }
 
     body {
         width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        color: #121212;
-        overflow: hidden;
-        min-width: 987px;
+        color: $c-pink-swan;
         min-width: 320px;
         line-height: 1.44;
         font-kerning: none;
-        background-color: #fafafa;
+        background-color: $c-white-smoke;
     }
 
     body, input, textarea, select, button {
@@ -97,7 +56,8 @@
     .layout-wrapper {
         width: 100%;
         min-height: 100%;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .is-overflow {

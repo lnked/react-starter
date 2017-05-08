@@ -1,6 +1,7 @@
 import React from 'react'
-import App from 'router'
 import { render } from 'react-dom'
+
+import App from 'router'
 
 // import { Provider } from 'react-redux'
 // import store from './store'

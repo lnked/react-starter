@@ -7,8 +7,11 @@ import { Posts } from 'segments'
 export default class Load extends Component {
 
     static propTypes = {
-        posts: PropTypes.object.isRequired,
-        subreddit: PropTypes.string.isRequired
+        subreddit: PropTypes.string,
+        posts: PropTypes.oneOfType([
+            PropTypes.object,
+            PropTypes.array
+        ])
     }
 
     static defaultProps = {

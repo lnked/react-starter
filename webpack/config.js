@@ -19,8 +19,9 @@ module.exports = {
         polyfill: ['babel-polyfill'],
         vendor: [
             'react',
-            'react-dom'
-            // 'zepto'
+            'react-dom',
+            'react-router',
+            'react-router-dom'
         ],
         app: resolve(define.rs_root, 'app.jsx'),
         styles: resolve(define.rs_root, 'app.scss'),
@@ -43,15 +44,15 @@ module.exports = {
         alias: {
             utils: resolve(define.rs_root, 'utils'),
             assets: resolve(define.rs_root, 'assets'),
+            config: resolve(define.rs_root, 'config'),
             layouts: resolve(define.rs_root, 'layouts'),
             reducers: resolve(define.rs_root, 'reducers'),
             segments: resolve(define.rs_root, 'segments'),
-            settings: resolve(define.rs_root, 'settings'),
             containers: resolve(define.rs_root, 'containers'),
             components: resolve(define.rs_root, 'components'),
             images: resolve(define.rs_root, 'assets/images'),
-            svgstore: resolve(define.rs_root, 'assets/svgstore'),
             styles: resolve(define.rs_root, 'assets/styles'),
+            svgstore: resolve(define.rs_root, 'assets/svgstore'),
             scripts: resolve(define.rs_root, 'assets/scripts')
         }
     },

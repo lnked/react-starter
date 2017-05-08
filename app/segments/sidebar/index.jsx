@@ -16,7 +16,6 @@ export default class Sidebar extends Component {
                 label={page.title}
                 to={[base, page.system].join('/')}
                 className={css.sidebar__section}
-                activeClassName={css.sidebar__section_active}
             >
                 <span />
             </Link>
@@ -57,7 +56,6 @@ export default class Sidebar extends Component {
                 <Link
                     to="/cp"
                     className={[css.sidebar__section, css.sidebar__logo].join(' ')}
-                    activeClassName={css.sidebar__logo_active}
                 >
                     <img
                         src={require('images/lightning.svg')}
@@ -72,7 +70,6 @@ export default class Sidebar extends Component {
                     label="Settings"
                     to="/cp/settings"
                     className={[css.sidebar__section, css.sidebar__settings].join(' ')}
-                    activeClassName={css.sidebar__system_active}
                 >
                     <img
                         src={require('images/icons/settings.svg')}

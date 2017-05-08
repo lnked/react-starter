@@ -7,7 +7,11 @@ import { SvgFixer } from 'components'
 export default class AuthLayout extends Component {
 
     static propTypes = {
-        children: PropTypes.object.isRequired
+        children: PropTypes.oneOfType([
+            PropTypes.object,
+            PropTypes.string,
+            PropTypes.array
+        ])
     }
 
     componentWillMount () {

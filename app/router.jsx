@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 import {
     BrowserRouter as Router,
-    Route,
-    Switch
+    Route
+    // Switch
     // Redirect
     // IndexRoute
 } from 'react-router-dom'
@@ -150,21 +150,21 @@ export default class App extends Component {
         // </Router>
         return (
             <Router>
-                <Switch>
+                <div>
                     {/*
                         <IndexRoute component={Page1} />
                         <Route path="/cp" component={Load}/>
                         <Route exact path="/" component={Page1}/>
                         <Redirect from="/" to="/cp" />
+                        <Route exact path="/cp" component={Auth} />
                     */}
 
-                    <Route exact path="/" component={Page1}/>
+                    <Route exact path="/" component={Page1} />
 
                     <CoreLayout>
-                        <Route exact path="/cp" component={Auth} />
                         <Route path="/cp/site" component={Load} />
                         <Route path="/cp/site/structure" component={Page1} />
-                        <Route path="/cp/site/menu" component={Page1} />
+                        <Route path="/cp/site/menu" component={Auth} />
                         <Route path="/cp/site/module" component={Page1} />
                         <Route path="/cp/site/storage" component={Page1} />
                         <Route path="/cp/site/settings" component={Page1} />
@@ -184,7 +184,7 @@ export default class App extends Component {
                         }}
                         status={404}
                     />
-                </Switch>
+                </div>
 
                 {/*
                 {routes.map((route, i) => (

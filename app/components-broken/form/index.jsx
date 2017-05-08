@@ -1,5 +1,5 @@
 // import css from './styles.scss';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 // import React, { Component } from 'react'
 
 // function Form ({ onSubmit, expanded = false, children }) {
