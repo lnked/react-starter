@@ -28,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.1",
+    "firebase": "^3.9.0",
     "lodash": "^4.17.4",
     "microicon": "^1.0.0-b.2",
     "prop-types": "^15.5.8",

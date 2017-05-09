@@ -149,7 +149,7 @@ export default class App extends Component {
         //     </div>
         // </Router>
         return (
-            <Router>
+            <Router basename="/cp">
                 <div>
                     {/*
                         <IndexRoute component={Page1} />
