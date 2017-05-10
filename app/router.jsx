@@ -103,6 +103,25 @@ import {Auth, Page1, Load, NoMatch} from 'containers'
 //     </Route>
 // </Route>
 
+// <Route path='/reports' component={AuthenticatedContainer} onEnter={_ensureAuthenticated}>
+//   <Route getComponent={() => def(import('../containers/WiwthSidebar'))}>
+//     <Route path='/reports/a' getComponent={() => def(import('../containers/A'))} />
+//     <Route path='/reports/b' getComponent={() => def(import('../containers/B'))} />
+//   </Route>
+//   <Route getComponent={() => def(import('../containers/WithoutSideber'))}>
+//     <Route path='/reports/c' getComponent={() => def(import('../containers/C'))} />
+//   </Route>
+// </Route>
+
+// function def(promise) {
+//   return promise.then(cmp => {
+//     console.info('Dynamic loaded by route: ', cmp.default.displayName) //eslint-disable-line no-console
+//     return cmp.default
+//   })
+// }
+// ...
+// <Route path='/signup' getComponent={() => def(import('../containers/SignupContainer'))} />
+
 export default class App extends Component {
 
     constructor (props) {

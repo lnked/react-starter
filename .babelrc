@@ -1,5 +1,17 @@
 {
   "presets": [
+    ["env", {
+      "targets": {
+        "chrome": 52
+      },
+      "modules": false,
+      "loose": true
+    }]
+  ]
+}
+
+{
+  "presets": [
     "es2015-loose",
     "react"
   ],
