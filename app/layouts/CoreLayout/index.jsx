@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import css from './styles.scss'
 
-import { SvgFixer } from 'components'
+import { SvgFixer } from 'utils'
 import { Navigation, Sidebar } from 'segments'
 import { Icon } from 'microicon'
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import css from './styles.scss'
 
-import { SvgFixer } from 'components'
+import { SvgFixer } from 'utils'
 
 export default class AuthLayout extends Component {
 

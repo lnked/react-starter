@@ -1,11 +1,11 @@
-$height: 36px;
+@import "~styles/_global.scss";
 
 .layout {
     height: 100%;
     overflow: hidden;
 
     &__header {
-        height: $height;
+        height: 36px;
         position: relative;
         background-color: #fafafa;
         
@@ -34,7 +34,7 @@ $height: 36px;
     &__main {
         width: 100%;
         padding-left: 48px;
-        height: calc(100% - $height);
+        height: calc(100% - 36px);
 
         &__content {
             padding: 13px 24px 24px 12px;

@@ -13,16 +13,24 @@ const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
 
 postcss.push(
     require('postcss-bem-linter'),
-    require('postcss-import')({
-        root: define.rs_root,
-        path: define.rs_root
-    }),
+    // require('postcss-import')({
+    //     root: define.rs_root,
+    //     path: define.rs_root
+    // }),
     // PostCSS plugin to import CSS/SugarSS files
     // https://www.npmjs.com/package/postcss-smart-import
     require('postcss-smart-import'),
+    // PostCSS plugin for importing other stylesheet source files anywhere in your CSS.
+    // https://github.com/eriklharper/postcss-nested-import
+    // require('postcss-nested-import'),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/jonathantneal/postcss-partial-import
-    require('postcss-partial-import')(),
+    require('postcss-partial-import')({
+        root: define.rs_root,
+        prefix: '_',
+        extension: '.scss'
+    }),
+    require('postcss-import-url')(),
     // Allow you to fix url() according to postcss to and/or from options
     // https://github.com/postcss/postcss-url
     require('postcss-url')(),
@@ -75,23 +83,6 @@ postcss.push(
 
 if (define.rs_production) {
     postcss.push(
-        require('postcss-svg-fallback')({
-            // base path for the images found in the css
-            // this is most likely the path to the css file you're processing
-            // not setting this option might lead to unexpected behavior
-            basePath: '',
-
-            // destination for the generated SVGs
-            // this is most likely the path to where the generated css file is outputted
-            // not setting this option might lead to unexpected behavior
-            dest: '',
-
-            // selector that gets prefixed to selector
-            fallbackSelector: '.no-svg',
-
-            // when `true` only the css is changed (no new files created)
-            disableConvert: false
-        }),
         require('postcss-discard-comments'),
         require('postcss-emptymediaqueries'),
         require('cssnano')({
