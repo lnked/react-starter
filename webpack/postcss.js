@@ -13,16 +13,6 @@ const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
 
 postcss.push(
     require('postcss-bem-linter'),
-    // require('postcss-import')({
-    //     root: define.rs_root,
-    //     path: define.rs_root
-    // }),
-    // PostCSS plugin to import CSS/SugarSS files
-    // https://www.npmjs.com/package/postcss-smart-import
-    require('postcss-smart-import'),
-    // PostCSS plugin for importing other stylesheet source files anywhere in your CSS.
-    // https://github.com/eriklharper/postcss-nested-import
-    // require('postcss-nested-import'),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/jonathantneal/postcss-partial-import
     require('postcss-partial-import')({
@@ -31,6 +21,12 @@ postcss.push(
         extension: '.scss'
     }),
     require('postcss-import-url')(),
+    // PostCSS plugin to import CSS/SugarSS files
+    // https://www.npmjs.com/package/postcss-smart-import
+    require('postcss-smart-import'),
+    // PostCSS plugin for importing other stylesheet source files anywhere in your CSS.
+    // https://github.com/eriklharper/postcss-nested-import
+    require('postcss-nested-import'),
     // Allow you to fix url() according to postcss to and/or from options
     // https://github.com/postcss/postcss-url
     require('postcss-url')(),

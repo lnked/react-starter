@@ -103,7 +103,6 @@
     "postcss-flexbugs-fixes": "^2.1.1",
     "postcss-gradientfixer": "^0.0.6",
     "postcss-hexrgba": "^0.2.1",
-    "postcss-import": "^9.1.0",
     "postcss-import-url": "^2.2.0",
     "postcss-loader": "5.2.17",
     "postcss-media-minmax": "^2.1.2",
