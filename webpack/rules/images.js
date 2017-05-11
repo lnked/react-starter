@@ -34,10 +34,21 @@ const svgoConfig = {
 
 const rules = [
     {
-        test: /.*\.svg$/i,
+        test: /\.svg$/i,
         use: [
             {
-                loader: 'svg-sprite-loader'
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    spriteFilename: 'svgstore.svg'
+                }
+            },
+            {
+                loader: 'svg-fill-loader',
+                options: {
+                    raw: false,
+                    selector: 'path,circle'
+                }
             },
             {
                 loader: 'svgo-loader',
@@ -81,7 +92,6 @@ const rules = [
                 }
             }
         ],
-        // include: [ define.rs_root ],
         exclude: [
             resolve(define.rs_root, '/assets/fonts'),
             resolve(define.rs_root, '/assets/svgstore')

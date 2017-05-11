@@ -36,7 +36,8 @@
 
     body {
         width: 100%;
-        color: $c-pink-swan;
+        overflow: hidden;
+        color: $c-black;
         min-width: 320px;
         line-height: 1.44;
         font-kerning: none;
@@ -65,6 +66,7 @@
     }
 
     svg {
+        color: inherit;
         fill: currentColor;
         shape-rendering: geometricPrecision; /* auto | optimizeSpeed | crispEdges | geometricPrecision | inherit; */
 

@@ -48,10 +48,10 @@ const rules = [
                 }
             }
         ],
-        exclude: [
-            resolve(define.rs_root, "../node_modules"),
-            resolve(define.rs_root, "../bower_components")
-        ]
+        // exclude: [
+        //     resolve(define.rs_root, "../node_modules"),
+        //     resolve(define.rs_root, "../bower_components")
+        // ]
     }
 ];
 

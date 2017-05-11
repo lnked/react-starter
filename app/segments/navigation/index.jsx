@@ -7,27 +7,27 @@ export default class Navigation extends Component {
         return (
             <nav className={css.navigation}>
                 <Link
-                    to="/cp/site"
+                    to="/site"
                     className={css.link}>Сайт</Link>
 
                 <Link
-                    to="/cp/marketing"
+                    to="/marketing"
                     className={css.link}>Маркетинг</Link>
 
                 <Link
-                    to="/cp/seo"
+                    to="/seo"
                     className={css.link}>Поисковая оптимизация</Link>
 
                 <Link
-                    to="/cp/users"
+                    to="/users"
                     className={css.link}>Пользователи</Link>
 
                 <Link
-                    to="/cp/shop"
+                    to="/shop"
                     className={css.link}>Магазин</Link>
 
                 <Link
-                    to="/cp/system"
+                    to="/system"
                     className={css.link}>Система</Link>
             </nav>
         )

@@ -132,7 +132,6 @@ module.exports = {
     //     origins: define.rs_production,
     //     usedExports: define.rs_production,
     //     entrypoints: define.rs_production,
-    //     cachedAssets: define.rs_production
     // },
 
     stats: {
@@ -141,17 +140,17 @@ module.exports = {
         // Sort assets by a field
         assetsSort: "field",
         // Add information about cached (not built) modules
-        cached: true,
+        cached: false,
         // Show cached assets (setting this to `false` only shows emitted files)
-        cachedAssets: true,
+        cachedAssets: define.rs_production,
         // Add children information
-        children: true,
+        children: false,
         // Add chunk information (setting this to `false` allows for a less verbose output)
-        chunks: true,
+        chunks: false,
         // Add built modules information to chunk information
-        chunkModules: true,
+        chunkModules: false,
         // Add the origins of chunks and chunk merging info
-        chunkOrigins: true,
+        chunkOrigins: false,
         // Sort the chunks by a field
         chunksSort: "field",
         // Context directory for request shortening
@@ -169,29 +168,29 @@ module.exports = {
         // Exclude modules which match one of the given strings or regular expressions
         exclude: [],
         // Add the hash of the compilation
-        hash: true,
+        hash: false,
         // Set the maximum number of modules to be shown
-        maxModules: 15,
+        maxModules: 0,
         // Add built modules information
         modules: false,
         // Sort the modules by a field
         modulesSort: "field",
         // Show performance hint when file size exceeds `performance.maxAssetSize`
-        performance: true,
+        performance: false,
         // Show the exports of the modules
         providedExports: false,
         // Add public path information
-        publicPath: true,
+        publicPath: false,
         // Add information about the reasons why modules are included
-        reasons: true,
+        reasons: false,
         // Add the source code of modules
-        source: true,
+        source: false,
         // Add timing information
         timings: true,
         // Show which exports of a module are used
         usedExports: false,
         // Add webpack version information
-        version: true,
+        version: false,
         // Add warnings
         warnings: true
     }

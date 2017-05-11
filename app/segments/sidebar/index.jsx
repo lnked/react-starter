@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import css from './styles.scss'
-// import Icon from 'react-svg-use';
-// <Icon id="logo" color="#D71421" />
 
 export default class Sidebar extends Component {
 
     createLinkItem (page) {
-        const base = '/cp/site'
+        const base = '/site'
 
         return (
             <Link
@@ -54,7 +52,7 @@ export default class Sidebar extends Component {
         return (
             <nav className={css.sidebar}>
                 <Link
-                    to="/cp"
+                    to="/"
                     className={[css.sidebar__section, css.sidebar__logo].join(' ')}
                 >
                     <img
@@ -68,7 +66,7 @@ export default class Sidebar extends Component {
                 <Link
                     icon="settings"
                     label="Settings"
-                    to="/cp/settings"
+                    to="/settings"
                     className={[css.sidebar__section, css.sidebar__settings].join(' ')}
                 >
                     <img

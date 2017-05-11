@@ -13,7 +13,8 @@ import {CoreLayout} from 'layouts'
 // import {CoreLayout, AuthLayout} from 'layouts'
 
 // Pages
-import {Auth, Page1, Load, NoMatch} from 'containers'
+// import {Auth, Page1, Load, NoMatch} from 'containers'
+import {Load} from 'containers'
 
 // function def(promise) {
 //   return promise.then(cmp => {
@@ -167,6 +168,16 @@ export default class App extends Component {
         //         </Switch>
         //     </div>
         // </Router>
+
+        // <CoreLayout>
+        //     <Route path="/cp/site" component={Load} />
+        //     <Route path="/cp/site/structure" component={Page1} />
+        //     <Route path="/cp/site/menu" component={Auth} />
+        //     <Route path="/cp/site/module" component={Page1} />
+        //     <Route path="/cp/site/storage" component={Page1} />
+        //     <Route path="/cp/site/settings" component={Page1} />
+        // </CoreLayout>
+
         return (
             <Router basename="/cp">
                 <div>
@@ -178,8 +189,11 @@ export default class App extends Component {
                         <Route exact path="/cp" component={Auth} />
                     */}
 
-                    <Route exact path="/" component={Page1} />
+                    <CoreLayout>
+                        <Route path="/" component={Load} />
+                    </CoreLayout>
 
+                    {/*
                     <CoreLayout>
                         <Route path="/cp/site" component={Load} />
                         <Route path="/cp/site/structure" component={Page1} />
@@ -203,6 +217,7 @@ export default class App extends Component {
                         }}
                         status={404}
                     />
+                    */}
                 </div>
 
                 {/*

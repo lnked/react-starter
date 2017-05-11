@@ -4,7 +4,9 @@ import css from './styles.scss'
 
 import { SvgFixer } from 'utils'
 import { Navigation, Sidebar } from 'segments'
-import { Icon } from 'microicon'
+
+// import Icon from 'react-svg-use'
+// <Icon id="logo" color="#D71421" />
 
 export default class CoreLayout extends Component {
 
@@ -38,11 +40,9 @@ export default class CoreLayout extends Component {
                 <section className={css.layout__main}>
                     <div className={css.layout__main__content}>
                         {this.props.children}
-                        <Icon name="heart" size={32} color="tomato" />
                     </div>
                 </section>
             </div>
         )
-        // https://icon.now.sh/chevron/32
     }
 }
