@@ -1,7 +1,7 @@
 @import "~styles/global";
 
-.checkbox {
-    line-height: 20px;
+.radio {
+    line-height: 16px;
     position: relative;
     display: inline-block;
 }
@@ -19,8 +19,8 @@
 .label {
     color: $c-black;
     font-size: 1.4rem;
-    line-height: 1.45;
-    padding-left: 30px;
+    line-height: 1.15;
+    padding-left: 26px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -33,30 +33,32 @@
     &:before {
         left: 0;
         top: 0;
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
         background-color: $c-white;
         border: solid 1px $c-whisper;
     }
 
     &:after {
         content: "";
-        width: 11px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         position: absolute;
-        left: 5px;
-        top: 5px;
+        left: 4px;
+        top: 4px;
         opacity: 0;
-        border-image: none;
-        border-color: $c-cobalt;
-        border-style: solid;
-        border-width: 0 0 2px 2px;
-        transform: rotate(-45deg);
+        border-radius: 8px;
+        background-color: $c-cobalt;
         transition: opacity $a-micro-time $a-func;
     }
 }
 
 .input:checked + .label {
+    &:before {
+        border-color: $c-cobalt;
+    }
+
     &:after {
         opacity: 1;
     }

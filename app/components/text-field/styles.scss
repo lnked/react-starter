@@ -1,4 +1,4 @@
-@import "~styles/_global.scss";
+@import "~styles/global";
 
 .wrapper {
     display: block;
@@ -48,7 +48,6 @@
     height: 42px;
     outline: none;
     color: $c-black;
-    font-size: 1.4rem;
     font-weight: 400;
     font-family: $font-family;
     background-color: $c-white;
@@ -61,13 +60,15 @@
 
     &_input {
         padding: 0 20px;
+        font-size: 1.4rem;
     }
 
     &_textarea {
         height: 80px;
+        font-size: 1.2rem;
         resize: vertical;
         max-height: 250px;
-        padding: 15px 20px;
+        padding: 10px 12px;
     }
 
     &_error {

@@ -1,0 +1,135 @@
+@import "~styles/global";
+
+.select {
+    width: 100%;
+    height: 42px;
+    color: $c-black;
+    font-family: $font-family;
+    font-size: 1.4rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+    &_open {
+        z-index: 1000;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+}
+
+.control {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $c-white;
+    border: 1px solid $c-whisper;
+    transition: transform $a-micro-time $a-func, color $a-micro-time $a-func;
+
+    &.error {
+        border-color: $c-amaranth;
+    }
+}
+
+.choosen {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 35px 0 20px;
+}
+
+.arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 16px;
+    height: 7px;
+    margin-top: -3px;
+    background-image: url(components/select/assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 16px 7px;
+    cursor: pointer;
+    transition: transform $a-micro-time $a-func;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    display: none;
+    margin-top: -1px;
+    background-color: $c-white;
+    border: 1px solid $c-whisper;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.option {
+    display: block;
+    line-height: 1.33;
+    position: relative;
+}
+
+.name {
+    display: block;
+    background-color: $c-white;
+    padding: 12px 30px 12px 19px;
+    transition: background-color $a-micro-time $a-func, color $a-micro-time $a-func;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $c-white-smoke;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        width: 15px;
+        height: 11px;
+        margin-top: -6px;
+        opacity: 0;
+        transition: opacity $a-micro-time $a-func;
+        background-image: url(components/select/assets/checked.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 15px 11px;
+    }
+}
+
+.input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input:checked + .name {
+    color: $c-cobalt;
+
+    &:after {
+        opacity: 1;
+    }
+}
+
+.select_open .dropdown {
+    display: block;
+}
+
+.select_open .arrow {
+    transform: rotate(180deg);
+}

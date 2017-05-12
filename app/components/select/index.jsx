@@ -1,105 +1,185 @@
-// import Select from 'react-select';
-// import 'react-select/dist/react-select.css';
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import css from './styles.scss'
 
-// var Select = require('react-select');
+export default class Select extends PureComponent {
 
-// var options = [
-//     { value: 'one', label: 'One' },
-//     { value: 'two', label: 'Two' }
-// ];
+    static propTypes = {
+        name: PropTypes.string,
+        isMultiple: PropTypes.bool,
+        className: PropTypes.string,
+        handleChange: PropTypes.func,
+        placeholder: PropTypes.string,
+        selectedOption: PropTypes.oneOfType([
+            PropTypes.array,
+            PropTypes.string,
+            PropTypes.number
+        ]),
+        items: PropTypes.oneOfType([
+            PropTypes.array,
+            PropTypes.object
+        ])
+    }
 
-// var options = [
-//     { value: 'one', label: 'One' },
-//     { value: 'two', label: 'Two', clearableValue: false }
-// ];
+    static defaultProps = {
+        items: [],
+        className: '',
+        isMultiple: false,
+        selectedOption: false,
+        placeholder: 'Выберите из списка',
+        handleChange: (value) => { console.log('check checkbox: = ', value) }
+    }
 
-// function logChange(val) {
-//     console.log("Selected: " + val);
-// }
+    constructor (props) {
+        super(props)
 
-// <Select
-//     name="form-field-name"
-//     value="one"
-//     options={options}
-//     onChange={logChange}
-// />
+        this.handleToggle = this.handleToggle.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+    }
 
-// import Select from 'react-select';
+    componentWillMount () {
+        this.setState({
+            open: false,
+            selectedOption: this.props.selectedOption
+        })
+    }
 
-// /*
-//  * assuming the API returns something like this:
-//  *   const json = [
-//  *     { value: 'one', label: 'One' },
-//  *     { value: 'two', label: 'Two' }
-//  *   ]
-//  */
+    handleToggle () {
+        this.setState({
+            open: !this.state.open
+        })
 
-// const getOptions = (input) => {
-//   return fetch(`/users/${input}.json`)
-//     .then((response) => {
-//       return response.json();
-//     }).then((json) => {
-//       return { options: json };
-//     });
-// }
+        console.log('toggle: ', this.state.open)
+    }
 
-// <Select.Async
-//     name="form-field-name"
-//     value="one"
-//     loadOptions={getOptions}
-// />
+    handleChange (value) {
+        value = value.toString()
 
-// var Select = require('react-select');
+        console.log(value)
 
-// var isLoadingExternally = true;
+        if (this.props.isMultiple) {
+            let selected = []
 
-// <Select
-//   name="form-field-name"
-//     isLoading={isLoadingExternally}
-//     ...
-// />
+            if (value !== null) {
+                selected = this.state.selectedOption.slice(0)
+                const index = selected.indexOf(value)
 
-// import { Creatable } from 'react-select';
+                if (index >= 0) {
+                    selected.splice(index, 1)
+                } else {
+                    selected.push(value)
+                }
 
-// function render (selectProps) {
-//   return <Creatable {...selectProps} />;
-// };
+                this.setState({
+                    selectedOption: selected
+                })
+            }
+        } else {
+            this.setState({
+                open: false,
+                selectedOption: value
+            })
+        }
 
-// import React from 'react';
-// import { AsyncCreatable } from 'react-select';
+        console.log('selectedOption: ', this.state.selectedOption)
 
-// function render (props) {
-//   // props can be a mix of Async, Creatable, and Select properties
-//   return (
-//     <AsyncCreatable {...props} />
-//   );
-// }
+        this.props.handleChange(value)
+    }
 
-// function cleanInput(inputValue) {
-//       // Strip all non-number characters from the input
-//     return inputValue.replace(/[^0-9]/g, "");
-// }
+    renderControl () {
+        return (
+            <div className={css.control}>
+                <div className={css.choosen} onClick={this.handleToggle.bind(this)}>
+                    {this.props.placeholder}
+                </div>
 
-// <Select
-//     name="form-field-name"
-//     onInputChange={cleanInput}
-// />
+                <div className={css.arrow} />
+            </div>
+        )
+    }
 
-// function onInputKeyDown(event) {
-//     switch (event.keyCode) {
-//         case 9:   // TAB
-//             // Extend default TAB behavior by doing something here
-//             break;
-//         case 13: // ENTER
-//             // Override default ENTER behavior by doing stuff here and then preventing default
-//             event.preventDefault();
-//             break;
-//     }
-// }
+    stringify (value) {
+        if (typeof value === 'object') {
+            value.map((item, id) => {
+                value[id] = item.toString()
+            })
+        } else {
+            value = value.toString()
+        }
 
-// <Select
-//     {...otherProps}
-//     onInputKeyDown={onInputKeyDown}
-// />
+        return value
+    }
 
-// <instance>.focus();
+    renderOptions () {
+        if (this.props.items && Object.keys(this.props.items).length) {
+            const options = []
+            const items = this.props.items
+            const checked = this.stringify(this.state.selectedOption)
+            const isMultiple = this.props.isMultiple
+
+            let name
+            let type
+
+            if (this.props.isMultiple) {
+                type = 'checkbox'
+                name = `${this.props.name}[]`
+            } else {
+                type = 'radio'
+                name = this.props.name
+            }
+
+            Object.keys(items).map((id) => {
+                const value = items[id]
+
+                let selected = false
+
+                id = id.toString()
+
+                if (!isMultiple && id === checked) {
+                    selected = true
+                } else if (isMultiple && checked.indexOf(id) >= 0) {
+                    selected = true
+                } else {
+                    selected = false
+                }
+
+                options.push(
+                    <label key={id.toString()} className={css.option}>
+                        <input
+                            type={type}
+                            name={name}
+                            value={id}
+                            className={css.input}
+                            checked={selected}
+                            onChange={this.handleChange.bind(this, id)}
+                        />
+                        <span className={css.name}>{ value }</span>
+                    </label>
+                )
+            })
+
+            return (
+                <div className={css.dropdown}>
+                    { options }
+                </div>
+            )
+        }
+    }
+
+    render () {
+        const className = []
+
+        className.push(css.select)
+
+        if (this.state.open) {
+            className.push(css.select_open)
+        }
+
+        return (
+            <div className={className.join(' ')}>
+                { this.renderControl() }
+                { this.renderOptions() }
+            </div>
+        )
+    }
+}

@@ -1,22 +1,50 @@
-// import { RadioGroup, RadioButton } from 'react-toolbox/lib/radio'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import css from './styles.scss'
 
-// class RadioTest extends React.Component {
-//     state = {
-//         value: 'vvendetta'
-//     };
+export default class Radio extends PureComponent {
 
-//     handleChange = (value) => {
-//         this.setState({value})
-//     };
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        checked: PropTypes.bool,
+        label: PropTypes.string,
+        children: PropTypes.string,
+        handleChange: PropTypes.func,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+        ])
+    }
 
-//     render () {
-//         return (
-//       <RadioGroup name="comic" value={this.state.value} onChange={this.handleChange}>
-//         <RadioButton label="The Walking Dead" value="thewalkingdead"/>
-//         <RadioButton label="From Hell" value="fromhell" disabled/>
-//         <RadioButton label="V for a Vendetta" value="vvendetta"/>
-//         <RadioButton label="Watchmen" value="watchmen"/>
-//       </RadioGroup>
-//         )
-//     }
-// }
+    static defaultProps = {
+        label: '',
+        checked: false,
+        handleChange: (value) => { console.log('check radio: = ', value) }
+    }
+
+    constructor (props) {
+        super(props)
+
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange (e) {
+        this.props.handleChange(e.nativeEvent.target.value)
+    }
+
+    render () {
+        return (
+            <label className={css.radio}>
+                <input
+                    type="radio"
+                    name={this.props.name}
+                    value={this.props.value}
+                    className={css.input}
+                    checked={this.props.checked}
+                    onChange={this.handleChange.bind(this)}
+                />
+                <span className={css.label}>{this.props.label || this.props.children}</span>
+            </label>
+        )
+    }
+}

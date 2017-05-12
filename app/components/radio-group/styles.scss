@@ -1,0 +1,8 @@
+@import "~styles/global";
+
+.group {
+    &__item {
+        clear: both;
+        margin-bottom: 15px;
+    }
+}

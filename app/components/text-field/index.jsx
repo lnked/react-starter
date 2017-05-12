@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import css from './styles.scss'
 
-export default class TextField extends Component {
+export default class TextField extends PureComponent {
 
     static propTypes = {
         type: PropTypes.string,
@@ -21,6 +21,7 @@ export default class TextField extends Component {
             PropTypes.bool
         ]),
         hint: PropTypes.string,
+        cleaning: PropTypes.bool,
         multiline: PropTypes.bool,
         className: PropTypes.string,
         handleChange: PropTypes.func,
@@ -31,6 +32,7 @@ export default class TextField extends Component {
         type: 'text',
         focus: false,
         className: '',
+        cleaning: true,
         multiline: false,
         placeholder: 'Введите текст…',
         handleChange: (value) => { console.log(': = ', value) }
@@ -130,7 +132,7 @@ export default class TextField extends Component {
             }
         }
 
-        if (this.state.value && !this.props.multiline) {
+        if (this.state.value && !this.props.multiline && this.props.cleaning) {
             clearButton.push(
                 <span className={css.clear}
                     key={[this.keyPrefix, 'clear'].join('.')}
@@ -155,9 +157,7 @@ export default class TextField extends Component {
         return (
             <div className={css.wrapper} key={[this.keyPrefix, 'wrapper'].join('.')}>
                 <label key={[this.keyPrefix, 'label'].join('.')} className={css.label}>
-
                     { control }
-
                     { clearButton }
                 </label>
 

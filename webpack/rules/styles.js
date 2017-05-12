@@ -26,7 +26,8 @@ const usesConfig = [
         }
     },
     {
-        loader: 'svg-fill-loader/encodeSharp'
+        loader: 'svg-fill-loader'
+        // loader: 'svg-fill-loader/encodeSharp'
     },
     {
         loader: 'sass-loader',
