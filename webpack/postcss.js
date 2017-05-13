@@ -15,12 +15,9 @@ postcss.push(
     require('postcss-bem-linter'),
     // Transfer @import rule by inlining content, e.g. @import 'normalize.css'
     // https://github.com/jonathantneal/postcss-partial-import
-    require('postcss-partial-import')({
-        root: define.rs_root,
-        prefix: '_',
-        extension: '.scss'
-    }),
-    require('postcss-import-url'),
+    // require('postcss-easy-import'),
+    require('postcss-partial-import'),
+    // require('postcss-import-url'),
     // PostCSS plugin to import CSS/SugarSS files
     // https://www.npmjs.com/package/postcss-smart-import
     require('postcss-smart-import'),
