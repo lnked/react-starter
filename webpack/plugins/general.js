@@ -4,30 +4,22 @@ const webpack = require('webpack');
 const define  = require('../define');
 const helpers = require('../helpers');
 
-const WebpackChunkHash = require('webpack-chunk-hash');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 const plugins = [
     new webpack.ProvidePlugin({
         $: "zepto"
     }),
-    new WebpackChunkHash(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.HashedModuleIdsPlugin(),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
         /(en-gb|ru)\.js/
     ),
-    new ChunkManifestPlugin({
-        filename: "chunk-manifest.json",
-        manifestVariable: "webpackManifest"
-    }),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production

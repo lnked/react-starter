@@ -26,10 +26,6 @@ const usesConfig = [
         }
     },
     {
-        loader: 'svg-fill-loader'
-        // loader: 'svg-fill-loader/encodeSharp'
-    },
-    {
         loader: 'sass-loader',
         options: {
             sourceMap: define.rs_development
@@ -44,7 +40,7 @@ const usesConfig = [
             }
         }
     }
-]; 
+];
 
 const rules = define.rs_generate_css ? [
         {
