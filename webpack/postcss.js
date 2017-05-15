@@ -28,22 +28,22 @@ postcss.push(
     require('postcss-url'),
     // W3C variables, e.g. :root { --color: red; } div { background: var(--color); }
     // https://github.com/postcss/postcss-custom-properties
-    // require('postcss-custom-properties'),
+    require('postcss-custom-properties'),
     // W3C CSS Custom Media Queries, e.g. @custom-media --small-viewport (max-width: 30em);
     // https://github.com/postcss/postcss-custom-media
     require('postcss-custom-media'),
     // // CSS4 Media Queries, e.g. @media screen and (width >= 500px) and (width <= 1200px) { }
     // // https://github.com/postcss/postcss-media-minmax
-    // require('postcss-media-minmax'),
+    require('postcss-media-minmax'),
     // // W3C CSS Custom Selectors, e.g. @custom-selector :--heading h1, h2, h3, h4, h5, h6;
     // // https://github.com/postcss/postcss-custom-selectors
-    // require('postcss-custom-selectors'),
+    require('postcss-custom-selectors'),
     // W3C calc() function, e.g. div { height: calc(100px - 2em); }
     // https://github.com/postcss/postcss-calc
     require('postcss-calc'),
     // Allows you to nest one style rule inside another
     // https://github.com/jonathantneal/postcss-nesting
-    // require('postcss-nesting'),
+    require('postcss-nesting'),
     // Unwraps nested rules like how Sass does it
     // https://github.com/postcss/postcss-nested
     require('postcss-nested'),
@@ -61,10 +61,10 @@ postcss.push(
     require('pixrem'),
     // W3C CSS Level4 :matches() pseudo class, e.g. p:matches(:first-child, .special) { }
     // https://github.com/postcss/postcss-selector-matches
-    // require('postcss-selector-matches'),
+    require('postcss-selector-matches'),
     // Transforms :not() W3C CSS Level 4 pseudo class to :not() CSS Level 3 selectors
     // https://github.com/postcss/postcss-selector-not
-    // require('postcss-selector-not'),
+    require('postcss-selector-not'),
     // Postcss flexbox bug fixer
     // https://github.com/luisrudge/postcss-flexbugs-fixes
     require('postcss-flexbugs-fixes'),

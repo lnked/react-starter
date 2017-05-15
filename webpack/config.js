@@ -16,6 +16,7 @@ module.exports = {
     target: 'web', // 'node' | electron-main | electron-renderer
 
     entry: {
+        'es5-shim': ['es5-shim'],
         polyfill: ['babel-polyfill'],
         vendor: [
             'react',
