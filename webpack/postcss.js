@@ -17,7 +17,6 @@ postcss.push(
         root: define.rs_root,
         path: define.rs_root
     }),
-    require('postcss-import-url'),
     // PostCSS plugin to import CSS/SugarSS files
     // https://www.npmjs.com/package/postcss-smart-import
     require('postcss-smart-import'),
@@ -69,31 +68,32 @@ postcss.push(
     // Postcss flexbox bug fixer
     // https://github.com/luisrudge/postcss-flexbugs-fixes
     require('postcss-flexbugs-fixes'),
+    require('postcss-import-url'),
     require('postcss-quantity-queries'),
     require('postcss-flexboxfixer'),
     require('postcss-gradientfixer')
 );
 
 if (define.rs_production) {
-    // postcss.push(
-    //     require('postcss-discard-comments'),
-    //     require('postcss-emptymediaqueries'),
-    //     require('cssnano')({
-    //         safe: true,
-    //         calc: false,
-    //         zindex: false,
-    //         sourcemap: true,
-    //         autoprefixer: false,
-    //         normalizeCharset: true,
-    //         convertValues: { length: false },
-    //         colormin: true
-    //     }),
-    //     // Add vendor prefixes to CSS rules using values from caniuse.com
-    //     // https://github.com/postcss/autoprefixer
-    //     require('autoprefixer')({
-    //         browsers: AUTOPREFIXER_BROWSERS
-    //     })
-    // );
+    postcss.push(
+        require('postcss-discard-comments'),
+        require('postcss-emptymediaqueries'),
+        require('cssnano')({
+            safe: true,
+            calc: false,
+            zindex: false,
+            sourcemap: true,
+            autoprefixer: false,
+            normalizeCharset: true,
+            convertValues: { length: false },
+            colormin: true
+        }),
+        // Add vendor prefixes to CSS rules using values from caniuse.com
+        // https://github.com/postcss/autoprefixer
+        require('autoprefixer')({
+            browsers: AUTOPREFIXER_BROWSERS
+        })
+    );
 }
 
 module.exports.config = postcss;
