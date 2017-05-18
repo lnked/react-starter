@@ -38,7 +38,7 @@ const plugins = [
         async: /\.js$/,
         preload: {
             test: /\.js$/,
-            chunks: 'async'
+            chunks: 'defer'
         }
     }),
     new CopyWebpackPlugin([
