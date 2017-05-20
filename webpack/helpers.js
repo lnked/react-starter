@@ -11,7 +11,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
     const config = {
         hash: false,
         cache: define.rs_production,
-        inject: true,
+        inject: 'body',
         filetype: 'pug',
         template: [template, 'pug'].join('.'),
         filename: resolve(define.rs_dist, [script, 'html'].join('.')),

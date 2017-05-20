@@ -64,7 +64,8 @@ module.exports = {
     },
 
     module: {
-        rules: rules.config
+        rules: rules.config,
+        exprContextCritical: false
     },
 
     performance: {

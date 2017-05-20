@@ -42,8 +42,7 @@ const rules = [
                         "transform-decorators-legacy",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
-                        "transform-react-jsx",
-                        "syntax-dynamic-import"
+                        "transform-react-jsx"
                     ],
                     cacheDirectory: define.rs_development
                 }

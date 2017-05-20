@@ -9,15 +9,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
-const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-
 const plugins = [
     new webpack.ProvidePlugin({
         $: "zepto"
-    }),
-
-    new InterpolateHtmlPlugin({
-        PUBLIC_URL: '/'
     }),
 
     new webpack.HotModuleReplacementPlugin(),
