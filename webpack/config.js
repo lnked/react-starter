@@ -23,8 +23,10 @@ module.exports = {
             // 'react-router',
             // 'react-router-dom'
         ],
-        app: resolve(define.rs_root, 'app.jsx'),
-        styles: resolve(define.rs_root, 'app.scss'),
+        app: ['webpack-hot-middleware/client', resolve(define.rs_root, 'app.jsx')],
+        styles: ['webpack-hot-middleware/client', resolve(define.rs_root, 'app.scss')]
+        // app: resolve(define.rs_root, 'app.jsx'),
+        // styles: resolve(define.rs_root, 'app.scss'),
     },
 
     output: {

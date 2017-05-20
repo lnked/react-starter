@@ -38,6 +38,7 @@ const rules = [
                                 "ignoreFilenames": ["node_modules"]
                             }]
                         ]: [],
+                        "dynamic-import-system-import",
                         "transform-decorators-legacy",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
@@ -48,10 +49,10 @@ const rules = [
                 }
             }
         ],
-        // exclude: [
-        //     resolve(define.rs_root, "../node_modules"),
-        //     resolve(define.rs_root, "../bower_components")
-        // ]
+        exclude: [
+            resolve(define.rs_root, "../node_modules"),
+            resolve(define.rs_root, "../bower_components")
+        ]
     }
 ];
 

@@ -13,7 +13,6 @@ const plugins = [
         filename: "manifest.json"
     }),
     new WebpackChunkHash(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         // filename: 'vendor.[hash:5].js',
