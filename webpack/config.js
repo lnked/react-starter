@@ -107,33 +107,6 @@ module.exports = {
 
     plugins: plugins.config,
 
-    // stats: {
-    //     colors: true,
-    //     timings: true,
-    //     children: false,
-    //     errorDetails: true,
-
-    //     modules: false,
-    //     chunks: false,
-    //     chunk: false,
-    //     cached: false,
-
-    //     exclude: define.rs_development,
-
-    //     reasons: define.rs_development,
-    //     profile: define.rs_development,
-        
-    //     maxModules: define.rs_development,
-    //     chunkModules: define.rs_development,
-
-    //     hideModules: define.rs_production,
-    //     hash: define.rs_production,
-    //     version: define.rs_production,
-    //     origins: define.rs_production,
-    //     usedExports: define.rs_production,
-    //     entrypoints: define.rs_production,
-    // },
-
     stats: {
         // Add asset Information
         assets: true,
@@ -195,3 +168,30 @@ module.exports = {
         warnings: true
     }
 };
+
+// stats: {
+//     colors: true,
+//     timings: true,
+//     children: false,
+//     errorDetails: true,
+
+//     modules: false,
+//     chunks: false,
+//     chunk: false,
+//     cached: false,
+
+//     exclude: define.rs_development,
+
+//     reasons: define.rs_development,
+//     profile: define.rs_development,
+    
+//     maxModules: define.rs_development,
+//     chunkModules: define.rs_development,
+
+//     hideModules: define.rs_production,
+//     hash: define.rs_production,
+//     version: define.rs_production,
+//     origins: define.rs_production,
+//     usedExports: define.rs_production,
+//     entrypoints: define.rs_production,
+// },
