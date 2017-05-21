@@ -8229,9 +8229,9 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-2.1.0.tgz#f9bb1c1f09b28b27b555ed56869577cafb0409cd"
+svg-sprite-loader@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.0.tgz#a9140e563bd19ceedc3ceed06debc39bb090117d"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
