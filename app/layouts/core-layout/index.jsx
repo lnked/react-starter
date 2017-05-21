@@ -46,6 +46,11 @@ export default class CoreLayout extends Component {
                             {this.props.children}
                             <Route exact path="/site" component={Page1}/>
                             <Route path="/site/*" component={Load}/>
+                            <Route path="/marketing" component={Page1}/>
+                            <Route path="/seo" component={Page1}/>
+                            <Route path="/users" component={Page1}/>
+                            <Route path="/shop" component={Page1}/>
+                            <Route path="/system" component={Page1}/>
                         </div>
                     </section>
                 </div>
