@@ -1,6 +1,6 @@
 // import Switch from 'react-toolbox/lib/switch'
 
-// class SwitchTest extends React.Component {
+// class SwitchTest extends PureComponent {
 //     state = {
 //         switch_1: true,
 //         switch_2: false,

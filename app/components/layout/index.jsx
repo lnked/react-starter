@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import css from './styles.scss'
 
-export default class Layout extends Component {
+export default class Layout extends PureComponent {
 
     static propTypes = {
         className: PropTypes.string,

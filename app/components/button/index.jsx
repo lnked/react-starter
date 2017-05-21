@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+
 import css from './styles.scss'
 
-export default class Button extends Component {
+export default class Button extends PureComponent {
 
     static propTypes = {
         size: PropTypes.string,
