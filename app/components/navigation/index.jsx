@@ -8,9 +8,48 @@ import {
 import css from './styles.scss'
 
 export default class Navigation extends Component {
+
+    constructor (props) {
+        super(props)
+
+        this.setState({
+            isOpened: false
+        })
+    }
+
+    handleOpenMenu () {
+        this.setState({
+            isOpened: !this.state.isOpened
+        })
+    }
+
+    navbarItem (item) {
+        return (
+            <li className={css.list__item} key={item.id}>
+                <Link to={item.url} className={css.list__item__link}>{item.title}</Link>
+            </li>
+        )
+    }
+
     render () {
+        const { isOpened } = this.state
+
         return (
             <nav className={css.navigation}>
+                <div className={[css.menu, css.menu_top].join(' ')}>
+                    <Link to="#" className={css.logo}>Logo</Link>
+                    <span className={
+                            !isOpened
+                                ? css.trigger
+                                : [css.trigger, css.trigger_open].join(' ')}
+                        onClick={this.handleOpenMenu.bind(this)}>
+                        <s className={css.trigger__line} />
+                        <s className={css.trigger__line} />
+                    </span>
+                </div>
+
+                <div className={css.screen} />
+
                 <Link
                     to="/site"
                     activeClassName={css.active}

@@ -8,6 +8,7 @@ import TextField from 'components/text-field'
 import Layout from 'components/layout'
 import RadioGroup from 'components/radio-group'
 import SelectionBox from 'components/selection-box'
+import Navigation from 'components/navigation'
 
 export {
     Radio,
@@ -17,6 +18,7 @@ export {
     Button,
     Checkbox,
     TextField,
+    Navigation,
     RadioGroup,
     SelectionBox
 }

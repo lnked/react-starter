@@ -1,0 +1,130 @@
+@import "assets/styles/_global.scss";
+
+.navigation {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 20px;
+    user-select: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.link {
+    color: #666;
+    display: block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-decoration: none;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.active {
+    color: #f00;
+}
+
+.logo {
+    float: left;
+    color: white;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 44px;
+    position: relative;
+    z-index: 10;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        float: none;
+        text-align: center;
+    }
+}
+
+.trigger {
+    width: 20px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &__line {
+        width: 20px;
+        height: 2px;
+        display: block;
+        border-radius: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1px;
+        margin-left: -10px;
+        transition: all 0.5s;
+        background-color: white;
+
+        &:first-child {
+            transform: translateY(-3px);
+        }
+
+        &:last-child {
+            transform: translateY(3px);
+        }
+    }
+
+    &_open &__line {
+        transform: rotate(45deg);
+
+        &:first-child {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.screen {
+    width: 100%;
+    height: 44px;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: rgba(black, .5);
+
+    @media (max-width: 768px) {
+        z-index: 0;
+        display: none;
+    }
+}
+
+.menu {
+    width: 100%;
+    padding: 0 20px;
+
+    &_top {
+        height: 44px;
+        position: relative;
+    }
+
+    &_bottom {
+        width: 100%;
+        float: left;
+        padding: 0 60px;
+        transform: translateY(-44px);
+
+        @media (max-width: 768px) {
+            display: none;
+            transform: translateY(0px);
+            border-top: 1px solid rgba(white, .5);
+        }
+    }
+}

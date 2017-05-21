@@ -8,7 +8,8 @@ import {
 } from 'react-router-dom'
 
 import { SvgFixer } from 'utils'
-import { Navigation, Sidebar } from 'segments'
+import { Navigation } from 'components'
+import { Sidebar } from 'segments'
 import { Load, Page1 } from 'containers'
 
 export default class CoreLayout extends Component {
