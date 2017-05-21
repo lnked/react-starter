@@ -12,9 +12,9 @@ export default class Navigation extends Component {
     constructor (props) {
         super(props)
 
-        this.setState({
+        this.state = {
             isOpened: false
-        })
+        }
     }
 
     handleOpenMenu () {
@@ -32,10 +32,11 @@ export default class Navigation extends Component {
     }
 
     render () {
-        const { isOpened } = this.state
+        // const { isOpened } = this.state
 
         return (
             <nav className={css.navigation}>
+                {/*
                 <div className={[css.menu, css.menu_top].join(' ')}>
                     <Link to="#" className={css.logo}>Logo</Link>
                     <span className={
@@ -49,11 +50,12 @@ export default class Navigation extends Component {
                 </div>
 
                 <div className={css.screen} />
+                */}
 
-                <Link
+                <NavLink
                     to="/site"
                     activeClassName={css.active}
-                    className={css.link}>Сайт</Link>
+                    className={css.link}>Сайт</NavLink>
 
                 <NavLink
                     to="/marketing"

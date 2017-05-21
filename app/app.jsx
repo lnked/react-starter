@@ -7,6 +7,10 @@ import { CoreLayout } from 'layouts'
 // Pages
 import { Home } from 'containers'
 
+import routes from './routes'
+
+console.log('routes: ', routes)
+
 render((
     <CoreLayout>
         <Home />

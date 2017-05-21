@@ -1,3 +1,21 @@
+import { Home, Auth, Load } from 'containers'
+
+export default [
+    {
+        path: '/',
+        exact: true,
+        main: Home
+    },
+    {
+        path: '/auth',
+        main: Auth
+    },
+    {
+        path: '/load',
+        main: Load
+    }
+]
+
 // import React from 'react'
 // import App from 'containers/App'
 
