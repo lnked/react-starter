@@ -24,7 +24,7 @@
     "type": "git"
   },
   "private": true,
-  "author": "Edik Bulikyan <ed.proff@gmail.com>",
+  "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.1",
@@ -111,7 +111,7 @@
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^2.0.2",
     "postcss-nested-import": "^0.1.0",
-    "postcss-nesting": "^3.0.0",
+    "postcss-nesting": "^4.0.0",
     "postcss-quantity-queries": "0.5.0",
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",

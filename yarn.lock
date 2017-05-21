@@ -6495,9 +6495,9 @@ postcss-nested@^2.0.2:
   dependencies:
     postcss "^6.0.1"
 
-postcss-nesting@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-3.0.0.tgz#b0a749d7eff11d2550a04dea642b695d7582fb1d"
+postcss-nesting@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-4.0.0.tgz#a45ff1c0f3b40455a3a4a4ff4abc62da4e4e6b4f"
   dependencies:
     postcss "^6.0.1"
 
