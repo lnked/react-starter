@@ -1,5 +1,5 @@
-import CoreLayout from 'layouts/CoreLayout'
-import AuthLayout from 'layouts/AuthLayout'
+import CoreLayout from 'layouts/core-layout'
+import AuthLayout from 'layouts/auth-layout'
 
 export {
     CoreLayout,

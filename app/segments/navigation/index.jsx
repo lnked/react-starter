@@ -1,35 +1,59 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink
+} from 'react-router-dom'
+
+import { Page1 } from 'containers'
+
 import css from './styles.scss'
 
 export default class Navigation extends Component {
     render () {
         return (
-            <nav className={css.navigation}>
-                <Link
-                    to="/site"
-                    className={css.link}>Сайт</Link>
+            <Router>
+                <nav className={css.navigation}>
+                    <Link
+                        to="/site"
+                        activeClassName={css.active}
+                        className={css.link}>Сайт</Link>
 
-                <Link
-                    to="/marketing"
-                    className={css.link}>Маркетинг</Link>
+                    <NavLink
+                        to="/marketing"
+                        activeClassName={css.active}
+                        className={css.link}>Маркетинг</NavLink>
 
-                <Link
-                    to="/seo"
-                    className={css.link}>Поисковая оптимизация</Link>
+                    <NavLink
+                        to="/seo"
+                        activeClassName={css.active}
+                        className={css.link}>Поисковая оптимизация</NavLink>
 
-                <Link
-                    to="/users"
-                    className={css.link}>Пользователи</Link>
+                    <NavLink
+                        to="/users"
+                        activeClassName={css.active}
+                        className={css.link}>Пользователи</NavLink>
 
-                <Link
-                    to="/shop"
-                    className={css.link}>Магазин</Link>
+                    <NavLink
+                        to="/shop"
+                        activeClassName={css.active}
+                        className={css.link}>Магазин</NavLink>
 
-                <Link
-                    to="/system"
-                    className={css.link}>Система</Link>
-            </nav>
+                    <NavLink
+                        to="/system"
+                        activeClassName={css.active}
+                        className={css.link}>Система</NavLink>
+
+                    <Route exact path="/site" component={Page1}/>
+                    <Route path="/marketing" component={Page1}/>
+                    <Route path="/seo" component={Page1}/>
+                    <Route path="/users" component={Page1}/>
+                    <Route path="/shop" component={Page1}/>
+                    <Route path="/system" component={Page1}/>
+                </nav>
+            </Router>
         )
     }
 }

@@ -14,8 +14,6 @@ const plugins = [
         $: "zepto"
     }),
 
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,

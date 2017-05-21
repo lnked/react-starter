@@ -26,7 +26,8 @@ const rules = [
                             "loose": true,
                             "modules": false
                         }],
-                        "stage-0"
+                        "stage-0",
+                        ...define.rs_development ? [ "react-hmre" ] : []
                     ],
                     plugins: [
                         ...define.rs_production ? [

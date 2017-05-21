@@ -8,138 +8,138 @@
     height: 100%;
     font-size: 0;
     line-height: 1;
-    
-    &__logo,
-    &__system,
-    &__section {
+}
+
+.logo,
+.system,
+.section {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    svg, img {
         width: 100%;
-        display: flex;
-        overflow: hidden;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-
-        svg, img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
-
-        &:after,
-        &:before {
-            content: "";
-            display: block;
-            padding-top: 100%;
-        }
-
-        &:after {
-            width: 3px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            transition: opacity .5s ease-in-out;
-            will-change: opacity;
-        }
-        
-        &:nth-child(1) {
-            &:after {
-                background-color: #FF5C60;
-                background-color: #ffd920;
-            }
-        }
-        
-        &:nth-child(2) {
-            &:after {
-                background-color: #FFBB73;
-                background-color: #ff639d;
-            }
-        }
-
-        &:nth-child(3) {
-            &:after {
-                background-color: #FCF582;
-                background-color: #8963ff;
-            }
-        }
-        
-        &:nth-child(4) {
-            &:after {
-                background-color: #C2FA92;
-                background-color: #05E487;
-            }
-        }
-        
-        &:nth-child(5) {
-            &:after {
-                background-color: #6EC7FC;
-                background-color: #2A91FF;
-            }
-        }
-        
-        &:nth-child(6) {
-            &:after {
-                background-color: #BB7FF3;
-                background-color: #FFD920;
-            }
-        }
-        
-        &:nth-child(7) {
-            &:after {
-                background-color: #FF54CF;
-                background-color: #FF982A;
-            }
-        }
-        
-        &:nth-child(8) {
-            &:after {
-                background-color: #01E4C0;
-                background-color: #8963FF;
-            }
-        }
-
-        &_active {
-            &:after {
-                opacity: 1;
-            }
-        }
-    }
-
-    &__logo {
-        svg, img {
-            max-width: 70%;
-            max-height: 70%;
-        }
-    }
-
-    &__settings {
+        height: 100%;
         position: absolute;
-        bottom: 0;
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    &:after {
+        width: 3px;
+        position: absolute;
         left: 0;
-        right: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+        will-change: opacity;
+    }
+    
+    &:nth-child(1) {
+        &:after {
+            background-color: #FF5C60;
+            background-color: #ffd920;
+        }
+    }
+    
+    &:nth-child(2) {
+        &:after {
+            background-color: #FFBB73;
+            background-color: #ff639d;
+        }
+    }
+
+    &:nth-child(3) {
+        &:after {
+            background-color: #FCF582;
+            background-color: #8963ff;
+        }
+    }
+    
+    &:nth-child(4) {
+        &:after {
+            background-color: #C2FA92;
+            background-color: #05E487;
+        }
+    }
+    
+    &:nth-child(5) {
+        &:after {
+            background-color: #6EC7FC;
+            background-color: #2A91FF;
+        }
+    }
+    
+    &:nth-child(6) {
+        &:after {
+            background-color: #BB7FF3;
+            background-color: #FFD920;
+        }
+    }
+    
+    &:nth-child(7) {
+        &:after {
+            background-color: #FF54CF;
+            background-color: #FF982A;
+        }
+    }
+    
+    &:nth-child(8) {
+        &:after {
+            background-color: #01E4C0;
+            background-color: #8963FF;
+        }
+    }
+}
+
+.active {
+    &:after {
+        opacity: 1;
+    }
+}
+
+.logo {
+    svg, img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+.section {
+    span {
+        width: 22px;
+        height: 22px;
+        content: "";
+        opacity: .4;
+        border-radius: 50%;
+        background-color: rgba(#fff,.4);
+    }
+}
+
+.settings {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img, svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    &:hover {
+        color: #F8C52C;
 
         img, svg {
-            width: 22px;
-            height: 22px;
-        }
-
-        &:hover {
-            color: #F8C52C;
-
-            img, svg {
-                animation: spinner 1s infinite linear;
-            }
-        }
-    }
-
-    &__section {
-        span {
-            width: 22px;
-            height: 22px;
-            content: "";
-            opacity: .4;
-            border-radius: 50%;
-            background-color: rgba(#fff,.4);
+            animation: spinner 1s infinite linear;
         }
     }
 }

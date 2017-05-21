@@ -15,14 +15,14 @@ const plugins = [
     new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        // filename: 'vendor.[hash:5].js',
+        filename: 'vendor.[hash:5].js',
         minChunks: Infinity
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'runtime',
-        chunks: ['vendor'],
-        minChunks: Infinity
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'runtime',
+    //     chunks: ['vendor'],
+    //     minChunks: Infinity
+    // }),
     new webpack.HashedModuleIdsPlugin(),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json',

@@ -1,26 +1,30 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import css from './styles.scss'
+
+import {
+  NavLink
+} from 'react-router-dom'
 
 export default class Sidebar extends Component {
 
-    createLinkItem (page) {
+    createNavLinkItem (page) {
         const base = '/site'
 
         return (
-            <Link
+            <NavLink
                 key={page.id}
                 icon={page.system}
                 label={page.title}
                 to={[base, page.system].join('/')}
-                className={css.sidebar__section}
+                className={css.section}
+                activeClassName={css.active}
             >
                 <span />
-            </Link>
+            </NavLink>
         )
     }
 
-    render () {
+    renderPages () {
         const pages = [
             {
                 id: 1,
@@ -49,31 +53,21 @@ export default class Sidebar extends Component {
             }
         ]
 
+        return pages.map(this.createNavLinkItem)
+    }
+
+    render () {
         return (
             <nav className={css.sidebar}>
-                <Link
-                    to="/"
-                    className={[css.sidebar__section, css.sidebar__logo].join(' ')}
-                >
-                    <img
-                        src={require('images/lightning.svg')}
-                        className={css['not-found__figure__image']}
-                        alt="Error: 4xx" />
-                </Link>
+                <NavLink to="/" className={[css.section, css.logo].join(' ')}>
+                    <img src={require('images/lightning.svg')} alt="" />
+                </NavLink>
 
-                {pages.map(this.createLinkItem)}
+                { this.renderPages() }
 
-                <Link
-                    icon="settings"
-                    label="Settings"
-                    to="/settings"
-                    className={[css.sidebar__section, css.sidebar__settings].join(' ')}
-                >
-                    <img
-                        src={require('images/icons/settings.svg')}
-                        className={css['not-found__figure__image']}
-                        alt="" />
-                </Link>
+                <NavLink to="/settings" className={`${css.section} ${css.settings}`}>
+                    <img src={require('images/icons/settings.svg')} alt="" />
+                </NavLink>
             </nav>
         )
     }
