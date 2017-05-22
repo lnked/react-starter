@@ -130,7 +130,7 @@
     "script-ext-html-webpack-plugin": "^1.7.4",
     "standard": "^10.0.2",
     "static-site-generator-webpack-plugin": "^3.4.1",
-    "style-loader": "^0.17.0",
+    "style-loader": "^0.18.0",
     "svg-fill-loader": "^0.0.8",
     "svg-sprite-loader": "^3.0.0",
     "svg-url-loader": "^2.0.2",
