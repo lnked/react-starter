@@ -46,7 +46,7 @@ const rules = define.rs_generate_css ? [
         {
             test: /\.(css|s[a|c]ss)$/,
             use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
+                fallback: 'style-loader', //isomorphic-
                 use: usesConfig
             })
         }
@@ -55,7 +55,7 @@ const rules = define.rs_generate_css ? [
         test: /\.(css|s[a|c]ss)$/,
         use: [
             {
-                loader: 'style-loader'
+                loader: 'style-loader' //isomorphic-
             },
             ...usesConfig
         ],
