@@ -1,5 +1,9 @@
 // import React, { Component } from 'react'
 
+// import { FadeIn } from 'animate-components'
+
+// <FadeIn duration="2s" timingFunction="ease-out"></FadeIn>
+
 // const counter = (state = { value: 0 }, action) => {
 //     switch (action.type) {
 //         case 'INCREMENT':
