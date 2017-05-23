@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const plugins = [
     new webpack.ProvidePlugin({
@@ -25,13 +26,23 @@ const plugins = [
         minimize: define.rs_production
     }),
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'process.env.BROWSER': JSON.stringify(true),
-        'process.env.DEBUG': JSON.stringify(false)
+        'process.env': {
+            NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+            BROWSER: JSON.stringify(true),
+            DEBUG: JSON.stringify(false)
+        }
+    }),
+    new CleanWebpackPlugin([
+        define.rs_dist
+    ], {
+        root: define.rs_root,
+        // exclude:  ['shared.js'],
+        verbose:  true,
+        dry:      false
     }),
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app')),
     new ExtractTextPlugin({
-        filename: define.rs_production ? '[name].[hash].css' : '[name].css',
+        filename: define.rs_production ? '[name].[hash:5].css' : '[name].css',
         allChunks: define.rs_production
     }),
     new ResourceHintWebpackPlugin(),
@@ -41,6 +52,7 @@ const plugins = [
     }),
     new CopyWebpackPlugin([
         { from: 'assets/images', to: 'images' }
+        // { from: `./fav/manifest.json`, to: 'manifest.json' }
     ])
 ];
 

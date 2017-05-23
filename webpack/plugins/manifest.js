@@ -51,7 +51,7 @@ const plugins = [
         orientation: 'any',
         startUrl: '/',
         backgroundColor: '#fff',
-        themeColor: '#fff',
+        themeColor: '#2185d0',
         icons: FAVICON_PLUGIN,
         preferRelatedApplications: false,
         relatedApplications: [],

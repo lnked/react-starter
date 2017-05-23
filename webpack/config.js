@@ -45,14 +45,16 @@ module.exports = {
             assets: resolve(define.rs_root, 'assets'),
             config: resolve(define.rs_root, 'config'),
             layouts: resolve(define.rs_root, 'layouts'),
-            reducers: resolve(define.rs_root, 'reducers'),
             segments: resolve(define.rs_root, 'segments'),
             containers: resolve(define.rs_root, 'containers'),
             components: resolve(define.rs_root, 'components'),
             images: resolve(define.rs_root, 'assets/images'),
             styles: resolve(define.rs_root, 'assets/styles'),
+            scripts: resolve(define.rs_root, 'assets/scripts'),
             svgstore: resolve(define.rs_root, 'assets/svgstore'),
-            scripts: resolve(define.rs_root, 'assets/scripts')
+            store: resolve(define.rs_root, 'redux/store'),
+            actions: resolve(define.rs_root, 'redux/actions'),
+            reducers: resolve(define.rs_root, 'redux/reducers')
         }
     },
 
