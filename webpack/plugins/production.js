@@ -10,7 +10,8 @@ const ChunkManifestPlugin = require('chunk-manifest-webpack2-plugin');
 const plugins = [
     new WebpackManifestPlugin({
         basePath: define.rs_root,
-        filename: "webpack-manifest.json"
+        publicPath: define.rs_dist,
+        fileName: "webpack-manifest.json"
     }),
     new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({

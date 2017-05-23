@@ -9,7 +9,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const plugins = [
     new webpack.ProvidePlugin({
@@ -31,14 +30,6 @@ const plugins = [
             BROWSER: JSON.stringify(true),
             DEBUG: JSON.stringify(false)
         }
-    }),
-    new CleanWebpackPlugin([
-        define.rs_dist
-    ], {
-        root: define.rs_root,
-        // exclude:  ['shared.js'],
-        verbose:  true,
-        dry:      false
     }),
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app')),
     new ExtractTextPlugin({

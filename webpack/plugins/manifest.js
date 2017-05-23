@@ -32,12 +32,12 @@ const plugins = [
             android: true,
             favicons: true,
             appleIcon: true,
+            opengraph: false,
             appleStartup: false,
             coast: false,
-            opengraph: false,
             twitter: false,
             yandex: false,
-            windows: false
+            windows: true
         }
     }),
     new WebappManifestPlugin({
