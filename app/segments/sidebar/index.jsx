@@ -9,16 +9,11 @@ export default class Sidebar extends Component {
 
     createNavLinkItem (page) {
         const base = '/site'
-
+        // key={page.id}
+        // icon={page.system}
+        // label={page.title}
         return (
-            <NavLink
-                key={page.id}
-                icon={page.system}
-                label={page.title}
-                to={[base, page.system].join('/')}
-                className={css.section}
-                activeClassName={css.active}
-            >
+            <NavLink to={`${base}/${page.system}`} className={css.section} activeClassName={css.active}>
                 <span />
             </NavLink>
         )

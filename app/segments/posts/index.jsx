@@ -24,10 +24,9 @@ export default class Posts extends Component {
                 {['self', 'default'].indexOf(post.thumbnail) < 0 && (
                     <div>
                         <img src={post.thumbnail} alt="" />
-                        <br />
                     </div>
                 )}
-                <Link to={post.url} target="_blank">{post.title}</Link>
+                <Link to={post.url} target="_blank" rel="noopener">{post.title}</Link>
                 <p>{post.author_flair_text}</p>
             </li>
         )
