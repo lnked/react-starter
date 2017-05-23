@@ -9,9 +9,8 @@ const ChunkManifestPlugin = require('chunk-manifest-webpack2-plugin');
 
 const plugins = [
     new WebpackManifestPlugin({
-        shortName: "RS",
         basePath: define.rs_root,
-        filename: "manifest.json"
+        filename: "webpack-manifest.json"
     }),
     new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
@@ -19,11 +18,11 @@ const plugins = [
         filename: 'vendor.[hash:5].js',
         minChunks: Infinity
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: 'runtime',
-    //     chunks: ['vendor'],
-    //     minChunks: Infinity
-    // }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'runtime',
+        chunks: ['vendor'],
+        minChunks: Infinity
+    }),
     new webpack.HashedModuleIdsPlugin(),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json',

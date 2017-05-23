@@ -19,6 +19,25 @@
 
 // export default Form
 
+
+// renderContent (propsChildren) {
+//     return Children.map(propsChildren, (child) => {
+//         let result = null;
+
+//         if (child && child.props && child.props.type && sectionsArr.indexOf(child.props.type) > -1) {
+//             let props = {
+//                 onChange: (sectionName, fieldType, value) => this['onChange' + fieldType](sectionName, value)
+//             };
+//             let patchedProps = Object.assign(props, this.getValues(child.props.type));
+
+//             result = cloneElement(child, patchedProps);
+//         }
+
+//         return result;
+//     });
+// }
+
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 

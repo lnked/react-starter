@@ -950,9 +950,9 @@ babel-polyfill@^6.20.0, babel-polyfill@^6.23.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-preset-env@^1.4.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.5.0.tgz#6e5452f7c8742afe3b9a917883ccf3f7a4f340c5"
+babel-preset-env@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.5.1.tgz#d2eca6af179edf27cdc305a84820f601b456dd0b"
   dependencies:
     babel-plugin-check-es2015-constants "^6.22.0"
     babel-plugin-syntax-trailing-function-commas "^6.22.0"
@@ -2038,9 +2038,9 @@ css-loader@^0.19.0:
     postcss-modules-scope "1.0.0-beta2"
     source-list-map "^0.1.4"
 
-css-loader@^0.28.1:
-  version "0.28.1"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.1.tgz#220325599f8f00452d9ceb4c3ca6c8a66798642d"
+css-loader@^0.28.2:
+  version "0.28.2"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.2.tgz#0ff48e1d6013afcdb585d46c1e61a5fcd036404e"
   dependencies:
     babel-code-frame "^6.11.0"
     css-selector-tokenizer "^0.7.0"
@@ -5362,7 +5362,7 @@ miller-rabin@^4.0.0:
   version "1.27.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
 
-mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.7:
+mime-types@^2.1.12, mime-types@^2.1.15, mime-types@~2.1.11, mime-types@~2.1.15, mime-types@~2.1.7:
   version "2.1.15"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed"
   dependencies:
@@ -6519,9 +6519,9 @@ postcss-nested@^2.0.2:
   dependencies:
     postcss "^6.0.1"
 
-postcss-nesting@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-4.0.0.tgz#a45ff1c0f3b40455a3a4a4ff4abc62da4e4e6b4f"
+postcss-nesting@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-4.0.1.tgz#8fc2ce40cbfcfab7ee24e7b68fb6ebe84b641469"
   dependencies:
     postcss "^6.0.1"
 
@@ -7013,9 +7013,9 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
-react-dev-utils@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-1.0.2.tgz#6d1e02537b9f33e1eddbf37aed987fdedcb8d7f8"
+react-dev-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-2.0.0.tgz#2d0400f01fa0ba9a3fba9c33130b9e1a3e4143f5"
   dependencies:
     "@timer/detect-port" "1.1.3"
     address "1.0.1"
@@ -8254,9 +8254,9 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.0.tgz#a9140e563bd19ceedc3ceed06debc39bb090117d"
+svg-sprite-loader@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.1.tgz#debf196278a13e496d671a6dba8be8788f943418"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
@@ -8565,7 +8565,7 @@ uglify-js@3.0.x, uglify-js@^3.0.5:
     commander "~2.9.0"
     source-map "~0.5.1"
 
-uglify-js@^2.6.1, uglify-js@^2.8.5:
+uglify-js@^2.6.1, uglify-js@^2.8.27:
   version "2.8.27"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.27.tgz#47787f912b0f242e5b984343be8e35e95f694c9c"
   dependencies:
@@ -8894,6 +8894,12 @@ wbuf@^1.1.0, wbuf@^1.4.0:
   dependencies:
     minimalistic-assert "^1.0.0"
 
+webapp-manifest-plugin@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/webapp-manifest-plugin/-/webapp-manifest-plugin-0.0.3.tgz#bde920ce60611f456e759639652daa4e94a22294"
+  dependencies:
+    mime-types "^2.1.15"
+
 webpack-chunk-hash@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/webpack-chunk-hash/-/webpack-chunk-hash-0.4.0.tgz#6b40c3070fbc9ff0cfe0fe781c7174af6c7c16a4"
@@ -9002,9 +9008,9 @@ webpack@^1.13.0:
     watchpack "^0.2.1"
     webpack-core "~0.6.9"
 
-webpack@^2.5.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.5.1.tgz#61742f0cf8af555b87460a9cd8bba2f1e3ee2fce"
+webpack@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.6.0.tgz#7e650a92816abff5db5f43316b0b8b19b13d76c1"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
@@ -9023,7 +9029,7 @@ webpack@^2.5.0:
     source-map "^0.5.3"
     supports-color "^3.1.0"
     tapable "~0.2.5"
-    uglify-js "^2.8.5"
+    uglify-js "^2.8.27"
     watchpack "^1.3.1"
     webpack-sources "^0.2.3"
     yargs "^6.0.0"

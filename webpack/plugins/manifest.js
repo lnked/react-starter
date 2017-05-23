@@ -1,7 +1,12 @@
 'use strict';
 
 const webpack = require('webpack');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const define  = require('../define');
+
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const WebappManifest = require('webapp-manifest-plugin');
+const WebappManifestPlugin = WebappManifest.default;
+const FAVICON_PLUGIN = WebappManifest.FAVICON_PLUGIN;
 
 const plugins = [
     new FaviconsWebpackPlugin({
@@ -34,6 +39,23 @@ const plugins = [
             yandex: false,
             windows: false
         }
+    }),
+    new WebappManifestPlugin({
+        name: "React Starter",
+        shortName: "React Starter",
+        description: null,
+        dir: 'auto',
+        // dir: define.rs_dist,
+        lang: 'en-US',
+        display: 'standalone',
+        orientation: 'any',
+        startUrl: '/',
+        backgroundColor: '#fff',
+        themeColor: '#fff',
+        icons: FAVICON_PLUGIN,
+        preferRelatedApplications: false,
+        relatedApplications: [],
+        scope: '/'
     })
 ];
 
