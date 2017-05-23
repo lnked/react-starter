@@ -21,6 +21,7 @@ if (define.rs_production) {
         ...require('./plugins/uglify').config,
         ...require('./plugins/manifest').config,
         // ...require('./plugins/closure').config,
+        ...require('./plugins/precache').config,
         ...require('./plugins/compression').config
         // ...require('./plugins/analyzer').config
     );

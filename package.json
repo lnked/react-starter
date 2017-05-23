@@ -137,6 +137,7 @@
     "svg-sprite-loader": "^3.0.1",
     "svg-url-loader": "^2.0.2",
     "svgo-loader": "^1.2.1",
+    "sw-precache-webpack-plugin": "^0.9.2",
     "uglify-js": "^3.0.5",
     "url-loader": "^0.5.8",
     "webapp-manifest-plugin": "^0.0.3",

@@ -42,7 +42,7 @@ const plugins = [
     }),
     new WebappManifestPlugin({
         name: "React Starter",
-        shortName: "React Starter",
+        shortName: "React PWA",
         description: null,
         dir: 'auto',
         lang: 'en-US',

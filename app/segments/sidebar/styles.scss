@@ -10,6 +10,13 @@
     line-height: 1;
 }
 
+.title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: -1000px;
+}
+
 .logo,
 .system,
 .section {
@@ -113,15 +120,13 @@
     }
 }
 
-.section {
-    span {
-        width: 22px;
-        height: 22px;
-        content: "";
-        opacity: .4;
-        border-radius: 50%;
-        background-color: rgba(#fff,.4);
-    }
+.icon {
+    width: 22px;
+    height: 22px;
+    content: "";
+    opacity: .4;
+    border-radius: 50%;
+    background-color: rgba(#fff,.4);
 }
 
 .settings {
