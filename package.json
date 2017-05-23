@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "main": "index.js",
   "description": "React skeleton",
   "scripts": {
