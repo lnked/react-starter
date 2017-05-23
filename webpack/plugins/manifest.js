@@ -45,16 +45,15 @@ const plugins = [
         shortName: "React Starter",
         description: null,
         dir: 'auto',
-        // dir: define.rs_dist,
         lang: 'en-US',
         display: 'standalone',
         orientation: 'any',
         startUrl: '/',
         backgroundColor: '#fff',
         themeColor: '#2185d0',
-        icons: FAVICON_PLUGIN,
         preferRelatedApplications: false,
         relatedApplications: [],
+        icons: FAVICON_PLUGIN,
         scope: '/'
     })
 ];
