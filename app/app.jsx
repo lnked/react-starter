@@ -10,7 +10,12 @@ import { Home } from 'containers'
 import routes from './routes'
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', {scope: './'})
+            .catch((error) => {
+                console.log('NOOP: ', error)
+            })
+    })
 }
 
 console.log('routes: ', routes)
