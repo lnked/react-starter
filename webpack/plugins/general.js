@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
     new webpack.ProvidePlugin({
@@ -33,12 +34,10 @@ const plugins = [
         filename: define.rs_production ? '[name].[hash].css' : '[name].css',
         allChunks: define.rs_production
     }),
+    new ResourceHintWebpackPlugin(),
     new ScriptExtHtmlWebpackPlugin({
-        async: /\.js$/,
-        preload: {
-            test: /\.js$/,
-            chunks: 'defer'
-        }
+        sync: /vendor/,
+        defaultAttribute: 'async'
     }),
     new CopyWebpackPlugin([
         { from: 'assets/images', to: 'images' }
