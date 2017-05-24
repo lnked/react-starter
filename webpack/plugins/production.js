@@ -24,11 +24,11 @@ const plugins = [
     //     chunks: ['vendor'],
     //     minChunks: Infinity
     // }),
-    new webpack.HashedModuleIdsPlugin(),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json',
         manifestVariable: 'webpackManifest'
-    })
+    }),
+    new webpack.HashedModuleIdsPlugin()
 ];
 
 module.exports.config = plugins;

@@ -3,6 +3,11 @@
 const webpack = require('webpack');
 
 const plugins = [
+    new webpack.optimize.AggressiveSplittingPlugin({
+        minSize: 30000,
+        maxSize: 50000
+    }),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.UglifyJsPlugin({
         minimize: true,
         sourceMap: false,
@@ -43,8 +48,7 @@ const plugins = [
             space_colon: false
         },
         exclude: [/\.min\.js$/gi]
-    }),
-    new webpack.optimize.AggressiveMergingPlugin()
+    })
 ];
 
 module.exports.config = plugins;

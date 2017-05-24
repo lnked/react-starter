@@ -7,18 +7,13 @@ import { CoreLayout } from 'layouts'
 // Pages
 import { Home } from 'containers'
 
+import { RegisterSW } from 'utils'
+
 import routes from './routes'
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js', {scope: './'})
-            .catch((error) => {
-                console.log('NOOP: ', error)
-            })
-    })
-}
-
 console.log('routes: ', routes)
+
+RegisterSW()
 
 render((
     <CoreLayout>
