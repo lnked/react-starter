@@ -27,9 +27,9 @@ module.exports = {
     },
 
     output: {
-        path: define.rs_dist, // rs_deploy_path
+        path: define.rs_dist,
         pathinfo: define.rs_development,
-        publicPath: '',
+        publicPath: define.rs_output_path,
         filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
     },

@@ -3,10 +3,6 @@
 const webpack = require('webpack');
 
 const plugins = [
-    new webpack.optimize.AggressiveSplittingPlugin({
-        minSize: 30000,
-        maxSize: 50000
-    }),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.UglifyJsPlugin({
         minimize: true,

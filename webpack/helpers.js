@@ -13,7 +13,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
         cache: define.rs_production,
         inject: 'body',
         filetype: 'pug',
-        prefetch: '*.js',
+        // prefetch: '*.js',
         preload: '*.*',
         template: [template, 'pug'].join('.'),
         filename: resolve(define.rs_dist, [script, 'html'].join('.')),

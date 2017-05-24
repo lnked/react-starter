@@ -11,9 +11,9 @@ import { RegisterSW } from 'utils'
 
 import routes from './routes'
 
-console.log('routes: ', routes)
-
 RegisterSW()
+
+console.log('routes: ', routes)
 
 render((
     <CoreLayout>
