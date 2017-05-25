@@ -30,8 +30,8 @@ module.exports = {
         path: define.rs_dist,
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
-        filename: define.rs_production ? '[name].[hash:5].bundle.js' : '[name].js',
-        chunkFilename: define.rs_production ? '[name].[hash:5].chunk.js' : '[name].chunk.js'
+        filename: define.rs_production ? '[name].[chunkhash:5].bundle.js' : '[name].js',
+        chunkFilename: define.rs_production ? '[name].[chunkhash:5].chunk.js' : '[name].chunk.js'
     },
 
     resolve: {

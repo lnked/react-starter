@@ -14,7 +14,6 @@ const plugins = [
     new webpack.ProvidePlugin({
         $: "zepto"
     }),
-
     new webpack.NamedModulesPlugin(),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
