@@ -21,7 +21,7 @@ React-starter a react web sterter kit.
 
 ## Installation
 
-#### npm
+#### yarn
 
 ```bash
 git clone -b master git@github.com:lnked/react-starter.git
@@ -38,7 +38,7 @@ git fetch
 Then run command
 
 ```bash
-npm install
+yarn install
 ```
 
 ## Features
@@ -80,25 +80,37 @@ export default class MyComponent extends Component {
 ## Run tasks
 
 ```bash
-npm install
+yarn install
+```
+
+Start dev-server
+
+```bash
+yarn start
 ```
 
 Build assets
 
 ```bash
-npm run build
+yarn build
 ```
 
 Run tests
 
 ```bash
-npm run test
+yarn test
 ```
 
 Lint
 
 ```bash
-npm run lint
+yarn lint
+```
+
+Fix
+
+```bash
+yarn lint-fix
 ```
 
 Publish (build, tests & lint)
