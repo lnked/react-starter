@@ -7,11 +7,7 @@ import { CoreLayout } from 'layouts'
 // Pages
 import { Home } from 'containers'
 
-import { RegisterSW } from 'utils'
-
 import routes from './routes'
-
-RegisterSW()
 
 console.log('routes: ', routes)
 

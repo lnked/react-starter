@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    DirectoryIndex index.html
+
+    RewriteCond $1 !\.(css|js|png|ico|jpe?g|gif|woff|eot|svg|ttf|txt|json)$ [NC]
+    RewriteRule ^(.*)$ index.html [L,QSA]
+</IfModule>
