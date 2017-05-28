@@ -11,6 +11,7 @@ const plugins = [
         stripPrefix: 'dist/',
         staticFileGlobs: [
             'dist/*.js',
+            'dist/*.gz',
             'dist/*.css',
             'dist/*.svg',
             'dist/*.html',
@@ -23,27 +24,16 @@ const plugins = [
         mergeStaticsConfig: true,
         maximumFileSizeToCacheInBytes: 4194304,
         staticFileGlobsIgnorePatterns: [/\.map$|\.cache$/],
-        // runtimeCaching: [{
-        //     urlPattern: /^*.*/,
-        //     handler: 'networkFirst'
-        // }],
-        // navigateFallback: '/'
+        navigateFallback: '/'
     })
 ];
 
 module.exports.config = plugins;
 
-// https://github.com/choumx/amp-pwa
-
-// {
-//   "navigateFallback": "/",
-//   "root": "build/",
-//   "staticFileGlobs": [
-//     "build/static/**/!(*.map)",
-//     "build/index.html",
-//     "build/manifest.webmanifest"
-//   ],
-//   "templateFilePath": "service-worker.tmpl",
+// runtimeCaching: [{
+//     urlPattern: /^*.*/,
+//     handler: 'networkFirst'
+// }],
 //   "runtimeCaching": [
 //     {
 //       "urlPattern": "/shadow-v0.js",
@@ -66,4 +56,3 @@ module.exports.config = plugins;
 //       }
 //     }
 //   ]
-// }
