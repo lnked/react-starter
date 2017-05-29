@@ -23,33 +23,33 @@ const rules = [
                     presets: [
                         "react",
                         ["es2015", {
-                            // "loose": true,
-                            // "modules": false
+                            "loose": true,
+                            "modules": false
                         }],
                         "stage-0",
                         ...define.rs_development ? [ "react-hmre" ] : []
                     ],
                     plugins: [
                         ...define.rs_production ? [
-                            // "transform-react-inline-elements",
-                            // "transform-react-constant-elements",
-                            // "transform-react-pure-class-to-function",
-                            // ["transform-react-remove-prop-types", {
-                            //     "mode": "wrap",
-                            //     "ignoreFilenames": ["node_modules"]
-                            // }]
+                            "transform-react-inline-elements",
+                            "transform-react-constant-elements",
+                            "transform-react-pure-class-to-function",
+                            ["transform-react-remove-prop-types", {
+                                "mode": "wrap",
+                                "ignoreFilenames": ["node_modules"]
+                            }]
                         ]: [],
-                        // "dynamic-import-system-import",
-                        // "transform-decorators-legacy",
-                        // "dynamic-import-webpack",
-                        // "dynamic-import-node",
-                        // ["transform-react-jsx", { "pragma": "h" }],
-                        // ["transform-runtime", {
-                        //     "helpers": false,
-                        //     "polyfill": false,
-                        //     "regenerator": true,
-                        //     "moduleName": "babel-runtime"
-                        // }]
+                        "dynamic-import-system-import",
+                        "transform-decorators-legacy",
+                        "dynamic-import-webpack",
+                        "dynamic-import-node",
+                        ["transform-react-jsx", { "pragma": "h" }],
+                        ["transform-runtime", {
+                            "helpers": false,
+                            "polyfill": false,
+                            "regenerator": true,
+                            "moduleName": "babel-runtime"
+                        }]
                     ],
                     cacheDirectory: define.rs_development
                 }
