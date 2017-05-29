@@ -28,8 +28,13 @@ if (define.rs_release) {
         ...require('./plugins/compression').config,
         ...require('./plugins/manifest').config,
         ...require('./plugins/precache').config
-        // ...require('./plugins/analyzer').config
     )
 };
+
+if (define.rs_analyzer) {
+    plugins.push(
+        ...require('./plugins/analyzer').config
+    )
+}
 
 module.exports.config = plugins;

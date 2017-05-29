@@ -27,13 +27,12 @@ module.exports = {
 
     output: {
         path: define.rs_dist,
-        pathinfo: false,
+        pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? '[name].[chunkhash:5].bundle.js' : '[name].js',
         chunkFilename: define.rs_production ? '[name].[chunkhash:5].chunk.js' : '[name].chunk.js',
         jsonpFunction: 'WJ',
-        hotUpdateFunction: 'UF',
-        devtoolLineToLine: true
+        hotUpdateFunction: 'UF'
     },
 
     resolve: {
@@ -67,24 +66,7 @@ module.exports = {
     },
 
     module: {
-        rules: rules.config,
-
-        // Disable handling of unknown requires
-        unknownContextRegExp: /^\.\/.*$/,
-        unknownContextCritical: false,
-        unknownContextRequest: '.',
-        unknownContextRecursive: false,
-
-        // Disable handling of requires with a single expression
-        exprContextRegExp: /^\.\/.*$/,
-        exprContextCritical: false,
-        exprContextRequest: '.',
-        exprContextRecursive: false,
-
-        // Warn for every expression in require
-        wrappedContextRegExp: /.*/,
-        wrappedContextCritical: false,
-        wrappedContextRecursive: false
+        rules: rules.config
     },
 
     performance: {
