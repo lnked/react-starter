@@ -11,14 +11,15 @@ const isPro = process.env.NODE_ENV === 'production' || !isDev;
 const isDeploy = !(process.argv.indexOf('deploy') === -1)
 const isRelease = !(process.argv.indexOf('release') === -1)
 const isAnalyzer = !(process.argv.indexOf('analyzer') === -1)
+const isCompress = isPro || isRelease || isAnalyzer;
 
 module.exports = {
     rs_generate_css: false,
     rs_root: _root_,
     rs_dist: _dist_,
     rs_output_path: isDeploy ? _deploy_ : '',
-    rs_environment: isPro || isRelease ? 'production' : 'development',
-    rs_production: isPro || isRelease,
+    rs_environment: isCompress ? 'production' : 'development',
+    rs_production: isCompress,
     rs_development: isDev,
     rs_analyzer: isAnalyzer,
     rs_release: isRelease
