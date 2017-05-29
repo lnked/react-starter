@@ -11,9 +11,10 @@ module.exports = {
     
     context: define.rs_root,
 
+    // devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
     devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
 
-    target: 'web', // 'node' | electron-main | electron-renderer
+    target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
     entry: {
         vendor: [
@@ -34,6 +35,7 @@ module.exports = {
     },
 
     resolve: {
+        symlinks: true,
         modules: [define.rs_root, 'node_modules'],
         mainFiles: ['index'],
         enforceExtension: false,

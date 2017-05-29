@@ -17,7 +17,9 @@ const plugins = [
     new webpack.optimize.CommonsChunkPlugin({
         name: ['vendor'],
         filename: 'vendor.[hash:5].js',
-        minChunks: Infinity
+        minChunks: function (module) {
+            return module.context && module.context.indexOf('node_modules') !== -1;
+        }
     }),
     // new webpack.optimize.CommonsChunkPlugin({
     //     name: 'runtime',

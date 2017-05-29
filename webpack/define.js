@@ -16,8 +16,8 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_output_path: isDeploy ? _deploy_ : '',
-    rs_environment: isPro ? 'production' : 'development',
-    rs_production: isPro,
+    rs_environment: isPro || isRelease ? 'production' : 'development',
+    rs_production: isPro || isRelease,
     rs_development: isDev,
     rs_release: isRelease
 }
