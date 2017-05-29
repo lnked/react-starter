@@ -19,11 +19,11 @@ const plugins = [
         filename: 'vendor.[hash:5].js',
         minChunks: Infinity
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'runtime',
-        chunks: ['vendor'],
-        minChunks: Infinity
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'runtime',
+    //     chunks: ['vendor'],
+    //     minChunks: Infinity
+    // }),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json',
         manifestVariable: 'webpackManifest'

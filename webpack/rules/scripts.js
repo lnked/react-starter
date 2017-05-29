@@ -43,7 +43,13 @@ const rules = [
                         "transform-decorators-legacy",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
-                        ["transform-react-jsx", { "pragma": "h" }]
+                        ["transform-react-jsx", { "pragma": "h" }],
+                        ["transform-runtime", {
+                            "helpers": false,
+                            "polyfill": false,
+                            "regenerator": true,
+                            "moduleName": "babel-runtime"
+                        }]
                     ],
                     cacheDirectory: define.rs_development
                 }

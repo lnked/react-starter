@@ -16,7 +16,6 @@ module.exports = {
     target: 'web', // 'node' | electron-main | electron-renderer
 
     entry: {
-        polyfill: ['babel-polyfill'],
         vendor: [
             'react',
             'react-dom',

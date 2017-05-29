@@ -14,6 +14,8 @@ module.exports.generateConfig = (script, template, chunksList) => {
         inject: 'body',
         filetype: 'pug',
         // prefetch: '*.js',
+        // preload: '*.*',
+        prefetch: false,
         preload: '*.*',
         template: [template, 'pug'].join('.'),
         filename: resolve(define.rs_dist, [script, 'html'].join('.')),
