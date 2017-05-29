@@ -56,13 +56,13 @@ export default class Sidebar extends Component {
         return (
             <nav className={css.sidebar}>
                 <NavLink to="/" className={[css.section, css.logo].join(' ')}>
-                    <img src={require('images/lightning.svg')} alt="Fastest CMF" />
+                    <img src={require('images/lightning.svg')} className={css.center} alt="Fastest CMF" />
                 </NavLink>
 
                 { this.renderPages() }
 
                 <NavLink to="/settings" className={`${css.section} ${css.settings}`}>
-                    <img src={require('images/icons/settings.svg')} alt="Settings" />
+                    <img src={require('images/icons/settings.svg')} className={css.center} alt="Settings" />
                 </NavLink>
             </nav>
         )

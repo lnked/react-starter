@@ -9,6 +9,7 @@ const _deploy_ = '/react-starter/';
 const isDev = process.env.NODE_ENV === 'development';
 const isPro = process.env.NODE_ENV === 'production' || !isDev;
 const isDeploy = !(process.argv.indexOf('deploy') === -1)
+const isRelease = !(process.argv.indexOf('release') === -1)
 
 module.exports = {
     rs_generate_css: false,
@@ -17,5 +18,6 @@ module.exports = {
     rs_output_path: isDeploy ? _deploy_ : '',
     rs_environment: isPro ? 'production' : 'development',
     rs_production: isPro,
-    rs_development: isDev
+    rs_development: isDev,
+    rs_release: isRelease
 }

@@ -21,11 +21,10 @@
 .system,
 .section {
     width: 100%;
-    display: flex;
+    display: block;
     overflow: hidden;
     position: relative;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 
     svg, img {
         width: 100%;
@@ -35,6 +34,7 @@
 
     &:after,
     &:before {
+        width: 100%;
         content: "";
         display: block;
         padding-top: 100%;
@@ -118,6 +118,14 @@
         max-width: 70%;
         max-height: 70%;
     }
+}
+
+.icon,
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
 }
 
 .icon {
