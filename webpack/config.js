@@ -11,7 +11,6 @@ module.exports = {
     
     context: define.rs_root,
 
-    // devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
     devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
@@ -28,10 +27,13 @@ module.exports = {
 
     output: {
         path: define.rs_dist,
-        pathinfo: define.rs_development,
+        pathinfo: false,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? '[name].[chunkhash:5].bundle.js' : '[name].js',
-        chunkFilename: define.rs_production ? '[name].[chunkhash:5].chunk.js' : '[name].chunk.js'
+        chunkFilename: define.rs_production ? '[name].[chunkhash:5].chunk.js' : '[name].chunk.js',
+        jsonpFunction: 'WJ',
+        hotUpdateFunction: 'UF',
+        devtoolLineToLine: true
     },
 
     resolve: {
@@ -66,7 +68,23 @@ module.exports = {
 
     module: {
         rules: rules.config,
-        exprContextCritical: false
+
+        // Disable handling of unknown requires
+        unknownContextRegExp: /^\.\/.*$/,
+        unknownContextCritical: false,
+        unknownContextRequest: '.',
+        unknownContextRecursive: false,
+
+        // Disable handling of requires with a single expression
+        exprContextRegExp: /^\.\/.*$/,
+        exprContextCritical: false,
+        exprContextRequest: '.',
+        exprContextRecursive: false,
+
+        // Warn for every expression in require
+        wrappedContextRegExp: /.*/,
+        wrappedContextCritical: false,
+        wrappedContextRecursive: false
     },
 
     performance: {

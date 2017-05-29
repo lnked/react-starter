@@ -54,11 +54,8 @@ const rules = [
                     cacheDirectory: define.rs_development
                 }
             }
-        ]
-        // exclude: [
-        //     resolve(define.rs_root, "../node_modules"),
-        //     resolve(define.rs_root, "../bower_components")
-        // ]
+        ],
+        exclude: /node_modules|bower_components/
     }
 ];
 
