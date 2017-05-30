@@ -26,6 +26,10 @@ const plugins = [
     //     chunks: ['vendor'],
     //     minChunks: Infinity
     // }),
+    new webpack.SourceMapDevToolPlugin({
+        filename: '[name].js.map',
+        exclude: ['vendor', 'styles', 'app']
+    }),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json',
         manifestVariable: 'webpackManifest'

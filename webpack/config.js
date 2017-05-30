@@ -11,7 +11,7 @@ module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_production ? false : 'cheap-module-eval-source-map',
+    devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
@@ -72,14 +72,8 @@ module.exports = {
     performance: {
         hints: define.rs_production ? 'warning' : false,
         maxAssetSize: 300000,
-        maxEntrypointSize: 400000
-    },
-
-    node: {
-        module: false,
-        process: true,
-        setImmediate: false,
-        clearImmediate: false
+        maxEntrypointSize: 400000,
+        assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
 
     devServer: {
@@ -103,13 +97,22 @@ module.exports = {
             chunk: false
         },
         hot: true,
-        // inline: true,
         host: '0.0.0.0'
     },
 
     watch: define.rs_development,
 
     plugins: plugins.config,
+    
+    bail: define.rs_production,
+
+    cache: define.rs_development,
+
+    node: {
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    },
 
     stats: {
         // Add asset Information
@@ -159,7 +162,7 @@ module.exports = {
         // Add public path information
         publicPath: false,
         // Add information about the reasons why modules are included
-        reasons: false,
+        reasons: define.rs_development,
         // Add the source code of modules
         source: false,
         // Add timing information
@@ -172,30 +175,3 @@ module.exports = {
         warnings: true
     }
 };
-
-// stats: {
-//     colors: true,
-//     timings: true,
-//     children: false,
-//     errorDetails: true,
-
-//     modules: false,
-//     chunks: false,
-//     chunk: false,
-//     cached: false,
-
-//     exclude: define.rs_development,
-
-//     reasons: define.rs_development,
-//     profile: define.rs_development,
-    
-//     maxModules: define.rs_development,
-//     chunkModules: define.rs_development,
-
-//     hideModules: define.rs_production,
-//     hash: define.rs_production,
-//     version: define.rs_production,
-//     origins: define.rs_production,
-//     usedExports: define.rs_production,
-//     entrypoints: define.rs_production,
-// },

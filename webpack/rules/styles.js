@@ -13,6 +13,7 @@ const usesConfig = [
             importLoaders: 1,
             minimize: define.rs_production,
             sourceMap: define.rs_development,
+            discardComments: { removeAll: true },
             localIdentName: define.rs_production ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:5]'
         }
     },

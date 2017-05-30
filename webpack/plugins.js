@@ -1,7 +1,6 @@
 'use strict';
 
 const plugins = [];
-
 const define = require('./define');
 
 if (define.rs_development) {
@@ -33,7 +32,8 @@ if (define.rs_release) {
 
 if (define.rs_analyzer) {
     plugins.push(
-        ...require('./plugins/analyzer').config
+        ...require('./plugins/analyzer').config,
+        ...require('./plugins/visualizer').config
     )
 }
 

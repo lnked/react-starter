@@ -15,10 +15,12 @@ const rules = [
     },
     {
         test: /\.js[x]?$/,
+        exclude: /(node_modules|bower_components)/,
         use: [
             {
                 loader: 'babel-loader',
                 options: {
+                    cacheDirectory: define.rs_development,
                     babelrc: false,
                     presets: [
                         "react",
@@ -31,6 +33,7 @@ const rules = [
                     ],
                     plugins: [
                         ...define.rs_production ? [
+                            // "transform-react-jsx",
                             "transform-react-inline-elements",
                             "transform-react-constant-elements",
                             "transform-react-pure-class-to-function",
@@ -39,23 +42,24 @@ const rules = [
                                 "ignoreFilenames": ["node_modules"]
                             }]
                         ]: [],
+                        ...define.rs_development ? [
+                            "transform-react-jsx-source",
+                            "transform-react-jsx-self",
+                            ["transform-runtime", {
+                                "helpers": false,
+                                "polyfill": false,
+                                "regenerator": true,
+                                "moduleName": "babel-runtime"
+                            }]
+                        ] : [],
                         "dynamic-import-system-import",
                         "transform-decorators-legacy",
                         "dynamic-import-webpack",
                         "dynamic-import-node",
-                        ["transform-react-jsx", { "pragma": "h" }],
-                        ["transform-runtime", {
-                            "helpers": false,
-                            "polyfill": false,
-                            "regenerator": true,
-                            "moduleName": "babel-runtime"
-                        }]
-                    ],
-                    cacheDirectory: define.rs_development
+                    ]
                 }
             }
-        ],
-        exclude: /node_modules|bower_components/
+        ]
     }
 ];
 

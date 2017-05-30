@@ -8,10 +8,16 @@ const _deploy_ = '/react-starter/';
 
 const isDev = process.env.NODE_ENV === 'development';
 const isPro = process.env.NODE_ENV === 'production' || !isDev;
-const isDeploy = !(process.argv.indexOf('deploy') === -1)
-const isRelease = !(process.argv.indexOf('release') === -1)
-const isAnalyzer = !(process.argv.indexOf('analyzer') === -1)
-const isCompress = isPro || isRelease || isAnalyzer;
+
+const isDeploy  = process.argv.includes('--deploy');
+const isRelease = process.argv.includes('--release');
+const isAnalyze = process.argv.includes('--analyze');
+const isCompress = isPro || isRelease || isAnalyze;
+
+console.log('isDeploy: ', isDeploy)
+console.log('isRelease: ', isRelease)
+console.log('isAnalyze: ', isAnalyze)
+console.log('isCompress: ', isCompress)
 
 module.exports = {
     rs_generate_css: false,
@@ -21,6 +27,6 @@ module.exports = {
     rs_environment: isCompress ? 'production' : 'development',
     rs_production: isCompress,
     rs_development: isDev,
-    rs_analyzer: isAnalyzer,
+    rs_analyzer: isAnalyze,
     rs_release: isRelease
 }

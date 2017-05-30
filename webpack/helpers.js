@@ -11,14 +11,14 @@ module.exports.generateConfig = (script, template, chunksList) => {
     const config = {
         hash: false,
         cache: define.rs_production,
-        inject: 'body',
+        inject: true,
         filetype: 'pug',
         prefetch: false, // '*.js'
         preload: '*.*',
         template: [template, 'pug'].join('.'),
         filename: resolve(define.rs_dist, [script, 'html'].join('.')),
         minify: define.rs_development ? {} : {
-            keepClosingSlash: false,
+            keepClosingSlash: true,
             removeEmptyElements: false,
             removeComments: define.rs_production,
             conservativeCollapse: define.rs_production,
