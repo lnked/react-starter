@@ -8146,6 +8146,16 @@ sasslint-loader@^0.0.1:
     style-loader "^0.12.4"
     text-table "~0.2.0"
 
+sasslint-webpack-plugin@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/sasslint-webpack-plugin/-/sasslint-webpack-plugin-1.0.4.tgz#3f56a0b311f2697fea55832f92bb3db6d9f566d2"
+  dependencies:
+    chalk "^1.1.1"
+    loader-utils "~0.2.10"
+    node-sass "^3.3.3"
+    object-assign "~3.0.0"
+    text-table "^0.2.0"
+
 sax@>=0.6.0, sax@^1.2.1, sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"

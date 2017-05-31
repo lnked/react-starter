@@ -45,7 +45,7 @@ const usesConfig = [
 
 const rules = define.rs_generate_css ? [
         {
-            test: /\.(css|s[a|c]ss)$/,
+            test: /\.(s?(a|c)ss)$/,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: usesConfig
