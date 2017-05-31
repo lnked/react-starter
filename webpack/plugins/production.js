@@ -21,11 +21,6 @@ const plugins = [
             return module.context && module.context.indexOf('node_modules') !== -1;
         }
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: 'runtime',
-    //     chunks: ['vendor'],
-    //     minChunks: Infinity
-    // }),
     new webpack.SourceMapDevToolPlugin({
         filename: '[name].js.map',
         exclude: ['vendor', 'styles', 'app']

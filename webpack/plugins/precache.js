@@ -27,6 +27,23 @@ const plugins = [
     //     AppCache: false
     // }),
 
+    // new OfflinePlugin({
+    //     cacheMaps: [{
+    //         match: function(requestUrl) {
+    //             return new URL('/shell', location);
+    //         },
+    //         requestTypes: ['navigate']
+    //     }],
+    //     caches: 'all',
+    //     externals: ['/shell'],
+    //     excludes: ['**/.*', '**/*.map', '**/*.js.br', '**/*.js.gzip', '**/*.css', '**/*.css.br', '**/*.css.gzip'],
+    //     autoUpdate: false,
+    //     AppCache: false,
+    //     ServiceWorker: {
+    //         publicPath: '/sw.js'
+    //     }
+    // }),
+
     new SWPrecacheWebpackPlugin({
         cacheId: 'RS-PWA',
         filename: 'sw.js',
