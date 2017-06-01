@@ -48,7 +48,7 @@
     "react-side-effect": "^1.1.0",
     "react-svg-use": "^2.1.0",
     "redux": "^3.6.0",
-    "zepto": "^1.2.0"
+    "webpack-zepto": "^0.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.0",

@@ -11,9 +11,9 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
-    new webpack.ProvidePlugin({
-        $: "zepto"
-    }),
+    // new webpack.ProvidePlugin({
+    //     $: "zepto"
+    // }),
     new webpack.NamedModulesPlugin(),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,

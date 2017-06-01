@@ -1,6 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
+import $ from 'webpack-zepto'
+
 // Layouts
 import { CoreLayout } from 'layouts'
 
@@ -10,6 +12,8 @@ import { Home } from 'containers'
 import routes from './routes'
 
 console.log('routes: ', routes)
+
+console.log('scrollTop: ', $(window).height())
 
 render((
     <CoreLayout>
