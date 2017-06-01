@@ -34,30 +34,6 @@ const svgoConfig = {
 
 const rules = [
     {
-        test: /\.svg$/i,
-        use: [
-            {
-                loader: 'svg-sprite-loader',
-                options: {
-                    extract: true,
-                    spriteFilename: 'svgstore.svg'
-                }
-            },
-            {
-                loader: 'svg-fill-loader',
-                options: {
-                    raw: false,
-                    selector: 'path,circle'
-                }
-            },
-            {
-                loader: 'svgo-loader',
-                options: svgoConfig
-            }
-        ],
-        include: [ resolve(define.rs_root, '/assets/svgstore') ]
-    },
-    {
         test: /.*\.(jpe?g|png|gif|ico|webp|svg)$/i,
         use: [
             {
@@ -96,6 +72,30 @@ const rules = [
             resolve(define.rs_root, '/assets/fonts'),
             resolve(define.rs_root, '/assets/svgstore')
         ]
+    },
+    {
+        test: /\.svg$/i,
+        use: [
+            {
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    spriteFilename: 'svgstore.svg'
+                }
+            },
+            {
+                loader: 'svg-fill-loader',
+                options: {
+                    raw: false,
+                    selector: 'path,circle'
+                }
+            },
+            {
+                loader: 'svgo-loader',
+                options: svgoConfig
+            }
+        ],
+        include: [ resolve(define.rs_root, '/assets/svgstore') ]
     }
 ];
 

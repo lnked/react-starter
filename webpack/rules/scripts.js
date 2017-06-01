@@ -23,12 +23,12 @@ const rules = [
                     cacheDirectory: define.rs_development,
                     babelrc: false,
                     presets: [
-                        "react",
-                        ["es2015", {
-                            "loose": true,
-                            "modules": false
-                        }],
-                        "stage-0",
+                        ["latest", {
+                            "es2015": {
+                                "loose": true,
+                                "modules": false
+                            }
+                        }], "react", "stage-0",
                         ...define.rs_development ? [ "react-hmre" ] : []
                     ],
                     plugins: [
