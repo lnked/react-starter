@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, string, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
 export default class Checkbox extends PureComponent {
 
     static propTypes = {
-        name: PropTypes.string.isRequired,
-        label: PropTypes.string,
-        children: PropTypes.string,
-        checked: PropTypes.bool,
-        handleChange: PropTypes.func,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+        name: string.isRequired,
+        label: string,
+        children: string,
+        checked: bool,
+        handleChange: func,
+        value: oneOfType([
+            string,
+            number
         ])
     }
 

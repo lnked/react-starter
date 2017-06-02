@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
 import {
@@ -15,10 +15,10 @@ import { Navigation } from 'components'
 export default class CoreLayout extends Component {
 
     static propTypes = {
-        children: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.string,
-            PropTypes.array
+        children: oneOfType([
+            object,
+            string,
+            array
         ])
     }
 

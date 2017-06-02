@@ -1,31 +1,31 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, string, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
 export default class TextField extends PureComponent {
 
     static propTypes = {
-        type: PropTypes.string,
-        name: PropTypes.string.isRequired,
-        focus: PropTypes.bool,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+        type: string,
+        name: string.isRequired,
+        focus: bool,
+        value: oneOfType([
+            string,
+            number
         ]),
-        children: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
+        children: oneOfType([
+            string,
+            number
         ]),
-        error: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.bool
+        error: oneOfType([
+            string,
+            bool
         ]),
-        hint: PropTypes.string,
-        cleaning: PropTypes.bool,
-        multiline: PropTypes.bool,
-        className: PropTypes.string,
-        handleChange: PropTypes.func,
-        placeholder: PropTypes.string
+        hint: string,
+        cleaning: bool,
+        multiline: bool,
+        className: string,
+        handleChange: func,
+        placeholder: string
     }
 
     static defaultProps = {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 import axios from 'axios'
 
 import { Posts } from 'segments'
@@ -7,10 +7,10 @@ import { Posts } from 'segments'
 export default class Load extends Component {
 
     static propTypes = {
-        subreddit: PropTypes.string,
-        posts: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.array
+        subreddit: string,
+        posts: oneOfType([
+            object,
+            array
         ])
     }
 

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 import { Link } from 'react-router-dom'
 import css from './styles.scss'
 
 export default class Posts extends Component {
 
     static propTypes = {
-        title: PropTypes.string.isRequired,
-        data: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.array
+        title: string.isRequired,
+        data: oneOfType([
+            object,
+            array
         ])
     }
 

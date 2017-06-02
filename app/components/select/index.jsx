@@ -1,23 +1,23 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, object, string, array, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
 export default class Select extends PureComponent {
 
     static propTypes = {
-        name: PropTypes.string,
-        isMultiple: PropTypes.bool,
-        className: PropTypes.string,
-        handleChange: PropTypes.func,
-        placeholder: PropTypes.string,
-        selectedOption: PropTypes.oneOfType([
-            PropTypes.array,
-            PropTypes.string,
-            PropTypes.number
+        name: string,
+        isMultiple: bool,
+        className: string,
+        handleChange: func,
+        placeholder: string,
+        selectedOption: oneOfType([
+            array,
+            string,
+            number
         ]),
-        items: PropTypes.oneOfType([
-            PropTypes.array,
-            PropTypes.object
+        items: oneOfType([
+            array,
+            object
         ])
     }
 

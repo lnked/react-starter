@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, string, array, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
 export default class SelectionBox extends PureComponent {
 
     static propTypes = {
-        items: PropTypes.array,
-        name: PropTypes.string,
-        isMultiple: PropTypes.bool,
-        handleChange: PropTypes.func,
-        checked: PropTypes.oneOfType([
-            PropTypes.array,
-            PropTypes.string,
-            PropTypes.number
+        items: array,
+        name: string,
+        isMultiple: bool,
+        handleChange: func,
+        checked: oneOfType([
+            array,
+            string,
+            number
         ])
     }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
 import { SvgFixer } from 'utils'
@@ -7,10 +7,10 @@ import { SvgFixer } from 'utils'
 export default class AuthLayout extends Component {
 
     static propTypes = {
-        children: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.string,
-            PropTypes.array
+        children: oneOfType([
+            object,
+            string,
+            array
         ])
     }
 
@@ -21,6 +21,22 @@ export default class AuthLayout extends Component {
     componentDidMount () {
         SvgFixer()
     }
+
+    // state = { expanded: false }
+
+    // handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     this.props.model.save()
+    // }
+
+    // handleNameChange = (e) => {
+    //     this.props.model.name = e.target.value
+    // }
+
+    // handleExpand = (e) => {
+    //     e.preventDefault()
+    //     this.setState({ expanded: !this.state.expanded })
+    // }
 
     render () {
         return (
