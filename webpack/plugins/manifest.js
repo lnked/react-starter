@@ -45,7 +45,7 @@ const plugins = [
         shortName: "React PWA",
         description: null,
         dir: 'auto',
-        lang: 'en-US',
+        lang: 'ru-RU',
         display: 'standalone',
         orientation: 'any',
         startUrl: '/',

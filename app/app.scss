@@ -1,5 +1,5 @@
 @import 'reset-css/reset.css';
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 :global {
     * {
@@ -10,12 +10,12 @@
             box-sizing: border-box;
         }
         
-        &[dir="ltr"] {
+        &[dir='ltr'] {
             direction: ltr;
             unicode-bidi: embed;
         }
 
-        &[dir="rtl"] {
+        &[dir='rtl'] {
             direction: rtl;
             unicode-bidi: embed;
         }
@@ -47,7 +47,7 @@
     body, input, textarea, select, button {
         font-synthesis: none;
         text-rendering: optimizeLegibility;
-        font-feature-settings: "liga", "kern";
+        font-feature-settings: 'liga', 'kern';
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-smoothing: antialiased;
