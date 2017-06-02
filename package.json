@@ -5,7 +5,7 @@
   "description": "React skeleton",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "yarn run clean && webpack --config ./webpack/config.js",
+    "build": "yarn run clean && webpack --config ./webpack/config.js --env assemply",
     "release": "yarn run clean && webpack --config ./webpack/config.js --env release",
     "analyzer": "yarn run clean && webpack --config ./webpack/config.js --env analyze",
     "publish": "yarn run lint-fix | yarn run tests | yarn run build",

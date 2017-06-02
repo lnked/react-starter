@@ -9,17 +9,18 @@ const _deploy_ = '/react-starter/';
 const isDeploy  = process.argv.includes('deploy');
 const isAnalyze = process.argv.includes('analyze');
 const isRelease = process.argv.includes('release') || isAnalyze;
+const isAssemply = process.argv.includes('assemply');
 
-const isProduction = isRelease || isAnalyze;
-const isDevelopment = process.argv.includes('development');
+const isProduction = isRelease || isAnalyze || isAssemply;
+const isDevelopment = process.argv.includes('development') || !isProduction;
+
+process.env.NODE_ENV = isProduction ? 'production' : 'development';
 
 console.log('deploy: ', isDeploy)
 console.log('dnalyze: ', isAnalyze)
 console.log('release: ', isRelease)
 console.log('production: ', isProduction)
 console.log('development: ', isDevelopment)
-
-process.env.NODE_ENV = isProduction ? 'production' : 'development';
 
 module.exports = {
     rs_root: _root_,

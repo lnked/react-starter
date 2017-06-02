@@ -6,6 +6,9 @@ const define  = require('../define');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack2-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -16,14 +19,19 @@ const plugins = [
     new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
         name: ['vendor'],
-        filename: 'vendor.[hash:5].js',
+        filename: 'js/vendor.[hash:5].js',
         minChunks: function (module) {
             return module.context && module.context.indexOf('node_modules') !== -1;
         }
     }),
-    new webpack.SourceMapDevToolPlugin({
-        filename: '[name].js.map',
-        exclude: ['vendor', 'styles', 'app']
+    new ExtractTextPlugin({
+        filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
+        allChunks: define.rs_production
+    }),
+    new ResourceHintWebpackPlugin(),
+    new ScriptExtHtmlWebpackPlugin({
+        sync: /vendor/,
+        defaultAttribute: 'async'
     }),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json',

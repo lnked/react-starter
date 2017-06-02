@@ -47,7 +47,7 @@ const rules = define.rs_generate_css ? [
         {
             test: /\.(s?(a|c)ss)$/,
             use: ExtractTextPlugin.extract({
-                publicPath: '/',
+                publicPath: '../',
                 fallback: 'style-loader',
                 use: usesConfig
             })

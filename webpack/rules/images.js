@@ -41,7 +41,7 @@ const rules = [
                 options: {
                     hash: 'sha512',
                     digest: 'hex',
-                    name: '[name]-[hash:11].[ext]'
+                    name: 'images/[name]-[hash:5].[ext]'
                 }
             },
             {
@@ -80,6 +80,7 @@ const rules = [
                 loader: 'svg-sprite-loader',
                 options: {
                     extract: true,
+                    // emitFile: false,
                     spriteFilename: 'svgstore.svg'
                 }
             },

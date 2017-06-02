@@ -33,7 +33,6 @@ const rules = [
                     ],
                     plugins: [
                         ...define.rs_production ? [
-                            "transform-react-jsx",
                             "transform-react-inline-elements",
                             "transform-react-constant-elements",
                             "transform-react-pure-class-to-function",

@@ -6,14 +6,12 @@ const helpers = require('../helpers');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
     // new webpack.ProvidePlugin({
-    //     $: "zepto"
-    // }),
+    //     $: "jQuery"
+    //     "jQuery": "jQuery"
+    // })
     new webpack.NamedModulesPlugin(),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
@@ -30,19 +28,9 @@ const plugins = [
             DEBUG: JSON.stringify(false)
         }
     }),
-    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app')),
-    new ExtractTextPlugin({
-        filename: define.rs_production ? '[name].[hash:5].css' : '[name].css',
-        allChunks: define.rs_production
-    }),
-    new ResourceHintWebpackPlugin(),
-    new ScriptExtHtmlWebpackPlugin({
-        sync: /vendor/,
-        defaultAttribute: 'async'
-    }),
+    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendor')),
     new CopyWebpackPlugin([
-        { from: 'assets/images', to: 'images' }
-        // { from: `./fav/manifest.json`, to: 'manifest.json' }
+        { from: 'assets/images', to: 'images', copyUnmodified: true }
     ])
 ];
 
