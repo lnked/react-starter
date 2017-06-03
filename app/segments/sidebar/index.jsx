@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import css from './styles.scss'
 
 import {
-  NavLink
+    NavLink
 } from 'react-router-dom'
+
+import { Logo } from 'components'
 
 export default class Sidebar extends Component {
 
@@ -55,9 +57,7 @@ export default class Sidebar extends Component {
     render () {
         return (
             <nav className={css.sidebar}>
-                <NavLink to="/" className={[css.section, css.logo].join(' ')}>
-                    <img src={require('images/lightning.svg')} className={css.center} alt="Fastest CMF" />
-                </NavLink>
+                <Logo />
 
                 { this.renderPages() }
 

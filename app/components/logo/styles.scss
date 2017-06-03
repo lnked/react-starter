@@ -1,0 +1,20 @@
+@import "assets/styles/_global.scss";
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display: block;
+    line-height: 48px;
+    text-align: center;
+}
+
+.image {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(components/logo/assets/logo.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 34px 34px;
+}

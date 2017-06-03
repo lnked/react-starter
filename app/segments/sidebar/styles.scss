@@ -19,7 +19,6 @@
     text-indent: -1000px;
 }
 
-.logo,
 .system,
 .section {
     width: 100%;
@@ -112,13 +111,6 @@
 .active {
     &:after {
         opacity: 1;
-    }
-}
-
-.logo {
-    svg, img {
-        max-width: 70%;
-        max-height: 70%;
     }
 }
 
