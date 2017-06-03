@@ -1,10 +1,158 @@
+# ----------------------------------------------------------------------
+# Prevent mobile network providers from modifying your site
+# ----------------------------------------------------------------------
+
+<ifModule mod_headers.c>
+  
+    <FilesMatch ".(gif|png|jpe?g|ico|svg|svgz|mp3|flv|ogg|mpe?g|avi|zip|gz|bz2?|rar|pdf|swf)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+
+    <filesMatch "\.(eot|otf|woff2|woff|ttf)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </filesMatch>
+
+    <filesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=604800, public"
+    </filesMatch>
+
+    <filesMatch "\.(xml|txt)$">
+        Header set Cache-Control "max-age=172800, public, must-revalidate"
+    </filesMatch>
+
+    <filesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "max-age=3600, private, must-revalidate"
+    </filesMatch>
+
+    <FilesMatch "\.(js|css|xml|gz|svg)$">
+        Header append Vary: Accept-Encoding
+    </FilesMatch>
+
+</ifModule>
+
+
+# ----------------------------------------------------------------------
+# | ETags                                                              |
+# ----------------------------------------------------------------------
+
+# Remove `ETags` as resources are sent with far-future expires headers.
+
+# `FileETag None` doesn't work in all cases.
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag None
+
+# ----------------------------------------------------------------------
+# | Gzip                                                               |
+# ----------------------------------------------------------------------
+
+<ifModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file \.(html?|txt|css|js|svg|php|pl)$
+    mod_gzip_item_include handler ^cgi-script$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+# ----------------------------------------------------------------------
+# | Expires headers                                                    |
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+    ExpiresByType text/css                              "access plus 1 year"
+
+  # Data interchange
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+  # Favicon (cannot be renamed!) and cursor images
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+  # JavaScript
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+  # Manifest files
+    ExpiresByType application/manifest+json             "access plus 1 year"
+
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+  # Media files
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+  # Web fonts
+
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 year"
+    ExpiresByType font/eot                              "access plus 1 year"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 year"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 year"
+    ExpiresByType font/ttf                              "access plus 1 year"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 year"
+    ExpiresByType application/x-font-woff               "access plus 1 year"
+    ExpiresByType font/x-woff                           "access plus 1 year"
+    ExpiresByType font/woff                             "access plus 1 year"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 year"
+
+    # Add a far future Expires header for fonts
+    ExpiresByType font/otf                              "access plus 1 year"
+
+  # Other
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+    <IfModule mod_headers.c>
+        Header append Cache-Control "public"
+    </IfModule>
+</IfModule>
+
 <IfModule mod_rewrite.c>
-	RewriteEngine On
+    AddDefaultCharset utf-8
+
+    RewriteEngine On
 	RewriteBase /
 	DirectoryIndex index.html
 
     RewriteCond $1 !\.(css|js|png|ico|jpe?g|gif|woff|eot|svg|ttf|txt|json)$ [NC]
     RewriteRule ^(.*)$ index.html [L,QSA]
 </IfModule>
-AddDefaultCharset utf-8
-AddType 'text/html; charset=utf-8' .html .htm .shtml

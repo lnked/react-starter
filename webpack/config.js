@@ -21,8 +21,7 @@ module.exports = {
             'react-dom',
             'react-router-dom'
         ],
-        app: resolve(define.rs_root, 'app.jsx'),
-        styles: resolve(define.rs_root, 'app.scss')
+        app: resolve(define.rs_root, 'app.jsx')
     },
 
     output: {
