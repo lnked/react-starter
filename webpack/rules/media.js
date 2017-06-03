@@ -10,7 +10,7 @@ const rules = [
             {
                 loader: 'file-loader',
                 options: {
-                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]'
+                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : 'media/[hash:5].[ext]'
                 }
             }
         ]

@@ -16,11 +16,11 @@ const isDevelopment = process.argv.includes('development') || !isProduction;
 
 process.env.NODE_ENV = isProduction ? 'production' : 'development';
 
-console.log('deploy: ', isDeploy)
-console.log('analyze: ', isAnalyze)
-console.log('release: ', isRelease)
-console.log('production: ', isProduction)
-console.log('development: ', isDevelopment)
+// console.log('deploy: ', isDeploy)
+// console.log('analyze: ', isAnalyze)
+// console.log('release: ', isRelease)
+// console.log('production: ', isProduction)
+// console.log('development: ', isDevelopment)
 
 module.exports = {
     rs_root: _root_,
