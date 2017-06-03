@@ -49,12 +49,11 @@ const plugins = [
         filename: 'sw.js',
         stripPrefix: 'dist/',
         staticFileGlobs: [
-            'dist/*.js',
-            'dist/*.gz',
-            'dist/*.css',
-            'dist/*.svg',
             'dist/*.html',
             'dist/*.json',
+            'dist/**/*.css',
+            'dist/**/*.js',
+            'dist/**/*.gz',
             'dist/images/**.*',
             'dist/manifest.json'
         ],
@@ -62,7 +61,7 @@ const plugins = [
         swFilePath: 'dist/sw.js',
         mergeStaticsConfig: true,
         maximumFileSizeToCacheInBytes: 4194304,
-        staticFileGlobsIgnorePatterns: [/\.map$|\.cache$/],
+        staticFileGlobsIgnorePatterns: [/\.map$|\.cache$|\.htaccess$/],
         navigateFallback: '/'
     })
 ];
