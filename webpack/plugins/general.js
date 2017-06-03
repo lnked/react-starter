@@ -30,7 +30,9 @@ const plugins = [
     }),
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendor')),
     new CopyWebpackPlugin([
-        { from: 'assets/images', to: 'images', copyUnmodified: true }
+        { from: 'assets/images', to: 'images', copyUnmodified: true },
+        { from: 'assets/misc/robots.txt', copyUnmodified: true },
+        { from: 'assets/misc/.htaccess', copyUnmodified: true }
     ])
 ];
 
