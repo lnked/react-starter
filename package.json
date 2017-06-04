@@ -18,7 +18,9 @@
     "lint": "yarn run lint:js && yarn run lint:css",
     "dev": "webpack-dev-server --open --content-base ./dist --config ./webpack/config.js --env development",
     "deploy": "yarn run release --env deploy && gh-pages -d ./dist -m 'Updates --skip-ci'",
-    "production": "yarn --production"
+    "production": "yarn --production",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "react"
@@ -31,7 +33,6 @@
   "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.1",
     "babel-runtime": "^6.23.0",
     "firebase": "^4.1.1",
     "lodash": "^4.17.4",
@@ -40,9 +41,11 @@
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "reset-css": "^2.2.0",
-    "webpack-zepto": "^0.0.1"
+    "webpack-zepto": "^0.0.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "@storybook/react": "^3.0.0",
     "animate-components": "^1.1.7",
     "autoprefixer": "^7.1.0",
     "babel-core": "^6.24.1",

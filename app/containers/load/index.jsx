@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { oneOfType, object, string, array } from 'prop-types'
-import axios from 'axios'
-
 import { Posts } from 'segments'
+
+import 'whatwg-fetch'
 
 export default class Load extends Component {
 
@@ -31,9 +31,12 @@ export default class Load extends Component {
     }
 
     handleRedditLoad (type) {
-        axios.get(`https://www.reddit.com/r/${type}.json`)
-            .then((res) => {
-                const posts = res.data.data.children.map((obj) => obj.data)
+        fetch(`https://www.reddit.com/r/${type}.json`)
+            .then((response) => {
+                return response.json()
+            })
+            .then((response) => {
+                const posts = response.data.children.map((obj) => obj.data)
                 this.setState({ posts })
             })
     }
