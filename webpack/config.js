@@ -43,6 +43,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
+            hoc: resolve(define.rs_root, 'hoc'),
             utils: resolve(define.rs_root, 'utils'),
             assets: resolve(define.rs_root, 'assets'),
             config: resolve(define.rs_root, 'config'),

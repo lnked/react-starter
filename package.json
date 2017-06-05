@@ -12,6 +12,7 @@
     "serve": "nohup http-server ./dist &",
     "start": "yarn run serve | yarn run dev",
     "stats": "webpack --config ./webpack/config.js --json --profile > stats.json",
+    "pre-lint": "eslint lib/**; exit 0",
     "lint:js": "eslint ./app --ext .js[x]",
     "lint:css": "stylelint \"src/**/*.{css,less,scss,sss}\"",
     "lint-fix": "eslint ./app --fix .js[x]",
@@ -40,6 +41,9 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
+    "react-sortable-hoc": "^0.6.3",
+    "react-virtualized": "^9.7.6",
+    "react-virtualized-select": "^3.0.1",
     "reset-css": "^2.2.0",
     "webpack-zepto": "^0.0.1",
     "whatwg-fetch": "^2.0.3"
