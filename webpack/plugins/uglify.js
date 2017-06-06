@@ -44,7 +44,8 @@ const plugins = [
             space_colon: false
         },
         exclude: [/\.min\.js$/gi]
-    })
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin()
 ];
 
 module.exports.config = plugins;

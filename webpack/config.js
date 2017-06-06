@@ -11,7 +11,9 @@ module.exports = {
     
     context: define.rs_root,
 
-    devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
+    // devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
+
+    devtool: 'source-map',
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
