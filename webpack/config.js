@@ -11,9 +11,7 @@ module.exports = {
     
     context: define.rs_root,
 
-    // devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
-
-    devtool: 'source-map',
+    devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
@@ -117,6 +115,7 @@ module.exports = {
     },
 
     stats: {
+        optimizationBailout: true,
         // Add asset Information
         assets: true,
         // Sort assets by a field

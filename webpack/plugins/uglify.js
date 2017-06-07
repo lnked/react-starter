@@ -1,6 +1,7 @@
 'use strict';
 
 const webpack = require('webpack');
+const define  = require('../define');
 
 const plugins = [
     new webpack.optimize.AggressiveMergingPlugin(),
@@ -9,7 +10,6 @@ const plugins = [
         sourceMap: false,
         compress: {
             warnings: false,
-            drop_console: false,
             side_effects: false,
             properties: true,
             sequences: true,
@@ -30,7 +30,8 @@ const plugins = [
             negate_iife: true,
             unsafe_comps: true,
             screw_ie8: true,
-            pure_getters: true
+            pure_getters: true,
+            drop_console: define.rs_release
         },
         mangle: {
             sort: true,

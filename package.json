@@ -152,7 +152,7 @@
     "uglify-js": "^3.0.15",
     "url-loader": "^0.5.8",
     "webapp-manifest-plugin": "^0.0.3",
-    "webpack": "^2.6.1",
+    "webpack": "^3.0.0-rc.1",
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-bundle-size-analyzer": "^2.7.0",
     "webpack-chunk-hash": "^0.4.0",

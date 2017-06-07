@@ -24,6 +24,8 @@ const plugins = [
             return module.context && module.context.indexOf('node_modules') !== -1;
         }
     }),
+    new webpack.optimize.LimitChunkCountPlugin({maxChunks: 15}),
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000}),
     new ExtractTextPlugin({
         filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
         allChunks: define.rs_production
