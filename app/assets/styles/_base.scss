@@ -1,0 +1,79 @@
+:global {
+    * {
+        -webkit-touch-callout: none;
+        -webkit-overflow-scrolling: touch;
+
+        &, &:before, &:after {
+            box-sizing: border-box;
+        }
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    html {
+        font-size: $font-base;
+        font-family: $font-family;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        width: 100%;
+        overflow: hidden;
+        color: $c-black;
+        min-width: 320px;
+        line-height: 1.44;
+        font-kerning: none;
+        background-color: $c-white-smoke;
+    }
+
+    body, input, textarea, select, button {
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: 'liga', 'kern';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
+        text-align: left;
+    }
+
+    .layout-wrapper {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .is-overflow {
+        overflow: hidden;
+    }
+
+    svg {
+        color: inherit;
+        fill: currentColor;
+        shape-rendering: geometricPrecision; /* auto | optimizeSpeed | crispEdges | geometricPrecision | inherit; */
+
+        &:not(:root) {
+            overflow: hidden;
+        }
+    }
+
+    ::selection {
+        color: $c-select-color;
+        background-color: $c-select-background;
+        text-shadow: none;
+    }
+
+    [hidden], template {
+        display: none;
+    }
+
+    [role=button] {
+        cursor: pointer;
+    }
+
+}

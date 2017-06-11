@@ -1,0 +1,117 @@
+
+@media print {
+    * {
+        page-break-before: always;
+        page-break-after: always;
+    }
+
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    p:first-line,
+    div:first-line,
+    blockquote:first-line,
+    li:first-line {
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background: transparent !important;
+    }
+    
+    body > *:not(.content) {
+        display: none;
+    }
+
+    blockquote,pre {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    
+    // Принудительная печать фона
+    // header {
+    //     -webkit-print-color-adjust: exact;
+    //     print-color-adjust: exact;
+    // }
+    
+    // .map {
+    //     width: 400px;
+    //     height: 300px;
+    //     background-image: url('http://maps.googleapis.com/maps/api/staticmap?center=Wien+Floridsdorf&zoom=13&scale=false&size=400x300&maptype=roadmap&format=png&visual_refresh=true');
+    //     -webkit-print-color-adjust: exact;
+    //     print-color-adjust: exact;
+    // }
+
+    thead {
+        display: table-header-group;
+    }
+
+    img,tr {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100%!important;
+    }
+
+    h2,h3,p {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,h3 {
+        page-break-after: avoid;
+    }
+    
+    ul, ol {
+        page-break-inside: avoid;
+    }
+
+    p {
+        orphans: 3;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .btn>.caret,.dropup>.btn>.caret {
+        border-top-color: #000!important;
+    }
+
+    .label {
+        border: 1px solid #000;
+    }
+
+    .table {
+        border-collapse: collapse!important;
+    }
+
+    .table td,.table th {
+        background-color: #fff!important;
+    }
+
+    .table-bordered td,.table-bordered th {
+        border: 1px solid #ddd!important;
+    }
+
+    a,a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="javascript:"]:after,a[href^="#"]:after {
+        content: "";
+    }
+
+    a[href^="http"]:not([href*="mywebsite.com"]):after {
+        content: " (" attr(href) ")";
+    }
+}

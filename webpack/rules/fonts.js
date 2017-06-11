@@ -18,7 +18,7 @@ const rules = [
         include: resolve(define.rs_root, '/assets/fonts')
     },
     {
-        test: /\.(ttf)$/,
+        test: /\.([ot]tf)$/,
         use: [
             {
                 loader: "url-loader",
