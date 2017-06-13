@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { oneOfType, string, array, bool, func, number } from 'prop-types'
+import { propTypes, defaultProps, oneOfType, string, array, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
 export default class SelectionBox extends PureComponent {

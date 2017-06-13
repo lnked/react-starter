@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { oneOfType, object, string, array } from 'prop-types'
+import { propTypes, defaultProps, oneOfType, object, string, array } from 'prop-types'
 import { Posts } from 'segments'
 
 import 'whatwg-fetch'

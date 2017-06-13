@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { oneOfType, string, array, number, func } from 'prop-types'
+import { propTypes, defaultProps, oneOfType, string, array, number, func } from 'prop-types'
 import css from './styles.scss'
 
 import { Radio } from 'components'

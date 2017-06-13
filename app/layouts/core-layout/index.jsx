@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { oneOfType, object, string, array } from 'prop-types'
+import React, { PureComponent } from 'react'
+import { propTypes, oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
 import {
@@ -12,7 +12,7 @@ import { Sidebar } from 'segments'
 import { Load, Page1 } from 'containers'
 import { Navigation } from 'components'
 
-export default class CoreLayout extends Component {
+export default class CoreLayout extends PureComponent {
 
     static propTypes = {
         children: oneOfType([

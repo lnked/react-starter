@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { oneOfType, object, string, array } from 'prop-types'
+import React, { PureComponent } from 'react'
+import { propTypes, oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
 import { SvgFixer } from 'utils'
 
-export default class AuthLayout extends Component {
+export default class AuthLayout extends PureComponent {
 
     static propTypes = {
         children: oneOfType([
