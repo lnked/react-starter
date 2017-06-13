@@ -12,8 +12,7 @@ const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
     new WebpackManifestPlugin({
-        basePath: define.rs_root,
-        publicPath: define.rs_dist,
+        basePath: define.rs_output_path,
         fileName: "webpack-manifest.json"
     }),
     new WebpackChunkHash(),
