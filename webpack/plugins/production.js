@@ -19,12 +19,13 @@ const plugins = [
     new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
         name: ['vendor'],
+        filename: 'js/vendor.[hash:5].js',
         minChunks: function (module) {
             return module.context && module.context.indexOf('node_modules') !== -1;
         }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-        name: ['manifest']
+        name: ['runtime']
     }),
     new ExtractTextPlugin({
         filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
@@ -32,7 +33,7 @@ const plugins = [
     }),
     new ResourceHintWebpackPlugin(),
     new ScriptExtHtmlWebpackPlugin({
-        sync: /vendor/,
+        sync: /runtime/,
         defaultAttribute: 'async'
     }),
     new ChunkManifestPlugin({
