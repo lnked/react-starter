@@ -153,6 +153,12 @@ FileETag None
 	RewriteBase /
 	DirectoryIndex index.html
 
+    # RewriteCond %{SERVER_PORT} !^443$
+    # RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+    # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    # RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+
     RewriteCond $1 !\.(css|js|png|ico|jpe?g|gif|woff|eot|svg|ttf|txt|json)$ [NC]
     RewriteRule ^(.*)$ index.html [L,QSA]
 </IfModule>
