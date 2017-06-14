@@ -9,8 +9,8 @@ import {
 
 import { SvgFixer } from 'utils'
 import { Sidebar } from 'segments'
-import { Load, Page1 } from 'containers'
 import { Navigation } from 'components'
+import { Load, Page1 } from 'containers'
 
 export default class CoreLayout extends PureComponent {
 

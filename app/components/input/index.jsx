@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
-import { propTypes, defaultProps, oneOfType, string, bool, func, number } from 'prop-types'
+import { propTypes, defaultProps, oneOf, oneOfType, string, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
-export default class TextField extends PureComponent {
+export default class Input extends PureComponent {
 
     static propTypes = {
         type: string,
@@ -19,13 +19,20 @@ export default class TextField extends PureComponent {
         error: oneOfType([
             string,
             bool
-        ]),
+        ]), 
         hint: string,
         cleaning: bool,
         multiline: bool,
         className: string,
         handleChange: func,
-        placeholder: string
+        placeholder: string,
+        status: string,
+        status: oneOf([
+            'warn',
+            'error',
+            'valid',
+            'normal'
+        ])
     }
 
     static defaultProps = {
@@ -34,6 +41,7 @@ export default class TextField extends PureComponent {
         className: '',
         cleaning: true,
         multiline: false,
+        status: 'normal',
         placeholder: 'Введите текст…',
         handleChange: (value) => { console.log(': = ', value) }
     }
