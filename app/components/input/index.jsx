@@ -19,14 +19,13 @@ export default class Input extends PureComponent {
         error: oneOfType([
             string,
             bool
-        ]), 
+        ]),
         hint: string,
         cleaning: bool,
         multiline: bool,
         className: string,
         handleChange: func,
         placeholder: string,
-        status: string,
         status: oneOf([
             'warn',
             'error',
