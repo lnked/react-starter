@@ -1,5 +1,5 @@
-import Request from 'hoc/request'
+import RequestHOC from 'hoc/request'
 
 export {
-    Request
+    RequestHOC
 }

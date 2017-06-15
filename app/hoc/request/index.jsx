@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-export default function Request(RComponent, apiUrl) {
+export default function RequestHOC(RComponent, apiUrl) {
 
-    class Request extends Component {
+    class RequestHOC extends Component {
         state = {
             data: []
         }
@@ -61,7 +61,7 @@ export default function Request(RComponent, apiUrl) {
         }
     }
 
-    Request.displayName = `Request(${RComponent.displayName || RComponent.name || 'Component'})`
+    RequestHOC.displayName = `RequestHOC(${RComponent.displayName || RComponent.name || 'Component'})`
 
-    return Request
+    return RequestHOC
 }

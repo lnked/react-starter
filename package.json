@@ -73,6 +73,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "better-console": "^1.0.0",
     "bower-webpack-plugin": "^0.1.9",
+    "brotli-webpack-plugin": "^0.3.0",
     "chunk-manifest-webpack2-plugin": "^1.0.1",
     "compression-webpack-plugin": "^0.4.0",
     "copy-webpack-plugin": "^4.0.1",
