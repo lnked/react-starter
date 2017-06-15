@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 
 import {
-  Link,
-  NavLink
+    Link,
+    NavLink
 } from 'react-router-dom'
 
 import css from './styles.scss'
 
 export default class Navigation extends Component {
-
     constructor (props) {
         super(props)
 

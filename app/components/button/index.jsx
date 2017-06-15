@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react'
-import { propTypes, defaultProps, oneOfType, object, string, array } from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 
 import css from './styles.scss'
 
 export default class Button extends PureComponent {
-
     static propTypes = {
         size: string,
         type: string,

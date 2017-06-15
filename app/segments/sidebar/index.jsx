@@ -8,7 +8,6 @@ import {
 import { Logo } from 'components'
 
 export default class Sidebar extends Component {
-
     createNavLinkItem (page) {
         const base = '/site'
         // key={page.id}

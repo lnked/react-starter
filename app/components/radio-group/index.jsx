@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { propTypes, defaultProps, oneOfType, string, array, number, func } from 'prop-types'
+import { oneOfType, string, array, number, func } from 'prop-types'
 import css from './styles.scss'
 
 import { Radio } from 'components'
 
 export default class RadioGroup extends Component {
-
     static propTypes = {
         items: array,
         checked: oneOfType([

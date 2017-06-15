@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react'
-import { propTypes, oneOfType, object, string, array } from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
 import { SvgFixer } from 'utils'
 
 export default class PureLayout extends PureComponent {
-
     static propTypes = {
         children: oneOfType([
             object,

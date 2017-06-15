@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { propTypes, defaultProps, oneOfType, object, string, array } from 'prop-types'
+import { oneOfType, object, string, array } from 'prop-types'
 import { Posts } from 'segments'
 
 import 'whatwg-fetch'
 
 export default class Load extends Component {
-
     static propTypes = {
         subreddit: string,
         posts: oneOfType([
