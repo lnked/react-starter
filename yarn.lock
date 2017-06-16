@@ -3365,9 +3365,9 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-watch@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-watch/-/eslint-watch-3.1.0.tgz#8a98006f7d7c583262f6fd78613f0ff406044930"
+eslint-watch@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-watch/-/eslint-watch-3.1.1.tgz#00760e660a86fd86832e94a837d58f70ae995807"
   dependencies:
     babel-polyfill "^6.20.0"
     bluebird "^3.4.7"
