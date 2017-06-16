@@ -3,6 +3,7 @@ import { oneOf, oneOfType, string, bool, func, number } from 'prop-types'
 import css from './styles.scss'
 
 export default class Input extends PureComponent {
+
     static propTypes = {
         type: string,
         name: string.isRequired,

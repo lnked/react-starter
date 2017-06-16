@@ -13,6 +13,7 @@ import { Navigation } from 'components'
 import { Load, Page1 } from 'containers'
 
 export default class CoreLayout extends PureComponent {
+
     static propTypes = {
         children: oneOfType([
             object,

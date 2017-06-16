@@ -5,6 +5,7 @@ import css from './styles.scss'
 import { SvgFixer } from 'utils'
 
 export default class AuthLayout extends PureComponent {
+
     static propTypes = {
         children: oneOfType([
             object,
