@@ -17,7 +17,8 @@ module.exports.generateConfig = (script, template, chunksList) => {
         preload: ['**/*.*'],
         template: [template, 'pug'].join('.'),
         filename: resolve(define.rs_dist, [script, 'html'].join('.')),
-        minify: define.rs_release ? {
+        production: define.rs_production,
+        minify: define.rs_release && {
             keepClosingSlash: true,
             removeEmptyElements: false,
             removeComments: define.rs_production,
@@ -40,7 +41,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
             minifyJS: define.rs_production,
             minifyCSS: define.rs_production,
             minifyURLs: define.rs_production
-        } : false
+        }
     }
 
     if (chunksList !== undefined) {

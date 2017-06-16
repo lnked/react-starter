@@ -60,9 +60,15 @@ const plugins = [
         minify: true,
         swFilePath: 'dist/sw.js',
         mergeStaticsConfig: true,
-        maximumFileSizeToCacheInBytes: 4194304,
+        maximumFileSizeToCacheInBytes: 800000,
         staticFileGlobsIgnorePatterns: [/\.map$|\.cache$|\.htaccess$/],
-        navigateFallback: '/'
+        navigateFallback: '/',
+        runtimeCaching: [
+            {
+                handler: 'cacheFirst',
+                urlPattern: /(.*?)/,
+            }
+        ]
     })
 ];
 

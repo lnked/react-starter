@@ -9,7 +9,8 @@ const usesConfig = [
     {
         loader: 'css-loader',
         options: {
-            modules: true,
+            module: true,
+            modules: define.rs_production,
             importLoaders: 1,
             minimize: define.rs_production,
             sourceMap: define.rs_development,
@@ -29,7 +30,9 @@ const usesConfig = [
     {
         loader: 'sass-loader',
         options: {
-            sourceMap: define.rs_development
+            outputStyle: define.rs_production ? 'collapsed' : 'expanded',
+            sourceMap: define.rs_production,
+            includePaths: [ define.rs_root ]
         }
     },
     {

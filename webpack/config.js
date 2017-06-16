@@ -3,9 +3,30 @@
 const webpack = require('webpack');
 const { resolve } = require('path');
 
+const stats = require('./stats');
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
+
+const host = process.env.HOST || 'localhost';
+const port = process.env.PORT || 3000;
+
+// const entryPoint = []
+// app: [
+//     // activate HMR for React
+//     'react-hot-loader/patch',
+
+//     // bundle the client for webpack-dev-server
+//     // and connect to the provided endpoint
+//     `webpack-dev-server/client?http://${host}:${port}`,
+
+//     // bundle the client for hot reloading
+//     // only- means to only hot reload for successful updates
+//     'webpack/hot/only-dev-server',
+
+//     // the entry point of our app
+//     resolve(define.rs_root, 'app.jsx')
+// ]
 
 module.exports = {
     
@@ -36,7 +57,7 @@ module.exports = {
 
     resolve: {
         symlinks: true,
-        modules: [define.rs_root, 'node_modules'],
+        modules: [resolve(__dirname, '../node_modules'), define.rs_root],
         mainFiles: ['index'],
         enforceExtension: false,
         enforceModuleExtension: false,
@@ -69,16 +90,18 @@ module.exports = {
         rules: rules.config
     },
 
-    performance: {
-        hints: define.rs_production ? 'warning' : false,
+    performance: define.rs_production && {
+        hints: 'warning',
         maxAssetSize: 300000,
         maxEntrypointSize: 400000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
 
+    stats: stats.config,
+
     devServer: {
         headers: { 'Access-Control-Allow-Origin': '*' },
-        compress: false,
+        compress: define.rs_production,
         contentBase: define.rs_dist,
         watchContentBase: define.rs_development,
         historyApiFallback: true,
@@ -90,13 +113,8 @@ module.exports = {
             warnings: true,
             errors: true
         },
-        stats: {
-            modules: false,
-            cached: false,
-            colors: true,
-            chunk: false
-        },
-        hot: true,
+        stats: stats.config,
+        hot: define.rs_development,
         host: '0.0.0.0'
     },
 
@@ -106,73 +124,5 @@ module.exports = {
     
     bail: define.rs_production,
 
-    cache: define.rs_development,
-
-    node: {
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty'
-    },
-
-    stats: {
-        optimizationBailout: true,
-        // Add asset Information
-        assets: true,
-        // Sort assets by a field
-        assetsSort: "field",
-        // Add information about cached (not built) modules
-        cached: false,
-        // Show cached assets (setting this to `false` only shows emitted files)
-        cachedAssets: define.rs_production,
-        // Add children information
-        children: false,
-        // Add chunk information (setting this to `false` allows for a less verbose output)
-        chunks: false,
-        // Add built modules information to chunk information
-        chunkModules: false,
-        // Add the origins of chunks and chunk merging info
-        chunkOrigins: false,
-        // Sort the chunks by a field
-        chunksSort: "field",
-        // Context directory for request shortening
-        context: define.rs_root,
-        // `webpack --colors` equivalent
-        colors: true,
-        // Display the distance from the entry point for each module
-        depth: false,
-        // Display the entry points with the corresponding bundles
-        entrypoints: false,
-        // Add errors
-        errors: true,
-        // Add details to errors (like resolving log)
-        errorDetails: true,
-        // Exclude modules which match one of the given strings or regular expressions
-        exclude: [],
-        // Add the hash of the compilation
-        hash: false,
-        // Set the maximum number of modules to be shown
-        maxModules: 0,
-        // Add built modules information
-        modules: false,
-        // Sort the modules by a field
-        modulesSort: "field",
-        // Show performance hint when file size exceeds `performance.maxAssetSize`
-        performance: false,
-        // Show the exports of the modules
-        providedExports: false,
-        // Add public path information
-        publicPath: false,
-        // Add information about the reasons why modules are included
-        reasons: define.rs_development,
-        // Add the source code of modules
-        source: false,
-        // Add timing information
-        timings: true,
-        // Show which exports of a module are used
-        usedExports: false,
-        // Add webpack version information
-        version: false,
-        // Add warnings
-        warnings: true
-    }
+    cache: define.rs_development  
 };

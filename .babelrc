@@ -1,6 +1,16 @@
 {
     "presets": [],
-    "plugins": []
+    "plugins": [],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        },
+        "production": {
+            "plugins": []
+        }
+    }
 }
 
 // {

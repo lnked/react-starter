@@ -12,7 +12,6 @@ const plugins = [
     //     $: "jQuery"
     //     "jQuery": "jQuery"
     // })
-    new webpack.NamedModulesPlugin(),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
         /(en-gb|ru)\.js/
