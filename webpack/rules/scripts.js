@@ -2,6 +2,7 @@
 
 const { resolve } = require('path');
 const define = require('../define');
+const svgo = require('../svgo');
 
 const rules = [
     {

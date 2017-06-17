@@ -1,5 +1,7 @@
 'use strict';
 
+const define = require('./define');
+
 module.exports.config = {
     assets: true,
     children: false,
@@ -11,10 +13,11 @@ module.exports.config = {
     version: false,
     warnings: true,
     colors: {
-      green: '\u001b[32m',
-    },
+        green: '\u001b[32m',
+    }
 }
-// {
+
+// module.exports.config = {
 //     optimizationBailout: true,
 //     // Add asset Information
 //     assets: true,

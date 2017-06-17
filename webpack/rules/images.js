@@ -2,35 +2,7 @@
 
 const { resolve } = require('path');
 const define = require('../define');
-
-const svgoConfig = {
-    plugins: [
-        {removeTitle:true},
-        {removeDesc:true},
-        {removeViewBox:false},
-        {convertPathData:false},
-        {removeEmptyAttrs:false},
-        {removeDoctype:true},
-        {removeMetadata:true},
-        {removeComments:true},
-        {removeUselessDefs:true},
-        {removeXMLProcInst:true},
-        {removeDimensions:true},
-        {cleanupNumericValues: {
-            floatPrecision: 2
-        }},
-        {cleanupIDs: {
-            prefix: '-',
-            minify: false
-        }},
-        {convertColors: {
-            names2hex: true,
-            shorthex: false,
-            rgb2hex: true
-        }},
-        {removeUselessStrokeAndFill:false}
-    ]
-}
+const svgo = require('../svgo');
 
 const rules = [
     {
@@ -64,7 +36,7 @@ const rules = [
                     optipng: {
                         optimizationLevel: 7
                     },
-                    svgo: svgoConfig
+                    svgo: svgo.config
                 }
             }
         ],
@@ -73,31 +45,40 @@ const rules = [
             resolve(define.rs_root, '/assets/svgstore')
         ]
     },
-    {
-        test: /\.svg$/i,
-        use: [
-            {
-                loader: 'svg-sprite-loader',
-                options: {
-                    extract: true,
-                    // emitFile: false,
-                    spriteFilename: 'svgstore.svg'
-                }
-            },
-            {
-                loader: 'svg-fill-loader',
-                options: {
-                    raw: false,
-                    selector: 'path,circle'
-                }
-            },
-            {
-                loader: 'svgo-loader',
-                options: svgoConfig
-            }
-        ],
-        include: [ resolve(define.rs_root, '/assets/svgstore') ]
-    }
+    // {
+    //     test: /\.svg$/i,
+    //     use: [
+    //         {
+    //             loader: 'babel-loader'
+    //         },
+    //         {
+    //             loader: 'react-svg-loader',
+    //             query: {
+    //                 svgo: svgo.config
+    //             }
+    //         },
+    //         {
+    //             loader: 'svg-sprite-loader',
+    //             options: {
+    //                 extract: true,
+    //                 // emitFile: false,
+    //                 spriteFilename: 'svgstore.svg'
+    //             }
+    //         },
+    //         // {
+    //         //     loader: 'svg-fill-loader',
+    //         //     options: {
+    //         //         raw: false,
+    //         //         selector: 'path,circle'
+    //         //     }
+    //         // },
+    //         {
+    //             loader: 'svgo-loader',
+    //             options: svgo.config
+    //         }
+    //     ],
+    //     // include: [ resolve(define.rs_root, '/assets/svgstore') ]
+    // }
 ];
 
 module.exports.config = rules;
