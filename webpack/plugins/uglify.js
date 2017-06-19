@@ -2,10 +2,12 @@
 
 const webpack = require('webpack');
 const define  = require('../define');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const plugins = [
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJSPlugin({
         minimize: true,
         sourceMap: false,
         compress: {

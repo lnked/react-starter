@@ -11,39 +11,41 @@ const plugins = require('./plugins');
 const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 3000;
 
-// const entryPoint = []
-// app: [
-//     // activate HMR for React
-//     'react-hot-loader/patch',
+const entryPoint = {
+    vendor: [
+        'react',
+        'react-dom',
+        'react-router-dom'
+    ],
+    // app: [
+    //     // activate HMR for React
+    //     'react-hot-loader/patch',
 
-//     // bundle the client for webpack-dev-server
-//     // and connect to the provided endpoint
-//     `webpack-dev-server/client?http://${host}:${port}`,
+    //     // bundle the client for webpack-dev-server
+    //     // and connect to the provided endpoint
+    //     `webpack-dev-server/client?http://${host}:${port}`,
 
-//     // bundle the client for hot reloading
-//     // only- means to only hot reload for successful updates
-//     'webpack/hot/only-dev-server',
+    //     // bundle the client for hot reloading
+    //     // only- means to only hot reload for successful updates
+    //     'webpack/hot/only-dev-server',
 
-//     // the entry point of our app
-//     resolve(define.rs_root, 'app.jsx')
-// ]
+    //     // the entry point of our app
+    //     resolve(define.rs_root, 'app.jsx')
+    // ],
+    app: resolve(define.rs_root, 'app.jsx')
+}
 
 module.exports = {
-    
+
+    // node: false,
+
     context: define.rs_root,
 
     devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
-    entry: {
-        vendor: [
-            'react',
-            'react-dom',
-            'react-router-dom'
-        ],
-        app: resolve(define.rs_root, 'app.jsx')
-    },
+    entry: entryPoint,
 
     output: {
         path: define.rs_dist,
@@ -87,7 +89,8 @@ module.exports = {
     },
 
     module: {
-        rules: rules.config
+        rules: rules.config,
+        noParse: /jquery|lodash/
     },
 
     performance: define.rs_production && {
@@ -124,5 +127,5 @@ module.exports = {
     
     bail: define.rs_production,
 
-    cache: define.rs_development  
+    cache: define.rs_development
 };
