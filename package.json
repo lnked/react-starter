@@ -153,7 +153,7 @@
     "svg-url-loader": "^2.0.2",
     "svgo-loader": "^1.2.1",
     "sw-precache-webpack-plugin": "^0.11.3",
-    "uglify-js": "^3.0.17",
+    "uglify-js": "^3.0.18",
     "url-loader": "^0.5.9",
     "webapp-manifest-plugin": "^0.0.3",
     "webpack": "^2.6.1",
