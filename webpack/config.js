@@ -33,14 +33,9 @@ const entryPoint = {
     //     resolve(define.rs_root, 'app.jsx')
     // ],
     app: resolve(define.rs_root, 'app.jsx')
-}
+};
 
 module.exports = {
-
-    node: {
-        __dirname: false,
-        __filename: false
-    },
 
     context: define.rs_root,
 
@@ -130,5 +125,21 @@ module.exports = {
     
     bail: define.rs_production,
 
-    cache: define.rs_development
+    cache: define.rs_development,
+
+    node: {
+        dns: "mock",
+        fs: "empty",
+        path: true,
+        url: false,
+        global: true,
+        process: true,
+        Buffer: true,
+        console: false,
+        __filename: "mock",
+        __dirname: "mock",
+        // __dirname: false,
+        // __filename: false
+        setImmediate: true
+    }
 };

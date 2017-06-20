@@ -162,7 +162,7 @@
     "webpack-bundle-size-analyzer": "^2.7.0",
     "webpack-chunk-hash": "^0.4.0",
     "webpack-closure-compiler": "^2.1.4",
-    "webpack-dev-server": "^2.4.5",
+    "webpack-dev-server": "^2.5.0",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-livereload-plugin": "^0.11.0",
     "webpack-manifest-plugin": "^1.1.0",
