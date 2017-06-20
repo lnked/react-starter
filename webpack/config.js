@@ -37,7 +37,10 @@ const entryPoint = {
 
 module.exports = {
 
-    // node: false,
+    node: {
+        __dirname: false,
+        __filename: false
+    },
 
     context: define.rs_root,
 
