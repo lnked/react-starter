@@ -23,16 +23,13 @@ const plugins = [
             return module.context && module.context.indexOf('node_modules') !== -1;
         }
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: ['runtime']
-    }),
     new ExtractTextPlugin({
         filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
         allChunks: define.rs_production
     }),
     new ResourceHintWebpackPlugin(),
     new ScriptExtHtmlWebpackPlugin({
-        sync: /runtime/,
+        sync: /vendor/,
         defaultAttribute: 'async'
     }),
     new ChunkManifestPlugin({

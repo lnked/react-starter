@@ -10,6 +10,7 @@ const plugins = [
     new UglifyJSPlugin({
         minimize: true,
         sourceMap: false,
+        beautify: false,
         compress: {
             warnings: false,
             side_effects: false,
@@ -38,12 +39,12 @@ const plugins = [
         mangle: {
             sort: true,
             eval: true,
+            props: false,
             toplevel: true,
             properties: true
         },
         output: {
             comments: false,
-            beautify: false,
             space_colon: false
         },
         exclude: [/\.min\.js$/gi]

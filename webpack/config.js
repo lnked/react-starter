@@ -138,8 +138,6 @@ module.exports = {
         console: false,
         __filename: "mock",
         __dirname: "mock",
-        // __dirname: false,
-        // __filename: false
         setImmediate: true
     }
 };
