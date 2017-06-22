@@ -23,6 +23,10 @@ const plugins = [
             return module.context && module.context.indexOf('node_modules') !== -1;
         }
     }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //     name: "manifest",
+    //     minChunks: Infinity
+    // }),
     new ExtractTextPlugin({
         filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
         allChunks: define.rs_production
