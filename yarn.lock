@@ -113,21 +113,20 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-animate-components@^1.3.6, animate-components@^1.3.8:
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/animate-components/-/animate-components-1.3.9.tgz#73f20d4f7d3110d856c89c66d5c47663438b0f4a"
+animate-components@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/animate-components/-/animate-components-1.4.1.tgz#ecd642cf1de2b514ae93bee1a8a58d9378d2dc5e"
   dependencies:
-    animate-keyframes "^0.1.2"
-    element-utils "^0.0.7"
-    generate-components "^0.0.7"
+    animate-keyframes "^0.1.5"
+    element-utils "^0.1.2"
     html-tags "^1.1.1"
     prop-types "^15.5.8"
     react "^15.6.1"
     react-dom "^15.6.1"
 
-animate-keyframes@^0.1.2:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/animate-keyframes/-/animate-keyframes-0.1.4.tgz#9bbb6c65d5bd9fdcbaa233a188f3f59c093f69c8"
+animate-keyframes@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/animate-keyframes/-/animate-keyframes-0.1.5.tgz#1e7b08ee475e72648a0aa6f7fcc1a6e7c33667f0"
   dependencies:
     styled-components "^2.1.0"
 
@@ -2855,9 +2854,9 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.14:
   version "1.3.14"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.14.tgz#64af0f9efd3c3c6acd57d71f83b49ca7ee9c4b43"
 
-element-utils@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/element-utils/-/element-utils-0.0.7.tgz#ca79879fb9ac447782586a2e9a4ed56b4f33411b"
+element-utils@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/element-utils/-/element-utils-0.1.2.tgz#76dac247b2d0dae1a39d10f97fe642d6148be984"
   dependencies:
     react "^15.6.1"
 
@@ -3889,13 +3888,6 @@ gaze@^1.0.0:
   resolved "https://registry.yarnpkg.com/gaze/-/gaze-1.1.2.tgz#847224677adb8870d679257ed3388fdb61e40105"
   dependencies:
     globule "^1.0.0"
-
-generate-components@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/generate-components/-/generate-components-0.0.7.tgz#377c91d4278ef1d8d6696e4e02d3831d20db08e9"
-  dependencies:
-    animate-components "^1.3.8"
-    animate-keyframes "^0.1.2"
 
 generate-function@^2.0.0:
   version "2.0.0"
