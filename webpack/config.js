@@ -88,7 +88,7 @@ module.exports = {
 
     module: {
         rules: rules.config,
-        noParse: /jquery|lodash/
+        noParse: /jquery/
     },
 
     performance: define.rs_production && {

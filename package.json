@@ -38,6 +38,7 @@
   "license": "MIT",
   "dependencies": {
     "animated": "^0.2.0",
+    "axios": "^0.16.2",
     "babel-runtime": "^6.23.0",
     "express": "^4.15.3",
     "firebase": "^4.1.3",
@@ -147,7 +148,7 @@
     "resource-hints-webpack-plugin": "^0.0.1",
     "sass-loader": "^6.0.6",
     "sasslint-loader": "^0.0.1",
-    "script-ext-html-webpack-plugin": "^1.8.1",
+    "script-ext-html-webpack-plugin": "^1.8.2",
     "standard": "^10.0.2",
     "static-site-generator-webpack-plugin": "^3.4.1",
     "style-loader": "^0.18.2",
