@@ -29,7 +29,10 @@ const rules = [
                                 "loose": true,
                                 "modules": false
                             }
-                        }], "react", "stage-0",
+                        }], "es2016",
+                            "es2017",
+                            "react",
+                            "stage-0",
                         ...define.rs_development ? [ "react-hmre" ] : []
                     ],
                     plugins: [

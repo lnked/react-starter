@@ -5,7 +5,6 @@ import { Posts } from 'segments'
 import 'whatwg-fetch'
 
 export default class Load extends Component {
-
     static propTypes = {
         subreddit: string,
         posts: oneOfType([
