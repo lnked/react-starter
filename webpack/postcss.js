@@ -50,6 +50,9 @@ postcss.push(
     // adds shorthand hex methods to rgba() values div { color: rgba(red,0.5) }
     // https://github.com/seaneking/postcss-hexrgba
     require('postcss-hexrgba'),
+    require('postcss-position'),
+    require('postcss-opacity'),
+    require('postcss-color-rgba-fallback'),
     // W3C color() function, e.g. div { background: color(red alpha(90%)); }
     // https://github.com/postcss/postcss-color-function
     require('postcss-color-function'),
