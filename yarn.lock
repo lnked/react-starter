@@ -3527,9 +3527,9 @@ find-versions@^1.0.0:
     meow "^3.5.0"
     semver-regex "^1.0.0"
 
-fine-uploader@^5.14.4:
-  version "5.14.4"
-  resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.14.4.tgz#d5d8742d7888f65aa3b02384e13d8c8201a55633"
+fine-uploader@^5.14.5:
+  version "5.14.5"
+  resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.14.5.tgz#967aafdc12ec87604b186f9ba061bdab96b137c1"
 
 firebase@^4.1.3:
   version "4.1.3"
@@ -6427,12 +6427,12 @@ postcss-custom-media@^6.0.0:
   dependencies:
     postcss "^6.0.1"
 
-postcss-custom-properties@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-6.0.1.tgz#db62a42ff6e62f2a9b14c820993c564f224120ed"
+postcss-custom-properties@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-6.1.0.tgz#9caf1151ac41b1e9e64d3a2ff9ece996ca18977d"
   dependencies:
-    balanced-match "^0.4.2"
-    postcss "^6.0.1"
+    balanced-match "^1.0.0"
+    postcss "^6.0.3"
 
 postcss-custom-selectors@^4.0.1:
   version "4.0.1"
@@ -8573,12 +8573,11 @@ stylehacks@^2.3.2:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint-webpack-plugin@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.7.1.tgz#e21624097aa4d4774158d2dd8a5067880f841831"
+stylelint-webpack-plugin@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.8.0.tgz#948aec50e0d3b512374cce067cbbde3661c7d410"
   dependencies:
     arrify "^1.0.1"
-    chalk "^1.1.3"
     minimatch "^3.0.3"
     object-assign "^4.1.0"
     ramda "^0.24.1"

@@ -21,49 +21,7 @@ const rules = [
             {
                 loader: 'babel-loader',
                 options: {
-                    cacheDirectory: define.rs_development,
-                    // babelrc: false,
-                    // presets: [
-                    //     ["env", {
-                    //         "targets": {
-                    //             "node": true,
-                    //             "chrome": 52,
-                    //             "browsers": ["last 2 versions", "> 2%", "safari >= 7"]
-                    //         },
-                    //         "loose": true,
-                    //         "uglify": true,
-                    //         "modules": false,
-                    //         "useBuiltIns": true,
-                    //         "debug": false
-                    //     }], "react",
-                    //     ...define.rs_development ? [ "react-hmre" ] : []
-                    // ],
-                    // plugins: [
-                    //     ...define.rs_production ? [
-                    //         "transform-react-inline-elements",
-                    //         "transform-react-constant-elements",
-                    //         "transform-react-pure-class-to-function",
-                    //         ["transform-react-remove-prop-types", {
-                    //             "mode": "wrap",
-                    //             "ignoreFilenames": ["node_modules"]
-                    //         }]
-                    //     ]: [],
-                    //     ...define.rs_development ? [
-                    //         "transform-react-jsx-source",
-                    //         "transform-react-jsx-self",
-                    //         ["transform-runtime", {
-                    //             "helpers": false,
-                    //             "polyfill": false,
-                    //             "regenerator": true,
-                    //             "moduleName": "babel-runtime"
-                    //         }]
-                    //     ] : [],
-                    //     "transform-class-properties",
-                    //     "dynamic-import-system-import",
-                    //     "transform-decorators-legacy",
-                    //     "dynamic-import-webpack",
-                    //     "dynamic-import-node",
-                    // ]
+                    cacheDirectory: define.rs_development
                 }
             }
         ]
