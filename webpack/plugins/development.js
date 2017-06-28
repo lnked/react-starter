@@ -1,7 +1,6 @@
 'use strict';
 
 const webpack = require('webpack');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 
 const plugins = [
@@ -13,8 +12,6 @@ const plugins = [
 
     // don't spit out any errors in compiled assets
     new webpack.NoEmitOnErrorsPlugin(),
-
-    new LiveReloadPlugin(),
 
     new InterpolateHtmlPlugin({
         PUBLIC_URL: '/'

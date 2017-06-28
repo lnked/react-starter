@@ -1,33 +1,39 @@
 {
+    "sourceMaps": true,
     "presets": [
+        "react",
         ["env", {
             "targets": {
-                "node": true,
-                "chrome": 52,
-                "browsers": ["last 2 versions", "> 2%", "safari >= 7"]
-            },
-            "loose": true,
-            "uglify": true,
-            "modules": false,
-            "useBuiltIns": true,
-            "debug": false
-        }],
-        "react"
+                "browsers": [
+                    "safari >= 9",
+                    "ie 11",
+                    "last 2 Chrome versions",
+                    "last 2 Firefox versions",
+                    "edge 13",
+                    "ios_saf 9.0-9.2",
+                    "ie_mob 11",
+                    "Android >= 4"
+                ],
+                "debug": false,
+                "loose": false,
+                "uglify": true,
+                "modules": false,
+                "useBuiltIns": true
+            }
+        }]
     ],
     "plugins": [
+        "add-module-exports",
         "transform-class-properties",
         "dynamic-import-system-import",
         "transform-decorators-legacy",
         "dynamic-import-webpack",
         "dynamic-import-node",
     ],
-    "ignore": ["third_party"],
     "env": {
         "development": {
-            "presets": [
-                "react-hmre"
-            ],
             "plugins": [
+                "react-hot-loader/babel",
                 "transform-react-jsx-source",
                 "transform-react-jsx-self",
                 ["transform-runtime", {

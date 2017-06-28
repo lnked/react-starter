@@ -10,7 +10,8 @@ import {
 import { SvgFixer } from 'utils'
 import { Sidebar } from 'segments'
 import { Navigation } from 'components'
-import { Load, Page1 } from 'containers'
+import { Page1 } from 'containers'
+// import { Load, Page1 } from 'containers'
 
 export default class CoreLayout extends PureComponent {
     static propTypes = {
@@ -46,15 +47,19 @@ export default class CoreLayout extends PureComponent {
                         <Navigation />
                     </header>
 
-                    <sidebar className={css.sidebar}>
+                    <aside className={css.sidebar}>
                         <Sidebar />
-                    </sidebar>
+                    </aside>
 
                     <section className={css.main}>
                         <div className={css.content}>
                             {this.props.children}
                             <Route exact path="/site" component={Page1}/>
-                            <Route path="/site/*" component={Load}/>
+
+                            {/*
+                                <Route path="/site/*" component={Load}/>
+                            */}
+
                             <Route path="/marketing" component={Page1}/>
                             <Route path="/seo" component={Page1}/>
                             <Route path="/users" component={Page1}/>

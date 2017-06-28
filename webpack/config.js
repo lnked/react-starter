@@ -8,42 +8,20 @@ const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
 
-const host = process.env.HOST || 'localhost';
+const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
 
-const entryPoint = {
-    vendor: [
-        'react',
-        'react-dom',
-        'react-router-dom'
-    ],
-    // app: [
-    //     // activate HMR for React
-    //     'react-hot-loader/patch',
-
-    //     // bundle the client for webpack-dev-server
-    //     // and connect to the provided endpoint
-    //     `webpack-dev-server/client?http://${host}:${port}`,
-
-    //     // bundle the client for hot reloading
-    //     // only- means to only hot reload for successful updates
-    //     'webpack/hot/only-dev-server',
-
-    //     // the entry point of our app
-    //     resolve(define.rs_root, 'app.jsx')
-    // ],
-    app: resolve(define.rs_root, 'app.jsx')
-};
+const entryPoint = require('./entry-point');
 
 module.exports = {
 
     context: define.rs_root,
 
-    devtool: define.rs_development ? 'cheap-module-eval-source-map' : false,
+    devtool: define.rs_development ? 'source-map' : false,
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
-    entry: entryPoint,
+    entry: entryPoint.config,
 
     output: {
         path: define.rs_dist,
@@ -115,8 +93,9 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        hot: define.rs_development,
-        host: '0.0.0.0'
+        hotOnly: define.rs_development,
+        port: port,
+        host: host
     },
 
     watch: define.rs_development,

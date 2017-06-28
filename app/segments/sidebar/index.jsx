@@ -10,11 +10,9 @@ import { Logo } from 'components'
 export default class Sidebar extends Component {
     createNavLinkItem (page) {
         const base = '/site'
-        // key={page.id}
-        // icon={page.system}
-        // label={page.title}
+
         return (
-            <NavLink to={`${base}/${page.system}`} className={css.section} activeClassName={css.active}>
+            <NavLink key={page.id} to={`${base}/${page.system}`} className={css.section} activeClassName={css.active}>
                 <span className={css.title}>{page.title}</span>
                 <span className={css.icon} />
             </NavLink>
