@@ -48,20 +48,18 @@
     "react-motion": "^0.5.0",
     "react-router-dom": "^4.1.1",
     "react-sortable-hoc": "^0.6.3",
-    "react-transition-group": "^1.2.0",
     "react-transmit": "^3.2.0",
     "react-virtualized": "^9.8.0",
     "react-virtualized-select": "^3.0.1",
     "reset-css": "^2.2.0",
-    "webpack-zepto": "^0.0.1",
-    "whatwg-fetch": "^2.0.3"
+    "webpack-zepto": "^0.0.1"
   },
   "devDependencies": {
     "animate-components": "^1.4.2",
     "autoprefixer": "^7.1.0",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.0",
+    "babel-loader": "^7.1.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-dynamic-import-node": "^1.0.2",
     "babel-plugin-dynamic-import-system-import": "^1.0.0",
