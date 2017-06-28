@@ -150,7 +150,7 @@
     "stylelint-webpack-plugin": "^0.8.0",
     "svg-fill-loader": "^0.0.8",
     "svg-sprite-loader": "^3.0.5",
-    "svg-url-loader": "^2.0.2",
+    "svg-url-loader": "^2.1.1",
     "svgo-loader": "^1.2.1",
     "sw-precache-webpack-plugin": "^0.11.3",
     "uglify-js": "^3.0.20",

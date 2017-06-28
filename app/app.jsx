@@ -8,6 +8,8 @@ import { CoreLayout } from 'layouts'
 // Pages
 import { Home } from 'containers'
 
+performance.mark('start')
+
 render((
     <CoreLayout>
         <Home />
@@ -21,3 +23,6 @@ if (process.env.NODE_ENV === 'development') {
         module.hot.accept()
     }
 }
+
+performance.mark('end')
+performance.measure('t', 'start', 'end')

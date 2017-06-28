@@ -9,12 +9,12 @@ import {
 } from 'react-router-dom'
 
 // Layouts
-import {CoreLayout} from 'layouts'
+import { CoreLayout } from 'layouts'
 // import {CoreLayout, AuthLayout} from 'layouts'
 
 // Pages
 // import {Auth, Page1, Load, NoMatch} from 'containers'
-import {Load} from 'containers'
+import { Load } from 'containers'
 
 // function def(promise) {
 //   return promise.then(cmp => {
@@ -125,7 +125,7 @@ import {Load} from 'containers'
 
 export default class App extends Component {
 
-    constructor (props) {
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -133,23 +133,23 @@ export default class App extends Component {
         }
     }
 
-    componentDidMount () {
+    componentDidMount() {
         document.body.classList.toggle('is-overflow', this.state.isOverflow)
     }
 
-    componentWillUpdate (nextProps, nextState) {
+    componentWillUpdate(nextProps, nextState) {
         document.body.classList.toggle('is-overflow', nextState.isOverflow)
     }
 
-    componentWillUnmount () {
+    componentWillUnmount() {
         document.body.classList.remove('is-overflow')
     }
 
-    requireAuth (nextState, replace) {
+    requireAuth(nextState, replace) {
         console.log(replace, nextState.location.pathname)
     }
 
-    render () {
+    render() {
         // <Router history={this.props.history}>
         //     <div>
         //         <Route exact path="/" name="Home" component={Index} />
@@ -178,87 +178,98 @@ export default class App extends Component {
         //     <Route path="/cp/site/settings" component={Page1} />
         // </CoreLayout>
 
-        return (
-            <Router basename="/cp">
-                <div>
-                    {/*
-                        <IndexRoute component={Page1} />
-                        <Route path="/cp" component={Load}/>
-                        <Route exact path="/" component={Page1}/>
-                        <Redirect from="/" to="/cp" />
-                        <Route exact path="/cp" component={Auth} />
-                    */}
+        return ( <
+            Router basename = "/cp" >
+            <
+            div > {
+                /*
+                                        <IndexRoute component={Page1} />
+                                        <Route path="/cp" component={Load}/>
+                                        <Route exact path="/" component={Page1}/>
+                                        <Redirect from="/" to="/cp" />
+                                        <Route exact path="/cp" component={Auth} />
+                                    */
+            }
 
-                    <CoreLayout>
-                        <Route path="/" component={Load} />
-                    </CoreLayout>
+            <
+            CoreLayout >
+            <
+            Route path = "/"
+            component = { Load }
+            /> <
+            /CoreLayout>
 
-                    {/*
-                    <CoreLayout>
-                        <Route path="/cp/site" component={Load} />
-                        <Route path="/cp/site/structure" component={Page1} />
-                        <Route path="/cp/site/menu" component={Auth} />
-                        <Route path="/cp/site/module" component={Page1} />
-                        <Route path="/cp/site/storage" component={Page1} />
-                        <Route path="/cp/site/settings" component={Page1} />
-                    </CoreLayout>
+            {
+                /*
+                                    <CoreLayout>
+                                        <Route path="/cp/site" component={Load} />
+                                        <Route path="/cp/site/structure" component={Page1} />
+                                        <Route path="/cp/site/menu" component={Auth} />
+                                        <Route path="/cp/site/module" component={Page1} />
+                                        <Route path="/cp/site/storage" component={Page1} />
+                                        <Route path="/cp/site/settings" component={Page1} />
+                                    </CoreLayout>
 
-                    <Route
-                        component={NoMatch}
-                        onEnter={() => {
-                            this.setState({
-                                isOverflow: true
-                            })
-                        }}
-                        onLeave={() => {
-                            this.setState({
-                                isOverflow: false
-                            })
-                        }}
-                        status={404}
-                    />
-                    */}
-                </div>
+                                    <Route
+                                        component={NoMatch}
+                                        onEnter={() => {
+                                            this.setState({
+                                                isOverflow: true
+                                            })
+                                        }}
+                                        onLeave={() => {
+                                            this.setState({
+                                                isOverflow: false
+                                            })
+                                        }}
+                                        status={404}
+                                    />
+                                    */
+            } <
+            /div>
 
-                {/*
-                {routes.map((route, i) => (
-                    <Route key={i} path={route.path} render={props => (
-                        <route.component {...props} routes={route.routes}/>
-                    )}/>
-                ))}
+            {
+                /*
+                                {routes.map((route, i) => (
+                                    <Route key={i} path={route.path} render={props => (
+                                        <route.component {...props} routes={route.routes}/>
+                                    )}/>
+                                ))}
 
-                <RouteWithSubRoutes key={i} {...route}/>
-                <Switch>
+                                <RouteWithSubRoutes key={i} {...route}/>
+                                <Switch>
 
-                    <Route path="/cp" component={CoreLayout} />
+                                    <Route path="/cp" component={CoreLayout} />
 
-                    <Route path="/" component={AuthLayout}>
-                        <IndexRoute component={Auth} />
-                        <Route path="/cp" component={Auth} />
-                    </Route>
+                                    <Route path="/" component={AuthLayout}>
+                                        <IndexRoute component={Auth} />
+                                        <Route path="/cp" component={Auth} />
+                                    </Route>
 
-                    <Redirect from="/" to="/cp/site" />
-                    <Route path="/cp" component={CoreLayout}>
-                        <IndexRoute component={Page1} />
+                                    <Redirect from="/" to="/cp/site" />
+                                    <Route path="/cp" component={CoreLayout}>
+                                        <IndexRoute component={Page1} />
 
-                        <Route path="settings" component={Load} />
+                                        <Route path="settings" component={Load} />
 
-                        <Route path="site" component={Page1}>
-                            <Route path="structure" component={Page1} />
-                            <Route path="menu" component={Page1} />
-                            <Route path="module" component={Page1} />
-                            <Route path="storage" component={Page1} />
-                            <Route path="settings" component={Page1} />
-                        </Route>
-                    </Route>
+                                        <Route path="site" component={Page1}>
+                                            <Route path="structure" component={Page1} />
+                                            <Route path="menu" component={Page1} />
+                                            <Route path="module" component={Page1} />
+                                            <Route path="storage" component={Page1} />
+                                            <Route path="settings" component={Page1} />
+                                        </Route>
+                                    </Route>
 
-                    <Route path="main" component={Page1}/>
-                    <Route path="company" component={Load}/>
+                                    <Route path="main" component={Page1}/>
+                                    <Route path="company" component={Load}/>
 
-                </Switch>
-                */}
+                                </Switch>
+                                */
+            }
 
-            </Router>
+            <
+            /Router>
         )
     }
 }
@@ -339,4 +350,3 @@ export default class App extends Component {
     }
 }
 */
-
