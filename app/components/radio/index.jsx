@@ -1,17 +1,17 @@
 import React, { PureComponent } from 'react'
-import { oneOfType, string, bool, func, number } from 'prop-types'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class Radio extends PureComponent {
     static propTypes = {
-        name: string.isRequired,
-        checked: bool,
-        label: string,
-        children: string,
-        handleChange: func,
-        value: oneOfType([
-            string,
-            number
+        name: PropTypes.string.isRequired,
+        checked: PropTypes.bool,
+        label: PropTypes.string,
+        children: PropTypes.string,
+        handleChange: PropTypes.func,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
         ])
     }
 

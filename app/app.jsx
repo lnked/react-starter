@@ -6,13 +6,13 @@ import { render } from 'react-dom'
 import { CoreLayout } from 'layouts'
 
 // Pages
-import { Home } from 'containers'
+import { ComponentPage } from 'containers'
 
 performance.mark('start')
 
 render((
     <CoreLayout>
-        <Home />
+        <ComponentPage />
     </CoreLayout>
 ), document.getElementById('root'))
 

@@ -1,0 +1,62 @@
+@import "assets/styles/_global.scss";
+
+.masked {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.input {
+    width: 100%;
+    height: 42px;
+    padding: 0 20px;
+    color: $c-black;
+    font-size: 1.4rem;
+    outline: none;
+    background-color: $c-white;
+    border: 1px solid $c-whisper;
+    transition: border-color $a-time $a-func, color $a-time $a-func;
+
+    &::placeholder {
+        color: $c-pink-swan;
+        opacity: 1;
+        transition: opacity $a-time $a-func;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+        opacity: 0;
+    }
+
+    &[placeholder],
+    &::placeholder {
+        text-overflow: ellipsis;
+    }
+
+    &:hover {
+        border-color: $c-black;
+    }
+
+    &:focus {
+        border-color: $c-cobalt;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+        appearance: none;
+    }
+}

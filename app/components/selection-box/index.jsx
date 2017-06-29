@@ -1,24 +1,29 @@
 import React, { PureComponent } from 'react'
-import { oneOfType, string, array, bool, func, number } from 'prop-types'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class SelectionBox extends PureComponent {
     static propTypes = {
-        items: array,
-        name: string,
-        isMultiple: bool,
-        handleChange: func,
-        checked: oneOfType([
-            array,
-            string,
-            number
+        items: PropTypes.array,
+        name: PropTypes.string,
+        type: PropTypes.string,
+        isMultiple: PropTypes.bool,
+        handleChange: PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.bool
+        ]),
+        checked: PropTypes.oneOfType([
+            PropTypes.array,
+            PropTypes.string,
+            PropTypes.number
         ])
     }
 
     static defaultProps = {
         items: [],
+        type: 'default',
         isMultiple: false,
-        handleChange: (value) => { console.log('check checkbox: = ', value) }
+        handleChange: false
     }
 
     constructor (props) {
@@ -59,7 +64,9 @@ export default class SelectionBox extends PureComponent {
             })
         }
 
-        this.props.handleChange(value)
+        if (this.props.handleChange) {
+            this.props.handleChange(value)
+        }
     }
 
     renderGroup () {
@@ -90,7 +97,7 @@ export default class SelectionBox extends PureComponent {
                 }
 
                 group.push(
-                    <div key={id.toString()} className={css.item}>
+                    <div key={id.toString()} className={`${css.item} ${css[`item_${this.props.type}`]}`}>
                         <label className={css.label}>
                             <input
                                 type={type}

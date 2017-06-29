@@ -1,24 +1,31 @@
 import React, { PureComponent } from 'react'
-import { oneOfType, string, bool, func, number } from 'prop-types'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class Checkbox extends PureComponent {
     static propTypes = {
-        name: string.isRequired,
-        label: string,
-        children: string,
-        checked: bool,
-        handleChange: func,
-        value: oneOfType([
-            string,
-            number
+        size: PropTypes.string,
+        name: PropTypes.string.isRequired,
+        label: PropTypes.string,
+        children: PropTypes.string,
+        checked: PropTypes.bool,
+        className: PropTypes.string,
+        handleChange: PropTypes.oneOfType([
+            PropTypes.func,
+            PropTypes.bool
+        ]),
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
         ])
     }
 
     static defaultProps = {
+        size: 'normal',
         label: '',
+        className: '',
         checked: false,
-        handleChange: (value) => { console.log('check checkbox: = ', value) }
+        handleChange: false
     }
 
     constructor (props) {
@@ -33,19 +40,33 @@ export default class Checkbox extends PureComponent {
         })
     }
 
+    componentWillReceiveProps (nextProps) {
+        if (this.props.checked !== nextProps.checked) {
+            this.setState({...this.props, checked: nextProps.checked})
+        }
+    }
+
     handleChange (e) {
         const checked = e.nativeEvent.target.value
 
-        this.setState({
-            checked: !this.state.checked
+        this.setState({...this.state, checked: !this.state.checked}, () => {
+            if (this.props.handleChange) {
+                this.props.handleChange(checked, this.state.checked)
+            }
         })
+    }
 
-        this.props.handleChange(checked)
+    renderLabel () {
+        if (this.props.label) {
+            return (
+                <span className={css.label}>{this.props.label || this.props.children}</span>
+            )
+        }
     }
 
     render () {
         return (
-            <label className={css.checkbox}>
+            <label className={`${css.checkbox} ${this.props.className} ${css[`checkbox_${this.props.size}`]}`}>
                 <input
                     type="checkbox"
                     name={this.props.name}
@@ -54,7 +75,8 @@ export default class Checkbox extends PureComponent {
                     checked={this.state.checked}
                     onChange={this.handleChange.bind(this)}
                 />
-                <span className={css.label}>{this.props.label || this.props.children}</span>
+                <span className={css.status} />
+                { this.renderLabel() }
             </label>
         )
     }

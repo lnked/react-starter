@@ -1,9 +1,22 @@
 @import "assets/styles/_global.scss";
 
 .checkbox {
-    line-height: 20px;
+    color: $c-black;
     position: relative;
     display: inline-block;
+    transition: color $a-time $a-func;
+
+    &_small {
+        min-width: 16px;
+        min-height: 16px;
+        line-height: 16px;
+    }
+
+    &_normal {
+        min-width: 20px;
+        min-height: 20px;
+        line-height: 20px;
+    }
 }
 
 .input {
@@ -17,14 +30,12 @@
 }
 
 .label {
-    color: $c-black;
-    font-size: 1.4rem;
-    line-height: 1.45;
-    padding-left: 30px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
+}
 
+.status {
     &:after, &:before {
         content: "";
         position: absolute;
@@ -33,31 +44,64 @@
     &:before {
         left: 0;
         top: 0;
-        width: 20px;
-        height: 20px;
         background-color: $c-white;
         border: solid 1px $c-whisper;
     }
 
     &:after {
         content: "";
-        width: 11px;
-        height: 6px;
         position: absolute;
-        left: 5px;
-        top: 5px;
         opacity: 0;
         border-image: none;
         border-color: $c-cobalt;
         border-style: solid;
-        border-width: 0 0 2px 2px;
         transform: rotate(-45deg);
         transition: opacity $a-micro-time $a-func;
     }
 }
 
-.input:checked + .label {
+.input:checked + .status {
     &:after {
         opacity: 1;
+    }
+}
+
+.checkbox_small > .label {
+    font-size: 1.2rem;
+    padding-left: 26px;
+}
+
+.checkbox_small > .status {
+    &:before {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:after {
+        width: 10px;
+        height: 5px;
+        left: 4px;
+        top: 4px;
+        border-width: 0 0 1px 1px;
+    }
+}
+
+.checkbox_normal > .label {
+    font-size: 1.4rem;
+    padding-left: 30px;
+}
+
+.checkbox_normal > .status {
+    &:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:after {
+        width: 11px;
+        height: 6px;
+        left: 5px;
+        top: 6px;
+        border-width: 0 0 2px 2px;
     }
 }

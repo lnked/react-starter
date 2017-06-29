@@ -1,0 +1,10 @@
+@import "assets/styles/_global.scss";
+
+.hint {
+    color: $c-black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 12px 15px;
+    background-color: #fefce8;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}

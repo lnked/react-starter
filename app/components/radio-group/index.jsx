@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
-import { oneOfType, string, array, number, func } from 'prop-types'
+import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 import { Radio } from 'components'
 
 export default class RadioGroup extends Component {
     static propTypes = {
-        items: array,
-        checked: oneOfType([
-            string,
-            number
+        type: PropTypes.string,
+        items: PropTypes.array,
+        checked: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
         ]),
-        handleChange: func
+        handleChange: PropTypes.func
     }
 
     static defaultProps = {
+        type: 'normal',
         items: [],
         handleChange: (value) => { console.log('change value: = ', value) }
     }
@@ -68,7 +70,7 @@ export default class RadioGroup extends Component {
 
     render () {
         return (
-            <div className={css.group}>
+            <div className={`${css.group} ${css[`group_${this.props.type}`]}`}>
                 { this.renderGroup() }
             </div>
         )

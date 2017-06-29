@@ -1,0 +1,119 @@
+@import "assets/styles/_global.scss";
+
+.picker {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.control {
+    max-width: 150px;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 42px;
+    outline: none;
+    color: $c-black;
+    font-weight: 400;
+    padding: 0 20px;
+    font-size: 1.4rem;
+    font-family: $font-family;
+    background-color: $c-white;
+    border: 1px solid $c-whisper;
+    transition: border-color $a-time $a-func, color $a-time $a-func;
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+
+    &::placeholder {
+        color: $c-pink-swan;
+        opacity: 1;
+        transition: opacity $a-time $a-func;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+        opacity: 0;
+    }
+
+    &[placeholder],
+    &::placeholder {
+        text-overflow: ellipsis;
+    }
+
+    &:hover {
+        border-color: $c-black;
+    }
+
+    &:focus {
+        border-color: $c-cobalt;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+        appearance: none;
+    }
+}
+
+.clear {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    line-height: 1;
+    margin-top: -5px;
+    cursor: pointer;
+    color: $c-pink-swan;
+    transition: color $a-time $a-func;
+
+    &__icon {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        color: $c-black;
+    }
+}
+
+.grill {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    font-size: 1.4rem;
+    line-height: 42px;
+}
+
+.paint {
+    width: 42px;
+    height: 42px;
+    display: block;
+    margin-left: 20px;
+    background-color: $c-white;
+    border: 1px solid $c-whisper;
+}

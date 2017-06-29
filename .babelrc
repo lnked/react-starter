@@ -24,6 +24,7 @@
     ],
     "plugins": [
         "add-module-exports",
+        "transform-object-rest-spread",
         "transform-class-properties",
         "dynamic-import-system-import",
         "transform-decorators-legacy",

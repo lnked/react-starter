@@ -1,8 +1,14 @@
 @import "assets/styles/_global.scss";
 
 .group {
-    &__item {
+    &_normal &__item {
         clear: both;
         margin-bottom: 15px;
+    }
+
+    &_inline &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
     }
 }

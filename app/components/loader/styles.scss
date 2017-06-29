@@ -1,0 +1,48 @@
+@import "assets/styles/_global.scss";
+
+$a-animation-time: 1.4s;
+$a-animation-bounce: $a-animation-time / 2;
+
+@keyframes bounce-delay {
+    0%,
+    80%,
+    100% { 
+        transform: scale(0);
+    }
+
+    40% { 
+        transform: scale(1.0);
+    }
+}
+
+.preloader {
+    margin: 0 auto;
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    &__bullet {
+        width: 14px;
+        height: 14px;
+        margin: 0 2px;
+        border-radius: 100%;
+        display: inline-block;
+        background-color: $c-cobalt;
+
+        animation-name: bounce-delay;
+        animation-duration: $a-animation-time;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+
+        &:nth-child(1) {
+            animation-delay: - $a-animation-bounce / 2;
+        }
+
+        &:nth-child(2) {
+            animation-delay: - $a-animation-bounce / 3;
+        }
+    }
+}

@@ -86,7 +86,7 @@ module.exports = {
         historyApiFallback: true,
         watchOptions: {
             aggregateTimeout: 100,
-            poll: 1000
+            poll: 300
         },
         overlay: {
             warnings: true,

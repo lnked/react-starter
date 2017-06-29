@@ -1,0 +1,12 @@
+@import "assets/styles/_global.scss";
+
+.badge {
+    padding: 2px;
+    line-height: 1;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    display: inline-block;
+    color: darken(#3DB27F, 25%);
+    border: 1px solid #3DB27F;
+    background-color: #3DB27F;
+}

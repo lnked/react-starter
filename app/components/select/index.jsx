@@ -10,7 +10,9 @@ export default class Select extends PureComponent {
         handleChange: func,
         placeholder: string,
         selectedOption: oneOfType([
+            bool,
             array,
+            object,
             string,
             number
         ]),

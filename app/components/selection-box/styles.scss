@@ -9,14 +9,23 @@
 }
 
 .item {
-    min-width: 121px;
     height: 42px;
-    text-align: center;
-    background-color: $c-white;
-    border: 1px solid $c-whisper;
 
-    &:not(:first-child) {
-        margin-left: -1px;
+    &_default {
+        min-width: 121px;
+        text-align: center;
+        background-color: $c-white;
+        border: 1px solid $c-whisper;
+
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+
+    &_inline {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
     }
 
     input {
@@ -31,10 +40,8 @@
 
 .visible {
     width: 100%;
-    height: 40px;
     display: block;
     color: $c-black;
-    padding: 0 20px;
     font-size: 1.2rem;
     line-height: 42px;
     text-align: center;
@@ -43,4 +50,13 @@
 .input:checked + .visible {
     color: $c-cobalt;
     background-color: $c-white-smoke;
+}
+
+.item_default .visible {
+    height: 40px;
+    padding: 0 20px;
+}
+
+.item_inline .visible {
+    height: 42px;
 }

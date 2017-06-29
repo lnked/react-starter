@@ -1,0 +1,68 @@
+@import "assets/styles/_global.scss";
+
+.notify {
+    width: 18px;
+    height: 17px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before, &:after {
+        width: 18px;
+        height: 17px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 18px 17px;
+        transition: opacity $a-time $a-func;
+    }
+
+    &:before {
+        opacity: 1;
+        z-index: 1;
+        background-image: url(components/notify/assets/bell.svg);
+    }
+
+    &:after {
+        opacity: 0;
+        z-index: 2;
+        background-image: url(components/notify/assets/bell-hover.svg);
+    }
+
+    &:hover {
+        &:before {
+            opacity: 0;
+        }
+
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $max-tablet) {
+        width: 16px;
+        height: 15px;
+        margin-top: -1px;
+        background-size: 16px 15px;
+    }
+
+    &__bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        right: -2px;
+        top: -4px;
+        z-index: 20;
+        background-color: $c-carrot-orange;
+
+        @media (max-width: $max-tablet) {
+            width: 7px;
+            height: 7px;
+        }
+    }
+}
