@@ -57,6 +57,6 @@
     &::-webkit-inner-spin-button,
     &::-webkit-calendar-picker-indicator {
         display: none;
-        appearance: none;
+        -webkit-appearance: none;
     }
 }
