@@ -15,18 +15,24 @@ const plugins = [
         basePath: define.rs_output_path,
         fileName: "webpack-manifest.json"
     }),
-    new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
-        name: ['vendor'],
+        name: 'vendor',
         filename: 'js/vendor.[hash:5].js',
-        minChunks: function (module) {
-            return module.context && module.context.indexOf('node_modules') !== -1;
+        minChunks(module) {
+            return module.context && module.context.indexOf('node_modules') >= 0;
         }
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //     name: "manifest",
-    //     minChunks: Infinity
-    // }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'manifest',
+        minChunks: Infinity
+    }),
+    new webpack.HashedModuleIdsPlugin(),
+    new WebpackChunkHash(),
+    new ChunkManifestPlugin({
+        filename: 'chunk-manifest.json',
+        manifestVariable: 'webpackManifest',
+        inlineManifest: true
+    }),
     new ExtractTextPlugin({
         filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
         allChunks: define.rs_production
@@ -34,13 +40,9 @@ const plugins = [
     new ResourceHintWebpackPlugin(),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,
+        inline: 'manifest',
         defaultAttribute: 'async'
-    }),
-    new ChunkManifestPlugin({
-        filename: 'chunk-manifest.json',
-        manifestVariable: 'webpackManifest'
-    }),
-    new webpack.HashedModuleIdsPlugin()
+    })
 ];
 
 module.exports.config = plugins;

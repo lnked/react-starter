@@ -61,7 +61,7 @@ Then in JSX:
 export default class MyComponent extends Component {
     render() {
         return (
-            
+            {/* ... */}
         )
     }
 }
@@ -86,37 +86,31 @@ yarn install
 Start dev-server
 
 ```bash
-yarn start
+yarn run start
 ```
 
 Build assets
 
 ```bash
-yarn build
+yarn run build
 ```
 
 Run tests
 
 ```bash
-yarn test
+yarn run test
 ```
 
 Lint
 
 ```bash
-yarn lint
+yarn run lint
 ```
 
 Fix
 
 ```bash
-yarn lint-fix
-```
-
-Publish (build, tests & lint)
-
-```bash
-npm run publish
+yarn run lint-fix
 ```
 
 ## Todo
