@@ -1,7 +1,9 @@
 {
     "parser": "babel-eslint",
     "extends": [
-        "plugin:react/recommended", "standard", "plugin:import/warnings"
+        "plugin:react/recommended",
+        "plugin:import/warnings",
+        "standard"
     ],
     "parserOptions": {
         "ecmaVersion": 6,
