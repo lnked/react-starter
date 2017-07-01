@@ -8,7 +8,6 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack2-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -37,10 +36,10 @@ const plugins = [
         filename: define.rs_production ? 'css/[name].[hash:5].css' : '[name].css',
         allChunks: define.rs_production
     }),
-    new ResourceHintWebpackPlugin(),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,
         inline: 'manifest',
+        preload: ['vendor', 'app'],
         defaultAttribute: 'async'
     })
 ];

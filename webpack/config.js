@@ -17,7 +17,7 @@ module.exports = {
 
     context: define.rs_root,
 
-    devtool: define.rs_development ? 'source-map' : false,
+    devtool: define.rs_development ? 'cheap-module-source-map' : false,
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
@@ -105,18 +105,4 @@ module.exports = {
     bail: define.rs_production,
 
     cache: define.rs_development,
-
-    node: {
-        dns: "mock",
-        fs: "empty",
-        path: true,
-        url: false,
-        global: true,
-        process: true,
-        Buffer: true,
-        console: false,
-        __filename: "mock",
-        __dirname: "mock",
-        setImmediate: true
-    }
 };

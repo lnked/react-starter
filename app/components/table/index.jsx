@@ -204,12 +204,14 @@ export default class Table extends PureComponent {
 
     render () {
         return (
-            <table className={css.table}>
-                { this.renderCols() }
-                { this.renderHead() }
-                { this.renderBody() }
-                { this.renderFoot() }
-            </table>
+            <div className={css.container}>
+                <table className={css.table}>
+                    { this.renderCols() }
+                    { this.renderHead() }
+                    { this.renderBody() }
+                    { this.renderFoot() }
+                </table>
+            </div>
         )
     }
 }

@@ -12,6 +12,7 @@ const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
 ];
 
 postcss.push(
+    require('postcss-inline-comment'),
     require('postcss-bem-linter'),
     require('postcss-import')({
         root: define.rs_root,
