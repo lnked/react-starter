@@ -52,58 +52,82 @@
     }
     
     &:nth-child(1) {
+        color: #fd7474;
+
         &:after {
-            background-color: #FF5C60;
-            background-color: #ffd920;
+            background-color: #fd7474;
         }
     }
     
     &:nth-child(2) {
+        color: #fed971;
+
         &:after {
-            background-color: #FFBB73;
-            background-color: #ff639d;
+            background-color: #fed971;
         }
     }
 
     &:nth-child(3) {
+        color: #fdfe6b;
+
         &:after {
-            background-color: #FCF582;
-            background-color: #8963ff;
+            background-color: #fdfe6b;
         }
     }
     
     &:nth-child(4) {
+        color: #d1fe6b;
+
         &:after {
-            background-color: #C2FA92;
-            background-color: #05E487;
+            background-color: #d1fe6b;
         }
     }
     
     &:nth-child(5) {
+        color: #6bfe74;
+
         &:after {
-            background-color: #6EC7FC;
-            background-color: #2A91FF;
+            background-color: #6bfe74;
         }
     }
     
     &:nth-child(6) {
+        color: #6bfeda;
+
         &:after {
-            background-color: #BB7FF3;
-            background-color: #FFD920;
+            background-color: #6bfeda;
         }
     }
     
     &:nth-child(7) {
+        color: #6bfdfe;
+
         &:after {
-            background-color: #FF54CF;
-            background-color: #FF982A;
+            background-color: #6bfdfe;
         }
     }
     
     &:nth-child(8) {
+        color: #6bd1fe;
+
         &:after {
-            background-color: #01E4C0;
-            background-color: #8963FF;
+            background-color: #6bd1fe;
+        }
+    }
+
+    &:nth-child(9) {
+        color: #746bfe;
+
+        &:after {
+            background-color: #746bfe;
+        }
+    }
+
+    &:nth-child(10) {
+        color: #da6bfe;
+
+        &:after {
+            background-color: #da6bfe;
         }
     }
 }

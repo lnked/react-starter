@@ -5,6 +5,7 @@ import css from './styles.scss'
 export default class Checkbox extends PureComponent {
     static propTypes = {
         size: PropTypes.string,
+        theme: PropTypes.string,
         name: PropTypes.string.isRequired,
         label: PropTypes.string,
         children: PropTypes.string,
@@ -22,6 +23,7 @@ export default class Checkbox extends PureComponent {
 
     static defaultProps = {
         size: 'normal',
+        theme: '',
         label: '',
         className: '',
         checked: false,
@@ -56,6 +58,16 @@ export default class Checkbox extends PureComponent {
         })
     }
 
+    renderStatus () {
+        const { theme } = this.props
+
+        if (theme) {
+            return <span className={`${css.status} ${css[`status_${theme}`]}`} />
+        } else {
+            return <span className={css.status} />
+        }
+    }
+
     renderLabel () {
         if (this.props.label) {
             return (
@@ -75,7 +87,7 @@ export default class Checkbox extends PureComponent {
                     checked={this.state.checked}
                     onChange={this.handleChange.bind(this)}
                 />
-                <span className={css.status} />
+                { this.renderStatus() }
                 { this.renderLabel() }
             </label>
         )

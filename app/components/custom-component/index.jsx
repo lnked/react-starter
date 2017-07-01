@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import css from './styles.scss'
 
+import Table from 'components/table'
 import Button from 'components/button'
 import Input from 'components/input'
 import ColorPicker from 'components/color-picker'
@@ -53,6 +54,13 @@ export default class CustomComponent extends Component {
             //         </div>
             //     )
             // },
+            table: (props) => {
+                return (
+                    <div key={Math.random()} className={css.item}>
+                        <Table {...props} />
+                    </div>
+                )
+            },
             breadcrumbs: (props) => {
                 return (
                     <div key={Math.random()} className={css.item}>

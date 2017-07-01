@@ -1,0 +1,70 @@
+@import "assets/styles/_global.scss";
+
+$s-table-padding: 10px;
+// $c-table-border-color: #ececec;
+$c-table-border-color: #e4e8eb;
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.row:hover .col {
+    background-color: #f8f9fb;
+}
+
+.row_checked {
+    &, &:hover {
+        .col {
+            background-color: #fefbf2;
+        }
+    }
+}
+
+.col {
+    vertical-align: middle;
+    padding: $s-table-padding;
+    border: 1px solid $c-table-border-color;
+}
+
+.tcol {
+    color: #222;
+    font-weight: 700;
+    vertical-align: middle;
+    padding: 0 $s-table-padding;
+    background-color: #ffd530;
+    border: 1px solid #ffd530;
+    border-bottom: 2px solid #666;
+}
+
+.fcol {
+    vertical-align: middle;
+    padding: $s-table-padding;
+    background-color: #f9f6f6;
+    border: 1px solid $c-table-border-color;
+    border-width: 3px 1px 1px;
+}
+
+.sorter {
+    padding: $s-table-padding 0;
+    display: block;
+    cursor: pointer;
+    background-image: url('components/table/assets/sort-default.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 12px 12px;
+
+    &_ascending {
+        background-image: url('components/table/assets/sort-ascending.svg');
+    }
+
+    &_descending {
+        background-image: url('components/table/assets/sort-descending.svg');
+    }
+}
+
+.center {
+    padding: 0;
+    text-align: center;
+}

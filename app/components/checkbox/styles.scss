@@ -1,9 +1,11 @@
 @import "assets/styles/_global.scss";
 
 .checkbox {
+    cursor: pointer;
     color: $c-black;
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     transition: color $a-time $a-func;
 
     &_small {
@@ -45,7 +47,7 @@
         left: 0;
         top: 0;
         background-color: $c-white;
-        border: solid 1px $c-whisper;
+        border: 1px solid  $c-whisper;
     }
 
     &:after {
@@ -53,10 +55,16 @@
         position: absolute;
         opacity: 0;
         border-image: none;
-        border-color: $c-cobalt;
+        border-color: #222;
         border-style: solid;
         transform: rotate(-45deg);
         transition: opacity $a-micro-time $a-func;
+    }
+
+    &_dark {
+        &:before {
+            border-color: #ccb661;
+        }
     }
 }
 
@@ -78,11 +86,11 @@
     }
 
     &:after {
-        width: 10px;
+        width: 9px;
         height: 5px;
         left: 4px;
-        top: 4px;
-        border-width: 0 0 1px 1px;
+        top: 5px;
+        border-width: 0 0 2px 2px;
     }
 }
 
