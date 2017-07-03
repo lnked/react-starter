@@ -5,6 +5,20 @@ const define = require('../define');
 const postcss = require('../postcss');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+const cssConfig = [
+    {
+        loader: 'css-loader',
+        options: {
+            module: true,
+            sourceMap: false,
+            modules: define.rs_production,
+            minimize: define.rs_production,
+            discardComments: { removeAll: true },
+            localIdentName: '[name]'
+        }
+    }
+];
+
 const usesConfig = [
     {
         loader: 'css-loader',
@@ -19,20 +33,20 @@ const usesConfig = [
         }
     },
     {
+        loader: 'sass-loader',
+        options: {
+            outputStyle: define.rs_production ? 'collapsed' : 'expanded',
+            sourceMap: define.rs_production,
+            includePaths: [ define.rs_root ]
+        }
+    },
+    {
         loader: 'sasslint-loader',
         options: {
             quiet: true,
             emitError: true,
             failOnError: true,
             failOnWarning: true
-        }
-    },
-    {
-        loader: 'sass-loader',
-        options: {
-            outputStyle: define.rs_production ? 'collapsed' : 'expanded',
-            sourceMap: define.rs_production,
-            includePaths: [ define.rs_root ]
         }
     },
     {
@@ -48,23 +62,57 @@ const usesConfig = [
 
 const rules = define.rs_generate_css ? [
         {
-            test: /\.(s?(a|c)ss)$/,
+            test: /\.(css)$/,
             use: ExtractTextPlugin.extract({
                 publicPath: '../',
                 fallback: 'style-loader',
+                allChunks: true,
+                use: cssConfig
+            }),
+            include: [
+                define.rs_node,
+                define.rs_root
+            ]
+        },
+        {
+            test: /\.(s(a|c)ss)$/,
+            use: ExtractTextPlugin.extract({
+                publicPath: '../',
+                fallback: 'style-loader',
+                allChunks: true,
                 use: usesConfig
-            })
+            }),
+            include: [
+                define.rs_node,
+                define.rs_root
+            ]
         }
     ] : [
     {
-        test: /\.(css|s[a|c]ss)$/,
+        test: /\.(css)$/,
+        use: [
+            {
+                loader: 'style-loader'
+            },
+            ...cssConfig
+        ],
+        include: [
+            define.rs_node,
+            define.rs_root
+        ]
+    },
+    {
+        test: /\.(s(a|c)ss)$/,
         use: [
             {
                 loader: 'style-loader'
             },
             ...usesConfig
         ],
-        include: [ define.rs_root ]
+        include: [
+            define.rs_node,
+            define.rs_root
+        ]
     }
 ];
 

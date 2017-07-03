@@ -2,6 +2,7 @@
 
 const { resolve } = require('path');
 
+const _node_ = resolve(__dirname, '../node_modules');
 const _root_ = resolve(__dirname, '../app');
 const _dist_ = resolve(__dirname, '../dist');
 const _deploy_ = '/react-starter/';
@@ -19,9 +20,10 @@ process.env.NODE_ENV = isProduction ? 'production' : 'development';
 module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
+    rs_node: _node_,
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
-    rs_generate_css: isRelease,
+    rs_generate_css: isProduction,
     rs_production: isProduction,
     rs_development: isDevelopment,
     rs_output_path: isDeploy ? _deploy_ : '',

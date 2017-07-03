@@ -39,7 +39,7 @@ module.exports = {
         mainFiles: ['index'],
         enforceExtension: false,
         enforceModuleExtension: false,
-        extensions: ['.js', '.jsx', '.json', '.scss'],
+        extensions: ['.js', '.jsx', '.json', '.css', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
             hoc: resolve(define.rs_root, 'hoc'),
@@ -71,8 +71,8 @@ module.exports = {
 
     performance: define.rs_production && {
         hints: 'warning',
-        maxAssetSize: 300000,
-        maxEntrypointSize: 400000,
+        maxAssetSize: 400000,
+        maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
 

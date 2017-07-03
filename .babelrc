@@ -24,12 +24,10 @@
     ],
     "plugins": [
         "add-module-exports",
-        "transform-object-rest-spread",
-        "transform-class-properties",
-        "dynamic-import-system-import",
+        "syntax-dynamic-import",
         "transform-decorators-legacy",
-        "dynamic-import-webpack",
-        "dynamic-import-node"
+        "transform-object-rest-spread",
+        ["transform-class-properties", { "spec": true }]
     ],
     "env": {
         "development": {

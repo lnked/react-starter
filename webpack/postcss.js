@@ -75,7 +75,8 @@ postcss.push(
     require('postcss-import-url'),
     require('postcss-quantity-queries'),
     require('postcss-flexboxfixer'),
-    require('postcss-gradientfixer')
+    require('postcss-gradientfixer'),
+    require('postcss-easings')
 );
 
 if (define.rs_production) {
