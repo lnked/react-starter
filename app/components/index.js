@@ -22,6 +22,7 @@ import ColorPicker from 'components/color-picker'
 import SelectionBox from 'components/selection-box'
 import CustomComponent from 'components/custom-component'
 import BreadCrumbs from 'components/bread-crumbs'
+import SidebarIcon from 'components/sidebar-icon'
 
 export {
     Tabs,
@@ -44,8 +45,9 @@ export {
     MaskedText,
     Navigation,
     RadioGroup,
-    ColorPicker,
     BreadCrumbs,
+    ColorPicker,
+    SidebarIcon,
     SelectionBox,
     CustomComponent
 }

@@ -1,66 +1,84 @@
 import React, { Component } from 'react'
 import css from './styles.scss'
 
-import {
-    NavLink
-} from 'react-router-dom'
+import { Logo, SidebarIcon } from 'components'
 
-import { Logo } from 'components'
+const base = '/cpanel'
 
 export default class Sidebar extends Component {
-    createNavLinkItem (page) {
-        const base = '/site'
-
-        return (
-            <NavLink key={page.id} to={`${base}/${page.system}`} className={css.section} activeClassName={css.active}>
-                <span className={css.title}>{page.title}</span>
-                <span className={css.icon} />
-            </NavLink>
-        )
-    }
-
     renderPages () {
         const pages = [
             {
                 id: 1,
-                system: 'structure',
-                title: 'structure'
+                system: 'dashboard',
+                title: 'Рабочий стол'
             },
             {
                 id: 2,
-                system: 'menu',
-                title: 'menu'
+                system: 'structure',
+                title: 'Страницы'
             },
             {
                 id: 3,
-                system: 'module',
-                title: 'module'
+                system: 'content',
+                title: 'Контент'
             },
             {
                 id: 4,
-                system: 'storage',
-                title: 'storage'
+                system: 'shopping',
+                title: 'Интернет магазин'
             },
             {
                 id: 5,
-                system: 'settings',
-                title: 'settings'
+                system: 'modules',
+                title: 'Редактор модулей'
+            },
+            {
+                id: 6,
+                system: 'blocks',
+                title: 'Зоны и блоки'
+            },
+            {
+                id: 7,
+                system: 'users',
+                title: 'Пользователи'
+            },
+            {
+                id: 8,
+                system: 'i18n',
+                title: 'Интернационализация'
             }
+            // {
+            //     id: 8,
+            //     system: 'seo',
+            //     title: 'SEO оптимизация'
+            // },
+            // {
+            //     id: 9,
+            //     system: 'search',
+            //     title: 'Поиск по сайту'
+            // }
         ]
 
-        return pages.map(this.createNavLinkItem)
+        return pages.map((props, id) => {
+            return <SidebarIcon key={id} {...props} link={`${base}/${props.system}`} />
+        })
     }
 
     render () {
         return (
             <nav className={css.sidebar}>
-                <Logo />
+                <Logo link={base} />
 
                 { this.renderPages() }
 
-                <NavLink to="/settings" className={`${css.section} ${css.settings}`}>
-                    <img src={require('images/icons/settings.svg')} className={css.center} alt="Settings" />
-                </NavLink>
+                <SidebarIcon
+                    key="site.settings"
+                    system="settings"
+                    title="Настройки сайта"
+                    link={`${base}/settings`}
+                    className={css.settings}
+                />
             </nav>
         )
     }
