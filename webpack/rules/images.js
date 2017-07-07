@@ -39,6 +39,18 @@ const rules = [
                     svgo: svgo.config
                 }
             }
+            // {
+            //     test: /\.jpe?g$/,
+            //     loaders: [
+            //         {
+            //             loader: 'lqip-loader',
+            //             options: {
+            //                 path: '/media', // your image going to be in media folder in the output dir 
+            //                 name: '[name].[ext]' // you can use [hash].[ext] too if you wish 
+            //             }
+            //         },
+            //     ]
+            // }
         ],
         exclude: [
             resolve(define.rs_root, '/assets/fonts'),

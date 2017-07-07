@@ -2,24 +2,22 @@
 
 $c-sidebar-active: #FFD966;
 
-@keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 circle {
-  fill: white;
-  stroke: black;
-  stroke-width: 2;
-  stroke-dasharray: 250;
-  stroke-dashoffset: 1000;
-  animation: rotate 5s linear infinite;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 1000;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
 }
 
 @keyframes rotate {
-  to {
-    stroke-dashoffset: 0;
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .button {
@@ -137,6 +135,15 @@ circle {
     }
 }
 
+.circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    transition: opacity $a-time ease;
+}
+
 .title {
     position: absolute;
     left: 0;
@@ -184,34 +191,6 @@ circle {
     &:hover {
         opacity: 1;
     }
-
-    &:before {
-        opacity: 0;
-        content: "";
-        width: 33px;
-        height: 33px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        padding: 0;
-        border-radius: 50%;
-        border: 1px solid darken($c-white, 50%);
-        transform: translate3d(-50%,-50%,0);
-    }
-
-    &:after {
-        opacity: 0;
-        content: "";
-        width: 34px;
-        height: 34px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        padding: 0;
-        border-radius: 50%;
-        border: 1px solid $c-blue;
-        transform: translate3d(-50%,-50%,0);
-    }
 }
 
 .pictogram {
@@ -221,8 +200,9 @@ circle {
 }
 
 .active {
+    /*
     color: $c-sidebar-active;
-    
+
     &:nth-child(1) {
         color: #ffd920;
     }
@@ -266,24 +246,19 @@ circle {
     &:nth-child(11) {
         color: #7367F0;
     }
+    */
 
     &:after {
         opacity: 1;
     }
 }
 
-.active .image {
-    &:before {
-        opacity: 1;
-    }
-
-    &:after {
-        opacity: 1;
-    }
-}
-
-.active .image {
+.active .circle {
     opacity: 1;
+
+    circle {
+        animation-name: rotate;
+    }
 }
 
 .button:hover .title {

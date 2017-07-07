@@ -33,20 +33,20 @@ const usesConfig = [
         }
     },
     {
-        loader: 'sass-loader',
-        options: {
-            outputStyle: define.rs_production ? 'collapsed' : 'expanded',
-            sourceMap: define.rs_production,
-            includePaths: [ define.rs_root ]
-        }
-    },
-    {
         loader: 'sasslint-loader',
         options: {
             quiet: true,
             emitError: true,
             failOnError: true,
             failOnWarning: true
+        }
+    },
+    {
+        loader: 'sass-loader',
+        options: {
+            outputStyle: define.rs_production ? 'collapsed' : 'expanded',
+            sourceMap: define.rs_production,
+            includePaths: [ define.rs_root ]
         }
     },
     {

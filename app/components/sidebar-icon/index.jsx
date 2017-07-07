@@ -24,10 +24,11 @@ export default class SidebarIcon extends Component {
             <NavLink to={`${link}`} className={`${css.button} ${this.props.className}`} activeClassName={css.active}>
                 <span className={css.title}>{title}</span>
                 <span className={css.circle}>
-                    <svg height="48" width="48">
-                        <circle cx="24" cy="24" r="20" />
+                    <svg height="36" width="36">
+                        <circle cx="18" cy="18" r="16" />
                     </svg>
                 </span>
+
                 <span className={css.image}>
                     <svg className={css.pictogram} role="image">
                         <use xlinkHref={`#${system}`}/>
