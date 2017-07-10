@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import css from './styles.scss'
 
 export default class SuggestInput extends Component {
-
     static propTypes = {
         name: PropTypes.string,
         result: PropTypes.array,

@@ -14,12 +14,6 @@ circle {
     animation-timing-function: linear;
 }
 
-@keyframes rotate {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
 .button {
     width: 100%;
     color: $c-white;
@@ -152,7 +146,7 @@ circle {
     opacity: 1;
 
     circle {
-        animation-name: rotate;
+        animation-name: SVGRotate;
     }
 }
 
@@ -160,8 +154,6 @@ circle {
     opacity: 1;
     transform: translate3d(0,-50%,0) scale(1);
 }
-
-
 
 /* Common style of SVGs */
 .progress-button svg {
