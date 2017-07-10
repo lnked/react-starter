@@ -3,6 +3,58 @@
 const OfflinePlugin = require('offline-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
+// const SWPrecache = require('sw-precache');
+// runtimeCaching: [{
+//   urlPattern: /^https:\/\/example\.com\/api/,
+//   handler: 'networkFirst'
+// }, {
+//   urlPattern: /\/articles\//,
+//   handler: 'fastest',
+//   options: {
+//     cache: {
+//       maxEntries: 10,
+//       name: 'articles-cache'
+//     }
+//   }
+// }]
+// module.exports = {
+//   staticFileGlobs: [
+//     'app/css/**.css',
+//     'app/**.html',
+//     'app/images/**.*',
+//     'app/js/**.js'
+//   ],
+//   stripPrefix: 'app/',
+//   runtimeCaching: [{
+//     urlPattern: /this\\.is\\.a\\.regex/,
+//     handler: 'networkFirst'
+//   }]
+// };
+
+// {
+//   "staticFileGlobs": [
+//     "app/css/**.css",
+//     "app/**.html",
+//     "app/images/**.*",
+//     "app/js/**.js"
+//   ],
+//   "stripPrefix": "app/",
+//   "runtimeCaching": [{
+//     "urlPattern": "/express/style/path/(.*)",
+//     "handler": "networkFirst"
+//   }]
+// }
+
+// // via staticFileGlobs
+// staticFileGlobs: ['/shell.html']
+// navigateFallback: '/shell.html'
+
+// // via dynamicUrlToDependencies
+// dynamicUrlToDependencies: {
+//   '/shell': ['/shell.hbs']
+// },
+// navigateFallback: '/shell'
+
 const plugins = [
     // new OfflinePlugin({
     //     relativePaths: false,

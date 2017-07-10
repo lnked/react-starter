@@ -29,105 +29,48 @@ circle {
     text-align: center;
     margin-bottom: 10px;
 
-    &:after {
-        width: 3px;
-        height: 100%;
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-        transition: opacity .5s ease-in-out;
-        will-change: opacity;
-    }
-    
     &:nth-child(1) {
         color: #fd7474;
-
-        &:after {
-            background-color: #fd7474;
-        }
     }
     
     &:nth-child(2) {
         color: #fed971;
-
-        &:after {
-            background-color: #fed971;
-        }
     }
 
     &:nth-child(3) {
         color: #fdfe6b;
-
-        &:after {
-            background-color: #fdfe6b;
-        }
     }
     
     &:nth-child(4) {
         color: #d1fe6b;
-
-        &:after {
-            background-color: #d1fe6b;
-        }
     }
     
     &:nth-child(5) {
         color: #6bfe74;
-
-        &:after {
-            background-color: #6bfe74;
-        }
     }
     
     &:nth-child(6) {
         color: #6bfeda;
-
-        &:after {
-            background-color: #6bfeda;
-        }
     }
     
     &:nth-child(7) {
         color: #6bfdfe;
-
-        &:after {
-            background-color: #6bfdfe;
-        }
     }
     
     &:nth-child(8) {
         color: #6bd1fe;
-
-        &:after {
-            background-color: #6bd1fe;
-        }
     }
 
     &:nth-child(9) {
         color: #746bfe;
-
-        &:after {
-            background-color: #746bfe;
-        }
     }
 
     &:nth-child(10) {
         color: #da6bfe;
-
-        &:after {
-            background-color: #da6bfe;
-        }
     }
     
     &:nth-child(11) {
         color: #7367F0;
-
-        &:after {
-            background-color: #7367F0;
-        }
     }
 
     &:hover {
@@ -162,6 +105,7 @@ circle {
     transform: translate3d(0,-50%,0) scale(1.1);
     background-color: rgba($c-black, 0.8);
 
+    /*
     &:before {
         content: "";
         border-style: solid;
@@ -172,6 +116,7 @@ circle {
         top: 50%;
         transform: translate3d(0,-50%,0);
     }
+    */
 }
 
 .image {
@@ -199,58 +144,8 @@ circle {
     font-size: 0;
 }
 
-.active {
-    /*
-    color: $c-sidebar-active;
-
-    &:nth-child(1) {
-        color: #ffd920;
-    }
-
-    &:nth-child(2) {
-        color: #ff639d;
-    }
-
-    &:nth-child(3) {
-        color: #8963ff;
-    }
-
-    &:nth-child(4) {
-        color: #05E487;
-    }
-
-    &:nth-child(5) {
-        color: #2A91FF;
-    }
-
-    &:nth-child(6) {
-        color: #FFD920;
-    }
-
-    &:nth-child(7) {
-        color: #FF982A;
-    }
-
-    &:nth-child(8) {
-        color: #8963FF;
-    }
-
-    &:nth-child(9) {
-        color: #FF982A;
-    }
-
-    &:nth-child(10) {
-        color: #F55555;
-    }
-
-    &:nth-child(11) {
-        color: #7367F0;
-    }
-    */
-
-    &:after {
-        opacity: 1;
-    }
+.active .title {
+    opacity: 1;
 }
 
 .active .circle {
@@ -264,4 +159,70 @@ circle {
 .button:hover .title {
     opacity: 1;
     transform: translate3d(0,-50%,0) scale(1);
+}
+
+
+
+/* Common style of SVGs */
+.progress-button svg {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.progress-button svg path {
+	opacity: 0;
+	fill: none;
+}
+
+.progress-button svg.progress-circle path {
+	stroke: #1ECD97;
+	stroke-width: 5;
+}
+
+.progress-button svg.checkmark path,
+.progress-button svg.cross path {
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-width: 4;
+	-webkit-transition: opacity 0.1s;
+	transition: opacity 0.1s;
+}
+
+/* Loading, success and error effects */
+.loading.progress-button button {
+	width: 70px; /* make a circle */
+	border-width: 5px;
+	border-color: #ddd;
+	background-color: transparent;
+	color: #fff;
+}
+
+.loading.progress-button span {
+	transition: opacity 0.15s;
+}
+
+.loading.progress-button span,
+.success.progress-button span,
+.error.progress-button span {
+	opacity: 0; /* keep it hidden in all states */
+}
+
+.loading.progress-button svg.progress-circle path,
+.success.progress-button svg.checkmark path,
+.error.progress-button svg.cross path {
+	opacity: 1;
+	transition: stroke-dashoffset 0.3s;
+}
+
+/* Optional elastic effect for the width of the button */
+.elastic.progress-button button {
+	transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+}
+
+.loading.elastic.progress-button button {
+	transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
 }

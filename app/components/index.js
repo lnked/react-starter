@@ -23,6 +23,7 @@ import SelectionBox from 'components/selection-box'
 import CustomComponent from 'components/custom-component'
 import BreadCrumbs from 'components/bread-crumbs'
 import SidebarIcon from 'components/sidebar-icon'
+import SuggestInput from 'components/suggest-input'
 
 export {
     Tabs,
@@ -48,6 +49,7 @@ export {
     BreadCrumbs,
     ColorPicker,
     SidebarIcon,
+    SuggestInput,
     SelectionBox,
     CustomComponent
 }

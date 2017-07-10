@@ -25,6 +25,14 @@ export default class Input extends PureComponent {
         className: string,
         handleChange: func,
         placeholder: string,
+        tabindex: oneOfType([
+            number,
+            bool
+        ]),
+        maxlength: oneOfType([
+            number,
+            bool
+        ]),
         status: oneOf([
             'warn',
             'error',
@@ -38,6 +46,8 @@ export default class Input extends PureComponent {
         focus: false,
         className: '',
         cleaning: true,
+        maxlength: false,
+        tabindex: false,
         multiline: false,
         status: 'normal',
         placeholder: 'Введите текст…',
@@ -147,10 +157,23 @@ export default class Input extends PureComponent {
             )
         }
 
+        if (this.props.maxlength) {
+            props.maxlength = this.props.maxlength
+        }
+
+        if (this.props.tabindex) {
+            props.tabindex = this.props.tabindex
+        }
+
         props.key = [this.keyPrefix, 'control'].join('.')
         props.ref = (c) => { this._control = c }
         props.onChange = this.handleChange.bind(this)
         props.className = cn.join(' ')
+
+        props.autocomplete = 'off'
+        props.autocorrect = 'off'
+        props.autocapitalize = 'off'
+        props.spellcheck = false
 
         let control
 
