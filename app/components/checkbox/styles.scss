@@ -6,7 +6,7 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    transition: color $a-time $a-func;
+    transition: color .1s ease;
 
     &_small {
         min-width: 16px;
@@ -58,7 +58,7 @@
         border-color: #222;
         border-style: solid;
         transform: rotate(-45deg);
-        transition: opacity $a-micro-time $a-func;
+        transition: opacity .1s linear;
     }
 
     &_dark {
