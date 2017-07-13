@@ -5942,6 +5942,10 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
+noty@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/noty/-/noty-3.1.1.tgz#badd92d6857821f03467cd0d3e0a1bc962fb3e19"
+
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
