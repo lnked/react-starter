@@ -64,6 +64,7 @@ const rules = define.rs_generate_css ? [
         {
             test: /\.(css)$/,
             use: ExtractCssChunks.extract({
+                publicPath: '../',
                 use: cssConfig
             }),
             include: [
@@ -74,6 +75,7 @@ const rules = define.rs_generate_css ? [
         {
             test: /\.(s(a|c)ss)$/,
             use: ExtractCssChunks.extract({
+                publicPath: '../',
                 use: usesConfig
             }),
             include: [
