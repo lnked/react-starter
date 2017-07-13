@@ -83,6 +83,11 @@ if (define.rs_production) {
     postcss.push(
         require('postcss-discard-comments'),
         require('postcss-emptymediaqueries'),
+        // Add vendor prefixes to CSS rules using values from caniuse.com
+        // https://github.com/postcss/autoprefixer
+        require('autoprefixer')({
+            browsers: AUTOPREFIXER_BROWSERS
+        }),
         require('cssnano')({
             safe: true,
             calc: false,
@@ -92,11 +97,6 @@ if (define.rs_production) {
             normalizeCharset: true,
             convertValues: { length: false },
             colormin: true
-        }),
-        // Add vendor prefixes to CSS rules using values from caniuse.com
-        // https://github.com/postcss/autoprefixer
-        require('autoprefixer')({
-            browsers: AUTOPREFIXER_BROWSERS
         })
     );
 }
