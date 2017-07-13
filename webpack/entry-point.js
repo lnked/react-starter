@@ -20,9 +20,7 @@ if (define.rs_development) {
     });    
 } else {
     Object.assign(entryPoint, {
-        app: [
-            resolve(define.rs_root, 'app.jsx')
-        ]
+        app: resolve(define.rs_root, 'app.jsx')
     });
 }
 
