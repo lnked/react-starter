@@ -23,6 +23,7 @@
         }]
     ],
     "plugins": [
+        "dual-import",
         "add-module-exports",
         "syntax-dynamic-import",
         "transform-decorators-legacy",

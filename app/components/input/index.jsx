@@ -170,10 +170,10 @@ export default class Input extends PureComponent {
         props.onChange = this.handleChange.bind(this)
         props.className = cn.join(' ')
 
-        props.autocomplete = 'off'
-        props.autocorrect = 'off'
-        props.autocapitalize = 'off'
-        props.spellcheck = false
+        props.autoComplete = 'off'
+        props.autoCorrect = 'off'
+        props.autoCapitalize = 'off'
+        props.spellCheck = false
 
         let control
 
