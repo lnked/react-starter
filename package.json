@@ -127,7 +127,7 @@
     "postcss-inline-comment": "^3.0.0",
     "postcss-loader": "^2.0.6",
     "postcss-media-minmax": "^3.0.0",
-    "postcss-nested": "^2.0.2",
+    "postcss-nested": "^2.0.3",
     "postcss-nested-import": "^0.1.0",
     "postcss-nesting": "^4.0.1",
     "postcss-opacity": "^4.0.0",
