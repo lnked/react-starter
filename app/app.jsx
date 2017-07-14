@@ -2,6 +2,8 @@ import 'app.scss'
 import React from 'react'
 import { render } from 'react-dom'
 
+// https://github.com/minhtranite/react-progress-bar-plus
+
 // Layouts
 import { CoreLayout } from 'layouts'
 
