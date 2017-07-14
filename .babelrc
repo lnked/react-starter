@@ -33,6 +33,7 @@
     "env": {
         "development": {
             "plugins": [
+                "transform-react-display-name",
                 "react-hot-loader/babel",
                 "transform-react-jsx-source",
                 "transform-react-jsx-self",
@@ -52,7 +53,9 @@
                 "transform-react-pure-class-to-function",
                 ["transform-react-remove-prop-types", {
                     "mode": "wrap",
-                    "ignoreFilenames": ["node_modules"]
+                    // "removeImport": true,
+                    "ignoreFilenames": ["node_modules"],
+                    "additionalLibraries": ["react-immutable-proptypes"]
                 }]
             ]
         }
