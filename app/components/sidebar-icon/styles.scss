@@ -79,6 +79,14 @@ circle {
     opacity: 0;
     transform: translate(-50%,-50%);
     transition: opacity $a-time ease;
+
+    .active & {
+        opacity: 1;
+
+        circle {
+            animation-name: SVGRotate;
+        }
+    }
 }
 
 .title {
@@ -99,18 +107,10 @@ circle {
     transform: translate3d(0,-50%,0) scale(1.1);
     background-color: rgba($c-black, 0.8);
 
-    /*
-    &:before {
-        content: "";
-        border-style: solid;
-        border-right-color: rgba($c-black, 0.8);
-        border-width: 4px 6px 4px 0;
-        position: absolute;
-        right: 100%;
-        top: 50%;
-        transform: translate3d(0,-50%,0);
+    .button:hover & {
+        opacity: 1;
+        transform: translate3d(0,-50%,0) scale(1);
     }
-    */
 }
 
 .image {
@@ -127,7 +127,8 @@ circle {
     opacity: .4;
     transition: opacity $a-time $a-func;
 
-    &:hover {
+    &:hover,
+    .active & {
         opacity: 1;
     }
 }
@@ -136,23 +137,6 @@ circle {
     width: 18px;
     height: 18px;
     font-size: 0;
-}
-
-.active .title {
-    opacity: 1;
-}
-
-.active .circle {
-    opacity: 1;
-
-    circle {
-        animation-name: SVGRotate;
-    }
-}
-
-.button:hover .title {
-    opacity: 1;
-    transform: translate3d(0,-50%,0) scale(1);
 }
 
 /* Common style of SVGs */
