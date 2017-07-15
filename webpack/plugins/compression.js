@@ -12,7 +12,7 @@ const plugins = [
     }),
     new CompressionPlugin({
         asset: '[path].gz[query]',
-        algorithm: 'zopfli', // 'gzip'
+        algorithm: 'gzip', // zopfli
         test: /\.(js|css|html|svg)$/,
         threshold: 10240,
         minRatio: 0.8
