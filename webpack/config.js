@@ -66,7 +66,9 @@ module.exports = {
 
     module: {
         rules: rules.config,
-        noParse: /jquery/
+        noParse: [
+            /[\/\\]react[\/\\]react\.js[\/\\]jquery[\/\\]zepto\.js$/
+        ]
     },
 
     performance: define.rs_production && {
