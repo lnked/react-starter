@@ -9235,9 +9235,9 @@ webpack-dev-server@^2.5.1:
     webpack-dev-middleware "^1.11.0"
     yargs "^6.0.0"
 
-webpack-manifest-plugin@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-1.1.2.tgz#e9d9967f4f739ee25380ca57de7f9417c5bea029"
+webpack-manifest-plugin@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-1.2.0.tgz#2a078481e6fb0e811f13e1c018c44a2d62798085"
   dependencies:
     fs-extra "^0.30.0"
     lodash ">=3.5 <5"
