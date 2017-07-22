@@ -16,6 +16,11 @@ import { CoreLayout } from 'layouts'
 // import {Auth, Page1, Load, NoMatch} from 'containers'
 import { Load } from 'containers'
 
+// function route(path, query) {
+//   return import(`./routes/${path}/route`)
+//     .then(route => new route.Route(query));
+// }
+
 // function def(promise) {
 //   return promise.then(cmp => {
 //     console.info('Dynamic loaded by route: ', cmp.default.displayName) // для тестирования можете логировать имя компонента
