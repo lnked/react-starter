@@ -9,19 +9,6 @@ const rules = [
         use: ['raw-loader']
     },
     {
-        test: /\.json$/,
-        use: [
-            {
-                loader: 'json-loader', // 'file-loader'
-                options: {
-                    hash: 'sha512',
-                    digest: 'hex',
-                    name: '[name]-[hash:11].[ext]'
-                }
-            }
-        ]
-    },
-    {
         test: /\.xml$/,
         use: [
             {
