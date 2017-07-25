@@ -4,13 +4,6 @@ const postcss = [];
 
 const define = require('./define');
 
-const AUTOPREFIXER_BROWSERS = !define.rs_production ? [] : [
-    '>1%',
-    'last 4 versions',
-    'Firefox ESR',
-    'not ie < 9' // Doesn't support IE8
-];
-
 postcss.push(
     require('postcss-inline-comment'),
     require('postcss-bem-linter'),
@@ -85,9 +78,7 @@ if (define.rs_production) {
         require('postcss-emptymediaqueries'),
         // Add vendor prefixes to CSS rules using values from caniuse.com
         // https://github.com/postcss/autoprefixer
-        require('autoprefixer')({
-            browsers: AUTOPREFIXER_BROWSERS
-        }),
+        require('autoprefixer'),
         require('cssnano')({
             safe: true,
             calc: false,

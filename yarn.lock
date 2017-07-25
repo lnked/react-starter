@@ -1824,6 +1824,10 @@ commander@2.9.x, commander@^2.5.0, commander@^2.7.1, commander@^2.8.1, commander
   dependencies:
     graceful-readlink ">= 1.0.0"
 
+commander@~2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -3379,9 +3383,9 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extract-css-chunks-webpack-plugin@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-2.0.7.tgz#2258fd961561031c1b03dfe46702b3fdd8364da2"
+extract-css-chunks-webpack-plugin@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-2.0.8.tgz#a1e1199943aa12694f4ac04b49aab23505b75413"
   dependencies:
     ajv "4.11.2"
     async "^2.5.0"
@@ -3641,9 +3645,9 @@ fine-uploader@^5.14.5:
   version "5.14.5"
   resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.14.5.tgz#967aafdc12ec87604b186f9ba061bdab96b137c1"
 
-firebase@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.1.3.tgz#e5d7327366c854dc12461633ba8bfeea2f5c7358"
+firebase@^4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.1.4.tgz#dc0015bdf861645ef2ccb956e33a04788d6476f5"
   dependencies:
     dom-storage "^2.0.2"
     faye-websocket "0.9.3"
@@ -5553,6 +5557,10 @@ logalot@^2.0.0:
     figures "^1.3.5"
     squeak "^1.0.0"
 
+loglevel@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.4.1.tgz#95b383f91a3c2756fd4ab093667e4309161f2bcd"
+
 longest@^1.0.0, longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
@@ -7117,9 +7125,9 @@ postcss-unique-selectors@^2.0.2:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss-url@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-url/-/postcss-url-7.1.0.tgz#a87edce0d030d221fa4716195f4e60455ab02283"
+postcss-url@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/postcss-url/-/postcss-url-7.1.1.tgz#efcd010d152a1a6c7d6d4bdd5702c3879cc94375"
   dependencies:
     mime "^1.2.11"
     minimatch "^3.0.0"
@@ -7564,9 +7572,9 @@ react-input-autosize@^1.1.3:
     create-react-class "^15.5.2"
     prop-types "^15.5.8"
 
-react-input-mask@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.0.6.tgz#a7cc8ed5db68c385f9f005742b527898cb7380f8"
+react-input-mask@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.0.7.tgz#690d2189a1206972aeb82f332336be337fddf280"
 
 react-motion@^0.5.0:
   version "0.5.0"
@@ -8950,9 +8958,9 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.6.tgz#695d495aa2e43cda3b7d391ce5201b0266e3e949"
+svg-sprite-loader@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.7.tgz#bf02b201af6af779b5c3845cc71351cb6d4fa830"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
@@ -9316,11 +9324,11 @@ uglify-js@^2.6.1, uglify-js@^2.8.29:
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
 
-uglify-js@^3.0.25:
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.25.tgz#3dc190b0ee437497e449bc6f785665b06afbe052"
+uglify-js@^3.0.26:
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.26.tgz#ba279ca597b13fe6c62c2d87dd5188e57a7a3233"
   dependencies:
-    commander "~2.9.0"
+    commander "~2.11.0"
     source-map "~0.5.1"
 
 uglify-js@~2.7.3:
@@ -9727,9 +9735,9 @@ webpack-dev-middleware@^1.11.0:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-dev-server@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.6.0.tgz#8a861acac73097afed031f35826447a3013a4eb3"
+webpack-dev-server@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.6.1.tgz#0b292a9da96daf80a65988f69f87b4166e5defe7"
   dependencies:
     ansi-html "0.0.7"
     bonjour "^3.5.0"
@@ -9741,6 +9749,7 @@ webpack-dev-server@^2.6.0:
     html-entities "^1.2.0"
     http-proxy-middleware "~0.17.4"
     internal-ip "^1.2.0"
+    loglevel "^1.4.1"
     opn "4.0.2"
     portfinder "^1.0.9"
     selfsigned "^1.9.1"
