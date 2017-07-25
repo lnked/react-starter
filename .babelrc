@@ -4,16 +4,6 @@
         "es2017",
         ["env", {
             "targets": {
-                "browsers": [
-                    "safari >= 9",
-                    "ie 11",
-                    "last 2 Chrome versions",
-                    "last 2 Firefox versions",
-                    "edge 13",
-                    "ios_saf 9.0-9.2",
-                    "ie_mob 11",
-                    "Android >= 4"
-                ],
                 "debug": false,
                 "loose": false,
                 "uglify": true,

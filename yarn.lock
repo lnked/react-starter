@@ -6997,11 +6997,11 @@ postcss-nested-import@^0.1.0:
   dependencies:
     postcss "^5.2.6"
 
-postcss-nested@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-2.0.4.tgz#f2becb7c67b9a94fc43b59e4ef194c13d4349027"
+postcss-nested@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-2.1.0.tgz#72661d79463f5894a8c4b890479baec689d1c693"
   dependencies:
-    postcss "^6.0.6"
+    postcss "^6.0.8"
     postcss-selector-parser "^2.2.3"
 
 postcss-nesting@^4.0.1:
