@@ -55,11 +55,11 @@
     "react-motion": "^0.5.0",
     "react-router-dom": "^4.1.2",
     "react-select": "^1.0.0-rc.5",
-    "react-sortable-hoc": "^0.6.5",
+    "react-sortable-hoc": "^0.6.6",
     "react-transmit": "^3.2.0",
     "react-virtualized": "^9.9.0",
     "react-virtualized-select": "^3.1.0",
-    "reset-css": "^2.2.0",
+    "reset-css": "^2.2.1",
     "webpack-zepto": "^0.0.1"
   },
   "devDependencies": {
@@ -171,7 +171,7 @@
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webapp-manifest-plugin": "^0.0.4",
-    "webpack": "^3.4.0",
+    "webpack": "^3.4.1",
     "webpack-bundle-analyzer": "^2.8.3",
     "webpack-bundle-size-analyzer": "^2.7.0",
     "webpack-chunk-hash": "^0.4.0",
