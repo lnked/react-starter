@@ -1625,11 +1625,11 @@ chokidar@^1.0.0, chokidar@^1.4.3, chokidar@^1.6.0, chokidar@^1.7.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-chunk-manifest-webpack-plugin@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/chunk-manifest-webpack-plugin/-/chunk-manifest-webpack-plugin-1.1.2.tgz#b332efb97c1a23bfd3ca5dcee13aa120df72df59"
+chunk-manifest-webpack2-plugin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/chunk-manifest-webpack2-plugin/-/chunk-manifest-webpack2-plugin-1.0.1.tgz#35762d242600ad6404c8e90283340608676f498e"
   dependencies:
-    webpack-core "^0.6.9"
+    webpack-core "^0.6.8"
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.3"
@@ -7642,9 +7642,9 @@ react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-dom@^16.0.0-alpha.13:
-  version "16.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0-alpha.13.tgz#c2b39aaf8645f1d664619fb49a1fbb9f60719c23"
+react-dom@next:
+  version "16.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0-beta.1.tgz#be3e958578dae850884f7abd7ba559f9dfb39815"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.1.0"
@@ -7814,9 +7814,9 @@ react@^0.14.0:
     envify "^3.0.0"
     fbjs "^0.6.1"
 
-react@^16.0.0-alpha.13:
-  version "16.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0-alpha.13.tgz#de37e035b06283a15cfb916c6943b9b066b25de0"
+react@next:
+  version "16.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0-beta.1.tgz#c02171171e9638b0c506f5a26b90e918f76909ab"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.1.0"

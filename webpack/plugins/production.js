@@ -5,7 +5,7 @@ const define  = require('../define');
 
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
-const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
+const ChunkManifestPlugin = require('chunk-manifest-webpack2-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
@@ -22,7 +22,7 @@ const plugins = [
         }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest',
+        name: 'runtime',
         minChunks: Infinity
     }),
     new webpack.HashedModuleIdsPlugin(),
@@ -37,7 +37,7 @@ const plugins = [
     }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,
-        inline: 'manifest',
+        inline: 'runtime',
         preload: ['vendor', 'app'],
         defaultAttribute: 'async'
     })
