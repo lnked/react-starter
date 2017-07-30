@@ -110,20 +110,20 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-animate-components@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/animate-components/-/animate-components-1.4.2.tgz#302a1134c0ece2179b932cf8350ae239e65ed0e9"
+animate-components@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/animate-components/-/animate-components-1.4.5.tgz#42df73c49e4ea42576e7d1f6ca4bc263d12b43bf"
   dependencies:
-    animate-keyframes "^0.1.5"
+    animate-keyframes "^0.1.6"
     element-utils "^0.1.2"
     html-tags "^1.1.1"
     prop-types "^15.5.8"
     react "^15.6.1"
     react-dom "^15.6.1"
 
-animate-keyframes@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/animate-keyframes/-/animate-keyframes-0.1.5.tgz#1e7b08ee475e72648a0aa6f7fcc1a6e7c33667f0"
+animate-keyframes@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/animate-keyframes/-/animate-keyframes-0.1.6.tgz#93b0def815881a7c64f8c1605b4d4f6c8decd6db"
   dependencies:
     styled-components "^2.1.0"
 
@@ -3689,9 +3689,9 @@ fine-uploader@^5.15.0:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.15.0.tgz#476c3c48ef02349eb813d32a4e5ff7fb0a686df4"
 
-firebase@^4.1.5:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.1.5.tgz#f7e9269ea62629736b88c3727db3265ceea1adaa"
+firebase@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.2.0.tgz#9181a0a22c6afc2b27bd810789beac48a438207d"
   dependencies:
     dom-storage "^2.0.2"
     faye-websocket "0.9.3"
@@ -6206,9 +6206,9 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-noty@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/noty/-/noty-3.1.1.tgz#badd92d6857821f03467cd0d3e0a1bc962fb3e19"
+noty@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/noty/-/noty-3.1.2.tgz#301903fd8f9dd292ba61a35e15629302f745e4b3"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -7101,11 +7101,11 @@ postcss-normalize-url@^3.0.7:
     postcss "^5.0.14"
     postcss-value-parser "^3.2.3"
 
-postcss-opacity@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-opacity/-/postcss-opacity-4.0.0.tgz#aa562043da3394c94a3acedcf43f0c323d0986a1"
+postcss-opacity@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-opacity/-/postcss-opacity-5.0.0.tgz#6ea6deef4d5fc28dd4cf7af97dba2807b3e07c4c"
   dependencies:
-    postcss "^5.0.4"
+    postcss "^6.0.7"
 
 postcss-ordered-values@^2.1.0:
   version "2.2.3"
@@ -7378,7 +7378,7 @@ promise@^7.0.1, promise@^7.0.3, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -7642,15 +7642,6 @@ react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-dom@next:
-  version "16.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0-beta.1.tgz#be3e958578dae850884f7abd7ba559f9dfb39815"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.6"
-
 react-gsap-enhancer@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-gsap-enhancer/-/react-gsap-enhancer-0.3.0.tgz#b9f9fd19315875768c433e0943c2a41eea43b7d2"
@@ -7813,15 +7804,6 @@ react@^0.14.0:
   dependencies:
     envify "^3.0.0"
     fbjs "^0.6.1"
-
-react@next:
-  version "16.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.0.0-beta.1.tgz#c02171171e9638b0c506f5a26b90e918f76909ab"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.6"
 
 read-all-stream@^3.0.0:
   version "3.1.0"
@@ -9134,9 +9116,9 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.7.tgz#bf02b201af6af779b5c3845cc71351cb6d4fa830"
+svg-sprite-loader@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.8.tgz#52520423ea2718663852f3fca9d4dc173eccc4f4"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
@@ -9504,9 +9486,9 @@ uglify-js@^2.6.1, uglify-js@^2.8.29:
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
 
-uglify-js@^3.0.26:
-  version "3.0.26"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.26.tgz#ba279ca597b13fe6c62c2d87dd5188e57a7a3233"
+uglify-js@^3.0.27:
+  version "3.0.27"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.27.tgz#a97db8c8ba6b9dba4e2f88d86aa9548fa6320034"
   dependencies:
     commander "~2.11.0"
     source-map "~0.5.1"
