@@ -3427,9 +3427,9 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extract-css-chunks-webpack-plugin@^2.0.15:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-2.0.15.tgz#7ba65b53a1c1fa4b2b562760ffe0c1356ac6fcdf"
+extract-css-chunks-webpack-plugin@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-2.0.16.tgz#63d3c62c97da6c22970170217791f03dd291ada3"
   dependencies:
     ajv "4.11.2"
     async "^2.5.0"
@@ -4344,9 +4344,9 @@ html-tags@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
 
-html-webpack-plugin@^2.29.0:
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.29.0.tgz#e987f421853d3b6938c8c4c8171842e5fd17af23"
+html-webpack-plugin@^2.30.0:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.30.0.tgz#079002176dff3659e471ded9c3be3a1ceb2960c7"
   dependencies:
     bluebird "^3.4.7"
     html-minifier "^3.2.3"
@@ -6860,9 +6860,9 @@ postcss-flexboxfixer@^0.0.5:
   dependencies:
     postcss "^5.0.0"
 
-postcss-flexbugs-fixes@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.0.0.tgz#7b31cb6c27d0417a35a67914c295f83c403c7ed4"
+postcss-flexbugs-fixes@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.1.0.tgz#16c40b99dac24fc7a33e4bd3808e36fedfa666d8"
   dependencies:
     postcss "^6.0.1"
 
