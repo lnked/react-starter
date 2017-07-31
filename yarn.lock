@@ -4344,9 +4344,9 @@ html-tags@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
 
-html-webpack-plugin@^2.30.0:
-  version "2.30.0"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.30.0.tgz#079002176dff3659e471ded9c3be3a1ceb2960c7"
+html-webpack-plugin@^2.30.1:
+  version "2.30.1"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.30.1.tgz#7f9c421b7ea91ec460f56527d78df484ee7537d5"
   dependencies:
     bluebird "^3.4.7"
     html-minifier "^3.2.3"
@@ -6860,9 +6860,9 @@ postcss-flexboxfixer@^0.0.5:
   dependencies:
     postcss "^5.0.0"
 
-postcss-flexbugs-fixes@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.1.0.tgz#16c40b99dac24fc7a33e4bd3808e36fedfa666d8"
+postcss-flexbugs-fixes@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.2.0.tgz#9b8b932c53f9cf13ba0f61875303e447c33dcc51"
   dependencies:
     postcss "^6.0.1"
 
@@ -9116,9 +9116,9 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.8.tgz#52520423ea2718663852f3fca9d4dc173eccc4f4"
+svg-sprite-loader@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.0.10.tgz#b1f345bc2fbc37764cd75f2bbb131720aaeaddbe"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
