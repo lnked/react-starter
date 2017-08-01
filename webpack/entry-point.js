@@ -17,7 +17,7 @@ if (define.rs_development) {
             'react-hot-loader/patch',
             resolve(define.rs_root, 'app.jsx')
         ]
-    });    
+    });
 } else {
     Object.assign(entryPoint, {
         app: resolve(define.rs_root, 'app.jsx')
