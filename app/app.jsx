@@ -5,6 +5,8 @@ import 'app.scss'
 import React from 'react'
 import { render } from 'react-dom'
 
+import { nanoid } from 'nanoid'
+
 // https://github.com/minhtranite/react-progress-bar-plus
 
 // Layouts
@@ -14,6 +16,8 @@ import { CoreLayout } from 'layouts'
 import { ComponentPage } from 'containers'
 
 performance.mark('start')
+
+console.log('nanoid: ', nanoid())
 
 render((
     <CoreLayout>
