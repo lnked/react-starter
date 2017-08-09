@@ -5,7 +5,7 @@ import 'app.scss'
 import React from 'react'
 import { render } from 'react-dom'
 
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 
 // https://github.com/minhtranite/react-progress-bar-plus
 
@@ -17,7 +17,7 @@ import { ComponentPage } from 'containers'
 
 performance.mark('start')
 
-console.log('nanoid: ', nanoid())
+// console.log('nanoid: ', nanoid())
 
 render((
     <CoreLayout>
