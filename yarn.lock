@@ -242,6 +242,13 @@ array-flatten@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-2.1.1.tgz#426bb9da84090c1838d812c8150af20a8331e296"
 
+array-includes@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/array-includes/-/array-includes-3.0.3.tgz#184b48f62d92d7452bb31b323165c7f8bd02266d"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.7.0"
+
 array-map@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
@@ -3062,13 +3069,13 @@ eslint-plugin-promise@~3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.5.0.tgz#78fbb6ffe047201627569e85a6c5373af2a68fca"
 
-eslint-plugin-react@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.1.0.tgz#27770acf39f5fd49cd0af4083ce58104eb390d4c"
+eslint-plugin-react@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.2.0.tgz#25c77a4ec307e3eebb248ea3350960e372ab6406"
   dependencies:
     doctrine "^2.0.0"
     has "^1.0.1"
-    jsx-ast-utils "^1.4.1"
+    jsx-ast-utils "^2.0.0"
 
 eslint-plugin-react@~6.10.0:
   version "6.10.3"
@@ -5328,9 +5335,15 @@ jstransformer@1.0.0:
     is-promise "^2.0.0"
     promise "^7.0.1"
 
-jsx-ast-utils@^1.3.4, jsx-ast-utils@^1.4.1:
+jsx-ast-utils@^1.3.4:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-1.4.1.tgz#3867213e8dd79bf1e8f2300c0cfc1efb182c0df1"
+
+jsx-ast-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.0.0.tgz#ec06a3d60cf307e5e119dac7bad81e89f096f0f8"
+  dependencies:
+    array-includes "^3.0.3"
 
 jwa@^1.1.4:
   version "1.1.5"
@@ -6086,13 +6099,17 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
+mutexify@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/mutexify/-/mutexify-1.1.0.tgz#bbe017743e544227ee58034cd10f159921f1844d"
+
 nan@^2.3.0, nan@^2.3.2, nan@^2.5.1, nan@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
 
-nanoid@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-0.1.1.tgz#90ef5cd03bc3ae70108ba477bec09f76e20a6304"
+nanoid@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-0.2.0.tgz#ee6f261ad53b2f44e7820105df35a2a985bab405"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -9332,9 +9349,9 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.1.3.tgz#4e8f58b847b676552c5dafcb97d9de528db9931b"
+svg-sprite-loader@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.1.5.tgz#1335987eefd865eb0dea8d2114843841f4326016"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
@@ -10141,12 +10158,13 @@ webpack-dev-server@^2.7.1:
     webpack-dev-middleware "^1.11.0"
     yargs "^6.0.0"
 
-webpack-manifest-plugin@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-1.2.1.tgz#e02f0846834ce98dca516946ee3ee679745e7db1"
+webpack-manifest-plugin@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-1.3.0.tgz#08526d5e5b8f3e204c9922dc1af7f3f47d9d5448"
   dependencies:
     fs-extra "^0.30.0"
     lodash ">=3.5 <5"
+    mutexify "^1.1.0"
 
 webpack-sources@^0.1.0:
   version "0.1.5"
@@ -10202,9 +10220,9 @@ webpack@^1.13.0:
     watchpack "^0.2.1"
     webpack-core "~0.6.9"
 
-webpack@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.5.1.tgz#b749ee3d2b5a118dad53e8e41585b3f71e75499a"
+webpack@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.5.2.tgz#a9601066e23af3c80f3bf9758fd794ca9778f251"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
