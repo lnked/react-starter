@@ -33,6 +33,12 @@ if (process.env.NODE_ENV === 'development') {
     }
 }
 
+// password: _.debounce(async function() {
+//     const zxcvbn = await import(/* webpackChunkName: "zxcvbn" */ 'zxcvbn');
+//     this.strength = zxcvbn(this.password).score;
+//     this.checkedPassword = this.password;
+// }, 500)
+
 performance.mark('end')
 performance.measure('t', 'start', 'end')
 
