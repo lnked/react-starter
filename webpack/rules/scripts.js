@@ -35,7 +35,7 @@ const rules = [
     },
     {
         test: /\.js[x]?$/,
-        exclude: /(node_modules\/|bower_components\/)/,
+        exclude: /(node_modules|bower_components)/,
         use: useConfig
     }
 ];
