@@ -38,6 +38,7 @@
   "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
   "license": "MIT",
   "dependencies": {
+    "@shopify/draggable": "1.0.0-beta",
     "animated": "^0.2.0",
     "axios": "^0.16.2",
     "babel-runtime": "^6.26.0",

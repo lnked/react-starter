@@ -57,15 +57,19 @@ export default class Input extends PureComponent {
     constructor (props) {
         super(props)
 
+        this.state = {
+            value: this.props.value || this.props.children
+        }
+
         this.keyPrefix = Math.random().toString()
         this.handleChange = this.handleChange.bind(this)
     }
 
-    componentWillMount () {
-        this.setState({
-            value: this.props.value || this.props.children
-        })
-    }
+    // componentWillMount () {
+    //     this.setState({
+    //         value: this.props.value || this.props.children
+    //     })
+    // }
 
     componentDidMount () {
         if (this.props.focus) {
@@ -118,6 +122,8 @@ export default class Input extends PureComponent {
                 props[item] = this.props[item]
             }
         })
+
+        props.value = this.state.value
 
         props.defaultValue = this.state.value
 
