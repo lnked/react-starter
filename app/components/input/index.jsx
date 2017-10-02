@@ -65,12 +65,6 @@ export default class Input extends PureComponent {
         this.handleChange = this.handleChange.bind(this)
     }
 
-    // componentWillMount () {
-    //     this.setState({
-    //         value: this.props.value || this.props.children
-    //     })
-    // }
-
     componentDidMount () {
         if (this.props.focus) {
             this._control.focus()
