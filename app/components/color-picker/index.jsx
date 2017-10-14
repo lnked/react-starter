@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { string } from 'prop-types'
 import css from './styles.scss'
+import ClipboardButton from 'react-clipboard.js'
 
 export default class ColorPicker extends Component {
     static propTypes = {
@@ -67,6 +68,10 @@ export default class ColorPicker extends Component {
         )
     }
 
+    onSuccess () {
+        console.info('successfully coppied')
+    }
+
     renderPaint () {
         let { color } = this.state
         const isColor = /^(?:[0-9a-f]{3}){1,2}$/i
@@ -80,7 +85,12 @@ export default class ColorPicker extends Component {
         }
 
         return (
-            <div className={css.paint} style={style} />
+            <ClipboardButton
+                className={css.paint}
+                style={style}
+                data-clipboard-text={this.state.color}
+                onSuccess={this.onSuccess.bind(this)}
+            />
         )
     }
 

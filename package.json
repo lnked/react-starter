@@ -54,6 +54,7 @@
     "prop-types": "^15.5.9",
     "push.js": "^1.0.4",
     "react": "^16.0.0",
+    "react-clipboard.js": "1.1.2",
     "react-clock-timepicker": "^0.0.4",
     "react-dom": "^16.0.0",
     "react-helmet": "^5.2.0",

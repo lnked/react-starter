@@ -112,6 +112,8 @@
 .paint {
     width: 42px;
     height: 42px;
+    outline: 0;
+    cursor: pointer;
     display: block;
     margin-left: 20px;
     background-color: $c-white;
