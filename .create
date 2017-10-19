@@ -66,54 +66,43 @@ cd ./$FOLDER_NAME
 
 # Создаем папку проекта если ее нет
 #
-if [ "$create" = "create" ] ; then
-    echo "Копирование файлов";
+echo "Копирование файлов";
 
-    ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
+mkdir webpack
 
-    cp -r ${SOURCE}/app ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/webpack ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/bower.json ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/LICENSE ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.babelrc ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.bowerrc ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.eslintrc ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.editorconfig ${PATH_ROOT}/$FOLDER_NAME
-    cp -r ${SOURCE}/.browserslistrc ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/webpack/entry-point.js ${PATH_ROOT}/$FOLDER_NAME/webpack
 
-else
-    echo "Создание символических ссылок";
+ln -s ${SOURCE}/webpack/config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/rules.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/stats.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/svgo.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/define.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/helpers.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/plugins.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/postcss.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/svgstore.js ${PATH_ROOT}/$FOLDER_NAME/webpack
 
-    ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
+ln -s ${SOURCE}/webpack/rules ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/plugins ${PATH_ROOT}/$FOLDER_NAME/webpack
 
-    cp -r ${SOURCE}/app ${PATH_ROOT}/$FOLDER_NAME
+ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
 
-    ln -s ${SOURCE}/webpack ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/bower.json ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/LICENSE ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.babelrc ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.bowerrc ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.eslintrc ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.editorconfig ${PATH_ROOT}/$FOLDER_NAME
-    ln -s ${SOURCE}/.browserslistrc ${PATH_ROOT}/$FOLDER_NAME
-fi
+cp -r ${SOURCE}/app ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/LICENSE ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.babelrc ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.eslintrc ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.editorconfig ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.browserslistrc ${PATH_ROOT}/$FOLDER_NAME
 
 echo -e "Проект ${GREEN}$FOLDER_NAME${NC} успешно создан"
 
 cd ${PATH_ROOT}/$FOLDER_NAME/
 
 mkdir logs
-
-chown -R 777 logs
 
 exit 0
