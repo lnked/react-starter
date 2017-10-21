@@ -183,6 +183,10 @@ export default class App extends Component {
         //     <Route path="/cp/site/settings" component={Page1} />
         // </CoreLayout>
 
+        // <BrowserRouter>
+        //     <Route path="/" exact component={Home}/>
+        // </BrowserRouter>
+
         return ( <
             Router basename = "/cp" >
             <
