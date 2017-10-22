@@ -3997,7 +3997,7 @@ favico.js@^0.3.10:
   version "0.3.10"
   resolved "https://registry.yarnpkg.com/favico.js/-/favico.js-0.3.10.tgz#80586e27a117f24a8d51c18a99bdc714d4339301"
 
-favicons-webpack-plugin@^0.0.7:
+favicons-webpack-plugin@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/favicons-webpack-plugin/-/favicons-webpack-plugin-0.0.7.tgz#253a46a4f93d137d1096762877f8a8ef12e28648"
   dependencies:
