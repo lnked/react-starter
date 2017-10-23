@@ -2772,6 +2772,10 @@ decimal.js@7.2.3:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-7.2.3.tgz#6434c3b8a8c375780062fc633d0d2bbdb264cc78"
 
+decode-uri-component@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+
 decompress-tar@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/decompress-tar/-/decompress-tar-3.1.0.tgz#217c789f9b94450efaadc5c5e537978fc333c466"
@@ -6840,8 +6844,8 @@ nanoid@^0.2.0:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-0.2.2.tgz#e2ebc6ad3db5e0454fd8124d30ca39b06555fe56"
 
 nanomatch@^1.2.1:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.3.tgz#15e1c02dcf990c27a283b08c0ba1801ce249a6a6"
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.5.tgz#5c9ab02475c76676275731b0bf0a7395c624a9c4"
   dependencies:
     arr-diff "^4.0.0"
     array-unique "^0.3.2"
@@ -8292,18 +8296,18 @@ posthtml-parser@^0.2.0, posthtml-parser@^0.2.1:
     isobject "^2.1.0"
 
 posthtml-rename-id@^1.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/posthtml-rename-id/-/posthtml-rename-id-1.0.2.tgz#54093aa2761e29392168bb05723e12668632b250"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/posthtml-rename-id/-/posthtml-rename-id-1.0.3.tgz#acc7a7af62a58a695e8ab9c2d0b6b462ab3ee17f"
   dependencies:
-    escape-string-regexp "1.0.5"
+    escape-string-regexp "^1.0.5"
 
 posthtml-render@^1.0.5, posthtml-render@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/posthtml-render/-/posthtml-render-1.0.6.tgz#1b88b8e7860a8ebdfe2f2a1310a4642a55cf5bda"
 
 posthtml-svg-mode@^1.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/posthtml-svg-mode/-/posthtml-svg-mode-1.0.0.tgz#cddc04e1c41853d5986c019f511b3aaa94710c95"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/posthtml-svg-mode/-/posthtml-svg-mode-1.0.2.tgz#133efbf543e1bab8c0408f6ac0eac987772820b8"
   dependencies:
     merge-options "0.0.64"
     posthtml "^0.9.2"
@@ -10011,10 +10015,11 @@ source-map-resolve@^0.3.0:
     urix "~0.1.0"
 
 source-map-resolve@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.0.tgz#fcad0b64b70afb27699e425950cb5ebcd410bc20"
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.1.tgz#7ad0f593f2281598e854df80f19aae4b92d7a11a"
   dependencies:
     atob "^2.0.0"
+    decode-uri-component "^0.2.0"
     resolve-url "^0.2.1"
     source-map-url "^0.4.0"
     urix "^0.1.0"
@@ -10492,9 +10497,9 @@ svg-baker-runtime@^1.3.3:
     mitt "1.1.2"
     svg-baker "^1.2.0"
 
-svg-baker@^1.2.0, svg-baker@^1.2.14:
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.2.14.tgz#3a57022cc65dbe915c49bb3394e50b5dda8a821c"
+svg-baker@^1.2.0, svg-baker@^1.2.16:
+  version "1.2.16"
+  resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.2.16.tgz#675853ac37da6bf02bee4a643ec1c444489b5e36"
   dependencies:
     bluebird "^3.5.0"
     clone "^2.1.1"
@@ -10523,15 +10528,15 @@ svg-fill-loader@^0.0.8:
     posthtml-render "^1.0.6"
 
 svg-sprite-loader@^3.2.5:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.4.0.tgz#eb6e7b2fb668dcb596ef4fe0ed8c6f6de3199e1e"
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.4.1.tgz#6e807105fac025d6712eec85275002ed6d1a48f5"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
     domready "1.0.8"
     escape-string-regexp "1.0.5"
     loader-utils "^1.1.0"
-    svg-baker "^1.2.14"
+    svg-baker "^1.2.16"
     svg-baker-runtime "^1.3.3"
     url-slug "2.0.0"
 
