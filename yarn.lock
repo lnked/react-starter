@@ -4307,8 +4307,8 @@ find-versions@^1.0.0:
     semver-regex "^1.0.0"
 
 fine-uploader@^5.15.0:
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.15.0.tgz#476c3c48ef02349eb813d32a4e5ff7fb0a686df4"
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.15.1.tgz#20b437976c904b5a230f24a1579d45f9c4290289"
 
 firebase@^4.3.0:
   version "4.6.1"
@@ -7871,10 +7871,11 @@ postcss-discard-unused@^2.2.1:
     uniqs "^2.0.0"
 
 postcss-easings@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-easings/-/postcss-easings-1.0.0.tgz#618b1f7ee289808ec30cf014115a57ae198f7ec6"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-easings/-/postcss-easings-1.0.1.tgz#a7b9ebddabe5f8589e245256bd565408ea3366c3"
   dependencies:
-    postcss "^6.0.1"
+    postcss "^6.0.14"
+    postcss-value-parser "^3.3.0"
 
 postcss-emptymediaqueries@^0.0.2:
   version "0.0.2"
@@ -8323,7 +8324,7 @@ postcss@^6.0.0, postcss@^6.0.13:
     source-map "^0.6.1"
     supports-color "^4.4.0"
 
-postcss@^6.0.1, postcss@^6.0.11:
+postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14:
   version "6.0.14"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.14.tgz#5534c72114739e75d0afcf017db853099f562885"
   dependencies:
@@ -9742,8 +9743,8 @@ schema-utils@^0.3.0:
     ajv "^5.0.0"
 
 script-ext-html-webpack-plugin@^1.8.5:
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-1.8.7.tgz#456c44c21933ea06086d13bb0eaa29f41132ab06"
+  version "1.8.8"
+  resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-1.8.8.tgz#faa888a286ce746fcd06a5e0a9e39ed7b9d24f66"
   dependencies:
     debug "^3.1.0"
 
@@ -11052,8 +11053,8 @@ uglify-js@^2.6.1, uglify-js@^2.8.29:
     uglify-to-browserify "~1.0.0"
 
 uglify-js@^3.0.28:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.1.6.tgz#918832602036e95d2318e11f27ee8461a8592c5d"
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.1.7.tgz#13379168b7fcf132ed977254a7802e0a294b1ffb"
   dependencies:
     commander "~2.11.0"
     source-map "~0.6.1"
