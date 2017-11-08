@@ -13,11 +13,22 @@ const port = process.env.PORT || 3000;
 
 const entryPoint = require('./entry-point');
 
+let sourceMap = false;
+
+if (define.rs_analyzer)
+{
+    sourceMap = 'source-map';
+}
+else if (define.rs_development)
+{
+    sourceMap = 'cheap-module-source-map';
+}
+
 module.exports = {
 
     context: define.rs_root,
 
-    devtool: define.rs_development ? 'cheap-module-source-map' : false,
+    devtool: sourceMap,
 
     target: 'web', // 'web' | 'node' | electron-main | electron-renderer
 
@@ -103,7 +114,7 @@ module.exports = {
     watch: define.rs_development,
 
     plugins: plugins.config,
-    
+
     bail: define.rs_production,
 
     cache: define.rs_development,

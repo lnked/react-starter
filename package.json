@@ -25,7 +25,8 @@
     "production": "yarn --production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "size": "size-limit"
+    "size": "size-limit",
+    "webpack-defaults": "webpack-defaults"
   },
   "keywords": [
     "react"
@@ -98,6 +99,7 @@
     "babel-preset-react": "^6.24.1",
     "bower-webpack-plugin": "^0.1.9",
     "brotli-webpack-plugin": "^0.4.1",
+    "bundle-buddy-webpack-plugin": "0.3.0",
     "chunk-manifest-webpack2-plugin": "^1.0.1",
     "compression-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.0.1",

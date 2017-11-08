@@ -9,7 +9,7 @@ const plugins = [
     new webpack.optimize.AggressiveMergingPlugin(),
     new UglifyJSPlugin({
         minimize: true,
-        sourceMap: false,
+        sourceMap: define.rs_analyzer,
         beautify: false,
         compress: {
             warnings: false,
