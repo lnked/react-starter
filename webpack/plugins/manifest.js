@@ -13,7 +13,7 @@ const plugins = [
     new FaviconsWebpackPlugin({
         logo: 'assets/favicon/favicon.svg',
         // The prefix for all image files (might be a folder or a name)
-        prefix: 'fav-[hash:5]/',
+        prefix: 'fav/',
         // Emit all stats of the generated icons
         emitStats: false,
         // The name of the json containing all favicon information
@@ -54,7 +54,7 @@ const plugins = [
         themeColor: '#2185d0',
         preferRelatedApplications: false,
         relatedApplications: [],
-        // icons: FAVICON_PLUGIN,
+        icons: FAVICON_PLUGIN,
         scope: '/'
     })
 ];

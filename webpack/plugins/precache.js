@@ -65,6 +65,23 @@ const plugins = [
     //     excludes: ['.htaccess'],
 
     //     caches: {
+    //         main: [
+    //             'dist/*.html',
+    //             'dist/**/*.css',
+    //             'dist/**/*.js',
+    //             'dist/**/*.gz',
+    //             'dist/manifest.json'
+    //         ],
+    //         additional: [
+    //             'dist/*.json',
+    //             'dist/fav/**.*',
+    //             'dist/fonts/**.*',
+    //             'dist/images/**.*',
+    //         ],
+    //         optional: [':rest:']
+    //     },
+
+    //     caches: {
     //         main: [':rest:'],
 
     //         // All chunks marked as `additional`, loaded after main section
@@ -100,15 +117,18 @@ const plugins = [
         cacheId: 'RS-PWA',
         filename: 'sw.js',
         stripPrefix: 'dist/',
+
         staticFileGlobs: [
             'dist/*.html',
             'dist/*.json',
             'dist/**/*.css',
             'dist/**/*.js',
             'dist/**/*.gz',
+            'dist/fav/**.*',
             'dist/images/**.*',
             'dist/manifest.json'
         ],
+
         minify: true,
         swFilePath: 'dist/sw.js',
         mergeStaticsConfig: true,
