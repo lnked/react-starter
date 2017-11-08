@@ -4405,8 +4405,8 @@ find-versions@^1.0.0:
     semver-regex "^1.0.0"
 
 fine-uploader@^5.15.0:
-  version "5.15.1"
-  resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.15.1.tgz#20b437976c904b5a230f24a1579d45f9c4290289"
+  version "5.15.2"
+  resolved "https://registry.yarnpkg.com/fine-uploader/-/fine-uploader-5.15.2.tgz#7df1bd50f0a7e166a45cbb79e428e134dccd28c0"
 
 firebase@^4.3.0:
   version "4.6.1"
