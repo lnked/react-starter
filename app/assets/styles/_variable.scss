@@ -27,9 +27,17 @@ $font-family:                   Roboto, sans-serif;
 
 $p-variations-percent:          10%;
 
-/* Colors */
+/* System */
 $c-default-color:               rgba(0,0,0,.8);
 $c-default-background:          #E6E6E6;
+
+$c-select-color:                #0ff;
+$c-select-background:           #000;
+
+$c-placeholder-color:           #000;
+$c-placeholder-opacity:         .5;
+
+/* Colors */
 
 $c-link:                        #656d79;
 $c-blue:                        #437FC1;
@@ -68,11 +76,10 @@ $c-white-smoke:                 #f7f7f7;
 
 $c-lighter-color:               #b3b3b3;
 
-$c-select-color:                #0ff;
-$c-select-background:           #000;
-
-$c-placeholder-color:           #000;
-$c-placeholder-opacity:         .5;
+/* New colors */
+$c-red:                         #ff564e;
+$c-green:                       #28bc00;
+$c-yellow:                      #ffc000;
 
 /* Buttons */
 
