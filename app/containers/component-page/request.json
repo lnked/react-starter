@@ -1,5 +1,227 @@
 [
     {
+        "name": "Radio",
+        "prop": [
+            {
+                "name": "r1",
+                "value": 1,
+                "label": "Параметр 1",
+                "checked": true
+            },
+            {
+                "name": "r2",
+                "value": 1,
+                "label": "Параметр 2"
+            }
+        ]
+    },
+    {
+        "name": "Checkbox",
+        "prop": [
+            {
+                "name": "text1",
+                "value": "1",
+                "label": "Параметр 1"
+            },
+            {
+                "name": "text1",
+                "value": "2",
+                "label": "Параметр 2",
+                "checked": true
+            },
+            {
+                "name": "text1",
+                "value": "3",
+                "label": "Параметр 3"
+            },
+            {
+                "name": "text2",
+                "value": 4,
+                "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius quasi alias sint distinctio excepturi, illum dolor! Explicabo iusto minima, assumenda fugit voluptates sint perspiciatis. Culpa quo, rerum delectus ex."
+            }
+        ]
+    },
+    {
+        "name": "RadioGroup",
+        "prop": {
+            "items": [
+                {
+                    "name": "radio1",
+                    "value": 1,
+                    "label": "Параметр 1"
+                },
+                {
+                    "name": "radio1",
+                    "value": 2,
+                    "label": "Параметр 2"
+                },
+                {
+                    "name": "radio1",
+                    "value": 3,
+                    "label": "Параметр 3"
+                }
+            ],
+            "checked": 1
+        }
+    },
+    {
+        "name": "Input",
+        "prop": [
+            {
+                "name": "text1",
+                "multiline": true,
+                "value": "Textarea multiline example",
+                "placeholder": "Введите текст…"
+            },
+            {
+                "name": "text2",
+                "placeholder": "Введите текст…",
+                "value": "Пример использования input"
+            },
+            {
+                "name": "text4",
+                "focus": false,
+                "placeholder": "Введите текст…",
+                "hint": "Поле с автофокусом"
+            },
+            {
+                "name": "text4",
+                "placeholder": "Введите текст…",
+                "hint": "Не обязательно"
+            },
+            {
+                "name": "text3",
+                "placeholder": "Введите текст…",
+                "value": "Пример ошибкой булевой",
+                "error": true
+            },
+            {
+                "name": "text3",
+                "placeholder": "Введите текст…",
+                "error": "Данные введены не корректно"
+            }
+        ]
+    },
+    {
+        "name": "MaskedText",
+        "prop": [
+            {
+                "name": "masked1",
+                "mask": "99.99.9999",
+                "maskChar": "x",
+                "placeholder": ""
+            },
+            {
+                "name": "masked1",
+                "mask": "99.99.9999",
+                "placeholder": ""
+            },
+            {
+                "name": "masked4",
+                "mask": "99.99.9999",
+                "value": "05.06.2017",
+                "placeholder": ""
+            },
+            {
+                "name": "masked2",
+                "mask": "99.99.9999, 99:99",
+                "placeholder": ""
+            },
+            {
+                "name": "masked5",
+                "mask": "99.99.9999, 99:99",
+                "value": "22.04.2016, 22:10",
+                "placeholder": ""
+            },
+            {
+                "name": "masked3",
+                "mask": "+7 (999) 999-99-99",
+                "placeholder": "+_ (___) ___-__-__"
+            }
+        ]
+    },
+    {
+        "name": "Notify",
+        "prop": {}
+    },
+    {
+        "name": "Button",
+        "prop": [
+            {
+                "label": "Button test"
+            },
+            {
+                "label": "Button test",
+                "variant": "primary"
+            }
+        ]
+    },
+    {
+        "name": "badge",
+        "prop": [
+            {
+                "title": "default",
+                "bold": false,
+                "variant": "default"
+            },
+            {
+                "title": "success",
+                "bold": false,
+                "variant": "success"
+            },
+            {
+                "title": "removed",
+                "bold": false,
+                "variant": "removed"
+            },
+            {
+                "title": "in-progress",
+                "bold": false,
+                "variant": "in-progress"
+            },
+            {
+                "title": "new",
+                "bold": false,
+                "variant": "new"
+            },
+            {
+                "title": "moved",
+                "bold": false,
+                "variant": "moved"
+            },
+            {
+                "title": "default",
+                "bold": true,
+                "variant": "default"
+            },
+            {
+                "title": "success",
+                "bold": true,
+                "variant": "success"
+            },
+            {
+                "title": "removed",
+                "bold": true,
+                "variant": "removed"
+            },
+            {
+                "title": "in-progress",
+                "bold": true,
+                "variant": "in-progress"
+            },
+            {
+                "title": "new",
+                "bold": true,
+                "variant": "new"
+            },
+            {
+                "title": "moved",
+                "bold": true,
+                "variant": "moved"
+            }
+        ]
+    },
+    {
         "name": "Table",
         "prop": [
             {
@@ -126,71 +348,6 @@
         ]
     },
     {
-        "name": "badge",
-        "prop": [
-            {
-                "title": "default",
-                "bold": false,
-                "variant": "default"
-            },
-            {
-                "title": "success",
-                "bold": false,
-                "variant": "success"
-            },
-            {
-                "title": "removed",
-                "bold": false,
-                "variant": "removed"
-            },
-            {
-                "title": "in-progress",
-                "bold": false,
-                "variant": "in-progress"
-            },
-            {
-                "title": "new",
-                "bold": false,
-                "variant": "new"
-            },
-            {
-                "title": "moved",
-                "bold": false,
-                "variant": "moved"
-            },
-            {
-                "title": "default",
-                "bold": true,
-                "variant": "default"
-            },
-            {
-                "title": "success",
-                "bold": true,
-                "variant": "success"
-            },
-            {
-                "title": "removed",
-                "bold": true,
-                "variant": "removed"
-            },
-            {
-                "title": "in-progress",
-                "bold": true,
-                "variant": "in-progress"
-            },
-            {
-                "title": "new",
-                "bold": true,
-                "variant": "new"
-            },
-            {
-                "title": "moved",
-                "bold": true,
-                "variant": "moved"
-            }
-        ]
-    },
-    {
         "name": "Spinner",
         "prop": [
             {
@@ -203,18 +360,6 @@
         "prop": [
             {
                 "label": "Загрузка..."
-            }
-        ]
-    },
-    {
-        "name": "Button",
-        "prop": [
-            {
-                "label": "Button test"
-            },
-            {
-                "label": "Button test",
-                "variant": "primary"
             }
         ]
     },
@@ -301,147 +446,6 @@
         }
     },
     {
-        "name": "RadioGroup",
-        "prop": {
-            "items": [
-                {
-                    "name": "radio1",
-                    "value": 1,
-                    "label": "Параметр 1"
-                },
-                {
-                    "name": "radio1",
-                    "value": 2,
-                    "label": "Параметр 2"
-                },
-                {
-                    "name": "radio1",
-                    "value": 3,
-                    "label": "Параметр 3"
-                }
-            ],
-            "checked": 1
-        }
-    },
-    {
-        "name": "Radio",
-        "prop": [
-            {
-                "name": "r1",
-                "value": 1,
-                "label": "Параметр 1",
-                "checked": true
-            },
-            {
-                "name": "r2",
-                "value": 1,
-                "label": "Параметр 2"
-            }
-        ]
-    },
-    {
-        "name": "Checkbox",
-        "prop": [
-            {
-                "name": "text1",
-                "value": "1",
-                "label": "Параметр 1"
-            },
-            {
-                "name": "text1",
-                "value": "2",
-                "label": "Параметр 2",
-                "checked": true
-            },
-            {
-                "name": "text1",
-                "value": "3",
-                "label": "Параметр 3"
-            },
-            {
-                "name": "text2",
-                "value": 4,
-                "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius quasi alias sint distinctio excepturi, illum dolor! Explicabo iusto minima, assumenda fugit voluptates sint perspiciatis. Culpa quo, rerum delectus ex."
-            }
-        ]
-    },
-    {
-        "name": "Input",
-        "prop": [
-            {
-                "name": "text1",
-                "multiline": true,
-                "value": "Textarea multiline example",
-                "placeholder": "Введите текст…"
-            },
-            {
-                "name": "text2",
-                "placeholder": "Введите текст…",
-                "value": "Пример использования input"
-            },
-            {
-                "name": "text4",
-                "focus": false,
-                "placeholder": "Введите текст…",
-                "hint": "Поле с автофокусом"
-            },
-            {
-                "name": "text4",
-                "placeholder": "Введите текст…",
-                "hint": "Не обязательно"
-            },
-            {
-                "name": "text3",
-                "placeholder": "Введите текст…",
-                "value": "Пример ошибкой булевой",
-                "error": true
-            },
-            {
-                "name": "text3",
-                "placeholder": "Введите текст…",
-                "error": "Данные введены не корректно"
-            }
-        ]
-    },
-    {
-        "name": "MaskedText",
-        "prop": [
-            {
-                "name": "masked1",
-                "mask": "99.99.9999",
-                "maskChar": "x",
-                "placeholder": ""
-            },
-            {
-                "name": "masked1",
-                "mask": "99.99.9999",
-                "placeholder": ""
-            },
-            {
-                "name": "masked4",
-                "mask": "99.99.9999",
-                "value": "05.06.2017",
-                "placeholder": ""
-            },
-            {
-                "name": "masked2",
-                "mask": "99.99.9999, 99:99",
-                "placeholder": ""
-            },
-            {
-                "name": "masked5",
-                "mask": "99.99.9999, 99:99",
-                "value": "22.04.2016, 22:10",
-                "placeholder": ""
-            },
-            {
-                "name": "masked3",
-                "mask": "+7 (999) 999-99-99",
-                "placeholder": "+_ (___) ___-__-__"
-            }
-        ]
-    },
-    {
         "name": "HintText",
         "prop": [
             {
@@ -500,9 +504,5 @@
                 "selectedOption": [1, 2, 4, 7]
             }
         ]
-    },
-    {
-        "name": "Notify",
-        "prop": {}
     }
 ]
