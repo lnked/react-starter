@@ -1,6 +1,6 @@
 'use strict';
 
-const OfflinePlugin = require('offline-plugin');
+// const OfflinePlugin = require('offline-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 // const SWPrecache = require('sw-precache');
