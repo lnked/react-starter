@@ -4,6 +4,7 @@ const { resolve } = require('path');
 const define = require('../define');
 const postcss = require('../postcss');
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const cssConfig = [
     {
@@ -63,7 +64,9 @@ const usesConfig = [
 const rules = define.rs_generate_css ? [
         {
             test: /\.(css)$/,
-            use: ExtractCssChunks.extract({
+            // use: ExtractCssChunks.extract({
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
                 publicPath: '../',
                 use: cssConfig
             }),
@@ -74,7 +77,9 @@ const rules = define.rs_generate_css ? [
         },
         {
             test: /\.(s(a|c)ss)$/,
-            use: ExtractCssChunks.extract({
+            // use: ExtractCssChunks.extract({
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
                 publicPath: '../',
                 use: usesConfig
             }),

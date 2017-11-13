@@ -8,6 +8,7 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack2-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -32,8 +33,12 @@ const plugins = [
         manifestVariable: 'webpackManifest',
         inlineManifest: true
     }),
-    new ExtractCssChunks({
+    // new ExtractCssChunks({
+    //     filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
+    // }),
+    new ExtractTextPlugin({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
+        allChunks: true
     }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,
