@@ -64,8 +64,7 @@ const usesConfig = [
 const rules = define.rs_generate_css ? [
         {
             test: /\.(css)$/,
-            // use: ExtractCssChunks.extract({
-            use: ExtractTextPlugin.extract({
+            use: ExtractTextPlugin.extract({ // ExtractCssChunks.extract({
                 fallback: 'style-loader',
                 publicPath: '../',
                 use: cssConfig
@@ -77,8 +76,7 @@ const rules = define.rs_generate_css ? [
         },
         {
             test: /\.(s(a|c)ss)$/,
-            // use: ExtractCssChunks.extract({
-            use: ExtractTextPlugin.extract({
+            use: ExtractTextPlugin.extract({ // ExtractCssChunks.extract({
                 fallback: 'style-loader',
                 publicPath: '../',
                 use: usesConfig
@@ -93,7 +91,7 @@ const rules = define.rs_generate_css ? [
         test: /\.(css)$/,
         use: [
             {
-                loader: 'style-loader'
+                loader: 'css-loader'
             },
             ...cssConfig
         ],
