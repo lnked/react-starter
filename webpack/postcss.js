@@ -55,7 +55,9 @@ postcss.push(
     require('pleeease-filters'),
     // Generate pixel fallback for "rem" units, e.g. div { margin: 2.5rem 2px 3em 100%; }
     // https://github.com/robwierzbowski/node-pixrem
-    require('pixrem'),
+    require('pixrem')({
+        rootValue: 10
+    }),
     // W3C CSS Level4 :matches() pseudo class, e.g. p:matches(:first-child, .special) { }
     // https://github.com/postcss/postcss-selector-matches
     require('postcss-selector-matches'),
