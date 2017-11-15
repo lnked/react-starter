@@ -1,0 +1,24 @@
+%button {
+    border: 0;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    font: inherit;
+    overflow: visible;
+    position: relative;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+    appearance: none;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: background-color $a-time $a-func, border-color $a-time $a-func, color $a-time $a-func;
+    will-change: border-color, background-color, color;
+
+    @include outline($c-focus-color);
+}

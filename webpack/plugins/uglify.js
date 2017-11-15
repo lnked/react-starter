@@ -8,43 +8,31 @@ const plugins = [
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new UglifyJSPlugin({
+        cache: true,
         parallel: true,
         sourceMap: define.rs_analyzer,
         uglifyOptions: {
-            minimize: true,
-            beautify: false,
-            compress: {
-                warnings: false,
-                side_effects: false,
-                properties: true,
-                sequences: true,
-                dead_code: true,
-                conditionals: true,
-                comparisons: true,
-                evaluate: true,
-                booleans: true,
-                unused: true,
-                loops: true,
-                hoist_funs: true,
-                cascade: true,
-                if_return: true,
-                join_vars: true,
-                drop_debugger: true,
-                unsafe: true,
-                hoist_vars: true,
-                negate_iife: true,
-                unsafe_comps: true,
-                pure_getters: true,
-                drop_console: define.rs_release
+            ecma: 8,
+            ie8: false,
+            mangle: true,
+            parse: {
+                html5_comments: false
             },
-            mangle: {
-                eval: true,
-                toplevel: true,
-                properties: true
+            compress: {
+                cascade: true,
+                booleans: true,
+                drop_console: define.rs_release,
+                drop_debugger: define.rs_release,
+                global_defs: {
+                    DEBUG: false
+                }
             },
             output: {
-                comments: false
-            }
+                comments: false,
+                beautify: false,
+                indent_level: 0
+            },
+            warnings: false
         },
         exclude: [/\.min\.js$/gi]
     })

@@ -37,12 +37,8 @@
     text-transform: uppercase;
     color: #262626;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     outline: 0;
-    -webkit-transition: background-color .1s linear;
     transition: background-color .1s linear;
 }
 
@@ -180,8 +176,7 @@ body {
     user-select: text;
     cursor: auto;
 
-    outline: none;
-    box-shadow: 0 0 0 2px tomato;
+    @include outline($c-focus-color);
 
     &_input {
         padding: 0 20px;
@@ -198,6 +193,7 @@ body {
 
     &_error {
         border-color: $c-amaranth;
+        box-shadow: 0 0 0 2px tomato;
     }
 
     &::placeholder {

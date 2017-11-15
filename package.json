@@ -156,6 +156,7 @@
     "postcss-opacity": "^5.0.0",
     "postcss-position": "^1.0.0",
     "postcss-quantity-queries": "^0.5.0",
+    "postcss-sassy-mixins": "2.1.0",
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",
     "postcss-smart-import": "^0.7.5",

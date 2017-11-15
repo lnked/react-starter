@@ -11,6 +11,9 @@ postcss.push(
         root: define.rs_root,
         path: define.rs_root
     }),
+    // PostCSS plugin for sass-like mixins
+    // https://github.com/andyjansson/postcss-sassy-mixins
+    require('postcss-sassy-mixins'),
     // PostCSS plugin to import CSS/SugarSS files
     // https://www.npmjs.com/package/postcss-smart-import
     require('postcss-smart-import'),
