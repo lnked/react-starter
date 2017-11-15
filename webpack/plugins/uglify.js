@@ -34,20 +34,16 @@ const plugins = [
                 hoist_vars: true,
                 negate_iife: true,
                 unsafe_comps: true,
-                // screw_ie8: true,
                 pure_getters: true,
                 drop_console: define.rs_release
             },
             mangle: {
-                // sort: true,
                 eval: true,
-                // props: false,
                 toplevel: true,
                 properties: true
             },
             output: {
                 comments: false
-                // space_colon: false
             }
         },
         exclude: [/\.min\.js$/gi]
