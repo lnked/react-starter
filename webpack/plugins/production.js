@@ -37,8 +37,7 @@ const plugins = [
     //     filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
     // }),
     new ExtractTextPlugin({
-        filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
-        allChunks: true
+        filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css'
     }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,
