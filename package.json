@@ -1,8 +1,8 @@
 {
   "name": "react-starter",
-  "version": "v1.0.1",
-  "main": "index.js",
-  "description": "React skeleton",
+  "version": "v1.0.2",
+  "main": "/webpack/config.js",
+  "description": "React boilerplate, pwa, router",
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "yarn run clean && webpack --config ./webpack/config.js --env assemply",
