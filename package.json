@@ -70,6 +70,7 @@
     "react-transmit": "^3.2.0",
     "react-virtualized": "^9.9.0",
     "react-virtualized-select": "^3.1.0",
+    "react-webstorage": "0.0.4",
     "redux": "3.7.2",
     "reset-css": "^2.2.1",
     "store2": "2.5.9",
