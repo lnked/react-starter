@@ -1,10 +1,9 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .picker {
     display: flex;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     align-items: center;
-    flex-direction: row;
     justify-content: flex-start;
 }
 
@@ -25,7 +24,7 @@
     background-color: $c-white;
     border: 1px solid $c-whisper;
     transition: border-color $a-time $a-func, color $a-time $a-func;
-    -webkit-appearance: textfield;
+    appearance: textfield;
     -webkit-rtl-ordering: logical;
     user-select: text;
     cursor: auto;
@@ -55,7 +54,7 @@
     }
 
     &:disabled {
-        opacity: 0.4;
+        opacity: .4;
         cursor: default;
     }
 
@@ -64,7 +63,7 @@
     }
 
     &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px white inset;
+        box-shadow: 0 0 0 1000px #fff inset;
     }
 
     &::-webkit-inner-spin-button,

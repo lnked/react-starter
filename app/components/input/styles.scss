@@ -1,12 +1,11 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 /*
-<div class="form__block">
-    <div class="form-input__wrap">
-        <input type="text" name="login" value="" class="form-input -metrika-nokeys" hidden="" placeholder="Почта" autocomplete="on" maxlength="43">
+<div class='form__block'>
+    <div class='form-input__wrap'>
+        <input type='text' name='login' value='' class='form-input -metrika-nokeys' hidden='' placeholder='Почта' autocomplete='on' maxlength='43'>
     </div>
 </div>
-*/
 
 .form-button_submit {
     background-color: #315efb;
@@ -29,7 +28,7 @@
     width: 100%;
     height: 44px;
     background-color: #edf0f3;
-    font-family: Roboto,sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 44px;
@@ -48,7 +47,6 @@ body {
     line-height: 1em;
     color: #555;
     position: relative;
-    -webkit-font-smoothing: antialiased;
     min-width: 320px;
     min-height: 100%;
     font-weight: 400;
@@ -62,7 +60,7 @@ body {
     padding: 20px 20px 0;
     background: #fff;
     font-size: 14px;
-    box-shadow: 1px 3px 10px 0 rgba(46,49,53,.19);
+    box-shadow: 1px 3px 10px 0 rgba(46, 49, 53, .19);
 }
 
 .form__footer_agreement {
@@ -100,24 +98,23 @@ body {
     border: 1px solid #ddd;
     border-radius: 0;
     outline: 0;
-    font-family: Roboto,sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     color: #262626;
     box-sizing: border-box;
     z-index: 2;
-    -webkit-transition: border-color .1s linear;
     transition: border-color .1s linear;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
 }
 
-.form-input:focus, .form-input_focus {
+.form-input:focus,
+.form-input_focus {
     border-bottom: 2px solid #315efb;
     padding-bottom: 10px;
 }
+*/
 
 .wrapper {
     display: block;
@@ -136,7 +133,7 @@ body {
     display: block;
     font-size: 1.2rem;
     line-height: 1;
-    letter-spacing: 0.02ex;
+    letter-spacing: .02ex;
 }
 
 .error {
@@ -171,8 +168,6 @@ body {
     background-color: $c-white;
     border: 1px solid $c-whisper;
     transition: border-color $a-time $a-func, color $a-time $a-func;
-    -webkit-appearance: textfield;
-    -webkit-rtl-ordering: logical;
     user-select: text;
     cursor: auto;
 
@@ -193,7 +188,7 @@ body {
 
     &_error {
         border-color: $c-amaranth;
-        box-shadow: 0 0 0 2px tomato;
+        box-shadow: 0 0 0 2px $c-red;
     }
 
     &::placeholder {
@@ -221,7 +216,7 @@ body {
     }
 
     &:disabled {
-        opacity: 0.4;
+        opacity: .4;
         cursor: default;
     }
 
@@ -230,7 +225,7 @@ body {
     }
 
     &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px white inset;
+        box-shadow: 0 0 0 1000px #fff inset;
     }
 
     &::-webkit-inner-spin-button,

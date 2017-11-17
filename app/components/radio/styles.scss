@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .radio {
     line-height: 16px;
@@ -10,8 +10,8 @@
     position: absolute;
     left: -15px;
     top: -15px;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     opacity: 0;
     visibility: hidden;
 }
@@ -25,8 +25,9 @@
     display: inline-block;
     vertical-align: middle;
 
-    &:after, &:before {
-        content: "";
+    &:after,
+    &:before {
+        content: '';
         position: absolute;
     }
 
@@ -41,7 +42,7 @@
     }
 
     &:after {
-        content: "";
+        content: '';
         width: 8px;
         height: 8px;
         position: absolute;

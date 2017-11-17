@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .layout {
     height: 100%;
@@ -9,7 +9,7 @@
     height: 36px;
     position: relative;
     background-color: #fafafa;
-    
+
     &:after {
         content: '';
         width: 100%;
@@ -17,7 +17,7 @@
         bottom: 0;
         left: 0;
         position: absolute;
-        background-color: rgba(black,0.1);
+        background-color: rgba(#000, .1);
     }
 }
 

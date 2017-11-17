@@ -1,9 +1,8 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .group {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: flex-start;
 }

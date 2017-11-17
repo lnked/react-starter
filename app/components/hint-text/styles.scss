@@ -1,9 +1,9 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .hint {
     color: $c-black;
     font-size: 1.2rem;
     padding: 12px 15px;
     background-color: #fefce8;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
 }

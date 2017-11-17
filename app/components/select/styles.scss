@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .select {
     width: 100%;
@@ -17,7 +17,7 @@
     }
 
     &:disabled {
-        opacity: 0.4;
+        opacity: .4;
         cursor: default;
     }
 }
@@ -71,7 +71,7 @@
     margin-top: -1px;
     background-color: $c-white;
     border: 1px solid $c-whisper;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
 }
 
 .option {
@@ -92,7 +92,7 @@
     }
 
     &:after {
-        content: "";
+        content: '';
         position: absolute;
         right: 12px;
         top: 50%;

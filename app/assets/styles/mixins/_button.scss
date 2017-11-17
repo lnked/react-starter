@@ -16,7 +16,7 @@
     appearance: none;
     background: transparent;
     border-color: transparent;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all .25s cubic-bezier(.645, .045, .355, 1);
     transition: background-color $a-time $a-func, border-color $a-time $a-func, color $a-time $a-func;
     will-change: border-color, background-color, color;
 

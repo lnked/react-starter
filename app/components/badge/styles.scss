@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .badge {
     padding: 2px;
@@ -6,7 +6,7 @@
     font-size: 1.3rem;
     border-radius: 2px;
     display: inline-block;
-    color: darken(#3DB27F, 25%);
-    border: 1px solid #3DB27F;
-    background-color: #3DB27F;
+    color: darken(#3db27f, 25%);
+    border: 1px solid #3db27f;
+    background-color: #3db27f;
 }

@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .navigation {
     width: 100%;
@@ -16,7 +16,7 @@
     cursor: pointer;
     font-size: 1.4rem;
     text-decoration: none;
-    
+
     &:not(:last-child) {
         margin-right: 10px;
     }
@@ -28,7 +28,7 @@
 
 .logo {
     float: left;
-    color: white;
+    color: #fff;
     display: block;
     font-size: 1.4rem;
     font-weight: 700;
@@ -46,7 +46,6 @@
 .trigger {
     width: 20px;
     height: 44px;
-    display: block;
     position: absolute;
     top: 0;
     right: 20px;
@@ -68,8 +67,8 @@
         left: 50%;
         margin-top: -1px;
         margin-left: -10px;
-        transition: all 0.5s;
-        background-color: white;
+        transition: all .5s;
+        background-color: #fff;
 
         &:first-child {
             transform: translateY(-3px);
@@ -92,13 +91,13 @@
 .screen {
     width: 100%;
     height: 44px;
-    transition: all 0.5s;
+    transition: all .5s;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: -1;
-    background-color: rgba(black, .5);
+    background-color: rgba(#000, .5);
 
     @media (max-width: 768px) {
         z-index: 0;
@@ -123,8 +122,8 @@
 
         @media (max-width: 768px) {
             display: none;
-            transform: translateY(0px);
-            border-top: 1px solid rgba(white, .5);
+            transform: translateY(0);
+            border-top: 1px solid rgba(#fff, .5);
         }
     }
 }

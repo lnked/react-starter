@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .layout {
     height: 100vh;
@@ -8,8 +8,7 @@
     align-items: center;
     justify-content: center;
     background-color: #020307;
-    /* background: linear-gradient(to bottom, #020307 0%, #4169E1 100%); */
-    
+
     &__form {
         width: 100%;
         max-width: 340px;

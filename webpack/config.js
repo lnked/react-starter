@@ -24,6 +24,8 @@ else if (define.rs_development)
     sourceMap = 'cheap-module-source-map';
 }
 
+process.traceDeprecation = true;
+
 module.exports = {
 
     context: define.rs_root,

@@ -1,4 +1,4 @@
-@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: #fff) {
     overflow: hidden;
     position: relative;
     line-height: $lineHeight;
@@ -20,7 +20,7 @@
         right: 0;
         width: 1em;
         height: 1em;
-        margin-top: 0.2em;
+        margin-top: .2em;
         background: $bgColor;
     }
 }

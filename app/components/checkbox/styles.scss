@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .checkbox {
     cursor: pointer;
@@ -25,8 +25,8 @@
     position: absolute;
     left: -15px;
     top: -15px;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     opacity: 0;
     visibility: hidden;
 }
@@ -38,8 +38,9 @@
 }
 
 .status {
-    &:after, &:before {
-        content: "";
+    &:after,
+    &:before {
+        content: '';
         position: absolute;
     }
 
@@ -51,7 +52,7 @@
     }
 
     &:after {
-        content: "";
+        content: '';
         position: absolute;
         opacity: 0;
         border-image: none;

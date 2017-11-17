@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .textinput {
     width: 100%;
@@ -21,7 +21,6 @@
         font-weight: 400;
         font-family: $font-family;
         background-color: $c-white;
-        background: transparent;
     }
 
     &__main {

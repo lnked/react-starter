@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .masked {
     font-size: 0;
@@ -42,7 +42,7 @@
     }
 
     &:disabled {
-        opacity: 0.4;
+        opacity: .4;
         cursor: default;
     }
 
@@ -51,12 +51,12 @@
     }
 
     &:-webkit-autofill {
-        box-shadow: 0 0 0px 1000px #fff inset;
+        box-shadow: 0 0 0 1000px #fff inset;
     }
 
     &::-webkit-inner-spin-button,
     &::-webkit-calendar-picker-indicator {
         display: none;
-        -webkit-appearance: none;
+        appearance: none;
     }
 }

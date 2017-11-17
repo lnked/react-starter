@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 @keyframes spinner {
     0% { transform: rotate(0deg); }
@@ -13,12 +13,13 @@
 }
 
 .settings {
-    position: absolute auto 0 0 !important;
+    position: absolute auto 0 0;
 
     &:hover {
-        color: #F8C52C;
+        color: #f8c52c;
 
-        img, svg {
+        img,
+        svg {
             animation: spinner 1s infinite linear;
         }
     }

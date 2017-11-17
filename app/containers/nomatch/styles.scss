@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .not-found {
     display: flex;
@@ -28,18 +28,18 @@
         clear: both;
 
         &__title {
-            color: rgba(0,0,0,0.75);
+            color: rgba(0, 0, 0, .75);
             font-size: 38px;
-            font-weight: lighter;
+            font-weight: 300;
             line-height: 47px;
             text-align: center;
             margin-bottom: 10px;
         }
-        
+
         &__description {
-            color: rgba(0,0,0,0.75);
+            color: rgba(0, 0, 0, .75);
             font-size: 21px;
-            font-weight: lighter;
+            font-weight: 300;
             line-height: 36px;
             text-align: center;
         }

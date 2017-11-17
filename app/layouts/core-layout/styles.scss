@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .layout {
     height: 100%;
@@ -9,7 +9,7 @@
     height: 36px;
     position: relative;
     background-color: #fafafa;
-    
+
     &:after {
         content: '';
         width: 100%;
@@ -17,7 +17,7 @@
         bottom: 0;
         left: 0;
         position: absolute;
-        background-color: rgba(black,0.1);
+        background-color: rgba(#000, .1);
     }
 }
 
@@ -41,10 +41,9 @@
 .content {
     height: calc(100vh - 36px);
     padding: 13px 24px 24px 12px;
-
     overflow-y: scroll;
     overflow-x: hidden;
-    overflow-y: -moz-scrollbars-none;
+    -moz-overflow-y: -moz-scrollbars-none;
     overflow-style: none;
 
     &::-webkit-scrollbar {

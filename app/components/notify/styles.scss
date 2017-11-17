@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .notify {
     width: 18px;
@@ -8,13 +8,14 @@
     display: inline-block;
     vertical-align: middle;
 
-    &:before, &:after {
+    &:before,
+    &:after {
         width: 18px;
         height: 17px;
         position: absolute;
         left: 0;
         top: 0;
-        content: "";
+        content: '';
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: 18px 17px;

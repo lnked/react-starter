@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .sandwich {
     width: 42px;;
@@ -12,7 +12,7 @@
         width: 42px;
         height: 38px;
     }
-    
+
     &__ln {
         left: 50%;
         top: 50%;
@@ -40,7 +40,7 @@
 
         &:before,
         &:after {
-            content: "";
+            content: '';
             display: block;
             left: 0;
             top: 0;
@@ -48,11 +48,11 @@
         }
 
         &:before {
-            transform: translate3d(0,-5px,0);
+            transform: translate3d(0, -5px, 0);
         }
 
         &:after {
-            transform: translate3d(0,5px,0);
+            transform: translate3d(0, 5px, 0);
         }
 
         &_open {

@@ -1,7 +1,6 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 $s-table-padding: 10px;
-// $c-table-border-color: #ececec;
 $c-table-border-color: #e4e8eb;
 
 .table {
@@ -15,7 +14,8 @@ $c-table-border-color: #e4e8eb;
 }
 
 .row_checked {
-    &, &:hover {
+    &,
+    &:hover {
         .col {
             background-color: #fefbf2;
         }
@@ -50,17 +50,17 @@ $c-table-border-color: #e4e8eb;
     padding: $s-table-padding 0;
     display: block;
     cursor: pointer;
-    background-image: url('components/table/assets/sort-default.svg');
+    background-image: url(components/table/assets/sort-default.svg);
     background-repeat: no-repeat;
     background-position: 100% 50%;
     background-size: 12px 12px;
 
     &_ascending {
-        background-image: url('components/table/assets/sort-ascending.svg');
+        background-image: url(components/table/assets/sort-ascending.svg);
     }
 
     &_descending {
-        background-image: url('components/table/assets/sort-descending.svg');
+        background-image: url(components/table/assets/sort-descending.svg);
     }
 }
 

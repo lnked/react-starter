@@ -1,4 +1,4 @@
-@import "assets/styles/_global.scss";
+@import 'assets/styles/_global.scss';
 
 .crumbs {
     &:not(:last-child) {
@@ -27,7 +27,7 @@
 
     &:not(:last-child) {
         &:after {
-            content: ">";
+            content: '>';
             margin: 0 5px;
             display: inline-block;
             vertical-align: middle;

@@ -5,6 +5,7 @@ const postcss = [];
 const define = require('./define');
 
 postcss.push(
+    require('stylelint'),
     require('postcss-inline-comment'),
     require('postcss-bem-linter'),
     require('postcss-import')({
@@ -74,7 +75,11 @@ postcss.push(
     require('postcss-quantity-queries'),
     require('postcss-flexboxfixer'),
     require('postcss-gradientfixer'),
-    require('postcss-easings')
+    require('postcss-easings'),
+    // require("postcss-cssnext"),
+    require('postcss-reporter')({
+        clearReportedMessages: true
+    })
 );
 
 if (define.rs_production) {

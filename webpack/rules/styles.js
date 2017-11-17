@@ -33,15 +33,15 @@ const usesConfig = [
             localIdentName: define.rs_production ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
         }
     },
-    {
-        loader: 'sasslint-loader',
-        options: {
-            quiet: true,
-            emitError: true,
-            failOnError: true,
-            failOnWarning: true
-        }
-    },
+    // {
+    //     loader: 'sasslint-loader',
+    //     options: {
+    //         quiet: true,
+    //         emitError: true,
+    //         failOnError: true,
+    //         failOnWarning: true
+    //     }
+    // },
     {
         loader: 'sass-loader',
         options: {
