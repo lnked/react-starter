@@ -2,7 +2,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)]()
 [![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)]()
 [![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)]()
->>>>>>> 53ecf35... update
+[![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
 
 [![npm (scoped)](https://img.shields.io/npm/v/@cycle/core.svg)](https://github.com/lnked/react-starter)
 [![GitHub issues](https://img.shields.io/github/issues/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
@@ -38,85 +38,77 @@ Then run command
 yarn install
 ```
 
-## Features
-
-- ReactJS component
-
-**TL;DR** [the demo page](https://lnked.github.io/react-starter/)
-
-
-## ReactJS component usage
-
-```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-```
-
-Then in JSX:
-
-```js
-export default class MyComponent extends Component {
-    render() {
-        return (
-            {/* ... */}
-        )
-    }
-}
-```
-
-<!--
-## Playground
-
-- [Plain JSFiddle (Basic usage)](https://jsfiddle.net/)
-
-## Documentation
-
-- [ReactJS component usage](https://github.com/nosir/cleave.js/blob/master/doc/reactjs-component-usage.md)
--->
-
 ## Run tasks
-
-```bash
-yarn install
-```
 
 Start dev-server
 
 ```bash
-yarn run start
+yarn start
 ```
 
-Build assets
+Build without compress
 
 ```bash
-yarn run build
+yarn build
 ```
 
-Run tests
+Build with compress
 
 ```bash
-yarn run test
+yarn release
 ```
 
-Lint
+Analyze code
 
 ```bash
-yarn run lint
+yarn analyze
+```
+
+Stats
+
+```bash
+yarn stats
+```
+
+Lint scripts
+
+```bash
+yarn lint:scripts
+```
+
+Lint styles
+
+```bash
+yarn lint:styles
+```
+
+Lint styles and scripts
+
+```bash
+yarn lint
 ```
 
 Fix
 
 ```bash
-yarn run lint-fix
+yarn run lint:fix
 ```
 
-## Todo
-- [x] ReactJS component
-- [ ] Unit tests for formatter
+## Expected
+- [ ] Tests
+- [ ] Redux
+- [ ] Storybook
 
 ## Get in touch
 - Bugs / Suggestions: [open an issue](https://github.com/lnked/react-starter/issues)
 
-## Licence
+<!--
+## Features
 
-React-starter is licensed under the [![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
+"storybook": "start-storybook -p 6006",
+"build-storybook": "build-storybook",
+"lint2": "eslint ./app -f table",
+"lint:fix3": "eslint ./app -f table --fix"
+
+**TL;DR** [the demo page](https://lnked.github.io/react-starter/)
+-->
