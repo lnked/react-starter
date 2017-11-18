@@ -7,7 +7,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const BundleBuddyWebpackPlugin = require("bundle-buddy-webpack-plugin");
 
 const plugins = [
-new BundleBuddyWebpackPlugin({sam: true}),
+    new BundleBuddyWebpackPlugin({sam: true}),
     new WebpackBundleSizeAnalyzerPlugin('./plain-report.txt'),
     new BundleAnalyzerPlugin({
         // Can be `server`, `static` or `disabled`.
