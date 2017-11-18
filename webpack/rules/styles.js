@@ -3,8 +3,7 @@
 const { resolve } = require('path');
 const define = require('../define');
 const postcss = require('../postcss');
-// const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 const cssConfig = [
     {
@@ -33,15 +32,6 @@ const usesConfig = [
             localIdentName: define.rs_production ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
         }
     },
-    // {
-    //     loader: 'sasslint-loader',
-    //     options: {
-    //         quiet: true,
-    //         emitError: true,
-    //         failOnError: true,
-    //         failOnWarning: true
-    //     }
-    // },
     {
         loader: 'sass-loader',
         options: {
@@ -54,7 +44,7 @@ const usesConfig = [
         loader: 'postcss-loader',
         options: {
             sourceMap: define.rs_development || define.rs_analyzer ? 'inline' : false,
-            plugins: function () {
+            plugins: () => {
                 return postcss.config;
             }
         }
@@ -64,7 +54,7 @@ const usesConfig = [
 const rules = define.rs_generate_css ? [
         {
             test: /\.css$/,
-            use: ExtractTextPlugin.extract({ // ExtractCssChunks.extract({
+            use: ExtractCssChunks.extract({
                 fallback: 'style-loader',
                 publicPath: '../',
                 use: cssConfig
@@ -76,7 +66,7 @@ const rules = define.rs_generate_css ? [
         },
         {
             test: /\.(s(a|c)ss)$/,
-            use: ExtractTextPlugin.extract({ // ExtractCssChunks.extract({
+            use: ExtractCssChunks.extract({
                 fallback: 'style-loader',
                 publicPath: '../',
                 use: usesConfig

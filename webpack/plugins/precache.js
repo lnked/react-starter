@@ -98,7 +98,7 @@ const plugins = [
 
     // new OfflinePlugin({
     //     cacheMaps: [{
-    //         match: function(requestUrl) {
+    //         match: (requestUrl) => {
     //             return new URL('/shell', location);
     //         },
     //         requestTypes: ['navigate']

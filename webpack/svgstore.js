@@ -8,10 +8,10 @@ const error = require('../utils/error');
 
 // console.log(path.resolve(define.rs_root, 'assets/svgstore/**/*.svg'));
 
-module.exports = function(config) {
+module.exports = (config) => {
     config = config || {};
 
-    return function(callback) {
+    return (callback) => {
 
         function fileContents (filePath, file) {
             return file.contents.toString().replace(/<svg.*?>|<\/svg>/gi, '');
@@ -20,7 +20,7 @@ module.exports = function(config) {
         gulp.src(config.file)
             .pipe($.inject(
                 gulp.src(config.src)
-                    .pipe($.svgmin(function (file) {
+                    .pipe($.svgmin((file) => {
                         var prefix = path.basename(file.relative, path.extname(file.relative));
                         return {
                             plugins: [
@@ -52,7 +52,7 @@ module.exports = function(config) {
                         }
                     }))
                     .pipe($.cheerio({
-                        run: function ($) {
+                        run: ($) => {
                             $('[fill]').removeAttr('fill');
                             $('[style]').removeAttr('style');
                         },
@@ -64,7 +64,7 @@ module.exports = function(config) {
             ))
             .pipe(gulp.dest(config.path))
             .pipe($.if(global.is.notify, $.notify({ message: config.task + ' complete', onLast: true })));
-       
+
         callback();
     };
 
