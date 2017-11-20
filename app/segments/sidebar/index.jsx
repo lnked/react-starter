@@ -3,61 +3,25 @@ import css from './styles.scss'
 
 import { Logo, SidebarIcon } from 'components'
 
-const base = '/cpanel'
+const base = '/'
 
 export default class Sidebar extends Component {
     renderPages () {
         const pages = [
             {
                 id: 1,
+                icon: 'dashboard',
+                title: 'Рабочий стол',
                 system: 'dashboard',
-                title: 'Рабочий стол'
+                component: 'dashboard'
             },
             {
                 id: 2,
+                icon: 'structure',
+                title: 'Страницы',
                 system: 'structure',
-                title: 'Страницы'
-            },
-            {
-                id: 3,
-                system: 'content',
-                title: 'Контент'
-            },
-            {
-                id: 4,
-                system: 'shopping',
-                title: 'Интернет магазин'
-            },
-            {
-                id: 5,
-                system: 'modules',
-                title: 'Редактор модулей'
-            },
-            {
-                id: 6,
-                system: 'blocks',
-                title: 'Зоны и блоки'
-            },
-            {
-                id: 7,
-                system: 'users',
-                title: 'Пользователи'
-            },
-            {
-                id: 8,
-                system: 'i18n',
-                title: 'Интернационализация'
+                component: 'structure'
             }
-            // {
-            //     id: 8,
-            //     system: 'seo',
-            //     title: 'SEO оптимизация'
-            // },
-            // {
-            //     id: 9,
-            //     system: 'search',
-            //     title: 'Поиск по сайту'
-            // }
         ]
 
         return pages.map((props, id) => {

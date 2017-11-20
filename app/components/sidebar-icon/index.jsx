@@ -7,8 +7,9 @@ import { NavLink } from 'react-router-dom'
 export default class SidebarIcon extends Component {
     static propTypes = {
         link: string,
+        icon: string,
         title: string,
-        system: string,
+        // component: string,
         className: string
     }
 
@@ -18,7 +19,7 @@ export default class SidebarIcon extends Component {
     }
 
     render () {
-        const { link, title, system } = this.props
+        const { link, title, icon } = this.props
 
         return (
             <NavLink to={`${link}`} className={`${css.button} ${this.props.className}`} activeClassName={css.active}>
@@ -27,17 +28,11 @@ export default class SidebarIcon extends Component {
                     <svg height="36" width="36">
                         <circle cx="18" cy="18" r="16" />
                     </svg>
-
-                    {/*
-                    <svg class="progress-circle" width="70" height="70">
-                        <path style="stroke-dasharray: 204.244; stroke-dashoffset: 204.244;" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" />
-                    </svg>
-                    */}
                 </span>
 
                 <span className={css.image}>
                     <svg className={css.pictogram} role="img">
-                        <use xlinkHref={`#${system}`}/>
+                        <use xlinkHref={`#${icon}`}/>
                     </svg>
                 </span>
             </NavLink>

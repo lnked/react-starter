@@ -10,7 +10,6 @@ import Layout from 'components/layout'
 import Button from 'components/button'
 import Switch from 'components/switch'
 import Notify from 'components/notify'
-import Select from 'components/select'
 import Loader from 'components/loader'
 import Spinner from 'components/spinner'
 import Checkbox from 'components/checkbox'
@@ -36,7 +35,6 @@ export {
     Switch,
     Layout,
     Notify,
-    Select,
     Button,
     Loader,
     Confirm,

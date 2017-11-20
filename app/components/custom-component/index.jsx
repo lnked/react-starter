@@ -12,7 +12,6 @@ import RadioGroup from 'components/radio-group'
 import SelectionBox from 'components/selection-box'
 import BreadCrumbs from 'components/bread-crumbs'
 import Notify from 'components/notify'
-import Select from 'components/select'
 import HintText from 'components/hint-text'
 import MaskedText from 'components/masked-text'
 import Loader from 'components/loader'
@@ -156,13 +155,6 @@ export default class CustomComponent extends Component {
                 return (
                     <div key={Math.random()} className={css.item}>
                         <Radio {...props} />
-                    </div>
-                )
-            },
-            select: (props) => {
-                return (
-                    <div key={Math.random()} className={css.item}>
-                        <Select {...props} />
                     </div>
                 )
             },
