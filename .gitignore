@@ -3,6 +3,7 @@
 /___/
 /dist/
 /app/hoc/*
+/app/cache/
 /app/store.jsx
 /app/server.js
 /app/router.jsx

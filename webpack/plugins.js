@@ -11,8 +11,7 @@ if (define.rs_development) {
 
 plugins.push(
     // ...require('./plugins/lint').config,
-    ...require('./plugins/general').config,
-    ...require('./plugins/svgstore').config
+    ...require('./plugins/general').config
 );
 
 if (define.rs_production) {
