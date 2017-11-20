@@ -19,6 +19,13 @@ performance.mark('start')
 
 // console.log('nanoid: ', nanoid())
 
+const __svg__ = {
+    path: 'assets/svgstore/**/*.svg',
+    name: 'cache/sprite.svg'
+}
+
+require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__)
+
 render((
     <CoreLayout>
         <ComponentPage />
