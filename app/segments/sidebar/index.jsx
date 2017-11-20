@@ -3,7 +3,7 @@ import css from './styles.scss'
 
 import { Logo, SidebarIcon } from 'components'
 
-const base = '/'
+const base = ''
 
 export default class Sidebar extends Component {
     renderPages () {
