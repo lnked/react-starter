@@ -16,10 +16,7 @@ module.exports = {
         filename: 'cache/[name].js'
     },
 
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
-        }),
-        ...require('./plugins/svgstore').config
-    ]
+    plugins: require('./plugins/prebuild').config,
+
+    stats: require('./stats').config
 }

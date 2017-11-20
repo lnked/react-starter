@@ -3,10 +3,10 @@
 const webpack = require('webpack');
 const SvgStore = require('webpack-svgstore-plugin');
 
-const define = require('../define');
-const { resolve } = require('path');
-
 const plugins = [
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+    }),
     new SvgStore({
         svg: {
             xmlns: 'http://www.w3.org/2000/svg',
@@ -14,15 +14,15 @@ const plugins = [
         },
         svgoOptions: {
             plugins: [
-                { removeTitle:true },
-                { removeDesc:true },
-                { removeViewBox:false },
-                { removeDoctype:true },
-                { removeMetadata:true },
-                { removeComments:true },
-                { removeUselessDefs:true },
-                { removeXMLProcInst:true },
-                { removeDimensions:true },
+                { removeTitle: true },
+                { removeDesc: true },
+                { removeViewBox: false },
+                { removeDoctype: true },
+                { removeMetadata: true },
+                { removeComments: true },
+                { removeUselessDefs: true },
+                { removeXMLProcInst: true },
+                { removeDimensions: true },
                 { cleanupNumericValues: {
                     floatPrecision: 2
                 }},
