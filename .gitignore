@@ -7,6 +7,7 @@
 /app/router.jsx
 /app/routes.jsx
 /app/routes.demo.jsx
+/app/constants.js
 
 # Numerous always-ignore extensions
 *.bak
