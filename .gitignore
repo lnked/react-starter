@@ -2,6 +2,11 @@
 /___/
 /dist/
 /app/hoc/*
+/app/store.jsx
+/app/server.js
+/app/router.jsx
+/app/routes.jsx
+/app/routes.demo.jsx
 
 # Numerous always-ignore extensions
 *.bak
