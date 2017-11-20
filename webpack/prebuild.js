@@ -19,4 +19,5 @@ module.exports = {
     plugins: require('./plugins/prebuild').config,
 
     stats: require('./stats').config
+
 }
