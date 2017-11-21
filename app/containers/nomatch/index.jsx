@@ -11,7 +11,7 @@ export default class NoMatch extends Component {
             <div className={css['not-found']}>
                 <div className={css['not-found__figure']}>
                     <img
-                        src={require('images/react.svg')}
+                        src={require('images/logo.svg')}
                         className={css['not-found__figure__image']}
                         alt="Error: 4xx" />
                 </div>
