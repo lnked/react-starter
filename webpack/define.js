@@ -23,7 +23,7 @@ module.exports = {
     rs_node: _node_,
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
-    rs_generate_css: isProduction,
+    rs_generate_css: false, // isProduction
     rs_production: isProduction,
     rs_development: isDevelopment,
     rs_output_path: isDeploy ? _deploy_ : '',
