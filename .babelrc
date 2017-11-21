@@ -2,14 +2,14 @@
     "presets": [
         "flow",
         "react",
-        "es2017",
         ["env", {
             "targets": {
                 "debug": false,
                 "loose": false,
                 "uglify": true,
                 "modules": false,
-                "useBuiltIns": true
+                // "useBuiltIns": true
+                "useBuiltIns": "entry"
             }
         }]
     ],

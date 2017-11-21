@@ -6,7 +6,6 @@ const define = require('./define');
 
 postcss.push(
     require('stylelint'),
-    require('postcss-inline-comment'),
     require('postcss-bem-linter'),
     require('postcss-import')({
         root: define.rs_root,

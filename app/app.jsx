@@ -26,9 +26,6 @@ render((
 ), document.getElementById('root'))
 
 if (process.env.NODE_ENV === 'development') {
-    const {whyDidYouUpdate} = require('why-did-you-update')
-    whyDidYouUpdate(React)
-
     if (module.hot) {
         module.hot.accept()
     }

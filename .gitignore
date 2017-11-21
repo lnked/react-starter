@@ -10,6 +10,7 @@
 /app/routes.jsx
 /app/routes.demo.jsx
 /app/constants.js
+/package-lock.json
 
 # Numerous always-ignore extensions
 *.bak

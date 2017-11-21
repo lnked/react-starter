@@ -16,6 +16,14 @@ file_type = jsx
 indent_style = space
 indent_size = 4
 
+[{.babelrc, .eslintrc, .stylelintrc}]
+syntax = json
+file_type = json
+
+[.flowconfig]
+syntax = shell
+file_type = shell
+
 [.eslintrc]
 indent_style = space
 indent_size = 4
