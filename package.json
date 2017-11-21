@@ -5,7 +5,10 @@
   "description": "React boilerplate, pwa, router",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "prebuild": "rm -rf ./app/cache && webpack --config ./webpack/prebuild.js",
+    "svgstore": "rm -rf ./app/cache && webpack --config ./webpack/prebuild.js",
+    "prestart": "yarn run svgstore",
+    "prebuild": "yarn run svgstore",
+    "prerelease": "yarn run svgstore",
     "build": "yarn run clean && webpack --config ./webpack/config.js --env assemply",
     "release": "yarn run clean && webpack --config ./webpack/config.js --env release",
     "analyze": "yarn run clean && webpack --config ./webpack/config.js --env analyze",
