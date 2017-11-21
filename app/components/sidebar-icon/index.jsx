@@ -31,7 +31,7 @@ export default class SidebarIcon extends Component {
                 </span>
 
                 <span className={css.image}>
-                    <svg className={css.pictogram} role="img" alt={title}>
+                    <svg className={css.pictogram} role="presentation">
                         <use xlinkHref={`#${icon}`}/>
                     </svg>
                 </span>
