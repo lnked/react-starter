@@ -84,7 +84,7 @@ module.exports = {
         ]
     },
 
-    performance: define.rs_production && {
+    performance: define.rs_release && {
         hints: 'warning',
         maxAssetSize: 400000,
         maxEntrypointSize: 500000,
@@ -117,7 +117,7 @@ module.exports = {
 
     plugins: plugins.config,
 
-    bail: define.rs_production,
+    bail: define.rs_release,
 
     cache: define.rs_development,
 };
