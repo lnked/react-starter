@@ -11,6 +11,8 @@
 /app/routes.jsx
 /app/routes.demo.jsx
 /app/constants.js
+/app/settings/routes.js
+/app/settings/fidebase.js
 /package-lock.json
 
 # Numerous always-ignore extensions
