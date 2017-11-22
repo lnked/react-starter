@@ -4,6 +4,7 @@
 /dist/
 /app/hoc/*
 /app/cache/
+/app/redux/
 /app/store.jsx
 /app/server.js
 /app/router.jsx
