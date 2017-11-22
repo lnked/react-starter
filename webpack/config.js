@@ -26,6 +26,17 @@ else if (define.rs_development)
 
 process.traceDeprecation = true;
 
+console.log('entryPoint.config: ', entryPoint.config);
+console.log('output.config: ', {
+    path: define.rs_dist,
+    pathinfo: define.rs_development,
+    publicPath: define.rs_output_path,
+    filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
+    chunkFilename: define.rs_production ? 'js/[name].[chunkhash:5].chunk.js' : '[name].chunk.js',
+    jsonpFunction: 'WJ',
+    hotUpdateFunction: 'UF'
+});
+
 module.exports = {
 
     context: define.rs_root,
