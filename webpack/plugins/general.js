@@ -6,8 +6,10 @@ const helpers = require('../helpers');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 const plugins = [
+    new WebpackNotifierPlugin(),
     // new webpack.ProvidePlugin({
     //     $: "jQuery"
     //     "jQuery": "jQuery"
