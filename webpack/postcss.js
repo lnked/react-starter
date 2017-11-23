@@ -5,8 +5,7 @@ const postcss = [];
 const define = require('./define');
 
 postcss.push(
-    require('postcss-comment'),
-    // require('postcss-strip-inline-comments'),
+    require('postcss-strip-inline-comments'),
     require('stylelint'),
     require('postcss-bem-linter'),
     require('postcss-import')({
