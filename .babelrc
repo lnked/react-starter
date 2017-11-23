@@ -26,8 +26,6 @@
             "plugins": [
                 "transform-react-display-name",
                 "react-hot-loader/babel",
-                "transform-react-jsx-source",
-                "transform-react-jsx-self",
                 ["transform-runtime", {
                     "helpers": false,
                     "polyfill": false,
