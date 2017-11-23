@@ -1544,7 +1544,7 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000770"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000770.tgz#cf68ae1cb8a82f6d3c35df41c62dc6973e470244"
 
-caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000770:
+caniuse-lite@1.0.30000770, caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000770:
   version "1.0.30000770"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000770.tgz#bc8e7f50b073273390db6ab357378909a14e9bdb"
 

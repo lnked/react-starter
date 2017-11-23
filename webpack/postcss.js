@@ -6,11 +6,13 @@ const define = require('./define');
 
 postcss.push(
     require('postcss-strip-inline-comments'),
-    require('stylelint'),
     require('postcss-bem-linter'),
     require('postcss-import')({
         root: define.rs_root,
         path: define.rs_root
+    }),
+    require('stylelint')({
+        'syntax': 'scss'
     }),
     // PostCSS plugin for sass-like mixins
     // https://github.com/andyjansson/postcss-sassy-mixins
@@ -85,8 +87,6 @@ if (define.rs_production) {
     postcss.push(
         require('postcss-discard-comments'),
         require('postcss-emptymediaqueries'),
-        // Add vendor prefixes to CSS rules using values from caniuse.com
-        // https://github.com/postcss/autoprefixer
         require('autoprefixer'),
         require('cssnano')({
             safe: true,
