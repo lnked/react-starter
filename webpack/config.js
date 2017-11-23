@@ -32,7 +32,7 @@ module.exports = {
 
     devtool: sourceMap,
 
-    target: 'web', // 'web' | 'node' | electron-main | electron-renderer
+    target: define.rs_target,
 
     entry: entryPoint.config,
 
@@ -91,6 +91,14 @@ module.exports = {
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
 
+    watch: define.rs_development,
+
+    plugins: plugins.config,
+
+    bail: define.rs_release,
+
+    cache: define.rs_development,
+
     stats: stats.config,
 
     devServer: {
@@ -111,13 +119,5 @@ module.exports = {
         hotOnly: define.rs_development,
         port: port,
         host: host
-    },
-
-    watch: define.rs_development,
-
-    plugins: plugins.config,
-
-    bail: define.rs_release,
-
-    cache: define.rs_development,
+    }
 };

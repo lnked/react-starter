@@ -21,6 +21,7 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
     rs_generate_css: false, // isProduction
