@@ -5,14 +5,14 @@ const postcss = [];
 const define = require('./define');
 
 postcss.push(
+    require('stylelint')({
+        'syntax': 'scss'
+    }),
     require('postcss-strip-inline-comments'),
     require('postcss-bem-linter'),
     require('postcss-import')({
         root: define.rs_root,
         path: define.rs_root
-    }),
-    require('stylelint')({
-        'syntax': 'scss'
     }),
     // PostCSS plugin for sass-like mixins
     // https://github.com/andyjansson/postcss-sassy-mixins
