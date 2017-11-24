@@ -5,7 +5,7 @@ const define  = require('../define');
 
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
-const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
+const ChunkManifestPlugin = require('webpack-plugin-chunk-manifest');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
@@ -28,9 +28,7 @@ const plugins = [
     new webpack.HashedModuleIdsPlugin(),
     new WebpackChunkHash(),
     new ChunkManifestPlugin({
-        filename: 'chunk-manifest.json',
-        manifestVariable: 'webpackManifest',
-        inlineManifest: true
+        filename: 'chunk-manifest.json'
     }),
     new ExtractCssChunks({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',

@@ -1640,12 +1640,6 @@ chownr@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
 
-chunk-manifest-webpack-plugin@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/chunk-manifest-webpack-plugin/-/chunk-manifest-webpack-plugin-1.1.2.tgz#b332efb97c1a23bfd3ca5dcee13aa120df72df59"
-  dependencies:
-    webpack-core "^0.6.9"
-
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -9408,7 +9402,7 @@ webpack-chunk-hash@0.5.0:
   dependencies:
     "@types/webpack" "^3.0.5"
 
-webpack-core@^0.6.9, webpack-core@~0.6.9:
+webpack-core@~0.6.9:
   version "0.6.9"
   resolved "https://registry.yarnpkg.com/webpack-core/-/webpack-core-0.6.9.tgz#fc571588c8558da77be9efb6debdc5a3b172bdc2"
   dependencies:
@@ -9484,6 +9478,10 @@ webpack-notifier@1.5.0:
     node-notifier "^4.1.0"
     object-assign "^4.1.0"
     strip-ansi "^3.0.1"
+
+webpack-plugin-chunk-manifest@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/webpack-plugin-chunk-manifest/-/webpack-plugin-chunk-manifest-0.1.1.tgz#552d11cc69560fe00a957a47ccc77974f846c0aa"
 
 webpack-sources@^1.0.1, webpack-sources@^1.0.2:
   version "1.0.2"
