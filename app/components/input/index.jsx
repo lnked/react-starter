@@ -71,6 +71,16 @@ export default class Input extends PureComponent {
         }
     }
 
+    shouldComponentUpdate (nextProps) {
+        return nextProps.value !== this.state.value
+    }
+
+    componentWillUpdate (nextProps) {
+        if (nextProps.value !== this.state.value) {
+            this.setState({...this.state, value: nextProps.value})
+        }
+    }
+
     handleChange (e) {
         const content = e.nativeEvent.target.value
 

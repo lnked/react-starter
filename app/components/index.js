@@ -12,6 +12,7 @@ import Switch from 'components/switch'
 import Notify from 'components/notify'
 import Loader from 'components/loader'
 import Spinner from 'components/spinner'
+import Quantity from 'components/quantity'
 import Checkbox from 'components/checkbox'
 import HintText from 'components/hint-text'
 import Navigation from 'components/navigation'
@@ -41,6 +42,7 @@ export {
     Spinner,
     Checkbox,
     HintText,
+    Quantity,
     MaskedText,
     Navigation,
     RadioGroup,
