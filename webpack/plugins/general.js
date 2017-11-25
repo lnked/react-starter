@@ -28,8 +28,12 @@ const plugins = [
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendor')),
     new CopyWebpackPlugin([
         { from: 'assets/images', to: 'images', copyUnmodified: true },
-        { from: 'assets/misc/robots.txt', copyUnmodified: true },
-        { from: 'assets/misc/.htaccess', copyUnmodified: true }
+        {
+            context: 'assets/misc',
+            from: { glob: '**/*', dot: true },
+            to: define.rs_dist,
+            copyUnmodified: true
+        }
     ])
 ];
 
