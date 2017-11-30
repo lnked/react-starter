@@ -36,7 +36,12 @@ const plugins = [
                     names2hex: true,
                     rgb2hex: true
                 }},
-                { removeUselessStrokeAndFill: false }
+                { removeAttrs: {
+                    attrs: '*:(fill|stroke)'
+                } },
+                { removeStyleElement: true },
+                { removeScriptElement: true },
+                { removeUselessStrokeAndFill: true }
             ]
         },
         prefix: ''
