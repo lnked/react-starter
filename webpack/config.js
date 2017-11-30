@@ -52,7 +52,7 @@ module.exports = {
         mainFiles: ['index'],
         enforceExtension: false,
         enforceModuleExtension: false,
-        extensions: ['.js', '.jsx', '.json', '.css', '.scss'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
             hoc: resolve(define.rs_root, 'hoc'),
