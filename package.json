@@ -35,6 +35,9 @@
   "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "8.0.53",
+    "@types/react": "16.0.25",
+    "@types/react-dom": "16.0.3",
     "axios": "0.17.1",
     "core-js": "2.5.1",
     "prop-types": "15.6.0",
