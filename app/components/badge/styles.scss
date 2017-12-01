@@ -6,31 +6,44 @@
     font-size: 1.3rem;
     border-radius: 2px;
     display: inline-block;
-    color: darken(#3db27f, 25%);
-    border: 1px solid #3db27f;
-    background-color: #3db27f;
 }
 
-// $c-default-color:               #505F79;
-// $c-default-border:              #ececec;
-// $c-default-background:          #ececec;
+.bold {
+    font-weight: 700;
+}
 
-// $c-primary-color:               #fff;
-// $c-primary-border:              #00529f;
-// $c-primary-background:          #0052cc;
+.info {
+    color: $c-info-color;
+    border: 1px solid $c-info-border;
+    background-color: $c-info-background;
+}
 
-// $c-info-color:                  #a5926c;
-// $c-info-border:                 #fef7da;
-// $c-info-background:             #fef7da;
+.default {
+    color: $c-default-color;
+    border: 1px solid $c-default-border;
+    background-color: $c-default-background;
+}
 
-// $c-success-color:               #006644;
-// $c-success-border:              #e3fcef;
-// $c-success-background:          #e3fcef;
+.primary {
+    color: $c-primary-color;
+    border: 1px solid $c-primary-border;
+    background-color: $c-primary-background;
+}
 
-// $c-warning-color:               #3e4146;
-// $c-warning-border:              #fdaa2a;
-// $c-warning-background:          #fdaa2a;
+.success {
+    color: $c-success-color;
+    border: 1px solid $c-success-border;
+    background-color: $c-success-background;
+}
 
-// $c-danger-color:                #fff;
-// $c-danger-border:               #dc371d;
-// $c-danger-background:           #dc371d;
+.danger {
+    color: $c-danger-color;
+    border: 1px solid $c-danger-border;
+    background-color: $c-danger-background;
+}
+
+.warning {
+    color: $c-warning-color;
+    border: 1px solid $c-warning-border;
+    background-color: $c-warning-background;
+}

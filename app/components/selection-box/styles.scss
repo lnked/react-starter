@@ -46,11 +46,6 @@
     text-align: center;
 }
 
-.input:checked + .visible {
-    color: $c-cobalt;
-    background-color: $c-white-smoke;
-}
-
 .item_default .visible {
     height: 40px;
     padding: 0 20px;
@@ -58,4 +53,9 @@
 
 .item_inline .visible {
     height: 42px;
+}
+
+.input:checked + .visible {
+    color: $c-cobalt;
+    background-color: $c-white-smoke;
 }

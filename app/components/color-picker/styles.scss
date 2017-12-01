@@ -29,24 +29,30 @@
     user-select: text;
     cursor: auto;
 
-    &::placeholder {
+    &:placeholder {
         color: $c-pink-swan;
         opacity: 1;
         transition: opacity $a-time $a-func;
+        text-overflow: ellipsis;
     }
 
-    &:focus::placeholder {
+    &:focus:placeholder {
         color: transparent;
         opacity: 0;
     }
 
-    &[placeholder],
-    &::placeholder {
-        text-overflow: ellipsis;
+    &::-ms-clear {
+        display: none;
     }
 
-    &:hover {
-        border-color: $c-black;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+        appearance: none;
+    }
+
+    &:-webkit-autofill {
+        box-shadow: 0 0 0 1000px #fff inset;
     }
 
     &:focus {
@@ -56,20 +62,6 @@
     &:disabled {
         opacity: .4;
         cursor: default;
-    }
-
-    &::-ms-clear {
-        display: none;
-    }
-
-    &:-webkit-autofill {
-        box-shadow: 0 0 0 1000px #fff inset;
-    }
-
-    &::-webkit-inner-spin-button,
-    &::-webkit-calendar-picker-indicator {
-        display: none;
-        appearance: none;
     }
 }
 

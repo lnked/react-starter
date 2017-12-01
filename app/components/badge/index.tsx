@@ -4,7 +4,7 @@ import css from './styles.scss'
 
 export default class Badge extends PureComponent {
     static propTypes = {
-        title: string,
+        title: string.isRequred,
         bolded: bool,
         variant: oneOf([
             'info',
@@ -21,14 +21,35 @@ export default class Badge extends PureComponent {
     }
 
     static defaultProps = {
-        title: ''
+        bolded: false,
+        className: '',
+        variant: 'default'
     }
 
     render () {
-        const { title, children } : { title: string, children: any } = this.props
+        const cn = []
+
+        const { title, children, variant, bolded, className } : {
+            title: string,
+            bolded: boolean,
+            variant: string,
+            children: any,
+            className: string
+        } = this.props
+
+        cn.push(css.badge)
+        cn.push(`${css[`${variant}`]}`)
+
+        if (className) {
+            cn.push(className)
+        }
+
+        if (bolded) {
+            cn.push(css.bold)
+        }
 
         return (
-            <div className={css.badge}>{ title || children }</div>
+            <div className={cn.join(' ')}>{ title || children }</div>
         )
     }
 }

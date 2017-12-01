@@ -9,33 +9,35 @@ $c-table-border-color: #e4e8eb;
     border-collapse: collapse;
 }
 
-.row:hover .col {
-    background-color: #f8f9fb;
-}
-
-.row_checked {
-    &,
-    &:hover {
-        .col {
-            background-color: #fefbf2;
-        }
-    }
-}
-
 .col {
+    font-size: 1.3em;
+    letter-spacing: .05ex;
     vertical-align: middle;
-    padding: $s-table-padding;
+    padding: 4px $s-table-padding;
     border: 1px solid $c-table-border-color;
+
+    &:first-child {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    :hover > & {
+        background-color: #fdf5ce;
+    }
 }
 
 .tcol {
     color: #222;
-    font-weight: 700;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: .02ex;
     vertical-align: middle;
-    padding: 0 $s-table-padding;
-    background-color: #ffd530;
-    border: 1px solid #ffd530;
-    border-bottom: 2px solid #666;
+    padding: 7px $s-table-padding;
+    background-color: #ddd;
+    text-transform: uppercase;
+    border: 1px solid $c-table-border-color;
+    border-bottom: 1px solid #bfbebe;
 }
 
 .fcol {
