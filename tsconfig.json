@@ -1,26 +1,37 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "commonjs",
     "target": "es5",
-    "lib": ["es6", "dom"],
-    "sourceMap": true,
-    "allowJs": true,
+    "module": "commonjs",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "noEmitOnError": true,
     "jsx": "react",
-    "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDir": "app",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true
   },
+  "lib": [
+    "es2015",
+    "dom"
+  ],
   "exclude": [
     "node_modules",
     "dist",
     "tests",
     "webpack"
   ],
-  "types": [
-    "typePatches"
+  "include": [
+    "app/**.ts",
+    "app/**.tsx"
   ]
 }

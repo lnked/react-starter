@@ -39,14 +39,14 @@ export default class Quantity extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
-    shouldComponentUpdate (nextProps) {
-        return nextProps.count !== this.state.count
-    }
-
-    componentWillUpdate (nextProps) {
+    componentWillReceiveProps (nextProps) {
         if (nextProps.count !== this.state.count) {
             this.setState({...this.state, count: nextProps.count})
         }
+    }
+
+    shouldComponentUpdate (nextProps) {
+        return nextProps.count !== this.state.count
     }
 
     changeValue (value) {
@@ -87,7 +87,6 @@ export default class Quantity extends Component {
     render () {
         const { min, max, type, name } = this.props
         const { count } = this.state
-        console.log('count: ', count)
 
         return (
             <div className={css.quantity}>

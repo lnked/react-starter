@@ -2,32 +2,56 @@
 
 .button {
     margin: 0;
-    height: 38px;
-    padding: 0 20px;
-    line-height: 36px;
+    padding-top: 0;
+    padding-bottom: 0;
+
     outline: none;
-    user-select: none;
-    overflow: visible;
     cursor: pointer;
-    font-size: 1.2rem;
+    overflow: visible;
+    appearance: none;
+    user-select: none;
+
     font-weight: 400;
     text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    text-decoration: none;
     text-transform: none;
+    text-decoration: none;
+
     border-width: 1px;
     border-style: solid;
-    transition: border-color $a-time, background-color $a-time, color $a-time;
-    appearance: none;
+    border-radius: 1px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .04), 0 1px 2px 0 rgba(0, 0, 0, .05);
+    transition: background .1s ease-out, border-color .1s ease-out, box-shadow .15s cubic-bezier(.47, .03, .49, 1.38), color .1s ease-out;
 
     &:focus {
         outline: 0;
     }
 
-    @media (max-width: $max-tablet) {
-        width: 100%;
-        text-align: center;
+    &:active {
+        box-shadow: inset 0 2px 0 rgba(0, 0, 0, .05), 0 1px 2px 0 rgba(0, 0, 0, .05);
+    }
+
+    & + & {
+        margin-left: 10px;
+    }
+
+    &:disabled {
+        cursor: default;
+        color: #a5adba;
+        border-color: transparent;
+        background-color: #f4f5f7;
+    }
+}
+
+.pure,
+.link,
+.subtle-link {
+    &,
+    &:active {
+        box-shadow: none;
     }
 }
 
@@ -36,211 +60,152 @@
     height: 100%;
     padding: 0;
     display: block;
+    text-align: center;
 }
 
-.filled {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding: 0;
-    display: block;
-    background: none;
-    background-color: $c-default-background;
+.loader {
+    border: 1px solid #0ff;
 }
 
-.filled-mobile {
-    color: $c-default-color;
-    border-color: $c-default-border;
-    background-color: $c-default-background;
+.small {
+    height: 28px;
+    font-size: 1.2rem;
+    line-height: 26px;
 
-    @media (max-width: $max-tablet) {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        border: 1px solid #f00;
-        padding: 0;
-        display: block;
+    &:not(.icon) {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
-.default {
+.normal {
+    height: 32px;
+    font-size: 1.3rem;
+    line-height: 30px;
+
+    &:not(.icon) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.medium {
+    height: 38px;
+    font-size: 1.4rem;
+    line-height: 36px;
+
+    &:not(.icon) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.large {
+    height: 44px;
+    font-size: 1.5rem;
+    line-height: 42px;
+
+    &:not(.icon) {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+.icon {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.link:not(:disabled) {
+    color: $c-button-link;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    background-color: transparent;
+
+    &:hover {
+        color: darken($c-button-link, $p-variations-percent);
+    }
+}
+
+.subtle-link:not(:disabled) {
+    color: $c-button-subtle-link;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    background-color: transparent;
+
+    &:hover {
+        color: darken($c-button-subtle-link, $p-variations-percent);
+    }
+}
+
+.pure:not(:disabled) {
+    color: $c-default-color;
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.default:not(:disabled) {
     color: $c-default-color;
     border-color: $c-default-border;
     background-color: $c-default-background;
+
+    &:hover {
+        background-color: darken($c-default-background, $p-variations-percent / 3);
+    }
 }
 
-.primary {
+.primary:not(:disabled) {
     color: $c-primary-color;
     border-color: $c-primary-border;
     background-color: $c-primary-background;
-}
 
-.nomobile {
-    color: $c-default-color;
-    border-color: $c-default-border;
-    background-color: $c-default-background;
-
-    @media (max-width: $max-tablet) {
-        display: none;
+    &:hover {
+        background-color: darken($c-primary-background, $p-variations-percent / 3);
     }
 }
 
-.moblink {
-    color: $c-default-color;
-    border-color: $c-default-border;
-    background-color: $c-default-background;
+.success:not(:disabled) {
+    color: $c-success-color;
+    border-color: $c-success-border;
+    background-color: $c-success-background;
 
-    @media (max-width: $max-tablet) {
-        color: $c-cobalt;
-        padding: 0;
-        height: auto;
-        line-height: 1;
-        border: none;
-        background: none;
+    &:hover {
+        background-color: darken($c-success-background, $p-variations-percent / 3);
     }
 }
 
-/*
-$p-variations-percent:          10%;
+.info:not(:disabled) {
+    color: $c-info-color;
+    border-color: $c-info-border;
+    background-color: $c-info-background;
 
-$c-link:                        #656d79;
-$c-blue:                        #437FC1;
-
-$c-default-color:               rgba(0, 0, 0, .8);
-$c-default-background:          #E6E6E6;
-
-$c-primary-color:               #fff;
-$c-primary-background:          #437FC1;
-
-$c-success-color:               #fff;
-$c-success-background:          #8CC751;
-
-$c-info-color:                  #fff;
-$c-info-background:             #45C4EA;
-$c-info-background:             #1FB6FF;
-
-$c-warning-color:               #332900;
-$c-warning-background:          #FFDE2D;
-
-$c-danger-color:                #fff;
-$c-danger-background:           #fc2929;
-
-.button {
-    margin: 0;
-    outline: none;
-    cursor: pointer;
-    overflow: visible;
-    user-select: none;
-    border: 1px solid;
-    text-align: center;
-    text-transform: none;
-    text-decoration: none;
-    display: inline-block;
-    vertical-align: middle;
-    appearance: none;
-    background: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-    transition: border-color .3s, background-color .3s, box-shadow .3s, color .3s;
-
-    height: 32px;
-    padding: 0 15px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 30px;
-
-    color: $c-default-color;
-    background-color: $c-default-background;
-    border-color: darken($c-default-background, $p-variations-percent);
-
-    &:focus {
-        outline: 0;
-    }
-
-    &:global:not(.button--link) {
-        box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .04), 0 1px 2px 0 rgba(0, 0, 0, .05);
-
-        &:active {
-            box-shadow: inset 0 2px 0 rgba(0, 0, 0, .05), 0 1px 2px 0 rgba(0, 0, 0, .05);
-        }
-    }
-
-    :global &--link {
-        color: $c-link;
-        height: auto;
-        padding: 0;
-        line-height: .9;
-        margin-top: 3px;
-        background: none;
-        padding-bottom: 1px;
-        border-bottom: 1px solid lighten($c-link, $p-variations-percent);
-
-        &:hover {
-            color: lighten($c-link, $p-variations-percent);
-        }
-    }
-
-    :global &--default {
-        color: $c-default-color;
-        background-color: $c-default-background;
-        border-color: darken($c-default-background, $p-variations-percent);
-
-        &:hover {
-            background-color: darken($c-default-background, $p-variations-percent / 3);
-        }
-    }
-
-    :global &--primary {
-        color: $c-primary-color;
-        background-color: $c-primary-background;
-        border-color: darken($c-primary-background, $p-variations-percent);
-
-        &:hover {
-            background-color: darken($c-primary-background, $p-variations-percent);
-        }
-    }
-
-    :global &--success {
-        color: $c-success-color;
-        background-color: $c-success-background;
-        border-color: darken($c-success-background, $p-variations-percent);
-
-        &:hover {
-            background-color: darken($c-success-background, $p-variations-percent);
-        }
-    }
-
-    :global &--info {
-        color: $c-info-color;
-        background-color: $c-info-background;
-        border-color: darken($c-info-background, $p-variations-percent);
-
-        &:hover {
-            background-color: darken($c-info-background, $p-variations-percent);
-        }
-    }
-
-    :global &--warning {
-        color: $c-warning-color;
-        background-color: $c-warning-background;
-        border-color: darken($c-warning-background, $p-variations-percent);
-
-        &:hover {
-            background-color: lighten($c-warning-background, $p-variations-percent);
-        }
-    }
-
-    :global &--danger {
-        color: $c-danger-color;
-        background-color: $c-danger-background;
-        border-color: darken($c-danger-background, $p-variations-percent);
-
-        &:hover {
-            background-color: darken($c-danger-background, $p-variations-percent);
-        }
+    &:hover {
+        background-color: darken($c-info-background, $p-variations-percent / 3);
     }
 }
 
-.button + .button {
-    margin-left: 10px;
+.warning:not(:disabled) {
+    color: $c-warning-color;
+    border-color: $c-warning-border;
+    background-color: $c-warning-background;
+
+    &:hover {
+        background-color: darken($c-warning-background, $p-variations-percent / 3);
+    }
 }
-*/
+
+.danger:not(:disabled) {
+    color: $c-danger-color;
+    border-color: $c-danger-border;
+    background-color: $c-danger-background;
+
+    &:hover {
+        background-color: darken($c-danger-background, $p-variations-percent / 3);
+    }
+}

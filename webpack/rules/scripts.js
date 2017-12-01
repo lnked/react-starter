@@ -4,9 +4,16 @@ const { resolve } = require('path');
 const define = require('../define');
 
 const useConfig = [];
+const typeScriptConfig = [];
 
 if (define.rs_development) {
     useConfig.push(
+        {
+            loader: 'react-hot-loader/webpack'
+        }
+    )
+
+    typeScriptConfig.push(
         {
             loader: 'react-hot-loader/webpack'
         }
@@ -18,6 +25,15 @@ useConfig.push(
         loader: 'babel-loader',
         options: {
             cacheDirectory: define.rs_development
+        }
+    }
+);
+
+typeScriptConfig.push(
+    {
+        loader: 'ts-loader',
+        options: {
+            transpileOnly: true
         }
     }
 );
@@ -34,6 +50,11 @@ const rules = [
     },
     {
         test: /\.js[x]?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: useConfig
+    },
+    {
+        test: /\.ts[x]?$/,
         exclude: /(node_modules|bower_components)/,
         use: useConfig
     }

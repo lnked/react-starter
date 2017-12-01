@@ -21,7 +21,6 @@ export default class Input extends PureComponent {
         ]),
         hint: string,
         cleaning: bool,
-        multiline: bool,
         className: string,
         handleChange: func,
         placeholder: string,
@@ -48,7 +47,6 @@ export default class Input extends PureComponent {
         cleaning: true,
         maxlength: false,
         tabindex: false,
-        multiline: false,
         status: 'normal',
         placeholder: 'Введите текст…',
         handleChange: (value) => { console.log(': = ', value) }
@@ -71,11 +69,7 @@ export default class Input extends PureComponent {
         }
     }
 
-    shouldComponentUpdate (nextProps) {
-        return nextProps.value !== this.state.value
-    }
-
-    componentWillUpdate (nextProps) {
+    componentWillReceiveProps (nextProps) {
         if (nextProps.value !== this.state.value) {
             this.setState({...this.state, value: nextProps.value})
         }
@@ -101,27 +95,14 @@ export default class Input extends PureComponent {
     }
 
     render () {
-        const options = {
-            input: [
-                'name', 'type', 'placeholder'
-            ],
-            textarea: [
-                'name', 'placeholder'
-            ]
-        }
-
-        let wrapper
+        const options = [
+            'name', 'type', 'placeholder'
+        ]
 
         const cn = []
         const props = {}
 
-        if (this.props.multiline) {
-            wrapper = 'textarea'
-        } else {
-            wrapper = 'input'
-        }
-
-        options[wrapper].map((item) => {
+        options.map((item) => {
             if (typeof this.props[item] !== 'undefined') {
                 props[item] = this.props[item]
             }
@@ -132,8 +113,8 @@ export default class Input extends PureComponent {
         props.defaultValue = this.state.value
 
         cn.push(css.control)
+        cn.push(css.control_input)
         cn.push(this.props.className)
-        cn.push(`${css[`control_${wrapper}`]}`)
 
         const addition = []
         const clearButton = []
@@ -158,7 +139,7 @@ export default class Input extends PureComponent {
             }
         }
 
-        if (this.state.value && !this.props.multiline && this.props.cleaning) {
+        if (this.state.value && this.props.cleaning) {
             clearButton.push(
                 <span className={css.clear}
                     key={[this.keyPrefix, 'clear'].join('.')}
@@ -185,18 +166,10 @@ export default class Input extends PureComponent {
         props.autoCapitalize = 'off'
         props.spellCheck = false
 
-        let control
-
-        if (this.props.multiline) {
-            control = (<textarea {...props} />)
-        } else {
-            control = (<input {...props} />)
-        }
-
         return (
             <div className={css.wrapper} key={[this.keyPrefix, 'wrapper'].join('.')}>
                 <label key={[this.keyPrefix, 'label'].join('.')} className={css.label}>
-                    { control }
+                    <input {...props} />
                     { clearButton }
                 </label>
 

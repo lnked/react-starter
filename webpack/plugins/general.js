@@ -20,7 +20,13 @@ const plugins = [
     ),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
-        minimize: define.rs_production
+        minimize: define.rs_production,
+        options: {
+            tslint: {
+                emitErrors: true,
+                failOnHint: true
+            }
+        }
     }),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')

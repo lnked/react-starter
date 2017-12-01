@@ -45,6 +45,8 @@ $c-link:                        #656d79;
 $c-blue:                        #437FC1;
 $c-smalt:                       #00278c;
 
+$c-border:                      #cdcdcd;
+
 $c-cerulean:                    #009EE3;
 $c-rangoon-green:               #1A171B;
 
@@ -83,28 +85,31 @@ $c-red:                         #ff564e;
 $c-green:                       #28bc00;
 $c-yellow:                      #ffc000;
 
-/* Buttons */
+/* buttons */
 
-$c-default-color:               $c-black;
-$c-default-border:              $c-whisper;
-$c-default-background:          $c-white;
+$c-button-link:                 #0052cc;
+$c-button-subtle-link:          #6b778c;
 
-$c-primary-color:               #00529f;
+$c-default-color:               #505F79;
+$c-default-border:              #ececec;
+$c-default-background:          #ececec;
+
+$c-primary-color:               #fff;
 $c-primary-border:              #00529f;
-$c-primary-background:          transparent;
+$c-primary-background:          #0052cc;
 
 $c-info-color:                  #a5926c;
 $c-info-border:                 #fef7da;
 $c-info-background:             #fef7da;
 
-$c-success-color:               #61a38e;
-$c-success-border:              #adebd7;
-$c-success-background:          #adebd7;
+$c-success-color:               #006644;
+$c-success-border:              #e3fcef;
+$c-success-background:          #e3fcef;
 
-$c-warning-color:               #ba9d95;
-$c-warning-border:              #ffe5db;
-$c-warning-background:          #ffe5db;
+$c-warning-color:               #3e4146;
+$c-warning-border:              #fdaa2a;
+$c-warning-background:          #fdaa2a;
 
 $c-danger-color:                #fff;
-$c-danger-border:               #fc2929;
-$c-danger-background:           #fc2929;
+$c-danger-border:               #dc371d;
+$c-danger-background:           #dc371d;

@@ -1,5 +1,40 @@
 [
     {
+        "name": "badge",
+        "prop": [
+            {
+                "title": "default",
+                "bolded": true,
+                "variant": "default"
+            },
+            {
+                "title": "primary",
+                "bolded": false,
+                "variant": "primary"
+            },
+            {
+                "title": "info",
+                "bolded": false,
+                "variant": "info"
+            },
+            {
+                "title": "success",
+                "bolded": false,
+                "variant": "success"
+            },
+            {
+                "title": "warning",
+                "bolded": false,
+                "variant": "warning"
+            },
+            {
+                "title": "danger",
+                "bolded": false,
+                "variant": "danger"
+            }
+        ]
+    },
+    {
         "name": "Input",
         "prop": [
             {

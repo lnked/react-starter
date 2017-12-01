@@ -25,7 +25,7 @@
     border: 1px solid #ddd;
 
     &:focus {
-        box-shadow: 0 0 0 2px rgba($c-focus-color, .5);
+        box-shadow: 0 0 0 2px rgba($c-focus-color, .75);
     }
 }
 
@@ -46,7 +46,7 @@
     background-color: #708090;
 
     &:focus {
-        box-shadow: 0 0 0 2px rgba($c-focus-color, .5);
+        box-shadow: 0 0 0 2px rgba($c-focus-color, .75);
     }
 }
 

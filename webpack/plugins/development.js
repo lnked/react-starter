@@ -13,6 +13,11 @@ const plugins = [
     // don't spit out any errors in compiled assets
     new webpack.NoEmitOnErrorsPlugin(),
 
+    new webpack.WatchIgnorePlugin([
+        /\.js$/,
+        /\.d\.ts$/
+    ]),
+
     new InterpolateHtmlPlugin({
         PUBLIC_URL: '/'
     })
