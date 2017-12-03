@@ -1726,6 +1726,10 @@ clean-css@^3.3.0:
     commander "2.8.x"
     source-map "0.4.x"
 
+cleave.js@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/cleave.js/-/cleave.js-1.0.7.tgz#227ebc407d0b8fb3dcd2ce15d53876505a2b02cc"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
