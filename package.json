@@ -35,7 +35,6 @@
   "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
   "license": "MIT",
   "dependencies": {
-    "@types/react": "16.0.25",
     "@types/react-dom": "16.0.3",
     "axios": "0.17.1",
     "core-js": "2.5.1",
@@ -50,7 +49,8 @@
     "xregexp": "3.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "7.1.6",
+    "@types/react": "16.0.26",
+    "autoprefixer": "7.2.1",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.3",
     "babel-loader": "7.1.2",
@@ -72,7 +72,7 @@
     "bower-webpack-plugin": "0.1.9",
     "brotli-webpack-plugin": "0.5.0",
     "bundle-buddy-webpack-plugin": "0.3.0",
-    "caniuse-lite": "1.0.30000777",
+    "caniuse-lite": "1.0.30000778",
     "compression-webpack-plugin": "1.0.1",
     "copy-webpack-plugin": "4.2.3",
     "css-loader": "0.28.7",
@@ -150,7 +150,7 @@
     "uglifyjs-webpack-plugin": "1.1.2",
     "url-loader": "0.6.2",
     "webapp-manifest-plugin": "0.0.4",
-    "webpack": "3.9.1",
+    "webpack": "3.10.0",
     "webpack-bundle-analyzer": "2.9.1",
     "webpack-bundle-size-analyzer": "2.7.0",
     "webpack-chunk-hash": "0.5.0",
