@@ -31,6 +31,15 @@ if (process.env.NODE_ENV === 'development') {
     }
 }
 
+// // a chunks with a, b, c
+// require(["./a", "./b", "./c"], function(a, b, c) {});
+
+// // a chunk with a, b, d
+// require.ensure(["./a"], function(require) {
+//     require("./b");
+//     require("./d");
+// });
+
 // password: _.debounce(async function() {
 //     const zxcvbn = await import(/* webpackChunkName: "zxcvbn" */ 'zxcvbn');
 //     this.strength = zxcvbn(this.password).score;

@@ -1,39 +1,25 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "strictNullChecks": true
-    // "module": "es2015",
-    // "module": "commonjs",
-    // "baseUrl": ".",
-    // "outDir": "./dist",
-    // "noEmitOnError": true,
-    // "jsx": "react",
-    // "rootDir": "app",
-    // "sourceMap": true,
-    // "emitDecoratorMetadata": true,
-    // "experimentalDecorators": true,
-    // "allowSyntheticDefaultImports": true,
-    // "forceConsistentCasingInFileNames": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noImplicitAny": true,
-    // "noImplicitReturns": true,
-    // "noImplicitThis": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "suppressImplicitAnyIndexErrors": true,
-  },
-  "lib": [
-    "es2015",
-    "dom"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "tests",
-    "webpack"
-  ],
-  "include": [
-    "app/**.ts",
-    "app/**.tsx"
-  ]
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "lib": [ "es5", "es2015", "dom" ],
+        "rootDir": "./",
+        "experimentalDecorators": true,
+        "preserveConstEnums": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "outDir": "./dist"
+    },
+    "include": [
+        "app/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "tests",
+        "webpack"
+    ]
 }

@@ -14,6 +14,7 @@ export default class Badge extends PureComponent {
             'warning',
             'danger'
         ]),
+        className: string,
         children: oneOfType([
             string,
             object

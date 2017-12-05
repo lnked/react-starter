@@ -12,12 +12,6 @@ if (define.rs_development) {
             loader: 'react-hot-loader/webpack'
         }
     )
-
-    typeScriptConfig.push(
-        {
-            loader: 'react-hot-loader/webpack'
-        }
-    )
 }
 
 useConfig.push(
@@ -41,7 +35,7 @@ typeScriptConfig.push(
 const rules = [
     {
         enforce: 'pre',
-        test: /\.jsx?$/,
+        test: /\.(j|t)s[x]?$/,
         options: {
             fix: define.rs_production
         },
@@ -49,14 +43,14 @@ const rules = [
         include: define.rs_root
     },
     {
-        test: /\.js[x]?$/,
+        test: /\.(j|t)s[x]?$/,
         exclude: /(node_modules|bower_components)/,
         use: useConfig
     },
     {
         test: /\.ts[x]?$/,
         exclude: /(node_modules|bower_components)/,
-        use: useConfig
+        use: typeScriptConfig
     }
 ];
 
