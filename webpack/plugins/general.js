@@ -7,6 +7,7 @@ const helpers = require('../helpers');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const AsyncModulePlugin = require('async-module-loader/plugin');
 
 const plugins = [
     new WebpackNotifierPlugin(),
@@ -18,6 +19,7 @@ const plugins = [
         /moment[\/\\]locale$/,
         /(en-gb|ru)\.js/
     ),
+    new AsyncModulePlugin(),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production
