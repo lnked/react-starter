@@ -18,7 +18,7 @@
         "syntax-dynamic-import",
         "transform-decorators-legacy",
         "transform-object-rest-spread",
-        ["transform-react-jsx", { "pragma": "dom" }],
+        ["transform-react-jsx", {}],
         ["transform-class-properties", { "spec": true }]
     ],
     "env": {
