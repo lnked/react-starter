@@ -3,15 +3,20 @@
         "target": "es5",
         "module": "es2015",
         "lib": [ "es5", "es2015", "dom" ],
-        "rootDir": "./",
+        "jsx": "react",
+        "moduleResolution": "node",
         "experimentalDecorators": true,
+        "noStrictGenericChecks": true,
         "preserveConstEnums": true,
         "noUnusedParameters": true,
         "strictNullChecks": true,
         "removeComments": true,
         "noImplicitAny": true,
         "skipLibCheck": true,
-        "outDir": "./dist"
+        "sourceMap": true,
+        "rootDir": "./",
+        "outDir": "./dist",
+        "strict": true
     },
     "include": [
         "app/**/*"
