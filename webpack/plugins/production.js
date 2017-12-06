@@ -67,6 +67,7 @@ const plugins = [
     }),
     new ExtractCssChunks({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
+        allChunks: true,
     }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,

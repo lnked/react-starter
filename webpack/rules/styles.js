@@ -10,11 +10,12 @@ const cssConfig = [
         loader: 'css-loader',
         options: {
             module: true,
+            importLoaders: 1,
             sourceMap: define.rs_analyzer,
             modules: define.rs_production,
             minimize: define.rs_production,
             discardComments: { removeAll: true },
-            localIdentName: '[name]'
+            localIdentName: '[local]'
         }
     }
 ];
@@ -52,18 +53,6 @@ const usesConfig = [
 
 const rules = define.rs_generate_css ? [
         {
-            test: /\.css$/,
-            use: ExtractCssChunks.extract({
-                fallback: 'style-loader',
-                publicPath: '../',
-                use: cssConfig
-            }),
-            include: [
-                define.rs_node,
-                define.rs_root
-            ]
-        },
-        {
             test: /\.(s(a|c)ss)$/,
             use: ExtractCssChunks.extract({
                 fallback: 'style-loader',
@@ -74,21 +63,16 @@ const rules = define.rs_generate_css ? [
                 define.rs_node,
                 define.rs_root
             ]
+        },
+        {
+            test: /\.css$/,
+            use: ExtractCssChunks.extract({
+                fallback: 'style-loader',
+                publicPath: '../',
+                use: cssConfig
+            })
         }
     ] : [
-    {
-        test: /\.(css)$/,
-        use: [
-            {
-                loader: 'css-loader'
-            },
-            ...cssConfig
-        ],
-        include: [
-            define.rs_node,
-            define.rs_root
-        ]
-    },
     {
         test: /\.(s(a|c)ss)$/,
         use: [
@@ -100,6 +84,15 @@ const rules = define.rs_generate_css ? [
         include: [
             define.rs_node,
             define.rs_root
+        ]
+    },
+    {
+        test: /\.(css)$/,
+        use: [
+            {
+                loader: 'style-loader'
+            },
+            ...cssConfig
         ]
     }
 ];
