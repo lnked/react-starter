@@ -19,6 +19,4 @@
     transition: all .25s cubic-bezier(.645, .045, .355, 1);
     transition: background-color $a-time $a-func, border-color $a-time $a-func, color $a-time $a-func;
     will-change: border-color, background-color, color;
-
-    @include outline($c-focus-color);
 }

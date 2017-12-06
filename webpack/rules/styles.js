@@ -33,20 +33,19 @@ const usesConfig = [
         }
     },
     {
-        loader: 'sass-loader',
-        options: {
-            outputStyle: define.rs_production ? 'collapsed' : 'expanded',
-            sourceMap: define.rs_development || define.rs_analyzer,
-            includePaths: [ define.rs_root ]
-        }
-    },
-    {
         loader: 'postcss-loader',
         options: {
             sourceMap: define.rs_development || define.rs_analyzer ? 'inline' : false,
             plugins: () => {
-                return postcss.config;
+                return postcss.plugins;
             }
+        }
+    },
+    {
+        loader: 'sass-loader',
+        options: {
+            sourceMap: define.rs_development || define.rs_analyzer,
+            includePaths: [ define.rs_root ]
         }
     }
 ];
