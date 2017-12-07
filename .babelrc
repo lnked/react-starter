@@ -24,8 +24,8 @@
     "env": {
         "development": {
             "plugins": [
-                "transform-react-display-name",
                 "react-hot-loader/babel",
+                "transform-react-display-name",
                 ["transform-runtime", {
                     "helpers": false,
                     "polyfill": false,

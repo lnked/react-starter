@@ -28,6 +28,7 @@ render((
 if (process.env.NODE_ENV === 'development') {
     if (module.hot) {
         module.hot.accept()
+        console.log('Accepting the updated printMe module!')
     }
 }
 

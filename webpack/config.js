@@ -116,7 +116,8 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        hotOnly: define.rs_development,
+        // hotOnly: define.rs_development,
+        hot: define.rs_development,
         port: port,
         host: host
     }
