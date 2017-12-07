@@ -45,7 +45,8 @@ const rules = [
     {
         test: /\.(j|t)s[x]?$/,
         exclude: /(node_modules|bower_components)/,
-        use: useConfig
+        use: 'happypack/loader'
+        // use: useConfig
     },
     {
         test: /\.ts[x]?$/,

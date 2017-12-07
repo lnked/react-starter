@@ -1,9 +1,12 @@
 'use strict';
 
+const { resolve } = require('path');
+
 const webpack = require('webpack');
 const define  = require('../define');
 const helpers = require('../helpers');
 
+const HappyPack = require('happypack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
@@ -11,10 +14,27 @@ const AsyncModulePlugin = require('async-module-loader/plugin');
 
 const plugins = [
     new WebpackNotifierPlugin(),
-    // new webpack.ProvidePlugin({
-    //     $: "jQuery"
-    //     "jQuery": "jQuery"
-    // })
+    new HappyPack({
+        loaders: [
+            {
+                loader: 'cache-loader',
+                options: {
+                    cacheDirectory: resolve(define.rs_root, '.cache/happypack')
+                }
+            },
+            {
+                loader: 'react-hot-loader/webpack'
+            },
+            {
+                loader: 'babel-loader',
+                options: {
+                    cacheDirectory: define.rs_development
+                }
+            }
+        ],
+        threads: 4,
+        verbose: false
+    }),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
         /(en-gb|ru)\.js/
