@@ -29,15 +29,17 @@ const plugins = [
         basePath: define.rs_output_path,
         fileName: "webpack-manifest.json"
     }),
+    new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         filename: 'js/vendor.[hash:5].js',
-        minChunks(module) {
-            return module.context && module.context.indexOf('node_modules') >= 0;
+        minChunks(m) {
+            return m.context && m.context.indexOf('node_modules') >= 0;
         }
     }),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'runtime',
+        chunks: ['vendor'],
         minChunks: Infinity
     }),
 
@@ -59,12 +61,10 @@ const plugins = [
     //         return module.resource && (isCommonLib(resource) || count >= 3);
     //     }
     // }),
-
-    new webpack.HashedModuleIdsPlugin(),
-    new WebpackChunkHash(),
     new ChunkManifestPlugin({
         filename: 'chunk-manifest.json'
     }),
+    new webpack.HashedModuleIdsPlugin(),
     new ExtractCssChunks({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
         allChunks: true,
