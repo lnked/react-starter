@@ -37,15 +37,15 @@
   "license": "MIT",
   "size-limit": [
     {
-        "path": "dist/js/*.js",
-        "webpack": false,
-        "limit": "300 KB"
+      "path": "dist/js/*.js",
+      "webpack": false,
+      "limit": "300 KB"
     }
   ],
   "dependencies": {
     "@types/react-dom": "16.0.3",
     "axios": "0.17.1",
-    "core-js": "2.5.2",
+    "core-js": "2.5.3",
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-clipboard.js": "1.1.3",
