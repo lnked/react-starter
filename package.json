@@ -8,6 +8,7 @@
     "svgstore": "rm -rf ./app/cache && webpack --config ./webpack/prebuild.js",
     "prestart": "yarn run svgstore",
     "prebuild": "yarn run svgstore",
+    "postrelease": "yarn run size",
     "prerelease": "yarn run svgstore",
     "build": "yarn run clean && webpack --config ./webpack/config.js --env assemply",
     "release": "yarn run clean && webpack --config ./webpack/config.js --env release",
