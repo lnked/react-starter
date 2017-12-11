@@ -22,7 +22,7 @@
     "lint:fix": "eslint ./app --fix .js[x]",
     "lint": "yarn run lint:scripts && yarn run lint:styles",
     "dev": "webpack-dev-server --open --content-base ./dist --config ./webpack/config.js --env development",
-    "webpack-defaults": "webpack-defaults"
+    "size": "npx size-limit"
   },
   "keywords": [
     "react"
@@ -34,6 +34,13 @@
   "private": true,
   "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
   "license": "MIT",
+  "size-limit": [
+    {
+        "path": "dist/js/*.js",
+        "webpack": false,
+        "limit": "300 KB"
+    }
+  ],
   "dependencies": {
     "@types/react-dom": "16.0.3",
     "axios": "0.17.1",
