@@ -57,7 +57,7 @@
     "xregexp": "3.2.0"
   },
   "devDependencies": {
-    "@types/react": "16.0.28",
+    "@types/react": "16.0.29",
     "async-module-loader": "2.1.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.3",
@@ -87,7 +87,7 @@
     "copy-webpack-plugin": "4.2.3",
     "css-loader": "0.28.7",
     "cssnano": "3.10.0",
-    "eslint": "4.13.0",
+    "eslint": "4.13.1",
     "eslint-config-standard": "10.2.1",
     "eslint-loader": "1.9.0",
     "eslint-plugin-immutable": "1.0.0",
