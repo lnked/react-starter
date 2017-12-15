@@ -14,11 +14,7 @@ import { CustomComponent } from 'components'
 // import Noty from 'noty'
 
 export default class ComponentPage extends Component {
-    constructor (props) {
-        super(props)
-
-        this.state = {}
-    }
+    state = {}
 
     renderComponents () {
         const list = []

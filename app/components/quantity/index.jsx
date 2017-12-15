@@ -29,14 +29,8 @@ export default class Quantity extends Component {
         handleChange: (count) => { console.log(': = ', count) }
     }
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            count: this.props.count
-        }
-
-        this.handleChange = this.handleChange.bind(this)
+    state = {
+        count: this.props.count
     }
 
     componentWillReceiveProps (nextProps) {
@@ -49,7 +43,7 @@ export default class Quantity extends Component {
         return nextProps.count !== this.state.count
     }
 
-    changeValue (value) {
+    changeValue = (value) => {
         const { min, max } = this.props
 
         if (value >= max) {
@@ -67,7 +61,7 @@ export default class Quantity extends Component {
         this.props.handleChange(this.props.item, value)
     }
 
-    changeCount (input) {
+    changeCount = (input) => {
         const count = parseInt(this.state.count, 10)
         const { min, max, step } = this.props
 
@@ -76,7 +70,7 @@ export default class Quantity extends Component {
         }
     }
 
-    handleChange (e) {
+    handleChange = (e) => {
         const re = /^[0-9]+$/
 
         if (re.test(e.nativeEvent.target.value)) {

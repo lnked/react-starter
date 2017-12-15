@@ -31,16 +31,14 @@ export default class Table extends PureComponent {
 
         this.colCount = 0
 
-        this.state = {
-            checked: false
-        }
-
         this.analyzeCount([props.thead, props.tbody, props.tfoot])
-
-        this.handleChange = this.handleChange.bind(this)
     }
 
-    analyzeCount (data) {
+    state = {
+        checked: false
+    }
+
+    analyzeCount = (data) => {
         if (data.length) {
             const numbers = []
 
@@ -56,11 +54,11 @@ export default class Table extends PureComponent {
         }
     }
 
-    handleChange (value, status) {
+    handleChange = (value, status) => {
         this.setState({...this.state, [value]: status})
     }
 
-    renderCols () {
+    renderCols = () => {
         const cols = []
 
         for (let index = 0; index < this.colCount; index++) {
@@ -77,7 +75,7 @@ export default class Table extends PureComponent {
         )
     }
 
-    renderHead () {
+    renderHead = () => {
         const { thead } = this.props
 
         if (thead) {
@@ -128,7 +126,7 @@ export default class Table extends PureComponent {
         }
     }
 
-    renderBody () {
+    renderBody = () => {
         const { tbody } = this.props
         const { checked } = this.state
 
@@ -168,7 +166,7 @@ export default class Table extends PureComponent {
         }
     }
 
-    renderFoot () {
+    renderFoot = () => {
         const { tfoot } = this.props
 
         if (tfoot) {

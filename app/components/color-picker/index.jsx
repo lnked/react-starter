@@ -16,13 +16,6 @@ export default class ColorPicker extends Component {
         color: this.props.color
     }
 
-    // constructor (props) {
-    //     super(props)
-
-    //     this.handleClear = this.handleClear.bind(this)
-    //     this.handleChange = this.handleChange.bind(this)
-    // }
-
     handleChange = (e) => {
         const value = e.target.value
         const symbol = value[value.length - 1]

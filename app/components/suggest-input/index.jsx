@@ -15,25 +15,19 @@ export default class SuggestInput extends Component {
         placeholder: 'Поиск'
     }
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            open: false,
-            filterText: this.props.value,
-            suggestText: ''
-        }
-
-        this.handleChange = this.handleChange.bind(this)
+    state = {
+        open: false,
+        filterText: this.props.value,
+        suggestText: ''
     }
 
-    strip (html) {
+    strip = (html) => {
         const tmp = document.createElement('DIV')
         tmp.innerHTML = html
         return tmp.textContent || tmp.innerText || ''
     }
 
-    handleChange (e) {
+    handleChange = (e) => {
         let suggest = ''
         const value = e.target.value
 

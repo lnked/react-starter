@@ -26,19 +26,11 @@ export default class SelectionBox extends PureComponent {
         handleChange: false
     }
 
-    constructor (props) {
-        super(props)
-
-        this.handleChange = this.handleChange.bind(this)
+    state = {
+        checked: this.props.checked
     }
 
-    componentWillMount () {
-        this.setState({
-            checked: this.props.checked
-        })
-    }
-
-    handleChange (e) {
+    handleChange = (e) => {
         const value = Number(e.target.value)
 
         if (this.props.isMultiple) {
@@ -69,7 +61,7 @@ export default class SelectionBox extends PureComponent {
         }
     }
 
-    renderGroup () {
+    renderGroup = () => {
         if (this.props.items && this.props.items.length) {
             const group = []
             const items = this.props.items

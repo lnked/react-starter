@@ -12,15 +12,11 @@ export default class Sandwich extends PureComponent {
         isOpened: false
     }
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            isOpened: false
-        }
+    state = {
+        isOpened: false
     }
 
-    handleOpenMenu () {
+    handleOpenMenu = () => {
         this.setState({
             isOpened: !this.state.isOpened
         })

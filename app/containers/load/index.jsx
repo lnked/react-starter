@@ -17,12 +17,8 @@ export default class Load extends Component {
         subreddit: 'reactjs'
     }
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            posts: []
-        }
+    state = {
+        posts: []
     }
 
     componentDidMount () {

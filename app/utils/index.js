@@ -1,7 +1,4 @@
-import SvgFixer from 'utils/svg-fixer'
-import RegisterSW from 'utils/service-worker'
-
-export {
-    SvgFixer,
-    RegisterSW
+module.exports = {
+    SvgFixer: require('utils/svg-fixer'),
+    RegisterSW: require('utils/service-worker')
 }

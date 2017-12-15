@@ -11,7 +11,7 @@ export default class Notify extends PureComponent {
         bullet: false
     }
 
-    renderBullet () {
+    renderBullet = () => {
         if (this.props.bullet) {
             return (
                 <div className={css.notify__bullet} />

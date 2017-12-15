@@ -13,12 +13,8 @@ export default class PureLayout extends PureComponent {
         ])
     }
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            title: 'React Starter App'
-        }
+    state = {
+        title: 'React Starter App'
     }
 
     componentWillMount () {

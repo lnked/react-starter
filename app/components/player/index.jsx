@@ -1,6 +1,5 @@
 class App extends Component {
-
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.context = new (window.AudioContext || window.webkitAudioContext)();
     }
@@ -33,11 +32,11 @@ class App extends Component {
         xhr.send();
     };
 
-    componentDidMount() {
+    componentDidMount () {
         this.loadSoundFile('audio/i_see_you.mp3');
     }
 
-    render() {
+    render () {
         return (
             <div>
                 <audio controls>

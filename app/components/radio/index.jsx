@@ -21,13 +21,7 @@ export default class Radio extends PureComponent {
         handleChange: (value) => { console.log('check radio: = ', value) }
     }
 
-    constructor (props) {
-        super(props)
-
-        this.handleChange = this.handleChange.bind(this)
-    }
-
-    handleChange (e) {
+    handleChange = (e) => {
         this.props.handleChange(e.nativeEvent.target.value)
     }
 

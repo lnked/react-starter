@@ -55,12 +55,11 @@ export default class Input extends PureComponent {
     constructor (props) {
         super(props)
 
-        this.state = {
-            value: this.props.value || this.props.children
-        }
-
         this.keyPrefix = Math.random().toString()
-        this.handleChange = this.handleChange.bind(this)
+    }
+
+    state = {
+        value: this.props.value || this.props.children
     }
 
     componentDidMount () {
@@ -75,7 +74,7 @@ export default class Input extends PureComponent {
         }
     }
 
-    handleChange (e) {
+    handleChange = (e) => {
         const content = e.nativeEvent.target.value
 
         this.setState({
@@ -85,7 +84,7 @@ export default class Input extends PureComponent {
         this.props.handleChange(content)
     }
 
-    handleClear () {
+    handleClear = () => {
         this.setState({
             value: ''
         })

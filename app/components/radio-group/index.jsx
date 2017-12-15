@@ -21,19 +21,13 @@ export default class RadioGroup extends Component {
         handleChange: (value) => { console.log('change value: = ', value) }
     }
 
-    constructor (props) {
-        super(props)
-
-        this.handleChange = this.handleChange.bind(this)
-    }
-
     componentWillMount () {
         this.setState({
             checked: this.props.checked
         })
     }
 
-    handleChange (value) {
+    handleChange = (value) => {
         this.setState({
             checked: value
         })
@@ -41,7 +35,7 @@ export default class RadioGroup extends Component {
         this.props.handleChange(value)
     }
 
-    renderGroup () {
+    renderGroup = () => {
         if (this.props.items && this.props.items.length) {
             const group = []
             const items = this.props.items

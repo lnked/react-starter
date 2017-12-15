@@ -3,8 +3,17 @@
 const { resolve } = require('path');
 const define = require('../define');
 
+const tsConfig = [];
 const useConfig = [];
-const typeScriptConfig = [];
+
+useConfig.push(
+    {
+        loader: 'cache-loader',
+        options: {
+            cacheDirectory: resolve(define.rs_root, '.cache/happypack')
+        }
+    }
+);
 
 if (define.rs_development) {
     useConfig.push(
@@ -23,7 +32,7 @@ useConfig.push(
     }
 );
 
-typeScriptConfig.push(
+tsConfig.push(
     {
         loader: 'ts-loader',
         options: {
@@ -46,13 +55,13 @@ const rules = [
         test: /\.(j|t)s[x]?$/,
         exclude: /(node_modules|bower_components)/,
         use: 'happypack/loader'
-        // use: useConfig
     },
     {
         test: /\.ts[x]?$/,
         exclude: /(node_modules|bower_components)/,
-        use: typeScriptConfig
+        use: tsConfig
     }
 ];
 
 module.exports.config = rules;
+module.exports.loaders = useConfig;

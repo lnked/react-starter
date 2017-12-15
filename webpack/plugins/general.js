@@ -5,6 +5,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const define  = require('../define');
 const helpers = require('../helpers');
+const scripts = require('../rules/scripts')
 
 const HappyPack = require('happypack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -15,23 +16,7 @@ const AsyncModulePlugin = require('async-module-loader/plugin');
 const plugins = [
     new WebpackNotifierPlugin(),
     new HappyPack({
-        loaders: [
-            {
-                loader: 'cache-loader',
-                options: {
-                    cacheDirectory: resolve(define.rs_root, '.cache/happypack')
-                }
-            },
-            {
-                loader: 'react-hot-loader/webpack'
-            },
-            {
-                loader: 'babel-loader',
-                options: {
-                    cacheDirectory: define.rs_development
-                }
-            }
-        ],
+        loaders: scripts.loaders,
         threads: 4,
         verbose: false
     }),

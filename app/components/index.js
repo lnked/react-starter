@@ -1,55 +1,28 @@
-import Logo from 'components/logo'
-import Radio from 'components/radio'
-import Input from 'components/input'
-import Tabs from 'components/tabs'
-import Table from 'components/table'
-import Badge from 'components/badge'
-import Prompt from 'components/prompt'
-import Confirm from 'components/confirm'
-import Layout from 'components/layout'
-import Button from 'components/button'
-import Switch from 'components/switch'
-import Notify from 'components/notify'
-import Loader from 'components/loader'
-import Spinner from 'components/spinner'
-import Quantity from 'components/quantity'
-import Checkbox from 'components/checkbox'
-import HintText from 'components/hint-text'
-import Navigation from 'components/navigation'
-import MaskedText from 'components/masked-text'
-import RadioGroup from 'components/radio-group'
-import ColorPicker from 'components/color-picker'
-import SelectionBox from 'components/selection-box'
-import CustomComponent from 'components/custom-component'
-import BreadCrumbs from 'components/bread-crumbs'
-import SidebarIcon from 'components/sidebar-icon'
-import SuggestInput from 'components/suggest-input'
-
-export {
-    Tabs,
-    Logo,
-    Table,
-    Radio,
-    Input,
-    Badge,
-    Prompt,
-    Switch,
-    Layout,
-    Notify,
-    Button,
-    Loader,
-    Confirm,
-    Spinner,
-    Checkbox,
-    HintText,
-    Quantity,
-    MaskedText,
-    Navigation,
-    RadioGroup,
-    BreadCrumbs,
-    ColorPicker,
-    SidebarIcon,
-    SuggestInput,
-    SelectionBox,
-    CustomComponent
+module.exports = {
+    Logo: require('components/logo'),
+    Radio: require('components/radio'),
+    Input: require('components/input'),
+    Tabs: require('components/tabs'),
+    Table: require('components/table'),
+    Badge: require('components/badge'),
+    Prompt: require('components/prompt'),
+    Confirm: require('components/confirm'),
+    Layout: require('components/layout'),
+    Button: require('components/button'),
+    Switch: require('components/switch'),
+    Notify: require('components/notify'),
+    Loader: require('components/loader'),
+    Spinner: require('components/spinner'),
+    Quantity: require('components/quantity'),
+    Checkbox: require('components/checkbox'),
+    HintText: require('components/hint-text'),
+    Navigation: require('components/navigation'),
+    MaskedText: require('components/masked-text'),
+    RadioGroup: require('components/radio-group'),
+    ColorPicker: require('components/color-picker'),
+    BreadCrumbs: require('components/bread-crumbs'),
+    SidebarIcon: require('components/sidebar-icon'),
+    SuggestInput: require('components/suggest-input'),
+    SelectionBox: require('components/selection-box'),
+    CustomComponent: require('components/custom-component')
 }

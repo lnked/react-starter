@@ -13,6 +13,10 @@ export default class AuthLayout extends PureComponent {
         ])
     }
 
+    state = {
+        title: 'Auth :: React Starter App'
+    }
+
     componentWillMount () {
         window.prerenderReady = true
     }
@@ -20,8 +24,6 @@ export default class AuthLayout extends PureComponent {
     componentDidMount () {
         SvgFixer()
     }
-
-    // state = { expanded: false }
 
     // handleSubmit = (e) => {
     //     e.preventDefault()

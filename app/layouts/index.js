@@ -1,9 +1,5 @@
-import PureLayout from 'layouts/pure-layout'
-import CoreLayout from 'layouts/core-layout'
-import AuthLayout from 'layouts/auth-layout'
-
-export {
-    PureLayout,
-    CoreLayout,
-    AuthLayout
+module.exports = {
+    PureLayout: require('layouts/pure-layout'),
+    CoreLayout: require('layouts/core-layout'),
+    AuthLayout: require('layouts/auth-layout')
 }

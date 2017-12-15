@@ -22,7 +22,7 @@
 //             dateRawValue:       '',
 //             numeralRawValue:    '',
 //             customRawValue:     ''
-//         }  
+//         }
 //         this.onCreditCardChange = this.onCreditCardChange.bind(this)
 //         this.onCreditCardTypeChanged = this.onCreditCardTypeChanged.bind(this)
 //         this.onPhoneChange = this.onPhoneChange.bind(this)

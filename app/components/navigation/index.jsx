@@ -8,21 +8,17 @@ import {
 import css from './styles.scss'
 
 export default class Navigation extends Component {
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            isOpened: false
-        }
+    state = {
+        isOpened: false
     }
 
-    handleOpenMenu () {
+    handleOpenMenu = () => {
         this.setState({
             isOpened: !this.state.isOpened
         })
     }
 
-    navbarItem (item) {
+    navbarItem = (item) => {
         return (
             <li className={css.list__item} key={item.id}>
                 <Link to={item.url} className={css.list__item__link}>{item.title}</Link>

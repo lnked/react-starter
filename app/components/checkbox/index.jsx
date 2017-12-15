@@ -30,12 +30,6 @@ export default class Checkbox extends PureComponent {
         handleChange: false
     }
 
-    // constructor (props) {
-    //     super(props)
-
-    //     this.handleChange = this.handleChange.bind(this)
-    // }
-
     componentWillMount () {
         this.setState({
             checked: this.props.checked
