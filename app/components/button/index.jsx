@@ -48,13 +48,7 @@ export default class Button extends PureComponent {
         handleClick: () => { console.log(' click button ') }
     }
 
-    constructor (props) {
-        super(props)
-
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick () {
+    handleClick = () => {
         if (this.props.handleClick) {
             this.props.handleClick()
         }

@@ -12,18 +12,18 @@ export default class ColorPicker extends Component {
         color: 'ffffff'
     }
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            color: this.props.color
-        }
-
-        this.handleClear = this.handleClear.bind(this)
-        this.handleChange = this.handleChange.bind(this)
+    state = {
+        color: this.props.color
     }
 
-    handleChange (e) {
+    // constructor (props) {
+    //     super(props)
+
+    //     this.handleClear = this.handleClear.bind(this)
+    //     this.handleChange = this.handleChange.bind(this)
+    // }
+
+    handleChange = (e) => {
         const value = e.target.value
         const symbol = value[value.length - 1]
         const isColor = /^([0-9a-f])$/i
@@ -33,11 +33,11 @@ export default class ColorPicker extends Component {
         }
     }
 
-    handleClear () {
+    handleClear = () => {
         this.setState({...this.state, color: ''})
     }
 
-    renderControl () {
+    renderControl = () => {
         const clearButton = []
 
         if (this.state.color) {
@@ -68,11 +68,11 @@ export default class ColorPicker extends Component {
         )
     }
 
-    onSuccess () {
+    onSuccess = () => {
         console.info('successfully coppied')
     }
 
-    renderPaint () {
+    renderPaint = () => {
         let { color } = this.state
         const isColor = /^(?:[0-9a-f]{3}){1,2}$/i
 
