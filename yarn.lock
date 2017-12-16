@@ -89,9 +89,9 @@
   version "16.0.28"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.28.tgz#eb0b31272528da8f20477ec27569c4f767315b33"
 
-"@types/react@16.0.30":
-  version "16.0.30"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.30.tgz#cca9b180160004df574519c3d7c559fb181d545f"
+"@types/react@16.0.31":
+  version "16.0.31"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
 
 "@types/source-map@*":
   version "0.5.2"
@@ -3573,7 +3573,14 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
-file-loader@1.1.5, file-loader@^1.1.5:
+file-loader@1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.6.tgz#7b9a8f2c58f00a77fddf49e940f7ac978a3ea0e8"
+  dependencies:
+    loader-utils "^1.0.2"
+    schema-utils "^0.3.0"
+
+file-loader@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.5.tgz#91c25b6b6fbe56dae99f10a425fd64933b5c9daa"
   dependencies:
