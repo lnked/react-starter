@@ -36,7 +36,7 @@ export default class ColorPicker extends Component {
         if (this.state.color) {
             clearButton.push(
                 <span className={css.clear} key="clear" onClick={this.handleClear.bind(this)}>
-                    <svg className={css.clear__icon} role="img">
+                    <svg className={css.clear__icon} role="presentation" aria-hidden="true" aria-labelledby="title">
                         <use xlinkHref="#clear"/>
                     </svg>
                 </span>
