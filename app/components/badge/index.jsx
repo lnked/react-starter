@@ -4,7 +4,7 @@ import css from './styles.scss'
 
 export default class Badge extends PureComponent {
     static propTypes = {
-        title: string.isRequred,
+        title: string,
         bolded: bool,
         variant: oneOf([
             'info',
@@ -22,6 +22,7 @@ export default class Badge extends PureComponent {
     }
 
     static defaultProps = {
+        title: '',
         bolded: false,
         className: '',
         variant: 'default'
