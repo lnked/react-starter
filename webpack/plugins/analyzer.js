@@ -1,7 +1,7 @@
 'use strict';
 
 const webpack = require('webpack');
-const define = require('./define');
+const define = require('../define');
 const { resolve } = require('path');
 
 const WebpackBundleSizeAnalyzerPlugin = require('webpack-bundle-size-analyzer').WebpackBundleSizeAnalyzerPlugin;
