@@ -15,7 +15,9 @@ export default class BreadCrumbs extends Component {
     }
 
     renderPath () {
-        const path = this.props.path
+        const {
+            path
+        } = this.props
 
         if (path && path.length) {
             const list = []

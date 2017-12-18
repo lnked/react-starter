@@ -32,7 +32,9 @@ export default class Posts extends Component {
     }
 
     render () {
-        const title = this.props.title
+        const {
+            title
+        } = this.props
 
         return (
             <div className={css.posts}>

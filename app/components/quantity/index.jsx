@@ -44,7 +44,10 @@ export default class Quantity extends Component {
     }
 
     changeValue = (value) => {
-        const { min, max } = this.props
+        const {
+            min,
+            max
+        } = this.props
 
         if (value >= max) {
             value = max
@@ -79,8 +82,16 @@ export default class Quantity extends Component {
     }
 
     render () {
-        const { min, max, type, name } = this.props
-        const { count } = this.state
+        const {
+            min,
+            max,
+            type,
+            name
+        } = this.props
+
+        const {
+            count
+        } = this.state
 
         return (
             <div className={css.quantity}>

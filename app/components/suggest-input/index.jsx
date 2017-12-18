@@ -74,8 +74,15 @@ export default class SuggestInput extends Component {
     }
 
     render () {
-        const { name, placeholder } = this.props
-        const { filterText, suggestText } = this.state
+        const {
+            name,
+            placeholder
+        } = this.props
+
+        const {
+            filterText,
+            suggestText
+        } = this.state
 
         return (
             <div className={css.textinput}>

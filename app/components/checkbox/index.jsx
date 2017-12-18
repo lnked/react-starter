@@ -53,7 +53,9 @@ export default class Checkbox extends PureComponent {
     }
 
     renderStatus () {
-        const { theme } = this.props
+        const {
+            theme
+        } = this.props
 
         if (theme) {
             return <span className={`${css.status} ${css[`status_${theme}`]}`} />

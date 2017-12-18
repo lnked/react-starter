@@ -19,7 +19,11 @@ export default class SidebarIcon extends Component {
     }
 
     render () {
-        const { link, title, icon } = this.props
+        const {
+            link,
+            title,
+            icon
+        } = this.props
 
         return (
             <NavLink to={`${link}`} className={`${css.button} ${this.props.className}`} activeClassName={css.active}>

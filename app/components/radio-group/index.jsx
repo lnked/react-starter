@@ -36,12 +36,19 @@ export default class RadioGroup extends Component {
     }
 
     renderGroup = () => {
-        if (this.props.items && this.props.items.length) {
+        const {
+            items
+        } = this.props
+
+        const {
+            checked
+        } = this.state
+
+        if (items && items.length) {
             const group = []
-            const items = this.props.items
 
             items.map((props, id) => {
-                if (props.value === Number(this.state.checked)) {
+                if (props.value === Number(checked)) {
                     props.checked = true
                 } else {
                     props.checked = false

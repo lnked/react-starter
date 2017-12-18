@@ -1,5 +1,12 @@
 import React, { PureComponent } from 'react'
-import { oneOf, oneOfType, string, object, bool } from 'prop-types'
+import {
+    oneOf,
+    oneOfType,
+    string,
+    object,
+    bool
+} from 'prop-types'
+
 import css from './styles.scss'
 
 export default class Badge extends PureComponent {
