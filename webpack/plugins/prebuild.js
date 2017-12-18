@@ -10,16 +10,23 @@ const plugins = [
     new SvgStore({
         svg: {
             xmlns: 'http://www.w3.org/2000/svg',
-            style: 'position:absolute; width: 0; height: 0; overflow: hidden'
+            style: 'position:absolute; width: 0;height:0'
         },
         svgoOptions: {
             plugins: [
+                { sortAttrs: true },
                 { removeTitle: true },
                 { removeDesc: true },
                 { removeViewBox: false },
                 { removeDoctype: true },
                 { removeMetadata: true },
                 { removeComments: true },
+                { removeEmptyText: true },
+                { removeEmptyAttrs: true },
+                { removeHiddenElems: true },
+                { removeStyleElement: true },
+                { removeEditorsNSData: true },
+                { removeEmptyContainers: true },
                 { removeUselessDefs: true },
                 { removeXMLProcInst: true },
                 { removeDimensions: true },
@@ -37,7 +44,7 @@ const plugins = [
                     rgb2hex: true
                 }},
                 { removeAttrs: {
-                    attrs: '*:(fill|stroke)'
+                    attrs: ["id", "class", "data-name", "stroke", "fill", "fill-rule"]
                 } },
                 { removeStyleElement: true },
                 { removeScriptElement: true },

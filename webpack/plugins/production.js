@@ -42,7 +42,6 @@ const plugins = [
         chunks: ['vendor'],
         minChunks: Infinity
     }),
-
     // new webpack.optimize.CommonsChunkPlugin({
     //     name: 'vendor',
     //     filename: 'js/vendor.[hash:5].js',
