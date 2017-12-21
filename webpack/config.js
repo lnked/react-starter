@@ -57,6 +57,7 @@ module.exports = {
         alias: {
             hoc: resolve(define.rs_root, 'hoc'),
             utils: resolve(define.rs_root, 'utils'),
+            types: resolve(define.rs_root, 'types'),
             assets: resolve(define.rs_root, 'assets'),
             config: resolve(define.rs_root, 'config'),
             layouts: resolve(define.rs_root, 'layouts'),
