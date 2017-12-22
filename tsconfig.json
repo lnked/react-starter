@@ -1,4 +1,5 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
         "target": "es5",
         "module": "es2015",
@@ -25,6 +26,7 @@
         "node_modules",
         "dist",
         "tests",
-        "webpack"
+        "webpack",
+        "**/*.spec.ts"
     ]
 }

@@ -4,5 +4,6 @@ interface T {
 }
 
 export default function DateTime<T>({ value, format }): any => {
-    return <div>{ value } in format { format }</div>
+    return <div>{value} in format {format}</div>
 }
+
