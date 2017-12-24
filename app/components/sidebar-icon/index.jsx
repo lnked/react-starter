@@ -29,7 +29,7 @@ export default class SidebarIcon extends Component {
             <NavLink to={`${link}`} className={`${css.button} ${this.props.className}`} activeClassName={css.active}>
                 <span className={css.title}>{title}</span>
                 <span className={css.circle}>
-                    <svg height="36" width="36" role="img" alt={title}>
+                    <svg height="36" width="36" role="presentation" title={title}>
                         <circle cx="18" cy="18" r="16" />
                     </svg>
                 </span>

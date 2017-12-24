@@ -27,7 +27,7 @@ const plugins = [
         // Automatically open report in default browser
         openAnalyzer: true,
         // If `true`, Webpack Stats JSON file will be generated in bundles output directory
-        generateStatsFile: true,
+        generateStatsFile: false,
         // Name of Webpack Stats JSON file that will be generated if `generateStatsFile` is `true`.
         // Relative to bundles output directory.
         statsFilename: resolve(define.rs_dist, 'stats.json'),
