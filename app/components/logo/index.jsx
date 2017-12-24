@@ -10,6 +10,7 @@ export default class Logo extends PureComponent {
         return (
             <NavLink to="/" className={css.logo}>
                 <span className={css.image} />
+                <span className={css.title}>React Starter</span>
             </NavLink>
         )
     }

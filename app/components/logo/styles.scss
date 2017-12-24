@@ -6,6 +6,7 @@
     display: block;
     line-height: 48px;
     text-align: center;
+    position: relative;
 }
 
 .image {
@@ -17,4 +18,11 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 28px 28px;
+}
+
+.title {
+    text-indent: -1000px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
