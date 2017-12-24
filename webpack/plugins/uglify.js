@@ -21,6 +21,7 @@ const plugins = [
             compress: {
                 cascade: true,
                 booleans: true,
+                warnings: false,
                 drop_console: define.rs_release,
                 drop_debugger: define.rs_release,
                 global_defs: {
