@@ -8026,6 +8026,12 @@ react-input-mask@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.1.0.tgz#2c976ef839ea4f39357b78bfde024f89a718f7dd"
 
+react-loadable@5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/react-loadable/-/react-loadable-5.3.1.tgz#9699e9a08fed49bacd69caaa282034b62a76bcdd"
+  dependencies:
+    prop-types "^15.5.0"
+
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-3.0.0-alpha.1.tgz#4400426bcfa80caa6724c7755695315209fa4b07"
