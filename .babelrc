@@ -8,7 +8,7 @@
                 "loose": false,
                 "uglify": true,
                 "modules": false,
-                "useBuiltIns": "entry"
+                "useBuiltIns": "usage"
             }
         }]
     ],
