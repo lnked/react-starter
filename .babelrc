@@ -2,6 +2,7 @@
     "presets": [
         "flow",
         "react",
+        "typescript",
         ["env", {
             "targets": {
                 "debug": false,

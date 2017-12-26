@@ -55,12 +55,12 @@ const rules = [
         test: /\.(j|t)s[x]?$/,
         exclude: /(node_modules|bower_components)/,
         use: 'happypack/loader'
-    },
-    {
-        test: /\.ts[x]?$/,
-        exclude: /(node_modules|bower_components)/,
-        use: tsConfig
     }
+    // {
+    //     test: /\.ts[x]?$/,
+    //     exclude: /(node_modules|bower_components)/,
+    //     use: tsConfig
+    // }
 ];
 
 module.exports.config = rules;

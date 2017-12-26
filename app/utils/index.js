@@ -1,4 +1,9 @@
-module.exports = {
-    SvgFixer: require('utils/svg-fixer'),
-    RegisterSW: require('utils/service-worker')
+import SvgFixer from 'utils/svg-fixer'
+import DateTime from 'utils/date-time'
+import RegisterSW from 'utils/service-worker'
+
+export {
+    SvgFixer,
+    DateTime,
+    RegisterSW
 }
