@@ -23,8 +23,7 @@
     "lint:fix": "eslint ./app --fix .js[x]",
     "lint": "yarn run lint:scripts && yarn run lint:styles",
     "dev": "webpack-dev-server --open --content-base ./dist --config ./webpack/config.js --env development",
-    "size": "npx size-limit",
-    "webpack-defaults": "webpack-defaults"
+    "size": "npx size-limit"
   },
   "keywords": [
     "react"
@@ -61,7 +60,6 @@
     "xregexp": "3.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-typescript": "7.0.0-beta.35",
     "async-module-loader": "2.1.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.1.2",
@@ -79,6 +77,7 @@
     "babel-plugin-transform-react-pure-class-to-function": "1.0.1",
     "babel-plugin-transform-react-remove-prop-types": "0.4.12",
     "babel-plugin-transform-runtime": "6.23.0",
+    "babel-plugin-transform-typescript": "7.0.0-alpha.19",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",

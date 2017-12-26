@@ -16,10 +16,10 @@
         "dual-import",
         "add-module-exports",
         "syntax-dynamic-import",
+        "transform-typescript",
         "transform-decorators-legacy",
         "transform-object-rest-spread",
         ["transform-react-jsx", {}],
-        "@babel/plugin-transform-typescript",
         ["transform-class-properties", { "spec": true }]
     ],
     "env": {
