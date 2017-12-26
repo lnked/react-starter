@@ -1,13 +1,8 @@
-
-[![GitHub followers](https://img.shields.io/github/followers/lnked.svg?style=social&label=Follow)]()
 [![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)]()
 [![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)]()
 [![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
 
 [![npm (scoped)](https://img.shields.io/npm/v/@cycle/core.svg)](https://github.com/lnked/react-starter)
-[![GitHub issues](https://img.shields.io/github/issues/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/lnked/react-starter.svg)](https://github.com/lnked/react-starter)
-[![Github All Releases](https://img.shields.io/github/downloads/lnked/react-starter/total.svg)](https://github.com/lnked/react-starter)
 
 ---
 
@@ -95,6 +90,7 @@ yarn run lint:fix
 ```
 
 ## Expected
+- [ ] TypeScript
 - [ ] Tests
 - [ ] Redux
 - [ ] Storybook
