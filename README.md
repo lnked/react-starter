@@ -1,5 +1,3 @@
-[![GitHub forks](https://img.shields.io/github/forks/lnked/react-starter.svg?style=social&label=Fork)](https://github.com/lnked/react-starter/fork)
-[![GitHub stars](https://img.shields.io/github/stars/lnked/react-starter.svg?style=social&label=Star)](https://github.com/lnked/react-starter/star)
 [![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
 
 [![Code Climate](https://codeclimate.com/github/lnked/react-starter/badges/gpa.svg)](https://codeclimate.com/github/lnked/react-starter)
@@ -95,14 +93,3 @@ yarn run lint:fix
 
 ## Get in touch
 - Bugs / Suggestions: [open an issue](https://github.com/lnked/react-starter/issues)
-
-<!--
-## Features
-
-"storybook": "start-storybook -p 6006",
-"build-storybook": "build-storybook",
-"lint2": "eslint ./app -f table",
-"lint:fix3": "eslint ./app -f table --fix"
-
-**TL;DR** [the demo page](https://lnked.github.io/react-starter/)
--->
