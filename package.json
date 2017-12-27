@@ -145,7 +145,7 @@
     "sw-precache-webpack-plugin": "0.11.4",
     "ts-loader": "3.2.0",
     "typescript": "2.6.2",
-    "uglifyjs-webpack-plugin": "1.1.4",
+    "uglifyjs-webpack-plugin": "1.1.5",
     "url-loader": "0.6.2",
     "webapp-manifest-plugin": "0.0.4",
     "webpack": "3.10.0",
