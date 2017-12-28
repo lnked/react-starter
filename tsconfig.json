@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "target": "es6",
         "jsx": "react",
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
         "allowJs": true,
-        "outDir": "./dist"
+        "target": "es6",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports": true
     },
     "include": [
         "app/**/*"
