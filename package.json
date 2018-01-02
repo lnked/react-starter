@@ -23,7 +23,8 @@
     "lint:fix": "eslint ./app --fix .js[x]",
     "lint": "yarn run lint:scripts && yarn run lint:styles",
     "dev": "webpack-dev-server --open --content-base ./dist --config ./webpack/config.js --env development",
-    "size": "npx size-limit"
+    "size": "npx size-limit",
+    "webpack-defaults": "webpack-defaults"
   },
   "keywords": [
     "react"
@@ -38,10 +39,13 @@
   "size-limit": [
     {
       "path": "dist/js/*.js",
-      "webpack": false,
-      "limit": "300 KB"
+      "limit": "300 KB",
+      "webpack": false
     }
   ],
+  "config": {
+    "port": "3000"
+  },
   "dependencies": {
     "@types/prop-types": "15.5.2",
     "@types/react": "16.0.31",
@@ -112,7 +116,7 @@
     "lqip-loader": "2.0.2",
     "node-sass": "4.7.2",
     "pixrem": "4.0.1",
-    "postcss": "6.0.14",
+    "postcss": "6.0.15",
     "postcss-calc": "6.0.1",
     "postcss-color-rgba-fallback": "3.0.0",
     "postcss-cssnext": "3.0.2",
