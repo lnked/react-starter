@@ -93,9 +93,9 @@
   version "16.0.28"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.28.tgz#eb0b31272528da8f20477ec27569c4f767315b33"
 
-"@types/react@16.0.32":
-  version "16.0.32"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.32.tgz#9f23e534d1c1b7ce8cb4f034b449cfc220375888"
+"@types/react@16.0.33":
+  version "16.0.33"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.33.tgz#ee0f7b4dc62eaae311f81ac01cb00bdb0ffcf58f"
 
 "@types/source-map@*":
   version "0.5.2"
