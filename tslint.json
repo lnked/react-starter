@@ -5,7 +5,10 @@
     ],
     "jsRules": {},
     "rules": {
-        "jsx-wrap-multiline": false
+        "jsx-self-close": true,
+        "jsx-wrap-multiline": false,
+        "no-object-literal-type-assertion": false,
+        "no-unnecessary-generics": false
     },
     "rulesDirectory": []
 }
