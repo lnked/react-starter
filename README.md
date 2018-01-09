@@ -1,4 +1,5 @@
 [![license](https://img.shields.io/github/license/lnked/react-starter.svg)](https://github.com/lnked/react-starter/blob/fastest/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/lnked/react-starter/badge.svg?branch=master)](https://coveralls.io/github/lnked/react-starter?branch=master)
 
 [![Code Climate](https://codeclimate.com/github/lnked/react-starter/badges/gpa.svg)](https://codeclimate.com/github/lnked/react-starter)
 [![Issue Count](https://codeclimate.com/github/lnked/react-starter/badges/issue_count.svg)](https://codeclimate.com/github/lnked/react-starter)
