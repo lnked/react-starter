@@ -11,7 +11,7 @@ import components from './request.json'
 
 import { CustomComponent } from 'components'
 
-// import { DateTime } from 'utils'
+import { DateTime } from 'utils'
 
 // import Noty from 'noty'
 
@@ -85,6 +85,7 @@ export default class ComponentPage extends Component {
 
         return (
             <div>
+                <DateTime value={1515566090473} format="DD.MM.YYYY" />
                 { this.renderComponents() }
             </div>
         )

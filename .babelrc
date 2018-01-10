@@ -2,7 +2,7 @@
     "presets": [
         "flow",
         "react",
-        "typescript",
+        // "typescript",
         ["env", {
             "targets": {
                 "debug": false,
@@ -17,7 +17,7 @@
         "dual-import",
         "add-module-exports",
         "syntax-dynamic-import",
-        "transform-typescript",
+        // "transform-typescript",
         "transform-decorators-legacy",
         "transform-object-rest-spread",
         ["transform-react-jsx", {}],
