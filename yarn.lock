@@ -4752,9 +4752,9 @@ http-proxy@^1.16.2, http-proxy@^1.8.1:
     eventemitter3 "1.x.x"
     requires-port "1.x.x"
 
-http-server@0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/http-server/-/http-server-0.11.0.tgz#e7174eee42dc828f76879536b5ad8313ee0c326f"
+http-server@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/http-server/-/http-server-0.11.1.tgz#2302a56a6ffef7f9abea0147d838a5e9b6b6a79b"
   dependencies:
     colors "1.0.3"
     corser "~2.0.0"
