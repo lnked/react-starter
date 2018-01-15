@@ -455,12 +455,6 @@ async@2.1.4:
   dependencies:
     lodash "^4.14.0"
 
-async@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.4.1.tgz#62a56b279c98a11d0987096a01cc3eeb8eb7bbd7"
-  dependencies:
-    lodash "^4.14.0"
-
 async@^0.9.0:
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
@@ -528,7 +522,7 @@ axios@0.17.1:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
 
-babel-code-frame@6.26.0, babel-code-frame@^6.11.0, babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
+babel-code-frame@6.26.0, babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
   dependencies:
@@ -1605,7 +1599,7 @@ cac@^3.0.3:
     suffix "^0.1.0"
     text-table "^0.2.0"
 
-cacache@^10.0.0, cacache@^10.0.1:
+cacache@^10.0.1:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/cacache/-/cacache-10.0.1.tgz#3e05f6e616117d9b54665b1b20c8aeb93ea5d36f"
   dependencies:
@@ -1727,9 +1721,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000782"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000782.tgz#d8815bce1578c350aced1132507301205e0fab53"
 
-caniuse-lite@1.0.30000791:
-  version "1.0.30000791"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000791.tgz#8e35745efd483a3e23bb7d350990326d2319fc16"
+caniuse-lite@1.0.30000792:
+  version "1.0.30000792"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000792.tgz#d0cea981f8118f3961471afbb43c9a1e5bbf0332"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000780:
   version "1.0.30000782"
@@ -1972,6 +1966,14 @@ cliui@^3.0.3, cliui@^3.2.0:
     strip-ansi "^3.0.1"
     wrap-ansi "^2.0.0"
 
+cliui@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/cliui/-/cliui-4.0.0.tgz#743d4650e05f36d1ed2575b59638d87322bfbbcc"
+  dependencies:
+    string-width "^2.1.1"
+    strip-ansi "^4.0.0"
+    wrap-ansi "^2.0.0"
+
 clone-deep@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/clone-deep/-/clone-deep-0.3.0.tgz#348c61ae9cdbe0edfe053d91ff4cc521d790ede8"
@@ -2133,7 +2135,7 @@ compressible@~2.0.11:
   dependencies:
     mime-db ">= 1.30.0 < 2"
 
-compression-webpack-plugin@1.1.3:
+compression-webpack-plugin@1.1.3, compression-webpack-plugin@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-1.1.3.tgz#4b936c627eda09304e3153499ece7830289ab95a"
   dependencies:
@@ -2141,13 +2143,6 @@ compression-webpack-plugin@1.1.3:
     cacache "^10.0.1"
     find-cache-dir "^1.0.0"
     serialize-javascript "^1.4.0"
-    webpack-sources "^1.0.1"
-
-compression-webpack-plugin@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-1.0.1.tgz#7f0a2af9f642b4f87b5989516a3b9e9b41bb4b3f"
-  dependencies:
-    async "2.4.1"
     webpack-sources "^1.0.1"
 
 compression@^1.5.2:
@@ -2443,7 +2438,7 @@ css-color-names@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
-css-loader@0.28.8:
+css-loader@0.28.8, css-loader@^0.28.8:
   version "0.28.8"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.8.tgz#ff36381464dea18fe60f2601a060ba6445886bd5"
   dependencies:
@@ -2459,25 +2454,6 @@ css-loader@0.28.8:
     postcss-modules-local-by-default "^1.2.0"
     postcss-modules-scope "^1.1.0"
     postcss-modules-values "^1.3.0"
-    postcss-value-parser "^3.3.0"
-    source-list-map "^2.0.0"
-
-css-loader@^0.28.7:
-  version "0.28.7"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.7.tgz#5f2ee989dd32edd907717f953317656160999c1b"
-  dependencies:
-    babel-code-frame "^6.11.0"
-    css-selector-tokenizer "^0.7.0"
-    cssnano ">=2.6.1 <4"
-    icss-utils "^2.1.0"
-    loader-utils "^1.0.2"
-    lodash.camelcase "^4.3.0"
-    object-assign "^4.0.1"
-    postcss "^5.0.6"
-    postcss-modules-extract-imports "^1.0.0"
-    postcss-modules-local-by-default "^1.0.1"
-    postcss-modules-scope "^1.0.0"
-    postcss-modules-values "^1.1.0"
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
@@ -2547,7 +2523,7 @@ cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
 
-cssnano@3.10.0, "cssnano@>=2.6.1 <4", cssnano@^3.10.0:
+cssnano@3.10.0, cssnano@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-3.10.0.tgz#4f38f6cea2b9b17fa01490f23f1dc68ea65c1c38"
   dependencies:
@@ -3790,16 +3766,9 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
-file-loader@1.1.6:
+file-loader@1.1.6, file-loader@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.6.tgz#7b9a8f2c58f00a77fddf49e940f7ac978a3ea0e8"
-  dependencies:
-    loader-utils "^1.0.2"
-    schema-utils "^0.3.0"
-
-file-loader@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.5.tgz#91c25b6b6fbe56dae99f10a425fd64933b5c9daa"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
@@ -4426,7 +4395,7 @@ gzip-size@3.0.0, gzip-size@^3.0.0:
   dependencies:
     duplexer "^0.1.1"
 
-gzip-size@^4.0.0:
+gzip-size@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-4.1.0.tgz#8ae096257eabe7d69c45be2b67c448124ffb517c"
   dependencies:
@@ -6209,7 +6178,7 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
 
-micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
+micromatch@^2.1.5, micromatch@^2.3.0, micromatch@^2.3.11, micromatch@^2.3.7:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
   dependencies:
@@ -7687,27 +7656,27 @@ postcss-mixins@^6.0.1:
     postcss-simple-vars "^4.1.0"
     sugarss "^1.0.0"
 
-postcss-modules-extract-imports@^1.0.0, postcss-modules-extract-imports@^1.1.0:
+postcss-modules-extract-imports@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.1.0.tgz#b614c9720be6816eaee35fb3a5faa1dba6a05ddb"
   dependencies:
     postcss "^6.0.1"
 
-postcss-modules-local-by-default@^1.0.1, postcss-modules-local-by-default@^1.2.0:
+postcss-modules-local-by-default@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-1.2.0.tgz#f7d80c398c5a393fa7964466bd19500a7d61c069"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     postcss "^6.0.1"
 
-postcss-modules-scope@^1.0.0, postcss-modules-scope@^1.1.0:
+postcss-modules-scope@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-1.1.0.tgz#d6ea64994c79f97b62a72b426fbe6056a194bb90"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     postcss "^6.0.1"
 
-postcss-modules-values@^1.1.0, postcss-modules-values@^1.3.0:
+postcss-modules-values@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-values/-/postcss-modules-values-1.3.0.tgz#ecffa9d7e192518389f42ad0e83f72aec456ea20"
   dependencies:
@@ -8320,9 +8289,9 @@ quick-lru@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
 
-ramda@^0.24.1:
-  version "0.24.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.24.1.tgz#c3b7755197f35b8dc3502228262c4c91ddb6b857"
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
 
 randomatic@^1.1.3:
   version "1.1.7"
@@ -8437,9 +8406,9 @@ react-input-autosize@^2.1.2:
   dependencies:
     prop-types "^15.5.8"
 
-react-input-mask@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.1.0.tgz#2c976ef839ea4f39357b78bfde024f89a718f7dd"
+react-input-mask@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.1.1.tgz#435f9c0dcd0a7a2bb7316908aee095d6ce297c97"
 
 react-loadable@5.3.1:
   version "5.3.1"
@@ -8476,9 +8445,9 @@ react-router@^4.2.0:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
-react-select@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.2.0.tgz#4f91df941c4ecdb94701faca2533b60e31d7508e"
+react-select@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.2.1.tgz#a2fe58a569eb14dcaa6543816260b97e538120d1"
   dependencies:
     classnames "^2.2.4"
     prop-types "^15.5.8"
@@ -9338,27 +9307,27 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-size-limit@0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.13.2.tgz#ec743b64db055c524801f2800de417be3742e67f"
+size-limit@0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.14.0.tgz#a6b22cc67da9364fc1697071bb902fe55e6ef241"
   dependencies:
     bytes "^3.0.0"
     chalk "^2.3.0"
     ci-job-number "^0.3.0"
-    compression-webpack-plugin "^1.0.1"
+    compression-webpack-plugin "^1.1.3"
     cosmiconfig "^3.1.0"
-    css-loader "^0.28.7"
+    css-loader "^0.28.8"
     escape-string-regexp "^1.0.5"
-    file-loader "^1.1.5"
+    file-loader "^1.1.6"
     globby "^7.1.1"
-    gzip-size "^4.0.0"
+    gzip-size "^4.1.0"
     memory-fs "^0.4.1"
     read-pkg-up "^3.0.0"
-    style-loader "^0.19.0"
-    uglifyjs-webpack-plugin "^1.1.0"
-    webpack "^3.8.1"
-    webpack-bundle-analyzer "^2.9.1"
-    yargs "^10.0.3"
+    style-loader "^0.19.1"
+    uglifyjs-webpack-plugin "^1.1.6"
+    webpack "^3.10.0"
+    webpack-bundle-analyzer "^2.9.2"
+    yargs "^10.1.1"
 
 slash@^1.0.0:
   version "1.0.0"
@@ -9764,7 +9733,7 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-style-loader@0.19.1:
+style-loader@0.19.1, style-loader@^0.19.1:
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.19.1.tgz#591ffc80bcefe268b77c5d9ebc0505d772619f85"
   dependencies:
@@ -9774,13 +9743,6 @@ style-loader@0.19.1:
 style-loader@^0.18.2:
   version "0.18.2"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.18.2.tgz#cc31459afbcd6d80b7220ee54b291a9fd66ff5eb"
-  dependencies:
-    loader-utils "^1.0.2"
-    schema-utils "^0.3.0"
-
-style-loader@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.19.0.tgz#7258e788f0fee6a42d710eaf7d6c2412a4c50759"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
@@ -9799,14 +9761,14 @@ stylelint-config-standard@18.0.0:
   dependencies:
     stylelint-config-recommended "^2.0.0"
 
-stylelint-webpack-plugin@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.9.0.tgz#acc27351751dfa0113ad0eb8919946dcfc0922e2"
+stylelint-webpack-plugin@0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.10.1.tgz#16264256aea3f73eb30aba0adbc30b3bec3e4bea"
   dependencies:
     arrify "^1.0.1"
-    minimatch "^3.0.3"
+    micromatch "^2.3.0"
     object-assign "^4.1.0"
-    ramda "^0.24.1"
+    ramda "^0.25.0"
 
 stylelint@8.4.0:
   version "8.4.0"
@@ -10295,13 +10257,6 @@ ua-parser-js@^0.7.9:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
-uglify-es@^3.2.0:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.2.2.tgz#15c62b7775002c81b7987a1c49ecd3f126cace73"
-  dependencies:
-    commander "~2.12.1"
-    source-map "~0.6.1"
-
 uglify-es@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.4.tgz#2d592678791e5310456bbc95e952139e3b13167a"
@@ -10338,7 +10293,7 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-uglifyjs-webpack-plugin@1.1.6:
+uglifyjs-webpack-plugin@1.1.6, uglifyjs-webpack-plugin@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.1.6.tgz#f4ba8449edcf17835c18ba6ae99b9d610857fb19"
   dependencies:
@@ -10358,18 +10313,6 @@ uglifyjs-webpack-plugin@^0.4.6:
     source-map "^0.5.6"
     uglify-js "^2.8.29"
     webpack-sources "^1.0.1"
-
-uglifyjs-webpack-plugin@^1.1.0:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.1.2.tgz#8a9abc238d01a33daaf86fa9a84c7ebc1e67b0f9"
-  dependencies:
-    cacache "^10.0.0"
-    find-cache-dir "^1.0.0"
-    schema-utils "^0.3.0"
-    source-map "^0.6.1"
-    uglify-es "^3.2.0"
-    webpack-sources "^1.0.1"
-    worker-farm "^1.4.1"
 
 uid-number@^0.0.6:
   version "0.0.6"
@@ -10794,7 +10737,7 @@ webapp-manifest-plugin@0.0.4:
   dependencies:
     mime-types "^2.1.15"
 
-webpack-bundle-analyzer@2.9.2:
+webpack-bundle-analyzer@2.9.2, webpack-bundle-analyzer@^2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.9.2.tgz#63ed86eb71cc4cda86f68e685a84530ba0126449"
   dependencies:
@@ -10809,22 +10752,6 @@ webpack-bundle-analyzer@2.9.2:
     mkdirp "^0.5.1"
     opener "^1.4.3"
     ws "^4.0.0"
-
-webpack-bundle-analyzer@^2.9.1:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.9.1.tgz#c2c8e03e8e5768ed288b39ae9e27a8b8d7b9d476"
-  dependencies:
-    acorn "^5.1.1"
-    chalk "^1.1.3"
-    commander "^2.9.0"
-    ejs "^2.5.6"
-    express "^4.15.2"
-    filesize "^3.5.9"
-    gzip-size "^3.0.0"
-    lodash "^4.17.4"
-    mkdirp "^0.5.1"
-    opener "^1.4.3"
-    ws "^3.3.1"
 
 webpack-bundle-size-analyzer@2.7.0:
   version "2.7.0"
@@ -10864,9 +10791,9 @@ webpack-dev-middleware@1.12.2:
     range-parser "^1.0.3"
     time-stamp "^2.0.0"
 
-webpack-dev-server@2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.10.1.tgz#a9768375346e62155860fe3cef3d4d641b24273e"
+webpack-dev-server@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.11.0.tgz#e9d4830ab7eb16c6f92ed68b92f6089027960e1b"
   dependencies:
     ansi-html "0.0.7"
     array-includes "^3.0.3"
@@ -10948,7 +10875,7 @@ webpack-visualizer-plugin@0.1.11:
     react "^0.14.0"
     react-dom "^0.14.0"
 
-webpack@3.10.0, webpack@^3.8.1:
+webpack@3.10.0, webpack@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.10.0.tgz#5291b875078cf2abf42bdd23afe3f8f96c17d725"
   dependencies:
@@ -11071,7 +10998,7 @@ wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
 
-worker-farm@^1.4.1, worker-farm@^1.5.2:
+worker-farm@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/worker-farm/-/worker-farm-1.5.2.tgz#32b312e5dc3d5d45d79ef44acc2587491cd729ae"
   dependencies:
@@ -11108,14 +11035,6 @@ write@^0.2.1:
   resolved "https://registry.yarnpkg.com/write/-/write-0.2.1.tgz#5fc03828e264cea3fe91455476f7a3c566cb0757"
   dependencies:
     mkdirp "^0.5.1"
-
-ws@^3.3.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.2.tgz#96c1d08b3fefda1d5c1e33700d3bfaa9be2d5608"
-  dependencies:
-    async-limiter "~1.0.0"
-    safe-buffer "~5.1.0"
-    ultron "~1.1.0"
 
 ws@^4.0.0:
   version "4.0.0"
@@ -11214,9 +11133,9 @@ yargs-parser@^7.0.0:
   dependencies:
     camelcase "^4.1.0"
 
-yargs-parser@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-8.0.0.tgz#21d476330e5a82279a4b881345bf066102e219c6"
+yargs-parser@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-8.1.0.tgz#f1376a33b6629a5d063782944da732631e966950"
   dependencies:
     camelcase "^4.1.0"
 
@@ -11238,11 +11157,11 @@ yargs@6.6.0:
     y18n "^3.2.1"
     yargs-parser "^4.2.0"
 
-yargs@^10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.0.3.tgz#6542debd9080ad517ec5048fb454efe9e4d4aaae"
+yargs@^10.1.1:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.1.1.tgz#5fe1ea306985a099b33492001fa19a1e61efe285"
   dependencies:
-    cliui "^3.2.0"
+    cliui "^4.0.0"
     decamelize "^1.1.1"
     find-up "^2.1.0"
     get-caller-file "^1.0.1"
@@ -11253,7 +11172,7 @@ yargs@^10.0.3:
     string-width "^2.0.0"
     which-module "^2.0.0"
     y18n "^3.2.1"
-    yargs-parser "^8.0.0"
+    yargs-parser "^8.1.0"
 
 yargs@^3.31.0:
   version "3.32.0"
