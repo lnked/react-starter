@@ -10135,13 +10135,14 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
-ts-loader@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-3.2.0.tgz#23211922179b81f7448754b7fdfca45b8374a15a"
+ts-loader@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-3.3.0.tgz#3f393e10e5992009b2bffd7204dc28378b753557"
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^3.0.0"
     loader-utils "^1.0.2"
+    micromatch "^3.1.4"
     semver "^5.0.1"
 
 tty-browserify@0.0.0:
