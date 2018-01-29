@@ -15,21 +15,26 @@ import { CoreLayout } from 'layouts'
 // Pages
 import { ComponentPage } from 'containers'
 
+
 performance.mark('start')
 
 // console.log('nanoid: ', nanoid())
 
-render((
+render(
+  (
     <CoreLayout>
-        <ComponentPage />
+      <ComponentPage />
     </CoreLayout>
-), document.getElementById('root'))
+  ), document.getElementById('root'),
+)
 
 if (process.env.NODE_ENV === 'development') {
-    if (module.hot) {
-        console.log('Accepting the updated printMe module!')
-        module.hot.accept('containers/component-page', () => { render(CoreLayout) })
-    }
+  if (module.hot) {
+    console.log('Accepting the updated printMe module!')
+    module.hot.accept('containers/component-page', () => {
+      render(CoreLayout)
+    })
+  }
 }
 
 // // a chunks with a, b, c
