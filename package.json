@@ -149,7 +149,7 @@
     "svgo-loader": "2.1.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "ts-loader": "3.4.0",
-    "typescript": "2.6.2",
+    "typescript": "2.7.1",
     "uglifyjs-webpack-plugin": "1.1.8",
     "url-loader": "0.6.2",
     "webapp-manifest-plugin": "0.0.4",
