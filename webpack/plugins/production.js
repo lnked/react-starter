@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
 const define  = require('../define');
 
