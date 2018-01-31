@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const webpack = require('webpack');
 const define  = require('../define');
 
@@ -8,6 +9,9 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('webpack-plugin-chunk-manifest');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+
+const cssPath = path.join(__dirname, 'app')
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -38,6 +42,9 @@ const plugins = [
     new ExtractCssChunks({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
         allChunks: true,
+    }),
+    new PurgecssPlugin({
+        paths: glob.sync(`${cssPath}/*`)
     }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendor/,
