@@ -4,26 +4,25 @@ import css from './styles.scss'
 
 import { SvgFixer } from 'utils'
 
-
 export default class AuthLayout extends PureComponent {
     static propTypes = {
-      children: oneOfType([
-        object,
-        string,
-        array,
-      ]),
+        children: oneOfType([
+            object,
+            string,
+            array
+        ])
     }
 
     state = {
-      title: 'Auth :: React Starter App',
+        title: 'Auth :: React Starter App'
     }
 
-    componentWillMount() {
-      window.prerenderReady = true
+    componentWillMount () {
+        window.prerenderReady = true
     }
 
-    componentDidMount() {
-      SvgFixer()
+    componentDidMount () {
+        SvgFixer()
     }
 
     // handleSubmit = (e) => {
@@ -40,13 +39,13 @@ export default class AuthLayout extends PureComponent {
     //     this.setState({ expanded: !this.state.expanded })
     // }
 
-    render() {
-      return (
-        <div className={css.layout}>
-          <section className={css.layout__form}>
-            {this.props.children}
-          </section>
-        </div>
-      )
+    render () {
+        return (
+            <div className={css.layout}>
+                <section className={css.layout__form}>
+                    {this.props.children}
+                </section>
+            </div>
+        )
     }
 }

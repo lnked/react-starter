@@ -4,34 +4,33 @@ import css from './styles.scss'
 
 import { SvgFixer } from 'utils'
 
-
 export default class PureLayout extends PureComponent {
     static propTypes = {
-      children: oneOfType([
-        object,
-        string,
-        array,
-      ]),
+        children: oneOfType([
+            object,
+            string,
+            array
+        ])
     }
 
     state = {
-      title: 'React Starter App',
+        title: 'React Starter App'
     }
 
-    componentWillMount() {
-      document.title = this.state.title
-      window.prerenderReady = true
+    componentWillMount () {
+        document.title = this.state.title
+        window.prerenderReady = true
     }
 
-    componentDidMount() {
-      SvgFixer()
+    componentDidMount () {
+        SvgFixer()
     }
 
-    render() {
-      return (
-        <div className={css.layout}>
-          { this.props.children }
-        </div>
-      )
+    render () {
+        return (
+            <div className={css.layout}>
+                { this.props.children }
+            </div>
+        )
     }
 }

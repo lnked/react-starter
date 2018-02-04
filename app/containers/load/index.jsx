@@ -4,41 +4,40 @@ import { Posts } from 'segments'
 
 import 'whatwg-fetch'
 
-
 export default class Load extends Component {
     static propTypes = {
-      subreddit: string,
-      posts: oneOfType([
-        object,
-        array,
-      ]),
+        subreddit: string,
+        posts: oneOfType([
+            object,
+            array
+        ])
     }
 
     static defaultProps = {
-      subreddit: 'reactjs',
+        subreddit: 'reactjs'
     }
 
     state = {
-      posts: [],
+        posts: []
     }
 
-    componentDidMount() {
-      this.handleRedditLoad(this.props.subreddit)
+    componentDidMount () {
+        this.handleRedditLoad(this.props.subreddit)
     }
 
-    handleRedditLoad(type) {
-      fetch(`https://www.reddit.com/r/${type}.json`)
-        .then((response) => response.json())
-        .then((response) => {
-          const posts = response.data.children.map((obj) => obj.data)
+    handleRedditLoad (type) {
+        fetch(`https://www.reddit.com/r/${type}.json`)
+            .then((response) => response.json())
+            .then((response) => {
+                const posts = response.data.children.map((obj) => obj.data)
 
-          this.setState({ posts })
-        })
+                this.setState({ posts })
+            })
     }
 
-    render() {
-      return (
-        <Posts data={this.state.posts} title={this.props.subreddit} />
-      )
+    render () {
+        return (
+            <Posts data={this.state.posts} title={this.props.subreddit} />
+        )
     }
 }

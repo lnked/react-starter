@@ -1,45 +1,44 @@
 import React, { PureComponent } from 'react'
 import {
-  oneOf,
-  oneOfType,
-  string,
-  object,
-  bool,
+    oneOf,
+    oneOfType,
+    string,
+    object,
+    bool
 } from 'prop-types'
 
 import css from './styles.scss'
 
-
 export default class Badge extends PureComponent {
     static propTypes = {
-      title: string,
-      bolded: bool,
-      variant: oneOf([
-        'info',
-        'default',
-        'primary',
-        'success',
-        'warning',
-        'danger',
-      ]),
-      className: string,
-      children: oneOfType([
-        string,
-        object,
-      ]),
+        title: string,
+        bolded: bool,
+        variant: oneOf([
+            'info',
+            'default',
+            'primary',
+            'success',
+            'warning',
+            'danger'
+        ]),
+        className: string,
+        children: oneOfType([
+            string,
+            object
+        ])
     }
 
     static defaultProps = {
-      title: '',
-      bolded: false,
-      className: '',
-      variant: 'default',
+        title: '',
+        bolded: false,
+        className: '',
+        variant: 'default'
     }
 
-    render() {
-      const cn = []
+    render () {
+        const cn = []
 
-      const { title, children, variant, bolded, className } : {
+        const { title, children, variant, bolded, className } : {
             title: string,
             bolded: boolean,
             variant: string,
@@ -47,19 +46,19 @@ export default class Badge extends PureComponent {
             className: string
         } = this.props
 
-      cn.push(css.badge)
-      cn.push(`${css[`${variant}`]}`)
+        cn.push(css.badge)
+        cn.push(`${css[`${variant}`]}`)
 
-      if (className) {
-        cn.push(className)
-      }
+        if (className) {
+            cn.push(className)
+        }
 
-      if (bolded) {
-        cn.push(css.bold)
-      }
+        if (bolded) {
+            cn.push(css.bold)
+        }
 
-      return (
-        <div className={cn.join(' ')}>{ title || children }</div>
-      )
+        return (
+            <div className={cn.join(' ')}>{ title || children }</div>
+        )
     }
 }

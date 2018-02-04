@@ -3,48 +3,47 @@ import css from './styles.scss'
 
 import { Logo, SidebarIcon } from 'components'
 
-
 const base = ''
 
 export default class Sidebar extends Component {
-  renderPages() {
-    const pages = [
-      {
-        id: 1,
-        icon: 'dashboard',
-        title: 'Рабочий стол',
-        system: 'dashboard',
-        component: 'dashboard',
-      },
-      {
-        id: 2,
-        icon: 'structure',
-        title: 'Страницы',
-        system: 'structure',
-        component: 'structure',
-      },
-    ]
+    renderPages () {
+        const pages = [
+            {
+                id: 1,
+                icon: 'dashboard',
+                title: 'Рабочий стол',
+                system: 'dashboard',
+                component: 'dashboard'
+            },
+            {
+                id: 2,
+                icon: 'structure',
+                title: 'Страницы',
+                system: 'structure',
+                component: 'structure'
+            }
+        ]
 
-    return pages.map((props, id) => <SidebarIcon key={id} {...props} link={`${base}/${props.system}`} />)
-  }
+        return pages.map((props, id) => <SidebarIcon key={id} {...props} link={`${base}/${props.system}`} />)
+    }
 
-  render() {
-    return (
-      <nav className={css.sidebar}>
-        <Logo link={base} />
+    render () {
+        return (
+            <nav className={css.sidebar}>
+                <Logo link={base} />
 
-        { this.renderPages() }
+                { this.renderPages() }
 
-        <SidebarIcon
-          key="site.settings"
-          system="settings"
-          title="Настройки сайта"
-          link={`${base}/settings`}
-          className={css.settings}
-        />
-      </nav>
-    )
-  }
+                <SidebarIcon
+                    key="site.settings"
+                    system="settings"
+                    title="Настройки сайта"
+                    link={`${base}/settings`}
+                    className={css.settings}
+                />
+            </nav>
+        )
+    }
 }
 // <Route path="site" component={Page1}>
 //     <IndexRoute path="structure" component={Page1} />
