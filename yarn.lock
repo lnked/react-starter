@@ -77,9 +77,9 @@
   version "15.5.2"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.2.tgz#3c6b8dceb2906cc87fe4358e809f9d20c8d59be1"
 
-"@types/react-dom@16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.3.tgz#8accad7eabdab4cca3e1a56f5ccb57de2da0ff64"
+"@types/react-dom@16.0.4":
+  version "16.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.4.tgz#2e8fd45f5443780ed49bf2cdd9809e6091177a7d"
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
@@ -88,9 +88,9 @@
   version "16.0.28"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.28.tgz#eb0b31272528da8f20477ec27569c4f767315b33"
 
-"@types/react@16.0.36":
-  version "16.0.36"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.36.tgz#ceb5639013bdb92a94147883052e69bb2c22c69b"
+"@types/react@16.0.37":
+  version "16.0.37"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.37.tgz#1f62a33034d558ecc7955b3d5bc5270aefa33e11"
 
 "@types/source-map@*":
   version "0.5.2"
@@ -8388,9 +8388,9 @@ react-input-autosize@^2.1.2:
   dependencies:
     prop-types "^15.5.8"
 
-react-input-mask@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.2.1.tgz#823de0fda74ce2fb1b6b207e18f2b3858e2b86bc"
+react-input-mask@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-1.2.2.tgz#225a1130d316ee54cea7431f004c738b4c41b4da"
 
 react-loadable@5.3.1:
   version "5.3.1"
