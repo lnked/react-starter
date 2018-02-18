@@ -1,27 +1,28 @@
 {
     "presets": [
-        "flow",
-        "react",
         // "typescript",
         ["env", {
             "targets": {
-                "debug": false,
-                "loose": false,
-                "uglify": true,
-                "modules": false,
-                "useBuiltIns": "usage"
-            }
-        }]
+                "node": "current",
+            },
+            "loose": true,
+            "debug": true,
+            "uglify": true,
+            "modules": false,
+            "useBuiltIns": "usage"
+        }],
+        "react"
     ],
     "plugins": [
         "dual-import",
         "add-module-exports",
         "syntax-dynamic-import",
+        "transform-imports",
         // "transform-typescript",
         "transform-decorators-legacy",
+        ["transform-class-properties", { "spec": true }],
         "transform-object-rest-spread",
-        ["transform-react-jsx", {}],
-        ["transform-class-properties", { "spec": true }]
+        ["transform-react-jsx", {}]
     ],
     "env": {
         "development": {
@@ -38,6 +39,7 @@
             "sourceMaps": true
         },
         "production": {
+            "presets": ["minify"],
             "plugins": [
                 "transform-react-inline-elements",
                 "transform-react-constant-elements",

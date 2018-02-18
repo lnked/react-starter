@@ -5,6 +5,8 @@ import 'app.scss'
 import React from 'react'
 import { render } from 'react-dom'
 
+// import AppRouter from './routes'
+
 // import { nanoid } from 'nanoid'
 
 // https://github.com/minhtranite/react-progress-bar-plus
