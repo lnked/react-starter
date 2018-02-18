@@ -3,9 +3,15 @@
         "outDir": "./dist",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "commonjs",
+        "module": "esnext",
         "target": "es5",
-        "jsx": "react"
+        "jsx": "react",
+        "lib": [
+            "es5",
+            "es6",
+            "es7",
+            "dom"
+        ]
     },
     "files": [
         "./app/typings/**.ts"
