@@ -1,3 +1,4 @@
+// import { default as React, Component } from 'react'
 import React, { Component } from 'react'
 import css from './styles.scss'
 

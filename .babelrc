@@ -1,6 +1,6 @@
 {
     "presets": [
-        "typescript",
+        // "typescript",
         ["env", {
             "targets": {
                 "node": "current",
