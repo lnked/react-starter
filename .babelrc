@@ -1,6 +1,6 @@
 {
     "presets": [
-        // "typescript",
+        "typescript",
         ["env", {
             "targets": {
                 "node": "current",
@@ -25,6 +25,9 @@
         ["transform-react-jsx", {}]
     ],
     "env": {
+        "test": {
+            "presets": [["env"], "react"]
+        },
         "development": {
             "plugins": [
                 "react-hot-loader/babel",
