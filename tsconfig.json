@@ -8,8 +8,8 @@
         "preserveConstEnums": true,
         "removeComments": true,
         "allowSyntheticDefaultImports": true,
-        "module": "esnext",
-        // "module": "commonjs",
+        // "module": "esnext",
+        "module": "commonjs",
         "target": "es5",
         "jsx": "react",
         "lib": [

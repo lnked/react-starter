@@ -104,7 +104,6 @@
         "babel-plugin-transform-react-pure-class-to-function": "1.0.1",
         "babel-plugin-transform-react-remove-prop-types": "0.4.13",
         "babel-plugin-transform-runtime": "6.23.0",
-        "babel-plugin-transform-typescript": "7.0.0-alpha.19",
         "babel-preset-env": "1.6.1",
         "babel-preset-minify": "0.3.0",
         "babel-preset-react": "6.24.1",

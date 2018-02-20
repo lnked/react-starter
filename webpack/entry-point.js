@@ -4,7 +4,7 @@ const define = require('./define');
 const { resolve } = require('path');
 
 const entryPoint = Object.assign({}, {
-    vendor: [
+    vendors: [
         'core-js/es6/map',
         'core-js/es6/set',
         'react',
@@ -17,12 +17,12 @@ if (define.rs_development) {
     Object.assign(entryPoint, {
         app: [
             'react-hot-loader/patch',
-            resolve(define.rs_root, 'app.jsx')
+            resolve(define.rs_root, 'app')
         ]
     });
 } else {
     Object.assign(entryPoint, {
-        app: resolve(define.rs_root, 'app.jsx')
+        app: resolve(define.rs_root, 'app')
     });
 }
 

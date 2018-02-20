@@ -1,6 +1,5 @@
 {
     "presets": [
-        // "typescript",
         ["env", {
             "targets": {
                 "node": "current",
@@ -18,7 +17,6 @@
         "add-module-exports",
         "syntax-dynamic-import",
         "transform-imports",
-        // "transform-typescript",
         "transform-decorators-legacy",
         ["transform-class-properties", { "spec": true }],
         "transform-object-rest-spread",

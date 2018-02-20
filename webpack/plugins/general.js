@@ -32,7 +32,7 @@ const plugins = [
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
     }),
-    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendor')),
+    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
     new CopyWebpackPlugin([
         { from: 'assets/images', to: 'images', copyUnmodified: true },
         {

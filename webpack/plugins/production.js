@@ -21,7 +21,7 @@ const plugins = [
     }),
     new WebpackChunkHash(),
     new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
+        name: 'vendors',
         minChunks: (m) => {
             return m.context && m.context.includes("node_modules");
         }
@@ -48,9 +48,9 @@ const plugins = [
         paths: glob.sync(`${cssPath}/*`)
     }),
     new ScriptExtHtmlWebpackPlugin({
-        sync: /vendor/,
+        sync: /vendors/,
         inline: 'manifest',
-        preload: ['vendor', 'app'],
+        preload: ['vendors', 'app'],
         defaultAttribute: 'async'
     })
 ];
