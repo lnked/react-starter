@@ -5,8 +5,11 @@
         "allowJs": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
         "allowSyntheticDefaultImports": true,
         "module": "esnext",
+        // "module": "commonjs",
         "target": "es5",
         "jsx": "react",
         "lib": [
@@ -20,7 +23,7 @@
         "./app/typings/**.ts"
     ],
     "include": [
-        "app/**/*"
+        "./app/**/*"
     ],
     "exclude": [
         "node_modules",
