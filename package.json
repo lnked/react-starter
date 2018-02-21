@@ -72,6 +72,7 @@
         "@types/react-dom": "16.0.4",
         "axios": "0.18.0",
         "core-js": "2.5.3",
+        "dompurify": "1.0.3",
         "graphql": "0.13.1",
         "prop-types": "15.6.0",
         "react": "16.2.0",
