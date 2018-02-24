@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import { string } from 'prop-types'
-import css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles'
+
+import { PropTypes } from 'prop-types'
 
 import { NavLink } from 'react-router-dom'
 
-export default class SidebarIcon extends Component {
+export default class SidebarIcon extends React.Component<{}, {}> {
     static propTypes = {
-        link: string,
-        icon: string,
-        title: string,
-        // component: string,
-        className: string
+        link: PropTypes.string,
+        icon: PropTypes.string,
+        title: PropTypes.string,
+        className: PropTypes.string
     }
 
     static defaultProps = {

@@ -1,11 +1,9 @@
-import React, { PureComponent } from 'react'
-import css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles'
 
-import {
-    NavLink
-} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-export default class Logo extends PureComponent {
+export default class Logo extends React.PureComponent<{}, {}> {
     render () {
         return (
             <NavLink to="/" className={css.logo}>

@@ -5,7 +5,7 @@
                 "node": "current",
             },
             "loose": true,
-            "debug": true,
+            "debug": false,
             "uglify": true,
             "modules": false,
             "useBuiltIns": "usage"

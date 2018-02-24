@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import * as React from 'react'
+import * as css from './styles'
 
 import {
     Link,
     NavLink
 } from 'react-router-dom'
 
-import css from './styles.scss'
-
-export default class Navigation extends Component {
+export default class Navigation extends React.Component<{}, {}> {
     state = {
         isOpened: false
     }

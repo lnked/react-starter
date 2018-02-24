@@ -1,18 +1,18 @@
 import * as React from 'react'
 
-// import {
-//     BrowserRouter as Router,
-//     Route,
-//     browserHistory
-// } from 'react-router-dom'
+import {
+    BrowserRouter as Router,
+    Route
+    // browserHistory
+} from 'react-router-dom'
 
 // import Loadable from 'react-loadable'
 
 // Layouts
-// import { CoreLayout } from 'layouts'
+import { CoreLayout } from 'layouts'
 
 // Containers
-// import { ComponentPage } from 'containers'
+import { Auth } from 'containers'
 
 // function Loading(props) {
 //     if (props.error) {
@@ -52,9 +52,14 @@ import * as React from 'react'
 export default class App extends React.Component<{}, {}> {
     render () {
         return (
-            <div>
-                Hello
-            </div>
+            <Router>
+                <CoreLayout>
+                    <Route exact path="/" component={Auth}/>
+                    <Route path="/dashboard" component={Auth}/>
+                    <Route path="/structure" component={Auth}/>
+                    <Route path="/settings" component={Auth}/>
+                </CoreLayout>
+            </Router>
         )
     }
 }
