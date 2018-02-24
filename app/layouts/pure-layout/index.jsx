@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
-import { SvgFixer } from 'utils'
+// import { SvgFixer } from 'utils'
 
 export default class PureLayout extends PureComponent {
     static propTypes = {
@@ -22,9 +22,9 @@ export default class PureLayout extends PureComponent {
         window.prerenderReady = true
     }
 
-    componentDidMount () {
-        SvgFixer()
-    }
+    // componentDidMount () {
+    //     SvgFixer()
+    // }
 
     render () {
         return (

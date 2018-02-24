@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
-import { SvgFixer } from 'utils'
+// import { SvgFixer } from 'utils'
 
 export default class AuthLayout extends PureComponent {
     static propTypes = {
@@ -21,9 +21,9 @@ export default class AuthLayout extends PureComponent {
         window.prerenderReady = true
     }
 
-    componentDidMount () {
-        SvgFixer()
-    }
+    // componentDidMount () {
+    //     SvgFixer()
+    // }
 
     // handleSubmit = (e) => {
     //     e.preventDefault()

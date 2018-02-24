@@ -1,18 +1,12 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { oneOfType, object, string, array } from 'prop-types'
 import css from './styles.scss'
 
-import {
-    BrowserRouter as Router,
-    Route
-} from 'react-router-dom'
+// import { SvgFixer } from 'utils'
+// import { Sidebar } from 'segments'
+// import { Navigation } from 'components'
 
-import { SvgFixer } from 'utils'
-import { Sidebar } from 'segments'
-import { Navigation } from 'components'
-import { Page1 } from 'containers'
-
-export default class CoreLayout extends PureComponent {
+export default class CoreLayout extends Component {
     static propTypes = {
         children: oneOfType([
             object,
@@ -30,9 +24,9 @@ export default class CoreLayout extends PureComponent {
         window.prerenderReady = true
     }
 
-    componentDidMount () {
-        SvgFixer()
-    }
+    // componentDidMount () {
+    //     SvgFixer()
+    // }
 
     render () {
         // import {Helmet} from "react-helmet"
@@ -57,30 +51,23 @@ export default class CoreLayout extends PureComponent {
         //         </Helmet>
         //     </Child>
         // </Parent>
+
+        // <header className={css.header}>
+        //     <Navigation />
+        // </header>
+
+        // <aside className={css.sidebar}>
+        //     <Sidebar />
+        // </aside>
+
         return (
-            <Router>
-                <div className={css.layout}>
-                    <header className={css.header}>
-                        <Navigation />
-                    </header>
-
-                    <aside className={css.sidebar}>
-                        <Sidebar />
-                    </aside>
-
-                    <section className={css.main}>
-                        <div className={css.content}>
-                            {this.props.children}
-                            <Route exact path="/site" component={Page1} />
-                            <Route path="/marketing" component={Page1} />
-                            <Route path="/seo" component={Page1} />
-                            <Route path="/users" component={Page1} />
-                            <Route path="/shop" component={Page1} />
-                            <Route path="/system" component={Page1} />
-                        </div>
-                    </section>
-                </div>
-            </Router>
+            <div className={css.layout}>
+                <section className={css.main}>
+                    <div className={css.content}>
+                        { this.props.children }
+                    </div>
+                </section>
+            </div>
         )
     }
 }
