@@ -1,7 +1,13 @@
 'use strict';
 
+const fs = require('fs');
 const { resolve } = require('path');
 const define = require('./define');
+
+function fileContent(filePath) {
+    const content = fs.readFileSync(resolve(define.rs_root, filePath), 'utf8');
+    return content.toString().replace(/<svg.*?>|<\/svg>/gi, '');
+}
 
 module.exports.generateConfig = (script, template, chunksList) => {
     if (!template) {
@@ -14,6 +20,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
         inject: true,
         filetype: 'pug',
         template: [template, 'pug'].join('.'),
+        svgContext: fileContent('.cache/svgstore/svgstore.svg'),
         filename: resolve(define.rs_dist, [script, 'html'].join('.')),
         production: define.rs_production,
         minify: define.rs_release && {
@@ -48,3 +55,5 @@ module.exports.generateConfig = (script, template, chunksList) => {
 
     return config;
 }
+
+module.exports.fileContent = fileContent

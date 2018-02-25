@@ -52,22 +52,23 @@ html(
 
         //- meta(property='fb:app_id', content='500712019984442')
     body
-        include ./.cache/svgstore/svgstore.svg
+        svg(xmlns='http://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
+            != htmlWebpackPlugin.options.svgContext
 
         main.layout-wrapper#root
 
-        noscript
-            .bulletin
-                p.headline MODERN BROWSER EXPERIENCE
-                p Your browser doesn't support the main features of this website.
-                p
-                    | Please upgrade to
-                    a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
-                    | , Safari or Firefox for a better experience.
+        //- noscript
+        //-     .bulletin
+        //-         p.headline MODERN BROWSER EXPERIENCE
+        //-         p Your browser doesn't support the main features of this website.
+        //-         p
+        //-             | Please upgrade to
+        //-             a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
+        //-             | , Safari or Firefox for a better experience.
 
-        script.
-            window.prerenderReady = false
+        //- script.
+        //-     window.prerenderReady = false
 
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js');
-            }
+        //-     if ('serviceWorker' in navigator) {
+        //-         navigator.serviceWorker.register('/sw.js');
+        //-     }

@@ -8,6 +8,7 @@ const helpers = require('../helpers');
 const scripts = require('../rules/scripts')
 
 const HappyPack = require('happypack');
+const SvgStore = require('webpack-svgstore-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
