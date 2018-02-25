@@ -21,6 +21,41 @@ export default class Sidebar extends React.Component<{}, {}> {
                 title: 'Страницы',
                 system: 'structure',
                 component: 'structure'
+            },
+            {
+                id: 3,
+                icon: 'entities',
+                title: 'Сущности',
+                system: 'entities',
+                component: 'entities'
+            },
+            {
+                id: 4,
+                icon: 'users',
+                title: 'Пользователи',
+                system: 'users',
+                component: 'users'
+            },
+            {
+                id: 5,
+                icon: 'globals',
+                title: 'Глобальные параметры',
+                system: 'globals',
+                component: 'globals'
+            },
+            {
+                id: 6,
+                icon: 'updates',
+                title: 'Обновления',
+                system: 'updates',
+                component: 'updates'
+            },
+            {
+                id: 7,
+                icon: 'locale',
+                title: 'Языковой стандарт',
+                system: 'locale',
+                component: 'locale'
             }
         ]
 

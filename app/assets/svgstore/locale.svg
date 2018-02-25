@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="470px" height="427px" viewBox="0 0 470 427" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>translate</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="translate" fill="#000000" fill-rule="nonzero">
+            <path d="M253.227,279.267 L199.04,225.72 L199.68,225.08 C236.8,183.693 263.253,136.12 278.827,85.773 L341.334,85.773 L341.334,43 L192,43 L192,0.333 L149.333,0.333 L149.333,43 L0,43 L0,85.453 L238.293,85.453 C223.893,126.626 201.386,165.666 170.666,199.8 C150.826,177.72 134.399,153.72 121.386,128.333 L78.72,128.333 C94.293,163.106 115.627,195.96 142.293,225.613 L33.813,332.813 L64,363 L170.667,256.333 L237.014,322.68 L253.227,279.267 Z" id="Shape"></path>
+            <path d="M373.333,171 L330.666,171 L234.666,427 L277.333,427 L301.333,363 L402.666,363 L426.666,427 L469.333,427 L373.333,171 Z M317.333,320.333 L352,227.853 L386.667,320.333 L317.333,320.333 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

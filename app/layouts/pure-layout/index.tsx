@@ -28,9 +28,11 @@ export default class PureLayout extends React.Component<{}, {}> {
     }
 
     render () {
+        const { children } = this.props
+
         return (
             <div className={css.layout}>
-                { this.props.children }
+                { children }
             </div>
         )
     }

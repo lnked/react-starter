@@ -36,7 +36,7 @@ export default class SidebarIcon extends React.Component<{}, {}> {
 
         return (
             <NavLink to={`${link}`} className={cn.join(' ')} activeClassName={css.active}>
-                <span className={css.title}>{title} {icon}</span>
+                <span className={css.title}>{title}</span>
                 <span className={css.circle}>
                     <svg height="36" width="36" role="presentation" title={title}>
                         <circle cx="18" cy="18" r="16" />
