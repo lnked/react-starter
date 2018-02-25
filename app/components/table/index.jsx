@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 import { oneOfType, object, array } from 'prop-types'
 import * as css from './styles'
 // http://orbjs.net/

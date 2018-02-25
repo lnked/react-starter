@@ -1,26 +1,49 @@
+import * as React from 'react'
 import * as Loadable from 'react-loadable'
 
-function Loading ({ error, pastDelay, timedOut }) {
-    console.log(error, pastDelay, timedOut)
+import { Loader } from 'components'
+
+interface Props {
+    error: Error | null;
+    pastSpinnerDelay: boolean;
+    timedOut: boolean;
+    loading: boolean;
+    pastDelay: null;
+}
+
+let Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: Props) => {
+    console.log(error, loading, pastSpinnerDelay, timedOut, pastDelay)
 
     if (error) {
         return <div>Error!</div>
     } else if (timedOut) {
         return <div>Taking a long time...</div>
     } else if (pastDelay) {
-        return <div>Loading...</div>
+        return <div><Loader />Loading...</div>
     } else {
         return null
     }
 }
 
 const LoadableComponent = Loadable({
-    loader: () => import('components/loader'),
+    loader: () => import('containers/home'),
     LoadingComponent: Loading,
-    loading: Home,
-    delay: 300
+    delay: 300,
 })
 
 export default function PreLoader () {
     return <LoadableComponent />
 }
+
+// export default function PreLoader (InputComponent) {
+//     return class extends React.Component {
+//         componentWillReceiveProps(nextProps) {
+//             console.log('Current props: ', this.props);
+//             console.log('Next props: ', nextProps);
+//         }
+
+//         render() {
+//             return <InputComponent {...this.props} />;
+//         }
+//     }
+// }

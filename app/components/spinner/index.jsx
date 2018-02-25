@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 import * as css from './styles'
 
 export default class Spinner extends React.PureComponent<{}, {}> {

@@ -70,6 +70,7 @@
         "@types/prop-types": "15.5.2",
         "@types/react": "16.0.38",
         "@types/react-dom": "16.0.4",
+        "@types/react-loadable": "5.3.3",
         "@types/react-router-dom": "4.2.4",
         "axios": "0.18.0",
         "core-js": "2.5.3",

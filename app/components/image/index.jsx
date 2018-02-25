@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 import * as css from './styles'
 
 // import banner from './images/banner.jpg';
