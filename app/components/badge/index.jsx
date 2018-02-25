@@ -7,9 +7,9 @@ import {
     bool
 } from 'prop-types'
 
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Badge extends PureComponent {
+export default class Badge extends React.PureComponent<{}, {}> {
     static propTypes = {
         title: string,
         bolded: bool,

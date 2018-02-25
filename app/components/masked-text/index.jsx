@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { PropTypes } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
 import InputMask from 'react-input-mask'
 
-export default class MaskedText extends Component {
+export default class MaskedText extends React.Component<{}, {}> {
     static propTypes = {
         name: PropTypes.string.isRequired,
         placeholder: PropTypes.string,

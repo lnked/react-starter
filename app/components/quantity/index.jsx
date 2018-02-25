@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { oneOfType, string, bool, func, number } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Quantity extends Component {
+export default class Quantity extends React.Component<{}, {}> {
     static propTypes = {
         type: string,
         name: string.isRequired,

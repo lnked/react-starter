@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { string } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Tabs extends PureComponent {
+export default class Tabs extends React.PureComponent<{}, {}> {
     static propTypes = {
         title: string
     }

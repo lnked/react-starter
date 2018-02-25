@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Checkbox extends PureComponent {
+export default class Checkbox extends React.PureComponent<{}, {}> {
     static propTypes = {
         size: PropTypes.string,
         theme: PropTypes.string,

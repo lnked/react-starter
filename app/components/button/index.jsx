@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import { oneOf, oneOfType, object, string, array, func, bool } from 'prop-types'
 
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Button extends PureComponent {
+export default class Button extends React.PureComponent<{}, {}> {
     static propTypes = {
         type: string,
         label: string,

@@ -10,7 +10,7 @@ import Logo from 'components/logo'
 // import Button from 'components/button'
 // import Switch from 'components/switch'
 // import Notify from 'components/notify'
-// import Loader from 'components/loader'
+import Loader from 'components/loader'
 // import Spinner from 'components/spinner'
 // import Quantity from 'components/quantity'
 // import Checkbox from 'components/checkbox'
@@ -37,7 +37,7 @@ export {
     // Button,
     // Switch,
     // Notify,
-    // Loader,
+    Loader,
     // Spinner,
     // Quantity,
     // Checkbox,

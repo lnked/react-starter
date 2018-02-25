@@ -1,6 +1,5 @@
-import React from 'react'
+import * as React from 'react'
 import { DTProps } from 'typings/date-time'
-// import React, { Component } from 'react'
 
 export default function DateTime ({ value, format }: DTProps) {
     return (

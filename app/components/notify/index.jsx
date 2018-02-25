@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Notify extends PureComponent {
+export default class Notify extends React.PureComponent<{}, {}> {
     static propTypes = {
         bullet: PropTypes.bool
     }

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
 import Table from 'components/table'
 import Button from 'components/button'
@@ -21,7 +21,7 @@ import Tabs from 'components/tabs'
 import Prompt from 'components/prompt'
 import Confirm from 'components/confirm'
 
-export default class CustomComponent extends Component {
+export default class CustomComponent extends React.Component<{}, {}> {
     static propTypes = {
         name: PropTypes.string,
         prop: PropTypes.oneOfType([

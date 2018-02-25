@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
-import css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles'
 
-export default class Loader extends PureComponent {
+export default class Loader extends React.PureComponent<{}, {}> {
     render () {
         return (
             <div className={css.preloader}>

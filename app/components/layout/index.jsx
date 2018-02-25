@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { oneOfType, object, string, array } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Layout extends PureComponent {
+export default class Layout extends React.PureComponent<{}, {}> {
     static propTypes = {
         className: string,
         children: oneOfType([

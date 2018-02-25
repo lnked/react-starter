@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export default function asyncComponent(importComponent) {
-    class AsyncComponent extends Component {
+    class AsyncComponent extends React.Component<{}, {}> {
         state = {
             component: null
         }

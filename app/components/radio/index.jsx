@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Radio extends PureComponent {
+export default class Radio extends React.PureComponent<{}, {}> {
     static propTypes = {
         name: PropTypes.string.isRequired,
         checked: PropTypes.bool,

@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { string } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 import ClipboardButton from 'react-clipboard.js'
 
-export default class ColorPicker extends Component {
+export default class ColorPicker extends React.Component<{}, {}> {
     static propTypes = {
         color: string
     }

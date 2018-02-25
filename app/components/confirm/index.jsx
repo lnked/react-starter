@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { string } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Confirm extends PureComponent {
+export default class Confirm extends React.PureComponent<{}, {}> {
     static propTypes = {
         title: string
     }

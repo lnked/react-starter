@@ -19,15 +19,24 @@ export default class SidebarIcon extends React.Component<{}, {}> {
     }
 
     render () {
+        const cn = []
+
         const {
             link,
             title,
-            icon
+            icon,
+            className
         } = this.props
 
+        cn.push(css.button)
+
+        if (className) {
+            cn.push(className)
+        }
+
         return (
-            <NavLink to={`${link}`} className={`${css.button} ${this.props.className}`} activeClassName={css.active}>
-                <span className={css.title}>{title}</span>
+            <NavLink to={`${link}`} className={cn.join(' ')} activeClassName={css.active}>
+                <span className={css.title}>{title} {icon}</span>
                 <span className={css.circle}>
                     <svg height="36" width="36" role="presentation" title={title}>
                         <circle cx="18" cy="18" r="16" />

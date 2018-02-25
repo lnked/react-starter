@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Spinner extends PureComponent {
+export default class Spinner extends React.PureComponent<{}, {}> {
     render () {
         return (
             <div className={css.spinner} />

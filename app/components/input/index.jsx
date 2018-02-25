@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { oneOf, oneOfType, string, bool, func, number } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Input extends PureComponent {
+export default class Input extends React.PureComponent<{}, {}> {
     static propTypes = {
         type: string,
         name: string.isRequired,

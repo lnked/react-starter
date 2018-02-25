@@ -3,6 +3,8 @@ import * as css from './styles'
 
 import { PropTypes } from 'prop-types'
 
+import { SvgFixer } from 'utils'
+
 import { Sidebar, Navigation } from 'segments'
 
 export default class CoreLayout extends React.Component<{}, {}> {
@@ -21,6 +23,10 @@ export default class CoreLayout extends React.Component<{}, {}> {
     componentWillMount () {
         document.title = this.state.title
         window.prerenderReady = true
+    }
+
+    componentDidMount () {
+        SvgFixer()
     }
 
     render () {
@@ -50,7 +56,6 @@ export default class CoreLayout extends React.Component<{}, {}> {
 // import { oneOfType, object, string, array } from 'prop-types'
 // import css from './styles.scss'
 
-// import { SvgFixer } from 'utils'
 // import { Sidebar } from 'segments'
 
 // export default class CoreLayout extends Component {
@@ -70,10 +75,6 @@ export default class CoreLayout extends React.Component<{}, {}> {
 //         document.title = this.state.title
 //         window.prerenderReady = true
 //     }
-
-//     // componentDidMount () {
-//     //     SvgFixer()
-//     // }
 
 //     render () {
 //         // import {Helmet} from "react-helmet"

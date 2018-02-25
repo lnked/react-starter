@@ -1,4 +1,4 @@
-// import React, { Component } from 'react'
+// import * as React from 'react'
 
 // import { FadeIn } from 'animate-components'
 
@@ -15,7 +15,7 @@
 //     }
 // }
 
-// class Counter extends Component {
+// class Counter extends React.Component<{}, {}> {
 //     state = counter(undefined, {});
 
 //     dispatch (action) {

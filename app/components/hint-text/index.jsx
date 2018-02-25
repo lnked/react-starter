@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { PropTypes } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class HintText extends Component {
+export default class HintText extends React.Component<{}, {}> {
     static propTypes = {
         text: PropTypes.string.isRequired
     }

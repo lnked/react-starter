@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { string } from 'prop-types'
 
 // http://lapanoid.github.io/redux-cropper/
@@ -37,7 +37,7 @@ console.log(btnClass)
 // // other falsy values are just ignored
 // classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // => 'bar 1'
 
-export default class imageCrop extends Component {
+export default class imageCrop extends React.Component<{}, {}> {
     static propTypes = {
         name: string
     }

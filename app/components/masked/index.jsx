@@ -10,7 +10,7 @@
 //     var cleave = new Cleave(...)
 // })
 
-// export default class Masked extends PureComponent {
+// export default class Masked extends React.PureComponent<{}, {}> {
 
 //     constructor(props, context) {
 //         super(props, context)

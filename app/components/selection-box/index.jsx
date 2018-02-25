@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class SelectionBox extends PureComponent {
+export default class SelectionBox extends React.PureComponent<{}, {}> {
     static propTypes = {
         items: PropTypes.array,
         name: PropTypes.string,

@@ -1,6 +1,6 @@
-import css from './styles.scss';
+import * as css from './styles';
 import { object, func, bool } from 'prop-types'
-import React, { Component } from 'react'
+import * as React from 'react'
 
 function Form ({ onSubmit, expanded = false, children }) {
     default propTypes = {

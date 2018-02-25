@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles'
 
 // import VirtualizedSelect from 'react-virtualized-select'
 
@@ -15,7 +15,7 @@ import { DateTime } from 'utils'
 
 // import Noty from 'noty'
 
-export default class ComponentPage extends Component {
+export default class ComponentPage extends React.Component<{}, {}> {
     state = {}
 
     renderComponents () {

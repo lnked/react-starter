@@ -1,15 +1,16 @@
-import React, { PureComponent } from 'react'
-import { oneOfType, object, string, array } from 'prop-types'
-import css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles'
 
-// import { SvgFixer } from 'utils'
+import { PropTypes } from 'prop-types'
 
-export default class AuthLayout extends PureComponent {
+import { SvgFixer } from 'utils'
+
+export default class AuthLayout extends React.Component<{}, {}> {
     static propTypes = {
-        children: oneOfType([
-            object,
-            string,
-            array
+        children: PropTypes.oneOfType([
+            PropTypes.object,
+            PropTypes.string,
+            PropTypes.array
         ])
     }
 
@@ -21,22 +22,22 @@ export default class AuthLayout extends PureComponent {
         window.prerenderReady = true
     }
 
-    // componentDidMount () {
-    //     SvgFixer()
-    // }
+    componentDidMount () {
+        SvgFixer()
+    }
 
     // handleSubmit = (e) => {
     //     e.preventDefault()
-    //     this.props.model.save()
+    //     // this.props.model.save()
     // }
 
     // handleNameChange = (e) => {
-    //     this.props.model.name = e.target.value
+    //     // this.props.model.name = e.target.value
     // }
 
     // handleExpand = (e) => {
     //     e.preventDefault()
-    //     this.setState({ expanded: !this.state.expanded })
+    //     // this.setState({ expanded: !this.state.expanded })
     // }
 
     render () {

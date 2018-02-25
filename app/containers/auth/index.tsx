@@ -70,7 +70,9 @@ export default class Auth extends React.Component<{}, {}> {
         // ]
 
         return (
-            <form action="" onSubmit={this.handleSubmit} className={css.login} method="POST" />
+            <form action="" onSubmit={this.handleSubmit} className={css.login} method="POST">
+                AUTH Page
+            </form>
         )
         // return (
         //     <form action="" onSubmit={this.handleSubmit} className={css.login} method="POST">

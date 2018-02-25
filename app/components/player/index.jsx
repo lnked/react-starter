@@ -1,4 +1,4 @@
-class App extends Component {
+class App extends React.Component<{}, {}> {
     constructor (props) {
         super(props);
         this.context = new (window.AudioContext || window.webkitAudioContext)();

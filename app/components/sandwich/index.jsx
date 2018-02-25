@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { bool } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
-export default class Sandwich extends PureComponent {
+export default class Sandwich extends React.PureComponent<{}, {}> {
 
     static propTypes = {
         isOpened: bool

@@ -36,8 +36,10 @@ export default class Sidebar extends React.Component<{}, {}> {
 
                 <SidebarIcon
                     key="site.settings"
-                    system="settings"
+                    icon="settings"
                     title="Настройки сайта"
+                    system="settings"
+                    component="settings"
                     link={`${base}/settings`}
                     className={css.settings}
                 />

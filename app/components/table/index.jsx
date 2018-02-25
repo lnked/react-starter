@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import { oneOfType, object, array } from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 // http://orbjs.net/
 import { Checkbox } from 'components'
 
-export default class Table extends PureComponent {
+export default class Table extends React.PureComponent<{}, {}> {
     static propTypes = {
         thead: oneOfType([
             object,

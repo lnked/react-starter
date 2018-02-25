@@ -1,7 +1,7 @@
-import css from './styles.scss'
-import React, { Component } from 'react'
+import * as css from './styles'
+import * as React from 'react'
 
-export default class NoMatch extends Component {
+export default class NoMatch extends React.Component<{}, {}> {
     componentWillMount () {
         document.title = '404 Not Found'
     }

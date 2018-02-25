@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as css from './styles'
 
 import { Radio } from 'components'
 
-export default class RadioGroup extends Component {
+export default class RadioGroup extends React.Component<{}, {}> {
     static propTypes = {
         type: PropTypes.string,
         items: PropTypes.array,
