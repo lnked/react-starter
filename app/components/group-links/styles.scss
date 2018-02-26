@@ -1,17 +1,40 @@
 @import 'assets/styles/_global.scss';
 
 .link {
+    height: 48px;
     color: #222;
     display: block;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.4;
-    padding: 6px 10px;
-    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 45px;
+    padding: 0 15px 0 46px;
     text-decoration: none;
+    color: rgb(85, 85, 85);
+    position: relative;
+    transition: all 200ms ease-in-out;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 11px;
+        top: 12px;
+        background-image: url(https://eu.static.mega.co.nz/3/images/mega/nw-fm-sprite_v26.svg);
+        background-repeat: no-repeat;
+        background-position: -11px -10099px;
+    }
+}
+
+.inline {
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .active {
     color: #fff;
-    background-color: #ffd966;
+    background-color: rgb(119, 119, 119);
 }

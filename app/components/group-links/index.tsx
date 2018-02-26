@@ -3,12 +3,12 @@ import * as css from './styles'
 
 import { NavLink } from 'react-router-dom'
 
-interface Props {
+interface T {
     base: string;
     links: any;
 }
 
-export default class GroupLinks extends React.Component<Props, {}> {
+export default class GroupLinks extends React.Component<T, {}> {
     render () {
         const list: any = []
         const { base, links } = this.props
@@ -19,7 +19,12 @@ export default class GroupLinks extends React.Component<Props, {}> {
                     key={link.slug}
                     to={`/${base}/${link.slug}`}
                     className={css.link}
-                    activeClassName={css.active}>{link.name}</NavLink>
+                    activeClassName={css.active}
+                >
+                    <span className={css.inline}>
+                        {link.name}
+                    </span>
+                </NavLink>
             )
         })
 

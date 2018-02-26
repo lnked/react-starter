@@ -15,11 +15,11 @@ export default class Foo extends Component<IFooProps, IFooState> {
 
 
 
-interface Props {
+interface T {
     // ...
 }
 
-export class MyComponent extends React.Component<Props, any> {
+export class MyComponent extends React.Component<T, any> {
     static propTypes {
         myProp: React.PropTypes.string
     }

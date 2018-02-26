@@ -8,11 +8,11 @@ export default class Globals extends React.Component<{}, {}> {
         return (
             <Layout>
                 <Aside>
-                    Assets!
+                    Globals!
                 </Aside>
 
                 <Content>
-                    Assets!
+                    Globals!
                 </Content>
             </Layout>
         )

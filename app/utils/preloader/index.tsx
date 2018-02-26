@@ -3,7 +3,7 @@ import * as Loadable from 'react-loadable'
 
 import { Loader } from 'components'
 
-interface Props {
+interface T {
     error: Error | null;
     pastSpinnerDelay: boolean;
     timedOut: boolean;
@@ -11,7 +11,7 @@ interface Props {
     pastDelay: null;
 }
 
-let Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: Props) => {
+let Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: T) => {
     console.log(error, loading, pastSpinnerDelay, timedOut, pastDelay)
 
     if (error) {

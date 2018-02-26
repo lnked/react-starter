@@ -1,9 +1,11 @@
 import * as React from 'react'
 
+import { Content } from 'segments'
+
 export default class Tasks extends React.Component<{}, {}> {
     render () {
         return (
-            <div>Tasks!</div>
+            <Content>Tasks!</Content>
         )
     }
 }

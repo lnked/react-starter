@@ -1,12 +1,12 @@
 import * as React from 'react'
 import * as css from './styles'
 
-interface Props {
+interface T {
     className?: string,
     children?: React.ReactChild | {} | any[] | boolean
 }
 
-export default class Layout extends React.Component<Props, {}> {
+export default class Layout extends React.Component<T, {}> {
     render () {
         const cn: any = []
         const { className, children } = this.props

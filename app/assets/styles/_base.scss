@@ -26,11 +26,11 @@
     body {
         width: 100%;
         overflow: hidden;
-        color: $c-black;
+        color: #777;
         min-width: 320px;
         line-height: 1.44;
         font-kerning: none;
-        background-color: $c-white-smoke;
+        background-color: #fafafa;
     }
 
     body, input, textarea, select, button {

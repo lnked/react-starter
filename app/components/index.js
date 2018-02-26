@@ -10,6 +10,7 @@ import Logo from 'components/logo'
 // import Button from 'components/button'
 // import Switch from 'components/switch'
 // import Notify from 'components/notify'
+import Widget from 'components/widget'
 import Loader from 'components/loader'
 // import Spinner from 'components/spinner'
 // import Quantity from 'components/quantity'
@@ -38,6 +39,7 @@ export {
     // Button,
     // Switch,
     // Notify,
+    Widget,
     Loader,
     // Spinner,
     // Quantity,

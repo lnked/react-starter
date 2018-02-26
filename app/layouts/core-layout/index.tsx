@@ -3,14 +3,14 @@ import * as css from './styles'
 
 import { SvgFixer } from 'utils'
 
-import { Sidebar, Navigation } from 'segments'
+import { RequestsPanel, Sidebar, Navigation } from 'segments'
 
-interface Props {
+interface T {
     className?: string;
     children?: React.ReactChild | {} | any[] | boolean;
 }
 
-export default class CoreLayout extends React.Component<Props, {}> {
+export default class CoreLayout extends React.Component<T, {}> {
     state = {
         title: 'React Starter App'
     }
@@ -30,13 +30,15 @@ export default class CoreLayout extends React.Component<Props, {}> {
         return (
             <div className={css.layout}>
                 <section className={css.main}>
+                    <aside className={css.sidebar}>
+                        <Sidebar />
+                    </aside>
+
                     <header className={css.header}>
                         <Navigation />
                     </header>
 
-                    <aside className={css.sidebar}>
-                        <Sidebar />
-                    </aside>
+                    <RequestsPanel />
 
                     <div className={css.content}>
                         {children}

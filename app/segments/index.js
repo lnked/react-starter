@@ -3,11 +3,13 @@ import Sidebar from 'segments/sidebar'
 import Navigation from 'segments/navigation'
 import Aside from 'segments/aside'
 import Content from 'segments/content'
+import RequestsPanel from 'segments/requests-panel'
 
 export {
     Layout,
     Aside,
     Sidebar,
     Content,
-    Navigation
+    Navigation,
+    RequestsPanel
 }
