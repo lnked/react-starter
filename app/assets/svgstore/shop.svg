@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="510px" height="510px" viewBox="0 0 510 510" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>shopping-cart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shopping-cart" fill="#000000" fill-rule="nonzero">
+            <path d="M153,408 C124.95,408 102,430.95 102,459 C102,487.05 124.95,510 153,510 C181.05,510 204,487.05 204,459 C204,430.95 181.05,408 153,408 Z M0,0 L0,51 L51,51 L142.8,244.8 L107.1,306 C104.55,313.65 102,323.85 102,331.5 C102,359.55 124.95,382.5 153,382.5 L459,382.5 L459,331.5 L163.2,331.5 C160.65,331.5 158.1,328.95 158.1,326.4 L158.1,323.849 L181.05,280.499 L369.75,280.499 C390.15,280.499 405.45,270.299 413.1,254.999 L504.9,89.25 C510,84.15 510,81.6 510,76.5 C510,61.2 499.8,51 484.5,51 L107.1,51 L84.15,0 L0,0 Z M408,408 C379.95,408 357,430.95 357,459 C357,487.05 379.95,510 408,510 C436.05,510 459,487.05 459,459 C459,430.95 436.05,408 408,408 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

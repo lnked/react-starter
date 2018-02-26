@@ -1,21 +1,16 @@
 import * as React from 'react'
 import * as css from './styles'
 
-import { PropTypes } from 'prop-types'
-
 import { SvgFixer } from 'utils'
 
 import { Sidebar, Navigation } from 'segments'
 
-export default class CoreLayout extends React.Component<{}, {}> {
-    static propTypes = {
-        children: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.string,
-            PropTypes.array
-        ])
-    }
+interface Props {
+    className?: string,
+    children?: React.ReactChild | {} | any[] | boolean
+}
 
+export default class CoreLayout extends React.Component<Props, {}> {
     state = {
         title: 'React Starter App'
     }

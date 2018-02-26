@@ -3,6 +3,8 @@ import * as css from './styles'
 
 import axios from 'axios'
 
+import { Content } from 'segments'
+
 export default class Updates extends React.Component<{}, {}> {
     state = {
         releases: []
@@ -26,7 +28,7 @@ export default class Updates extends React.Component<{}, {}> {
     }
 
     _createReleaseItem (release: any) {
-        const notes = []
+        const notes: any = []
 
         Object.keys(release.notes).map(key => {
             const items = release.notes[key]
@@ -47,20 +49,20 @@ export default class Updates extends React.Component<{}, {}> {
     }
 
     render () {
-        const list = []
+        const list: any = []
         const { releases } = this.state
 
         if (releases.hasOwnProperty('list')) {
-            releases.list.forEach(release => {
+            releases.list.forEach((release: any) => {
                 list.push(this._createReleaseItem(release))
             })
         }
 
         return (
-            <div className={css.list}>
+            <Content>
                 <h1 className={css.count}>{releases.count} update available</h1>
                 { list }
-            </div>
+            </Content>
         )
     }
 }

@@ -1,18 +1,20 @@
 import * as React from 'react'
-import * as css from './styles'
+// import * as css from './styles'
+
+import { Layout, Aside, Content } from 'segments'
 
 export default class Entities extends React.Component<{}, {}> {
     render () {
         return (
-            <div className={css.layout}>
-                <div className={css.sidebar}>
+            <Layout>
+                <Aside>
                     Entities!
-                </div>
+                </Aside>
 
-                <div className={css.content}>
+                <Content>
                     Entities!
-                </div>
-            </div>
+                </Content>
+            </Layout>
         )
     }
 }

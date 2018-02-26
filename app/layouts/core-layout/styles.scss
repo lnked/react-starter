@@ -6,7 +6,7 @@
 }
 
 .header {
-    height: 36px;
+    height: $header-height;
     position: relative;
     background-color: #fafafa;
 
@@ -22,7 +22,7 @@
 }
 
 .sidebar {
-    width: 48px;
+    width: $sidebar-width;
     height: 100%;
     position: fixed;
     left: 0;
@@ -34,13 +34,12 @@
 
 .main {
     width: 100%;
-    padding-left: 48px;
-    height: calc(100% - 36px);
+    padding-left: $sidebar-width;
+    height: calc(100% - #{$header-height});
 }
 
 .content {
-    height: calc(100vh - 36px);
-    padding: 13px 24px 24px 12px;
+    height: calc(100vh - #{$header-height});
     overflow-y: scroll;
     overflow-x: hidden;
     -moz-overflow-y: -moz-scrollbars-none;

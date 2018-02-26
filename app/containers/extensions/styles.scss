@@ -1,0 +1,19 @@
+@import 'assets/styles/_global.scss';
+
+.layout {}
+
+.link {
+    color: #222;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.active {
+    color: #fff;
+    background-color: red;
+}

@@ -10,13 +10,19 @@
         "interface-name": false,
         "trailing-comma": false,
         "jsx-self-close": true,
+        "object-literal-sort-keys": false,
+        "ordered-imports": false,
         "jsx-wrap-multiline": false,
         "space-within-parens": false,
-        "space-before-function-paren": [
-            true,
-            "always"
-        ],
+        "space-before-function-paren": true,
         "no-console": false,
+        "no-submodule-imports": false,
+        "no-import-side-effect": [
+            true,
+            {
+                "ignore-module": "(\\.html|\\.scss)$"
+            }
+        ],
         "no-object-literal-type-assertion": false,
         "no-unnecessary-generics": false,
         "no-implicit-dependencies": false,
@@ -57,8 +63,6 @@
         // "no-non-null-assertion": true,
         // "no-string-literal": false,
         // "no-switch-case-fall-through": true,
-        // "object-literal-sort-keys": false,
-        // "ordered-imports": false,
         // "one-line": [
         // true,
         // "check-open-brace",

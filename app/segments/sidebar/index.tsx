@@ -77,6 +77,13 @@ export default class Sidebar extends React.Component<{}, {}> {
                 title: 'Задачи',
                 system: 'tasks',
                 component: 'tasks'
+            },
+            {
+                id: 11,
+                icon: 'shop',
+                title: 'Интернет магазин',
+                system: 'shop',
+                component: 'shop'
             }
         ]
 

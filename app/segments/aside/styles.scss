@@ -1,0 +1,11 @@
+@import 'assets/styles/_global.scss';
+
+.sidebar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: $aside-width;
+    width: $aside-width;
+    padding: $aside-padding;
+    background-color: #e6e6e6;
+    border-right: 1px solid rgba(#000, .1);
+}

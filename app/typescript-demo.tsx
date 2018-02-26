@@ -1,3 +1,15 @@
+interface StringValidator {
+    isAcceptable (s: string): boolean
+}
+
+const lettersRegexp = /^[A-Za-z]+$/
+
+class LettersOnlyValidator implements StringValidator {
+    isAcceptable (s: string) {
+        return lettersRegexp.test(s)
+    }
+}
+
 import * as React from "react"
 
 interface Props {

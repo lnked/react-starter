@@ -13,6 +13,7 @@ import { CoreLayout } from 'layouts'
 // Containers
 import {
     Auth,
+    Shop,
     Tasks,
     Assets,
     Locale,
@@ -66,6 +67,7 @@ export default class App extends React.Component<{}, {}> {
                         )} />
 
                         <Route path="/accounts" component={Accounts} />
+                        <Route path="/shop" component={Shop} />
                         <Route path="/tasks" component={Tasks} />
                         <Route path="/assets" component={Assets} />
                         <Route path="/updates" component={Updates} />

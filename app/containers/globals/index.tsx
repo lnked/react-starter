@@ -1,9 +1,20 @@
 import * as React from 'react'
+// import * as css from './styles'
+
+import { Layout, Aside, Content } from 'segments'
 
 export default class Globals extends React.Component<{}, {}> {
     render () {
         return (
-            <div>Globals!</div>
+            <Layout>
+                <Aside>
+                    Assets!
+                </Aside>
+
+                <Content>
+                    Assets!
+                </Content>
+            </Layout>
         )
     }
 }
