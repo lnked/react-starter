@@ -1,0 +1,23 @@
+@import 'assets/styles/_global.scss';
+
+.release {
+    border: 1px solid red;
+}
+
+.version {
+    font-weight: 700;
+    border: 1px solid blue;
+}
+
+.date {
+    color: red;
+}
+
+.notes {
+    border: 1px solid lime;
+    list-style-type: none;
+}
+
+.added {}
+.improved {}
+.fixed {}

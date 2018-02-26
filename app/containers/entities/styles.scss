@@ -1,0 +1,22 @@
+@import 'assets/styles/_global.scss';
+
+.layout {
+    height: calc(100% + 35px);
+    margin: -13px -24px -24px -12px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 240px;
+    padding: 13px 24px 24px 12px;
+    flex: 0 0 240px;
+    background-color: #e6e6e6;
+    border-right: 1px solid rgba(#000, .1);
+}
+
+.content {
+    padding: 13px 24px 24px 12px;
+    flex: 0 0 calc(100% - 240px);
+}

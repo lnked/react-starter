@@ -31,10 +31,10 @@ export default class Sidebar extends React.Component<{}, {}> {
             },
             {
                 id: 4,
-                icon: 'users',
+                icon: 'accounts',
                 title: 'Пользователи',
-                system: 'users',
-                component: 'users'
+                system: 'accounts',
+                component: 'accounts'
             },
             {
                 id: 5,
@@ -45,17 +45,38 @@ export default class Sidebar extends React.Component<{}, {}> {
             },
             {
                 id: 6,
+                icon: 'assets',
+                title: 'Файловый менеджер',
+                system: 'assets',
+                component: 'assets'
+            },
+            {
+                id: 7,
                 icon: 'updates',
                 title: 'Обновления',
                 system: 'updates',
                 component: 'updates'
             },
             {
-                id: 7,
+                id: 8,
                 icon: 'locale',
                 title: 'Языковой стандарт',
                 system: 'locale',
                 component: 'locale'
+            },
+            {
+                id: 9,
+                icon: 'extensions',
+                title: 'Расширения',
+                system: 'extensions',
+                component: 'extensions'
+            },
+            {
+                id: 10,
+                icon: 'tasks',
+                title: 'Задачи',
+                system: 'tasks',
+                component: 'tasks'
             }
         ]
 
