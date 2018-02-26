@@ -36,7 +36,7 @@ export default class App extends React.Component<{}, {}> {
         document.body.classList.toggle('is-overflow', this.state.isOverflow)
     }
 
-    componentWillUpdate (nextProps, nextState) {
+    componentWillUpdate (nextProps: any, nextState: any): any {
         document.body.classList.toggle('is-overflow', nextState.isOverflow)
     }
 

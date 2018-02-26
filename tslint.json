@@ -5,15 +5,40 @@
     ],
     "jsRules": {},
     "rules": {
+        "interface-name": false,
+        "trailing-comma": false,
         "jsx-self-close": true,
         "jsx-wrap-multiline": false,
+        "space-within-parens": false,
+        "space-before-function-paren": [
+            true,
+            "always"
+        ],
         "no-object-literal-type-assertion": false,
         "no-unnecessary-generics": false,
-        "no-implicit-dependencies": true,
-        "quotemark": [true, "single", "jsx-double"]
+        "no-implicit-dependencies": false,
+        "jsx-alignment": false,
+        "semicolon": [
+            true,
+            "never"
+        ],
+        "jsx-no-lambda": false,
+        "jsx-no-multiline-js": false,
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "ordered-imports": false,
+        "no-unused-variable": [
+            true,
+            {
+                "ignore-pattern": "^_"
+            }
+        ]
         // "array-type": false,
         // "arrow-parens": false,
-        // "interface-name": false,
+        //
         // "import-blacklist": [true, "rxjs"],
         // "max-line-length": [
         // true,
@@ -47,11 +72,6 @@
         // "check-else",
         // "check-whitespace"
         // ],
-        // "quotemark": [
-        // true,
-        // "single"
-        // ],
-        // "trailing-comma": false,
         // "variable-name": false,
 
         // "directive-selector": [true, "attribute", "pr", "camelCase"],
