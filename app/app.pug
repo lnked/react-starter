@@ -57,18 +57,18 @@ html(
 
         main.layout-wrapper#root
 
-        //- noscript
-        //-     .bulletin
-        //-         p.headline MODERN BROWSER EXPERIENCE
-        //-         p Your browser doesn't support the main features of this website.
-        //-         p
-        //-             | Please upgrade to
-        //-             a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
-        //-             | , Safari or Firefox for a better experience.
+        noscript
+            .bulletin
+                p.headline MODERN BROWSER EXPERIENCE
+                p Your browser doesn't support the main features of this website.
+                p
+                    | Please upgrade to
+                    a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
+                    | , Safari or Firefox for a better experience.
 
-        //- script.
-        //-     window.prerenderReady = false
+        script.
+            window.prerenderReady = false
 
-        //-     if ('serviceWorker' in navigator) {
-        //-         navigator.serviceWorker.register('/sw.js');
-        //-     }
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js');
+            }
