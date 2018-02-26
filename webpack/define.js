@@ -27,6 +27,6 @@ module.exports = {
     rs_generate_css: false, // isProduction
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isDeploy ? _deploy_ : '',
+    rs_output_path: isDeploy ? _deploy_ : '/',
     rs_environment: isProduction ? 'production' : 'development'
 }
