@@ -1,7 +1,6 @@
 import * as React from 'react'
 import * as css from './styles'
 
-// import 'whatwg-fetch'
 import axios from 'axios'
 
 export default class Updates extends React.Component<{}, {}> {
@@ -10,58 +9,53 @@ export default class Updates extends React.Component<{}, {}> {
     }
 
     componentDidMount () {
-        this.handleRedditLoad('reactjs')
+        this._handleReleasesLoad()
     }
 
-    handleRedditLoad (type) {
-        // fetch(`https://www.reddit.com/r/${type}.json`)
-        //     .then((response) => response.json())
-        //     .then((response) => {
-        //         const releases = response.data.children.map((obj) => obj.data)
-
-        //         this.setState({ releases })
-        //     })
-
-        axios.patch('./request.json')
+    _handleReleasesLoad () {
+        axios
+            .get('/api/releases')
             .then(response => response.data)
-            .then(releases => {
-                console.log(releases)
-
-                // const data = this.state.data.map(item => {
-                //     if (item.id !== updatedItem.id) return item
-
-                //     return {
-                //         ...item,
-                //         ...updatedItem
-                //     }
-                // })
-
-                // this.setState({ data })
+            .then(({ data }) => {
+                const releases = JSON.parse(data)
+                this.setState({ releases })
             })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+
+    _createReleaseItem (release: any) {
+        console.log(release)
+        return (<div />)
+        // return (
+        //     <li className={css.post__item} key={post.id}>
+        //         {['self', 'default'].indexOf(post.thumbnail) < 0 && (
+        //             <div>
+        //                 <img src={post.thumbnail} alt="" />
+        //             </div>
+        //         )}
+        //         <Link to={post.url} target="_blank" rel="noopener">{post.title}</Link>
+        //         <p>{post.author_flair_text}</p>
+        //     </li>
+        // )
     }
 
     render () {
         const { releases } = this.state
 
-        console.log(releases)
+        console.log('releases: ', releases)
+        console.log('releases list: ', releases.list)
 
+        // (this._createReleaseItem) }
+        // {
+        //     releases.list.forEach(release => {
+        //         console.log(release)
+        //     })
+        // }
         return (
-            <div>
-                <h1>1 update available</h1>
-
-                <div className={css.release}>
-                    <h2 className={css.version}>2.6.3010</h2>
-                    <p className={css.date}>Released on 2/20/2018</p>
-                    <div className={css.notes}>
-                        <ul>
-                            <li className={css.added}>The Control Panel.</li>
-                            <li className={css.improved}>The Control Panel.</li>
-                            <li className={css.improved}>Rich Text fields no longer</li>
-                            <li className={css.fixed}>Fixed a bug where run charts .</li>
-                            <li className={css.fixed}>Fixed a bug where the New.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div className={css.list}>
+                <h1>{releases.count} update available</h1>
             </div>
         )
     }
