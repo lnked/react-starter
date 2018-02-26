@@ -1,8 +1,9 @@
 'use strict';
 
-// const OfflinePlugin = require('offline-plugin');
+const define  = require('../define');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
+// const OfflinePlugin = require('offline-plugin');
 // const SWPrecache = require('sw-precache');
 // runtimeCaching: [{
 //   urlPattern: /^https:\/\/example\.com\/api/,
@@ -118,6 +119,8 @@ const plugins = [
         filename: 'sw.js',
         stripPrefix: 'dist/',
 
+        dontCacheBustUrlsMatching: /\.\w{8}\./,
+
         staticFileGlobs: [
             'dist/*.html',
             'dist/*.json',
@@ -133,8 +136,9 @@ const plugins = [
         swFilePath: 'dist/sw.js',
         mergeStaticsConfig: true,
         maximumFileSizeToCacheInBytes: 800000,
-        staticFileGlobsIgnorePatterns: [/\.map$|\.cache$|\.htaccess$/],
-        navigateFallback: '/',
+        staticFileGlobsIgnorePatterns: [/\.map$|\.cache$|\.htaccess|manifest\.json$/],
+        // navigateFallback: '/',
+        navigateFallback: define.rs_output_path,
         runtimeCaching: [
             {
                 handler: 'cacheFirst',

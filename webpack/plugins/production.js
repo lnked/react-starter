@@ -27,7 +27,7 @@ const plugins = [
         }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest',
+        name: 'runtime',
         minChunks: Infinity
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -49,7 +49,7 @@ const plugins = [
     }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendors/,
-        inline: 'manifest',
+        inline: 'runtime',
         preload: ['vendors', 'app'],
         defaultAttribute: 'async'
     })
