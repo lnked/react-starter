@@ -3,12 +3,26 @@ import * as React from 'react'
 
 import { Layout, Aside, Content } from 'segments'
 
+import { GroupLinks } from 'components'
+
 export default class Entities extends React.Component<{}, {}> {
     render () {
         return (
             <Layout>
                 <Aside>
-                    Entities!
+                    <GroupLinks
+                        base="entities"
+                        links={[
+                            {
+                                name: 'Новости',
+                                slug: 'news'
+                            },
+                            {
+                                name: 'Фотогалерея',
+                                slug: 'gallery'
+                            }
+                        ]}
+                    />
                 </Aside>
 
                 <Content>

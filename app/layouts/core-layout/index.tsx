@@ -6,8 +6,8 @@ import { SvgFixer } from 'utils'
 import { Sidebar, Navigation } from 'segments'
 
 interface Props {
-    className?: string,
-    children?: React.ReactChild | {} | any[] | boolean
+    className?: string;
+    children?: React.ReactChild | {} | any[] | boolean;
 }
 
 export default class CoreLayout extends React.Component<Props, {}> {

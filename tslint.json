@@ -29,7 +29,8 @@
         "jsx-alignment": false,
         "semicolon": [
             true,
-            "never"
+            "never",
+            "ignore-interfaces"
         ],
         "jsx-no-lambda": false,
         "jsx-no-multiline-js": false,
@@ -39,7 +40,6 @@
             "jsx-double"
         ],
         "member-access": false,
-        "ordered-imports": false,
         "no-unused-variable": [
             true,
             {

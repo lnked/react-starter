@@ -1,53 +1,40 @@
 import * as React from 'react'
-import * as css from './styles'
-
-import { NavLink } from 'react-router-dom'
+// import * as css from './styles'
 
 import { Layout, Aside, Content } from 'segments'
 
-const base: string = 'extensions'
+import { GroupLinks } from 'components'
 
 export default class Extensions extends React.Component<{}, {}> {
     render () {
-        const links = [
-            {
-                name: 'Группы',
-                slug: 'groups'
-            },
-            {
-                name: 'Установка модулей',
-                slug: 'install'
-            },
-            {
-                name: 'Экспорт модулей',
-                slug: 'export'
-            },
-            {
-                name: 'Таблицы',
-                slug: 'tables'
-            },
-            {
-                name: 'Модули',
-                slug: 'binds'
-            }
-        ]
-
         return (
             <Layout>
                 <Aside>
-                    {
-                        links.map(link => {
-                            return (
-                                <NavLink
-                                    key={link.slug}
-                                    to={`/${base}/${link.slug}`}
-                                    className={css.link}
-                                    activeClassName={css.active}>
-                                    {link.name}
-                                </NavLink>
-                            )
-                        })
-                    }
+                    <GroupLinks
+                        base="extensions"
+                        links={[
+                            {
+                                name: 'Группы',
+                                slug: 'groups'
+                            },
+                            {
+                                name: 'Установка модулей',
+                                slug: 'install'
+                            },
+                            {
+                                name: 'Экспорт модулей',
+                                slug: 'export'
+                            },
+                            {
+                                name: 'Таблицы',
+                                slug: 'tables'
+                            },
+                            {
+                                name: 'Модули',
+                                slug: 'binds'
+                            }
+                        ]}
+                    />
                 </Aside>
 
                 <Content>

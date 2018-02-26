@@ -3,22 +3,42 @@ import * as React from 'react'
 
 import { Layout, Aside, Content } from 'segments'
 
+import { GroupLinks } from 'components'
+
 export default class Settings extends React.Component<{}, {}> {
     render () {
         return (
             <Layout>
                 <Aside>
-                    Настройка меню
-                    Настройки системы
-                    Оптимизировать
-                    Виджеты
-                    Настройки модулей
-                    Кэширование
-                    Файл-менеджер
-                    Онлайн-поддержка
-                    База знаний
-                    Проверка файлов
-                    Шаблоны сообщений
+                    <GroupLinks
+                        base="settings"
+                        links={[
+                            {
+                                name: 'Настройка меню',
+                                slug: 'menu'
+                            },
+                            {
+                                name: 'Настройки системы',
+                                slug: 'system'
+                            },
+                            {
+                                name: 'Виджеты',
+                                slug: 'widgets'
+                            },
+                            {
+                                name: 'Кэширование',
+                                slug: 'caching'
+                            },
+                            {
+                                name: 'База знаний',
+                                slug: 'knowledge-base'
+                            },
+                            {
+                                name: 'Шаблоны сообщений',
+                                slug: 'templates'
+                            }
+                        ]}
+                    />
                 </Aside>
 
                 <Content>

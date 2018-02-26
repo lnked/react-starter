@@ -20,6 +20,7 @@ import Loader from 'components/loader'
 // import ColorPicker from 'components/color-picker'
 // import BreadCrumbs from 'components/bread-crumbs'
 import SidebarIcon from 'components/sidebar-icon'
+import GroupLinks from 'components/group-links'
 // import SuggestInput from 'components/suggest-input'
 // import SelectionBox from 'components/selection-box'
 // import CustomComponent from 'components/custom-component'
@@ -46,6 +47,7 @@ export {
     // RadioGroup,
     // ColorPicker,
     // BreadCrumbs,
+    GroupLinks,
     SidebarIcon
     // SuggestInput,
     // SelectionBox,
