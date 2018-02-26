@@ -133,11 +133,11 @@ const plugins = [
         ],
 
         minify: true,
+
         swFilePath: 'dist/sw.js',
         mergeStaticsConfig: true,
         maximumFileSizeToCacheInBytes: 800000,
         staticFileGlobsIgnorePatterns: [/\.map$|\.cache$|\.htaccess|manifest\.json$/],
-        // navigateFallback: '/',
         navigateFallback: define.rs_output_path,
         runtimeCaching: [
             {
