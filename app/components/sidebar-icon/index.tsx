@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles'
 
-import { PropTypes } from 'prop-types'
+import * as PropTypes from 'prop-types'
 
 import { NavLink } from 'react-router-dom'
 

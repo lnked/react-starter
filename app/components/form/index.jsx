@@ -1,5 +1,5 @@
 import * as css from './styles';
-import { object, func, bool } from 'prop-types'
+import * as PropTypes from 'prop-types'
 import * as React from 'react'
 
 function Form ({ onSubmit, expanded = false, children }) {

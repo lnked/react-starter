@@ -87,7 +87,9 @@ export default class Sidebar extends React.Component<{}, {}> {
             }
         ]
 
-        return pages.map((props, id) => <SidebarIcon key={id} {...props} link={`${base}/${props.system}`} />)
+        return pages.map((props: any, id: number) => {
+            return <SidebarIcon key={id} {...props} link={`${base}/${props.system}`} />
+        })
     }
 
     render () {

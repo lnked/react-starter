@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { oneOf, oneOfType, string, bool, func, number } from 'prop-types'
+import * as PropTypes from 'prop-types'
 import * as css from './styles'
 
 export default class Input extends React.PureComponent<{}, {}> {

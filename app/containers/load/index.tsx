@@ -1,18 +1,19 @@
 import * as React from 'react'
-import { oneOfType, object, string, array } from 'prop-types'
+// import * as PropTypes from 'prop-types'
 import { Posts } from 'segments'
 
 import 'whatwg-fetch'
 
-export default class Load extends React.Component<{}, {}> {
-    static propTypes = {
-        subreddit: string,
-        posts: oneOfType([
-            object,
-            array
-        ])
-    }
+interface T {
+    subreddit: string;
+    posts?: React.ReactChild | [] | any[];
+}
 
+interface S {
+    posts: any;
+}
+
+export default class Load extends React.Component<T, S> {
     static defaultProps = {
         subreddit: 'reactjs'
     }
@@ -25,11 +26,11 @@ export default class Load extends React.Component<{}, {}> {
         this.handleRedditLoad(this.props.subreddit)
     }
 
-    handleRedditLoad (type) {
+    handleRedditLoad (type: any) {
         fetch(`https://www.reddit.com/r/${type}.json`)
             .then((response) => response.json())
             .then((response) => {
-                const posts = response.data.children.map((obj) => obj.data)
+                const posts = response.data.children.map((obj: any) => obj.data)
 
                 this.setState({ posts })
             })

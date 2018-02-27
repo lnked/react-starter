@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { string } from 'prop-types'
+import * as PropTypes from 'prop-types'
 import * as css from './styles'
 
 export default class Tabs extends React.PureComponent<{}, {}> {

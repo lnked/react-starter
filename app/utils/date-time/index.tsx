@@ -1,16 +1,10 @@
 import * as React from 'react'
-import { DTProps } from 'typings/date-time'
+import T from 'typings/date-time'
 
-export default function DateTime ({ value, format }: DTProps) {
+export const DateTime = ({ value, format }: T) => {
     return (
         <div>
             {value} in format {format}
         </div>
     )
 }
-
-// export default class DateTime extends Component<DTProps, {}> {
-//     render () {
-//         return <div>{this.props.value} as {this.props.format}</div>
-//     }
-// }

@@ -17,12 +17,7 @@
         "space-before-function-paren": true,
         "no-console": false,
         "no-submodule-imports": false,
-        "no-import-side-effect": [
-            true,
-            {
-                "ignore-module": "(\\.html|\\.scss)$"
-            }
-        ],
+        "no-import-side-effect": false,
         "no-object-literal-type-assertion": false,
         "no-unnecessary-generics": false,
         "no-implicit-dependencies": false,

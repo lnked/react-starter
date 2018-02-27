@@ -1,5 +1,5 @@
 import React from 'react'
-import { string } from 'prop-types'
+import * as PropTypes from 'prop-types'
 
 // import style from './styles.css'
 

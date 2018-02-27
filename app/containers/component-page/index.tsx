@@ -19,13 +19,15 @@ export default class ComponentPage extends React.Component<{}, {}> {
     state = {}
 
     renderComponents () {
-        const list = []
+        const list: any = []
 
-        components.map((component, id) => {
-            list.push(<div key={id.toString()} className={css.component}>
-                <div className={css.title}>{component.name}</div>
-                <CustomComponent name={component.name} prop={component.prop} />
-            </div>)
+        components.map((component: any, id: string) => {
+            list.push(
+                <div key={id.toString()} className={css.component}>
+                    <div className={css.title}>{component.name}</div>
+                    <CustomComponent name={component.name} prop={component.prop} />
+                </div>
+            )
         })
 
         return (

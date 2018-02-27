@@ -30,7 +30,7 @@ export default class Updates extends React.Component<{}, {}> {
     _createReleaseItem (release: any) {
         const notes: any = []
 
-        Object.keys(release.notes).map(key => {
+        Object.keys(release.notes).map((key: string) => {
             const items = release.notes[key]
             console.log(key, items)
 

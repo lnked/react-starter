@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { oneOfType, object, array } from 'prop-types'
+import * as PropTypes from 'prop-types'
 import * as css from './styles'
 // http://orbjs.net/
 import { Checkbox } from 'components'

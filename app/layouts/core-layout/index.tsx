@@ -50,7 +50,7 @@ export default class CoreLayout extends React.Component<T, {}> {
 }
 
 // import React, { Component } from 'react'
-// import { oneOfType, object, string, array } from 'prop-types'
+// import * as PropTypes from 'prop-types'
 // import css from './styles.scss'
 
 // import { Sidebar } from 'segments'

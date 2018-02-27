@@ -117,7 +117,7 @@
         "bundle-buddy-webpack-plugin": "0.3.0",
         "cache-loader": "1.2.1",
         "caniuse-lite": "1.0.30000810",
-        "compression-webpack-plugin": "1.1.8",
+        "compression-webpack-plugin": "1.1.9",
         "copy-webpack-plugin": "4.4.2",
         "css-loader": "0.28.10",
         "cssnano": "3.10.0",

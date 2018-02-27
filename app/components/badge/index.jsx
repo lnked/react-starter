@@ -1,11 +1,5 @@
 import * as React from 'react'
-import {
-    oneOf,
-    oneOfType,
-    string,
-    object,
-    bool
-} from 'prop-types'
+import * as PropTypes from 'prop-types'
 
 import * as css from './styles'
 

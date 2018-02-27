@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { string } from 'prop-types'
+import * as PropTypes from 'prop-types'
 
 // http://lapanoid.github.io/redux-cropper/
 // https://goshakkk.name/pabla/
