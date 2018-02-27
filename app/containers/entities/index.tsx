@@ -1,34 +1,27 @@
 import * as React from 'react'
 // import * as css from './styles'
 
-import { Layout, Aside, Content } from 'segments'
-
-import { GroupLinks } from 'components'
+import { Content } from 'segments'
 
 export default class Entities extends React.Component<{}, {}> {
     render () {
+        // <GroupLinks
+        //     base="entities"
+        //     links={[
+        //         {
+        //             name: 'Новости',
+        //             slug: 'news'
+        //         },
+        //         {
+        //             name: 'Фотогалерея',
+        //             slug: 'gallery'
+        //         }
+        //     ]}
+        // />
         return (
-            <Layout>
-                <Aside>
-                    <GroupLinks
-                        base="entities"
-                        links={[
-                            {
-                                name: 'Новости',
-                                slug: 'news'
-                            },
-                            {
-                                name: 'Фотогалерея',
-                                slug: 'gallery'
-                            }
-                        ]}
-                    />
-                </Aside>
-
-                <Content>
-                    Entities!
-                </Content>
-            </Layout>
+            <Content>
+                Entities!
+            </Content>
         )
     }
 }
