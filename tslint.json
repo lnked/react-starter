@@ -1,7 +1,9 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended", "tslint:latest", "tslint-react"
+        "tslint:recommended",
+        "tslint:latest",
+        "tslint-react"
     ],
     "jsRules": {},
     "rules": {
@@ -10,9 +12,15 @@
         "interface-name": false,
         "trailing-comma": false,
         "jsx-self-close": true,
+        "jsx-no-string-ref": true,
+        "jsx-curly-spacing": "always",
+        "jsx-boolean-value": [
+            "never",
+            "always"
+        ],
         "object-literal-sort-keys": false,
         "ordered-imports": false,
-        "jsx-wrap-multiline": false,
+        "jsx-wrap-multiline": true,
         "space-within-parens": false,
         "space-before-function-paren": true,
         "no-console": false,
@@ -34,14 +42,8 @@
             "single",
             "jsx-double"
         ],
-        "member-access": false,
-        "no-unused-variable": [
-            true,
-            {
-                "ignore-pattern": "^_"
-            }
-        ],
-        "jsx-curly-spacing": false
+        "member-access": false
+        // "no-unused-variable": true
         // "import-blacklist": [true, "rxjs"],
         // "max-line-length": [
         // true,
@@ -52,7 +54,6 @@
         // "static-before-instance",
         // "variables-before-functions"
         // ],
-
         // "no-empty": false,
         // "no-inferrable-types": [true, "ignore-params"],
         // "no-non-null-assertion": true,
@@ -66,7 +67,6 @@
         // "check-whitespace"
         // ],
         // "variable-name": false,
-
         // "directive-selector": [true, "attribute", "pr", "camelCase"],
         // "component-selector": [true, "element", "pr", "kebab-case"],
         // "use-input-property-decorator": true,

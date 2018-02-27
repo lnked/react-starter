@@ -6,10 +6,16 @@
 }
 
 .sidebar {
-    width: 100%;
+    width: $sidebar-width;
     height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 21;
     font-size: 0;
     line-height: 1;
+    min-height: 398px;
+    background-color: #222;
 }
 
 .settings {

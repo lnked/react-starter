@@ -1,8 +1,32 @@
 @import 'assets/styles/_global.scss';
 
+$core-sidebar-width: $aside-width + $sidebar-width;
+
 .layout {
     height: 100%;
     overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    height: calc(100% - #{$header-height});
+}
+
+.sidebar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: $core-sidebar-width;
+    width: $core-sidebar-width;
+    padding-left: $sidebar-width;
+}
+
+.body {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% - #{$core-sidebar-width});
 }
 
 .header {
@@ -19,23 +43,6 @@
         position: absolute;
         background-color: rgba(#000, .1);
     }
-}
-
-.sidebar {
-    width: $sidebar-width;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 21;
-    min-height: 398px;
-    background-color: #222;
-}
-
-.main {
-    width: 100%;
-    padding-left: $sidebar-width;
-    height: calc(100% - #{$header-height});
 }
 
 .content {

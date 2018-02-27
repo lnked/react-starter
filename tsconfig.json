@@ -1,23 +1,73 @@
 {
     "compilerOptions": {
+        "jsx": "react",
+        "target": "es5",
+        "module": "commonjs",
         "outDir": "./dist",
         "sourceMap": true,
         "allowJs": true,
-        "noImplicitAny": true,
+        "noImplicitAny": false,
+        "noUnusedLocals": true,
+        "removeComments": true,
         "strictNullChecks": true,
         "preserveConstEnums": true,
-        "removeComments": true,
         "allowSyntheticDefaultImports": true,
-        // "module": "esnext",
-        "module": "commonjs",
-        "target": "es5",
-        "jsx": "react",
         "lib": [
             "es5",
             "es6",
             "es7",
             "dom"
-        ]
+        ],
+        "paths": {
+            "hoc/*": [
+                "./app/hoc/*"
+            ],
+            "utils/*": [
+                "./app/utils/*"
+            ],
+            "typings/*": [
+                "./app/typings/*"
+            ],
+            "assets/*": [
+                "./app/assets/*"
+            ],
+            "config/*": [
+                "./app/config/*"
+            ],
+            "layouts/*": [
+                "./app/layouts/*"
+            ],
+            "segments/*": [
+                "./app/segments/*"
+            ],
+            "containers/*": [
+                "./app/containers/*"
+            ],
+            "components/*": [
+                "./app/components/*"
+            ],
+            "images/*": [
+                "./app/assets/images/*"
+            ],
+            "styles/*": [
+                "./app/assets/styles/*"
+            ],
+            "scripts/*": [
+                "./app/assets/scripts/*"
+            ],
+            "svgstore/*": [
+                "./app/assets/svgstore/*"
+            ],
+            "store/*": [
+                "./app/redux/store/*"
+            ],
+            "actions/*": [
+                "./app/redux/actions/*"
+            ],
+            "reducers/*": [
+                "./app/redux/reducers/*"
+            ]
+        }
     },
     "files": [
         "./app/typings/**.ts"

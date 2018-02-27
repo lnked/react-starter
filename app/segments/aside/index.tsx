@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as css from './styles'
 
 interface T {
+    title?: string;
     className?: string;
     children?: React.ReactChild | {} | any[] | boolean;
 }
@@ -9,9 +10,9 @@ interface T {
 export default class Aside extends React.Component<T, {}> {
     render () {
         const cn: any = []
-        const { className, children } = this.props
+        const { title, className, children } = this.props
 
-        cn.push(css.sidebar)
+        cn.push(css.aside)
 
         if (className) {
             cn.push(className)
@@ -19,6 +20,10 @@ export default class Aside extends React.Component<T, {}> {
 
         return (
             <div className={cn.join(' ')}>
+                <div className={css.title}>
+                    {title}
+                </div>
+
                 {children}
             </div>
         )

@@ -3,7 +3,9 @@ import * as css from './styles'
 
 import { SvgFixer } from 'utils'
 
-import { RequestsPanel, Sidebar, Navigation } from 'segments'
+import { Aside, RequestsPanel, Sidebar, Navigation } from 'segments'
+
+import { GroupLinks } from 'components'
 
 interface T {
     className?: string;
@@ -30,18 +32,71 @@ export default class CoreLayout extends React.Component<T, {}> {
         return (
             <div className={css.layout}>
                 <section className={css.main}>
-                    <aside className={css.sidebar}>
+                    <div className={css.sidebar}>
                         <Sidebar />
-                    </aside>
+                        <Aside title="Интернет магазин">
+                            <GroupLinks
+                                base="shop"
+                                links={[
+                                    {
+                                        name: 'Корзина',
+                                        slug: 'groups'
+                                    },
+                                    {
+                                        name: 'Заказы',
+                                        slug: 'orders'
+                                    },
+                                    {
+                                        name: 'Категории каталога',
+                                        slug: 'categories'
+                                    },
+                                    {
+                                        name: 'Каталог товаров',
+                                        slug: 'catalog'
+                                    },
+                                    {
+                                        name: 'Промокоды',
+                                        slug: 'promotional'
+                                    },
+                                    {
+                                        name: 'Производители',
+                                        slug: 'manufacturers'
+                                    },
+                                    {
+                                        name: 'Теги',
+                                        slug: 'tags'
+                                    },
+                                    {
+                                        name: 'Распродажи',
+                                        slug: 'sales'
+                                    },
+                                    {
+                                        name: 'Бонусная система',
+                                        slug: 'loyality'
+                                    },
+                                    {
+                                        name: 'Покупатели',
+                                        slug: 'customers'
+                                    },
+                                    {
+                                        name: 'Настройки',
+                                        slug: 'settings'
+                                    }
+                                ]}
+                            />
+                        </Aside>
+                    </div>
 
-                    <header className={css.header}>
-                        <Navigation />
-                    </header>
+                    <div className={css.body}>
+                        <header className={css.header}>
+                            <Navigation />
+                        </header>
 
-                    <RequestsPanel />
+                        <RequestsPanel />
 
-                    <div className={css.content}>
-                        {children}
+                        <div className={css.content}>
+                            {children}
+                        </div>
                     </div>
                 </section>
             </div>

@@ -51,15 +51,15 @@ const rules = [
         loader: 'eslint-loader',
         include: define.rs_root
     },
-    // {
-    //     enforce: 'pre',
-    //     test: /\.ts[x]?$/,
-    //     options: {
-    //         fix: define.rs_production
-    //     },
-    //     loader: 'tslint-loader',
-    //     include: define.rs_root
-    // },
+    {
+        enforce: 'pre',
+        test: /\.ts[x]?$/,
+        options: {
+            fix: define.rs_production
+        },
+        loader: 'tslint-loader',
+        include: define.rs_root
+    },
     {
         test: /\.(j|t)s[x]?$/,
         exclude: /(node_modules|bower_components)/,
