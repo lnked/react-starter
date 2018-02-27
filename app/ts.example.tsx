@@ -48,7 +48,7 @@ export class ExampleComponent extends React.Component<IExampleComponentProps, IE
         }
     }
 
-    public render(): JSX.Element {
+    render(): JSX.Element {
         return (
             <div>
                 <div className="hello">Hello, {this.props.text}!</div>

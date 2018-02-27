@@ -1,6 +1,6 @@
 import * as React from 'react'
-import * as css from './styles'
 import { LocationProps } from 'typings/location'
+import * as css from './styles'
 
 export default function NoMatch ({ location }: LocationProps) {
     document.title = '404 Not Found'

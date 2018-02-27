@@ -2,8 +2,8 @@ import * as React from 'react'
 import * as css from './styles'
 
 interface T {
-    className?: string,
-    children?: React.ReactChild | {} | any[] | boolean
+    className?: string;
+    children?: React.ReactChild | {} | any[] | boolean;
 }
 
 export default class Layout extends React.Component<T, {}> {

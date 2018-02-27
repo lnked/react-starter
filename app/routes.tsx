@@ -2,9 +2,9 @@ import * as React from 'react'
 
 import {
     BrowserRouter as Router,
+    Redirect,
     Route,
-    Switch,
-    Redirect
+    Switch
 } from 'react-router-dom'
 
 // Layouts
@@ -12,20 +12,20 @@ import { CoreLayout } from 'layouts'
 
 // Containers
 import {
-    Auth,
-    Shop,
-    Tasks,
-    Assets,
-    Locale,
-    Updates,
-    Globals,
-    Entities,
     Accounts,
+    Assets,
+    Auth,
     Dashboard,
-    Structure,
-    Settings,
+    Entities,
     Extensions,
-    NoMatch
+    Globals,
+    Locale,
+    NoMatch,
+    Settings,
+    Shop,
+    Structure,
+    Tasks,
+    Updates
 } from 'containers'
 
 export default class App extends React.Component<{}, {}> {

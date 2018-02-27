@@ -3,7 +3,7 @@ import * as css from './styles'
 
 import { SvgFixer } from 'utils'
 
-import { Aside, RequestsPanel, Sidebar, Navigation } from 'segments'
+import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
 
 import { GroupLinks } from 'components'
 

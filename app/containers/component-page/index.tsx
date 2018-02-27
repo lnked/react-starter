@@ -32,7 +32,7 @@ export default class ComponentPage extends React.Component<{}, {}> {
 
         return (
             <div>
-                { list }
+                {list}
             </div>
         )
     }
@@ -86,7 +86,7 @@ export default class ComponentPage extends React.Component<{}, {}> {
         return (
             <div>
                 <DateTime value={1515566090473} format="DD.MM.YYYY" />
-                { this.renderComponents() }
+                {this.renderComponents()}
             </div>
         )
     }

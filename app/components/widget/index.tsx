@@ -22,10 +22,10 @@ export default class Widget extends React.PureComponent<T, {}> {
             <div className={cn.join(' ')}>
                 <div className={css.content}>
                     <div className={css.title}>
-                        { title }
+                        {title}
                     </div>
 
-                    { children }
+                    {children}
                 </div>
             </div>
         )

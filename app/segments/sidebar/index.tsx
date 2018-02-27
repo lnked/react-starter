@@ -97,7 +97,7 @@ export default class Sidebar extends React.Component<{}, {}> {
             <nav className={css.sidebar}>
                 <Logo link={base} />
 
-                { this.renderPages() }
+                {this.renderPages()}
 
                 <SidebarIcon
                     key="site.settings"

@@ -64,7 +64,7 @@ module.exports.config = {
 //     performance: false,
 //     // Show the exports of the modules
 //     providedExports: false,
-//     // Add public path information
+//     // Add path information
 //     publicPath: false,
 //     // Add information about the reasons why modules are included
 //     reasons: define.rs_development,

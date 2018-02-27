@@ -16,25 +16,6 @@
             "single",
             "jsx-double"
         ],
-        // "member-ordering": [
-        //     false
-        // ],
-        "member-ordering": [
-            true,
-            {
-                "order": [
-                    "public-static-field",
-                    "public-instance-field",
-                    "public-constructor",
-                    "private-static-field",
-                    "private-instance-field",
-                    "private-constructor",
-                    "public-instance-method",
-                    "protected-instance-method",
-                    "private-instance-method"
-                ]
-            }
-        ],
         "no-console": [
             false
         ],
@@ -53,10 +34,6 @@
             "never",
             "ignore-interfaces"
         ],
-        "no-unused-variable": [
-            true,
-            "react"
-        ],
         "jsx-boolean-value": [
             "never",
             "always"
@@ -67,53 +44,52 @@
             "check-format",
             "allow-leading-underscore"
         ],
-        "no-empty": false,
-        "array-type": false,
-        "arrow-parens": false,
-        "interface-name": false,
-        "no-var-requires": false,
-        "ordered-imports": false,
-        "object-literal-sort-keys": false,
-        "no-shadowed-variable": false,
-        "no-implicit-dependencies": false,
-        "no-submodule-imports": false,
-        "jsx-self-close": true,
-        "jsx-no-string-ref": true,
-        "jsx-curly-spacing": "always",
-        "jsx-wrap-multiline": true,
-        "space-within-parens": false,
-        "space-before-function-paren": true,
-        "no-import-side-effect": false,
-        "no-object-literal-type-assertion": false,
-        "no-unnecessary-generics": false,
-        "jsx-no-lambda": false,
-        "jsx-no-multiline-js": false,
-        "member-access": false,
-        "templates-use-public": false,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "public-static-field",
+                    "public-instance-field",
+                    "public-constructor",
+                    "private-static-field",
+                    "private-instance-field",
+                    "private-constructor",
+                    "public-instance-method",
+                    "protected-instance-method",
+                    "private-instance-method"
+                ]
+            }
+        ],
         "max-line-length": [
             true,
             {
                 "limit": 120,
                 "ignore-pattern": "^import |^export {(.*?)}"
             }
-        ]
-        // "no-inferrable-types": [true, "ignore-params"],
-        // "no-non-null-assertion": true,
-        // "no-string-literal": false,
-        // "no-switch-case-fall-through": true,
-        // "directive-selector": [true, "attribute", "pr", "camelCase"],
-        // "component-selector": [true, "element", "pr", "kebab-case"],
-        // "use-input-property-decorator": true,
-        // "use-output-property-decorator": true,
-        // "use-host-property-decorator": true,
-        // "no-input-rename": true,
-        // "no-output-rename": true,
-        // "use-life-cycle-interface": true,
-        // "use-pipe-transform-interface": true,
-        // "component-class-suffix": true,
-        // "directive-class-suffix": true,
-        // "no-access-missing-member": true,
-        // "invoke-injectable": true
+        ],
+        "no-empty": false,
+        "member-access": false,
+        "array-type": false,
+        "arrow-parens": false,
+        "no-var-requires": false,
+        "ordered-imports": false,
+        "jsx-no-lambda": false,
+        "jsx-self-close": true,
+        "interface-name": false,
+        "jsx-no-string-ref": true,
+        "jsx-curly-spacing": "always",
+        "jsx-wrap-multiline": true,
+        "space-within-parens": false,
+        "jsx-no-multiline-js": false,
+        "templates-use-public": false,
+        "no-shadowed-variable": false,
+        "no-submodule-imports": false,
+        "no-import-side-effect": false,
+        "no-unnecessary-generics": false,
+        "no-implicit-dependencies": false,
+        "object-literal-sort-keys": false,
+        "space-before-function-paren": true,
+        "no-object-literal-type-assertion": false
     },
     "rulesDirectory": []
 }

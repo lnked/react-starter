@@ -17,7 +17,7 @@ export default class Updates extends React.Component<{}, {}> {
     _handleReleasesLoad () {
         axios
             .get('/api/releases')
-            .then(response => response.data)
+            .then((response) => response.data)
             .then(({ data }) => {
                 const releases = JSON.parse(data)
                 this.setState({ releases })
@@ -61,7 +61,7 @@ export default class Updates extends React.Component<{}, {}> {
         return (
             <Content>
                 <h1 className={css.count}>{releases.count} update available</h1>
-                { list }
+                {list}
             </Content>
         )
     }

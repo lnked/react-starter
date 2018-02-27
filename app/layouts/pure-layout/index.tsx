@@ -32,7 +32,7 @@ export default class PureLayout extends React.Component<{}, {}> {
 
         return (
             <div className={css.layout}>
-                { children }
+                {children}
             </div>
         )
     }
