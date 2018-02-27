@@ -28,7 +28,12 @@ const plugins = [
     new AsyncModulePlugin(),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
-        minimize: define.rs_production
+        minimize: define.rs_production,
+        options: {
+            tslint: {
+                failOnHint: true
+            },
+        }
     }),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')

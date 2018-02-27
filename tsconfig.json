@@ -4,13 +4,21 @@
         "target": "es5",
         "module": "commonjs",
         "outDir": "./dist",
+        "moduleResolution": "node",
         "sourceMap": true,
         "allowJs": true,
+        "declaration": false,
+        "inlineSourceMap": false,
+        "inlineSources": false,
         "noImplicitAny": false,
         "noUnusedLocals": true,
         "removeComments": true,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "preserveConstEnums": true,
+        "noImplicitReturns": false,
+        "noUnusedParameters": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "lib": [
             "es5",
@@ -19,53 +27,15 @@
             "dom"
         ],
         "paths": {
-            "hoc/*": [
-                "./app/hoc/*"
-            ],
-            "utils/*": [
-                "./app/utils/*"
-            ],
-            "typings/*": [
-                "./app/typings/*"
-            ],
-            "assets/*": [
-                "./app/assets/*"
-            ],
-            "config/*": [
-                "./app/config/*"
-            ],
-            "layouts/*": [
-                "./app/layouts/*"
-            ],
-            "segments/*": [
-                "./app/segments/*"
-            ],
-            "containers/*": [
-                "./app/containers/*"
-            ],
-            "components/*": [
-                "./app/components/*"
-            ],
-            "images/*": [
-                "./app/assets/images/*"
-            ],
-            "styles/*": [
-                "./app/assets/styles/*"
-            ],
-            "scripts/*": [
-                "./app/assets/scripts/*"
-            ],
-            "svgstore/*": [
-                "./app/assets/svgstore/*"
-            ],
-            "store/*": [
-                "./app/redux/store/*"
-            ],
-            "actions/*": [
-                "./app/redux/actions/*"
-            ],
-            "reducers/*": [
-                "./app/redux/reducers/*"
+            "*": [
+                "app/hoc/*",
+                "app/utils/*",
+                "app/layouts/*",
+                "app/typings/*",
+                "app/segments/*",
+                "app/containers/*",
+                "app/components/*",
+                "app/redux/*"
             ]
         }
     },
@@ -80,6 +50,11 @@
         "dist",
         "tests",
         "webpack",
+        "typings",
         "**/*.spec.ts"
-    ]
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useCache": true,
+        "useBabel": true
+    }
 }

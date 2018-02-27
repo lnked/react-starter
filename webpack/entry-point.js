@@ -10,6 +10,16 @@ const entryPoint = Object.assign({}, {
         'react',
         'react-dom',
         'react-router-dom'
+
+        // 'react',
+        // 'react-dom',
+        // 'react-router',
+        // 'react-helmet',
+        // 'react-redux',
+        // 'react-router-redux',
+        // 'redux',
+        // 'redux-connect',
+        // 'redux-thunk'
     ]
 });
 
