@@ -3,6 +3,7 @@
     "extends": [
         "plugin:react/recommended",
         "plugin:import/warnings",
+        "plugin:jsx-a11y/recommended",
         "standard"
     ],
     "parserOptions": {
@@ -21,6 +22,7 @@
     },
     "plugins": [
         "react",
+        "jsx-a11y",
         "security",
         "immutable"
     ],

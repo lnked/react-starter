@@ -4,10 +4,10 @@ import * as css from './styles'
 export default class RequestsPanel extends React.Component<{}, {}> {
     render () {
         // breadcrumbs
+        // <a className="fm-back-button" />
+
         return (
             <div className={css.requests}>
-                <a className="fm-back-button" />
-
                 <div className={css.right}>
                     <button type="button" className={css.button}>
                         Добавить контакт
