@@ -13,7 +13,7 @@ module.exports = {
 
     output: {
         path: define.rs_root,
-        filename: '.cache/svgstore/[name].js'
+        filename: '../.cache/svgstore/[name].js'
     },
 
     plugins: require('./plugins/prebuild').config,

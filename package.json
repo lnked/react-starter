@@ -5,7 +5,7 @@
     "description": "React boilerplate, pwa, router",
     "scripts": {
         "clean": "rm -rf ./dist",
-        "svgstore": "rm -rf ./app/cache && webpack --config ./webpack/prebuild.js",
+        "svgstore": "rm -rf ./.cache && webpack --config ./webpack/prebuild.js",
         "prestart": "yarn run svgstore",
         "prebuild": "yarn run svgstore",
         "postrelease": "yarn run size",

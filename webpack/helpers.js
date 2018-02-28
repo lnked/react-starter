@@ -5,7 +5,7 @@ const { resolve } = require('path');
 const define = require('./define');
 
 function fileContent(filePath) {
-    const content = fs.readFileSync(resolve(define.rs_root, filePath), 'utf8');
+    const content = fs.readFileSync(resolve(define.rs_base, filePath), 'utf8');
     return content.toString().replace(/<svg.*?>|<\/svg>/gi, '');
 }
 

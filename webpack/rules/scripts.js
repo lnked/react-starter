@@ -10,7 +10,7 @@ useConfig.push(
     {
         loader: 'cache-loader',
         options: {
-            cacheDirectory: resolve(define.rs_root, '.cache/happypack')
+            cacheDirectory: resolve(define.rs_base, '.cache/happypack')
         }
     }
 );
