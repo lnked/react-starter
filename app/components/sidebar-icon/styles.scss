@@ -98,13 +98,27 @@ circle {
     margin-left: 10px;
     z-index: 100;
     font-size: 1.3rem;
+    line-height: 1;
     text-align: left;
-    padding: 6px 12px;
-    border-radius: 2px;
+    padding: 5px 12px 6px;
+    border-radius: 0 2px 2px 0;
     white-space: nowrap;
     transition: opacity .2s $a-func, transform .2s $a-func;
     transform: translate3d(0, -50%, 0) scale(1.1);
     background-color: rgba($c-black, .8);
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        border-top: 12px solid transparent;
+        border-left: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-right: 8px solid rgba($c-black, .8);
+    }
 
     .button:hover & {
         opacity: 1;
