@@ -80,6 +80,18 @@
 ehthumbs.db
 Thumbs.db
 
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+public/
+nbproject/
+
+# Vagrant
+.vagrant/
+
 # Folders to ignore
 .CVS
 .git
