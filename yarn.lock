@@ -2044,13 +2044,13 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
-cache-loader@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/cache-loader/-/cache-loader-1.2.1.tgz#e171d5670188788c08af51b07cb52f40e8b157a2"
+cache-loader@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/cache-loader/-/cache-loader-1.2.2.tgz#6d5c38ded959a09cc5d58190ab5af6f73bd353f5"
   dependencies:
-    async "^2.4.1"
     loader-utils "^1.1.0"
     mkdirp "^0.5.1"
+    neo-async "^2.5.0"
     schema-utils "^0.4.2"
 
 call-me-maybe@^1.0.1:
@@ -2564,13 +2564,13 @@ compressible@~2.0.11:
   dependencies:
     mime-db ">= 1.30.0 < 2"
 
-compression-webpack-plugin@1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-1.1.9.tgz#6a76e2a5926976ba2c5ec966e6685b6c98d2a838"
+compression-webpack-plugin@1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-1.1.10.tgz#dbc2d2d65729a89f7b195668211d38ea0883df98"
   dependencies:
-    async "^2.4.1"
     cacache "^10.0.1"
     find-cache-dir "^1.0.0"
+    neo-async "^2.5.0"
     serialize-javascript "^1.4.0"
     webpack-sources "^1.0.1"
 
@@ -7569,6 +7569,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+neo-async@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.0.tgz#76b1c823130cca26acfbaccc8fbaf0a2fa33b18f"
+
 nested-error-stacks@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.0.0.tgz#98b2ffaefb4610fa3936f1e71435d30700de2840"
@@ -12338,9 +12342,9 @@ webpack-plugin-chunk-manifest@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/webpack-plugin-chunk-manifest/-/webpack-plugin-chunk-manifest-0.1.1.tgz#552d11cc69560fe00a957a47ccc77974f846c0aa"
 
-webpack-pwa-manifest@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/webpack-pwa-manifest/-/webpack-pwa-manifest-3.5.0.tgz#a7055b10abd32b9c91b412c1a294d68d7ffd950f"
+webpack-pwa-manifest@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/webpack-pwa-manifest/-/webpack-pwa-manifest-3.6.0.tgz#182f38712da6032818106650367fdd8720bdb28a"
   dependencies:
     css-color-names "0.0.4"
     jimp "^0.2.28"
