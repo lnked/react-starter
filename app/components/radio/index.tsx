@@ -5,9 +5,9 @@ interface T {
     name: string;
     label?: string;
     checked?: boolean;
-    children?: string;
     className?: string;
     value: string | number;
+    children?: React.ReactChild | {} | any[] | boolean;
     handleChange: (value: number | string | boolean) => void | boolean;
 }
 

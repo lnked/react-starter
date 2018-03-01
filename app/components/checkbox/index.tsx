@@ -7,9 +7,9 @@ interface T {
     theme?: string;
     label?: string;
     checked?: boolean;
-    children?: string;
     className?: string;
     value: string | number;
+    children?: React.ReactChild | {} | any[] | boolean;
     handleChange: (checked: string, status: boolean) => void | boolean;
 }
 

@@ -7,7 +7,7 @@ import Radio from 'components/radio'
 // import Prompt from 'components/prompt'
 // import Confirm from 'components/confirm'
 // import Layout from 'components/layout'
-// import Button from 'components/button'
+import Button from 'components/button'
 // import Switch from 'components/switch'
 // import Notify from 'components/notify'
 import Widget from 'components/widget'
@@ -36,7 +36,7 @@ export {
     // Prompt,
     // Confirm,
     // Layout,
-    // Button,
+    Button,
     // Switch,
     // Notify,
     Widget,

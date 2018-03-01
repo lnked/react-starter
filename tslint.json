@@ -88,6 +88,7 @@
         "no-unnecessary-generics": false,
         "no-implicit-dependencies": false,
         "object-literal-sort-keys": false,
+        "interface-over-type-literal": false,
         "space-before-function-paren": true,
         "no-object-literal-type-assertion": false
     },
