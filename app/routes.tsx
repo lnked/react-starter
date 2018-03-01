@@ -28,12 +28,12 @@ import {
     Updates
 } from 'containers'
 
+interface S {
+    isOverflow?: boolean;
+}
+
 const routes: any = [
     {
-        exact: true,
-        path: '/',
-        component: Auth
-    }, {
         path: '/accounts',
         component: Accounts
     }, {
@@ -72,7 +72,7 @@ const routes: any = [
     }
 ]
 
-export default class App extends React.Component<{}, {}> {
+export default class App extends React.Component<{}, S> {
     state = {
         isOverflow: false
     }
@@ -98,25 +98,24 @@ export default class App extends React.Component<{}, {}> {
         //     state: { referrer: currentLocation }
         // }} />
 
-        const routeComponents: any = routes.map((props, key) => {
-            console.log('props: ', props)
+        const routeComponents: any = routes.map((props, key) => <Route {...props} key={key} />)
 
-            return (
-                <Route {...props} key={key} />
-            )
-        })
+        // < Switch >
+        // <Redirect from="/accounts/:id" to="/accounts/profile/:id" />
+        // <Route path="/accounts/profile/:id" component={Accounts} />
+        // </Switch >
 
         return (
             <BrowserRouter>
                 <CoreLayout>
                     <Switch>
-                        <Route exact path="/" render={() => (
-                            loggedIn ? (
-                                <Redirect to="/dashboard" />
-                            ) : (
-                                <Auth />
-                            )
-                        )} />
+                        <Route
+                            exact
+                            path="/"
+                            render={() => (
+                                loggedIn ? <Redirect to="/dashboard" /> : <Auth />
+                            )}
+                        />
 
                         { routeComponents }
 
@@ -135,11 +134,6 @@ export default class App extends React.Component<{}, {}> {
                             status={404}
                             statusCode={404}
                         />
-                    </Switch>
-
-                    <Switch>
-                        <Redirect from="/accounts/:id" to="/accounts/profile/:id" />
-                        <Route path="/accounts/profile/:id" component={Accounts} />
                     </Switch>
                 </CoreLayout>
             </BrowserRouter>

@@ -67,6 +67,10 @@
                 "ignore-pattern": "^import |^export {(.*?)}"
             }
         ],
+        "no-unused-expression": [
+            false,
+            "allow-fast-null-checks"
+        ],
         "no-empty": false,
         "member-access": false,
         "array-type": false,

@@ -2,7 +2,18 @@ import * as React from 'react'
 
 import { Content } from 'segments'
 
-import { Widget, Button, Checkbox, Radio } from 'components'
+import {
+    Input,
+    Radio,
+    Badge,
+    Loader,
+    Widget,
+    Button,
+    Spinner,
+    Quantity,
+    Checkbox,
+    ColorPicker
+} from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
     render () {
@@ -14,12 +25,15 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
-                        Входящие
-                        Входящие общие папки
-                        Корзина
+                        <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
+                        <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
+                        <Input name="input3" focus />
 
-                        <br />
-                        <br />
+                        <br /><br />
+                        <ColorPicker />
+                        <br /><br />
+                        <ColorPicker color="#f00" />
+                        <br /><br />
 
                         <div>
                             <Radio name="radio" label="1 Входящие" value={1} /><br /><br />
@@ -57,7 +71,18 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <Button variant="primary">Применить</Button><br /><br />
                         <Button variant="success">Применить</Button><br /><br />
                         <Button variant="warning">Применить</Button><br /><br />
-                        <Button variant="subtle-link">Применить</Button>
+                        <Button variant="subtle-link">Применить</Button><br /><br />
+
+                        <Badge variant="info">badge info</Badge><br /><br />
+                        <Badge variant="default">badge default</Badge><br /><br />
+                        <Badge variant="primary">badge primary</Badge><br /><br />
+                        <Badge variant="success">badge success</Badge><br /><br />
+                        <Badge variant="warning">badge warning</Badge><br /><br />
+                        <Badge variant="danger">badge danger</Badge><br /><br />
+
+                        <Loader /><br /><br />
+                        <Spinner /><br /><br />
+                        <Quantity /><br /><br />
                     </div>
                 </Widget>
 

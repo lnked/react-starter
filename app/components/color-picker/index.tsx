@@ -1,13 +1,17 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
 import * as css from './styles'
+
 import ClipboardButton from 'react-clipboard.js'
 
-export default class ColorPicker extends React.Component<{}, {}> {
-    static propTypes = {
-        color: string
-    }
+interface T {
+    color: string;
+}
 
+interface S {
+    color: string;
+}
+
+export default class ColorPicker extends React.Component<T, S> {
     static defaultProps = {
         color: 'ffffff'
     }
@@ -17,12 +21,12 @@ export default class ColorPicker extends React.Component<{}, {}> {
     }
 
     handleChange = (e) => {
-        const value = e.target.value
-        const symbol = value[value.length - 1]
+        const color = e.target.value
+        const symbol = color[color.length - 1]
         const isColor = /^([0-9a-f])$/i
 
-        if (isColor.test(symbol) || !value) {
-            this.setState({...this.state, color: value})
+        if (isColor.test(symbol) || !color) {
+            this.setState({ color })
         }
     }
 
@@ -31,14 +35,16 @@ export default class ColorPicker extends React.Component<{}, {}> {
     }
 
     renderControl = () => {
-        const clearButton = []
+        const clearButton: any = []
 
         if (this.state.color) {
-            clearButton.push(<span className={css.clear} key="clear" onClick={this.handleClear.bind(this)}>
-                <svg className={css.clear__icon} role="presentation" aria-hidden="true" aria-labelledby="title">
-                    <use xlinkHref="#clear" />
-                </svg>
-            </span>)
+            clearButton.push(
+                <button className={css.clear} key="clear" onClick={this.handleClear}>
+                    <svg className={css.clear__icon} role="presentation" aria-labelledby="title" aria-hidden={true}>
+                        <use xlinkHref="#clear" />
+                    </svg>
+                </button>
+            )
         }
 
         return (
@@ -51,7 +57,7 @@ export default class ColorPicker extends React.Component<{}, {}> {
                     placeholder=""
                     className={css.input}
                     value={this.state.color}
-                    onChange={this.handleChange.bind(this)}
+                    onChange={this.handleChange}
                 />
 
                 { clearButton }
@@ -78,9 +84,9 @@ export default class ColorPicker extends React.Component<{}, {}> {
         return (
             <ClipboardButton
                 className={css.paint}
+                data-clipboard-text={color}
+                onSuccess={this.onSuccess}
                 style={style}
-                data-clipboard-text={this.state.color}
-                onSuccess={this.onSuccess.bind(this)}
             />
         )
     }

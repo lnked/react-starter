@@ -66,6 +66,8 @@
 }
 
 .clear {
+    border: 0;
+    outline: 0;
     position: absolute;
     right: 16px;
     top: 50%;
@@ -106,7 +108,7 @@
     outline: 0;
     cursor: pointer;
     display: block;
-    margin-left: 20px;
+    margin-left: 10px;
     background-color: $c-white;
     border: 1px solid $c-whisper;
 }
