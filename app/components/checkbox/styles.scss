@@ -1,6 +1,13 @@
 @import 'assets/styles/_global.scss';
 
+$checkbox-small-size:       16px;
+$checkbox-small-margin:     5px;
+
+$checkbox-normal-size:      20px;
+$checkbox-normal-margin:    10px;
+
 .checkbox {
+    font-size: 0;
     cursor: pointer;
     color: $c-black;
     position: relative;
@@ -9,15 +16,15 @@
     transition: color .1s ease;
 
     &_small {
-        min-width: 16px;
-        min-height: 16px;
-        line-height: 16px;
+        min-width: $checkbox-small-size;
+        min-height: $checkbox-small-size;
+        line-height: $checkbox-small-size;
     }
 
     &_normal {
-        min-width: 20px;
-        min-height: 20px;
-        line-height: 20px;
+        min-width: $checkbox-normal-size;
+        min-height: $checkbox-normal-size;
+        line-height: $checkbox-normal-size;
     }
 }
 
@@ -71,13 +78,13 @@
 
 .checkbox_small > .label {
     font-size: 1.2rem;
-    padding-left: 26px;
+    padding-left: $checkbox-small-size + $checkbox-small-margin;
 }
 
 .checkbox_small > .status {
     &:before {
-        width: 16px;
-        height: 16px;
+        width: $checkbox-small-size;
+        height: $checkbox-small-size;
     }
 
     &:after {
@@ -91,13 +98,13 @@
 
 .checkbox_normal > .label {
     font-size: 1.4rem;
-    padding-left: 30px;
+    padding-left: $checkbox-normal-size + $checkbox-normal-margin;
 }
 
 .checkbox_normal > .status {
     &:before {
-        width: 20px;
-        height: 20px;
+        width: $checkbox-normal-size;
+        height: $checkbox-normal-size;
     }
 
     &:after {

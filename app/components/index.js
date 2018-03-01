@@ -14,7 +14,7 @@ import Widget from 'components/widget'
 import Loader from 'components/loader'
 // import Spinner from 'components/spinner'
 // import Quantity from 'components/quantity'
-// import Checkbox from 'components/checkbox'
+import Checkbox from 'components/checkbox'
 // import HintText from 'components/hint-text'
 // import MaskedText from 'components/masked-text'
 // import RadioGroup from 'components/radio-group'
@@ -43,7 +43,7 @@ export {
     Loader,
     // Spinner,
     // Quantity,
-    // Checkbox,
+    Checkbox,
     // HintText,
     // MaskedText,
     // RadioGroup,

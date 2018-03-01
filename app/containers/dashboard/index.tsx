@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Content } from 'segments'
 
-import { Widget } from 'components'
+import { Widget, Checkbox } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
     render () {
@@ -17,6 +17,25 @@ export default class Dashboard extends React.Component<{}, {}> {
                         Входящие
                         Входящие общие папки
                         Корзина
+
+                        <br />
+                        <br />
+
+                        <div>
+                            <Checkbox name="hecke1" />
+                        </div>
+
+                        <br />
+
+                        <div>
+                            <Checkbox name="hecke2" checked />
+                        </div>
+
+                        <br />
+
+                        <div>
+                            <Checkbox name="hecke3" label="Корзина" />
+                        </div>
                     </div>
                 </Widget>
 
