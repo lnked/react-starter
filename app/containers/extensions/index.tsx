@@ -1,7 +1,9 @@
 import * as React from 'react'
-// import * as css from './styles'
+import * as css from './styles'
 
 import { Content } from 'segments'
+
+console.log(css)
 
 export default class Extensions extends React.Component<{}, {}> {
     render () {

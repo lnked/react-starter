@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Content } from 'segments'
 
-import { Widget, Checkbox } from 'components'
+import { Widget, Checkbox, Radio } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
     render () {
@@ -20,6 +20,12 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                         <br />
                         <br />
+
+                        <div>
+                            <Radio name="radio" label="1 Входящие" value={1} /><br /><br />
+                            <Radio name="radio" label="2 Входящие" value={2} /><br /><br />
+                            <Radio name="radio" label="3 Входящие" value={3} /><br /><br />
+                        </div>
 
                         <div>
                             <Checkbox name="hecke1" />

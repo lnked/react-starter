@@ -47,6 +47,25 @@ module.exports = {
     },
 
     resolve: {
+        // root: [
+        //     resolve(define.rs_root),
+        //     resolve(define.rs_root, 'hoc'),
+        //     resolve(define.rs_root, 'utils'),
+        //     resolve(define.rs_root, 'typings'),
+        //     resolve(define.rs_root, 'assets'),
+        //     resolve(define.rs_root, 'config'),
+        //     resolve(define.rs_root, 'layouts'),
+        //     resolve(define.rs_root, 'segments'),
+        //     resolve(define.rs_root, 'containers'),
+        //     resolve(define.rs_root, 'components'),
+        //     resolve(define.rs_root, 'assets/images'),
+        //     resolve(define.rs_root, 'assets/styles'),
+        //     resolve(define.rs_root, 'assets/scripts'),
+        //     resolve(define.rs_root, 'assets/svgstore'),
+        //     resolve(define.rs_root, 'redux/store'),
+        //     resolve(define.rs_root, 'redux/actions'),
+        //     resolve(define.rs_root, 'redux/reducers')
+        // ],
         symlinks: true,
         modules: [resolve(__dirname, '../node_modules'), define.rs_root],
         mainFiles: ['index'],
@@ -55,6 +74,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
+            app: define.rs_root,
             hoc: resolve(define.rs_root, 'hoc'),
             utils: resolve(define.rs_root, 'utils'),
             typings: resolve(define.rs_root, 'typings'),

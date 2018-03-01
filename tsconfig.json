@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
         "jsx": "react",
+        "baseUrl": "./",
         "target": "es5",
         "module": "commonjs",
         "outDir": "./dist",
-        "moduleResolution": "node",
+        "moduleResolution": "classic",
         "sourceMap": true,
         "allowJs": true,
         "declaration": false,
@@ -27,15 +28,8 @@
             "dom"
         ],
         "paths": {
-            "*": [
-                "app/hoc/*",
-                "app/utils/*",
-                "app/layouts/*",
-                "app/typings/*",
-                "app/segments/*",
-                "app/containers/*",
-                "app/components/*",
-                "app/redux/*"
+            "app/*": [
+                "./app/*"
             ]
         }
     },

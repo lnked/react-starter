@@ -1,5 +1,5 @@
 import Logo from 'components/logo'
-// import Radio from 'components/radio'
+import Radio from 'components/radio'
 // import Input from 'components/input'
 // import Tabs from 'components/tabs'
 // import Table from 'components/table'
@@ -28,7 +28,7 @@ import GroupLinks from 'components/group-links'
 
 export {
     Logo,
-    // Radio,
+    Radio,
     // Input,
     // Tabs,
     // Table,
