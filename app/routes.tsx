@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Redirect,
     Route,
     Switch
@@ -28,6 +28,50 @@ import {
     Updates
 } from 'containers'
 
+const routes: any = [
+    {
+        exact: true,
+        path: '/',
+        component: Auth
+    }, {
+        path: '/accounts',
+        component: Accounts
+    }, {
+        path: '/shop',
+        component: Shop
+    }, {
+        path: '/tasks',
+        component: Tasks
+    }, {
+        path: '/assets',
+        component: Assets
+    }, {
+        path: '/updates',
+        component: Updates
+    }, {
+        path: '/locale',
+        component: Locale
+    }, {
+        path: '/globals',
+        component: Globals
+    }, {
+        path: '/dashboard',
+        component: Dashboard
+    }, {
+        path: '/structure',
+        component: Structure
+    }, {
+        path: '/entities',
+        component: Entities
+    }, {
+        path: '/extensions',
+        component: Extensions
+    }, {
+        path: '/settings',
+        component: Settings
+    }
+]
+
 export default class App extends React.Component<{}, {}> {
     state = {
         isOverflow: false
@@ -37,7 +81,7 @@ export default class App extends React.Component<{}, {}> {
         document.body.classList.toggle('is-overflow', this.state.isOverflow)
     }
 
-    componentWillUpdate (nextProps: any, nextState: any): any {
+    componentWillUpdate ({ nextState }: any) {
         document.body.classList.toggle('is-overflow', nextState.isOverflow)
     }
 
@@ -54,8 +98,16 @@ export default class App extends React.Component<{}, {}> {
         //     state: { referrer: currentLocation }
         // }} />
 
+        const routeComponents: any = routes.map((props, key) => {
+            console.log('props: ', props)
+
+            return (
+                <Route {...props} key={key} />
+            )
+        })
+
         return (
-            <Router>
+            <BrowserRouter>
                 <CoreLayout>
                     <Switch>
                         <Route exact path="/" render={() => (
@@ -66,18 +118,7 @@ export default class App extends React.Component<{}, {}> {
                             )
                         )} />
 
-                        <Route path="/accounts" component={Accounts} />
-                        <Route path="/shop" component={Shop} />
-                        <Route path="/tasks" component={Tasks} />
-                        <Route path="/assets" component={Assets} />
-                        <Route path="/updates" component={Updates} />
-                        <Route path="/locale" component={Locale} />
-                        <Route path="/globals" component={Globals} />
-                        <Route path="/dashboard" component={Dashboard} />
-                        <Route path="/structure" component={Structure} />
-                        <Route path="/entities" component={Entities} />
-                        <Route path="/extensions" component={Extensions} />
-                        <Route path="/settings" component={Settings} />
+                        { routeComponents }
 
                         <Route
                             component={NoMatch}
@@ -101,7 +142,7 @@ export default class App extends React.Component<{}, {}> {
                         <Route path="/accounts/profile/:id" component={Accounts} />
                     </Switch>
                 </CoreLayout>
-            </Router>
+            </BrowserRouter>
         )
     }
 }

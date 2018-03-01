@@ -21,7 +21,7 @@ if (define.rs_analyzer)
 }
 else if (define.rs_development)
 {
-    sourceMap = 'cheap-module-source-map';
+    sourceMap = 'inline-source-map';
 }
 
 process.traceDeprecation = true;
@@ -52,7 +52,7 @@ module.exports = {
         mainFiles: ['index'],
         enforceExtension: false,
         enforceModuleExtension: false,
-        extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss'],
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css', '.json'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
             app: define.rs_root,
