@@ -42,9 +42,22 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <div>
                             <Checkbox name="hecke3" label="Корзина" />
                         </div>
-
-                        <Button>Применить</Button>
-                        <Button theme="red">Применить</Button>
+                        <br /><br />
+                        <Button>Применить</Button><br /><br />
+                        <Button size="small">Применить</Button><br /><br />
+                        <Button size="normal">Применить</Button><br /><br />
+                        <Button size="medium">Применить</Button><br /><br />
+                        <Button size="large">Применить</Button><br /><br />
+                        <br /><br />
+                        <Button variant="pure">Применить</Button><br /><br />
+                        <Button variant="link">Применить</Button><br /><br />
+                        <Button variant="info">Применить</Button><br /><br />
+                        <Button variant="danger">Применить</Button><br /><br />
+                        <Button variant="default">Применить</Button><br /><br />
+                        <Button variant="primary">Применить</Button><br /><br />
+                        <Button variant="success">Применить</Button><br /><br />
+                        <Button variant="warning">Применить</Button><br /><br />
+                        <Button variant="subtle-link">Применить</Button>
                     </div>
                 </Widget>
 
