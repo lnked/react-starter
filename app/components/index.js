@@ -4,8 +4,6 @@ import Input from 'components/input'
 import Tabs from 'components/tabs'
 // import Table from 'components/table'
 import Badge from 'components/badge'
-import Prompt from 'components/prompt'
-import Confirm from 'components/confirm'
 // import Layout from 'components/layout'
 import Button from 'components/button'
 import Switch from 'components/switch'
@@ -35,8 +33,6 @@ export {
     // Table,
     Badge,
     Switch,
-    Prompt,
-    Confirm,
     // Layout,
     Button,
     // Notify,

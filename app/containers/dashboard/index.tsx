@@ -1,19 +1,22 @@
 import * as React from 'react'
 
-import { Content } from 'segments'
+import {
+    Alert,
+    Prompt,
+    Confirm,
+    Content
+} from 'segments'
 
 import {
     Tabs,
     Input,
     Radio,
     Badge,
-    Prompt,
     Switch,
     Loader,
     Widget,
     Button,
     Spinner,
-    Confirm,
     Sandwich,
     Quantity,
     Checkbox,
@@ -30,6 +33,8 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
+                        <Alert title="Предупреждение!" />
+                        <br /> <br />
                         <Prompt title="Какой сейчас год?" placeholder="Укажите текущий год" value={2018} />
                         <br /> <br />
                         <Prompt title="Какой сейчас год?" placeholder="Укажите текущий год" />
