@@ -87,7 +87,7 @@ yarn run lint:fix
 ```
 
 ## Expected
-- [ ] TypeScript
+- [x] TypeScript
 - [ ] Tests
 - [ ] Redux
 - [ ] Storybook

@@ -24,7 +24,7 @@
         "lint": "yarn run lint:scripts && yarn run lint:styles",
         "dev": "webpack-dev-server --open --content-base ./dist --config ./webpack/config.js --env development",
         "size": "npx size-limit",
-        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "coverage": "coveralls",
         "webpack-defaults": "webpack-defaults"
     },
     "keywords": [

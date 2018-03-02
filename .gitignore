@@ -2,6 +2,7 @@
 /.create
 /.cache
 /.awcache
+/.coverage
 /.flowconfig
 /.phpintel
 /___/

@@ -34,7 +34,7 @@ script:
   - npm run release
 
 after_success:
-  - npm run coveralls
+  - npm run coverage
 
 addons:
   code_climate:
