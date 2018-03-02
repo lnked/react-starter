@@ -10,7 +10,7 @@ import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
 import { GroupLinks } from 'components'
 
 interface T {
-    className?: string;
+    links?: any;
     children?: React.ReactChild | {} | any[] | boolean;
 }
 
@@ -20,6 +20,10 @@ interface S {
 }
 
 export default class CoreLayout extends React.Component<T, S> {
+    static defaultProps = {
+        links: []
+    }
+
     state = {
         title: 'React Starter App',
         pages: []
@@ -32,81 +36,43 @@ export default class CoreLayout extends React.Component<T, S> {
     componentDidMount () {
         SvgFixer()
 
-        this._handlePagesLoad()
+        this.handleLoadPages()
     }
 
-    _handlePagesLoad () {
+    handleLoadPages = () => {
         axios
-            .get('/api/pages')
-            .then((response) => response.data)
-            .then(({ data }) => {
-                const pages = JSON.parse(data)
-                this.setState({ pages })
+            .get('http://react-template.loc/api/pages')
+            .then((response) => {
+                this.setState({ pages: response.data.json })
             })
             .catch((err) => {
-                console.log(err)
+                console.log('err: ', err)
             })
     }
 
     render () {
-        const { children } = this.props
+        const { children, links } = this.props
+        const { pages } = this.state
+
+        const submenuBlock: any = []
+
+        if (links.length) {
+            submenuBlock.push(
+                <Aside title="Интернет магазин" key="submenu">
+                    <GroupLinks
+                        base="shop"
+                        links={links}
+                    />
+                </Aside>
+            )
+        }
 
         return (
             <div className={css.layout}>
                 <section className={css.main}>
                     <div className={css.sidebar}>
-                        <Sidebar pages={this.state.pages} />
-                        <Aside title="Интернет магазин">
-                            <GroupLinks
-                                base="shop"
-                                links={[
-                                    {
-                                        name: 'Корзина',
-                                        slug: 'groups'
-                                    },
-                                    {
-                                        name: 'Заказы',
-                                        slug: 'orders'
-                                    },
-                                    {
-                                        name: 'Категории каталога',
-                                        slug: 'categories'
-                                    },
-                                    {
-                                        name: 'Каталог товаров',
-                                        slug: 'catalog'
-                                    },
-                                    {
-                                        name: 'Промокоды',
-                                        slug: 'promotional'
-                                    },
-                                    {
-                                        name: 'Производители',
-                                        slug: 'manufacturers'
-                                    },
-                                    {
-                                        name: 'Теги',
-                                        slug: 'tags'
-                                    },
-                                    {
-                                        name: 'Распродажи',
-                                        slug: 'sales'
-                                    },
-                                    {
-                                        name: 'Бонусная система',
-                                        slug: 'loyality'
-                                    },
-                                    {
-                                        name: 'Покупатели',
-                                        slug: 'customers'
-                                    },
-                                    {
-                                        name: 'Настройки',
-                                        slug: 'settings'
-                                    }
-                                ]}
-                            />
-                        </Aside>
+                        <Sidebar pages={pages} />
+                        {submenuBlock}
                     </div>
 
                     <div className={css.body}>

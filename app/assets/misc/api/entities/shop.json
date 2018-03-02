@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Корзина",
+        "slug": "groups"
+    },
+    {
+        "name": "Заказы",
+        "slug": "orders"
+    },
+    {
+        "name": "Категории каталога",
+        "slug": "categories"
+    },
+    {
+        "name": "Каталог товаров",
+        "slug": "catalog"
+    },
+    {
+        "name": "Промокоды",
+        "slug": "promotional"
+    },
+    {
+        "name": "Производители",
+        "slug": "manufacturers"
+    },
+    {
+        "name": "Теги",
+        "slug": "tags"
+    },
+    {
+        "name": "Распродажи",
+        "slug": "sales"
+    },
+    {
+        "name": "Бонусная система",
+        "slug": "loyality"
+    },
+    {
+        "name": "Покупатели",
+        "slug": "customers"
+    },
+    {
+        "name": "Настройки",
+        "slug": "settings"
+    }
+]

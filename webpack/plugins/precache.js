@@ -6,7 +6,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const plugins = [
     new SWPrecacheWebpackPlugin({
         minify: true,
-        verbose: true,
+        verbose: false,
         cacheId: 'RS-PWA',
         filename: 'sw.js',
         stripPrefix: 'dist/',

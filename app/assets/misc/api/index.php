@@ -26,7 +26,7 @@ $filename = sprintf('%s.json', $controller);
 if (file_exists(API_ROOT.DS.API_ENTITIES.DS.$filename))
 {
     $status = true;
-    $responce['data'] = file_get_contents(API_ROOT.DS.API_ENTITIES.DS.$filename);
+    $responce['json'] = json_decode(file_get_contents(API_ROOT.DS.API_ENTITIES.DS.$filename), true);
 }
 else {
     $errors['nofile'] = true;

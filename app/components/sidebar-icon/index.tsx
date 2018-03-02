@@ -1,25 +1,23 @@
 import * as React from 'react'
 import * as css from './styles'
 
-import * as PropTypes from 'prop-types'
-
 import { NavLink } from 'react-router-dom'
 
-export default class SidebarIcon extends React.Component<{}, {}> {
-    static propTypes = {
-        link: PropTypes.string,
-        icon: PropTypes.string,
-        title: PropTypes.string,
-        className: PropTypes.string
-    }
+interface T {
+    link: string;
+    icon?: string;
+    title: string;
+    className: string;
+}
 
+export default class SidebarIcon extends React.Component<T, {}> {
     static defaultProps = {
-        url: '#',
+        link: '#',
         className: ''
     }
 
     render () {
-        const cn = []
+        const cn: any = []
 
         const {
             link,
@@ -35,10 +33,10 @@ export default class SidebarIcon extends React.Component<{}, {}> {
         }
 
         return (
-            <NavLink to={`${link}`} className={cn.join(' ')} activeClassName={css.active}>
+            <NavLink to={link} className={cn.join(' ')} activeClassName={css.active}>
                 <span className={css.title}>{title}</span>
-                <span className={css.circle}>
-                    <svg height="36" width="36" role="presentation" title={title}>
+                <span className={css.circle} title={title}>
+                    <svg height="36" width="36" role="presentation">
                         <circle cx="18" cy="18" r="16" />
                     </svg>
                 </span>

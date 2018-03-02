@@ -1,7 +1,9 @@
 import * as React from 'react'
 
+import axios from 'axios'
+
 import {
-    BrowserRouter,
+    BrowserRouter as Router,
     Redirect,
     Route,
     Switch
@@ -29,7 +31,8 @@ import {
 } from 'containers'
 
 interface S {
-    isOverflow?: boolean;
+    links: any;
+    isOverflow: boolean;
 }
 
 const routes: any = [
@@ -74,40 +77,45 @@ const routes: any = [
 
 export default class App extends React.Component<{}, S> {
     state = {
+        links: [],
         isOverflow: false
     }
 
     componentDidMount () {
-        document.body.classList.toggle('is-overflow', this.state.isOverflow)
+        this.handleLoadLinks()
     }
 
-    componentWillUpdate ({ nextState }: any) {
-        document.body.classList.toggle('is-overflow', nextState.isOverflow)
-    }
+    handleLoadLinks = () => {
+        const path = location.pathname.split('/')
 
-    componentWillUnmount () {
-        document.body.classList.remove('is-overflow')
+        console.log('change: ', path)
+
+        if (typeof (path[1]) !== 'undefined') {
+            const page = path[1]
+
+            axios
+                .get(`http://react-template.loc/api/${page}`)
+                .then((response) => {
+                    this.setState({ links: response.data.json })
+                })
+                .catch((err) => {
+                    console.log('err: ', err)
+                })
+        }
     }
 
     render () {
         const loggedIn = true
 
-        // <Redirect to={{
-        //     pathname: '/login',
-        //     search: '?utm=your+face',
-        //     state: { referrer: currentLocation }
-        // }} />
+        const { links } = this.state
 
-        const routeComponents: any = routes.map((props, key) => <Route {...props} key={key} />)
-
-        // < Switch >
-        // <Redirect from="/accounts/:id" to="/accounts/profile/:id" />
-        // <Route path="/accounts/profile/:id" component={Accounts} />
-        // </Switch >
+        const routeComponents: any = routes.map((props, key) =>
+            <Route {...props} key={key} />
+        )
 
         return (
-            <BrowserRouter>
-                <CoreLayout>
+            <Router>
+                <CoreLayout links={links}>
                     <Switch>
                         <Route
                             exact
@@ -136,7 +144,7 @@ export default class App extends React.Component<{}, S> {
                         />
                     </Switch>
                 </CoreLayout>
-            </BrowserRouter>
+            </Router>
         )
     }
 }

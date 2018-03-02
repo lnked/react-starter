@@ -22,7 +22,9 @@ export default class Sidebar extends React.Component<T, {}> {
                 <Logo link={base} />
 
                 {pages.map((props: any, id: number) =>
-                    <SidebarIcon key={id} {...props} link={`${base}/${props.system}`} />
+                    (<SidebarIcon key={id} {...props}
+                        link={`${base}/${props.system}`}
+                    />)
                 )}
 
                 <SidebarIcon
