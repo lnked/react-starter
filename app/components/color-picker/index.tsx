@@ -17,7 +17,7 @@ export default class ColorPicker extends React.Component<T, S> {
     }
 
     state = {
-        color: this.props.color
+        color: this.props.color.replace('#', '')
     }
 
     handleChange = (e) => {
