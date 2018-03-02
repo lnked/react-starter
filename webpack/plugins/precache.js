@@ -13,7 +13,7 @@ const plugins = [
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
 
-        // navigateFallback: PUBLIC_PATH + 'index.html',
+        navigateFallback: define.rs_output_path,
 
         staticFileGlobs: [
             'dist/*.html',
@@ -39,9 +39,6 @@ const plugins = [
         mergeStaticsConfig: true,
         maximumFileSizeToCacheInBytes: 8388608,
         staticFileGlobsIgnorePatterns: [/\.map$/, /\.htaccess$/, /\.cache$/, /webpack-manifest\.json$/],
-
-        navigateFallback: define.rs_output_path,
-        // navigateFallback: '/dist/index.html',
 
         runtimeCaching: [
             {

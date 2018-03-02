@@ -151,12 +151,6 @@ FileETag None
     RewriteEngine On
     RewriteBase /
 
-    # RewriteCond %{REQUEST_URI} ^api/(.*)$ [or]
-    # RewriteCond %{REQUEST_URI} .*/api/(.*)$
-    # RewriteCond %{REQUEST_FILENAME} !-f
-    # RewriteCond %{REQUEST_FILENAME} !-d
-    # RewriteRule .*api/(.*)$ api.php?_d=$1 [L,QSA]
-
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
