@@ -1,0 +1,61 @@
+@import 'assets/styles/_global.scss';
+
+$switch-height: 24px;
+$switch-bullet-padding: 4px;
+$switch-bullet-size: $switch-height - $switch-bullet-padding;
+$switch-width: ($switch-height * 2) - ($switch-bullet-padding);
+
+.switch {
+    width: $switch-width;
+    height: $switch-height;
+    position: relative;
+    display: inline-block;
+}
+
+.input {
+    display: none;
+}
+
+.slider {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+
+    &:before {
+        content: "";
+        width: $switch-bullet-size;
+        height: $switch-bullet-size;
+        left: $switch-bullet-padding / 2;
+        bottom: $switch-bullet-padding / 2;
+        background-color: $c-white;
+    }
+
+    &,
+    &:before {
+        position: absolute;
+        transition: $a-time;
+    }
+
+    &.round {
+        border-radius: $switch-height;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.input:checked + .slider:before {
+    transform: translateX($switch-bullet-size);
+}

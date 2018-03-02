@@ -1,22 +1,24 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
 import * as css from './styles'
 
-export default class Sandwich extends React.PureComponent<{}, {}> {
+interface T {
+    isOpened: boolean;
+}
 
-    static propTypes = {
-        isOpened: bool
-    }
+interface S {
+    isOpened: boolean;
+}
 
+export default class Sandwich extends React.PureComponent<T, S> {
     static defaultProps = {
         isOpened: false
     }
 
     state = {
-        isOpened: false
+        isOpened: this.props.isOpened
     }
 
-    handleOpenMenu = () => {
+    handleChange = () => {
         this.setState({
             isOpened: !this.state.isOpened
         })
@@ -26,14 +28,14 @@ export default class Sandwich extends React.PureComponent<{}, {}> {
         const { isOpened } = this.state
 
         return (
-            <div className={css.sandwich} onClick={this.handleOpenMenu.bind(this)}>
-                <div className={!isOpened
+            <button className={css.sandwich} onClick={this.handleChange}>
+                <span className={!isOpened
                     ? css.sandwich__ln
                     : [
                         css.sandwich__ln, css.sandwich__ln_open
                     ].join(' ')}
                 />
-            </div>
+            </button>
         )
     }
 }

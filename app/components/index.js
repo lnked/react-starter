@@ -1,18 +1,19 @@
 import Logo from 'components/logo'
 import Radio from 'components/radio'
 import Input from 'components/input'
-// import Tabs from 'components/tabs'
+import Tabs from 'components/tabs'
 // import Table from 'components/table'
 import Badge from 'components/badge'
-// import Prompt from 'components/prompt'
-// import Confirm from 'components/confirm'
+import Prompt from 'components/prompt'
+import Confirm from 'components/confirm'
 // import Layout from 'components/layout'
 import Button from 'components/button'
-// import Switch from 'components/switch'
+import Switch from 'components/switch'
 // import Notify from 'components/notify'
 import Widget from 'components/widget'
 import Loader from 'components/loader'
 import Spinner from 'components/spinner'
+import Sandwich from 'components/sandwich'
 import Quantity from 'components/quantity'
 import Checkbox from 'components/checkbox'
 // import HintText from 'components/hint-text'
@@ -30,18 +31,19 @@ export {
     Logo,
     Radio,
     Input,
-    // Tabs,
+    Tabs,
     // Table,
     Badge,
-    // Prompt,
-    // Confirm,
+    Switch,
+    Prompt,
+    Confirm,
     // Layout,
     Button,
-    // Switch,
     // Notify,
     Widget,
     Loader,
     Spinner,
+    Sandwich,
     Quantity,
     Checkbox,
     // HintText,

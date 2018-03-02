@@ -72,6 +72,7 @@
             "allow-fast-null-checks"
         ],
         "no-empty": false,
+        "no-namespace": false,
         "member-access": false,
         "array-type": false,
         "arrow-parens": false,

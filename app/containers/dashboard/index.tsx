@@ -3,13 +3,18 @@ import * as React from 'react'
 import { Content } from 'segments'
 
 import {
+    Tabs,
     Input,
     Radio,
     Badge,
+    Prompt,
+    Switch,
     Loader,
     Widget,
     Button,
     Spinner,
+    Confirm,
+    Sandwich,
     Quantity,
     Checkbox,
     ColorPicker
@@ -25,6 +30,25 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                 <Widget title="Использовано свободного места">
                     <div>
+                        <Prompt title="Какой сейчас год?" placeholder="Укажите текущий год" value={2018} />
+                        <br /> <br />
+                        <Prompt title="Какой сейчас год?" placeholder="Укажите текущий год" />
+                        <br /> <br />
+                        <Confirm title="Вы уверены что хотите удалить файл?" />
+                        <br /> <br />
+                        <Confirm title="Вы уверены что хотите удалить файл?" />
+                        <br /> <br />
+                        <Tabs title="tabs test" />
+                        <br /> <br />
+                        <Sandwich /> <br /> <br />
+                        <Sandwich isOpened /> <br /> <br />
+                        <Switch name="switch1" />
+                        <br /><br />
+                        <Switch name="switch2" checked />
+                        <br /><br />
+                        <Switch name="switch3" round />
+                        <br /><br />
+
                         <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                         <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
                         <Input name="input3" focus />
