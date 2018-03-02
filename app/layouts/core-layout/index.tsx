@@ -1,7 +1,6 @@
 import * as React from 'react'
+import * as axios from 'axios'
 import * as css from './styles'
-
-import axios from 'axios'
 
 import { SvgFixer } from 'utils'
 
@@ -43,7 +42,9 @@ export default class CoreLayout extends React.Component<T, S> {
         axios
             .get('http://react-template.loc/api/pages')
             .then((response) => {
-                this.setState({ pages: response.data.json })
+                if (typeof (response.data.json) !== 'undefined') {
+                    this.setState({ pages: response.data.json })
+                }
             })
             .catch((err) => {
                 console.log('err: ', err)
@@ -51,12 +52,20 @@ export default class CoreLayout extends React.Component<T, S> {
     }
 
     render () {
+        const sbc: any = []
+        const scc: any = []
         const { children, links } = this.props
         const { pages } = this.state
+
+        scc.push(css.body)
+        sbc.push(css.sidebar)
 
         const submenuBlock: any = []
 
         if (links.length) {
+            scc.push(css.body_short)
+            sbc.push(css.sidebar_long)
+
             submenuBlock.push(
                 <Aside title="Интернет магазин" key="submenu">
                     <GroupLinks
@@ -67,15 +76,17 @@ export default class CoreLayout extends React.Component<T, S> {
             )
         }
 
+        console.log(sbc)
+
         return (
             <div className={css.layout}>
                 <section className={css.main}>
-                    <div className={css.sidebar}>
+                    <div className={sbc.join(' ')}>
                         <Sidebar pages={pages} />
                         {submenuBlock}
                     </div>
 
-                    <div className={css.body}>
+                    <div className={scc.join(' ')}>
                         <header className={css.header}>
                             <Navigation />
                         </header>

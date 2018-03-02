@@ -1,6 +1,5 @@
 import * as React from 'react'
-
-import axios from 'axios'
+import * as axios from 'axios'
 
 import {
     BrowserRouter as Router,
@@ -88,15 +87,15 @@ export default class App extends React.Component<{}, S> {
     handleLoadLinks = () => {
         const path = location.pathname.split('/')
 
-        console.log('change: ', path)
-
         if (typeof (path[1]) !== 'undefined') {
             const page = path[1]
 
             axios
                 .get(`http://react-template.loc/api/${page}`)
                 .then((response) => {
-                    this.setState({ links: response.data.json })
+                    if (typeof (response.data.json) !== 'undefined') {
+                        this.setState({ links: response.data.json })
+                    }
                 })
                 .catch((err) => {
                     console.log('err: ', err)

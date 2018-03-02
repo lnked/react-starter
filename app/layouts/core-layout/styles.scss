@@ -16,17 +16,26 @@ $core-sidebar-width: $aside-width + $sidebar-width;
 }
 
 .sidebar {
+    width: $sidebar-width;
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: $core-sidebar-width;
-    width: $core-sidebar-width;
+    flex-basis: $sidebar-width;
     padding-left: $sidebar-width;
+
+    &_long {
+        width: $core-sidebar-width;
+        flex-basis: $core-sidebar-width;
+    }
 }
 
 .body {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: calc(100% - #{$core-sidebar-width});
+    flex-basis: calc(100% - #{$sidebar-width});
+
+    &_short {
+        flex-basis: calc(100% - #{$core-sidebar-width});
+    }
 }
 
 .header {
