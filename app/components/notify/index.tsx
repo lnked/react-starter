@@ -1,12 +1,11 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
 import * as css from './styles'
 
-export default class Notify extends React.PureComponent<{}, {}> {
-    static propTypes = {
-        bullet: PropTypes.bool
-    }
+interface T {
+    bullet: boolean;
+}
 
+export default class Notify extends React.Component<T, {}> {
     static defaultProps = {
         bullet: false
     }
@@ -14,7 +13,7 @@ export default class Notify extends React.PureComponent<{}, {}> {
     renderBullet = () => {
         if (this.props.bullet) {
             return (
-                <div className={css.notify__bullet} />
+                <div className={css.bullet} />
             )
         }
     }

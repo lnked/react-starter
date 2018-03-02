@@ -7,7 +7,7 @@ import Badge from 'components/badge'
 // import Layout from 'components/layout'
 import Button from 'components/button'
 import Switch from 'components/switch'
-// import Notify from 'components/notify'
+import Notify from 'components/notify'
 import Widget from 'components/widget'
 import Loader from 'components/loader'
 import Spinner from 'components/spinner'
@@ -35,7 +35,7 @@ export {
     Switch,
     // Layout,
     Button,
-    // Notify,
+    Notify,
     Widget,
     Loader,
     Spinner,
