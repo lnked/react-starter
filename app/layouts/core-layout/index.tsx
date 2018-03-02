@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles'
 
+import axios from 'axios'
+
 import { SvgFixer } from 'utils'
 
 import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
@@ -12,18 +14,38 @@ interface T {
     children?: React.ReactChild | {} | any[] | boolean;
 }
 
-export default class CoreLayout extends React.Component<T, {}> {
+interface S {
+    title: string;
+    pages: any;
+}
+
+export default class CoreLayout extends React.Component<T, S> {
     state = {
-        title: 'React Starter App'
+        title: 'React Starter App',
+        pages: []
     }
 
     componentWillMount () {
         document.title = this.state.title
-        window.prerenderReady = true
     }
 
     componentDidMount () {
         SvgFixer()
+
+        this._handlePagesLoad()
+    }
+
+    _handlePagesLoad () {
+        axios
+            .get('/api/pages')
+            .then((response) => response.data)
+            .then(({ data }) => {
+                const pages = JSON.parse(data)
+                this.setState({ pages })
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
     render () {
@@ -33,7 +55,7 @@ export default class CoreLayout extends React.Component<T, {}> {
             <div className={css.layout}>
                 <section className={css.main}>
                     <div className={css.sidebar}>
-                        <Sidebar />
+                        <Sidebar pages={this.state.pages} />
                         <Aside title="Интернет магазин">
                             <GroupLinks
                                 base="shop"
@@ -103,4 +125,3 @@ export default class CoreLayout extends React.Component<T, {}> {
         )
     }
 }
-

@@ -20,7 +20,6 @@ export default class PureLayout extends React.Component<{}, {}> {
 
     componentWillMount () {
         document.title = this.state.title
-        window.prerenderReady = true
     }
 
     componentDidMount () {

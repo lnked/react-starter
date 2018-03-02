@@ -19,7 +19,7 @@ export default class AuthLayout extends React.Component<{}, {}> {
     }
 
     componentWillMount () {
-        window.prerenderReady = true
+        document.title = this.state.title
     }
 
     componentDidMount () {

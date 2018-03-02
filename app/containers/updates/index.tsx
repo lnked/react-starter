@@ -5,7 +5,11 @@ import axios from 'axios'
 
 import { Content } from 'segments'
 
-export default class Updates extends React.Component<{}, {}> {
+interface S {
+    releases: any;
+}
+
+export default class Updates extends React.Component<{}, S> {
     state = {
         releases: []
     }
@@ -32,7 +36,6 @@ export default class Updates extends React.Component<{}, {}> {
 
         Object.keys(release.notes).map((key: string) => {
             const items = release.notes[key]
-            console.log(key, items)
 
             items.map((note: any, index: number) => {
                 notes.push(<li className={css[key]} key={`${key}.${index}`}>{note}</li>)
@@ -50,7 +53,7 @@ export default class Updates extends React.Component<{}, {}> {
 
     render () {
         const list: any = []
-        const { releases } = this.state
+        const { releases }: any = this.state
 
         if (releases.hasOwnProperty('list')) {
             releases.list.forEach((release: any) => {
