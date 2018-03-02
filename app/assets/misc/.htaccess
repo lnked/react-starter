@@ -1,5 +1,3 @@
-AddDefaultCharset utf-8
-
 # ----------------------------------------------------------------------
 # Prevent mobile network providers from modifying your site
 # ----------------------------------------------------------------------
@@ -31,7 +29,6 @@ AddDefaultCharset utf-8
     </FilesMatch>
 
 </ifModule>
-
 
 # ----------------------------------------------------------------------
 # | ETags                                                              |
@@ -149,38 +146,21 @@ FileETag None
 </IfModule>
 
 <IfModule mod_rewrite.c>
+    AddDefaultCharset utf-8
+
     RewriteEngine On
+    RewriteBase /
 
-	RewriteBase /
+    # RewriteCond %{REQUEST_URI} ^api/(.*)$ [or]
+    # RewriteCond %{REQUEST_URI} .*/api/(.*)$
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule .*api/(.*)$ api.php?_d=$1 [L,QSA]
 
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index\.(php|htm|html)($|\ |\?)
-    RewriteRule ^ /%1 [R=301,L]
-
-    RewriteCond %{HTTP_USER_AGENT} .*\{.* [NC]
-    RewriteRule .* - [F,L]
-
-    # Удаляет слэш на конце URL
-    RewriteCond %{HTTP_HOST} (.*)
-    RewriteCond %{REQUEST_URI} /$ [NC]
-    RewriteCond %{QUERY_STRING} ^$ [NC]
-    RewriteRule (.+)/$ /$1 [L,QSA,R=301]
-
-    RewriteCond %{THE_REQUEST} \.html
-    RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
+    RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-l
-    RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
-    RewriteCond %{REQUEST_FILENAME}.html -f
-    RewriteRule ^(.+?)/?$ /$1.html [L,R=301]
+    RewriteRule . /index.html [L]
 
-    RewriteCond %{REQUEST_URI} ^api/(.*)$ [or]
-    RewriteCond %{REQUEST_URI} .*/api/(.*)$
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule .*api/(.*)$ api.php?_d=$1 [L,QSA]
-
-    RewriteCond $1 !\.(jpe?g|png|gif|bmp|json|ico|svg|tif|tiff|css|js|htm|html|ttf|otf|webp|woff|woff2|txt|csv|rtf|doc|docx|xls|xlsx|ppt|pptx|odf|odp|ods|odt|pdf|psd|ai|eot|eps|ps|zip|tar|tgz|gz|rar|bz2|7z|aac|m4a|mp3|mp4|ogg|wav|wma|3gp|avi|flv|m4v|mkv|mov|mpeg|mpg|wmv|exe|iso|dmg|xml|swf)$ [NC]
-    RewriteRule ^(.*)$ index.html [L,QSA]
 </IfModule>

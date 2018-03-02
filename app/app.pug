@@ -3,7 +3,7 @@ html(
     lang='ru'
     class='no-js'
     itemscope='itemscope'
-    itemtype='http://schema.org/WebPage'
+    itemtype='https://schema.org/WebPage'
 )
     //- appName=htmlWebpackPlugin.options.appName
     head
@@ -52,7 +52,7 @@ html(
 
         //- meta(property='fb:app_id', content='500712019984442')
     body
-        svg(xmlns='http://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
+        svg(xmlns='https://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
             != htmlWebpackPlugin.options.svgContext
 
         main.layout-wrapper#root
