@@ -29,12 +29,9 @@ install:
   - yarn install
 
 script:
-  - npm run lint
-  # - npm run test
-  - npm run release
-
-after_success:
-  - npm run coverage
+  - yarn lint
+  - yarn test
+  - yarn release
 
 addons:
   code_climate:

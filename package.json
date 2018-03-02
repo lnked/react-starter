@@ -22,9 +22,9 @@
         "lint:styles": "stylelint 'src/**/*.{css,less,scss,sss}'",
         "lint:fix": "eslint ./app --fix .js[x]",
         "lint": "yarn run lint:scripts && yarn run lint:styles",
+        "test": "",
         "dev": "webpack-dev-server --open --content-base ./dist --config ./webpack/config.js --env development",
         "size": "npx size-limit",
-        "coverage": "coveralls",
         "webpack-defaults": "webpack-defaults"
     },
     "keywords": [
@@ -137,7 +137,6 @@
         "caniuse-lite": "1.0.30000810",
         "compression-webpack-plugin": "1.1.10",
         "copy-webpack-plugin": "4.5.0",
-        "coveralls": "3.0.0",
         "css-loader": "0.28.10",
         "cssnano": "3.10.0",
         "eslint": "4.18.1",
