@@ -3,19 +3,21 @@ import * as axios from 'axios'
 
 import {
     BrowserRouter as Router,
-    Redirect,
+    // Redirect,
     Route,
     Switch
 } from 'react-router-dom'
+
+import { Transition } from 'react-transition-group'
 
 // Layouts
 import { CoreLayout } from 'layouts'
 
 // Containers
 import {
+    Auth,
     Accounts,
     Assets,
-    Auth,
     Dashboard,
     Entities,
     Extensions,
@@ -31,11 +33,17 @@ import {
 
 interface S {
     links: any;
+    pages: any;
+    pathname: string;
     isOverflow: boolean;
 }
 
 const routes: any = [
     {
+        path: '/',
+        exact: true,
+        component: Auth
+    }, {
         path: '/accounts',
         component: Accounts
     }, {
@@ -71,76 +79,83 @@ const routes: any = [
     }, {
         path: '/settings',
         component: Settings
+    }, {
+        status: 404,
+        statusCode: 404,
+        component: NoMatch
     }
 ]
 
 export default class App extends React.Component<{}, S> {
     state = {
         links: [],
+        pages: [],
+        pathname: '',
         isOverflow: false
     }
 
     componentDidMount () {
-        this.handleLoadLinks()
-    }
-
-    handleLoadLinks = () => {
         const path = location.pathname.split('/')
 
-        if (typeof (path[1]) !== 'undefined') {
-            const page = path[1]
+        this.handleLoadPages()
 
+        if (typeof (path[1]) !== 'undefined') {
+            this.handleChangePath(path[1])
+        }
+    }
+
+    handleLoadPages = () => {
+        axios
+            .get('http://react-template.loc/api/pages')
+            .then((response) => {
+                if (typeof (response.data.json) !== 'undefined') {
+                    this.setState({ ...this.state, pages: response.data.json })
+                }
+            })
+            .catch((err) => {
+                console.log('err: ', err)
+            })
+    }
+
+    handleChangePath = (pathname: string) => {
+        if (pathname !== this.state.pathname) {
             axios
-                .get(`http://react-template.loc/api/${page}`)
+                .get(`http://react-template.loc/api/${pathname}`)
                 .then((response) => {
                     if (typeof (response.data.json) !== 'undefined') {
-                        this.setState({ links: response.data.json })
+                        this.setState({ ...this.state, links: response.data.json, pathname })
                     }
                 })
                 .catch((err) => {
                     console.log('err: ', err)
                 })
+        } else {
+            this.setState({ ...this.state, links: [] })
         }
     }
 
     render () {
-        const loggedIn = true
-
-        const { links } = this.state
-
-        const routeComponents: any = routes.map((props, key) =>
-            <Route {...props} key={key} />
-        )
+        const { links, pages } = this.state
 
         return (
             <Router>
-                <CoreLayout links={links}>
+                <CoreLayout links={links} pages={pages}>
                     <Switch>
-                        <Route
-                            exact
-                            path="/"
-                            render={() => (
-                                loggedIn ? <Redirect to="/dashboard" /> : <Auth />
-                            )}
-                        />
 
-                        { routeComponents }
+                        {routes.map(({ component: Component, ...rest }: any, key) => (
+                            <Route {...rest} key={key} render={(props: any) => {
+                                if (rest.path) {
+                                    this.handleChangePath(rest.path)
+                                }
 
-                        <Route
-                            component={NoMatch}
-                            onEnter={() => {
-                                this.setState({
-                                    isOverflow: true
-                                })
-                            }}
-                            onLeave={() => {
-                                this.setState({
-                                    isOverflow: false
-                                })
-                            }}
-                            status={404}
-                            statusCode={404}
-                        />
+                                return (
+                                    <Transition timeout={1500}>
+                                        <Component {...props} className={`fade fade-${status}`} />
+                                    </Transition>
+                                )
+                            }} />
+                        ))}
+
                     </Switch>
                 </CoreLayout>
             </Router>
