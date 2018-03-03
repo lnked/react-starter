@@ -44,17 +44,19 @@ export default class Radio extends React.PureComponent<T, S> {
 
         const id = `radio_${name}_${value}`
 
+        const props: any = {
+            id,
+            type: 'radio',
+            name,
+            value,
+            checked,
+            className: css.input,
+            onChange: this.handleChange
+        }
+
         return (
             <label htmlFor={id} className={css.radio}>
-                <input
-                    id={id}
-                    type="radio"
-                    name={name}
-                    value={value}
-                    checked={checked}
-                    className={css.input}
-                    onChange={this.handleChange}
-                />
+                <input {...props} />
 
                 <span className={css.label}>{label || children}</span>
             </label>

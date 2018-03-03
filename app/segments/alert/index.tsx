@@ -1,13 +1,19 @@
 import * as React from 'react'
 import * as css from './styles'
 
+import { Button } from 'components'
+
 interface T {
     title: string;
+    value: string;
+    placeholder: string;
 }
 
 export default class Alert extends React.PureComponent<T, {}> {
     static defaultProps = {
-        title: ''
+        title: '',
+        value: '',
+        placeholder: ''
     }
 
     render () {
@@ -26,8 +32,8 @@ export default class Alert extends React.PureComponent<T, {}> {
                 </div>
 
                 <footer className={css.footer}>
-                    <button className={[css.button, css.cancel].join(' ')}>Отмена</button>
-                    <button className={[css.button, css.submit].join(' ')}>Подтвердить</button>
+                    <Button variant="danger" classsName={css.button}>Отмена</Button>
+                    <Button variant="success" classsName={css.button}>Подтвердить</Button>
                 </footer>
             </div>
         )

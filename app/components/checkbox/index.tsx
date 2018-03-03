@@ -92,17 +92,19 @@ export default class Checkbox extends React.PureComponent<T, S> {
             cn.push(css[`checkbox_${size}`])
         }
 
+        const props: any = {
+            id,
+            type: 'checkbox',
+            name,
+            value,
+            checked,
+            className: css.input,
+            onChange: this.handleChange
+        }
+
         return (
             <label htmlFor={id} className={cn.join(' ')}>
-                <input
-                    id={id}
-                    type="checkbox"
-                    name={name}
-                    value={value}
-                    checked={checked}
-                    className={css.input}
-                    onChange={this.handleChange}
-                />
+                <input {...props} />
 
                 { this.renderStatus() }
                 { this.renderLabel() }

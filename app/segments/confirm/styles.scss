@@ -26,41 +26,18 @@
     margin-bottom: 20px;
 }
 
-.input {
-    width: 100%;
-    height: 34px;
-    display: block;
-    padding: 0 10px;
-    outline: 0;
-    margin-bottom: 20px;
-}
-
 .body {
-    padding: 25px 25px 10px;
+    padding: 20px 15px;
 }
 
 .footer {
-    padding: 15px 25px;
+    padding: 15px;
     text-align: right;
     background-color: #efefef;
 }
 
 .button {
-    cursor: pointer;
-    border: 0;
-    outline: 0;
-    padding: 8px;
-    color: #fff;
-
     &:not(:first-child) {
         margin-left: 10px;
     }
-}
-
-.cancel {
-    background-color: red;
-}
-
-.submit {
-    background-color: green;
 }

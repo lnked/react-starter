@@ -39,16 +39,18 @@ export default class Switch extends React.Component<T, S> {
             cn.push(css.round)
         }
 
+        const props: any = {
+            id,
+            type: 'checkbox',
+            name,
+            checked,
+            className: css.input,
+            onChange: this.handleChange
+        }
+
         return (
             <label className={css.switch} htmlFor={id}>
-                <input
-                    id={id}
-                    type="checkbox"
-                    name={name}
-                    checked={checked}
-                    className={css.input}
-                    onChange={this.handleChange}
-                />
+                <input {...props} />
                 <span className={cn.join(' ')} />
             </label>
         )

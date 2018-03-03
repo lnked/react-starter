@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles'
 
+import { Button } from 'components'
+
 interface T {
     title: string;
 }
@@ -26,8 +28,8 @@ export default class Confirm extends React.PureComponent<T, {}> {
                 </div>
 
                 <footer className={css.footer}>
-                    <button className={[css.button, css.cancel].join(' ')}>Отмена</button>
-                    <button className={[css.button, css.submit].join(' ')}>Подтвердить</button>
+                    <Button variant="danger" classsName={css.button}>Отмена</Button>
+                    <Button variant="success" classsName={css.button}>Подтвердить</Button>
                 </footer>
             </div>
         )
