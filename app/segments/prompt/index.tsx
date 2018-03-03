@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles'
 
+import { Input, Button } from 'components'
+
 interface T {
     title: string;
     value: string;
@@ -27,12 +29,12 @@ export default class Prompt extends React.PureComponent<T, {}> {
 
                 <div className={css.body}>
                     <div className={css.title}>{ title }</div>
-                    <input {...props} className={css.input} />
+                    <Input {...props} />
                 </div>
 
                 <footer className={css.footer}>
-                    <button className={[css.button, css.cancel].join(' ')}>Отмена</button>
-                    <button className={[css.button, css.submit].join(' ')}>Подтвердить</button>
+                    <Button variant="danger" classsName={css.button}>Отмена</Button>
+                    <Button variant="success" classsName={css.button}>Подтвердить</Button>
                 </footer>
             </div>
         )

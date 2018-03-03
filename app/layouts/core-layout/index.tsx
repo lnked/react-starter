@@ -3,9 +3,9 @@ import * as css from './styles'
 
 import { SvgFixer } from 'utils'
 
-// import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
+import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
 
-// import { GroupLinks } from 'components'
+import { GroupLinks } from 'components'
 
 interface T {
     links?: any;
@@ -36,51 +36,50 @@ export default class CoreLayout extends React.Component<T, S> {
     }
 
     render () {
-        return (<div className={css.content}>CoreLayout</div>)
-        // const sbc: any = []
-        // const scc: any = []
-        // const { children, pages, links } = this.props
+        const sbc: any = []
+        const scc: any = []
+        const { children, pages, links } = this.props
 
-        // scc.push(css.body)
-        // sbc.push(css.sidebar)
+        scc.push(css.body)
+        sbc.push(css.sidebar)
 
-        // const submenuBlock: any = []
+        const submenuBlock: any = []
 
-        // if (links.length) {
-        //     scc.push(css.body_short)
-        //     sbc.push(css.sidebar_long)
+        if (links.length) {
+            scc.push(css.body_short)
+            sbc.push(css.sidebar_long)
 
-        //     submenuBlock.push(
-        //         <Aside title="Интернет магазин" key="submenu">
-        //             <GroupLinks
-        //                 base="shop"
-        //                 links={links}
-        //             />
-        //         </Aside>
-        //     )
-        // }
+            submenuBlock.push(
+                <Aside title="Интернет магазин" key="submenu">
+                    <GroupLinks
+                        base="shop"
+                        links={links}
+                    />
+                </Aside>
+            )
+        }
 
-        // return (
-        //     <div className={css.layout}>
-        //         <section className={css.main}>
-        //             <div className={sbc.join(' ')}>
-        //                 <Sidebar pages={pages} />
-        //                 {submenuBlock}
-        //             </div>
+        return (
+            <div className={css.layout}>
+                <section className={css.main}>
+                    <div className={sbc.join(' ')}>
+                        <Sidebar pages={pages} />
+                        {submenuBlock}
+                    </div>
 
-        //             <div className={scc.join(' ')}>
-        //                 <header className={css.header}>
-        //                     <Navigation />
-        //                 </header>
+                    <div className={scc.join(' ')}>
+                        <header className={css.header}>
+                            <Navigation />
+                        </header>
 
-        //                 <RequestsPanel />
+                        <RequestsPanel />
 
-        //                 <div className={css.content}>
-        //                     {children}
-        //                 </div>
-        //             </div>
-        //         </section>
-        //     </div>
-        // )
+                        <div className={css.content}>
+                            {children}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        )
     }
 }

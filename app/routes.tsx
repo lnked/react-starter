@@ -95,13 +95,13 @@ export default class App extends React.Component<{}, S> {
     }
 
     componentDidMount () {
-        const path = location.pathname.split('/')
+        // const path = location.pathname.split('/')
 
         this.handleLoadPages()
 
-        if (typeof (path[1]) !== 'undefined') {
-            this.handleChangePath(path[1])
-        }
+        // if (typeof (path[1]) !== 'undefined') {
+        //     this.handleChangePath(path[1], location.pathname)
+        // }
     }
 
     handleLoadPages = () => {
@@ -117,10 +117,10 @@ export default class App extends React.Component<{}, S> {
             })
     }
 
-    handleChangePath = (pathname: string) => {
+    handleChangePath = (page: string, pathname: string) => {
         if (pathname !== this.state.pathname) {
             axios
-                .get(`http://react-template.loc/api/${pathname}`)
+                .get(`http://react-template.loc/api/${page}`)
                 .then((response) => {
                     if (typeof (response.data.json) !== 'undefined') {
                         this.setState({ ...this.state, links: response.data.json, pathname })
@@ -144,15 +144,20 @@ export default class App extends React.Component<{}, S> {
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (
                             <Route {...rest} key={key} render={(props: any) => {
-                                if (rest.path) {
-                                    this.handleChangePath(rest.path)
-                                }
+                                console.log(rest.path, this.state.pathname)
 
-                                return (
-                                    <Transition timeout={1500}>
-                                        <Component {...props} className={`fade fade-${status}`} />
-                                    </Transition>
-                                )
+                                if (rest.path !== this.state.pathname) {
+                                    if (rest.path) {
+                                        console.log('render ', rest.path)
+                                        // this.handleChangePath(rest.path)
+                                    }
+
+                                    return (
+                                        <Transition timeout={1500}>
+                                            <Component {...props} className={`fade fade-${status}`} />
+                                        </Transition>
+                                    )
+                                }
                             }} />
                         ))}
 
