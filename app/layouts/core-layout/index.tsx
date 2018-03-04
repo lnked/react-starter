@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as css from './styles'
+import * as axios from 'axios'
 
 import { SvgFixer } from 'utils'
 
@@ -9,22 +10,22 @@ import { GroupLinks } from 'components'
 
 interface T {
     links?: any;
-    pages: any;
     children?: React.ReactChild | {} | any[] | boolean;
 }
 
 interface S {
     title: string;
+    pages: any;
 }
 
 export default class CoreLayout extends React.Component<T, S> {
     static defaultProps = {
-        links: [],
-        pages: []
+        links: []
     }
 
     state = {
-        title: 'React Starter App'
+        title: 'React Starter App',
+        pages: []
     }
 
     componentWillMount () {
@@ -33,12 +34,28 @@ export default class CoreLayout extends React.Component<T, S> {
 
     componentDidMount () {
         SvgFixer()
+        this.handleLoadPages()
+    }
+
+    handleLoadPages = () => {
+        axios
+            .get('http://react-template.loc/api/pages')
+            .then((response) => {
+                if (typeof (response.data.json) !== 'undefined') {
+                    this.setState({ ...this.state, pages: response.data.json })
+                }
+            })
+            .catch((err) => {
+                console.log('err: ', err)
+            })
     }
 
     render () {
         const sbc: any = []
         const scc: any = []
-        const { children, pages, links } = this.props
+
+        const { pages } = this.state
+        const { children, links } = this.props
 
         scc.push(css.body)
         sbc.push(css.sidebar)

@@ -97,24 +97,9 @@ export default class App extends React.Component<{}, S> {
     componentDidMount () {
         // const path = location.pathname.split('/')
 
-        this.handleLoadPages()
-
         // if (typeof (path[1]) !== 'undefined') {
         //     this.handleChangePath(path[1], location.pathname)
         // }
-    }
-
-    handleLoadPages = () => {
-        axios
-            .get('http://react-template.loc/api/pages')
-            .then((response) => {
-                if (typeof (response.data.json) !== 'undefined') {
-                    this.setState({ ...this.state, pages: response.data.json })
-                }
-            })
-            .catch((err) => {
-                console.log('err: ', err)
-            })
     }
 
     handleChangePath = (page: string, pathname: string) => {
@@ -135,11 +120,11 @@ export default class App extends React.Component<{}, S> {
     }
 
     render () {
-        const { links, pages } = this.state
+        const { links } = this.state
 
         return (
             <Router>
-                <CoreLayout links={links} pages={pages}>
+                <CoreLayout links={links}>
                     <Switch>
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (

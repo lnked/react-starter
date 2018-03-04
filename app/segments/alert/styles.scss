@@ -32,12 +32,10 @@
 
 .footer {
     padding: 15px;
-    text-align: right;
+    text-align: center;
     background-color: #efefef;
 }
 
 .button {
-    &:not(:first-child) {
-        margin-left: 10px;
-    }
+    margin: 0 10px;
 }
