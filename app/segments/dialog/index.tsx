@@ -1,16 +1,18 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Button } from 'components'
+import { Input, Button } from 'components'
 
 interface T {
+    type?: 'alert' | 'prompt' | 'confirm';
     title?: string;
-    value?: string;
+    value?: string | number;
     placeholder?: string;
 }
 
-export default class Confirm extends React.PureComponent<T, {}> {
+export default class Dialog extends React.PureComponent<T, {}> {
     static defaultProps = {
+        type: 'alert',
         title: '',
         value: '',
         placeholder: ''
@@ -24,11 +26,12 @@ export default class Confirm extends React.PureComponent<T, {}> {
         props.placeholder = placeholder
 
         return (
-            <div className={css.confirm}>
+            <div className={css.dialog}>
                 <button className={css.close} />
 
                 <div className={css.body}>
                     <div className={css.title}>{title}</div>
+                    <Input {...props} />
                 </div>
 
                 <footer className={css.footer}>

@@ -1,4 +1,4 @@
-export const confirm: string;
+export const dialog: string;
 export const close: string;
 export const title: string;
 export const body: string;
