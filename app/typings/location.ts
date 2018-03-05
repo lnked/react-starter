@@ -1,7 +1,7 @@
-interface Location {
-    pathname: string;
-}
+// interface Location {
+//     pathname: string;
+// }
 
-export interface LocationProps {
-    location: Location;
-}
+// export interface LocationProps {
+//     location: Location;
+// }
