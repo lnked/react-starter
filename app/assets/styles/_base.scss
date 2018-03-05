@@ -10,15 +10,14 @@
         }
     }
 
-    html, body {
+    html,
+    body {
         height: 100%;
     }
 
     html {
         font-size: $font-base;
         font-family: $font-family;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
     }
@@ -33,13 +32,16 @@
         background-color: #fafafa;
     }
 
-    body, input, textarea, select, button {
+    body,
+    input,
+    button,
+    select,
+    textarea {
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         font-feature-settings: 'liga', 'kern';
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-smoothing: antialiased;
         text-align: left;
     }
 
@@ -70,12 +72,12 @@
         text-shadow: none;
     }
 
-    [hidden], template {
+    [hidden],
+    template {
         display: none;
     }
 
-    [role=button] {
+    [role='button'] {
         cursor: pointer;
     }
-
 }

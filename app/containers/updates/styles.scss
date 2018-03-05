@@ -31,13 +31,15 @@
     list-style-type: none;
 }
 
-.added, .improved, .fixed {
+.added,
+.fixed,
+.improved {
     clear: both;
     padding-left: 20px;
     position: relative;
 
     &:before {
-        content: "";
+        content: '';
         width: 16px;
         height: 16px;
         position: absolute;
@@ -50,20 +52,14 @@
     }
 }
 
-.added {
-    &:before {
-        background-color: blue;
-    }
+.added:before {
+    background-color: $c-blue;
 }
 
-.improved {
-    &:before {
-        background-color: red;
-    }
+.improved:before {
+    background-color: $c-red;
 }
 
-.fixed {
-    &:before {
-        background-color: violet;
-    }
+.fixed:before {
+    background-color: $c-green;
 }

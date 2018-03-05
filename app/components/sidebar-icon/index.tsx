@@ -30,6 +30,8 @@ export default class SidebarIcon extends React.Component<T, {}> {
 
         if (className) {
             cn.push(className)
+        } else {
+            cn.push(css.relative)
         }
 
         return (

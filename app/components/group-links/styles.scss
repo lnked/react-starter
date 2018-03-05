@@ -3,19 +3,18 @@
 .link {
     height: 48px;
     color: #222;
-    display: block;
     cursor: pointer;
+    display: block;
+    position: relative;
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 45px;
     padding: 0 15px 0 46px;
     text-decoration: none;
-    color: rgb(85, 85, 85);
-    position: relative;
     transition: all 200ms ease-in-out;
 
     &:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         width: 24px;

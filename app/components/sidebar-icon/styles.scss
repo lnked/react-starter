@@ -19,7 +19,6 @@ circle {
     color: $c-white;
     display: block;
     overflow: hidden;
-    position: relative;
     text-align: center;
     margin-bottom: 10px;
 
@@ -72,6 +71,10 @@ circle {
     }
 }
 
+.relative {
+    position: relative;
+}
+
 .circle {
     position: absolute;
     left: 50%;
@@ -108,7 +111,7 @@ circle {
     background-color: rgba($c-black, .8);
 
     &:before {
-        content: "";
+        content: '';
         width: 0;
         height: 0;
         position: absolute;

@@ -7,9 +7,7 @@
         font-display: swap;
 
         src: url($file-filename + '.eot');
-        src: url($file-filename + '.woff2') format('woff2'),
-             url($file-filename + '.ttf') format('truetype'),
-             url($file-filename + '.woff') format('woff');
+        src: url($file-filename + '.woff2') format('woff2'), url($file-filename + '.woff') format('woff');
     }
 }
 

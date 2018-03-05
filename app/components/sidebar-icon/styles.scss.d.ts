@@ -1,4 +1,5 @@
 export const button: string;
+export const relative: string;
 export const circle: string;
 export const active: string;
 export const svgrotate: string;

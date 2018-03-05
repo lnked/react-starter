@@ -50,7 +50,6 @@
                 "transform-react-pure-class-to-function",
                 ["transform-react-remove-prop-types", {
                     "mode": "wrap",
-                    // "removeImport": true,
                     "ignoreFilenames": ["node_modules"],
                     "additionalLibraries": ["react-immutable-proptypes"]
                 }]

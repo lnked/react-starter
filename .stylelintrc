@@ -6,8 +6,25 @@
         "color-hex-case": "lower",
         "color-hex-length": "short",
         "color-named": "never",
-        "at-rule-no-unknown": [true, { "ignoreAtRules": ["extend", "include"] }],
-        "no-eol-whitespace": [true, { "ignore": "empty-lines" }],
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                "ignorePseudoClasses": ["global"]
+            }
+        ],
+        "property-no-vendor-prefix": true,
+        "at-rule-no-unknown": [
+            true, {
+                "ignoreAtRules": [
+                    "if",
+                    "else",
+                    "extend",
+                    "mixin",
+                    "include"
+                ]
+            }
+        ],
+        "no-eol-whitespace": [true, { "ignore": ["empty-lines"] } ],
         "selector-no-qualifying-type": true,
         "selector-combinator-space-after": "always",
         "selector-attribute-quotes": "always",
@@ -18,7 +35,6 @@
         "declaration-no-important": true,
         "declaration-colon-space-before": "never",
         "declaration-colon-space-after": "always",
-        "property-no-vendor-prefix": true,
         "value-no-vendor-prefix": true,
         "number-leading-zero": "never",
         "function-url-quotes": "never",
