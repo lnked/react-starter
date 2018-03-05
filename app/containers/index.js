@@ -1,5 +1,4 @@
 import Auth from 'containers/auth'
-import Load from 'containers/load'
 import Shop from 'containers/shop'
 import Tasks from 'containers/tasks'
 import Assets from 'containers/assets'
@@ -17,7 +16,6 @@ import ComponentPage from 'containers/component-page'
 
 export {
     Auth,
-    Load,
     Shop,
     Tasks,
     Assets,

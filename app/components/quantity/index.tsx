@@ -2,12 +2,12 @@ import * as React from 'react'
 import * as css from './styles'
 
 interface T {
-    min: number;
-    max: number;
-    step: number;
     name: string;
-    item: string | number;
-    count: number;
+    min?: number;
+    max?: number;
+    step?: number;
+    item?: string | number;
+    count?: number;
     type?: string;
     handleChange?: (count: number) => void | boolean;
 }

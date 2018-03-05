@@ -34,10 +34,7 @@ useConfig.push(
 
 tsConfig.push(
     {
-        loader: 'awesome-typescript-loader',
-        options: {
-            transpileOnly: true
-        }
+        loader: 'awesome-typescript-loader'
     }
 );
 

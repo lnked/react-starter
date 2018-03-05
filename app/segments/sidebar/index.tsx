@@ -3,8 +3,6 @@ import * as css from './styles'
 
 import { Logo, SidebarIcon } from 'components'
 
-const base = ''
-
 interface T {
     pages: any;
 }
@@ -15,11 +13,12 @@ export default class Sidebar extends React.Component<T, {}> {
     }
 
     render () {
+        const base = ''
         const { pages } = this.props
 
         return (
             <nav className={css.sidebar}>
-                <Logo link={base} />
+                <Logo link={'/'} />
 
                 {pages.map((props: any, id: number) =>
                     (<SidebarIcon key={id} {...props}
@@ -31,8 +30,6 @@ export default class Sidebar extends React.Component<T, {}> {
                     key="site.settings"
                     icon="settings"
                     title="Настройки сайта"
-                    system="settings"
-                    component="settings"
                     link={`${base}/settings`}
                     className={css.settings}
                 />

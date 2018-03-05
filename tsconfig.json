@@ -1,18 +1,22 @@
 {
+    "buildOnSave": false,
+    "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "baseUrl": "./",
+        "baseUrl": "./app",
         "target": "es5",
-        "module": "commonjs",
+        "module": "esnext",
+        // "module": "commonjs",
         "outDir": "./dist",
         "sourceMap": true,
         "allowJs": true,
         "declaration": false,
-        "inlineSourceMap": false,
+        "skipLibCheck": true,
         "inlineSources": false,
         "noImplicitAny": false,
         "noUnusedLocals": true,
-        "removeComments": true,
+        "removeComments": false,
+        "inlineSourceMap": false,
         "strictNullChecks": true,
         "preserveConstEnums": true,
         "noImplicitReturns": false,
@@ -20,7 +24,8 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "classic",
+        "suppressImplicitAnyIndexErrors": true,
+        "moduleResolution": "node",
         "lib": [
             "es5",
             "es6",
@@ -28,16 +33,76 @@
             "dom"
         ],
         "paths": {
-            "app/*": [
-                "./app/*"
+            "*": [
+                "*",
+                "*/*"
+            ],
+            "hoc": [
+                "./hoc"
+            ],
+            "segments": [
+                "./segments"
+            ],
+            "layouts": [
+                "./layouts",
+                "./layouts/**/*"
+            ],
+            "containers": [
+                "./containers"
+            ],
+            "components": [
+                "./components"
+            ],
+            "typings": [
+                "./typings"
+            ],
+            "assets": [
+                "./assets"
+            ],
+            "utils": [
+                "./utils"
+            ],
+            "config": [
+                "./config"
+            ],
+            "styles": [
+                "./assets/styles"
+            ],
+            "images": [
+                "./assets/images"
+            ],
+            "scripts": [
+                "./assets/scripts"
+            ],
+            "svgstore": [
+                "./assets/svgstore"
+            ],
+            "store": [
+                "./redux/store"
+            ],
+            "actions": [
+                "./redux/actions"
+            ],
+            "reducers": [
+                "./redux/reducers"
             ]
         }
+        // "rootDirs": [
+        //     "./segments/confirm",
+        //     "./segments/sidebar",
+        // ]
     },
     "files": [
-        "./app/typings/**.ts"
+        "./typings/**.ts"
+    ],
+    "filesGlob": [
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.scss",
+        "!node_modules/**/*"
     ],
     "include": [
-        "./app/**/*"
+        "./**/*"
     ],
     "exclude": [
         "node_modules",
@@ -49,6 +114,11 @@
     ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,
-        "useBabel": true
+        "useBabel": true,
+        "forkChecker": true,
+        "transpileOnly": false,
+        "useWebpackText": true,
+        "errorsAsWarnings": true,
+        "useTranspileModule": true
     }
 }

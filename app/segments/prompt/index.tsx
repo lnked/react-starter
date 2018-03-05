@@ -4,9 +4,9 @@ import * as css from './styles'
 import { Input, Button } from 'components'
 
 interface T {
-    title: string;
-    value: string;
-    placeholder: string;
+    title?: string;
+    value?: string;
+    placeholder?: string;
 }
 
 export default class Prompt extends React.PureComponent<T, {}> {
@@ -33,8 +33,8 @@ export default class Prompt extends React.PureComponent<T, {}> {
                 </div>
 
                 <footer className={css.footer}>
-                    <Button variant="danger" classsName={css.button}>Отмена</Button>
-                    <Button variant="success" classsName={css.button}>Подтвердить</Button>
+                    <Button variant="danger" className={css.button}>Отмена</Button>
+                    <Button variant="success" className={css.button}>Подтвердить</Button>
                 </footer>
             </div>
         )

@@ -1,3 +1,3 @@
-export interface DTProps {
+export interface LocationProps {
     location: object;
 }

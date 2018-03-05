@@ -5,7 +5,7 @@ interface T {
     title?: string;
     bolded?: boolean;
     className?: string;
-    variant?: 'info' | 'default ' | 'primary' | 'success' | 'warning' | 'danger';
+    variant?: 'info' | 'primary' | 'success' | 'warning' | 'danger';
     children?: React.ReactChild | {} | any[] | boolean;
 }
 

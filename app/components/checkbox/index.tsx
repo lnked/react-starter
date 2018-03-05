@@ -8,7 +8,7 @@ interface T {
     label?: string;
     checked?: boolean;
     className?: string;
-    value: string | number;
+    value?: string | number;
     children?: React.ReactChild | {} | any[] | boolean;
     handleChange: (checked: string, status: boolean) => void | boolean;
 }
@@ -22,13 +22,14 @@ export default class Checkbox extends React.PureComponent<T, S> {
         size: 'normal',
         theme: '',
         label: '',
+        value: '',
         className: '',
         checked: false,
         handleChange: false
     }
 
     state = {
-        checked: false || this.props.checked
+        checked: this.props.checked
     }
 
     componentWillReceiveProps (nextProps) {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as axios from 'axios'
+// import * as axios from 'axios'
 
 import {
     BrowserRouter as Router,
@@ -103,20 +103,22 @@ export default class App extends React.Component<{}, S> {
     }
 
     handleChangePath = (page: string, pathname: string) => {
-        if (pathname !== this.state.pathname) {
-            axios
-                .get(`http://react-template.loc/api/${page}`)
-                .then((response) => {
-                    if (typeof (response.data.json) !== 'undefined') {
-                        this.setState({ ...this.state, links: response.data.json, pathname })
-                    }
-                })
-                .catch((err) => {
-                    console.log('err: ', err)
-                })
-        } else {
-            this.setState({ ...this.state, links: [] })
-        }
+        console.log(page, pathname)
+
+        // if (pathname !== this.state.pathname) {
+        //     axios
+        //         .get(`http://react-template.loc/api/${page}`)
+        //         .then((response) => {
+        //             if (typeof (response.data.json) !== 'undefined') {
+        //                 this.setState({ ...this.state, links: response.data.json, pathname })
+        //             }
+        //         })
+        //         .catch((err) => {
+        //             console.log('err: ', err)
+        //         })
+        // } else {
+        //     this.setState({ ...this.state, links: [] })
+        // }
     }
 
     render () {

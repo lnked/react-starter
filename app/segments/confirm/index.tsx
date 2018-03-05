@@ -4,12 +4,16 @@ import * as css from './styles'
 import { Button } from 'components'
 
 interface T {
-    title: string;
+    title?: string;
+    value?: string;
+    placeholder?: string;
 }
 
 export default class Confirm extends React.PureComponent<T, {}> {
     static defaultProps = {
-        title: ''
+        title: '',
+        value: '',
+        placeholder: ''
     }
 
     render () {
@@ -28,8 +32,8 @@ export default class Confirm extends React.PureComponent<T, {}> {
                 </div>
 
                 <footer className={css.footer}>
-                    <Button variant="danger" classsName={css.button}>Отмена</Button>
-                    <Button variant="success" classsName={css.button}>Подтвердить</Button>
+                    <Button variant="danger" className={css.button}>Отмена</Button>
+                    <Button variant="success" className={css.button}>Подтвердить</Button>
                 </footer>
             </div>
         )
