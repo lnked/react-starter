@@ -1,20 +1,20 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
 import * as css from './styles.scss'
 
 import { Radio } from 'components'
 
-export default class RadioGroup extends React.Component<{}, {}> {
-    static propTypes = {
-        type: PropTypes.string,
-        items: PropTypes.array,
-        checked: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
-        ]),
-        handleChange: PropTypes.func
-    }
+interface T {
+    type?: string;
+    items: any;
+    checked?: boolean | number;
+    handleChange: (value: number | string | boolean) => void | boolean;
+}
 
+interface S {
+    checked: boolean | number;
+}
+
+export default class RadioGroup extends React.Component<T, S> {
     static defaultProps = {
         type: 'normal',
         items: [],
@@ -23,10 +23,8 @@ export default class RadioGroup extends React.Component<{}, {}> {
         }
     }
 
-    componentWillMount () {
-        this.setState({
-            checked: this.props.checked
-        })
+    state = {
+        checked: this.props.checked || false
     }
 
     handleChange = (value) => {
@@ -42,23 +40,27 @@ export default class RadioGroup extends React.Component<{}, {}> {
             items
         } = this.props
 
-        const {
-            checked
-        } = this.state
+        // const {
+        //     checked
+        // } = this.state
 
         if (items && items.length) {
-            const group = []
+            const group: any = []
 
             items.map((props, id) => {
-                if (props.value === Number(checked)) {
-                    props.checked = true
-                } else {
-                    props.checked = false
-                }
+                console.log(props)
 
-                group.push(<div key={id.toString()} className={css.group__item}>
-                    <Radio {...props} handleChange={this.handleChange.bind(this)} />
-                </div>)
+                // if (!checked && props.value === Number(checked)) {
+                //     props.checked = true
+                // } else {
+                //     props.checked = false
+                // }
+
+                group.push(
+                    <div key={id} className={css.item}>
+                        <Radio {...props} handleChange={this.handleChange} />
+                    </div>
+                )
             })
 
             return (

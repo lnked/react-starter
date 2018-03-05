@@ -3,9 +3,9 @@ import * as css from './styles.scss'
 
 interface T {
     name: string;
-    min?: number;
-    max?: number;
-    step?: number;
+    min: number;
+    max: number;
+    step: number;
     item?: string | number;
     count?: number;
     type?: string;
@@ -29,7 +29,7 @@ export default class Quantity extends React.Component<T, S> {
     }
 
     state = {
-        count: this.props.count
+        count: this.props.count || 0
     }
 
     componentWillReceiveProps ({ nextProps }: any) {

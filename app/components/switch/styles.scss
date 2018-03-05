@@ -5,7 +5,7 @@ $switch-bullet-padding: 4px;
 $switch-bullet-size: $switch-height - $switch-bullet-padding;
 $switch-width: ($switch-height * 2) - ($switch-bullet-padding);
 
-.switch {
+.change {
     width: $switch-width;
     height: $switch-height;
     position: relative;

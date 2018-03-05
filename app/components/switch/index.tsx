@@ -49,7 +49,7 @@ export default class Switch extends React.Component<T, S> {
         }
 
         return (
-            <label className={css.switch} htmlFor={id}>
+            <label className={css.change} htmlFor={id}>
                 <input {...props} />
                 <span className={cn.join(' ')} />
             </label>

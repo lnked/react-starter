@@ -24,9 +24,11 @@ const usesConfig = [
     {
         loader: "typings-for-css-modules-loader",
         options: {
+            sourceMap: define.rs_analyzer,
+            importLoaders: 3,
+            modules: true,
             namedExport: true,
-            camelCase: true,
-            modules: true
+            camelCase: true
         }
     },
     // {

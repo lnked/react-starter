@@ -6,26 +6,28 @@ interface T {
     label?: string;
     checked?: boolean;
     className?: string;
-    value: string | number;
-    children?: React.ReactChild | {} | any[] | boolean;
+    value?: string | number;
+    children?: React.ReactChild | any[] | boolean;
     handleChange: (value: number | string | boolean) => void | boolean;
 }
 
 interface S {
-    checked: boolean;
+    checked: any;
 }
 
 export default class Radio extends React.PureComponent<T, S> {
     static defaultProps = {
         label: '',
+        value: '',
         checked: false,
+        className: '',
         handleChange: (value) => {
             console.log('check radio: = ', value)
         }
     }
 
     state = {
-        checked: false || this.props.checked
+        checked: this.props.checked
     }
 
     handleChange = (e) => {
