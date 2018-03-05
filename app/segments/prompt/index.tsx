@@ -5,7 +5,7 @@ import { Input, Button } from 'components'
 
 interface T {
     title?: string;
-    value?: string;
+    value?: string | number;
     placeholder?: string;
 }
 

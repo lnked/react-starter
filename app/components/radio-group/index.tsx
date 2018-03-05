@@ -69,6 +69,8 @@ export default class RadioGroup extends React.Component<T, S> {
                 </div>
             )
         }
+
+        return ''
     }
 
     render () {

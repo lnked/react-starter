@@ -4,7 +4,7 @@ import * as css from './styles.scss'
 import ClipboardButton from 'react-clipboard.js'
 
 interface T {
-    color: string;
+    color?: string;
 }
 
 interface S {
@@ -17,7 +17,7 @@ export default class ColorPicker extends React.Component<T, S> {
     }
 
     state = {
-        color: this.props.color.replace('#', '')
+        color: this.props.color || ''
     }
 
     handleChange = (e) => {
@@ -37,7 +37,11 @@ export default class ColorPicker extends React.Component<T, S> {
     renderControl = () => {
         const clearButton: any = []
 
-        if (this.state.color) {
+        const { color } = this.state
+
+        const pureColor = color ? color.replace('#', '') : ''
+
+        if (pureColor) {
             clearButton.push(
                 <button className={css.clear} key="clear" onClick={this.handleClear}>
                     <svg className={css.clear__icon} role="presentation" aria-labelledby="title" aria-hidden={true}>
@@ -56,7 +60,7 @@ export default class ColorPicker extends React.Component<T, S> {
                     maxLength={6}
                     placeholder=""
                     className={css.input}
-                    value={this.state.color}
+                    value={pureColor}
                     onChange={this.handleChange}
                 />
 

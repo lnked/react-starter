@@ -3,9 +3,9 @@ import * as css from './styles.scss'
 
 interface T {
     name: string;
-    value: string | number;
-    children: string | number;
-    type: string;
+    value?: string | number;
+    children?: string | number;
+    type?: string;
     hint?: string;
     focus?: boolean;
     error?: string | boolean;
@@ -13,10 +13,10 @@ interface T {
     className?: string | boolean;
     placeholder?: string;
     tabindex?: number | boolean;
-    maxlength: number | boolean;
-    status: 'warn' | 'error' | 'valid' | 'normal';
+    maxlength?: number | boolean;
     handleChange?: ((value: any) => void);
-    textControl: React.ReactDOM
+    status?: 'warn' | 'error' | 'valid' | 'normal';
+    textControl?: React.ReactDOM
 }
 
 interface S {
@@ -27,7 +27,7 @@ export default class Input extends React.Component<T, S> {
     static defaultProps = {
         type: 'text',
         status: 'normal',
-        value: '',
+        value: 0,
         children: '',
         focus: false,
         cleaned: false,
@@ -41,7 +41,7 @@ export default class Input extends React.Component<T, S> {
     }
 
     state = {
-        value: this.props.value || this.props.children
+        value: this.props.value || this.props.children || 0
     }
 
     textControl: any = []

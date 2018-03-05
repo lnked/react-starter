@@ -8,7 +8,7 @@ interface T {
     className?: string;
     value?: string | number;
     children?: React.ReactChild | any[] | boolean;
-    handleChange: (value: number | string | boolean) => void | boolean;
+    handleChange?: (value: number | string | boolean) => void | boolean;
 }
 
 interface S {

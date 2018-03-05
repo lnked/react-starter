@@ -6,9 +6,9 @@ interface T {
     min: number;
     max: number;
     step: number;
-    item?: string | number;
     count?: number;
     type?: string;
+    item?: string | number;
     handleChange?: (count: number) => void | boolean;
 }
 

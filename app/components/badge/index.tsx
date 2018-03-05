@@ -6,7 +6,7 @@ interface T {
     bolded?: boolean;
     className?: string;
     variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
-    children?: React.ReactChild | {} | any[] | boolean;
+    children?: string | React.ReactChild | React.ReactNode | any[];
 }
 
 export default class Badge extends React.PureComponent<T, {}> {

@@ -3,8 +3,8 @@ import * as css from './styles.scss'
 
 interface T {
     name: string;
-    round: boolean;
-    checked: boolean;
+    round?: boolean;
+    checked?: boolean;
 }
 
 interface S {
@@ -19,7 +19,7 @@ export default class Switch extends React.Component<T, S> {
     }
 
     state = {
-        checked: this.props.checked
+        checked: this.props.checked || false
     }
 
     handleChange = () => {

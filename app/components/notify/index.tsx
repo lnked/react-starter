@@ -16,6 +16,8 @@ export default class Notify extends React.Component<T, {}> {
                 <div className={css.bullet} />
             )
         }
+
+        return ''
     }
 
     render () {

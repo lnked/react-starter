@@ -10,7 +10,7 @@ import { GroupLinks } from 'components'
 
 interface T {
     links?: any;
-    children?: React.ReactChild | {} | any[] | boolean;
+    children?: string | React.ReactChild | React.ReactNode | any[];
 }
 
 interface S {

@@ -96,7 +96,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <Button variant="link">Применить</Button><br /><br />
                         <Button variant="info">Применить</Button><br /><br />
                         <Button variant="danger">Применить</Button><br /><br />
-                        <Button variant="default">Применить</Button><br /><br />
+                        <Button variant="normal">Применить</Button><br /><br />
                         <Button variant="primary">Применить</Button><br /><br />
                         <Button variant="success">Применить</Button><br /><br />
                         <Button variant="warning">Применить</Button><br /><br />
@@ -111,7 +111,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
                         <Loader /><br /><br />
                         <Spinner /><br /><br />
-                        <Quantity name="count" /><br /><br />
+                        <Quantity name="count" min={1} max={999} step={1} /><br /><br />
                     </div>
                 </Widget>
 

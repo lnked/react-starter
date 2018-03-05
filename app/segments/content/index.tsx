@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 interface T {
     className?: string;
-    children?: React.ReactChild | {} | any[] | boolean;
+    children?: string | React.ReactChild | React.ReactNode | any[];
 }
 
 export default class Content extends React.Component<T, {}> {

@@ -9,8 +9,8 @@ interface T {
     checked?: boolean;
     className?: string;
     value?: string | number;
-    children?: string | JSX.Element | boolean;
-    handleChange: (checked: string, status: boolean) => void | boolean;
+    children?: string | React.ReactChild | React.ReactNode | any[];
+    handleChange?: (checked: string, status: boolean) => void | boolean;
 }
 
 interface S {
@@ -73,6 +73,8 @@ export default class Checkbox extends React.PureComponent<T, S> {
                 </span>
             )
         }
+
+        return ''
     }
 
     render () {

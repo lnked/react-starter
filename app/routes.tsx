@@ -119,6 +119,8 @@ export default class App extends React.Component<{}, S> {
         // } else {
         //     this.setState({ ...this.state, links: [] })
         // }
+
+        return ''
     }
 
     render () {
@@ -145,6 +147,8 @@ export default class App extends React.Component<{}, S> {
                                         </Transition>
                                     )
                                 }
+
+                                return ''
                             }} />
                         ))}
 

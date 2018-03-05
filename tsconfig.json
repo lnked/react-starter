@@ -7,18 +7,19 @@
         "target": "es5",
         "module": "commonjs",
         "outDir": "./dist",
-        "sourceMap": true,
+        "strict": true,
         "allowJs": true,
+        "sourceMap": true,
         "declaration": false,
         "skipLibCheck": true,
-        "inlineSources": false,
         "noImplicitAny": false,
+        "inlineSources": false,
         "noUnusedLocals": true,
-        "removeComments": false,
+        "removeComments": true,
         "inlineSourceMap": false,
         "strictNullChecks": true,
         "preserveConstEnums": true,
-        "noImplicitReturns": false,
+        "noImplicitReturns": true,
         "noUnusedParameters": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -80,11 +81,13 @@
             "reducers": [
                 "./redux/reducers"
             ]
-        }
-        // "rootDirs": [
-        //     "./segments/confirm",
-        //     "./segments/sidebar",
-        // ]
+        },
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
     },
     "files": [
         "./typings/**.ts"

@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 interface T {
-    isOpened: boolean;
+    isOpened?: boolean;
 }
 
 interface S {
@@ -15,7 +15,7 @@ export default class Sandwich extends React.PureComponent<T, S> {
     }
 
     state = {
-        isOpened: this.props.isOpened
+        isOpened: this.props.isOpened || false
     }
 
     handleChange = () => {
