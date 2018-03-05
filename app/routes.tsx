@@ -107,7 +107,7 @@ export default class App extends React.Component<{}, S> {
 
         // if (pathname !== this.state.pathname) {
         //     axios
-        //         .get(`http://react-template.loc/api/${page}`)
+        //         .get(`/api/${page}`)
         //         .then((response) => {
         //             if (typeof (response.data.json) !== 'undefined') {
         //                 this.setState({ ...this.state, links: response.data.json, pathname })

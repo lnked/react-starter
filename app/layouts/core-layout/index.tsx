@@ -39,7 +39,7 @@ export default class CoreLayout extends React.Component<T, S> {
 
     handleLoadPages = () => {
         axios
-            .get('http://react-template.loc/api/pages')
+            .get('/api/pages')
             .then((response) => {
                 if (typeof (response.data.json) !== 'undefined') {
                     this.setState({ ...this.state, pages: response.data.json })
