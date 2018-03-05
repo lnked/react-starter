@@ -39,8 +39,7 @@
                 "./segments"
             ],
             "layouts": [
-                "./layouts",
-                "./layouts/**/*"
+                "./layouts"
             ],
             "containers": [
                 "./containers"
