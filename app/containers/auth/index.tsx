@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as css from './styles'
+import * as css from './styles.scss'
 // import WebStorage from 'react-webstorage'
 // import { Input, Checkbox, Button } from 'components'
 
@@ -34,8 +34,8 @@ export default class Auth extends React.Component<{}, {}> {
     //     })
     // }
 
-    // handleSubmit = (event) => {
-    //     event.preventDefault()
+    handleSubmit = (event) => {
+        event.preventDefault()
 
     //     if (this.state.save) {
     //         store.setItem('save', this.state.save)
@@ -44,7 +44,7 @@ export default class Auth extends React.Component<{}, {}> {
     //     } else {
     //         store.clear()
     //     }
-    // }
+    }
 
     // inputItem (item, index) {
     //     return (

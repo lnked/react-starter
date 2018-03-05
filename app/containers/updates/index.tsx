@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as css from './styles'
+import * as css from './styles.scss'
 
 import axios from 'axios'
 

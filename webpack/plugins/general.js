@@ -15,6 +15,10 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const AsyncModulePlugin = require('async-module-loader/plugin');
 
 const plugins = [
+    new webpack.WatchIgnorePlugin([
+        /css\.d\.ts$/,
+        /scss\.d\.ts$/
+    ]),
     new WebpackNotifierPlugin(),
     new HappyPack({
         loaders: scripts.loaders,

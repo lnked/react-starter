@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import * as css from './styles'
+import * as css from './styles.scss'
 
 import { Radio } from 'components'
 

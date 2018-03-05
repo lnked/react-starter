@@ -22,17 +22,25 @@ const cssConfig = [
 
 const usesConfig = [
     {
-        loader: 'css-loader',
+        loader: "typings-for-css-modules-loader",
         options: {
-            module: true,
-            modules: define.rs_production,
-            importLoaders: 1,
-            minimize: define.rs_production,
-            sourceMap: define.rs_development || define.rs_analyzer,
-            discardComments: { removeAll: true },
-            localIdentName: define.rs_production ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
+            namedExport: true,
+            camelCase: true,
+            modules: true
         }
     },
+    // {
+    //     loader: 'css-loader',
+    //     options: {
+    //         module: true,
+    //         modules: define.rs_production,
+    //         importLoaders: 1,
+    //         minimize: define.rs_production,
+    //         sourceMap: define.rs_development || define.rs_analyzer,
+    //         discardComments: { removeAll: true },
+    //         localIdentName: define.rs_production ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
+    //     }
+    // },
     {
         loader: 'postcss-loader',
         options: {
