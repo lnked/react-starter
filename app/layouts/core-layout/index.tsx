@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as css from './styles.scss'
-// import * as axios from 'axios'
+import axios from 'axios'
 
 import { SvgFixer } from 'utils'
 
@@ -34,20 +34,20 @@ export default class CoreLayout extends React.Component<T, S> {
 
     componentDidMount () {
         SvgFixer()
-        // this.handleLoadPages()
+        this.handleLoadPages()
     }
 
     handleLoadPages = () => {
-        // axios
-        //     .get('http://react-template.loc/api/pages')
-        //     .then((response) => {
-        //         if (typeof (response.data.json) !== 'undefined') {
-        //             this.setState({ ...this.state, pages: response.data.json })
-        //         }
-        //     })
-        //     .catch((err) => {
-        //         console.log('err: ', err)
-        //     })
+        axios
+            .get('http://react-template.loc/api/pages')
+            .then((response) => {
+                if (typeof (response.data.json) !== 'undefined') {
+                    this.setState({ ...this.state, pages: response.data.json })
+                }
+            })
+            .catch((err) => {
+                console.log('err: ', err)
+            })
     }
 
     render () {

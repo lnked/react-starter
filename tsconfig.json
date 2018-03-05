@@ -4,7 +4,6 @@
     "compilerOptions": {
         "jsx": "react",
         "baseUrl": "./",
-        // "target": "es5",
         "target": "es6",
         "module": "commonjs",
         "outDir": "./dist",
@@ -114,13 +113,13 @@
         "./app/**/*"
     ],
     "exclude": [
-        "node_modules",
         ".git",
         "dist",
         "tests",
         "webpack",
+        "typings",
         "coverage",
-        "./app/**/*.spec.ts"
+        "node_modules"
     ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,

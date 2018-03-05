@@ -2203,9 +2203,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000782"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000782.tgz#d8815bce1578c350aced1132507301205e0fab53"
 
-caniuse-lite@1.0.30000811:
-  version "1.0.30000811"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000811.tgz#0b6e40f2efccc27bd3cb52f91ee7ca4673d77d10"
+caniuse-lite@1.0.30000812:
+  version "1.0.30000812"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000812.tgz#d173b686b49bc941fa18ff2e7e533048e20ed92c"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000780:
   version "1.0.30000782"
@@ -10745,9 +10745,9 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-size-limit@0.15.2:
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.15.2.tgz#f16a9238f5e10d2f7f0c03f19a01829b63d7eca4"
+size-limit@0.16.1:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.16.1.tgz#48c8bff6da648fcbf067ed2f9877d5d99c9a3541"
   dependencies:
     bytes "^3.0.0"
     chalk "^2.3.2"
@@ -10762,8 +10762,7 @@ size-limit@0.15.2:
     memory-fs "^0.4.1"
     read-pkg-up "^3.0.0"
     style-loader "^0.20.2"
-    uglifyjs-webpack-plugin "^1.2.2"
-    webpack "^4.0.1"
+    webpack "^4.1.0"
     webpack-bundle-analyzer "^2.11.1"
     yargs "^11.0.0"
 
@@ -11870,7 +11869,7 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
-uglifyjs-webpack-plugin@1.2.2, uglifyjs-webpack-plugin@^1.1.1, uglifyjs-webpack-plugin@^1.2.2:
+uglifyjs-webpack-plugin@1.2.2, uglifyjs-webpack-plugin@^1.1.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.2.tgz#e7516d4367afdb715c3847841eb46f94c45ca2b9"
   dependencies:
@@ -12547,7 +12546,7 @@ webpack@^1.13.0:
     watchpack "^0.2.1"
     webpack-core "~0.6.9"
 
-webpack@^4.0.1:
+webpack@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.1.0.tgz#91b6862e56eb3b18b79bb10b51866987ff10d2d6"
   dependencies:

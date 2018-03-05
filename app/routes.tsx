@@ -1,5 +1,5 @@
 import * as React from 'react'
-// import * as axios from 'axios'
+// import axios from 'axios'
 
 import {
     BrowserRouter as Router,
