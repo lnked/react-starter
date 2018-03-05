@@ -22,9 +22,9 @@ import {
 } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
-    renderDialog = () => {
+    renderDialog () {
         return (
-            <React.Fragment>
+            <div>
                 <Dialog type="alert" title="Предупреждение!" />
                 <br /> <br />
                 <Dialog
@@ -49,82 +49,82 @@ export default class Dashboard extends React.Component<{}, {}> {
                     type="confirm"
                     title="Вы уверены что хотите удалить файл?"
                 />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderTabs = () => {
+    renderTabs () {
         return (
-            <React.Fragment>
+            <div>
                 <Tabs title="tabs test" />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderSandwich = () => {
+    renderSandwich () {
         return (
-            <React.Fragment>
+            <div>
                 <Sandwich /> <br /> <br />
                 <Sandwich isOpened /> <br /> <br />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderSwitch = () => {
+    renderSwitch () {
         return (
-            <React.Fragment>
+            <div>
                 <Switch name="switch1" />
                 <br /><br />
                 <Switch name="switch2" checked />
                 <br /><br />
                 <Switch name="switch3" round />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderInput = () => {
+    renderInput () {
         return (
-            <React.Fragment>
+            <div>
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input3" focus />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderColorPicker = () => {
+    renderColorPicker () {
         return (
-            <React.Fragment>
+            <div>
                 <ColorPicker />
                 <br /><br />
                 <ColorPicker color="#f00" />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderRadio = () => {
+    renderRadio () {
         return (
-            <React.Fragment>
+            <div>
                 <Radio name="radio" label="1 Входящие" value={1} /><br /><br />
                 <Radio name="radio" label="2 Входящие" value={2} /><br /><br />
                 <Radio name="radio" label="3 Входящие" value={3} /><br /><br />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderCheckbox = () => {
+    renderCheckbox () {
         return (
-            <React.Fragment>
+            <div>
                 <Checkbox name="hecke1" /><br /><br />
                 <Checkbox name="hecke2" checked /><br /><br />
                 <Checkbox name="hecke3" label="Корзина" />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderButton = () => {
+    renderButton () {
         return (
-            <React.Fragment>
+            <div>
                 <Button>Применить</Button><br /><br />
                 <Button size="small">Применить</Button><br /><br />
                 <Button size="normal">Применить</Button><br /><br />
@@ -140,20 +140,20 @@ export default class Dashboard extends React.Component<{}, {}> {
                 <Button variant="success">Применить</Button><br /><br />
                 <Button variant="warning">Применить</Button><br /><br />
                 <Button variant="subtle-link">Применить</Button><br /><br />
-            </React.Fragment>
+            </div>
         )
     }
 
-    renderBadge = () => {
+    renderBadge () {
         return (
-            <React.Fragment>
+            <div>
                 <Badge>badge default</Badge><br /><br />
                 <Badge variant="info">badge info</Badge><br /><br />
                 <Badge variant="primary">badge primary</Badge><br /><br />
                 <Badge variant="success">badge success</Badge><br /><br />
                 <Badge variant="warning">badge warning</Badge><br /><br />
                 <Badge variant="danger">badge danger</Badge><br /><br />
-            </React.Fragment>
+            </div>
         )
     }
 
@@ -169,25 +169,25 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <Loader />
                         <Spinner /><br /><br />
                         <Quantity name="count" min={1} max={999} step={1} /><br /><br />
-                        {this.renderDialog}
+                        {this.renderDialog()}
                         <br /><br />
-                        {this.renderTabs}
+                        {this.renderTabs()}
                         <br /><br />
-                        {this.renderSandwich}
+                        {this.renderSandwich()}
                         <br /><br />
-                        {this.renderSwitch}
+                        {this.renderSwitch()}
                         <br /><br />
-                        {this.renderInput}
+                        {this.renderInput()}
                         <br /><br />
-                        {this.renderColorPicker}
+                        {this.renderColorPicker()}
                         <br /><br />
-                        {this.renderRadio}
+                        {this.renderRadio()}
                         <br /><br />
-                        {this.renderCheckbox}
+                        {this.renderCheckbox()}
                         <br /><br />
-                        {this.renderButton}
+                        {this.renderButton()}
                         <br /><br />
-                        {this.renderBadge}
+                        {this.renderBadge()}
                     </div>
                 </Widget>
 

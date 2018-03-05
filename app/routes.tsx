@@ -133,8 +133,6 @@ export default class App extends React.Component<{}, S> {
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (
                             <Route {...rest} key={key} render={(props: any) => {
-                                console.log(rest.path, this.state.pathname)
-
                                 if (rest.path !== this.state.pathname) {
                                     if (rest.path) {
                                         console.log('render ', rest.path)
