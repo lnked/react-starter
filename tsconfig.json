@@ -3,8 +3,9 @@
     "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "baseUrl": "./app",
-        "target": "es5",
+        "baseUrl": "./",
+        // "target": "es5",
+        "target": "es6",
         "module": "commonjs",
         "outDir": "./dist",
         "strict": true,
@@ -13,6 +14,7 @@
         "declaration": false,
         "skipLibCheck": true,
         "noImplicitAny": false,
+        "noImplicitThis": true,
         "inlineSources": false,
         "noUnusedLocals": true,
         "removeComments": true,
@@ -29,85 +31,96 @@
         "lib": [
             "es5",
             "es6",
-            "es7",
-            "dom"
+            "dom",
+            "es2015.core",
+            "es2015.collection",
+            "es2015.generator",
+            "es2015.iterable",
+            "es2015.promise",
+            "es2015.proxy",
+            "es2015.reflect",
+            "es2015.symbol",
+            "es2015.symbol.wellknown",
+            "esnext.asynciterable"
         ],
         "paths": {
+            "*": [
+                "node_modules/@types/*"
+            ],
             "hoc": [
-                "./hoc"
+                "./app/hoc"
             ],
             "segments": [
-                "./segments"
+                "./app/segments"
             ],
             "layouts": [
-                "./layouts"
+                "./app/layouts"
             ],
             "containers": [
-                "./containers"
+                "./app/containers"
             ],
             "components": [
-                "./components"
+                "./app/components"
             ],
             "typings": [
-                "./typings"
+                "./app/typings"
             ],
             "assets": [
-                "./assets"
+                "./app/assets"
             ],
             "utils": [
-                "./utils"
+                "./app/utils"
             ],
             "config": [
-                "./config"
+                "./app/config"
             ],
             "styles": [
-                "./assets/styles"
+                "./app/assets/styles"
             ],
             "images": [
-                "./assets/images"
+                "./app/assets/images"
             ],
             "scripts": [
-                "./assets/scripts"
+                "./app/assets/scripts"
             ],
             "svgstore": [
-                "./assets/svgstore"
+                "./app/assets/svgstore"
             ],
             "store": [
-                "./redux/store"
+                "./app/redux/store"
             ],
             "actions": [
-                "./redux/actions"
+                "./app/redux/actions"
             ],
             "reducers": [
-                "./redux/reducers"
+                "./app/redux/reducers"
             ]
         },
         "types": [
-            "node"
+            "node",
+            "core-js"
         ],
         "typeRoots": [
             "node_modules/@types"
         ]
     },
-    "files": [
-        "./typings/**.ts"
-    ],
     "filesGlob": [
-        "./**/*.ts",
-        "./**/*.tsx",
-        "./**/*.scss",
+        "./app/**/*.ts",
+        "./app/**/*.tsx",
+        "./app/**/*.scss",
         "!node_modules/**/*"
     ],
     "include": [
-        "./**/*"
+        "./app/**/*"
     ],
     "exclude": [
         "node_modules",
+        ".git",
         "dist",
         "tests",
         "webpack",
-        "typings",
-        "**/*.spec.ts"
+        "coverage",
+        "./app/**/*.spec.ts"
     ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,

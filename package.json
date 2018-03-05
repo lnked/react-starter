@@ -93,6 +93,7 @@
     },
     "devDependencies": {
         "@types/axios": "0.14.0",
+        "@types/core-js": "0.9.46",
         "@types/jest": "22.1.4",
         "@types/node": "9.4.6",
         "@types/node-sass": "3.10.32",
@@ -110,6 +111,7 @@
         "@types/redux-thunk": "2.1.0",
         "@types/source-map": "0.5.7",
         "@types/stylelint": "7.11.0",
+        "@types/systemjs": "0.20.6",
         "@types/uglify-js": "2.6.30",
         "@types/webpack": "3.8.8",
         "async-module-loader": "2.1.0",

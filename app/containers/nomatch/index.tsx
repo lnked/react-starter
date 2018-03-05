@@ -1,8 +1,15 @@
 import * as React from 'react'
-import { LocationProps } from 'typings/location'
 import * as css from './styles.scss'
 
-export default function NoMatch ({ location }: LocationProps) {
+interface Location {
+    pathname: string;
+}
+
+export interface P {
+    location: Location;
+}
+
+export default function NoMatch ({ location }: P) {
     document.title = '404 Not Found'
 
     return (
