@@ -24,27 +24,21 @@ import {
 export default class Dashboard extends React.Component<{}, {}> {
     renderDialog () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Dialog type="alert" title="Предупреждение!" />
-                <br /> <br />
-                <Dialog
-                    type="prompt"
-                    title="Какой сейчас год?"
+                <Dialog type="prompt" title="Какой сейчас год?"
                     placeholder="Укажите текущий год"
                     value={2018}
                 />
-                <br /> <br />
                 <Dialog
                     type="prompt"
                     title="Какой сейчас год?"
                     placeholder="Укажите текущий год"
                 />
-                <br /> <br />
                 <Dialog
                     type="confirm"
                     title="Вы уверены что хотите удалить файл?"
                 />
-                <br /> <br />
                 <Dialog
                     type="confirm"
                     title="Вы уверены что хотите удалить файл?"
@@ -55,7 +49,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderTabs () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Tabs title="tabs test" />
             </div>
         )
@@ -63,7 +57,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderSandwich () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Sandwich /> <br /> <br />
                 <Sandwich isOpened /> <br /> <br />
             </div>
@@ -72,7 +66,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderSwitch () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Switch name="switch1" />
                 <br /><br />
                 <Switch name="switch2" checked />
@@ -84,7 +78,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderInput () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input3" focus />
@@ -94,7 +88,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderColorPicker () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <ColorPicker />
                 <br /><br />
                 <ColorPicker color="#f00" />
@@ -104,7 +98,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderRadio () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Radio name="radio" label="1 Входящие" value={1} /><br /><br />
                 <Radio name="radio" label="2 Входящие" value={2} /><br /><br />
                 <Radio name="radio" label="3 Входящие" value={3} /><br /><br />
@@ -114,7 +108,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderCheckbox () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Checkbox name="hecke1" /><br /><br />
                 <Checkbox name="hecke2" checked /><br /><br />
                 <Checkbox name="hecke3" label="Корзина" />
@@ -124,13 +118,12 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderButton () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Button>Применить</Button><br /><br />
                 <Button size="small">Применить</Button><br /><br />
                 <Button size="normal">Применить</Button><br /><br />
                 <Button size="medium">Применить</Button><br /><br />
                 <Button size="large">Применить</Button><br /><br />
-                <br /><br />
                 <Button variant="pure">Применить</Button><br /><br />
                 <Button variant="link">Применить</Button><br /><br />
                 <Button variant="info">Применить</Button><br /><br />
@@ -146,7 +139,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderBadge () {
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <Badge>badge default</Badge><br /><br />
                 <Badge variant="info">badge info</Badge><br /><br />
                 <Badge variant="primary">badge primary</Badge><br /><br />
@@ -161,32 +154,23 @@ export default class Dashboard extends React.Component<{}, {}> {
         return (
             <Content>
                 <Widget title="Общее использование">
-                    <div>Свободное место</div>
+                    <div style={{ marginBottom: '10px' }}>Свободное место</div>
                 </Widget>
 
                 <Widget title="Использовано свободного места">
-                    <div>
+                    <div style={{ marginBottom: '10px' }}>
                         <Loader />
                         <Spinner /><br /><br />
                         <Quantity name="count" min={1} max={999} step={1} /><br /><br />
                         {this.renderDialog()}
-                        <br /><br />
                         {this.renderTabs()}
-                        <br /><br />
                         {this.renderSandwich()}
-                        <br /><br />
                         {this.renderSwitch()}
-                        <br /><br />
                         {this.renderInput()}
-                        <br /><br />
                         {this.renderColorPicker()}
-                        <br /><br />
                         {this.renderRadio()}
-                        <br /><br />
                         {this.renderCheckbox()}
-                        <br /><br />
                         {this.renderButton()}
-                        <br /><br />
                         {this.renderBadge()}
                     </div>
                 </Widget>

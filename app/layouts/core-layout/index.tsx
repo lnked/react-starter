@@ -50,20 +50,14 @@ export default class CoreLayout extends React.Component<T, S> {
             })
     }
 
-    render () {
+    renderSidebar = () => {
         const sbc: any = []
-        const scc: any = []
-
         const { pages } = this.state
-        const { children, links } = this.props
-
-        scc.push(css.body)
-        sbc.push(css.sidebar)
+        const { links } = this.props
 
         const submenuBlock: any = []
 
         if (links.length) {
-            scc.push(css.body_short)
             sbc.push(css.sidebar_long)
 
             submenuBlock.push(
@@ -77,24 +71,45 @@ export default class CoreLayout extends React.Component<T, S> {
         }
 
         return (
+            <div className={sbc.join(' ')}>
+                <Sidebar pages={pages} />
+                {submenuBlock}
+            </div>
+        )
+    }
+
+    renderContent = () => {
+        const scc: any = []
+
+        const { children, links } = this.props
+
+        scc.push(css.body)
+
+        if (links.length) {
+            scc.push(css.body_short)
+        }
+
+        return (
+            <div className={scc.join(' ')}>
+                <header className={css.header}>
+                    <Navigation />
+                </header>
+
+                <RequestsPanel />
+
+                <div className={css.content}>
+                    {children}
+                </div>
+            </div>
+        )
+    }
+
+    render () {
+        return (
             <div className={css.layout}>
                 <section className={css.main}>
-                    <div className={sbc.join(' ')}>
-                        <Sidebar pages={pages} />
-                        {submenuBlock}
-                    </div>
-
-                    <div className={scc.join(' ')}>
-                        <header className={css.header}>
-                            <Navigation />
-                        </header>
-
-                        <RequestsPanel />
-
-                        <div className={css.content}>
-                            {children}
-                        </div>
-                    </div>
+                    { this.renderSidebar() }
+                    { this.renderContent() }
                 </section>
             </div>
         )
