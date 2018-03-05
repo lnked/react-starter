@@ -6,7 +6,7 @@ interface T {
     size?: 'small' | 'large' | 'normal' | 'medium';
     label?: string;
     isIcon?: boolean;
-    variant?: 'pure' | 'link' | 'info' | 'danger' | 'default' | 'primary' | 'success' | 'warning' | 'subtle-link';
+    variant?: 'pure' | 'link' | 'info' | 'danger' | 'normal' | 'primary' | 'success' | 'warning' | 'subtle-link';
     className?: string;
     isDisabled?: boolean;
     children?: React.ReactChild | {} | any[] | boolean;
@@ -17,7 +17,7 @@ export default class Button extends React.PureComponent<T, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'button',
-        variant: 'default',
+        variant: 'normal',
         isIcon: false,
         isDisabled: false,
         handleClick: () => {

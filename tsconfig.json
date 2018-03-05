@@ -5,8 +5,7 @@
         "jsx": "react",
         "baseUrl": "./app",
         "target": "es5",
-        "module": "esnext",
-        // "module": "commonjs",
+        "module": "commonjs",
         "outDir": "./dist",
         "sourceMap": true,
         "allowJs": true,
@@ -33,10 +32,6 @@
             "dom"
         ],
         "paths": {
-            "*": [
-                "*",
-                "*/*"
-            ],
             "hoc": [
                 "./hoc"
             ],
@@ -96,9 +91,9 @@
         "./typings/**.ts"
     ],
     "filesGlob": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.scss",
+        "./**/*.ts",
+        "./**/*.tsx",
+        "./**/*.scss",
         "!node_modules/**/*"
     ],
     "include": [

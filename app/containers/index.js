@@ -12,7 +12,6 @@ import Settings from 'containers/settings'
 import Structure from 'containers/structure'
 import Dashboard from 'containers/dashboard'
 import Extensions from 'containers/extensions'
-import ComponentPage from 'containers/component-page'
 
 export {
     Auth,
@@ -28,6 +27,5 @@ export {
     Entities,
     Structure,
     Dashboard,
-    Extensions,
-    ComponentPage
+    Extensions
 }

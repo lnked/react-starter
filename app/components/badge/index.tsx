@@ -5,7 +5,7 @@ interface T {
     title?: string;
     bolded?: boolean;
     className?: string;
-    variant?: 'info' | 'primary' | 'success' | 'warning' | 'danger';
+    variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
     children?: React.ReactChild | {} | any[] | boolean;
 }
 
@@ -14,7 +14,7 @@ export default class Badge extends React.PureComponent<T, {}> {
         title: '',
         bolded: false,
         className: '',
-        variant: 'default'
+        variant: 'normal'
     }
 
     render () {

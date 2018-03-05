@@ -178,7 +178,7 @@
 }
 
 .pure:not(:disabled) {
-    color: $c-default-color;
+    color: $c-normal-color;
     border: 0;
     background-color: transparent;
 
@@ -187,13 +187,13 @@
     }
 }
 
-.default:not(:disabled) {
-    color: $c-default-color;
-    border-color: $c-default-border;
-    background-color: $c-default-background;
+.normal:not(:disabled) {
+    color: $c-normal-color;
+    border-color: $c-normal-border;
+    background-color: $c-normal-background;
 
     &:hover {
-        background-color: darken($c-default-background, $p-variations-percent / 3);
+        background-color: darken($c-normal-background, $p-variations-percent / 3);
     }
 }
 
