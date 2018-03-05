@@ -79,14 +79,12 @@ export default class Quantity extends React.Component<T, S> {
         const { count } = this.state
         const { min, max, name, type } = this.props
 
+        const decreaseClass = [css.control, css.decrease].join(' ')
+        const increaseClass = [css.control, css.increase].join(' ')
+
         return (
             <div className={css.quantity}>
-                <button
-                    type="button"
-                    onClick={this.changeCount(-1)}
-                    className={[css.control, css.decrease].join(' ')}
-                >-
-                </button>
+                <button type="button" onClick={this.changeCount(-1)}className={decreaseClass}>-</button>
                 <input
                     type={type}
                     name={name}
@@ -97,12 +95,7 @@ export default class Quantity extends React.Component<T, S> {
                     autoComplete="off"
                     className={css.count}
                 />
-                <button
-                    type="button"
-                    onClick={this.changeCount(1)}
-                    className={[css.control, css.increase].join(' ')}
-                >+
-                </button>
+                <button type="button" onClick={this.changeCount(1)} className={increaseClass}>+</button>
             </div>
         )
     }

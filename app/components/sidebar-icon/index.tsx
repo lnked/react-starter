@@ -16,15 +16,42 @@ export default class SidebarIcon extends React.Component<T, {}> {
         className: ''
     }
 
+    renderTitle = () => {
+        const { title } = this.props
+
+        return (
+            <span className={css.title}>{title}</span>
+        )
+    }
+
+    renderCircle = () => {
+        const { title } = this.props
+
+        return (
+            <span className={css.circle} title={title}>
+                <svg height="36" width="36" role="presentation">
+                    <circle cx="18" cy="18" r="16" />
+                </svg>
+            </span>
+        )
+    }
+
+    renderIcon = () => {
+        const { icon } = this.props
+
+        return (
+            <span className={css.image}>
+                <svg className={css.pictogram} role="presentation" aria-hidden="true" aria-labelledby="title">
+                    <use xlinkHref={`#${icon}`} />
+                </svg>
+            </span>
+        )
+    }
+
     render () {
         const cn: any = []
 
-        const {
-            link,
-            title,
-            icon,
-            className
-        } = this.props
+        const { link, className } = this.props
 
         cn.push(css.button)
 
@@ -36,18 +63,9 @@ export default class SidebarIcon extends React.Component<T, {}> {
 
         return (
             <NavLink to={link} className={cn.join(' ')} activeClassName={css.active}>
-                <span className={css.title}>{title}</span>
-                <span className={css.circle} title={title}>
-                    <svg height="36" width="36" role="presentation">
-                        <circle cx="18" cy="18" r="16" />
-                    </svg>
-                </span>
-
-                <span className={css.image}>
-                    <svg className={css.pictogram} role="presentation" aria-hidden="true" aria-labelledby="title">
-                        <use xlinkHref={`#${icon}`} />
-                    </svg>
-                </span>
+                { this.renderTitle() }
+                { this.renderCircle() }
+                { this.renderIcon() }
             </NavLink>
         )
     }

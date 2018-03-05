@@ -50,7 +50,25 @@ export default class Checkbox extends React.PureComponent<T, S> {
         })
     }
 
-    renderStatus () {
+    getInputProps = (id: string) => {
+        const { checked } = this.state
+
+        const { name, value } = this.props
+
+        const props: any = {
+            id,
+            type: 'checkbox',
+            name,
+            value,
+            checked,
+            className: css.input,
+            onChange: this.handleChange
+        }
+
+        return props
+    }
+
+    renderStatus = () => {
         const cn: any = []
 
         const { theme } = this.props
@@ -65,7 +83,7 @@ export default class Checkbox extends React.PureComponent<T, S> {
         return <span className={cn.join(' ')} aria-checked={checked} />
     }
 
-    renderLabel () {
+    renderLabel = () => {
         if (this.props.label || this.props.children) {
             return (
                 <span className={css.label}>
@@ -80,8 +98,7 @@ export default class Checkbox extends React.PureComponent<T, S> {
     render () {
         const cn: any = []
 
-        const { checked } = this.state
-        const { className, name, size, value } = this.props
+        const { name, size, className } = this.props
 
         const id = `checkbox_${name}`
 
@@ -95,20 +112,11 @@ export default class Checkbox extends React.PureComponent<T, S> {
             cn.push(css[`checkbox_${size}`])
         }
 
-        const props: any = {
-            id,
-            type: 'checkbox',
-            name,
-            value,
-            checked,
-            className: css.input,
-            onChange: this.handleChange
-        }
+        const props = this.getInputProps(id)
 
         return (
             <label htmlFor={id} className={cn.join(' ')}>
                 <input {...props} />
-
                 { this.renderStatus() }
                 { this.renderLabel() }
             </label>
