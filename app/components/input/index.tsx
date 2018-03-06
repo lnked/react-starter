@@ -14,7 +14,7 @@ interface T {
     placeholder?: string;
     tabindex?: number | boolean;
     maxlength?: number | boolean;
-    handleChange?: ((value: any) => void);
+    handleChange?: ((value: string) => void);
     status?: 'warn' | 'error' | 'valid' | 'normal';
     textControl?: React.ReactDOM
 }
@@ -46,6 +46,8 @@ export default class Input extends React.Component<T, S> {
 
     textControl: any = []
 
+    prefix: string = Math.random().toString()
+
     componentDidMount () {
         if (this.props.focus) {
             this.textControl.focus()
@@ -63,7 +65,9 @@ export default class Input extends React.Component<T, S> {
 
         this.setState({ value })
 
-        // this.props.handleChange(value)
+        if (this.props.handleChange) {
+            this.props.handleChange(value)
+        }
     }
 
     handleClear = () => {
@@ -72,18 +76,55 @@ export default class Input extends React.Component<T, S> {
         })
     }
 
-    render () {
-        const { value } = this.state
-        const { hint, name, error, cleaned, maxlength, tabindex, className } = this.props
+    renderClearButton = () => {
+        const clearButton: any = []
+        const { value, cleaned } = this.props
 
-        const id = `input_${name}`
+        if (value && cleaned) {
+            clearButton.push(
+                <button
+                    className={css.clear}
+                    onClick={this.handleClear}
+                    key={[this.prefix, 'clear'].join('.')}
+                />
+            )
+        }
 
+        return clearButton
+    }
+
+    renderAdditional = () => {
+        const addition: any = []
+
+        const { hint, error } = this.props
+
+        if (hint) {
+            addition.push(
+                <span className={css.hint} key={[this.prefix, 'hint'].join('.')}>
+                    {hint}
+                </span>
+            )
+        }
+
+        if (error) {
+            addition.push(
+                <span className={css.error} key={[this.prefix, 'error'].join('.')}>
+                    {error}
+                </span>
+            )
+        }
+
+        return addition
+    }
+
+    renderInput = () => {
         const cn: any = []
         const props: any = {}
-        const addition: any = []
-        const clearButton: any = []
 
-        const _prefix = Math.random().toString()
+        const { value } = this.state
+        const { name, error, maxlength, tabindex, className } = this.props
+
+        const id = `input_${name}`
 
         cn.push(css.control)
         cn.push(css.control_input)
@@ -112,40 +153,19 @@ export default class Input extends React.Component<T, S> {
             props.maxlength = maxlength
         }
 
-        if (hint) {
-            addition.push(
-                <span className={css.hint} key={[_prefix, 'hint'].join('.')}>
-                    {hint}
-                </span>
-            )
-        }
+        return (
+            <label className={css.label} htmlFor={id}>
+                <input id={id} {...props} ref={(c) => { this.textControl = c }} />
+                { this.renderClearButton() }
+            </label>
+        )
+    }
 
-        if (error) {
-            addition.push(
-                <span className={css.error} key={[_prefix, 'error'].join('.')}>
-                    {error}
-                </span>
-            )
-        }
-
-        if (value && cleaned) {
-            clearButton.push(
-                <button
-                    className={css.clear}
-                    onClick={this.handleClear}
-                    key={[_prefix, 'clear'].join('.')}
-                />
-            )
-        }
-
+    render () {
         return (
             <div className={css.wrapper}>
-                <label className={css.label} htmlFor={id}>
-                    <input id={id} {...props} ref={(c) => { this.textControl = c }} />
-                    { clearButton }
-                </label>
-
-                { addition }
+                { this.renderInput() }
+                { this.renderAdditional() }
             </div>
         )
     }
