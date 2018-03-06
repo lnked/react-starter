@@ -11,10 +11,8 @@ export default class Tabs extends React.Component<T, {}> {
     }
 
     render () {
-        const { title } = this.props
-
         return (
-            <div className={css.tabs}>{ title }</div>
+            <div className={css.tabs} />
         )
     }
 }
