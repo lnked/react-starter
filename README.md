@@ -10,7 +10,7 @@ React-starter a react web sterter kit.
 
 ## Installation
 
-#### yarn
+#### GIT
 
 ```bash
 git clone -b master git@github.com:lnked/react-starter.git
