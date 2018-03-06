@@ -1,19 +1,17 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import * as PropTypes from 'prop-types'
-
 import { SvgFixer } from 'utils'
 
-export default class AuthLayout extends React.Component<{}, {}> {
-    static propTypes = {
-        children: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.string,
-            PropTypes.array
-        ])
-    }
+interface T {
+    children?: string | React.ReactChild | React.ReactNode | any[];
+}
 
+interface S {
+    title: string;
+}
+
+export default class AuthLayout extends React.Component<T, S> {
     state = {
         title: 'Auth :: React Starter App'
     }

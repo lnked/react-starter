@@ -1,0 +1,84 @@
+@import 'assets/styles/_global.scss';
+
+.file {
+    min-height: 80px;
+    padding: 17px 20px;
+    border-radius: 5px;
+    position: relative;
+    background-color: $c-white;
+    border: 1px solid $c-whisper;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $max-tablet) {
+        min-height: 30px;
+        padding: 10px 20px 10px 10px;
+    }
+
+    @media (max-width: $max-iphone) {
+        justify-content: flex-start;
+    }
+}
+
+.remove {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    color: $c-pink-swan;
+    width: 10px;
+    height: 10px;
+    display: block;
+    cursor: pointer;
+    transition: color $a-time $a-func;
+
+    &:hover {
+        color: $c-cobalt;
+    }
+
+    @media (max-width: $max-iphone) {
+        right: 10px;
+        top: 10px;
+    }
+
+    &__icon {
+        max-width: 100%;
+        max-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.icon {
+    width: 35px;
+
+    @media (max-width: $max-tablet) {
+        width: 30px;
+    }
+
+    &__src {
+        max-width: 100%;
+        max-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media (max-width: $max-tablet) {
+            vertical-align: top;
+        }
+    }
+}
+
+.name {
+    width: calc(100% - 35px);
+    color: $c-black;
+    font-size: 1.2rem;
+    line-height: 1.33;
+    padding-left: 12px;
+
+    @media (max-width: $max-tablet) {
+        width: calc(100% - 30px);
+        padding-left: 10px;
+    }
+}

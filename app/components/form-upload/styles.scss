@@ -1,0 +1,111 @@
+@import 'assets/styles/_global.scss';
+
+.upload {
+    width: 100%;
+    color: $c-pink-swan;
+    cursor: pointer;
+    border: 1px dashed $c-whisper;
+    transition: border-color $a-time $a-func, color $a-time $a-func;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    span {
+        color: $c-black;
+        cursor: pointer;
+    }
+
+    &_status-hover {
+        border-color: $c-black;
+    }
+
+    &_status-active {
+        border-color: $c-cobalt;
+
+        &,
+        span {
+            color: $c-cobalt;
+        }
+    }
+
+    &_status-progress {
+        padding: 15px 20px;
+        border-color: $c-whisper;
+    }
+
+    &_normal {
+        padding: 20px;
+    }
+
+    &_round {
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    &_sm {
+        padding: 12px;
+        border-radius: 5px;
+    }
+
+    &_lg {
+        height: 86px;
+        line-height: 86px;
+    }
+}
+
+.message {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.file {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__icon {
+        width: 35px;
+        height: 45px;
+        margin-right: 10px;
+
+        &__src {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__content {
+        clear: both;
+    }
+
+    &__name {
+        color: $c-black;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 14px;
+    background-color: $c-whisper;
+
+    &__bar {
+        height: 8px;
+        border-radius: 14px;
+        background-color: $c-cobalt;
+    }
+}
