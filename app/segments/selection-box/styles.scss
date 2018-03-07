@@ -1,0 +1,62 @@
+@import 'assets/styles/_global.scss';
+
+.group {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.item {
+    height: 42px;
+
+    &_default {
+        min-width: 121px;
+        text-align: center;
+        background-color: $c-white;
+        border: 1px solid $c-whisper;
+
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+
+    &_inline {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.label {
+    display: block;
+    cursor: pointer;
+}
+
+.visible {
+    width: 100%;
+    display: block;
+    color: $c-black;
+    font-size: 1.2rem;
+    line-height: 42px;
+    text-align: center;
+}
+
+.item_default .visible {
+    height: 40px;
+    padding: 0 20px;
+}
+
+.item_inline .visible {
+    height: 42px;
+}
+
+.input:checked + .visible {
+    color: $c-cobalt;
+    background-color: $c-white-smoke;
+}

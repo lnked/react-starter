@@ -1,0 +1,21 @@
+@import 'assets/styles/_global.scss';
+
+.control {
+    width: 100%;
+    max-width: 160px;
+    display: block;
+    position: relative;
+}
+
+.symbol {
+    width: 16px;
+    height: 16px;
+    color: $c-black;
+    font-size: 1.4rem;
+    text-align: center;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+}

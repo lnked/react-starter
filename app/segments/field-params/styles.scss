@@ -1,0 +1,64 @@
+@import 'assets/styles/_global.scss';
+
+.control {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.input {
+    width: 100%;
+    max-width: 160px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.params {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.param {
+    width: 42px;
+    height: 42px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1.2rem;
+    line-height: 42px;
+    text-align: center;
+    position: relative;
+    border: 1px solid $c-whisper;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__input {
+        left: -100px;
+        top: -100px;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__label {
+        display: block;
+        color: $c-black;
+        position: relative;
+        background-color: $c-white;
+        transition: background-color $a-time $a-func, color $a-time $a-func;
+    }
+
+    &__input:checked + &__label {
+        color: $c-cobalt;
+        background-color: $c-white-smoke;
+    }
+}

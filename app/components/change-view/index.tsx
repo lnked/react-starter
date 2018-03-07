@@ -49,6 +49,7 @@ export default class ChangeView extends React.Component<T, {}> {
                 <svg className={css.icon} role="presentation" aria-hidden="true" aria-labelledby="title">
                     <use xlinkHref={`#${type}`} />
                 </svg>
+                <img src={require(`./assets/${type}.svg`)} width={20} height={20} alt=""/>
                 { label }
             </button>
         )

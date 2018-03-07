@@ -8,6 +8,7 @@ import {
 import {
     Tabs,
     Input,
+    Title,
     Radio,
     Badge,
     Switch,
@@ -47,7 +48,24 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderTabs () {
+    renderTitle = () => {
+        return (
+            <div style={{ marginBottom: '10px' }}>
+                <Title size="small" type="primary" label="Test title" />
+                <Title size="small" type="secondary" label="Test title" />
+                <Title size="normal" type="primary" label="Test title" />
+                <Title size="normal" type="secondary" label="Test title" />
+                <Title size="small" type="secondary" label="Test title" />
+                <Title size="medium" type="primary" label="Test title" />
+                <Title size="medium" type="secondary" label="Test title" />
+                <Title size="small" type="secondary" label="Test title" />
+                <Title size="big" type="primary" label="Test title" />
+                <Title size="big" type="secondary" label="Test title" />
+            </div>
+        )
+    }
+
+    renderTabs = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Tabs title="tabs test" />
@@ -55,7 +73,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderSandwich () {
+    renderSandwich = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Sandwich /> <br /> <br />
@@ -64,7 +82,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderSwitch () {
+    renderSwitch = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Switch name="switch1" />
@@ -76,7 +94,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderInput () {
+    renderInput = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
@@ -86,7 +104,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderColorPicker () {
+    renderColorPicker = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <ColorPicker />
@@ -96,7 +114,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderRadio () {
+    renderRadio = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Radio name="radio" label="1 Входящие" value={1} /><br /><br />
@@ -106,7 +124,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderCheckbox () {
+    renderCheckbox = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Checkbox name="hecke1" /><br /><br />
@@ -116,7 +134,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderButton () {
+    renderButton = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Button>Применить</Button><br /><br />
@@ -137,7 +155,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderBadge () {
+    renderBadge = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <Badge>badge default</Badge><br /><br />
@@ -162,6 +180,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <Loader />
                         <Spinner /><br /><br />
                         <Quantity name="count" min={1} max={999} step={1} /><br /><br />
+                        {this.renderTitle()}
                         {this.renderDialog()}
                         {this.renderTabs()}
                         {this.renderSandwich()}

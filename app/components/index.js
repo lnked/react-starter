@@ -2,7 +2,7 @@ import Logo from 'components/logo'
 import Radio from 'components/radio'
 import Input from 'components/input'
 import Tabs from 'components/tabs'
-// import Table from 'components/table'
+import Title from 'components/title'
 import Badge from 'components/badge'
 // import Layout from 'components/layout'
 import Button from 'components/button'
@@ -31,7 +31,7 @@ export {
     Radio,
     Input,
     Tabs,
-    // Table,
+    Title,
     Badge,
     Switch,
     // Layout,
