@@ -14,6 +14,7 @@ interface T {
     placeholder?: string;
     tabindex?: number | boolean;
     maxlength?: number | boolean;
+    multiline?: number | boolean;
     handleChange?: ((value: string) => void);
     status?: 'warn' | 'error' | 'valid' | 'normal';
     textControl?: React.ReactDOM
@@ -34,6 +35,7 @@ export default class Input extends React.Component<T, S> {
         tabindex: false,
         maxlength: false,
         className: false,
+        multiline: false,
         placeholder: 'Введите текст…',
         handleChange: (value) => {
             console.log(': = ', value)
@@ -83,6 +85,7 @@ export default class Input extends React.Component<T, S> {
         if (value && cleaned) {
             clearButton.push(
                 <button
+                    type="button"
                     className={css.clear}
                     onClick={this.handleClear}
                     key={[this.prefix, 'clear'].join('.')}
@@ -122,12 +125,11 @@ export default class Input extends React.Component<T, S> {
         const props: any = {}
 
         const { value } = this.state
-        const { name, error, maxlength, tabindex, className } = this.props
+        const { name, error, multiline, maxlength, tabindex, className } = this.props
 
         const id = `input_${name}`
 
         cn.push(css.control)
-        cn.push(css.control_input)
 
         if (className) {
             cn.push(className)
@@ -137,6 +139,12 @@ export default class Input extends React.Component<T, S> {
             cn.push(css.control_error)
         }
 
+        if (multiline) {
+            cn.push(css.control_textarea)
+        } else {
+            cn.push(css.control_input)
+        }
+
         props.value = value
         props.spellCheck = false
         props.autoCorrect = 'off'
@@ -144,6 +152,8 @@ export default class Input extends React.Component<T, S> {
         props.autoCapitalize = 'off'
         props.onChange = this.handleChange
         props.className = cn.join(' ')
+
+        props.ref = (c) => { this.textControl = c }
 
         if (tabindex) {
             props.tabindex = tabindex
@@ -155,7 +165,10 @@ export default class Input extends React.Component<T, S> {
 
         return (
             <label className={css.label} htmlFor={id}>
-                <input id={id} {...props} ref={(c) => { this.textControl = c }} />
+                {multiline
+                    ? <textarea id={id} {...props} rows={multiline || 10}>{props.value}</textarea>
+                    : <input id={id} {...props} />
+                }
                 { this.renderClearButton() }
             </label>
         )

@@ -101,6 +101,9 @@ export default class Dashboard extends React.Component<{}, {}> {
                 <SpeechText>
                     <Input name="input0" value="" />
                 </SpeechText><br /><br />
+                <SpeechText>
+                    <Input name="input0" value="" multiline={4} />
+                </SpeechText><br /><br />
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input3" focus />

@@ -53,6 +53,7 @@
         "react/forbid-prop-types": [1, {
             "forbid": ["any"]
         }],
+        "jsx-a11y/label-has-for": 0,
         "immutable/no-let": 0,
         "immutable/no-this": 0,
         "immutable/no-mutation": 0,
