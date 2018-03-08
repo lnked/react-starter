@@ -99,7 +99,7 @@ export default class Dashboard extends React.Component<{}, {}> {
         return (
             <div style={{ marginBottom: '10px' }}>
                 <SpeechText>
-                    <Input name="input0" />
+                    <Input name="input0" value="" />
                 </SpeechText><br /><br />
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
