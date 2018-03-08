@@ -1,65 +1,80 @@
-// import * as React from 'react'
-// import * as css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles.scss'
 
-// let strLen = 35
+interface T {
+    rows?: number;
+    text?: string;
+    align?: string;
+    length?: string;
+    children?: string;
+}
 
-// if (document.body.clientWidth < 640) {
-//     strLen = 60
-// }
+interface S {
+    title: string;
+    length: number;
+}
 
-// interface T {
-//     line: number;
-//     align: string;
-//     string: string;
-//     className: string;
-//     children?: string | React.ReactChild | React.ReactNode | any[];
-// }
+export default class Truncate extends React.Component<T, S> {
+    static defaultProps = {
+        align: 'left',
+        children: ''
+    }
 
-// export default class Truncate extends React.Component<T, {}> {
-//     static defaultProps = {
-//         align: 'left',
-//         className: '',
-//         children: ''
-//     }
+    state = {
+        title: this.props.children || this.props.text || '',
+        length: this.props.length || 0
+    }
 
-//     componentWillMount () {
-//         this.setState({
-//             title: this.props.children || this.props.string
-//         })
-//     }
+    renderDots = () => {
+        const { title, length } = this.state
 
-//     renderDots = () => {
-//         if (this.state.title && this.state.title.length >= strLen) {
-//             return (
-//                 <span>...</span>
-//             )
-//         }
-//     }
+        if (title && title.length >= length) {
+            return (
+                <span>...</span>
+            )
+        }
 
-//     renderText = () => {
-//         return (
-//             <div className={css.text}>
-//                 <a href="#" className={css.text__link}>{ this.state.title.substr(0, strLen) }{ this.renderDots() }</a>
-//             </div>
-//         )
-//     }
+        return ''
+    }
 
-//     renderTooltip = () => {
-//         if (this.state.title && this.state.title.length >= strLen) {
-//             return (
-//                 <div className={css.tooltip}>
-//                     { this.state.title }
-//                 </div>
-//             )
-//         }
-//     }
+    renderText = () => {
+        const { title, length } = this.state
 
-//     render () {
-//         return (
-//             <div className={`${css.truncate} ${css[`truncate--align-${this.props.align}`]} ${this.props.className}`}>
-//                 { this.renderText() }
-//                 { this.renderTooltip() }
-//             </div>
-//         )
-//     }
-// }
+        return (
+            <div className={css.text}>
+                { title.substr(0, length) }{ this.renderDots() }
+            </div>
+        )
+    }
+
+    renderTooltip = () => {
+        const { title, length } = this.state
+
+        if (title && length >= length) {
+            return (
+                <div className={css.tooltip}>
+                    { title }
+                </div>
+            )
+        }
+    }
+
+    render () {
+        const cn: any = []
+
+        const { align } = this.props
+
+        cn.push(css.truncate)
+
+        if (align) { 
+            cn.push(css[`truncate--align-${align}`])
+        }
+
+        return (
+            <div className={cn.join(' ')}>
+                { this.renderText() }
+                { this.renderTooltip() }
+            </div>
+        )
+    }
+}

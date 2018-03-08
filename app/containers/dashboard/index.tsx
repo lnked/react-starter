@@ -18,6 +18,7 @@ import {
     Spinner,
     Sandwich,
     Quantity,
+    // Truncate,
     Checkbox,
     SpeechText,
     ColorPicker,
@@ -25,7 +26,7 @@ import {
 } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
-    renderDialog () {
+    renderDialog = () => {
         return (
             <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Dialog type="alert" title="Предупреждение!" />
@@ -66,6 +67,24 @@ export default class Dashboard extends React.Component<{}, {}> {
             </div>
         )
     }
+
+    // renderTruncate = () => {
+    //     return (
+    //         <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
+    //             <Truncate length={100}>
+    //                 Reference site about Lorem Ipsum, giving information on its origins,
+    //                 as well as a random Lipsum generator
+    //             </Truncate>
+    //             <br /><br />
+    //             <Truncate rows={2}>
+    //                 Reference site about Lorem Ipsum, giving information on its origins,
+    //                 as well as a random Lipsum generator
+    //                 Reference site about Lorem Ipsum, giving information on its origins,
+    //                 as well as a random Lipsum generator
+    //             </Truncate>
+    //         </div>
+    //     )
+    // }
 
     renderTabs = () => {
         return (

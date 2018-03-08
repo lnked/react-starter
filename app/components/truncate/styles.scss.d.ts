@@ -1,1 +1,3 @@
-export const button: string;
+export const text: string;
+export const truncate: string;
+export const tooltip: string;
