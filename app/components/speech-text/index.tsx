@@ -131,7 +131,7 @@ export default class SpeechText extends React.Component<T, S> {
             }
 
             return React.cloneElement(input, {
-                value: inputValue
+                value: inputValue || ''
             })
         })
 

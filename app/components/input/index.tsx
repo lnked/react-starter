@@ -28,7 +28,7 @@ export default class Input extends React.Component<T, S> {
     static defaultProps = {
         type: 'text',
         status: 'normal',
-        value: 0,
+        value: '',
         children: '',
         focus: false,
         cleaned: false,
@@ -43,7 +43,7 @@ export default class Input extends React.Component<T, S> {
     }
 
     state = {
-        value: this.props.value || this.props.children || 0
+        value: this.props.value || this.props.children || ''
     }
 
     textControl: any = []
