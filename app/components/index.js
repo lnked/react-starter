@@ -14,6 +14,7 @@ import Spinner from 'components/spinner'
 import Sandwich from 'components/sandwich'
 import Quantity from 'components/quantity'
 import Checkbox from 'components/checkbox'
+import SpeechText from 'components/speech-text'
 import ChangeView from 'components/change-view'
 // import HintText from 'components/hint-text'
 // import MaskedText from 'components/masked-text'
@@ -46,6 +47,7 @@ export {
     // HintText,
     // MaskedText,
     // RadioGroup,
+    SpeechText,
     ChangeView,
     ColorPicker,
     // BreadCrumbs,

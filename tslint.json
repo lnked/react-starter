@@ -66,7 +66,7 @@
             true,
             {
                 "limit": 120,
-                "ignore-pattern": "^import |^export {(.*?)}"
+                "ignore-pattern": "^import |^global |^export {(.*?)}"
             }
         ],
         "no-unused-expression": [

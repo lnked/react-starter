@@ -49,9 +49,9 @@ export default class Input extends React.Component<T, S> {
     prefix: string = Math.random().toString()
 
     componentDidMount () {
-        if (this.props.focus) {
-            this.textControl.focus()
-        }
+        // if (this.props.focus) {
+        //     this.textControl.focus()
+        // }
     }
 
     componentWillReceiveProps (nextProps) {

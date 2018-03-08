@@ -28,6 +28,7 @@
     ],
     "globals": {
         "typeof": true,
+        "declare": true,
         "beforeEach": true,
         "describe": true,
         "expect": true,
@@ -98,11 +99,8 @@
             }
         ],
         "react/jsx-wrap-multilines": 1,
-        // Possible Errors
         "no-console": 0,
-        // Strict Mode
         "strict": [2, "never"],
-        // Variables
         "init-declarations": 0,
         "no-catch-shadow": 2,
         "no-delete-var": 2,
@@ -115,7 +113,6 @@
         }],
         "no-undefined": 2,
         "no-use-before-define": [2, "nofunc"],
-        // Node.js and CommonJS
         "callback-return": 0,
         "global-require": 0,
         "handle-callback-err": 2,
@@ -125,11 +122,9 @@
         "no-process-exit": 2,
         "no-restricted-modules": 0,
         "no-sync": 2,
-        // Stylistic Issues
         "array-bracket-spacing": 2,
         "block-spacing": 2,
         "brace-style": 2,
-        // "camelcase": 2,
         "comma-spacing": 2,
         "comma-style": 2,
         "computed-property-spacing": 2,
@@ -180,7 +175,6 @@
         "space-unary-ops": 2,
         "spaced-comment": [1, "always"],
         "wrap-regex": 0,
-        // ECMAScript 6
         "arrow-parens": 0,
         "arrow-spacing": 2,
         "constructor-super": 2,

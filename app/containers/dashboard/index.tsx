@@ -19,6 +19,7 @@ import {
     Sandwich,
     Quantity,
     Checkbox,
+    SpeechText,
     ColorPicker
 } from 'components'
 
@@ -97,6 +98,9 @@ export default class Dashboard extends React.Component<{}, {}> {
     renderInput = () => {
         return (
             <div style={{ marginBottom: '10px' }}>
+                <SpeechText>
+                    <Input name="input0" />
+                </SpeechText><br /><br />
                 <Input name="input1" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input2" value="Входящие общие папки" cleaned /><br /><br />
                 <Input name="input3" focus />
@@ -180,12 +184,12 @@ export default class Dashboard extends React.Component<{}, {}> {
                         <Loader />
                         <Spinner /><br /><br />
                         <Quantity name="count" min={1} max={999} step={1} /><br /><br />
+                        {this.renderInput()}
                         {this.renderTitle()}
                         {this.renderDialog()}
                         {this.renderTabs()}
                         {this.renderSandwich()}
                         {this.renderSwitch()}
-                        {this.renderInput()}
                         {this.renderColorPicker()}
                         {this.renderRadio()}
                         {this.renderCheckbox()}

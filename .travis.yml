@@ -13,6 +13,10 @@ notifications:
   email:
     on_failure: change
     on_success: change
+  slack:
+    rooms:
+      - celebro:RBaf3z6RftDAVPt3TjN4QBgE#general
+      - celebro:RBaf3z6RftDAVPt3TjN4QBgE#react-starter
 
 cache:
   yarn: true
