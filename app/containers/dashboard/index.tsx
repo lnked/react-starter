@@ -20,13 +20,14 @@ import {
     Quantity,
     Checkbox,
     SpeechText,
-    ColorPicker
+    ColorPicker,
+    SelectionBox
 } from 'components'
 
 export default class Dashboard extends React.Component<{}, {}> {
     renderDialog () {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Dialog type="alert" title="Предупреждение!" />
                 <Dialog type="prompt" title="Какой сейчас год?"
                     placeholder="Укажите текущий год"
@@ -51,7 +52,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderTitle = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Title size="small" type="primary" label="Test title" />
                 <Title size="small" type="secondary" label="Test title" />
                 <Title size="normal" type="primary" label="Test title" />
@@ -68,15 +69,84 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderTabs = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Tabs title="tabs test" />
+            </div>
+        )
+    }
+
+    renderSelectionBox = () => {
+        return (
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
+                <SelectionBox
+                    items={[
+                        {
+                            label: 'Первый',
+                            value: 1
+                        },
+                        {
+                            label: 'Второй',
+                            value: 2
+                        },
+                        {
+                            label: 'Третий',
+                            value: 3
+                        },
+                        {
+                            label: 'Четвертый',
+                            value: 4
+                        },
+                        {
+                            label: 'Пятый',
+                            value: 5
+                        },
+                        {
+                            label: 'Шестой',
+                            value: 6
+                        }
+                    ]}
+                    name="sradio"
+                    checked={3}
+                    isMultiple={false}
+                /><br /><br />
+                <SelectionBox
+                    items={[
+                        {
+                            label: 'Первый',
+                            value: 1
+                        },
+                        {
+                            label: 'Второй',
+                            value: 2
+                        },
+                        {
+                            label: 'Третий',
+                            value: 3
+                        },
+                        {
+                            label: 'Четвертый',
+                            value: 4
+                        },
+                        {
+                            label: 'Пятый',
+                            value: 5
+                        },
+                        {
+                            label: 'Шестой',
+                            value: 6
+                        }
+                    ]}
+                    name="scheckbox"
+                    checked={[1, 2, 3]}
+                    isMultiple={true}
+                /><br /><br />
             </div>
         )
     }
 
     renderSandwich = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Sandwich /> <br /> <br />
                 <Sandwich isOpened /> <br /> <br />
             </div>
@@ -85,7 +155,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderSwitch = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Switch name="switch1" />
                 <br /><br />
                 <Switch name="switch2" checked />
@@ -97,7 +167,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderInput = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <SpeechText>
                     <Input name="input0" value="" />
                 </SpeechText><br /><br />
@@ -113,7 +183,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderColorPicker = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <ColorPicker />
                 <br /><br />
                 <ColorPicker color="#f00" />
@@ -123,7 +193,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderRadio = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Radio name="radio" label="1 Входящие" value={1} /><br /><br />
                 <Radio name="radio" label="2 Входящие" value={2} /><br /><br />
                 <Radio name="radio" label="3 Входящие" value={3} /><br /><br />
@@ -133,7 +203,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderCheckbox = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Checkbox name="hecke1" /><br /><br />
                 <Checkbox name="hecke2" checked /><br /><br />
                 <Checkbox name="hecke3" label="Корзина" />
@@ -143,7 +213,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderButton = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Button>Применить</Button><br /><br />
                 <Button size="small">Применить</Button><br /><br />
                 <Button size="normal">Применить</Button><br /><br />
@@ -164,7 +234,7 @@ export default class Dashboard extends React.Component<{}, {}> {
 
     renderBadge = () => {
         return (
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
                 <Badge>badge default</Badge><br /><br />
                 <Badge variant="info">badge info</Badge><br /><br />
                 <Badge variant="primary">badge primary</Badge><br /><br />
@@ -179,15 +249,16 @@ export default class Dashboard extends React.Component<{}, {}> {
         return (
             <Content>
                 <Widget title="Общее использование">
-                    <div style={{ marginBottom: '10px' }}>Свободное место</div>
+                    <div>Свободное место</div>
                 </Widget>
 
                 <Widget title="Использовано свободного места">
-                    <div style={{ marginBottom: '10px' }}>
+                    <div>
                         <Loader />
                         <Spinner /><br /><br />
                         <Quantity name="count" min={1} max={999} step={1} /><br /><br />
                         {this.renderInput()}
+                        {this.renderSelectionBox()}
                         {this.renderTitle()}
                         {this.renderDialog()}
                         {this.renderTabs()}

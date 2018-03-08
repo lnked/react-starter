@@ -24,7 +24,7 @@ import ColorPicker from 'components/color-picker'
 import SidebarIcon from 'components/sidebar-icon'
 import GroupLinks from 'components/group-links'
 // import SuggestInput from 'components/suggest-input'
-// import SelectionBox from 'components/selection-box'
+import SelectionBox from 'components/selection-box'
 // import CustomComponent from 'components/custom-component'
 
 export {
@@ -52,7 +52,8 @@ export {
     ColorPicker,
     // BreadCrumbs,
     GroupLinks,
-    SidebarIcon
+    SidebarIcon,
+    SelectionBox
     // SuggestInput,
     // SelectionBox,
     // CustomComponent

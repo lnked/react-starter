@@ -1,6 +1,5 @@
 export const view: string;
-export const view_half: string;
-export const viewHalf: string;
+export const half: string;
 export const item: string;
 export const item_half: string;
 export const itemHalf: string;

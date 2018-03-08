@@ -1,25 +1,16 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import css from './styles.scss'
+import * as React from 'react'
+import * as css from './styles.scss'
 
-export default class SelectionBox extends PureComponent {
+interface T {
+    items: any;
+    name: string;
+    type: string;
+    isMultiple: boolean;
+    checked: any | string | number;
+    handleChange?: (value: any) => void | boolean;
+}
 
-    static propTypes = {
-        items: PropTypes.array,
-        name: PropTypes.string,
-        type: PropTypes.string,
-        isMultiple: PropTypes.bool,
-        handleChange: PropTypes.oneOfType([
-            PropTypes.func,
-            PropTypes.bool
-        ]),
-        checked: PropTypes.oneOfType([
-            PropTypes.array,
-            PropTypes.string,
-            PropTypes.number
-        ])
-    }
-
+export default class SelectionBox extends React.PureComponent<T, {}> {
     static defaultProps = {
         items: [],
         type: 'default',
@@ -27,26 +18,21 @@ export default class SelectionBox extends PureComponent {
         handleChange: false
     }
 
-    constructor (props) {
-        super(props)
-
-        this.handleChange = this.handleChange.bind(this)
+    state = {
+        checked: this.props.checked
     }
 
-    componentWillMount () {
-        this.setState({
-            checked: this.props.checked
-        })
-    }
-
-    handleChange (e) {
+    handleChange = (e) => {
         const value = Number(e.target.value)
 
-        if (this.props.isMultiple) {
-            let selected = []
+        const { checked } = this.state
+        const { isMultiple } = this.props
+
+        if (isMultiple) {
+            let selected: any = []
 
             if (value !== null) {
-                selected = this.state.checked.slice(0)
+                selected = checked.slice(0)
                 const index = selected.indexOf(value)
 
                 if (index >= 0) {
@@ -56,12 +42,12 @@ export default class SelectionBox extends PureComponent {
                 }
 
                 this.setState({
-                    checked: selected
+                    ...this.state, checked: selected
                 })
             }
         } else {
             this.setState({
-                checked: value
+                ...this.state, checked: value
             })
         }
 
@@ -70,22 +56,22 @@ export default class SelectionBox extends PureComponent {
         }
     }
 
-    renderGroup () {
+    renderGroup = (): any => {
         if (this.props.items && this.props.items.length) {
-            const group = []
-            const items = this.props.items
-            const checked = this.state.checked
-            const isMultiple = this.props.isMultiple
+            const group: any = []
 
-            let name
-            let type
+            const { checked } = this.state
+            const { type, name, items, isMultiple } = this.props
 
-            if (this.props.isMultiple) {
-                type = 'checkbox'
-                name = `${this.props.name}[]`
+            let propType
+            let propName
+
+            if (isMultiple) {
+                propType = 'checkbox'
+                propName = `${name}[]`
             } else {
-                type = 'radio'
-                name = this.props.name
+                propType = 'radio'
+                propName = name
             }
 
             items.map((props, id) => {
@@ -98,15 +84,15 @@ export default class SelectionBox extends PureComponent {
                 }
 
                 group.push(
-                    <div key={id.toString()} className={`${css.item} ${css[`item_${this.props.type}`]}`}>
+                    <div key={id} className={`${css.item} ${css[`item_${type}`]}`}>
                         <label className={css.label}>
                             <input
-                                type={type}
-                                name={name}
+                                type={propType}
+                                name={propName}
                                 value={props.value}
                                 checked={props.checked}
                                 className={css.input}
-                                onChange={this.handleChange.bind(this)}
+                                onChange={this.handleChange}
                             />
 
                             <span className={css.visible}>
@@ -123,6 +109,8 @@ export default class SelectionBox extends PureComponent {
                 </div>
             )
         }
+
+        return ''
     }
 
     render () {

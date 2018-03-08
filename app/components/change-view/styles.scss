@@ -1,39 +1,40 @@
 @import 'assets/styles/_global.scss';
 
 .view {
-    height: 100%;
+    font-size: 0;
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+}
 
-    &_half {
-        width: 140px;
-        height: 38px;
-        position: relative;
-        align-items: stretch;
-        background-color: $c-white;
-        border: 1px solid $c-whisper;
+.half {
+    width: 140px;
+    height: 38px;
+    position: relative;
+    align-items: stretch;
+    background-color: $c-white;
 
-        &:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 1px;
-            height: 100%;
-            background-color: $c-whisper;
-        }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $c-whisper;
     }
 }
 
 .item {
     color: $c-black;
     cursor: pointer;
+    border: 0;
+    padding: 0;
+    outline: none;
+    line-height: 1;
     position: relative;
     text-decoration: none;
-    border: 1px solid $c-red;
     transition: color $a-time $a-func, background-color $a-time $a-func;
 
     &:before {
@@ -60,22 +61,21 @@
     }
 
     &_active {
-        color: $c-cobalt;
         cursor: default;
+        color: $c-cobalt;
     }
 
     &_single {
         font-size: 1.4rem;
-        line-height: 16px;
 
         &:not(:last-child) {
-            margin-right: 20px;
-            padding-right: 20px;
+            margin-right: 16px;
+            padding-right: 16px;
             border-right: 1px solid $c-whisper;
         }
     }
 
-    .view_half &:hover {
+    .half &:hover {
         color: $c-white;
         background-color: $c-cobalt;
 
@@ -86,18 +86,17 @@
 }
 
 .icon {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     display: inline-block;
     vertical-align: middle;
 
     &:not(:last-child) {
-        margin-right: 10px;
+        margin-right: 7px;
     }
 }
 
 .label {
-    line-height: 1;
     display: inline-block;
     vertical-align: middle;
 }
