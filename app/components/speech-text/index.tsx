@@ -7,7 +7,7 @@ interface T {
 }
 
 interface S {
-    speaks?: string;
+    speaks?: any;
     started?: boolean;
 }
 
@@ -30,7 +30,7 @@ export default class SpeechText extends React.Component<T, S> {
     }
 
     state = {
-        speaks: '',
+        speaks: [],
         started: false
     }
 
@@ -73,23 +73,22 @@ export default class SpeechText extends React.Component<T, S> {
         this.recognition.interimResults = false
         this.recognition.maxAlternatives = 5
 
-        this.recognition.lang = [
-            ['Pусский', ['ru-RU']],
-            ['en-US', 'United States']
-        ]
+        this.recognition.lang = ['ru-RU', 'en-US', 'en-GB']
 
         this.recognition.onresult = (event) => {
-            let speaks = ''
+            const { speaks } = this.state
+
+            const matter: any = []
 
             for (let i = event.resultIndex; i < event.results.length; ++i) {
-                speaks += event.results[i][0].transcript
+                matter.push(event.results[i][0].transcript)
             }
 
             console.log(event.results)
-            console.log('txtRec: ', speaks)
+            console.log('txtRec: ', matter)
             console.log('You said: ', event.results[0][0].transcript)
 
-            this.setState({ ...this.state, speaks })
+            this.setState({ ...this.state, speaks: speaks.concat(matter) })
         }
 
         this.recognition.onstart = () => {
@@ -121,11 +120,11 @@ export default class SpeechText extends React.Component<T, S> {
             cn.push(css.started)
         }
 
-        const childrenWithProps = React.Children.map(children, (input: any) =>
-            React.cloneElement(input, {
-                value: speaks
+        const childrenWithProps = React.Children.map(children, (input: any) => {
+            return React.cloneElement(input, {
+                value: speaks.join(' ')
             })
-        )
+        })
 
         return (
             <div className={css.wrapper}>

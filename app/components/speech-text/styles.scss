@@ -1,8 +1,18 @@
 @import 'assets/styles/_global.scss';
 
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
 .wrapper {
     position: relative;
-    border: 1px solid $c-blue;
 }
 
 .button {
@@ -39,6 +49,7 @@
 
 .started:after {
     opacity: 1;
+    animation: bounce 2s infinite ease-in-out;
 }
 
 .icon {
