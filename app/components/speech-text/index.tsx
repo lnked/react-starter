@@ -77,11 +77,14 @@ export default class SpeechText extends React.Component<T, S> {
 
         this.recognition.onresult = (event) => {
             const { speaks } = this.state
+            const count = event.results.length
 
             const matter: any = []
 
-            for (let i = event.resultIndex; i < event.results.length; ++i) {
-                matter.push(event.results[i][0].transcript)
+            if (count > 0) {
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    matter.push(event.results[i][0].transcript)
+                }
             }
 
             console.log(event.results)
@@ -121,8 +124,14 @@ export default class SpeechText extends React.Component<T, S> {
         }
 
         const childrenWithProps = React.Children.map(children, (input: any) => {
+            let inputValue = ''
+
+            if (speaks.length) {
+                inputValue = speaks.join(' ')
+            }
+
             return React.cloneElement(input, {
-                value: speaks.join(' ')
+                value: inputValue
             })
         })
 

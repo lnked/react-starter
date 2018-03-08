@@ -145,7 +145,6 @@ export default class Input extends React.Component<T, S> {
             cn.push(css.control_input)
         }
 
-        props.value = value
         props.spellCheck = false
         props.autoCorrect = 'off'
         props.autoComplete = 'off'
@@ -166,8 +165,8 @@ export default class Input extends React.Component<T, S> {
         return (
             <label className={css.label} htmlFor={id}>
                 {multiline
-                    ? <textarea id={id} {...props} rows={multiline || 10}>{props.value}</textarea>
-                    : <input id={id} {...props} />
+                    ? <textarea id={id} {...props} rows={multiline || 10}>{value}</textarea>
+                    : <input id={id} {...props} value={value} />
                 }
                 { this.renderClearButton() }
             </label>
