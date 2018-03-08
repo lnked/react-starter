@@ -45,35 +45,22 @@ export default class SpeechText extends React.Component<T, S> {
                 window.msSpeechRecognition
             )()
 
-            this.startSpeech()
+            this.initSpeech()
         } catch (e) {}
     }
 
-    // handleSpeech = () => {
-    //     console.log('e')
-    //     this.props.handleSpeech()
-    // }
+    handleSpeech = () => {
+        console.log('e')
+        // this.props.handleSpeech()
+    }
 
-    handleStart = () => {
-        this.recognition.start()
+    handleToggle = () => {
+        const { started } = this.state
 
-        this.recognition.onstart = () => {
-            this.setState({...this.state, started: true})
-        }
-
-        this.recognition.onstop = () => {
-            this.setState({...this.state, started: false})
-        }
-
-        this.recognition.onspeechend = () => {
-            alert('onspeechend')
-        }
-
-        this.recognition.onerror = (event) => {
-            alert(`on error ${event.error}`)
-            if (event.error === 'no-speech') {
-                console.log('No speech was detected. Try again.')
-            }
+        if (started) {
+            this.recognition.stop()
+        } else {
+            this.recognition.start()
         }
     }
 
@@ -81,10 +68,9 @@ export default class SpeechText extends React.Component<T, S> {
         this.recognition.stop()
     }
 
-    startSpeech = () => {
+    initSpeech = () => {
         this.recognition.continuous = true
-        this.recognition.interimResults = true
-        // this.recognition.interimResults = false
+        this.recognition.interimResults = false
         this.recognition.maxAlternatives = 5
 
         this.recognition.lang = [
@@ -104,6 +90,22 @@ export default class SpeechText extends React.Component<T, S> {
             console.log('You said: ', event.results[0][0].transcript)
 
             this.setState({ ...this.state, speaks })
+        }
+
+        this.recognition.onstart = () => {
+            this.setState({ ...this.state, started: true })
+        }
+
+        this.recognition.onerror = (event) => {
+            console.log(`on error ${event.error}`)
+
+            if (event.error === 'no-speech') {
+                console.log('No speech was detected. Try again.')
+            }
+        }
+
+        this.recognition.onspeechend = () => {
+            this.setState({ ...this.state, started: false })
         }
     }
 
@@ -129,7 +131,7 @@ export default class SpeechText extends React.Component<T, S> {
             <div className={css.wrapper}>
                 {childrenWithProps}
 
-                <button type="button" onClick={this.handleStart} className={cn.join(' ')}>
+                <button type="button" onClick={this.handleToggle} className={cn.join(' ')}>
                     <img src={require('./assets/microphone.svg')} className={css.icon} alt="" />
                 </button>
             </div>
