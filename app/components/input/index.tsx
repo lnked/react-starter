@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { Icon } from 'components'
+
 interface T {
     name: string;
     value?: string | number;
@@ -89,7 +91,9 @@ export default class Input extends React.Component<T, S> {
                     className={css.clear}
                     onClick={this.handleClear}
                     key={[this.prefix, 'clear'].join('.')}
-                />
+                >
+                    <Icon symbol="close" className={css.icon} hidden={true} />
+                </button>
             )
         }
 

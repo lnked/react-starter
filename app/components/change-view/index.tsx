@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { Icon } from 'components'
+
 interface T {
     view: string;
     showTitle: boolean;
@@ -44,12 +46,13 @@ export default class ChangeView extends React.Component<T, {}> {
             cn.push(css.item_half)
         }
 
+        // <svg className={css.icon} role="presentation" aria-hidden="true" aria-labelledby="title">
+        //     <use xlinkHref={`#${type}`} />
+        // </svg>
+
         return (
             <button type="button" className={cn.join(' ')} onClick={this.handleClick.bind(this, type)}>
-                <svg className={css.icon} role="presentation" aria-hidden="true" aria-labelledby="title">
-                    <use xlinkHref={`#${type}`} />
-                </svg>
-
+                <Icon symbol={type} className={css.icon} hidden={true} />
                 { label }
             </button>
         )

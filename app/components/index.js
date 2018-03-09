@@ -1,3 +1,4 @@
+import Icon from 'components/icon'
 import Logo from 'components/logo'
 import Radio from 'components/radio'
 import Input from 'components/input'
@@ -28,6 +29,7 @@ import SelectionBox from 'components/selection-box'
 // import CustomComponent from 'components/custom-component'
 
 export {
+    Icon,
     Logo,
     Radio,
     Input,

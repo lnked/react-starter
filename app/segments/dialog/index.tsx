@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Input, Button } from 'components'
+import { Icon, Input, Button } from 'components'
 
 interface T {
     type?: 'alert' | 'prompt' | 'confirm';
@@ -27,7 +27,9 @@ export default class Dialog extends React.PureComponent<T, {}> {
 
         return (
             <div className={css.dialog}>
-                <button className={css.close} />
+                <button type="button" className={css.close}>
+                    <Icon symbol="close" className={css.icon} />
+                </button>
 
                 <div className={css.body}>
                     <div className={css.title}>{title}</div>

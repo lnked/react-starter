@@ -32,17 +32,27 @@
 .clear {
     border: 0;
     outline: 0;
+    font-size: 0;
+    line-height: 0;
     position: absolute;
-    right: 16px;
+    right: 12px;
     top: 50%;
     width: 10px;
     height: 10px;
     margin-top: -5px;
+    text-align: center;
+    background-color: transparent;
     background-image: url(components/input/assets/clear.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 10px 10px;
     cursor: pointer;
+    color: $c-pink-swan;
+    transition: color $a-time $a-func;
+
+    &:hover {
+        color: $c-black;
+    }
 }
 
 .control {

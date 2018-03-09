@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as css from './styles.scss'
+import { Icon } from 'components'
 
 import ClipboardButton from 'react-clipboard.js'
 
@@ -41,12 +42,14 @@ export default class ColorPicker extends React.Component<T, S> {
 
         const pureColor = color ? color.replace('#', '') : ''
 
+        // <svg className={css.clear__icon} role="presentation" aria-labelledby="title" aria-hidden={true}>
+        //     <use xlinkHref="#clear" />
+        // </svg>
+
         if (pureColor) {
             clearButton.push(
                 <button className={css.clear} key="clear" onClick={this.handleClear}>
-                    <svg className={css.clear__icon} role="presentation" aria-labelledby="title" aria-hidden={true}>
-                        <use xlinkHref="#clear" />
-                    </svg>
+                    <Icon symbol="close" className={css.icon} hidden={true} />
                 </button>
             )
         }

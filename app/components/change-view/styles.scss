@@ -35,6 +35,7 @@
     line-height: 1;
     position: relative;
     text-decoration: none;
+    background-color: transparent;
     transition: color $a-time $a-func, background-color $a-time $a-func;
 
     &:before {

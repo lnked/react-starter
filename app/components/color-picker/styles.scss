@@ -66,30 +66,32 @@
 }
 
 .clear {
+    width: 10px;
+    height: 10px;
     border: 0;
     outline: 0;
     position: absolute;
-    right: 16px;
+    right: 12px;
     top: 50%;
-    width: 10px;
-    height: 10px;
+    font-size: 0;
+    line-height: 0;
     z-index: 10;
-    line-height: 1;
     margin-top: -5px;
     cursor: pointer;
+    text-align: center;
     color: $c-pink-swan;
     transition: color $a-time $a-func;
-
-    &__icon {
-        width: 10px;
-        height: 10px;
-        display: inline-block;
-        vertical-align: middle;
-    }
 
     &:hover {
         color: $c-black;
     }
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .grill {
