@@ -8,6 +8,8 @@ interface T {
     children: string | React.ReactChild | React.ReactNode | any[];
 }
 
+const baseUrl = window.location.href.replace(window.location.hash, '')
+
 export default class Icon extends React.PureComponent<T, {}> {
     static defaultProps = {
         symbol: '',
@@ -19,33 +21,22 @@ export default class Icon extends React.PureComponent<T, {}> {
         const cn: any = []
         const { symbol, hidden, children, className } = this.props
 
-        const baseUrl = window.location.href.replace(window.location.hash, '')
-
         cn.push(css.icon)
 
         if (className) {
             cn.push(className)
         }
 
-        const icon: any = []
-
-        if (children) {
-            icon.push(
-                <span className={cn.join(' ')}>
-                    {children}
-                </span>
-            )
-        } else if (symbol) {
-            icon.push(
-                <svg className={cn.join(' ')} key={`icon_${symbol}`} role="presentation" aria-hidden={hidden}>
-                    <use xlinkHref={`${baseUrl}#${symbol}`} />
-                </svg>
-            )
-        }
-
         return (
             <React.Fragment>
-                {icon}
+                {children
+                    ? <span className={cn.join(' ')}>
+                        {children}
+                    </span>
+                    : <svg className={cn.join(' ')} key={`icon_${symbol}`} role="presentation" aria-hidden={hidden}>
+                        <use xlinkHref={`${baseUrl}#${symbol}`} />
+                    </svg>
+                }
             </React.Fragment>
         )
     }

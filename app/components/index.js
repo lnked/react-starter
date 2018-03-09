@@ -26,6 +26,7 @@ import SidebarIcon from 'components/sidebar-icon'
 import GroupLinks from 'components/group-links'
 // import SuggestInput from 'components/suggest-input'
 import SelectionBox from 'components/selection-box'
+import PrimitiveInput from 'components/primitive-input'
 // import CustomComponent from 'components/custom-component'
 
 export {
@@ -55,7 +56,8 @@ export {
     // BreadCrumbs,
     GroupLinks,
     SidebarIcon,
-    SelectionBox
+    SelectionBox,
+    PrimitiveInput
     // SuggestInput,
     // SelectionBox,
     // CustomComponent
