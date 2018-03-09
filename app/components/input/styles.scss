@@ -48,7 +48,6 @@
     background-size: 10px 10px;
     cursor: pointer;
     color: $c-pink-swan;
-    transition: color $a-time $a-func;
 
     &:hover {
         color: $c-black;
@@ -59,6 +58,7 @@
     width: 100%;
     color: $c-black;
     font-weight: 400;
+    font-size: 1.4rem;
     font-family: $font-family;
     background-color: $c-white;
     border: 1px solid $c-border;
@@ -69,16 +69,14 @@
 
     &_input {
         height: 42px;
-        padding: 0 15px;
-        font-size: 1.4rem;
+        padding: 0 12px;
     }
 
     &_textarea {
         resize: vertical;
         min-height: 42px;
         max-height: 300px;
-        font-size: 1.2rem;
-        padding: 12px 15px;
+        padding: 10px 12px;
     }
 
     &_error {

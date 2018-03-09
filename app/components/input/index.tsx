@@ -80,26 +80,6 @@ export default class Input extends React.Component<T, S> {
         })
     }
 
-    renderClearButton = () => {
-        const clearButton: any = []
-        const { value, cleaned } = this.props
-
-        if (value && cleaned) {
-            clearButton.push(
-                <button
-                    type="button"
-                    className={css.clear}
-                    onClick={this.handleClear}
-                    key={[this.prefix, 'clear'].join('.')}
-                >
-                    <Icon symbol="close" className={css.icon} hidden={true} />
-                </button>
-            )
-        }
-
-        return clearButton
-    }
-
     renderAdditional = () => {
         const addition: any = []
 
@@ -129,7 +109,7 @@ export default class Input extends React.Component<T, S> {
         const props: any = {}
 
         const { value } = this.state
-        const { name, error, multiline, maxlength, tabindex, className } = this.props
+        const { name, error, cleaned, multiline, maxlength, tabindex, className } = this.props
 
         const id = `input_${name}`
 
@@ -172,7 +152,14 @@ export default class Input extends React.Component<T, S> {
                     ? <textarea id={id} {...props} rows={multiline || 10}>{value}</textarea>
                     : <input id={id} {...props} value={value} />
                 }
-                { this.renderClearButton() }
+
+                {(value && cleaned)
+                    ? <button type="button"
+                        className={css.clear}
+                        onClick={this.handleClear}
+                        key={[this.prefix, 'clear'].join('.')}><Icon symbol="close" hidden={true} /></button>
+                    : ''
+                }
             </label>
         )
     }

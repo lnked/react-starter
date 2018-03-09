@@ -19,6 +19,8 @@ export default class Icon extends React.PureComponent<T, {}> {
         const cn: any = []
         const { symbol, hidden, children, className } = this.props
 
+        const baseUrl = window.location.href.replace(window.location.hash, '')
+
         cn.push(css.icon)
 
         if (className) {
@@ -28,19 +30,23 @@ export default class Icon extends React.PureComponent<T, {}> {
         const icon: any = []
 
         if (children) {
-            icon.push(children)
+            icon.push(
+                <span className={cn.join(' ')}>
+                    {children}
+                </span>
+            )
         } else if (symbol) {
             icon.push(
-                <svg className={css.pictogram} key={`icon_${symbol}`} role="presentation" aria-hidden={hidden}>
-                    <use xlinkHref={`#${symbol}`} />
+                <svg className={cn.join(' ')} key={`icon_${symbol}`} role="presentation" aria-hidden={hidden}>
+                    <use xlinkHref={`${baseUrl}#${symbol}`} />
                 </svg>
             )
         }
 
         return (
-            <span className={cn.join(' ')}>
+            <React.Fragment>
                 {icon}
-            </span>
+            </React.Fragment>
         )
     }
 }

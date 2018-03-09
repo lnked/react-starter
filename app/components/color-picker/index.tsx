@@ -42,10 +42,6 @@ export default class ColorPicker extends React.Component<T, S> {
 
         const pureColor = color ? color.replace('#', '') : ''
 
-        // <svg className={css.clear__icon} role="presentation" aria-labelledby="title" aria-hidden={true}>
-        //     <use xlinkHref="#clear" />
-        // </svg>
-
         if (pureColor) {
             clearButton.push(
                 <button className={css.clear} key="clear" onClick={this.handleClear}>

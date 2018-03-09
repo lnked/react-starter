@@ -40,10 +40,6 @@ export default class SidebarIcon extends React.Component<T, {}> {
     renderIcon = () => {
         const { icon } = this.props
 
-        // <svg className={css.pictogram} role="presentation" aria-hidden="true" aria-labelledby="title">
-        //     <use xlinkHref={`#${icon}`} />
-        // </svg>
-
         return (
             <span className={css.image}>
                 <Icon symbol={icon} className={css.pictogram} hidden={true} />

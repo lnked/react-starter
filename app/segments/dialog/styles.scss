@@ -10,7 +10,7 @@
     width: 16px;
     height: 16px;
     padding: 0;
-    color: $c-blue;
+    color: $c-pink-swan;
     border: 0;
     outline: 0;
     line-height: 1;
@@ -20,6 +20,10 @@
     right: 10px;
     top: 10px;
     background-color: transparent;
+
+    &:hover {
+        color: $c-blue;
+    }
 }
 
 .icon {
