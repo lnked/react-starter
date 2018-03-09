@@ -144,8 +144,8 @@
         "bundle-buddy-webpack-plugin": "0.3.0",
         "cache-loader": "1.2.2",
         "caniuse-lite": "1.0.30000813",
-        "compression-webpack-plugin": "1.1.10",
-        "copy-webpack-plugin": "4.5.0",
+        "compression-webpack-plugin": "1.1.11",
+        "copy-webpack-plugin": "4.5.1",
         "css-loader": "0.28.10",
         "cssnano": "3.10.0",
         "eslint": "4.18.2",
@@ -197,7 +197,7 @@
         "sass-loader": "6.0.7",
         "script-ext-html-webpack-plugin": "1.8.8",
         "size-limit": "0.16.2",
-        "style-loader": "0.20.2",
+        "style-loader": "0.20.3",
         "stylelint": "8.4.0",
         "stylelint-config-standard": "18.2.0",
         "stylelint-webpack-plugin": "0.10.3",
@@ -226,13 +226,5 @@
         "webpack-svgstore-plugin": "4.0.1",
         "webpack-visualizer-plugin": "0.1.11",
         "xml-loader": "1.2.1"
-    },
-    "peerDependencies": {
-        "babel-core": "6.26.0",
-        "node-sass": "4.7.2",
-        "pug": "2.0.0-rc.4",
-        "sugarss": "1.0.1",
-        "svgo": "1.0.3",
-        "tslint": "5.9.1"
     }
 }
