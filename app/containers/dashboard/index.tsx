@@ -200,6 +200,14 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
+    renderQuantity = () => {
+        return (
+            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
+                <Quantity name="count" min={1} max={999} step={1} /><br /><br />
+            </div>
+        )
+    }
+
     renderColorPicker = () => {
         return (
             <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
@@ -275,7 +283,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                     <div>
                         <Loader />
                         <Spinner /><br /><br />
-                        <Quantity name="count" min={1} max={999} step={1} /><br /><br />
+                        {this.renderQuantity()}
                         {this.renderInput()}
                         {this.renderSelectionBox()}
                         {this.renderTitle()}

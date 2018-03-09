@@ -32,11 +32,11 @@ export default class Quantity extends React.Component<T, S> {
         count: this.props.count || 0
     }
 
-    componentWillReceiveProps ({ nextProps }: any) {
-        if (nextProps.count !== this.state.count) {
-            this.setState({count: nextProps.count})
-        }
-    }
+    // componentWillReceiveProps ({ nextProps }: any) {
+    //     if ((typeof nextProps.count !== 'undefined') && (nextProps.count !== this.state.count)) {
+    //         this.setState({count: nextProps.count})
+    //     }
+    // }
 
     // shouldComponentUpdate (nextProps) {
     //     console.log(nextProps.count, this.state.count)
