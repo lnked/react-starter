@@ -4,6 +4,7 @@ import * as css from './styles.scss'
 interface T {
     grammar?: any;
     children?: any;
+    propname: string;
     handleSpeech?: (() => void);
 }
 
@@ -30,6 +31,7 @@ declare var window: WindowInterface
 export default class SpeechText extends React.Component<T, S> {
     static defaultProps = {
         grammar: [],
+        propname: 'value',
         handleSpeech: () => {
             console.log('')
         }
@@ -140,7 +142,7 @@ export default class SpeechText extends React.Component<T, S> {
         const cn: any = []
 
         const { started, speaks } = this.state
-        const { children } = this.props
+        const { children, propname } = this.props
 
         cn.push(css.button)
 
@@ -156,7 +158,7 @@ export default class SpeechText extends React.Component<T, S> {
             }
 
             return React.cloneElement(input, {
-                value: inputValue || ''
+                [propname]: inputValue || ''
             })
         })
 
