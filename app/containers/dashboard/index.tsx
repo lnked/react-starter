@@ -141,7 +141,7 @@ export default class Dashboard extends React.Component<{}, {}> {
                         {
                             label: 'Третий',
                             value: 3
-    s                    },
+                        },
                         {
                             label: 'Четвертый',
                             value: 4
