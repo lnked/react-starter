@@ -20,7 +20,7 @@ if (define.rs_production) {
     );
 };
 
-if (define.rs_release) {
+if (define.rs_release || define.rs_deploy) {
     plugins.push(
         ...require('./plugins/uglify').config,
         ...require('./plugins/compression').config,

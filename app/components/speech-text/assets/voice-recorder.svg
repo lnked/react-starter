@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="352px" viewBox="0 0 512 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>voice-recorder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="voice-recorder" fill-rule="nonzero">
+            <path d="M480,0 L32,0 C14.368,0 0,14.368 0,32 L0,320 C0,337.664 14.368,352 32,352 L480,352 C497.664,352 512,337.664 512,320 L512,32 C512,14.368 497.664,0 480,0 Z" id="Shape" fill="#F44336"></path>
+            <path d="M368,96 C323.872,96 288,131.904 288,176 C288,194.08 294.24,210.592 304.384,224 L207.584,224 C217.76,210.592 224,194.08 224,176 C224,131.904 188.096,96 144,96 C99.904,96 64,131.904 64,176 C64,220.128 99.904,256 144,256 L368,256 C412.128,256 448,220.128 448,176 C448,131.904 412.128,96 368,96 Z M96,176 C96,149.536 117.536,128 144,128 C170.464,128 192,149.536 192,176 C192,202.464 170.464,224 144,224 C117.536,224 96,202.464 96,176 Z M368,224 C341.536,224 320,202.464 320,176 C320,149.536 341.536,128 368,128 C394.464,128 416,149.536 416,176 C416,202.464 394.464,224 368,224 Z" id="Shape" fill="#FAFAFA"></path>
+        </g>
+    </g>
+</svg>

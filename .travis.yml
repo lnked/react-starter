@@ -36,6 +36,9 @@ script:
   # - npm run test
   - npm run release
 
+after_success:
+  - npm run deploy
+
 addons:
   code_climate:
     repo_token: 2b32652090b39c2cc95f0ea3ca3e2c7ff452b75388a81f0f4cfacbce4588f6e6
