@@ -1,15 +1,18 @@
 {
     "presets": [
-        ["env", {
-            "targets": {
-                "node": "current"
-            },
-            "loose": true,
-            "debug": false,
-            "uglify": true,
-            "modules": false,
-            "useBuiltIns": "usage"
-        }],
+        [
+            "env",
+            {
+                "targets": {
+                    "node": "current"
+                },
+                "loose": true,
+                "debug": false,
+                "uglify": true,
+                "modules": false,
+                "useBuiltIns": "usage"
+            }
+        ],
         "react"
     ],
     "plugins": [
@@ -18,14 +21,31 @@
         "syntax-dynamic-import",
         "transform-imports",
         "transform-decorators-legacy",
-        ["transform-class-properties", { "spec": true }],
+        [
+            "transform-class-properties",
+            {
+                "spec": true
+            }
+        ],
         "transform-object-rest-spread",
-        ["transform-react-jsx", {}],
-        ["babel-plugin-styled-components", { "minify": false, "uglifyPure": false }]
+        [
+            "transform-react-jsx",
+            {}
+        ],
+        [
+            "babel-plugin-styled-components",
+            {
+                "minify": false,
+                "uglifyPure": false
+            }
+        ]
     ],
     "env": {
         "test": {
-            "presets": ["env", "react"],
+            "presets": [
+                "env",
+                "react"
+            ],
             "plugins": [
                 "transform-es2015-modules-commonjs"
             ]
@@ -39,20 +59,21 @@
         },
         "production": {
             "presets": [
-                ["env", { "modules": "commonjs" }],
-                "react",
                 "minify"
             ],
             "plugins": [
                 "transform-react-inline-elements",
                 "transform-react-constant-elements",
                 "transform-react-pure-class-to-function",
-                ["transform-runtime", {
-                    "helpers": false,
-                    "polyfill": false,
-                    "regenerator": true,
-                    "moduleName": "babel-runtime"
-                }]
+                [
+                    "transform-runtime",
+                    {
+                        "helpers": false,
+                        "polyfill": false,
+                        "regenerator": true,
+                        "moduleName": "babel-runtime"
+                    }
+                ]
             ],
             "ignore": [
                 "tests",
