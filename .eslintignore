@@ -1,4 +1,10 @@
-dist/*
-typings/*
-webpack/*
-node_modules/*
+webpack
+typings
+coverage
+node_modules
+
+# tmp
+dist
+logs
+.cache
+.awcache
