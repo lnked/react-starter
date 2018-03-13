@@ -18,6 +18,12 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
+"@babel/helper-annotate-as-pure@^7.0.0-beta.37":
+  version "7.0.0-beta.40"
+  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0-beta.40.tgz#095dd4c70b231eba17ebf61c3434e6f9d71bd574"
+  dependencies:
+    "@babel/types" "7.0.0-beta.40"
+
 "@babel/helper-function-name@7.0.0-beta.40":
   version "7.0.0-beta.40"
   resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.0.0-beta.40.tgz#9d033341ab16517f40d43a73f2d81fc431ccd7b6"
@@ -1078,6 +1084,14 @@ babel-plugin-minify-type-constructors@^0.3.0:
   dependencies:
     babel-helper-is-void-0 "^0.3.0"
 
+babel-plugin-styled-components@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.5.1.tgz#31dbeb696d1354d1585e60d66c7905f5e474afcd"
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0-beta.37"
+    babel-types "^6.26.0"
+    stylis "^3.0.0"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -1415,10 +1429,6 @@ babel-plugin-transform-react-pure-class-to-function@1.0.1:
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-pure-class-to-function/-/babel-plugin-transform-react-pure-class-to-function-1.0.1.tgz#32a649c97d653250b419cfd1489331b0290d9ee4"
   dependencies:
     babel-helper-is-react-class "^1.0.0"
-
-babel-plugin-transform-react-remove-prop-types@0.4.13:
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.13.tgz#331cfc05099a808238311d78319c27460d481189"
 
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
@@ -11438,6 +11448,10 @@ stylelint@8.4.0:
     svg-tags "^1.0.0"
     table "^4.0.1"
 
+stylis@^3.0.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.5.0.tgz#016fa239663d77f868fef5b67cf201c4b7c701e1"
+
 subarg@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/subarg/-/subarg-1.0.0.tgz#f62cf17581e996b48fc965699f54c06ae268b8d2"
@@ -11887,6 +11901,10 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
+ts-is-kind@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ts-is-kind/-/ts-is-kind-1.0.0.tgz#f9ca9c1af07ddb82d7a06744d8928952d4bd2426"
+
 ts-jest@22.4.1:
   version "22.4.1"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-22.4.1.tgz#69defb2042d689cff9b4244365ef638ecd35f706"
@@ -11979,7 +11997,14 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@2.7.2:
+typescript-plugin-styled-components@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-0.0.5.tgz#f313a00d67a978f1e23f15c18b2fc4753a1de400"
+  dependencies:
+    ts-is-kind "^1.0.0"
+    typescript "^2.5.2"
+
+typescript@2.7.2, typescript@^2.5.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
 

@@ -2,7 +2,7 @@
     "presets": [
         ["env", {
             "targets": {
-                "node": "current",
+                "node": "current"
             },
             "loose": true,
             "debug": false,
@@ -20,11 +20,12 @@
         "transform-decorators-legacy",
         ["transform-class-properties", { "spec": true }],
         "transform-object-rest-spread",
-        ["transform-react-jsx", {}]
+        ["transform-react-jsx", {}],
+        ["babel-plugin-styled-components", { "minify": false, "uglifyPure": false }]
     ],
     "env": {
         "test": {
-            "presets": [["env"], "react"],
+            "presets": ["env", "react"],
             "plugins": [
                 "transform-es2015-modules-commonjs"
             ]
@@ -32,7 +33,20 @@
         "development": {
             "plugins": [
                 "react-hot-loader/babel",
-                "transform-react-display-name",
+                "transform-react-display-name"
+            ],
+            "sourceMaps": true
+        },
+        "production": {
+            "presets": [
+                ["env", { "modules": "commonjs" }],
+                "react",
+                "minify"
+            ],
+            "plugins": [
+                "transform-react-inline-elements",
+                "transform-react-constant-elements",
+                "transform-react-pure-class-to-function",
                 ["transform-runtime", {
                     "helpers": false,
                     "polyfill": false,
@@ -40,19 +54,9 @@
                     "moduleName": "babel-runtime"
                 }]
             ],
-            "sourceMaps": true
-        },
-        "production": {
-            "presets": ["minify"],
-            "plugins": [
-                "transform-react-inline-elements",
-                "transform-react-constant-elements",
-                "transform-react-pure-class-to-function",
-                ["transform-react-remove-prop-types", {
-                    "mode": "wrap",
-                    "ignoreFilenames": ["node_modules"],
-                    "additionalLibraries": ["react-immutable-proptypes"]
-                }]
+            "ignore": [
+                "tests",
+                "node_modules"
             ]
         }
     }
