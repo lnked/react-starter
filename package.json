@@ -86,6 +86,7 @@
         "react-router-redux": "5.0.0-alpha.9",
         "react-select": "1.2.1",
         "react-transition-group": "2.2.1",
+        "recompose": "0.26.0",
         "redux": "3.7.2",
         "redux-connect": "7.0.0",
         "redux-thunk": "2.2.0",
