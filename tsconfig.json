@@ -37,14 +37,17 @@
             "*": [
                 "node_modules/@types/*"
             ],
-            "hoc": [
-                "./app/hoc"
+            "hocs": [
+                "./app/hocs"
             ],
             "segments": [
                 "./app/segments"
             ],
             "layouts": [
                 "./app/layouts"
+            ],
+            "variables": [
+                "./app/variables"
             ],
             "containers": [
                 "./app/containers"

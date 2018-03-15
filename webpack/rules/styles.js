@@ -45,55 +45,55 @@ const usesConfig = [
         loader: 'sass-loader',
         options: {
             sourceMap: define.rs_development || define.rs_analyzer,
-            includePaths: [define.rs_root]
+            includePaths: [ define.rs_root ]
         }
     }
 ];
 
 const rules = define.rs_generate_css ? [
-    {
-        test: /\.(s(a|c)ss)$/,
-        use: ExtractCssChunks.extract({
-            fallback: 'style-loader',
-            publicPath: '../',
-            use: usesConfig
-        }),
-        include: [
-            define.rs_node,
-            define.rs_root
-        ]
-    },
-    {
-        test: /\.css$/,
-        use: ExtractCssChunks.extract({
-            fallback: 'style-loader',
-            publicPath: '../',
-            use: cssConfig
-        })
-    }
-] : [
         {
             test: /\.(s(a|c)ss)$/,
-            use: [
-                {
-                    loader: 'style-loader'
-                },
-                ...usesConfig
-            ],
+            use: ExtractCssChunks.extract({
+                fallback: 'style-loader',
+                publicPath: '../',
+                use: usesConfig
+            }),
             include: [
                 define.rs_node,
                 define.rs_root
             ]
         },
         {
-            test: /\.(css)$/,
-            use: [
-                {
-                    loader: 'style-loader'
-                },
-                ...cssConfig
-            ]
+            test: /\.css$/,
+            use: ExtractCssChunks.extract({
+                fallback: 'style-loader',
+                publicPath: '../',
+                use: cssConfig
+            })
         }
-    ];
+    ] : [
+    {
+        test: /\.(s(a|c)ss)$/,
+        use: [
+            {
+                loader: 'style-loader'
+            },
+            ...usesConfig
+        ],
+        include: [
+            define.rs_node,
+            define.rs_root
+        ]
+    },
+    {
+        test: /\.(css)$/,
+        use: [
+            {
+                loader: 'style-loader'
+            },
+            ...cssConfig
+        ]
+    }
+];
 
 module.exports.config = rules;
