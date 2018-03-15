@@ -9,8 +9,8 @@ const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('webpack-plugin-chunk-manifest');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
 const cssPath = path.join(__dirname, 'app')
 
@@ -42,7 +42,7 @@ const plugins = [
     new webpack.HashedModuleIdsPlugin(),
     new ExtractCssChunks({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
-        allChunks: true,
+        allChunks: true
     }),
     new PurgecssPlugin({
         paths: glob.sync(`${cssPath}/*`)
