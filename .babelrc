@@ -18,10 +18,7 @@
         "dual-import",
         "transform-imports",
         "add-module-exports",
-        "syntax-dynamic-import",
         "transform-react-jsx",
-        "transform-class-properties",
-        "transform-object-rest-spread",
         ["babel-plugin-styled-components", {
             "minify": false,
             "uglifyPure": false
