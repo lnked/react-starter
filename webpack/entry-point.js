@@ -23,17 +23,18 @@ const entryPoint = Object.assign({}, {
     ]
 });
 
-if (define.rs_development) {
-    Object.assign(entryPoint, {
-        app: [
-            'react-hot-loader/patch',
-            resolve(define.rs_root, 'app')
+Object.assign(entryPoint, {
+    app: [
+        ...define.rs_development
+        ? [
+            'babel-polyfill',
+            'react-hot-loader/patch', // activate HMR for React
+            `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`, // WebpackDevServer host and port
+            'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
         ]
-    });
-} else {
-    Object.assign(entryPoint, {
-        app: resolve(define.rs_root, 'app')
-    });
-}
+        : [ /* */ ],
+        resolve(define.rs_root, 'app')
+    ]
+});
 
 module.exports.config = entryPoint;

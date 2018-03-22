@@ -1,5 +1,5 @@
-export const label: string;
 export const wrapper: string;
+export const label: string;
 export const error: string;
 export const hint: string;
 export const clear: string;

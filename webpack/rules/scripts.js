@@ -27,7 +27,8 @@ useConfig.push(
     {
         loader: 'babel-loader',
         options: {
-            cacheDirectory: define.rs_development
+            cacheDirectory: define.rs_development,
+            extends: resolve(define.rs_base, '.babelrc')
         }
     }
 );
@@ -43,7 +44,7 @@ const rules = [
         enforce: 'pre',
         test: /\.(j|t)s[x]?$/,
         options: {
-            fix: define.rs_production
+            fix: false //define.rs_production
         },
         loader: 'eslint-loader',
         include: define.rs_root
@@ -52,7 +53,7 @@ const rules = [
         enforce: 'pre',
         test: /\.ts[x]?$/,
         options: {
-            fix: define.rs_production
+            fix: false
         },
         loader: 'tslint-loader',
         include: define.rs_root

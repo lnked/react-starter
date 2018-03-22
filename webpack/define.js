@@ -16,9 +16,14 @@ const isAssemply = process.argv.includes('assemply');
 const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = process.argv.includes('development') || !isProduction;
 
+const _host_ = process.env.HOST || '0.0.0.0';
+const _port_ = process.env.PORT || 3000;
+
 process.env.NODE_ENV = isProduction ? 'production' : 'development';
 
 module.exports = {
+    rs_host: _host_,
+    rs_port: _port_,
     rs_base: _base_,
     rs_root: _root_,
     rs_dist: _dist_,

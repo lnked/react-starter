@@ -17,7 +17,6 @@
                 "ignorePseudoClasses": ["global"]
             }
         ],
-        "property-no-vendor-prefix": true,
         "at-rule-no-unknown": [
             true, {
                 "ignoreAtRules": [
@@ -30,6 +29,7 @@
             }
         ],
         "no-eol-whitespace": [true, { "ignore": ["empty-lines"] } ],
+        "no-descending-specificity": null,
         "selector-no-qualifying-type": true,
         "selector-combinator-space-after": "always",
         "selector-attribute-quotes": "always",
@@ -40,7 +40,8 @@
         "declaration-no-important": true,
         "declaration-colon-space-before": "never",
         "declaration-colon-space-after": "always",
-        "value-no-vendor-prefix": true,
+        "property-no-vendor-prefix": null,
+        "value-no-vendor-prefix": null,
         "number-leading-zero": "never",
         "function-url-quotes": "never",
         "font-weight-notation": "numeric",

@@ -1,44 +1,31 @@
 {
     "presets": [
-        [
-            "env",
-            {
-                "targets": {
-                    "node": "current"
-                },
-                "loose": true,
-                "debug": false,
-                "uglify": true,
-                "modules": false,
-                "useBuiltIns": "usage"
-            }
-        ],
-        "react"
+        ["env", {
+            "targets": {
+                "node": "current",
+                "browsers": ["last 2 versions"]
+            },
+            "loose": true,
+            "debug": false,
+            "uglify": true,
+            "modules": false,
+            "useBuiltIns": true
+        }],
+        "react",
+        "stage-2"
     ],
     "plugins": [
         "dual-import",
+        "transform-imports",
         "add-module-exports",
         "syntax-dynamic-import",
-        "transform-imports",
-        "transform-decorators-legacy",
-        [
-            "transform-class-properties",
-            {
-                "spec": true
-            }
-        ],
+        "transform-react-jsx",
+        "transform-class-properties",
         "transform-object-rest-spread",
-        [
-            "transform-react-jsx",
-            {}
-        ],
-        [
-            "babel-plugin-styled-components",
-            {
-                "minify": false,
-                "uglifyPure": false
-            }
-        ]
+        ["babel-plugin-styled-components", {
+            "minify": false,
+            "uglifyPure": false
+        }]
     ],
     "env": {
         "test": {
@@ -51,7 +38,6 @@
             ]
         },
         "development": {
-            "presets": ["react-hmre"],
             "plugins": [
                 "react-hot-loader/babel",
                 "transform-react-display-name"

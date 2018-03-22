@@ -23,7 +23,6 @@ const plugins = [
             },
             compress: {
                 unused: true,
-                // cascade: true,
                 booleans: true,
                 warnings: false,
                 dead_code: true,

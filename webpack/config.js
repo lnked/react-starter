@@ -8,20 +8,17 @@ const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
 
-const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 3000;
-
 const entryPoint = require('./entry-point');
 
 let sourceMap = false;
 
 if (define.rs_analyzer)
 {
-    sourceMap = 'source-map';
+    sourceMap = 'none';
 }
 else if (define.rs_development)
 {
-    sourceMap = 'inline-source-map';
+    sourceMap = 'cheap-module-eval-source-map';
 }
 
 process.traceDeprecation = true;
@@ -89,7 +86,7 @@ module.exports = {
 
     performance: define.rs_release && {
         hints: 'warning',
-        maxAssetSize: 400000,
+        maxAssetSize: 500000,
         maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
@@ -106,9 +103,11 @@ module.exports = {
 
     devServer: {
         headers: { 'Access-Control-Allow-Origin': '*' },
-        compress: define.rs_production,
+        open: true,
+        compress: false,
         contentBase: define.rs_dist,
-        watchContentBase: define.rs_development,
+        disableHostCheck: true,
+        watchContentBase: true,
         historyApiFallback: true,
         watchOptions: {
             aggregateTimeout: 100,
@@ -119,9 +118,9 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        // hotOnly: define.rs_development,
-        hot: define.rs_development,
-        port: port,
-        host: host
+        // hotOnly: true,
+        hot: true,
+        port: define.rs_port,
+        host: define.rs_host
     }
 };
