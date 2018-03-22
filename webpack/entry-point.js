@@ -28,9 +28,9 @@ Object.assign(entryPoint, {
         ...define.rs_development
         ? [
             'babel-polyfill',
-            'react-hot-loader/patch', // activate HMR for React
-            `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`, // WebpackDevServer host and port
-            'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
+            'react-hot-loader/patch',
+            `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
+            'webpack/hot/only-dev-server'
         ]
         : [ /* */ ],
         resolve(define.rs_root, 'app')

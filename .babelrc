@@ -17,7 +17,6 @@
     "plugins": [
         "dual-import",
         "transform-imports",
-        "add-module-exports",
         "transform-react-jsx",
         ["babel-plugin-styled-components", {
             "minify": false,
