@@ -52,6 +52,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css', '.json'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
+            'lodash-es': 'lodash',
             app: define.rs_root,
             hocs: resolve(define.rs_root, 'hocs'),
             utils: resolve(define.rs_root, 'utils'),
@@ -119,7 +120,6 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        // hotOnly: true,
         hot: true,
         port: define.rs_port,
         host: define.rs_host

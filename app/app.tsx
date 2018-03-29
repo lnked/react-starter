@@ -22,12 +22,9 @@ document.body.classList.remove('loading')
 declare var module: { hot: any }
 
 if (module.hot) {
-    module.hot.accept('./routes', () => {
-        alert('render')
-        renderApp(App)
-    })
+    module.hot.accept()
+
     module.hot.dispose(() => {
-        alert('dispose')
         clearInterval(1000)
     })
 }

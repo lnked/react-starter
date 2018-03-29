@@ -1,14 +1,15 @@
 {
     "parser": "babel-eslint",
     "extends": [
-        "plugin:react/recommended",
+        "standard",
         "plugin:import/warnings",
-        "plugin:jsx-a11y/recommended",
-        "standard"
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
     ],
     "plugins": [
         "react",
         "jest",
+        "import",
         "jsx-a11y",
         "security",
         "immutable"
@@ -25,6 +26,7 @@
     },
     "env": {
         "es6": true,
+        "node": true,
         "browser": true
     },
     "globals": {
@@ -216,10 +218,7 @@
             2,
             "never"
         ],
-        "quote-props": [
-            2,
-            "as-needed"
-        ],
+        "quote-props": [2, "as-needed", { "keywords": true, "unnecessary": false }],
         "quotes": [
             2,
             "single"
