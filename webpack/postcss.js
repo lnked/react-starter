@@ -10,6 +10,13 @@ postcss.push(
         root: define.rs_root,
         path: define.rs_root
     }),
+    require('postcss-selector-not'),
+    require('postcss-short-spacing'),
+    require('postcss-simple-vars'),
+    require('postcss-mixins'),
+    require('postcss-nested'),
+    require('postcss-custom-media'),
+    require('postcss-media-minmax'),
     require('postcss-url'),
     require('postcss-hexrgba'),
     require('postcss-position'),
@@ -17,6 +24,7 @@ postcss.push(
     require("postcss-cssnext")({
         autoprefixer: false
     }),
+    require('css-mqpacker'),
     require('pixrem')({
         rootValue: 10
     }),
