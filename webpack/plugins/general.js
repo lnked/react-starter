@@ -12,7 +12,6 @@ const SvgStore = require('webpack-svgstore-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const AsyncModulePlugin = require('async-module-loader/plugin');
 
 const plugins = [
     new webpack.WatchIgnorePlugin([
@@ -29,10 +28,10 @@ const plugins = [
         /moment[\/\\]locale$/,
         /(en-gb|ru)\.js/
     ),
-    new AsyncModulePlugin(),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
-        minimize: define.rs_production
+        minimize: define.rs_production,
+        options: {}
     }),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')

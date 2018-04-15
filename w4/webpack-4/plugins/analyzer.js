@@ -6,10 +6,10 @@ const { resolve } = require('path');
 
 const WebpackBundleSizeAnalyzerPlugin = require('webpack-bundle-size-analyzer').WebpackBundleSizeAnalyzerPlugin;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const BundleBuddyWebpackPlugin = require("bundle-buddy-webpack-plugin");
+const BundleBuddyWebpackPlugin = require("bundle-buddy-webpack-plugin");
 
 const plugins = [
-    // new BundleBuddyWebpackPlugin({sam: true}),
+    new BundleBuddyWebpackPlugin({sam: true}),
     new WebpackBundleSizeAnalyzerPlugin('./plain-report.txt'),
     new BundleAnalyzerPlugin({
         // Can be `server`, `static` or `disabled`.

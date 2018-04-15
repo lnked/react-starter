@@ -3,7 +3,7 @@
 const { resolve } = require('path');
 const define = require('../define');
 const postcss = require('../postcss');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 const cssConfig = [
     {
@@ -24,10 +24,10 @@ const usesConfig = [
     {
         loader: "typings-for-css-modules-loader",
         options: {
+            namedExport: true,
             sourceMap: define.rs_analyzer,
             importLoaders: 3,
             modules: true,
-            namedExport: true,
             camelCase: true,
             localIdentName: define.rs_release ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
         }
@@ -53,10 +53,11 @@ const usesConfig = [
 const rules = define.rs_generate_css ? [
         {
             test: /\.(s(a|c)ss)$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                ...usesConfig
-            ],
+            use: ExtractCssChunks.extract({
+                fallback: 'style-loader',
+                publicPath: '../',
+                use: usesConfig
+            }),
             include: [
                 define.rs_node,
                 define.rs_root
@@ -64,10 +65,11 @@ const rules = define.rs_generate_css ? [
         },
         {
             test: /\.css$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                ...cssConfig
-            ]
+            use: ExtractCssChunks.extract({
+                fallback: 'style-loader',
+                publicPath: '../',
+                use: cssConfig
+            })
         }
     ] : [
     {

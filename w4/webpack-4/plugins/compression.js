@@ -1,7 +1,7 @@
 'use strict';
 
 const BrotliPlugin = require('brotli-webpack-plugin');
-// const ZopfliPlugin = require('zopfli-webpack-plugin');
+const ZopfliPlugin = require('zopfli-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 const plugins = [

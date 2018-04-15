@@ -3,9 +3,6 @@
 const webpack = require('webpack');
 const { resolve } = require('path');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
 const stats = require('./stats');
 const rules = require('./rules');
 const define = require('./define');
@@ -48,6 +45,44 @@ module.exports = {
         hotUpdateFunction: 'UF'
     },
 
+    optimization: {
+        minimize: define.rs_production,
+        concatenateModules: define.rs_production,
+        noEmitOnErrors: true,
+        namedModules: true,
+        namedChunks: true,
+        runtimeChunk: {
+            name: 'vendors'
+        },
+        splitChunks: {
+            name: true,
+            chunks: "async",
+            minSize: 30000,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            cacheGroups: {
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                },
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendors",
+                    minChunks: 2,
+                    chunks: "all",
+                    enforce: true
+                },
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                }
+            }
+        }
+    },
+
     resolve: {
         symlinks: true,
         modules: [resolve(__dirname, '../node_modules'), define.rs_root],
@@ -85,69 +120,10 @@ module.exports = {
 
     module: {
         rules: rules.config,
-        unsafeCache: define.rs_development,
         noParse: [
             /[\/\\]react[\/\\]react\.js[\/\\]jquery[\/\\]zepto\.js$/
         ]
     },
-
-    optimization: {
-        minimize: define.rs_production,
-        concatenateModules: define.rs_production,
-        noEmitOnErrors: true,
-        namedModules: true,
-        namedChunks: true,
-        runtimeChunk: {
-            name: 'vendors'
-        },
-        minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: !define.rs_release
-            }),
-            new OptimizeCSSAssetsPlugin({})
-        ],
-        splitChunks: {
-            name: true,
-            chunks: "async",
-            minSize: 30000,
-            minChunks: 1,
-            maxAsyncRequests: 5,
-            maxInitialRequests: 3,
-            automaticNameDelimiter: '~',
-            cacheGroups: {
-                default: {
-                    minChunks: 2,
-                    priority: -20,
-                    reuseExistingChunk: true
-                },
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: "vendors",
-                    minChunks: 2,
-                    chunks: "all",
-                    enforce: true
-                },
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    priority: -10
-                }
-            }
-        }
-    },
-
-    // optimization: {
-    // splitChunks: {
-    //     cacheGroups: {
-    //     styles: {
-    //         name: 'styles',
-    //         test: /\.css$/,
-    //         chunks: 'all',
-    //         enforce: true
-    //     }
-    //     }
-    // }
 
     performance: define.rs_release && {
         hints: 'warning',
