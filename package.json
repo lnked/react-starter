@@ -185,7 +185,7 @@
         "postcss-emptymediaqueries": "0.0.2",
         "postcss-hexrgba": "1.0.0",
         "postcss-import": "11.1.0",
-        "postcss-loader": "2.1.3",
+        "postcss-loader": "2.1.4",
         "postcss-media-minmax": "3.0.0",
         "postcss-mixins": "6.2.0",
         "postcss-nested": "3.0.0",
