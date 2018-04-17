@@ -5,7 +5,6 @@ html(
     itemscope='itemscope'
     itemtype='https://schema.org/WebPage'
 )
-    //- appName=htmlWebpackPlugin.options.appName
     head
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -30,6 +29,8 @@ html(
         meta(name='keywords', content='')
         meta(name='robots', content='index,follow')
         meta(name='author', content='Edik Bulikyan <ed.proff@gmail.com>')
+
+        //- appName=htmlWebpackPlugin.options.appName
 
         //- <!--Open Graph Metadata-->
         //- meta(property='og:type', content='website')
@@ -68,5 +69,7 @@ html(
 
         script.
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js');
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js');
+                });
             }

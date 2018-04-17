@@ -1,10 +1,9 @@
 'use strict';
 
-import { join } from 'path';
-
 const postcss = [];
 
 const define = require('./define');
+const { resolve } = require('path');
 
 postcss.push(
     require('precss'),
@@ -43,7 +42,7 @@ if (define.rs_production) {
         require('postcss-emptymediaqueries'),
         require('postcss-uncss')({
             html: [
-                join(__dirname, 'app')
+                resolve(__dirname, 'app')
             ]
         }),
         require('cssnano')({
