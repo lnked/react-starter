@@ -1,5 +1,7 @@
 'use strict';
 
+import { join } from 'path';
+
 const postcss = [];
 
 const define = require('./define');
@@ -39,6 +41,11 @@ if (define.rs_production) {
         require('postcss-discard-comments'),
         require('postcss-color-rgba-fallback'),
         require('postcss-emptymediaqueries'),
+        require('postcss-uncss')({
+            html: [
+                join(__dirname, 'app')
+            ]
+        }),
         require('cssnano')({
             safe: true,
             calc: false,
@@ -48,7 +55,8 @@ if (define.rs_production) {
             normalizeCharset: true,
             convertValues: { length: false },
             colormin: true
-        })
+        }),
+        require('autoprefixer')
     );
 }
 

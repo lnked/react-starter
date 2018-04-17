@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
-import { PropTypes } from 'prop-types'
 import css from './styles.scss'
 
 import { TextField } from 'components'
 
 export default class FieldParams extends Component {
-
-    static propTypes = {
-        name: PropTypes.string.isRequired,
-        checked: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
-        ]),
-        handleChange: PropTypes.oneOfType([
-            PropTypes.bool,
-            PropTypes.func
-        ]),
-        paramsName: PropTypes.string.isRequired,
-        placeholder: PropTypes.string,
-        params: PropTypes.array
-    }
+    // static propTypes = {
+    //     name: PropTypes.string.isRequired,
+    //     checked: PropTypes.oneOfType([
+    //         PropTypes.string,
+    //         PropTypes.number
+    //     ]),
+    //     handleChange: PropTypes.oneOfType([
+    //         PropTypes.bool,
+    //         PropTypes.func
+    //     ]),
+    //     paramsName: PropTypes.string.isRequired,
+    //     placeholder: PropTypes.string,
+    //     params: PropTypes.array
+    // }
 
     static defaultProps = {
         placeholder: '',

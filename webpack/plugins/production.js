@@ -9,10 +9,7 @@ const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 // const ChunkManifestPlugin = require('webpack-plugin-chunk-manifest');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-// const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-const cssPath = path.join(__dirname, 'app')
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -44,9 +41,6 @@ const plugins = [
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
         chunkFilename: "[id].css"
     }),
-    // new PurgecssPlugin({
-    //     paths: glob.sync(`${cssPath}/*`)
-    // }),
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendors/,
         inline: 'runtime',

@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-import { PropTypes } from 'prop-types'
 import css from './styles.scss'
 
 import { TextField } from 'components'
 
 export default class SignField extends Component {
-
-    static propTypes = {
-        name: PropTypes.string.isRequired,
-        symbol: PropTypes.string.isRequired,
-        placeholder: PropTypes.string
-    }
+    // static propTypes = {
+    //     name: PropTypes.string.isRequired,
+    //     symbol: PropTypes.string.isRequired,
+    //     placeholder: PropTypes.string
+    // }
 
     static defaultProps = {
         placeholder: ''
