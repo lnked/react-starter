@@ -235,7 +235,7 @@
         "uglifyjs-webpack-plugin": "1.2.4",
         "url-loader": "0.6.2",
         "webapp-manifest-plugin": "0.0.4",
-        "webpack": "4.5.0",
+        "webpack": "4.6.0",
         "webpack-bundle-analyzer": "2.11.1",
         "webpack-bundle-size-analyzer": "2.7.0",
         "webpack-chunk-hash": "0.6.0",
