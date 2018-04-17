@@ -274,10 +274,6 @@
   version "7.11.0"
   resolved "https://registry.yarnpkg.com/@types/stylelint/-/stylelint-7.11.0.tgz#be7bd071074f4f075948d308b7785574b630a57f"
 
-"@types/systemjs@0.20.6":
-  version "0.20.6"
-  resolved "https://registry.yarnpkg.com/@types/systemjs/-/systemjs-0.20.6.tgz#79838d2b4bce9c014330efa0b4c7b9345e830a72"
-
 "@types/tapable@*":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
