@@ -151,6 +151,6 @@ class App extends React.Component<{}, S> {
     }
 }
 
-declare var module: { hot: any }
+// declare var module: { hot: any }
 
 export default hot(module)(App)
