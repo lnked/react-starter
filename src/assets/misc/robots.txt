@@ -1,8 +1,2 @@
 User-agent: *
-Disallow: 
-Sitemap: https://react.createone.ru/sitemap.xml
-
-User-agent: Yandex
-Disallow: 
-Host: https://react.createone.ru
-Sitemap: https://react.createone.ru/sitemap.xml
+Disallow:

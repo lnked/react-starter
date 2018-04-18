@@ -73,10 +73,7 @@ module.exports = {
             images: resolve(define.rs_root, 'assets/images'),
             styles: resolve(define.rs_root, 'assets/styles'),
             scripts: resolve(define.rs_root, 'assets/scripts'),
-            svgstore: resolve(define.rs_root, 'assets/svgstore'),
-            store: resolve(define.rs_root, 'redux/store'),
-            actions: resolve(define.rs_root, 'redux/actions'),
-            reducers: resolve(define.rs_root, 'redux/reducers')
+            svgstore: resolve(define.rs_root, 'assets/svgstore')
         }
     },
 

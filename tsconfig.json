@@ -78,15 +78,6 @@
             ],
             "svgstore": [
                 "./src/assets/svgstore"
-            ],
-            "store": [
-                "./src/redux/store"
-            ],
-            "actions": [
-                "./src/redux/actions"
-            ],
-            "reducers": [
-                "./src/redux/reducers"
             ]
         },
         "types": [ /* Type declaration files to be included in compilation. */

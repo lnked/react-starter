@@ -5,5 +5,3 @@ export {
 }
 
 // import { GOOGLE_ANALYTICS_ID } from 'variables'
-
-// console.log('GOOGLE_ANALYTICS_ID: ', GOOGLE_ANALYTICS_ID)
