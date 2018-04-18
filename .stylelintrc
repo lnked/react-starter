@@ -5,6 +5,9 @@
         "stylelint-config-styled-components",
         "stylelint-config-prettier"
     ],
+    "plugins": [
+        "stylelint-order"
+    ],
     "rules": {
         "indentation": 4,
         "string-quotes": "single",
@@ -28,6 +31,7 @@
                 ]
             }
         ],
+        "order/properties-order": [],
         "no-eol-whitespace": [true, { "ignore": ["empty-lines"] } ],
         "no-descending-specificity": null,
         "selector-no-qualifying-type": true,

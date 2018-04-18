@@ -3,16 +3,17 @@
         ["env", {
             "targets": {
                 "node": "current",
-                "browsers": ["last 2 versions"]
+                "browsers": ["last 2 versions"],
+                "forceAllTransforms": true
             },
             "loose": true,
             "debug": false,
             "uglify": true,
             "modules": false,
-            "useBuiltIns": true
+            "useBuiltIns": false
         }],
-        "react",
-        "stage-2"
+        "stage-2",
+        "react"
     ],
     "plugins": [
         "dual-import",
@@ -59,6 +60,7 @@
                 ]
             ],
             "ignore": [
+                "dist",
                 "tests",
                 "node_modules"
             ]

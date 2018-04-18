@@ -15,12 +15,9 @@ const entryPoint = require('./entry-point');
 
 let sourceMap = false;
 
-if (define.rs_analyzer)
-{
+if (define.rs_analyzer) {
     sourceMap = 'none';
-}
-else if (define.rs_development)
-{
+} else if (define.rs_development) {
     sourceMap = 'cheap-module-eval-source-map';
 }
 
@@ -39,18 +36,22 @@ module.exports = {
     entry: entryPoint.config,
 
     output: {
+        // path: resolve(define.rs_dist, 'assets'),
+        // publicPath: '/assets/',
         path: define.rs_dist,
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
         chunkFilename: define.rs_production ? 'js/[name].[chunkhash:5].chunk.js' : '[name].chunk.js',
         jsonpFunction: 'WJ',
-        hotUpdateFunction: 'UF'
+        hotUpdateFunction: 'UF',
+        devtoolModuleFilenameTemplate: info =>
+            path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
     },
 
     resolve: {
         symlinks: true,
-        modules: [resolve(__dirname, '../node_modules'), define.rs_root],
+        modules: ['node_modules', define.rs_root],
         mainFiles: ['index'],
         enforceExtension: false,
         enforceModuleExtension: false,

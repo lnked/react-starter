@@ -87,7 +87,7 @@ ln -s ${SOURCE}/webpack/plugins ${PATH_ROOT}/$FOLDER_NAME/webpack
 
 ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
 
-cp -r ${SOURCE}/app ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/src ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/typings ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/typings.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME

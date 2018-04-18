@@ -1132,7 +1132,7 @@ declare module "core-js/fn/reflect" {
     const Reflect: typeof core.Reflect;
     export = Reflect;
 }
-declare module "core-js/fn/reflect/apply" {
+declare module "core-js/fn/reflect/srcly" {
     const apply: typeof core.Reflect.apply;
     export = apply;
 }
@@ -1911,7 +1911,7 @@ declare module "core-js/library/fn/reflect" {
     const Reflect: typeof core.Reflect;
     export = Reflect;
 }
-declare module "core-js/library/fn/reflect/apply" {
+declare module "core-js/library/fn/reflect/srcly" {
     const apply: typeof core.Reflect.apply;
     export = apply;
 }

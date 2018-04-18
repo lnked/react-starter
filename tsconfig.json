@@ -38,55 +38,55 @@
                 "node_modules/@types/*"
             ],
             "hocs": [
-                "./app/hocs"
+                "./src/hocs"
             ],
             "segments": [
-                "./app/segments"
+                "./src/segments"
             ],
             "layouts": [
-                "./app/layouts"
+                "./src/layouts"
             ],
             "variables": [
-                "./app/variables"
+                "./src/variables"
             ],
             "containers": [
-                "./app/containers"
+                "./src/containers"
             ],
             "components": [
-                "./app/components"
+                "./src/components"
             ],
             "typings": [
-                "./app/typings"
+                "./src/typings"
             ],
             "assets": [
-                "./app/assets"
+                "./src/assets"
             ],
             "utils": [
-                "./app/utils"
+                "./src/utils"
             ],
             "config": [
-                "./app/config"
+                "./src/config"
             ],
             "styles": [
-                "./app/assets/styles"
+                "./src/assets/styles"
             ],
             "images": [
-                "./app/assets/images"
+                "./src/assets/images"
             ],
             "scripts": [
-                "./app/assets/scripts"
+                "./src/assets/scripts"
             ],
             "svgstore": [
-                "./app/assets/svgstore"
+                "./src/assets/svgstore"
             ],
             "store": [
-                "./app/redux/store"
+                "./src/redux/store"
             ],
             "actions": [
-                "./app/redux/actions"
+                "./src/redux/actions"
             ],
             "reducers": [
-                "./app/redux/reducers"
+                "./src/redux/reducers"
             ]
         },
         "types": [ /* Type declaration files to be included in compilation. */
@@ -126,13 +126,13 @@
         "./typings/json.d.ts"
     ],
     "filesGlob": [
-        "./app/**/*.ts",
-        "./app/**/*.tsx",
-        "./app/**/*.scss",
+        "./src/**/*.ts",
+        "./src/**/*.tsx",
+        "./src/**/*.scss",
         "!node_modules/**/*"
     ],
     "include": [
-        "./app/**/*"
+        "./src/**/*"
     ],
     "exclude": [
         ".git",

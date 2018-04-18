@@ -21,7 +21,6 @@ import {
     // Truncate,
     Checkbox,
     SpeechText,
-    ColorPicker,
     SelectionBox
 } from 'components'
 
@@ -208,16 +207,6 @@ export default class Dashboard extends React.Component<{}, {}> {
         )
     }
 
-    renderColorPicker = () => {
-        return (
-            <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
-                <ColorPicker />
-                <br /><br />
-                <ColorPicker color="#f00" />
-            </div>
-        )
-    }
-
     renderRadio = () => {
         return (
             <div style={{ marginBottom: '15px', border: '1px solid lime' }}>
@@ -291,7 +280,6 @@ export default class Dashboard extends React.Component<{}, {}> {
                         {this.renderTabs()}
                         {this.renderSandwich()}
                         {this.renderSwitch()}
-                        {this.renderColorPicker()}
                         {this.renderRadio()}
                         {this.renderCheckbox()}
                         {this.renderButton()}

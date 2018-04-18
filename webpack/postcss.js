@@ -23,7 +23,8 @@ postcss.push(
     require('postcss-position'),
     require('postcss-quantity-queries'),
     require("postcss-cssnext")({
-        autoprefixer: false
+        autoprefixer: false,
+        warnForDuplicates: false
     }),
     require('css-mqpacker'),
     require('pixrem')({
@@ -40,11 +41,11 @@ if (define.rs_production) {
         require('postcss-discard-comments'),
         require('postcss-color-rgba-fallback'),
         require('postcss-emptymediaqueries'),
-        require('postcss-uncss')({
-            html: [
-                resolve(__dirname, 'app')
-            ]
-        }),
+        // require('postcss-uncss')({
+        //     html: [
+        //         resolve(__dirname, 'app')
+        //     ]
+        // }),
         require('cssnano')({
             safe: true,
             calc: false,

@@ -7,6 +7,8 @@ const define = require('./define');
 
 module.exports = {
 
+    mode: define.rs_environment,
+
     context: define.rs_root,
 
     entry: resolve(define.rs_root, 'svgstore.jsx'),

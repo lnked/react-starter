@@ -20,7 +20,6 @@ import ChangeView from 'components/change-view'
 // import HintText from 'components/hint-text'
 // import MaskedText from 'components/masked-text'
 // import RadioGroup from 'components/radio-group'
-import ColorPicker from 'components/color-picker'
 // import BreadCrumbs from 'components/bread-crumbs'
 import SidebarIcon from 'components/sidebar-icon'
 import GroupLinks from 'components/group-links'
@@ -52,7 +51,6 @@ export {
     // RadioGroup,
     SpeechText,
     ChangeView,
-    ColorPicker,
     // BreadCrumbs,
     GroupLinks,
     SidebarIcon,

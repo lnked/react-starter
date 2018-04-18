@@ -4,7 +4,7 @@ const { resolve } = require('path');
 
 const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
-const _root_ = resolve(__dirname, '../app');
+const _root_ = resolve(__dirname, '../src');
 const _dist_ = resolve(__dirname, '../dist');
 const _deploy_ = '/react-cms/';
 

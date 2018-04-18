@@ -2,8 +2,6 @@ import * as React from 'react'
 import * as css from './styles.scss'
 import axios from 'axios'
 
-import { Helmet } from 'react-helmet'
-
 import { SvgFixer } from 'utils'
 
 import { Aside, Navigation, RequestsPanel, Sidebar } from 'segments'
@@ -109,11 +107,6 @@ export default class CoreLayout extends React.Component<T, S> {
     render () {
         return (
             <div className={css.layout}>
-                <Helmet>
-                    <title>My Title</title>
-                    <meta name="description" content="Helmet application" />
-                </Helmet>
-
                 <section className={css.main}>
                     { this.renderSidebar() }
                     { this.renderContent() }
