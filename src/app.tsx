@@ -1,4 +1,5 @@
 import * as React from 'react'
+// @ts-ignore
 import { hot } from 'react-hot-loader'
 
 import {
@@ -28,13 +29,6 @@ import {
     Tasks,
     Updates
 } from 'containers'
-
-interface S {
-    links: any;
-    pages: any;
-    pathname: string;
-    isOverflow: boolean;
-}
 
 const routes: any = [
     {
@@ -84,64 +78,17 @@ const routes: any = [
     }
 ]
 
-class App extends React.Component<{}, S> {
-    state = {
-        links: [],
-        pages: [],
-        pathname: '',
-        isOverflow: false
-    }
-
-    componentDidMount () {
-        // const path = location.pathname.split('/')
-
-        // if (typeof (path[1]) !== 'undefined') {
-        //     this.handleChangePath(path[1], location.pathname)
-        // }
-    }
-
-    handleChangePath = (page: string, pathname: string) => {
-        console.log(page, pathname)
-
-        // if (pathname !== this.state.pathname) {
-        //     axios
-        //         .get(`/api/${page}`)
-        //         .then((response) => {
-        //             if (typeof (response.data.json) !== 'undefined') {
-        //                 this.setState({ ...this.state, links: response.data.json, pathname })
-        //             }
-        //         })
-        //         .catch((err) => {
-        //             console.log('err: ', err)
-        //         })
-        // } else {
-        //     this.setState({ ...this.state, links: [] })
-        // }
-
-        return ''
-    }
-
+class App extends React.Component<{}, {}> {
     render () {
-        const { links } = this.state
-
         return (
             <Router>
-                <CoreLayout links={links}>
+                <CoreLayout>
                     <Switch>
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (
-                            <Route {...rest} key={key} render={(props: any) => {
-                                if (rest.path !== this.state.pathname) {
-                                    if (rest.path) {
-                                        console.log('render ', rest.path)
-                                        // this.handleChangePath(rest.path)
-                                    }
-
-                                    return <Component {...props} className={`fade fade-${status}`} />
-                                }
-
-                                return ''
-                            }} />
+                            <Route {...rest} key={key} render={(props: any) =>
+                                <Component {...props} className={`fade fade-${status}`} />
+                            } />
                         ))}
 
                     </Switch>
@@ -150,7 +97,5 @@ class App extends React.Component<{}, S> {
         )
     }
 }
-
-// declare var module: { hot: any }
 
 export default hot(module)(App)

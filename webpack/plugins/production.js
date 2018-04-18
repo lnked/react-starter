@@ -44,7 +44,7 @@ const plugins = [
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendors/,
         inline: 'runtime',
-        preload: ['vendors', 'app'],
+        preload: ['vendors', 'index'],
         defaultAttribute: 'async'
     })
 ];

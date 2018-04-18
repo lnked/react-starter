@@ -15,20 +15,12 @@ useConfig.push(
     }
 );
 
-// if (define.rs_development) {
-//     useConfig.push(
-//         {
-//             loader: 'react-hot-loader/webpack'
-//         }
-//     )
-// }
-
 useConfig.push(
     {
         loader: 'babel-loader',
         options: {
-            cacheDirectory: define.rs_development,
-            extends: resolve(define.rs_base, '.babelrc')
+            babelrc: true,
+            cacheDirectory: define.rs_development
         }
     }
 );
