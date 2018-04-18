@@ -37,6 +37,7 @@
         "development": {
             "plugins": [
                 "react-hot-loader/babel",
+                "transform-class-properties",
                 "transform-react-display-name"
             ],
             "sourceMaps": true

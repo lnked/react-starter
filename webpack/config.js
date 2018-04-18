@@ -58,8 +58,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css', '.json'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: {
-            'lodash-es': 'lodash',
-            app: define.rs_root,
+            src: define.rs_root,
             hocs: resolve(define.rs_root, 'hocs'),
             utils: resolve(define.rs_root, 'utils'),
             typings: resolve(define.rs_root, 'typings'),
