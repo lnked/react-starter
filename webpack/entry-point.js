@@ -28,7 +28,7 @@ Object.assign(entryPoint, {
         ...define.rs_development
         ? [
             'babel-polyfill',
-            'react-hot-loader/patch',
+            // 'react-hot-loader/patch',
             `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
             'webpack/hot/only-dev-server'
         ]
