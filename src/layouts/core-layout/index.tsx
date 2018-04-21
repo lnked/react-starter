@@ -12,15 +12,17 @@ interface S {
 }
 
 export default class CoreLayout extends React.Component<T, S> {
-    state = {
-        title: 'CORE :: React Starter App'
+    static defaultProps = {
+        children: ''
     }
 
-    componentWillMount () {
-        document.title = this.state.title
+    state = {
+        title: 'React Starter App'
     }
 
     componentDidMount () {
+        document.title = this.state.title
+
         SvgFixer()
     }
 

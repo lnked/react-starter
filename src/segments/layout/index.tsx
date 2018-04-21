@@ -7,6 +7,11 @@ interface T {
 }
 
 export default class Layout extends React.Component<T, {}> {
+    static defaultProps = {
+        children: '',
+        className: ''
+    }
+
     render () {
         const cn: any = []
         const { className, children } = this.props
