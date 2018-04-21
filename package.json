@@ -7,19 +7,19 @@
     "description": "React boilerplate, pwa, router",
     "scripts": {
         "clean": "rimraf dist",
-        "svgstore": "rimraf .cache && webpack --config ./webpack/prebuild.js",
+        "svgstore": "rimraf .cache && webpack --config webpack/prebuild",
         "prebuild": "yarn run clean",
         "predeploy": "yarn run clean",
         "preanalyze": "yarn run clean",
         "prerelease": "yarn run clean",
         "postdeploy": "gh-pages -d dist",
         "postrelease": "yarn run size",
-        "build": "webpack --config ./webpack/config.js --env assemply",
-        "release": "webpack --config ./webpack/config.js --env release",
-        "analyze": "webpack --config ./webpack/config.js --env analyze",
+        "build": "webpack --config webpack/config --env assemply",
+        "release": "webpack --config webpack/config --env release",
+        "analyze": "webpack --config webpack/config --env analyze",
         "server": "webpack && babel-node server.js",
-        "start": "webpack-dev-server --config ./webpack/config.js --env development",
-        "stats": "webpack --config ./webpack/config.js --json --profile > stats.json",
+        "start": "webpack-dev-server --config webpack/config --env development",
+        "stats": "webpack --config webpack/config --json --profile > stats.json",
         "pre-lint": "eslint lib/**; exit 0",
         "lint:scripts": "eslint src --ext .js[x]",
         "lint:styles": "stylelint 'src/**/*.{css,less,scss,sss}'",
@@ -27,7 +27,7 @@
         "lint": "yarn run lint:scripts && yarn run lint:styles",
         "test": "",
         "size": "npx size-limit",
-        "deploy": "webpack --config ./webpack/config.js --env deploy"
+        "deploy": "webpack --config webpack/config --env deploy"
     },
     "keywords": [
         "react"
