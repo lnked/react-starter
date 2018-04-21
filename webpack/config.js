@@ -4,23 +4,14 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
-const stats = require('./stats');
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
 
 const entryPoint = require('./entry-point');
 
-let sourceMap = false;
-
-if (define.rs_analyzer) {
-    sourceMap = 'source-map';
-} else if (define.rs_development) {
-    sourceMap = 'cheap-module-inline-source-map';
-}
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 process.traceDeprecation = true;
 
@@ -29,8 +20,6 @@ module.exports = {
     mode: define.rs_environment,
 
     context: define.rs_root,
-
-    devtool: sourceMap,
 
     target: define.rs_target,
 
@@ -142,43 +131,5 @@ module.exports = {
         }
     },
 
-    performance: define.rs_release && {
-        hints: 'warning',
-        maxAssetSize: 500000,
-        maxEntrypointSize: 500000,
-        assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
-    },
-
-    watch: define.rs_development,
-
-    plugins: plugins.config,
-
-    bail: define.rs_production,
-
-    cache: define.rs_development,
-
-    stats: stats.config,
-
-    devServer: {
-        headers: { 'Access-Control-Allow-Origin': '*' },
-        hot: true,
-        open: true,
-        inline: true,
-        compress: false,
-        contentBase: define.rs_dist,
-        disableHostCheck: true,
-        watchContentBase: true,
-        historyApiFallback: true,
-        watchOptions: {
-            aggregateTimeout: 100,
-            poll: 300
-        },
-        overlay: {
-            warnings: true,
-            errors: true
-        },
-        stats: stats.config,
-        port: define.rs_port,
-        host: define.rs_host
-    }
+    plugins: plugins.config
 };

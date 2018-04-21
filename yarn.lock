@@ -13744,6 +13744,12 @@ webpack-manifest-plugin@2.0.1:
     lodash ">=3.5 <5"
     tapable "^1.0.0"
 
+webpack-merge@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.2.tgz#5d372dddd3e1e5f8874f5bf5a8e929db09feb216"
+  dependencies:
+    lodash "^4.17.5"
+
 webpack-notifier@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/webpack-notifier/-/webpack-notifier-1.6.0.tgz#ffac8e55ff8c469752b8c1bbb011a16f10986e02"
