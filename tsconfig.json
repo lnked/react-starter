@@ -1,51 +1,57 @@
 {
-    "buildOnSave": false,
-    "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "allowJs": true,
+        "target": "es5",
+        "module": "CommonJS",
+        "outDir": "./dist",
+        "allowJs": false,
         "sourceMap": true,
         "declaration": false,
+        "removeComments": true,
+        "importHelpers": true,
+        "downlevelIteration": true,
+        "isolatedModules": false,
+        "strict": true,
         "skipLibCheck": true,
         "noImplicitAny": false,
-        "strictNullChecks": false,
-        "module": "commonjs",
+        "noImplicitThis": false,
+        "strictNullChecks": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
-        "target": "es6",
+        "baseUrl": ".",
+        "mapRoot": "./",
+        "sourceRoot": "./",
+        "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
-        "baseUrl": "./",
-        "outDir": "./dist",
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "types": [
+            "node",
+            "jest",
+            "react",
+            "enzyme",
+            "jest-styled-components",
+            "styled-components"
+        ],
+        "typeRoots": [
+            "typings",
+            "node_modules/@types"
+        ],
+        "lib": [
+            "es2016",
+            "dom",
+            "es5"
+        ],
 
-        // "jsx": "react",
-        // "target": "es6",
-        // "module": "commonjs",
-        // "outDir": "./dist",
-        // "allowJs": false,
-        // "sourceMap": true,
-        // "declaration": false,
-        // "removeComments": true,
-        // "noEmit": true,
-        // "importHelpers": true,
-        // "downlevelIteration": true,
-        // "isolatedModules": false,
-        // "strict": true,
-        // "skipLibCheck": true,
-        // "noImplicitAny": false,
-        // "noImplicitThis": false,
-        // "strictNullChecks": true,
-        // "alwaysStrict": true,
-        // "noUnusedLocals": true,
-        // "noUnusedParameters": true,
-        // "noImplicitReturns": true,
-        // "noFallthroughCasesInSwitch": true,
-        // "moduleResolution": "node",
-        // "baseUrl": "./",
-        // "preserveSymlinks": true,
-        // "allowSyntheticDefaultImports": true,
         "paths": {
-            "*": [
-                "node_modules/@types/*"
-            ],
+            "*": ["src/*"],
             "hocs": [
                 "src/hocs"
             ],
@@ -88,38 +94,10 @@
             "svgstore": [
                 "src/assets/svgstore"
             ]
-        },
-        "types": [
-            "node",
-            "jest",
-            "react",
-            "core-js",
-            "enzyme",
-            "jest-styled-components",
-            "styled-components"
-        ],
-        "typeRoots": [
-            "typings",
-            "node_modules/@types"
-        ],
-        "sourceRoot": "./",
-        "mapRoot": "./",
-        "inlineSources": false,
-        "inlineSourceMap": false,
-        "preserveConstEnums": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "lib": [
-            "dom",
-            "es5",
-            "es6",
-            "esnext",
-            "scripthost",
-            "es2015"
-        ]
+        }
     },
     "files": [
-        "typings/json.d.ts"
+        "typings/**/*.d.ts"
     ],
     "filesGlob": [
         "src/**/*.ts",

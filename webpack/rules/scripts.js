@@ -36,7 +36,7 @@ const rules = [
         enforce: 'pre',
         test: /\.(j|t)s[x]?$/,
         options: {
-            fix: false //define.rs_production
+            fix: false
         },
         loader: 'eslint-loader',
         include: define.rs_root

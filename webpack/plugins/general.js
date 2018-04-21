@@ -13,6 +13,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
+// const { TsConfigPathsPlugin, CheckerPlugin } = require('awesome-typescript-loader')
+
 const plugins = [
     new webpack.DefinePlugin({
         'process.env.BROWSER': false,
@@ -23,6 +25,12 @@ const plugins = [
         /scss\.d\.ts$/
     ]),
     new WebpackNotifierPlugin(),
+    // new CheckerPlugin(),
+    // new TsConfigPathsPlugin({
+    //     baseUrl: resolve(__dirname, '../../src'),
+    //     tsconfig: resolve(__dirname, '../../tsconfig.json'),
+    //     compiler: 'typescript'
+    // }),
     new HappyPack({
         loaders: scripts.loaders,
         threads: 4,

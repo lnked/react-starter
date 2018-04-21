@@ -43,9 +43,7 @@ module.exports = {
         filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
         chunkFilename: define.rs_production ? 'js/[name].[chunkhash:5].chunk.js' : '[name].chunk.js',
         jsonpFunction: 'WJ',
-        hotUpdateFunction: 'UF',
-        devtoolModuleFilenameTemplate: info =>
-            path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
+        hotUpdateFunction: 'UF'
     },
 
     resolve: {
@@ -101,8 +99,17 @@ module.exports = {
         minimizer: [
             new UglifyJsPlugin({
                 cache: true,
-                parallel: true,
-                sourceMap: !define.rs_release
+                parallel: require('os').cpus().length,
+                sourceMap: !define.rs_release,
+                uglifyOptions: {
+                    ie8: false,
+
+                    output: {
+                        ecma: 8,
+                        beautify: false,
+                        comments: false
+                    }
+                }
             }),
             new OptimizeCSSAssetsPlugin({})
         ],
