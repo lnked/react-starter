@@ -88,9 +88,8 @@ yarn run lint:fix
 
 ## Expected
 - [x] TypeScript
+- [ ] Redux / MobX
 - [ ] Tests
-- [ ] Redux
-- [ ] Storybook
 
 ## Get in touch
 - Bugs / Suggestions: [open an issue](https://github.com/lnked/react-starter/issues)
