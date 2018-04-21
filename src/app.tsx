@@ -13,8 +13,6 @@ import { CoreLayout } from 'layouts'
 
 // Containers
 import {
-    Auth,
-    Accounts,
     NoMatch
 } from 'containers'
 
@@ -22,10 +20,7 @@ const routes: any = [
     {
         path: '/',
         exact: true,
-        component: Auth
-    }, {
-        path: '/accounts',
-        component: Accounts
+        component: NoMatch
     }, {
         status: 404,
         statusCode: 404,
