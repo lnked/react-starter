@@ -16,6 +16,11 @@ import {
     NoMatch
 } from 'containers'
 
+// Segments
+import {
+    Header
+} from 'segments'
+
 const routes: any = [
     {
         path: '/',
@@ -33,6 +38,8 @@ class App extends React.Component<{}, {}> {
         return (
             <Router>
                 <CoreLayout>
+                    <Header />
+
                     <Switch>
 
                         {routes.map(({ component: Component, ...rest }: any, key) => (
