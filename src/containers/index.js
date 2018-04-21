@@ -4,6 +4,4 @@ export {
     NoMatch
 }
 
-export default (params) => {
-    console.log(params)
-}
+export default {}
