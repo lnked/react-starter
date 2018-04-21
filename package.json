@@ -11,7 +11,7 @@
         "prebuild": "yarn run clean",
         "predeploy": "yarn run clean",
         "preanalyze": "yarn run clean",
-        "prerelease": "yarn run clean",
+        "prerelease": "yarn run clean && yarn run lint",
         "postdeploy": "gh-pages -d dist",
         "postrelease": "yarn run size",
         "build": "webpack --config webpack/config --env assemply",
