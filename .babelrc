@@ -15,8 +15,8 @@
     "plugins": [
         "dual-import",
         "transform-imports",
-        "@babel/plugin-transform-typescript",
         "@babel/plugin-transform-react-jsx",
+        "@babel/plugin-transform-typescript",
         ["babel-plugin-styled-components", {
             "minify": false,
             "uglifyPure": false

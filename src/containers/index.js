@@ -1,11 +1,7 @@
-import Auth from 'containers/auth'
 import NoMatch from 'containers/nomatch'
-import Accounts from 'containers/accounts'
 
 export {
-    Auth,
-    NoMatch,
-    Accounts
+    NoMatch
 }
 
 export default (params) => {

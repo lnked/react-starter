@@ -15,19 +15,6 @@ $core-sidebar-width: $aside-width + $sidebar-width;
     height: calc(100% - #{$header-height});
 }
 
-.sidebar {
-    width: $sidebar-width;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: $sidebar-width;
-    padding-left: $sidebar-width;
-
-    &_long {
-        width: $core-sidebar-width;
-        flex-basis: $core-sidebar-width;
-    }
-}
-
 .body {
     flex-grow: 0;
     flex-shrink: 0;

@@ -109,6 +109,7 @@
         "@types/webpack-env": "1.13.6",
         "autoprefixer": "8.3.0",
         "awesome-typescript-loader": "5.0.0",
+        "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "8.2.3",
         "babel-loader": "8.0.0-beta.2",
         "babel-plugin-dual-import": "1.2.1",

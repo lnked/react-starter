@@ -1,1 +1,0 @@
-export const layout: string;
