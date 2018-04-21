@@ -20,12 +20,14 @@
         "server": "webpack && babel-node server.js",
         "start": "webpack-dev-server --config webpack/config --env development",
         "stats": "webpack --config webpack/config --json --profile > stats.json",
-        "pre-lint": "eslint lib/**; exit 0",
-        "lint:scripts": "eslint src --ext .js[x]",
-        "lint:styles": "stylelint 'src/**/*.{css,less,scss,sss}'",
-        "lint:fix": "eslint src --fix .js[x]",
+        "lint:scripts": "eslint src --ext 'src/**/*.{ts,tsx,js,jsx}' --ignore-path .gitignore",
+        "lint:styles": "stylelint 'src/**/*.{css,less,styl,scss,sass,sss}'",
+        "lint:fix": "eslint src --fix .js[x] && stylelint --fix",
         "lint": "yarn run lint:scripts && yarn run lint:styles",
-        "test": "",
+        "test": "jest",
+        "test-watch": "yarn run test --watch --notify",
+        "test-cover": "yarn run test --coverage",
+        "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
         "size": "npx size-limit",
         "deploy": "webpack --config webpack/config --env deploy"
     },
@@ -46,26 +48,6 @@
     ],
     "config": {
         "port": "3000"
-    },
-    "jest": {
-        "globals": {
-            "ts-jest": {
-                "useBabelrc": true,
-                "enableTsDiagnostics": true
-            }
-        },
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "jsx",
-            "json",
-            "node"
-        ]
     },
     "dependencies": {
         "@babel/polyfill": "7.0.0-beta.44",
@@ -107,6 +89,7 @@
         "awesome-typescript-loader": "5.0.0",
         "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "8.2.3",
+        "babel-jest": "22.4.3",
         "babel-loader": "8.0.0-beta.2",
         "babel-plugin-dual-import": "1.2.1",
         "babel-plugin-styled-components": "1.5.1",
@@ -152,6 +135,7 @@
         "lqip-loader": "2.0.2",
         "mini-css-extract-plugin": "0.4.0",
         "node-sass": "4.8.3",
+        "opn-cli": "3.1.0",
         "optimize-css-assets-webpack-plugin": "4.0.0",
         "pixrem": "4.0.1",
         "postcss": "6.0.21",
@@ -184,7 +168,6 @@
         "pug": "2.0.3",
         "pug-loader": "2.4.0",
         "raw-loader": "0.5.1",
-        "react-dev-utils": "5.0.1",
         "react-hot-loader": "4.1.1",
         "react-test-renderer": "16.3.2",
         "rimraf": "2.6.2",
@@ -217,7 +200,6 @@
         "webapp-manifest-plugin": "0.0.4",
         "webpack": "4.6.0",
         "webpack-bundle-analyzer": "2.11.1",
-        "webpack-bundle-size-analyzer": "2.7.0",
         "webpack-chunk-hash": "0.6.0",
         "webpack-cli": "2.0.15",
         "webpack-dev-server": "3.1.3",
