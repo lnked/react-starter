@@ -8,12 +8,12 @@ const plugins = [
         minify: true,
         verbose: false,
         cacheId: 'RS-PWA',
-        filename: 'sw.js',
+        filename: '../sw.js',
         stripPrefix: 'dist/',
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
 
-        navigateFallback: define.rs_output_path,
+        navigateFallback: '/index.html',
 
         staticFileGlobs: [
             'dist/*.html',
@@ -36,9 +36,10 @@ const plugins = [
 
         importScripts: [],
 
-        mergeStaticsConfig: true,
+        // mergeStaticsConfig: true,
+
         maximumFileSizeToCacheInBytes: 8388608,
-        staticFileGlobsIgnorePatterns: [/\.map$/, /\.DS_Store$/, /\.htaccess$/, /\.cache$/, /webpack-manifest\.json$/],
+        staticFileGlobsIgnorePatterns: [/\.map$/, /\.DS_Store$/, /\.htaccess$/, /\.cache$/, /\.robots.txt$/, /webpack-manifest\.json$/],
 
         runtimeCaching: [
             {

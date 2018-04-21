@@ -13,7 +13,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const plugins = [
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
-        publicPath: define.rs_dist,
         fileName: "../webpack-manifest.json"
     }),
     new WebpackChunkHash(),
