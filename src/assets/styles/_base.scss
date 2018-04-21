@@ -1,50 +1,74 @@
-:global {
-    * {
-        -webkit-touch-callout: none;
-        -webkit-overflow-scrolling: touch;
+* {
+    -webkit-touch-callout: none;
+    -webkit-overflow-scrolling: touch;
 
-        &,
-        &:before,
-        &:after {
-            box-sizing: border-box;
-        }
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
     }
+}
 
-    html,
-    body {
-        height: 100%;
-    }
+html,
+body {
+    height: 100%;
+}
 
-    html {
-        font-size: $font-size-base;
-        font-family: $font-family-base;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-tap-highlight-color: transparent;
-    }
+html {
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
 
-    body {
-        width: 100%;
+body {
+    width: 100%;
+    color: #323232;
+    min-width: 320px;
+    line-height: 1.44;
+    font-kerning: none;
+    background-color: #fafafa;
+}
+
+body,
+input,
+button,
+select,
+textarea {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga', 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+}
+
+svg {
+    color: inherit;
+    fill: currentColor;
+    shape-rendering: geometricPrecision; /* auto | optimizeSpeed | crispEdges | geometricPrecision | inherit; */
+
+    &:not(:root) {
         overflow: hidden;
-        color: #777;
-        min-width: 320px;
-        line-height: 1.44;
-        font-kerning: none;
-        background-color: #fafafa;
     }
+}
 
-    body,
-    input,
-    button,
-    select,
-    textarea {
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        font-feature-settings: 'liga', 'kern';
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: left;
-    }
+::selection {
+    color: $c-select-color;
+    background-color: $c-select-background;
+    text-shadow: none;
+}
 
+[hidden],
+template {
+    display: none;
+}
+
+[role='button'] {
+    cursor: pointer;
+}
+
+:global {
     .layout-wrapper {
         width: 100%;
         min-height: 100%;
@@ -54,30 +78,5 @@
 
     .is-overflow {
         overflow: hidden;
-    }
-
-    svg {
-        color: inherit;
-        fill: currentColor;
-        shape-rendering: geometricPrecision; /* auto | optimizeSpeed | crispEdges | geometricPrecision | inherit; */
-
-        &:not(:root) {
-            overflow: hidden;
-        }
-    }
-
-    ::selection {
-        color: $c-select-color;
-        background-color: $c-select-background;
-        text-shadow: none;
-    }
-
-    [hidden],
-    template {
-        display: none;
-    }
-
-    [role='button'] {
-        cursor: pointer;
     }
 }

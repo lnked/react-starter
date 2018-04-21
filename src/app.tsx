@@ -16,14 +16,13 @@ import {
     NoMatch
 } from 'containers'
 
-// // Segments
-// import {
-//     Header
-// } from 'segments'
+// Segments
+import {
+    Header
+} from 'segments'
 
-// // Components
-// import { Spinner } from 'components'
-import Spinner from 'components/spinner'
+// Components
+import { Spinner } from 'components'
 
 const routes: any = [
     {
@@ -42,10 +41,7 @@ class App extends React.Component<{}, {}> {
         return (
             <Router>
                 <CoreLayout>
-                    {/* <Header /> */}
-                    <header>
-                        HEADER CONTENT
-                    </header>
+                    <Header />
 
                     <Spinner />
 

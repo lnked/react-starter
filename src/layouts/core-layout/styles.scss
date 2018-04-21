@@ -3,52 +3,10 @@
 $core-sidebar-width: $aside-width + $sidebar-width;
 
 .layout {
-    height: 100%;
+    min-height: 100%;
     overflow: hidden;
 }
 
 .main {
     width: 100%;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    height: calc(100% - #{$header-height});
-}
-
-.body {
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: calc(100% - #{$sidebar-width});
-
-    &_short {
-        flex-basis: calc(100% - #{$core-sidebar-width});
-    }
-}
-
-.header {
-    height: $header-height;
-    position: relative;
-    background-color: #fafafa;
-
-    &:after {
-        content: '';
-        width: 100%;
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        background-color: rgba(#000, .1);
-    }
-}
-
-.content {
-    height: calc(100vh - #{$header-height});
-    overflow-y: scroll;
-    overflow-x: hidden;
-    -moz-overflow-y: -moz-scrollbars-none;
-    overflow-style: none;
-
-    &::-webkit-scrollbar {
-        width: 0;
-    }
 }

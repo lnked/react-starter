@@ -18,6 +18,8 @@ const isDevelopment = process.argv.includes('development') || !isProduction;
 const _host_ = process.env.HOST || '0.0.0.0';
 const _port_ = process.env.PORT || 3000;
 
+const staticAssetName = isDevelopment ? '[path][name].[ext]?[hash:8]' : '[hash:5].[ext]';
+
 module.exports = {
     rs_host: _host_,
     rs_port: _port_,
@@ -30,6 +32,7 @@ module.exports = {
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
     rs_generate_css: false, // isProduction
+    rs_asset_name: staticAssetName,
     rs_production: isProduction,
     rs_development: isDevelopment,
     rs_output_path: isDeploy ? '/react-cms/' : '/assets/',
