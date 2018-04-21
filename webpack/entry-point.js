@@ -17,7 +17,7 @@ Object.assign(entryPoint, {
     index: [
         ...define.rs_development
         ? [
-            'babel-polyfill',
+            '@babel/polyfill',
             `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
             'webpack/hot/only-dev-server'
         ] : [ /* */ ],

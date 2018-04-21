@@ -1,24 +1,22 @@
 {
     "presets": [
-        ["env", {
+        ["@babel/preset-env", {
             "targets": {
-                "node": "current",
-                "browsers": ["last 2 versions"],
-                "forceAllTransforms": true
+                "node": "current"
             },
             "loose": true,
-            "debug": false,
-            "uglify": true,
             "modules": false,
-            "useBuiltIns": false
+            "useBuiltIns": "usage"
         }],
-        "stage-2",
-        "react"
+        "@babel/preset-stage-2",
+        "@babel/preset-typescript",
+        "@babel/preset-react"
     ],
     "plugins": [
         "dual-import",
         "transform-imports",
-        "transform-react-jsx",
+        "@babel/plugin-transform-typescript",
+        "@babel/plugin-transform-react-jsx",
         ["babel-plugin-styled-components", {
             "minify": false,
             "uglifyPure": false
@@ -27,18 +25,18 @@
     "env": {
         "test": {
             "presets": [
-                "env",
-                "react"
+                "@babel/preset-env",
+                "@babel/preset-react"
             ],
             "plugins": [
-                "transform-es2015-modules-commonjs"
+                "@babel/plugin-transform-modules-commonjs"
             ]
         },
         "development": {
             "plugins": [
                 "react-hot-loader/babel",
-                "transform-class-properties",
-                "transform-react-display-name"
+                "@babel/plugin-syntax-class-properties",
+                "@babel/plugin-transform-react-display-name"
             ],
             "sourceMaps": true
         },
@@ -47,18 +45,9 @@
                 "minify"
             ],
             "plugins": [
-                "transform-react-inline-elements",
-                "transform-react-constant-elements",
-                "transform-react-pure-class-to-function",
-                [
-                    "transform-runtime",
-                    {
-                        "helpers": false,
-                        "polyfill": false,
-                        "regenerator": true,
-                        "moduleName": "babel-runtime"
-                    }
-                ]
+                "@babel/plugin-transform-react-constant-elements",
+                "@babel/plugin-transform-react-inline-elements",
+                "transform-react-pure-class-to-function"
             ],
             "ignore": [
                 "dist",

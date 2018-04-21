@@ -4,9 +4,6 @@ const webpack = require('webpack');
 // const SvgStore = require('webpack-svgstore-plugin');
 
 const plugins = [
-    // new webpack.DefinePlugin({
-    //     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
-    // }),
     // new SvgStore({
     //     svg: {
     //         xmlns: 'http://www.w3.org/2000/svg',

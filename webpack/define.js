@@ -6,7 +6,6 @@ const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
 const _root_ = resolve(__dirname, '../src');
 const _dist_ = resolve(__dirname, '../dist');
-const _deploy_ = '/react-cms/';
 
 const isDeploy  = process.argv.includes('deploy');
 const isAnalyze = process.argv.includes('analyze');
@@ -18,8 +17,6 @@ const isDevelopment = process.argv.includes('development') || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
 const _port_ = process.env.PORT || 3000;
-
-process.env.NODE_ENV = isProduction ? 'production' : 'development';
 
 module.exports = {
     rs_host: _host_,
@@ -35,6 +32,6 @@ module.exports = {
     rs_generate_css: false, // isProduction
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isDeploy ? _deploy_ : '/',
+    rs_output_path: isDeploy ? '/react-cms/' : '/assets/',
     rs_environment: isProduction ? 'production' : 'development'
 }

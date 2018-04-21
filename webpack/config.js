@@ -1,7 +1,8 @@
 'use strict';
 
-const webpack = require('webpack');
 const { resolve } = require('path');
+
+const webpack = require('webpack');
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -16,9 +17,9 @@ const entryPoint = require('./entry-point');
 let sourceMap = false;
 
 if (define.rs_analyzer) {
-    sourceMap = 'none';
+    sourceMap = 'source-map';
 } else if (define.rs_development) {
-    sourceMap = 'cheap-module-eval-source-map';
+    sourceMap = 'cheap-module-inline-source-map';
 }
 
 process.traceDeprecation = true;
@@ -36,9 +37,7 @@ module.exports = {
     entry: entryPoint.config,
 
     output: {
-        // path: resolve(define.rs_dist, 'assets'),
-        // publicPath: '/assets/',
-        path: define.rs_dist,
+        path: resolve(define.rs_dist, 'assets'),
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
@@ -81,6 +80,8 @@ module.exports = {
     },
 
     module: {
+        strictExportPresence: define.rs_development,
+
         rules: rules.config,
         unsafeCache: define.rs_development,
         noParse: [
@@ -134,18 +135,6 @@ module.exports = {
         }
     },
 
-    // optimization: {
-    // splitChunks: {
-    //     cacheGroups: {
-    //     styles: {
-    //         name: 'styles',
-    //         test: /\.css$/,
-    //         chunks: 'all',
-    //         enforce: true
-    //     }
-    //     }
-    // }
-
     performance: define.rs_release && {
         hints: 'warning',
         maxAssetSize: 500000,
@@ -157,7 +146,7 @@ module.exports = {
 
     plugins: plugins.config,
 
-    bail: define.rs_release,
+    bail: define.rs_production,
 
     cache: define.rs_development,
 
@@ -165,6 +154,7 @@ module.exports = {
 
     devServer: {
         headers: { 'Access-Control-Allow-Origin': '*' },
+        hot: true,
         open: true,
         inline: true,
         compress: false,
@@ -181,7 +171,6 @@ module.exports = {
             errors: true
         },
         stats: stats.config,
-        hot: true,
         port: define.rs_port,
         host: define.rs_host
     }

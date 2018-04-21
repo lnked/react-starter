@@ -14,6 +14,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 const plugins = [
+    new webpack.DefinePlugin({
+        'process.env.BROWSER': false,
+        '__DEV__': define.rs_development
+    }),
     new webpack.WatchIgnorePlugin([
         /css\.d\.ts$/,
         /scss\.d\.ts$/
@@ -32,9 +36,6 @@ const plugins = [
         debug: define.rs_development,
         minimize: define.rs_production,
         options: {}
-    }),
-    new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
     }),
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
     new CopyWebpackPlugin([
