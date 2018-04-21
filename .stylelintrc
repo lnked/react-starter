@@ -17,7 +17,7 @@
         "selector-pseudo-class-no-unknown": [
             true,
             {
-                "ignorePseudoClasses": ["global"]
+                "ignorePseudoClasses": ["global", "default"]
             }
         ],
         "at-rule-no-unknown": [
@@ -25,9 +25,11 @@
                 "ignoreAtRules": [
                     "if",
                     "else",
-                    "extend",
                     "mixin",
-                    "include"
+                    "extend",
+                    "include",
+                    "custom-media",
+                    "custom-selector"
                 ]
             }
         ],

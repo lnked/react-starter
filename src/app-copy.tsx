@@ -1,9 +1,10 @@
 import * as React from 'react'
-
+// @ts-ignore
 import { hot } from 'react-hot-loader'
 
 import {
     BrowserRouter as Router,
+    // Redirect,
     Route,
     Switch
 } from 'react-router-dom'
@@ -15,7 +16,18 @@ import { CoreLayout } from 'layouts'
 import {
     Auth,
     Accounts,
-    NoMatch
+    Assets,
+    Dashboard,
+    Entities,
+    Extensions,
+    Globals,
+    Locale,
+    NoMatch,
+    Settings,
+    Shop,
+    Structure,
+    Tasks,
+    Updates
 } from 'containers'
 
 const routes: any = [
@@ -26,6 +38,39 @@ const routes: any = [
     }, {
         path: '/accounts',
         component: Accounts
+    }, {
+        path: '/shop',
+        component: Shop
+    }, {
+        path: '/tasks',
+        component: Tasks
+    }, {
+        path: '/assets',
+        component: Assets
+    }, {
+        path: '/updates',
+        component: Updates
+    }, {
+        path: '/locale',
+        component: Locale
+    }, {
+        path: '/globals',
+        component: Globals
+    }, {
+        path: '/dashboard',
+        component: Dashboard
+    }, {
+        path: '/structure',
+        component: Structure
+    }, {
+        path: '/entities',
+        component: Entities
+    }, {
+        path: '/extensions',
+        component: Extensions
+    }, {
+        path: '/settings',
+        component: Settings
     }, {
         status: 404,
         statusCode: 404,

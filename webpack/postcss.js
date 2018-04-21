@@ -11,11 +11,13 @@ postcss.push(
         root: define.rs_root,
         path: define.rs_root
     }),
+    require('postcss-calc'),
     require('postcss-selector-not'),
     require('postcss-short-spacing'),
     require('postcss-simple-vars'),
     require('postcss-mixins'),
     require('postcss-nested'),
+    require('postcss-custom-selectors'),
     require('postcss-custom-media'),
     require('postcss-media-minmax'),
     require('postcss-url'),
@@ -30,7 +32,6 @@ postcss.push(
     require('pixrem')({
         rootValue: 10
     }),
-    require('postcss-calc'),
     require('postcss-reporter')({
         clearReportedMessages: true
     })
@@ -56,6 +57,7 @@ if (define.rs_production) {
             convertValues: { length: false },
             colormin: true
         }),
+        require('postcss-flexbugs-fixes'),
         require('autoprefixer')
     );
 }
