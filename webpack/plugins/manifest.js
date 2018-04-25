@@ -21,7 +21,7 @@ const plugins = [
         orientation: 'any',
         start_url: '.',
         inject: true,
-        fingerprints: true,
+        fingerprints: false,
         ios: false,
         publicPath: null,
         includeDirectory: true,

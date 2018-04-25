@@ -7,9 +7,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const cssConfig = [
     {
-        loader: "style-loader"
-    },
-    {
         loader: 'css-loader',
         options: {
             module: true,
@@ -24,9 +21,6 @@ const cssConfig = [
 ];
 
 const usesConfig = [
-    {
-        loader: "style-loader"
-    },
     {
         loader: "typings-for-css-modules-loader",
         options: {
