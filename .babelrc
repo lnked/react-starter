@@ -8,7 +8,9 @@
             "modules": false,
             "useBuiltIns": "usage"
         }],
-        "@babel/preset-stage-2",
+        ["@babel/preset-stage-2", {
+            "decoratorsLegacy": true
+        }],
         "@babel/preset-typescript",
         "@babel/preset-react"
     ],
