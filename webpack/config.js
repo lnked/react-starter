@@ -17,8 +17,6 @@ process.traceDeprecation = true;
 
 module.exports = {
 
-    mode: define.rs_environment,
-
     context: define.rs_root,
 
     target: define.rs_target,

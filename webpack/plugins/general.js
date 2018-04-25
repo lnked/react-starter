@@ -15,8 +15,9 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 
 const plugins = [
     new webpack.DefinePlugin({
+        '__DEV__': define.rs_development,
         'process.env.BROWSER': false,
-        '__DEV__': define.rs_development
+        'process.env.NODE_ENV': JSON.stringify(define.rs_environment)
     }),
     new webpack.WatchIgnorePlugin([
         /css\.d\.ts$/,
@@ -30,7 +31,7 @@ const plugins = [
     }),
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
-        /(en-gb|ru)\.js/
+        /(en-gb|en|ru)/
     ),
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,

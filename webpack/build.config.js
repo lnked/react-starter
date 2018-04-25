@@ -10,6 +10,8 @@ const stats = require('./stats');
 const define = require('./define');
 
 module.exports = webpackMerge(defaultConfig, {
+    mode: define.rs_environment,
+
     devtool: 'source-map',
 
     bail: define.rs_production,

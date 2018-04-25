@@ -5,10 +5,8 @@ const define = require('../define');
 const { resolve } = require('path');
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const BundleBuddyWebpackPlugin = require("bundle-buddy-webpack-plugin");
 
 const plugins = [
-    // new BundleBuddyWebpackPlugin({sam: true}),
     new BundleAnalyzerPlugin({
         // Can be `server`, `static` or `disabled`.
         // In `server` mode analyzer will start HTTP server to show bundle report.
