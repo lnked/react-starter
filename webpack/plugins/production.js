@@ -15,12 +15,19 @@ const plugins = [
         basePath: define.rs_output_path,
         fileName: "../webpack-manifest.json"
     }),
+
     new WebpackChunkHash(),
+
     new webpack.HashedModuleIdsPlugin(),
+
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
+
     new MiniCssExtractPlugin({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
         chunkFilename: "[id].css"
     }),
+
     new ScriptExtHtmlWebpackPlugin({
         sync: /vendors/,
         inline: 'runtime',

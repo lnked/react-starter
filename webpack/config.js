@@ -84,21 +84,40 @@ module.exports = {
             name: 'vendors'
         },
         minimizer: [
+            new OptimizeCSSAssetsPlugin({}),
             new UglifyJsPlugin({
                 cache: true,
                 parallel: require('os').cpus().length,
                 sourceMap: !define.rs_release,
                 uglifyOptions: {
                     ie8: false,
-
+                    mangle: true,
+                    toplevel: false,
+                    parse: {
+                        html5_comments: false
+                    },
+                    compress: {
+                        unused: true,
+                        booleans: true,
+                        warnings: false,
+                        dead_code: true,
+                        drop_console: define.rs_release,
+                        drop_debugger: define.rs_release,
+                        global_defs: {
+                            DEBUG: false
+                        }
+                    },
                     output: {
                         ecma: 8,
+                        comments: false,
                         beautify: false,
-                        comments: false
+                        indent_level: 0
+                    },
+                    compressor: {
+                        warnings: false
                     }
                 }
-            }),
-            new OptimizeCSSAssetsPlugin({})
+            })
         ],
         splitChunks: {
             name: true,
