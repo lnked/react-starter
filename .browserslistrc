@@ -1,13 +1,12 @@
-[production]
-> 2%
-safari >= 9
-last 2 Chrome versions
-last 2 Firefox versions
-ios_saf 9.0-9.2
-ie_mob 11
-Android >= 4
-edge 13
+[production staging]
+> 0.25%
+edge >= 13
 ie >= 10
+ie_mob >= 11
+Android >= 4
+ios_saf 9.0-9.2
+not op_mini all
 
 [development]
-last 1 version
+last 1 chrome version
+last 1 firefox version

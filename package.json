@@ -134,7 +134,7 @@
         "jest-styled-components": "5.0.1",
         "lqip-loader": "2.0.2",
         "mini-css-extract-plugin": "0.4.0",
-        "node-sass": "4.8.3",
+        "node-sass": "4.9.0",
         "opn-cli": "3.1.0",
         "optimize-css-assets-webpack-plugin": "4.0.0",
         "pixrem": "4.0.1",
