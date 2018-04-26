@@ -40,12 +40,13 @@ const plugins = [
     }),
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
     new CopyWebpackPlugin([
-        { from: 'assets/images', to: 'images', copyUnmodified: true },
+        { from: 'assets/images', to: 'images', copyUnmodified: true, ignore: [ '.DS_Store' ] },
         {
             context: 'assets/misc',
             from: { glob: '**/*', dot: true },
             to: define.rs_dist,
-            copyUnmodified: true
+            copyUnmodified: true,
+            ignore: [ '.DS_Store' ]
         }
     ])
 ];
