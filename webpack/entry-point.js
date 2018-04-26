@@ -9,7 +9,8 @@ const entryPoint = Object.assign({}, {
         'core-js/es6/set',
         'react',
         'react-dom',
-        'react-router-dom'
+        'react-router-dom',
+        'axios'
     ]
 });
 

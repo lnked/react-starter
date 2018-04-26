@@ -1,5 +1,9 @@
 'use strict';
 
+const config = require('dotenv').config();
+
+console.log(config);
+
 const { resolve } = require('path');
 
 const _node_ = resolve(__dirname, '../node_modules');

@@ -16,7 +16,7 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const plugins = [
     new webpack.DefinePlugin({
         '__DEV__': define.rs_development,
-        'process.env.BROWSER': false,
+        'process.env.BROWSER': true,
         'process.env.NODE_ENV': JSON.stringify(define.rs_environment)
     }),
     new webpack.WatchIgnorePlugin([
