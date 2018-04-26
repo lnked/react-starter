@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import { hot } from 'react-hot-loader'
 
+import initState from './state'
+
 import {
     BrowserRouter as Router,
     Route,
@@ -38,6 +40,8 @@ const routes: any = [
 
 class App extends React.Component<{}, {}> {
     render () {
+        console.log('initState: ', initState)
+
         return (
             <Router>
                 <CoreLayout>
