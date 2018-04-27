@@ -11,7 +11,9 @@ const HappyPack = require('happypack');
 const SvgStore = require('webpack-svgstore-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const plugins = [
     new webpack.DefinePlugin({
@@ -19,26 +21,39 @@ const plugins = [
         'process.env.BROWSER': true,
         'process.env.NODE_ENV': JSON.stringify(define.rs_environment)
     }),
-    new webpack.WatchIgnorePlugin([
-        /css\.d\.ts$/,
-        /scss\.d\.ts$/
-    ]),
-    new WebpackNotifierPlugin(),
+
     new HappyPack({
         loaders: scripts.loaders,
         threads: 4,
         verbose: false
     }),
+
     new webpack.ContextReplacementPlugin(
         /moment[\/\\]locale$/,
         /(en-gb|en|ru)/
     ),
+
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production,
         options: {}
     }),
+
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
+
+    new ResourceHintWebpackPlugin(),
+
+    new MiniCssExtractPlugin({
+        filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
+        chunkFilename: "[id].css"
+    }),
+
+    new ScriptExtHtmlWebpackPlugin({
+        defer: [/vendors/, /.*bundle/],
+        inline: 'startup',
+        defaultAttribute: 'async'
+    }),
+
     new CopyWebpackPlugin([
         { from: 'assets/images', to: 'images', copyUnmodified: true, ignore: [ '.DS_Store' ] },
         {

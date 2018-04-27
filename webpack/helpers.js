@@ -9,6 +9,8 @@ const config = {
     cache: define.rs_production,
     inject: true,
     filetype: 'pug',
+    prefetch: ['**/*.chunk.js'],
+    preload: ['**/*.chunk.js'],
     production: define.rs_production,
     minify: define.rs_release && {
         keepClosingSlash: true,

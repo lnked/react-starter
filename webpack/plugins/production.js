@@ -7,8 +7,6 @@ const define  = require('../define');
 
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -21,19 +19,7 @@ const plugins = [
     new webpack.HashedModuleIdsPlugin(),
 
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
-
-    new MiniCssExtractPlugin({
-        filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
-        chunkFilename: "[id].css"
-    }),
-
-    new ScriptExtHtmlWebpackPlugin({
-        sync: /vendors/,
-        inline: 'runtime',
-        preload: ['vendors', 'index'],
-        defaultAttribute: 'async'
-    })
+    new webpack.optimize.AggressiveMergingPlugin()
 ];
 
 module.exports.config = plugins;

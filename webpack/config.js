@@ -81,7 +81,7 @@ module.exports = {
         namedModules: true,
         namedChunks: true,
         runtimeChunk: {
-            name: 'vendors'
+            name: 'startup'
         },
         minimizer: [
             new OptimizeCSSAssetsPlugin({}),
@@ -121,7 +121,7 @@ module.exports = {
         ],
         splitChunks: {
             name: true,
-            chunks: "async",
+            chunks: 'async',
             minSize: 30000,
             minChunks: 1,
             maxAsyncRequests: 5,
@@ -135,9 +135,9 @@ module.exports = {
                 },
                 commons: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: "vendors",
+                    name: 'vendors',
                     minChunks: 2,
-                    chunks: "all",
+                    chunks: 'all',
                     enforce: true
                 },
                 vendors: {

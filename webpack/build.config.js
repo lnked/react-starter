@@ -23,5 +23,7 @@ module.exports = webpackMerge(defaultConfig, {
         maxAssetSize: 500000,
         maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
-    }
+    },
+
+    node: false
 });

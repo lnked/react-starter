@@ -4,6 +4,11 @@ const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 const plugins = [
+    new webpack.WatchIgnorePlugin([
+        /css\.d\.ts$/,
+        /scss\.d\.ts$/
+    ]),
+
     new WebpackNotifierPlugin({ alwaysNotify: true }),
 
     // show module names instead of numbers in webpack stats
