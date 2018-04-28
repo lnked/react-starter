@@ -148,7 +148,7 @@
         "postcss-custom-selectors": "4.0.1",
         "postcss-discard-comments": "2.0.4",
         "postcss-emptymediaqueries": "0.0.2",
-        "postcss-flexbugs-fixes": "3.3.0",
+        "postcss-flexbugs-fixes": "3.3.1",
         "postcss-hexrgba": "1.0.0",
         "postcss-import": "11.1.0",
         "postcss-loader": "2.1.4",
