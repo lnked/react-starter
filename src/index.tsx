@@ -8,7 +8,7 @@ import 'index.scss'
 //     whyDidYouUpdate(React);
 // }
 
-render(<App />, document.getElementById('root'))
+render(<App />, document.getElementById('app'))
 
 document.body.classList.remove('loading')
 
