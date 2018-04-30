@@ -36,6 +36,7 @@ module.exports = {
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
     rs_generate_css: false, // isProduction
+    rs_contentBase: './dist',
     rs_asset_name: staticAssetName,
     rs_production: isProduction,
     rs_development: isDevelopment,

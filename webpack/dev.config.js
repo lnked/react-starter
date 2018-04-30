@@ -22,17 +22,17 @@ module.exports = webpackMerge(defaultConfig, {
     optimization: optimization,
 
     devServer: {
-        // headers: { 'Access-Control-Allow-Origin': '*' },
+        headers: { 'Access-Control-Allow-Origin': '*' },
         hot: true,
         open: true,
-        // inline: true,
+        inline: true,
         overlay: {
             errors: true,
             warnings: true
         },
         compress: false,
-        contentBase: define.rs_dist,
-        // disableHostCheck: true,
+        contentBase: define.rs_contentBase,
+        disableHostCheck: true,
         watchContentBase: true,
         historyApiFallback: true,
         watchOptions: {
