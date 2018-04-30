@@ -11,14 +11,3 @@ import 'index.scss'
 render(<App />, document.getElementById('app'))
 
 document.body.classList.remove('loading')
-
-// d3json('/api/v1/events/pavilions/stands/equipment/' + eq.id)
-//     .header("X-CSRFToken", getCookie('csrftoken'))
-//     .header("Content-Type", "application/json;charset=UTF-8")
-//     .post(JSON.stringify(eq), function (e) {
-//         if (e) {
-//             store(a.EQUIPMENT_UPDATED, e);
-//         }
-//         else
-//             console.error('Equipment not updated on server!')
-//     });

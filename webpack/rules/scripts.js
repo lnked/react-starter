@@ -27,6 +27,16 @@ useConfig.push(
 
 tsConfig.push(
     {
+        loader: 'babel-loader',
+        options: {
+            babelrc: true,
+            plugins: ['react-hot-loader/babel'],
+        }
+    }
+);
+
+tsConfig.push(
+    {
         loader: 'awesome-typescript-loader'
     }
 );
