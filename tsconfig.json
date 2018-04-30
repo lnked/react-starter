@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "jsx": "react",
-        "target": "es5",
-        "module": "CommonJS",
+        "target": "es6",
+        "module": "commonjs",
         "outDir": "./dist",
         "allowJs": false,
         "sourceMap": true,
