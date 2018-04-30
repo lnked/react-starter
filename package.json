@@ -1,7 +1,7 @@
 {
     "name": "react-starter",
     "private": true,
-    "version": "2.1.6",
+    "version": "2.1.7",
     "license": "MIT",
     "main": "index.js",
     "description": "React boilerplate, pwa, router",
