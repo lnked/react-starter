@@ -4,7 +4,6 @@
             "targets": {
                 "node": "current"
             },
-            "loose": true,
             "modules": false,
             "useBuiltIns": "usage"
         }],

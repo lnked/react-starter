@@ -24,6 +24,7 @@ postcss.push(
     require('postcss-hexrgba'),
     require('postcss-position'),
     require('postcss-quantity-queries'),
+    require('postcss-pseudo-content-insert'),
     require("postcss-cssnext")({
         autoprefixer: false,
         warnForDuplicates: false

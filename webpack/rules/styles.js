@@ -24,7 +24,7 @@ const usesConfig = [
     {
         loader: "typings-for-css-modules-loader",
         options: {
-            sourceMap: define.rs_analyzer,
+            sourceMap: define.rs_development,
             importLoaders: 3,
             modules: true,
             namedExport: true,
@@ -35,7 +35,7 @@ const usesConfig = [
     {
         loader: 'postcss-loader',
         options: {
-            sourceMap: define.rs_development || define.rs_analyzer ? 'inline' : false,
+            sourceMap: define.rs_development,
             plugins: () => {
                 return postcss.plugins;
             }
@@ -44,7 +44,7 @@ const usesConfig = [
     {
         loader: 'sass-loader',
         options: {
-            sourceMap: define.rs_development || define.rs_analyzer,
+            sourceMap: define.rs_development,
             includePaths: [ define.rs_root ]
         }
     }
