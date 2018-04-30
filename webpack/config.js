@@ -10,9 +10,6 @@ const plugins = require('./plugins');
 
 const entryPoint = require('./entry-point');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
 process.traceDeprecation = true;
 
 module.exports = {
@@ -72,80 +69,6 @@ module.exports = {
         noParse: [
             /[\/\\]react[\/\\]react\.js[\/\\]jquery[\/\\]zepto\.js$/
         ]
-    },
-
-    optimization: {
-        minimize: define.rs_production,
-        concatenateModules: define.rs_production,
-        noEmitOnErrors: true,
-        namedModules: true,
-        namedChunks: true,
-        runtimeChunk: {
-            name: 'startup'
-        },
-        minimizer: [
-            new OptimizeCSSAssetsPlugin({}),
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: require('os').cpus().length,
-                sourceMap: !define.rs_release,
-                uglifyOptions: {
-                    ie8: false,
-                    mangle: true,
-                    toplevel: false,
-                    parse: {
-                        html5_comments: false
-                    },
-                    compress: {
-                        unused: true,
-                        booleans: true,
-                        warnings: false,
-                        dead_code: true,
-                        drop_console: define.rs_release,
-                        drop_debugger: define.rs_release,
-                        global_defs: {
-                            DEBUG: false
-                        }
-                    },
-                    output: {
-                        ecma: 8,
-                        comments: false,
-                        beautify: false,
-                        indent_level: 0
-                    },
-                    compressor: {
-                        warnings: false
-                    }
-                }
-            })
-        ],
-        splitChunks: {
-            name: true,
-            chunks: 'async',
-            minSize: 30000,
-            minChunks: 1,
-            maxAsyncRequests: 5,
-            maxInitialRequests: 3,
-            automaticNameDelimiter: '~',
-            cacheGroups: {
-                default: {
-                    minChunks: 2,
-                    priority: -20,
-                    reuseExistingChunk: true
-                },
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    minChunks: 2,
-                    chunks: 'all',
-                    enforce: true
-                },
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    priority: -10
-                }
-            }
-        }
     },
 
     plugins: plugins.config

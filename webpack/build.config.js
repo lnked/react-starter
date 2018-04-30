@@ -9,6 +9,9 @@ const defaultConfig = require('./config');
 const stats = require('./stats');
 const define = require('./define');
 
+const optimization = require('./optimization');
+const minimizer = require('./minimizer');
+
 module.exports = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
@@ -24,6 +27,8 @@ module.exports = webpackMerge(defaultConfig, {
         maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
+
+    optimization: webpackMerge(optimization, minimizer),
 
     node: false
 });

@@ -8,6 +8,7 @@ const defaultConfig = require('./config');
 
 const stats = require('./stats');
 const define = require('./define');
+const optimization = require('./optimization');
 
 module.exports = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
@@ -17,6 +18,8 @@ module.exports = webpackMerge(defaultConfig, {
     watch: define.rs_development,
 
     cache: define.rs_development,
+
+    optimization: optimization,
 
     devServer: {
         headers: { 'Access-Control-Allow-Origin': '*' },
