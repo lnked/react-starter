@@ -18,6 +18,7 @@ Object.assign(entryPoint, {
     index: [
         ...define.rs_development
         ? [
+            'react-hot-loader/patch',
             '@babel/polyfill',
             `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
             'webpack/hot/only-dev-server'
