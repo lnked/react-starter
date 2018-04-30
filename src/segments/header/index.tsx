@@ -2,23 +2,24 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 interface T {
-    className?: string;
     children?: string | React.ReactChild | React.ReactNode | any[];
 }
 
 export default class Header extends React.Component<T, {}> {
     render () {
-        const cn: any = []
-        const { className, children } = this.props
-
-        cn.push(css.header)
-
-        if (className) {
-            cn.push(className)
-        }
+        const { children } = this.props
 
         return (
-            <div className={cn.join(' ')}>
+            <div className={css.header}>
+                <div className={css.navigation}>
+                    <h1>React Starter Kit</h1>
+                    <nav>
+                        <a
+                            href="https://github.com/lnked/react-starter"
+                            target="_blank"
+                            rel="noopener noreferrer">Source Code</a>
+                    </nav>
+                </div>
                 {children}
             </div>
         )

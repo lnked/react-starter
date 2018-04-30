@@ -13,7 +13,7 @@ export default class Layout extends React.Component<T, {}> {
     }
 
     render () {
-        const cn: any = []
+        const cn: Array<string> = []
         const { className, children } = this.props
 
         cn.push(css.layout)

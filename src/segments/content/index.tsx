@@ -8,7 +8,7 @@ interface T {
 
 export default class Content extends React.Component<T, {}> {
     render () {
-        const cn: any = []
+        const cn: Array<string> = []
         const { className, children } = this.props
 
         cn.push(css.content)

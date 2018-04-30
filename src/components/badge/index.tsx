@@ -18,7 +18,7 @@ export default class Badge extends React.PureComponent<T, {}> {
     }
 
     render () {
-        const cn: any = []
+        const cn: Array<string> = []
 
         const { title, children, variant, bolded, className } = this.props
 

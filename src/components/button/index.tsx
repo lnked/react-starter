@@ -32,7 +32,7 @@ export default class Button extends React.PureComponent<T, {}> {
     }
 
     render () {
-        const cn: any = []
+        const cn: Array<string> = []
         const { label, children, type, size, variant, isIcon, isDisabled, className } = this.props
 
         cn.push(css.button)

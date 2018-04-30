@@ -69,7 +69,7 @@ export default class Checkbox extends React.PureComponent<T, S> {
     }
 
     renderStatus = () => {
-        const cn: any = []
+        const cn: Array<string> = []
 
         const { theme } = this.props
         const { checked } = this.state
@@ -96,7 +96,7 @@ export default class Checkbox extends React.PureComponent<T, S> {
     }
 
     render () {
-        const cn: any = []
+        const cn: Array<string> = []
 
         const { name, size, className } = this.props
 

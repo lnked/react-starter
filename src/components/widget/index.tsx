@@ -9,7 +9,7 @@ interface T {
 
 export default class Widget extends React.PureComponent<T, {}> {
     render () {
-        const cn: any = []
+        const cn: Array<string> = []
         const { title, children, className } = this.props
 
         cn.push(css.widget)

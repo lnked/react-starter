@@ -105,7 +105,7 @@ export default class Input extends React.Component<T, S> {
     }
 
     renderInput = () => {
-        const cn: any = []
+        const cn: Array<string> = []
         const props: any = {}
 
         const { value } = this.state
@@ -115,7 +115,7 @@ export default class Input extends React.Component<T, S> {
 
         cn.push(css.control)
 
-        if (className) {
+        if (typeof(className) === 'string') {
             cn.push(className)
         }
 
