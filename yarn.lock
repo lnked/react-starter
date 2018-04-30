@@ -5894,7 +5894,7 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
-gonzales-pe@4.2.3, gonzales-pe@^4.2.3:
+gonzales-pe@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/gonzales-pe/-/gonzales-pe-4.2.3.tgz#41091703625433285e0aee3aa47829fc1fbeb6f2"
   dependencies:
@@ -10208,13 +10208,6 @@ postcss-safe-parser@^3.0.1:
   resolved "https://registry.yarnpkg.com/postcss-safe-parser/-/postcss-safe-parser-3.0.1.tgz#b753eff6c7c0aea5e8375fbe4cde8bf9063ff142"
   dependencies:
     postcss "^6.0.6"
-
-postcss-sass@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-sass/-/postcss-sass-0.3.1.tgz#f345c175d35cc15726e1f4c035cedb703dd1ba18"
-  dependencies:
-    gonzales-pe "4.2.3"
-    postcss "6.0.22"
 
 postcss-sass@^0.3.0:
   version "0.3.0"
