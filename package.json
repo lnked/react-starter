@@ -139,7 +139,7 @@
         "mini-css-extract-plugin": "0.4.0",
         "node-sass": "4.9.0",
         "opn-cli": "3.1.0",
-        "optimize-css-assets-webpack-plugin": "4.0.0",
+        "optimize-css-assets-webpack-plugin": "4.0.1",
         "pixrem": "4.0.1",
         "postcss": "6.0.22",
         "postcss-calc": "6.0.1",
