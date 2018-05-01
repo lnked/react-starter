@@ -15,7 +15,8 @@ import { CoreLayout } from 'layouts'
 
 // Containers
 import {
-    NoMatch
+    NoMatch,
+    MainPage
 } from 'containers'
 
 // Segments
@@ -30,7 +31,7 @@ const routes: any = [
     {
         path: '/',
         exact: true,
-        component: NoMatch
+        component: MainPage
     }, {
         status: 404,
         statusCode: 404,
