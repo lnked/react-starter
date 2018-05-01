@@ -5,15 +5,30 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 200px;
+    height: 120px;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 100%;
     margin-bottom: 30px;
     padding: $content-padding;
-    background-color: #16a77e;
+    background-color: var(--teal, #20c997);
 }
 
 .navigation {
-    border: 1px solid #f00;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    color: var(--white, #fff);
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.code-link {
+    color: var(--indigo, #6610f2);
+    font-size: 1.6rem;
+    line-height: 1;
 }

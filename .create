@@ -73,6 +73,10 @@ mkdir webpack
 cp -r ${SOURCE}/webpack/entry-point.js ${PATH_ROOT}/$FOLDER_NAME/webpack
 
 ln -s ${SOURCE}/webpack/config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/dev.config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/build.config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/minimizer.js ${PATH_ROOT}/$FOLDER_NAME/webpack
+ln -s ${SOURCE}/webpack/optimization.js ${PATH_ROOT}/$FOLDER_NAME/webpack
 ln -s ${SOURCE}/webpack/define.js ${PATH_ROOT}/$FOLDER_NAME/webpack
 ln -s ${SOURCE}/webpack/helpers.js ${PATH_ROOT}/$FOLDER_NAME/webpack
 ln -s ${SOURCE}/webpack/plugins.js ${PATH_ROOT}/$FOLDER_NAME/webpack
