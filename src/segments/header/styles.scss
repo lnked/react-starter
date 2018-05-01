@@ -21,6 +21,26 @@
     justify-content: space-between;
 }
 
+.nav-list {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0 30px;
+    text-decoration: underline;
+}
+
+.active {
+    color: #f00;
+    text-decoration: none;
+}
+
 .title {
     color: var(--white, #fff);
     font-size: 2.6rem;

@@ -33,6 +33,9 @@ const routes: any = [
         exact: true,
         component: MainPage
     }, {
+        path: '/another',
+        component: MainPage
+    }, {
         status: 404,
         statusCode: 404,
         component: NoMatch
