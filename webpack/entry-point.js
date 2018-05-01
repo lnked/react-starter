@@ -11,6 +11,10 @@ const entryPoint = Object.assign({}, {
         'react-dom',
         'react-router-dom',
         'axios'
+
+        // 'mobx',
+        // 'mobx-react',
+        // 'mobx-state-tree'
     ]
 });
 
