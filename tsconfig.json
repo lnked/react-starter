@@ -115,7 +115,8 @@
         "webpack",
         "typings",
         "coverage",
-        "node_modules"
+        "node_modules",
+        "**/node_modules/*"
     ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,
