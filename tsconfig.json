@@ -3,7 +3,7 @@
         "jsx": "react",
         "target": "es5",
         "module": "commonjs",
-        "outDir": "./dist",
+        "outDir": "dist",
         "allowJs": false,
         "sourceMap": true,
         "declaration": false,
