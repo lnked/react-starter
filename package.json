@@ -54,7 +54,7 @@
         "axios": "0.18.0",
         "core-js": "2.5.5",
         "dotenv": "5.0.1",
-        "mobx": "4.2.0",
+        "mobx": "4",
         "mobx-react": "5.0.0",
         "mobx-state-tree": "2.0.4",
         "react": "16.3.2",
