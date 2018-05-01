@@ -10143,12 +10143,6 @@ postcss-pseudo-class-any-link@^4.0.0:
     postcss "^6.0.1"
     postcss-selector-parser "^2.2.3"
 
-postcss-pseudo-content-insert@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/postcss-pseudo-content-insert/-/postcss-pseudo-content-insert-0.3.0.tgz#d711900b4f4e98aa17dad8e20acc5794cac9fb38"
-  dependencies:
-    postcss "^5.0.2"
-
 postcss-pseudoelements@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/postcss-pseudoelements/-/postcss-pseudoelements-5.0.0.tgz#eef194e8d524645ca520a949e95e518e812402cb"
