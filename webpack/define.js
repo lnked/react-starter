@@ -1,9 +1,5 @@
 'use strict';
 
-const config = require('dotenv').config();
-
-console.log(config);
-
 const { resolve } = require('path');
 
 const _node_ = resolve(__dirname, '../node_modules');
@@ -23,6 +19,9 @@ const _host_ = process.env.HOST || '0.0.0.0';
 const _port_ = process.env.PORT || 3000;
 
 const staticAssetName = isDevelopment ? '[path][name].[ext]?[hash:8]' : '[hash:5].[ext]';
+
+// const config = require('dotenv').config();
+// console.log(config);
 
 module.exports = {
     rs_host: _host_,
