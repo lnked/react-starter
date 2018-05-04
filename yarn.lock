@@ -3751,6 +3751,10 @@ css-mqpacker@6.0.2:
     minimist "^1.2.0"
     postcss "^6.0.16"
 
+css-properties-values@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/css-properties-values/-/css-properties-values-1.0.0.tgz#75d9145c81454813d785301e58d6fb1651cc3d4b"
+
 css-select-base-adapter@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/css-select-base-adapter/-/css-select-base-adapter-0.1.0.tgz#0102b3d14630df86c3eb9fa9f5456270106cf990"
@@ -10053,6 +10057,12 @@ postcss-modules-values@^1.3.0:
     icss-replace-symbols "^1.1.0"
     postcss "^6.0.1"
 
+postcss-mq-keyframes@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/postcss-mq-keyframes/-/postcss-mq-keyframes-0.3.0.tgz#1c9849e69118984bca95c024e16a73454546768d"
+  dependencies:
+    postcss "^5.0.19"
+
 postcss-nested@3.0.0, postcss-nested@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-3.0.0.tgz#cde40bd07a078565f3df72e2dc2665871c724852"
@@ -10311,6 +10321,19 @@ postcss-values-parser@^1.3.2:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
+postcss-will-change-transition@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/postcss-will-change-transition/-/postcss-will-change-transition-1.2.0.tgz#11d07c2c6268ccad68943c4ca5cb1812ffa6b6bc"
+  dependencies:
+    css-properties-values "1.0.0"
+    postcss "^6.0.1"
+
+postcss-will-change@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-will-change/-/postcss-will-change-2.0.0.tgz#cff091a87a0386bab1f32a7cfa7f79d6b773e100"
+  dependencies:
+    postcss "^6.0.1"
+
 postcss-zindex@^2.0.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/postcss-zindex/-/postcss-zindex-2.2.0.tgz#d2109ddc055b91af67fc4cb3b025946639d2af22"
@@ -10327,7 +10350,7 @@ postcss@6.0.22, postcss@^6, postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcs
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16:
+postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16:
   version "5.2.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
   dependencies:

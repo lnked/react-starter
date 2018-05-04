@@ -28,6 +28,7 @@
                     "mixin",
                     "extend",
                     "include",
+                    "critical",
                     "custom-media",
                     "custom-selector"
                 ]

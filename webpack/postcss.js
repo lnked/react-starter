@@ -23,6 +23,7 @@ postcss.push(
     require('postcss-url'),
     require('postcss-hexrgba'),
     require('postcss-position'),
+    require('postcss-mq-keyframes'),
     require('postcss-quantity-queries'),
     require("postcss-cssnext")({
         autoprefixer: false,
@@ -39,6 +40,8 @@ postcss.push(
 
 if (define.rs_production) {
     postcss.push(
+        require('postcss-will-change-transition'),
+        require('postcss-will-change'),
         require('postcss-discard-comments'),
         require('postcss-color-rgba-fallback'),
         require('postcss-emptymediaqueries'),
