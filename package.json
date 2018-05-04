@@ -28,7 +28,7 @@
         "test-watch": "yarn run test --watch --notify",
         "test-cover": "yarn run test --coverage",
         "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
-        "size": "npx size-limit",
+        "size": "yarn size-limit",
         "deploy": "webpack --config webpack/build.config --env deploy"
     },
     "keywords": [
