@@ -7,6 +7,7 @@ module.exports.config = {
     hash: false,
     modules: false,
     publicPath: false,
+    chunkGroups: true,
     timings: true,
     version: false,
     warnings: true,
