@@ -1,8 +1,7 @@
-// import React, { Component } from 'react'
+// import * as React from 'react'
 // import axios from 'axios'
 
 // export default function RequestHOC(RComponent, apiUrl) {
-
 //     class RequestHOC extends Component {
 //         state = {
 //             data: []
