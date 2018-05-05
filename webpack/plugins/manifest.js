@@ -9,14 +9,13 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 const plugins = [
     new WebpackPwaManifest({
-        filename: "manifest.json",
+        filename: "manifest.webmanifest",
         name: 'React starter',
         short_name: 'React PWA',
         description: 'React-starter a react web sterter kit!',
         background_color: '#673ab8',
         dir: 'auto',
         lang: 'ru-RU',
-        prefix: 'fav/',
         display: 'standalone',
         orientation: 'any',
         start_url: '.',
@@ -24,11 +23,9 @@ const plugins = [
         fingerprints: false,
         ios: false,
         publicPath: null,
-        includeDirectory: true,
-        backgroundColor: '#fff',
         theme_color: '#2185d0',
-        preferRelatedApplications: false,
-        relatedApplications: [],
+        prefer_related_applications: false,
+        related_applications: [],
         icons: [
             {
                 src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
