@@ -7,14 +7,37 @@ const define = require('../define');
 const environment = require('../environment').config;
 
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const plugins = [
+    new FaviconsWebpackPlugin({
+        logo: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
+        prefix: 'f/',
+        inject: true,
+        emitStats: false,
+        statsFilename: 'favs-[hash:4].json',
+        persistentCache: true,
+        background: environment.APP_BG_COLOR,
+        title: environment.APP_NAME,
+        icons: {
+            android: true,
+            appleIcon: true,
+            appleStartup: true,
+            coast: false,
+            favicons: true,
+            firefox: true,
+            opengraph: false,
+            twitter: false,
+            yandex: false,
+            windows: false
+        }
+    }),
     new WebpackPwaManifest({
         filename: "manifest.webmanifest",
         name: environment.APP_NAME,
         short_name: environment.APP_NAME_SHORT,
         description: environment.APP_NAME_DESC,
-        background_color: '#673ab8',
+        background_color: environment.APP_BG_COLOR,
         dir: 'auto',
         lang: 'ru-RU',
         display: 'standalone',
@@ -24,7 +47,7 @@ const plugins = [
         fingerprints: false,
         ios: false,
         publicPath: null,
-        theme_color: '#2185d0',
+        theme_color: environment.APP_BG_COLOR,
         prefer_related_applications: false,
         related_applications: [],
         icons: [
