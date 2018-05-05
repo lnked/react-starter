@@ -6,8 +6,7 @@ const webpack = require('webpack');
 const define  = require('../define');
 const helpers = require('../helpers');
 const scripts = require('../rules/scripts')
-const environment = require('../environment');
-const stringify = require('../environment').stringify;
+const environment = require('../environment').config;
 
 const HappyPack = require('happypack');
 const SvgStore = require('webpack-svgstore-plugin');
@@ -20,7 +19,7 @@ const BowerWebpackPlugin = require("bower-webpack-plugin");
 
 const plugins = [
     new webpack.DefinePlugin({
-        'process.env': Object.assign(stringify(environment), {
+        'process.env': Object.assign(environment, {
             'BROWSER': true,
             'NODE_ENV': JSON.stringify(define.rs_environment)
         }),

@@ -3,16 +3,17 @@
 const { resolve } = require('path');
 
 const webpack = require('webpack');
-const define  = require('../define');
+const define = require('../define');
+const environment = require('../environment').config;
 
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 const plugins = [
     new WebpackPwaManifest({
         filename: "manifest.webmanifest",
-        name: 'React starter',
-        short_name: 'React PWA',
-        description: 'React-starter a react web sterter kit!',
+        name: environment.APP_NAME,
+        short_name: environment.APP_NAME_SHORT,
+        description: environment.APP_NAME_DESC,
         background_color: '#673ab8',
         dir: 'auto',
         lang: 'ru-RU',

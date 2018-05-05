@@ -1,18 +1,23 @@
 'use strict';
 
+const { join } = require('path');
+
 const define  = require('../define');
+const environment = require('../environment').config;
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
+const cache = JSON.parse(environment.APP_NAME).toLowerCase().replace(/\s/g, '-');
+
 const plugins = [
+    // @ts-ignore
     new SWPrecacheWebpackPlugin({
         minify: true,
         verbose: false,
-        cacheId: 'RS-PWA',
+        cacheId: cache,
         filename: '../sw.js',
         stripPrefix: 'dist/',
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
-
         navigateFallback: '/index.html',
 
         staticFileGlobs: [
@@ -29,14 +34,13 @@ const plugins = [
             'dist/**/*.html',
             'dist/**/*.woff',
             'dist/**/*.woff2',
-            'dist/fav/**.*',
-            'dist/images/**.*',
-            'dist/manifest.json'
+            'dist/assets/images/**.*',
+            'dist/assets/manifest.webmanifest'
         ],
 
         importScripts: [],
 
-        // mergeStaticsConfig: true,
+        mergeStaticsConfig: false,
 
         maximumFileSizeToCacheInBytes: 8388608,
         staticFileGlobsIgnorePatterns: [/\.map$/, /\.DS_Store$/, /\.htaccess$/, /\.cache$/, /\.robots.txt$/, /webpack-manifest\.json$/],

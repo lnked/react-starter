@@ -12,16 +12,16 @@ const config = dotenv.config({
     path: resolve(process.cwd(), staging)
 });
 
-module.exports.config = config.parsed;
-
-module.exports.stringify = (params) => {
-    const length = Object.keys(params.config).length;
+const stringify = (params) => {
+    const length = Object.keys(params).length;
 
     if (length) {
-        for (let x in params.config) {
-            params.config[x] = JSON.stringify(params.config[x]);
+        for (let x in params) {
+            params[x] = JSON.stringify(params[x]);
         }
     }
 
-    return params.config;
+    return params;
 }
+
+module.exports.config = stringify(config.parsed);
