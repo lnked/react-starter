@@ -16,10 +16,11 @@ export default class Header extends React.Component<T, {}> {
                 <div className={css.navigation}>
                     <h1 className={css.title}>React Starter Kit</h1>
                     <nav className={css.navList}>
-                        <NavLink to="/" className={css.link} activeClassName={css.active}>
+                        <NavLink to="/" exact className={css.link} activeClassName={css.active}>
                             Main page
                         </NavLink>
-                        <NavLink to="/another" className={css.link} activeClassName={css.active}>
+
+                        <NavLink to="/changelog" className={css.link} activeClassName={css.active}>
                             Another page
                         </NavLink>
 

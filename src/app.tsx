@@ -16,7 +16,8 @@ import { CoreLayout } from 'layouts'
 // Containers
 import {
     NoMatch,
-    MainPage
+    MainPage,
+    ChangelogPage
 } from 'containers'
 
 // Segments
@@ -33,8 +34,8 @@ const routes: any = [
         exact: true,
         component: MainPage
     }, {
-        path: '/another',
-        component: MainPage
+        path: '/changelog',
+        component: ChangelogPage
     }, {
         status: 404,
         statusCode: 404,
