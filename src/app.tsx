@@ -46,6 +46,7 @@ const routes: any = [
 class App extends React.Component<{}, {}> {
     render () {
         console.log('initState: ', initState)
+        console.log('process.env: ', process.env)
 
         return (
             <Router>

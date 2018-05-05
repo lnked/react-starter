@@ -37,7 +37,7 @@ const plugins = [
         name: environment.APP_NAME,
         short_name: environment.APP_NAME_SHORT,
         description: environment.APP_NAME_DESC,
-        background_color: environment.APP_BG_COLOR,
+        background_color: JSON.parse(environment.APP_BG_COLOR),
         dir: 'auto',
         lang: 'ru-RU',
         display: 'standalone',
@@ -47,7 +47,7 @@ const plugins = [
         fingerprints: false,
         ios: false,
         publicPath: null,
-        theme_color: environment.APP_BG_COLOR,
+        theme_color: JSON.parse(environment.APP_BG_COLOR),
         prefer_related_applications: false,
         related_applications: [],
         icons: [

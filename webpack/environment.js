@@ -24,4 +24,5 @@ const stringify = (params) => {
     return params;
 }
 
-module.exports.config = stringify(config.parsed);
+module.exports.config = config.parsed;
+module.exports.stringify = stringify;
