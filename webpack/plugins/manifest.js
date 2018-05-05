@@ -17,8 +17,8 @@ const plugins = [
         emitStats: false,
         statsFilename: 'favs-[hash:4].json',
         persistentCache: true,
-        background: environment.APP_BG_COLOR,
-        title: environment.APP_NAME,
+        background: JSON.parse(environment.APP_BG_COLOR),
+        title: JSON.parse(environment.APP_NAME),
         icons: {
             android: true,
             appleIcon: true,
@@ -34,9 +34,9 @@ const plugins = [
     }),
     new WebpackPwaManifest({
         filename: "manifest.webmanifest",
-        name: environment.APP_NAME,
-        short_name: environment.APP_NAME_SHORT,
-        description: environment.APP_NAME_DESC,
+        name: JSON.parse(environment.APP_NAME),
+        short_name: JSON.parse(environment.APP_NAME_SHORT),
+        description: JSON.parse(environment.APP_NAME_DESC),
         background_color: JSON.parse(environment.APP_BG_COLOR),
         dir: 'auto',
         lang: 'ru-RU',
