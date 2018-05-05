@@ -24,6 +24,8 @@ module.exports = {
                     html5_comments: false
                 },
                 compress: {
+                    unsafe: true,
+                    inline: false,
                     unused: true,
                     booleans: true,
                     warnings: false,

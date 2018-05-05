@@ -36,6 +36,8 @@ module.exports = {
     rs_asset_name: staticAssetName,
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isDeploy ? '/react-cms/' : '/assets/',
+    rs_output_path: isDevelopment
+                    ? '/'
+                    : '/assets/',
     rs_environment: isProduction ? 'production' : 'development'
 }

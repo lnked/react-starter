@@ -1,6 +1,6 @@
 'use strict';
 
-const { resolve } = require('path');
+const { resolve, dirname } = require('path');
 
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
@@ -8,21 +8,19 @@ const defaultConfig = require('./config');
 
 const stats = require('./stats');
 const define = require('./define');
-const optimization = require('./optimization');
 
 module.exports = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-inline-source-map',
 
     watch: define.rs_development,
 
     cache: define.rs_development,
 
-    optimization: optimization,
+    optimization: {},
 
     devServer: {
-        headers: { 'Access-Control-Allow-Origin': '*' },
         hot: true,
         open: true,
         inline: true,
@@ -32,9 +30,11 @@ module.exports = webpackMerge(defaultConfig, {
         },
         compress: false,
         contentBase: define.rs_contentBase,
-        disableHostCheck: true,
         watchContentBase: true,
-        historyApiFallback: true,
+        disableHostCheck: true,
+        historyApiFallback: {
+            disableDotRule: true
+        },
         watchOptions: {
             aggregateTimeout: 100,
             poll: 300

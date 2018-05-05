@@ -10,7 +10,7 @@ const plugins = require('./plugins');
 
 const entryPoint = require('./entry-point');
 
-process.traceDeprecation = true;
+// process.traceDeprecation = true;
 
 module.exports = {
 
@@ -21,7 +21,9 @@ module.exports = {
     entry: entryPoint.config,
 
     output: {
-        path: resolve(define.rs_dist, 'assets'),
+        path: define.rs_development
+            ? define.rs_dist
+            : resolve(define.rs_dist, 'assets'),
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
@@ -62,14 +64,16 @@ module.exports = {
     },
 
     module: {
+        unsafeCache: define.rs_development,
         strictExportPresence: define.rs_development,
 
         rules: rules.config,
-        unsafeCache: define.rs_development,
         noParse: [
             /[\/\\]react[\/\\]react\.js[\/\\]jquery[\/\\]zepto\.js$/
         ]
     },
 
-    plugins: plugins.config
+    plugins: plugins.config,
+
+    node: false
 };

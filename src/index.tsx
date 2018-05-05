@@ -10,5 +10,9 @@ document.body.classList.remove('loading')
 declare var module: any
 
 if (module.hot) {
-    module.hot.accept()
+    module.hot.accept((err) => {
+        if (err) {
+            console.error('Cannot apply HMR update.', err)
+        }
+    })
 }

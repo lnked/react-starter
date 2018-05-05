@@ -2,10 +2,11 @@
     "presets": [
         ["@babel/preset-env", {
             "targets": {
-                "node": "current"
+                "node": "current",
+                "forceAllTransforms": true
             },
-            "modules": false,
-            "useBuiltIns": "usage"
+            "debug": false,
+            "useBuiltIns": false
         }],
         ["@babel/preset-stage-2", {
             "decoratorsLegacy": true

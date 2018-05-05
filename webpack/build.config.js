@@ -28,7 +28,5 @@ module.exports = webpackMerge(defaultConfig, {
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
 
-    optimization: webpackMerge(optimization, minimizer),
-
-    node: false
+    optimization: webpackMerge(optimization, minimizer)
 });
