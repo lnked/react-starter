@@ -15,11 +15,9 @@ const config = dotenv.config({
 const formatter = (params, stringify = false) => {
     const length = Object.keys(params).length;
 
-    if (length) {
+    if (length && stringify) {
         for (let x in params) {
-            if (stringify) {
-                params[x] = JSON.stringify(params[x]);
-            }
+            params[x] = JSON.stringify(params[x]);
         }
     }
 
