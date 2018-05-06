@@ -74,7 +74,11 @@ const plugins = [
             from: { glob: '**/*', dot: true },
             to: define.rs_dist,
             copyUnmodified: true,
-            ignore: ['.DS_Store', '.gitkeep']
+            ignore: [
+                '.cache',
+                '.gitkeep',
+                '.DS_Store',
+            ]
         }
     ])
 ];

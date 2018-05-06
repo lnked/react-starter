@@ -43,7 +43,15 @@ const plugins = [
         mergeStaticsConfig: false,
 
         maximumFileSizeToCacheInBytes: 8388608,
-        staticFileGlobsIgnorePatterns: [/\.map$/, /\.DS_Store$/, /\.htaccess$/, /\.cache$/, /\.robots.txt$/, /webpack-manifest\.json$/],
+        staticFileGlobsIgnorePatterns: [
+            /\.map$/,
+            /\.DS_Store$/,
+            /\.htaccess$/,
+            /\.cache$/,
+            /\.gitkeep$/,
+            /\.robots.txt$/,
+            /webpack-manifest\.json$/
+        ],
 
         runtimeCaching: [
             {
