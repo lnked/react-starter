@@ -41,7 +41,9 @@
     "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
     "size-limit": [
         {
-            "path": "dist/assets/js/*.js",
+            "path": [
+                "dist/assets/**/*.*"
+            ],
             "limit": "500 KB",
             "webpack": false
         }
