@@ -2,10 +2,12 @@
 
 const { resolve } = require('path');
 
+const _distBase_ = 'dist';
+
 const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
 const _root_ = resolve(__dirname, '../src');
-const _dist_ = resolve(__dirname, '../dist');
+const _dist_ = resolve(__dirname, `../${_distBase_}`);
 
 const isDeploy  = process.argv.includes('deploy');
 const isAnalyze = process.argv.includes('analyze');
@@ -27,12 +29,13 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_distBase: _distBase_,
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
     rs_deploy: isDeploy,
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
     rs_generate_css: false, // isProduction
-    rs_contentBase: './dist',
+    rs_contentBase: `./${_distBase_}`,
     rs_asset_name: staticAssetName,
     rs_production: isProduction,
     rs_development: isDevelopment,
