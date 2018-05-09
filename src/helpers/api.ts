@@ -4,10 +4,24 @@ import token from './token'
 
 export const API_URL = process.env.REACT_APP_API_URL
 
+export const file = axios.create({
+    baseURL: API_URL,
+    headers: {
+        'Accept': 'application/json',
+        'Authorization': `Token ${token.get()}`,
+        'Content-type': 'multipart/form-data',
+        'Access-Control-Allow-Origin': '*',
+    }
+})
+
 export const auth = axios.create({
     baseURL: API_URL,
     headers: {
-        Authorization: `Token ${token.get()}`
+        'Accept': 'application/json',
+        'Authorization': `Token ${token.get()}`,
+        'Content-Type': 'application/json; charset=utf-8',
+        // 'Content-type': 'multipart/form-data',
+        'Access-Control-Allow-Origin': '*',
     }
 })
 

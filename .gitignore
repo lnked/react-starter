@@ -10,6 +10,7 @@
 /dist
 /.cache
 /.awcache
+/code-example
 
 # Numerous always-ignore extensions
 *.bak
