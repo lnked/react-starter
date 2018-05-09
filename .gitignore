@@ -3,6 +3,8 @@
 /features.md
 /src/settings/routes.js
 /src/settings/fidebase.js
+/.env.production
+/.env.development
 
 # Compiled output
 /dist
