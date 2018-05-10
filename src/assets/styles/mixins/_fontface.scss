@@ -5,7 +5,6 @@
         font-style: $font-style;
         font-stretch: $font-stretch;
         font-display: optional;
-
         src: url($file-filename + '.eot');
         src: url($file-filename + '.woff2') format('woff2'), url($file-filename + '.woff') format('woff');
     }
