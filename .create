@@ -101,8 +101,6 @@ cp -r ${SOURCE}/tslint.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/LICENSE ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.babelrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.nvmrc ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.prettierignore ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.prettierrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.travis.yml ${PATH_ROOT}/$FOLDER_NAME
