@@ -8,7 +8,7 @@
 //     this.state = state;
 //   }
 
-//   componentWillMount() {
+//   componentDidMount() {
 //     this.intervals = [];
 //   }
 
