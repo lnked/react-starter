@@ -6,7 +6,9 @@ const define = require('../define');
 const rules = [
     {
         test: /\.pug$/,
-        use: ['pug-loader'],
+        use: [
+            'pug-loader'
+        ],
         include: define.rs_root
     }
 ];
