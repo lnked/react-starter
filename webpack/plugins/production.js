@@ -7,12 +7,18 @@ const define = require('../define');
 
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
+// const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 
 const plugins = [
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
         fileName: "../webpack-manifest.json"
     }),
+
+    // new PrepackWebpackPlugin({
+    //     sourceMaps: true,
+    //     inlineExpressions: true
+    // }),
 
     new WebpackChunkHash(),
 
