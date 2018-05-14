@@ -6,16 +6,36 @@ const svgo = require('../svgo');
 
 const rules = [
     {
-        test: /.*\.(jpe?g|png|gif|ico|webp|svg)$/i,
-        use: [
+        test: define.rs_regexp_images,
+        oneOf: [
+            {
+                issuer: define.rs_regexp_styles,
+                oneOf: [
+                    {
+                        test: /\.svg$/,
+                        loader: 'svg-url-loader',
+                        options: {
+                            name: define.rs_asset_name,
+                            limit: 4096,
+                        },
+                    },
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: define.rs_asset_name,
+                            limit: 4096,
+                        },
+                    },
+                ],
+            },
             {
                 loader: 'file-loader',
                 options: {
+                    name: define.rs_asset_name,
                     hash: 'sha512',
                     digest: 'hex',
-                    name: 'images/[name]-[hash:5].[ext]'
-                }
-            }
+                },
+            },
         ],
         exclude: [
             resolve(define.rs_root, '/assets/fonts'),
@@ -23,8 +43,27 @@ const rules = [
         ]
     },
     {
+        test: /\.(png|jpe?g)$/,
+        loaders: [
+            {
+                loader: 'lqip-loader',
+                options: {
+                    name: define.rs_asset_name,
+                    base64: true,
+                    palette: false
+                }
+            },
+            {
+                loader: 'url-loader',
+                options: {
+                    limit: 8000
+                }
+            }
+        ]
+    },
+    {
         enforce: 'pre',
-        test: /.*\.(jpe?g|png|gif|ico|webp|svg)$/i,
+        test: define.rs_regexp_images,
         options: {
             bypassOnDebug: define.rs_development,
             mozjpeg: {

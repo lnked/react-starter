@@ -52,7 +52,7 @@ const usesConfig = [
 
 const rules = define.rs_generate_css ? [
         {
-            test: /\.(s(a|c)ss)$/,
+            test: define.rs_regexp_styles,
             use: [
                 MiniCssExtractPlugin.loader,
                 ...usesConfig
@@ -71,7 +71,7 @@ const rules = define.rs_generate_css ? [
         }
     ] : [
     {
-        test: /\.(s(a|c)ss)$/,
+        test: define.rs_regexp_styles,
         use: [
             {
                 loader: 'style-loader'

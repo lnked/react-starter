@@ -5,7 +5,7 @@ const define = require('../define');
 
 const rules = [
     {
-        test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)$/,
+        test: define.rs_regexp_medias,
         use: [
             {
                 loader: 'file-loader',

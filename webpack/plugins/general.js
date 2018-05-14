@@ -68,19 +68,23 @@ const plugins = [
     }),
 
     new CopyWebpackPlugin([
-        { from: 'assets/images', to: 'images', copyUnmodified: true, ignore: [ '.DS_Store' ] },
         {
             context: 'assets/misc',
             from: { glob: '**/*', dot: true },
             to: define.rs_dist,
-            copyUnmodified: true,
-            ignore: [
-                '.cache',
-                '.gitkeep',
-                '.DS_Store',
-            ]
+            force: true,
+            cache: true
         }
-    ])
+    ], {
+        ignore: [
+            '.cache',
+            '.gitkeep',
+            '.DS_Store',
+            '*.js',
+            '*.css'
+        ],
+        copyUnmodified: true
+    })
 ];
 
 module.exports.config = plugins;

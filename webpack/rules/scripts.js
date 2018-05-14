@@ -41,7 +41,7 @@ tsConfig.push(
 const rules = [
     {
         enforce: 'pre',
-        test: /\.(j|t)s[x]?$/,
+        test: define.rs_regexp_scripts,
         options: {
             fix: false
         },
@@ -58,7 +58,7 @@ const rules = [
         include: define.rs_root
     },
     {
-        test: /\.(j|t)s[x]?$/,
+        test: define.rs_regexp_scripts,
         exclude: /(node_modules|bower_components)/,
         use: 'happypack/loader'
     },
