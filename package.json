@@ -202,7 +202,7 @@
         "tslint-loader": "3.6.0",
         "tslint-react": "3.6.0",
         "typescript": "2.8.3",
-        "typescript-plugin-styled-components": "0.0.5",
+        "typescript-plugin-styled-components": "0.0.6",
         "typings-for-css-modules-loader": "1.7.0",
         "uglifyjs-webpack-plugin": "1.2.5",
         "uncss": "0.16.2",
