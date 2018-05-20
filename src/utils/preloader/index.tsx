@@ -35,15 +35,10 @@
 //     return <LoadableComponent />
 // }
 
-// // export default function PreLoader (InputComponent) {
-// //     return class extends React.Component {
-// //         componentWillReceiveProps(nextProps) {
-// //             console.log('Current props: ', this.props);
-// //             console.log('Next props: ', nextProps);
-// //         }
-
-// //         render() {
-// //             return <InputComponent {...this.props} />;
-// //         }
-// //     }
-// // }
+// export default function PreLoader (InputComponent) {
+//     return class extends React.Component {
+//         render() {
+//             return <InputComponent {...this.props} />;
+//         }
+//     }
+// }

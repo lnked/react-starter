@@ -15,7 +15,17 @@ export default class Sandwich extends React.PureComponent<T, S> {
     }
 
     state = {
-        isOpened: this.props.isOpened || false
+        isOpened: false
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (prevState.isOpened !== nextProps.isOpened) {
+            return {
+                isOpened: nextProps.isOpened
+            }
+        }
+
+        return null
     }
 
     handleChange = () => {

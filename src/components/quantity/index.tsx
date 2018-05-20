@@ -29,14 +29,18 @@ export default class Quantity extends React.Component<T, S> {
     }
 
     state = {
-        count: this.props.count || 0
+        count: 0
     }
 
-    // componentWillReceiveProps ({ nextProps }: any) {
-    //     if ((typeof nextProps.count !== 'undefined') && (nextProps.count !== this.state.count)) {
-    //         this.setState({count: nextProps.count})
-    //     }
-    // }
+    static getDerivedStateFromProps (nextProps, prevState) {
+        if (prevState.count !== nextProps.count) {
+            return {
+                ...prevState,
+                ...nextProps
+            }
+        }
+        return null
+    }
 
     // shouldComponentUpdate (nextProps) {
     //     console.log(nextProps.count, this.state.count)

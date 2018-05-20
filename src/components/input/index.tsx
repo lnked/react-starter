@@ -58,10 +58,14 @@ export default class Input extends React.Component<T, S> {
         // }
     }
 
-    componentWillReceiveProps (nextProps) {
-        if (nextProps.value !== this.state.value) {
-            this.setState({...this.state, value: nextProps.value})
+    static getDerivedStateFromProps (nextProps, prevState) {
+        if (prevState.value !== nextProps.value) {
+            return {
+                ...prevState,
+                ...nextProps
+            }
         }
+        return null
     }
 
     handleChange = (e) => {

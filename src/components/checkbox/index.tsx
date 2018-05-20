@@ -29,15 +29,18 @@ export default class Checkbox extends React.PureComponent<T, S> {
     }
 
     state = {
-        checked: this.props.checked || false
+        // checked: this.props.checked || false
+        checked: false
     }
 
-    componentWillReceiveProps (nextProps) {
-        if (this.props.checked !== nextProps.checked) {
-            this.setState({
+    static getDerivedStateFromProps (nextProps, prevState) {
+        if (prevState.checked !== nextProps.checked) {
+            return {
                 checked: nextProps.checked
-            })
+            }
         }
+
+        return null
     }
 
     handleChange = (e) => {

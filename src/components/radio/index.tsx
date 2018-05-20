@@ -27,7 +27,17 @@ export default class Radio extends React.PureComponent<T, S> {
     }
 
     state = {
-        checked: this.props.checked
+        checked: false
+    }
+
+    static getDerivedStateFromProps (nextProps, prevState) {
+        if (prevState.checked !== nextProps.checked) {
+            return {
+                checked: nextProps.checked
+            }
+        }
+
+        return null
     }
 
     handleChange = (e) => {
