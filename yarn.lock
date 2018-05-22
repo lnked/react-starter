@@ -3230,9 +3230,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000832"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000832.tgz#afe34c9f7c62139fd1c607db2ab7308bbb6a5158"
 
-caniuse-lite@1.0.30000843:
-  version "1.0.30000843"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000843.tgz#4fdec258dc641c385744cdd49d23c5459c3d4411"
+caniuse-lite@1.0.30000844:
+  version "1.0.30000844"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000844.tgz#de7c84cde0582143cf4f5abdf1b98e5a0539ad4a"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000823, caniuse-lite@^1.0.30000830, caniuse-lite@^1.0.30000832:
   version "1.0.30000832"
@@ -3915,9 +3915,9 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-cosmiconfig@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.0.2.tgz#03f8965ae4675317a0015b4a5a48a470d9baeada"
+cosmiconfig@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.0.4.tgz#fe4c1fccf8947ab30911760eace33784749eb51e"
   dependencies:
     is-directory "^0.3.1"
     js-yaml "^3.9.0"
@@ -11781,9 +11781,9 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recompose@0.27.0:
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.27.0.tgz#8230ebd651bf1159097006f79083fe224b1501cf"
+recompose@0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.27.1.tgz#1a49e931f183634516633bbb4f4edbfd3f38a7ba"
   dependencies:
     babel-runtime "^6.26.0"
     change-emitter "^0.1.2"
@@ -12608,9 +12608,9 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-signale@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/signale/-/signale-1.0.1.tgz#29c1a5e6b7943d42ed455130692eb75eb8b94851"
+signale@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/signale/-/signale-1.1.0.tgz#b2f6d20f09df83c07fe18a968260b628f9d3f0f8"
   dependencies:
     chalk "^2.3.2"
     figures "^2.0.0"
@@ -12634,15 +12634,15 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-size-limit@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.18.0.tgz#ed2f07cb66e5a209f1d873104b7f4a7a9f19efc7"
+size-limit@0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.18.1.tgz#9d1abc4ad936c37a94987cb5fc1c0eefa0e7d5b9"
   dependencies:
     bytes "^3.0.0"
     chalk "^2.4.1"
     ci-job-number "^0.3.0"
     compression-webpack-plugin "^1.1.11"
-    cosmiconfig "^5.0.2"
+    cosmiconfig "^5.0.4"
     css-loader "^0.28.11"
     escape-string-regexp "^1.0.5"
     file-loader "^1.1.11"
@@ -12652,7 +12652,7 @@ size-limit@0.18.0:
     read-pkg-up "^3.0.0"
     style-loader "^0.21.0"
     webpack "^4.1.1"
-    webpack-bundle-analyzer "^2.11.2"
+    webpack-bundle-analyzer "^2.13.0"
     yargs "^11.0.0"
 
 slash@^1.0.0:
@@ -14507,26 +14507,9 @@ webpack-addons@^1.1.5:
   dependencies:
     jscodeshift "^0.4.0"
 
-webpack-bundle-analyzer@2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.12.0.tgz#abb8ed9053123dabeb03a0463db52706f54730c7"
-  dependencies:
-    acorn "^5.3.0"
-    bfj-node4 "^5.2.0"
-    chalk "^2.3.0"
-    commander "^2.13.0"
-    ejs "^2.5.7"
-    express "^4.16.2"
-    filesize "^3.5.11"
-    gzip-size "^4.1.0"
-    lodash "^4.17.4"
-    mkdirp "^0.5.1"
-    opener "^1.4.3"
-    ws "^4.0.0"
-
-webpack-bundle-analyzer@^2.11.2:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.11.2.tgz#5ae05bfccffb16683977237bf319323653e44f9f"
+webpack-bundle-analyzer@2.13.0, webpack-bundle-analyzer@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.13.0.tgz#8d7db44c3d4844bc911890998e1110514cf12264"
   dependencies:
     acorn "^5.3.0"
     bfj-node4 "^5.2.0"
