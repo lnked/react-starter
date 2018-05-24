@@ -43,7 +43,7 @@
     "size-limit": [
         {
             "path": [
-                "dist/assets/**/*.*"
+                "dist/**/*.*"
             ],
             "limit": "500 KB",
             "webpack": false

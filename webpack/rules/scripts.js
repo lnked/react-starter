@@ -20,8 +20,7 @@ useConfig.push(
         loader: 'babel-loader',
         options: {
             babelrc: true,
-            // cacheDirectory: define.rs_development
-            cacheDirectory: define.rs_dist
+            cacheDirectory: define.rs_development
         }
     }
 );
