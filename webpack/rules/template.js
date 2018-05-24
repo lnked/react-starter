@@ -7,7 +7,12 @@ const rules = [
     {
         test: /\.pug$/,
         use: [
-            'pug-loader'
+            {
+                loader: 'pug-loader',
+                options: {
+                    pretty: define.rs_development
+                }
+            }
         ],
         include: define.rs_root
     }

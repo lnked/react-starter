@@ -22,7 +22,7 @@ module.exports = {
 
     output: {
         path: define.rs_development
-            ? define.rs_dist
+            ? resolve(define.rs_dist, 'assets')
             : resolve(define.rs_dist, 'assets'),
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
