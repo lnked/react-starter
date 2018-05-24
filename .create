@@ -68,29 +68,9 @@ cd ./$FOLDER_NAME
 #
 echo "Копирование файлов";
 
-mkdir webpack
-
-cp -r ${SOURCE}/webpack/entry-point.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-
-ln -s ${SOURCE}/webpack/config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/dev.config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/build.config.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/minimizer.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/optimization.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/define.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/helpers.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/plugins.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/postcss.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/prebuild.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/rules.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/stats.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/svgo.js ${PATH_ROOT}/$FOLDER_NAME/webpack
-
-ln -s ${SOURCE}/webpack/rules ${PATH_ROOT}/$FOLDER_NAME/webpack
-ln -s ${SOURCE}/webpack/plugins ${PATH_ROOT}/$FOLDER_NAME/webpack
-
 ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
 
+cp -r ${SOURCE}/webpack ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/src ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/typings ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/typings.json ${PATH_ROOT}/$FOLDER_NAME
