@@ -1,40 +1,21 @@
-// import { CoreLayout } from 'layouts'
+// Containers
+import {
+    NoMatch,
+    MainPage,
+    ChangelogPage
+} from 'containers'
 
-// const routes: any = []
-
-// function errorLoading (err) {
-//     console.error('Dynamic page loading failed', err)
-// }
-
-// function loadRoute (cb) {
-//     return (module) => cb(null, module.default)
-// }
-
-// export default {
-//     component: CoreLayout,
-//     childRoutes: [
-//         {
-//             path: '/',
-//             getComponent (location, cb) {
-//                 console.log(location)
-//                 System.import('pages/Home').then(loadRoute(cb)).catch(errorLoading)
-//             }
-//         },
-//         {
-//             path: 'blog',
-//             getComponent (location, cb) {
-//                 console.log(location)
-//                 System.import('pages/Blog').then(loadRoute(cb)).catch(errorLoading)
-//             }
-//         },
-//         {
-//             path: 'about',
-//             getComponent (location, cb) {
-//                 console.log(location)
-//                 System.import('pages/About').then(loadRoute(cb)).catch(errorLoading)
-//             }
-//         }
-//     ]
-// }
-
-// module.exports.config = routes
+export const routes: any = [
+    {
+        path: '/',
+        exact: true,
+        component: MainPage
+    }, {
+        path: '/changelog',
+        component: ChangelogPage
+    }, {
+        status: 404,
+        statusCode: 404,
+        component: NoMatch
+    }
+]

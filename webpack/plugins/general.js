@@ -3,7 +3,7 @@
 const { resolve } = require('path');
 
 const webpack = require('webpack');
-const define  = require('../define');
+const define = require('../define');
 const helpers = require('../helpers');
 const scripts = require('../rules/scripts')
 const environment = require('../environment').config;

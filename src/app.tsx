@@ -2,7 +2,9 @@ import * as React from 'react'
 
 import { hot } from 'react-hot-loader'
 
-import initState from './state'
+import { routes } from 'settings/routes'
+
+import initState from 'state'
 
 import {
     BrowserRouter as Router,
@@ -13,13 +15,6 @@ import {
 // Layouts
 import { CoreLayout } from 'layouts'
 
-// Containers
-import {
-    NoMatch,
-    MainPage,
-    ChangelogPage
-} from 'containers'
-
 // Segments
 import {
     Header
@@ -27,21 +22,6 @@ import {
 
 // Components
 import { Spinner } from 'components'
-
-const routes: any = [
-    {
-        path: '/',
-        exact: true,
-        component: MainPage
-    }, {
-        path: '/changelog',
-        component: ChangelogPage
-    }, {
-        status: 404,
-        statusCode: 404,
-        component: NoMatch
-    }
-]
 
 class App extends React.Component<{}, {}> {
     render () {

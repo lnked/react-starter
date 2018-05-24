@@ -1,6 +1,7 @@
 'use strict';
 
 const { resolve } = require('path');
+const { randomInteger } = require('./functions');
 
 const _distBase_ = 'dist';
 
@@ -18,26 +19,7 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = process.argv.includes('development') || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
-const _port_ = process.env.PORT || 3000;
-
-// const signale = require('signale');
-
-// signale.success('Operation successful');
-// signale.debug('Hello', 'from', 'L59');
-// signale.pending('Write release notes for 1.2.0');
-// signale.fatal(new Error('Unable to acquire lock'));
-// signale.watch('Recursively watching build directory...');
-// signale.complete({prefix: '[task]', message: 'Fix issue #59', suffix: '(@klauscfhq)'});
-
-// signale.time('test');
-// signale.time();
-// signale.time();
-
-// setTimeout(() => {
-//     signale.timeEnd();
-//     signale.timeEnd();
-//     signale.timeEnd('test');
-// }, 500);
+const _port_ = process.env.PORT || randomInteger(3000, 8000);
 
 module.exports = {
     rs_host: _host_,
@@ -62,8 +44,6 @@ module.exports = {
     rs_regexp_images: /\.(bmp|gif|jpe?g|png|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isDevelopment
-                    ? ''
-                    : '',
+    rs_output_path: '',
     rs_environment: isProduction ? 'production' : 'development'
 }

@@ -21,9 +21,7 @@ module.exports = {
     entry: entryPoint.config,
 
     output: {
-        path: define.rs_development
-            ? resolve(define.rs_dist, 'assets')
-            : resolve(define.rs_dist, 'assets'),
+        path: resolve(define.rs_dist, 'assets'),
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
@@ -44,6 +42,7 @@ module.exports = {
             src: define.rs_root,
             hocs: resolve(define.rs_root, 'hocs'),
             utils: resolve(define.rs_root, 'utils'),
+            state: resolve(define.rs_root, 'state'),
             typings: resolve(define.rs_root, 'typings'),
             assets: resolve(define.rs_root, 'assets'),
             config: resolve(define.rs_root, 'config'),
