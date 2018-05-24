@@ -7,6 +7,13 @@ interface T {
     children?: string | React.ReactChild | React.ReactNode | any[];
 }
 
+const isActive = (match, location) => {
+    if (!match) {
+        return false
+    }
+    return location.pathname === match.path
+}
+
 export default class Header extends React.Component<T, {}> {
     render () {
         const { children } = this.props
@@ -20,7 +27,8 @@ export default class Header extends React.Component<T, {}> {
                             Main page
                         </NavLink>
 
-                        <NavLink to="/changelog" className={css.link} activeClassName={css.active}>
+                        <NavLink to="/changelog" isActive={isActive}
+                            className={css.link} activeClassName={css.active}>
                             Another page
                         </NavLink>
 
