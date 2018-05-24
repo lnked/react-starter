@@ -56,7 +56,7 @@
                 "src/*"
             ],
             "tslib": [
-                "../../node_modules/tslib/tslib.d.ts"
+                "node_modules/tslib/tslib.d.ts"
             ],
             "hocs": [
                 "src/hocs"
