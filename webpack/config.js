@@ -21,7 +21,9 @@ module.exports = {
     entry: entryPoint.config,
 
     output: {
-        path: resolve(define.rs_dist, 'assets'),
+        path: define.rs_development
+            ? resolve(define.rs_dist)
+            : resolve(define.rs_dist, 'assets'),
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
