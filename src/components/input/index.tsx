@@ -4,19 +4,19 @@ import * as css from './styles.scss'
 import { Icon } from 'components'
 
 interface T {
+    type?: 'text' | 'number' | 'email' | 'tel' | 'email' | 'hidden' | 'password';
     name: string;
     value?: string | number;
     children?: string | number;
-    type?: string;
     hint?: string;
     focus?: boolean;
     error?: string | boolean;
     cleaned?: boolean;
     className?: string | boolean;
     placeholder?: string;
+    multiline?: number | boolean;
     tabindex?: number | boolean;
     maxlength?: number | boolean;
-    multiline?: number | boolean;
     handleChange?: ((value: string) => void);
     status?: 'warn' | 'error' | 'valid' | 'normal';
     textControl?: React.ReactDOM
@@ -45,27 +45,28 @@ export default class Input extends React.Component<T, S> {
     }
 
     state = {
-        value: this.props.value || this.props.children || ''
+        value: ''
+        // value: this.props.value || this.props.children || ''
     }
 
     textControl: any = []
 
     prefix: string = Math.random().toString()
 
-    componentDidMount () {
-        // if (this.props.focus) {
-        //     this.textControl.focus()
-        // }
-    }
-
     static getDerivedStateFromProps (nextProps, prevState) {
-        if (prevState.value !== nextProps.value) {
+        if (prevState.value !== nextProps.value ||
+            prevState.children !== nextProps.children) {
             return {
-                ...prevState,
-                ...nextProps
+                value: nextProps.value || nextProps.children
             }
         }
         return null
+    }
+
+    componentDidMount () {
+        if (this.props.focus) {
+            this.textControl.focus()
+        }
     }
 
     handleChange = (e) => {

@@ -21,6 +21,7 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
+        "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node",
         "baseUrl": ".",
         "mapRoot": "./",
@@ -51,7 +52,12 @@
         ],
 
         "paths": {
-            "*": ["src/*"],
+            "*": [
+                "src/*"
+            ],
+            "tslib": [
+                "../../node_modules/tslib/tslib.d.ts"
+            ],
             "hocs": [
                 "src/hocs"
             ],
