@@ -20,7 +20,6 @@ export const auth = axios.create({
         'Accept': 'application/json',
         'Authorization': `Token ${token.get()}`,
         'Content-Type': 'application/json; charset=utf-8',
-        // 'Content-type': 'multipart/form-data',
         'Access-Control-Allow-Origin': '*',
     }
 })

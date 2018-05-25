@@ -1,4 +1,3 @@
-// Containers
 import {
     NoMatch,
     MainPage,

@@ -1,5 +1,5 @@
-// static get(action, params = {}) {
-//     return new Promise((resolve, reject) => {
+// export default get = (action, params = {}) => {
+//     return new Promise((resolve, reject) =>
 //         fetch(UrlHelper.apiUrl(action, params), {
 //             credentials: 'same-origin'
 //         })
@@ -7,7 +7,7 @@
 //             return Api.checkStatus(resolve, reject, response)
 //         })
 //         .then(([ ok, response ]) => {
-//             return ok ? resolve(response) : reject(response);
-//         });
-//     });
+//             return ok ? resolve(response) : reject(response)
+//         })
+//     )
 // }
