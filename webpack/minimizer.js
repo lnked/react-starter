@@ -11,7 +11,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     minimizer: [
-        new OptimizeCSSAssetsPlugin({}),
         new UglifyJsPlugin({
             cache: true,
             parallel: require('os').cpus().length,
@@ -43,6 +42,7 @@ module.exports = {
                     indent_level: 0
                 }
             }
-        })
+        }),
+        new OptimizeCSSAssetsPlugin({}),
     ]
 }

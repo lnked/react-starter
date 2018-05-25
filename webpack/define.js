@@ -21,20 +21,6 @@ const isDevelopment = process.argv.includes('development') || !isProduction;
 const _host_ = process.env.HOST || '0.0.0.0';
 const _port_ = process.env.PORT || randomInteger(3000, 8000);
 
-console.log(
-    JSON.stringify(process.env.GIT_COMMIT),
-    JSON.stringify(process.env.GIT_BRANCH)
-);
-
-// git rev-parse HEAD
-
-// new webpack.DefinePlugin({
-// 'process.env': {
-//     'GIT_COMMIT': JSON.stringify(process.env.GIT_COMMIT),
-//     'GIT_BRANCH': JSON.stringify(process.env.GIT_BRANCH)
-// }
-// })
-
 module.exports = {
     rs_host: _host_,
     rs_port: _port_,
