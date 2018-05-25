@@ -5,7 +5,8 @@
                 "node": "current",
                 "forceAllTransforms": true
             },
-            "debug": false,
+            "loose": true,
+            "modules": false,
             "useBuiltIns": false
         }],
         ["@babel/preset-stage-2", {
