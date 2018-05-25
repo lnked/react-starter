@@ -3,6 +3,7 @@
 /features.md
 /src/settings/routes.js
 /src/settings/fidebase.js
+/code-example
 /.env.production
 /.env.development
 
