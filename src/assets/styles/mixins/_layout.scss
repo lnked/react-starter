@@ -9,13 +9,13 @@
     position: relative;
     // outline: 1px solid #0FF;
 
-    @media (max-width: $max-desktop) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    @media (max-width: $max-tablet) {
+    @media (--tablet) {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    @media (--desktop) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

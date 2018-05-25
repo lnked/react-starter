@@ -9,7 +9,7 @@
     background-color: #fff;
     border: 1px solid $c-gainsboro;
 
-    @media (max-width: $max-tablet) {
+    @media (--tablet) {
         width: 42px;
         height: 38px;
     }
@@ -21,7 +21,7 @@
         transition: background-color .3s ease-in-out;
         margin-top: -1px;
 
-        @media (max-width: $max-tablet) {
+        @media (--tablet) {
             margin-top: -1px;
         }
 
@@ -33,7 +33,7 @@
             position: absolute;
             background-color: $c-cobalt;
 
-            @media (max-width: $max-tablet) {
+            @media (--tablet) {
                 width: 17px;
                 height: 1px;
             }

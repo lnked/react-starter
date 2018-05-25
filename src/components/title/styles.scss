@@ -11,7 +11,7 @@
     &_size--normal {
         font-size: 2.1rem;
 
-        @media (max-width: $max-tablet) {
+        @media (--tablet) {
             font-size: 1.6rem;
         }
     }
@@ -27,7 +27,7 @@
     &_size--big {
         font-size: 2.8rem;
 
-        @media (max-width: $max-tablet) {
+        @media (--tablet) {
             font-size: 2.1rem;
         }
     }
