@@ -1,13 +1,13 @@
 {
-    "name": "react-starter",
-    "version": "2.2.2",
+    "name": "awesome-react-starter",
+    "version": "2.2.3",
     "license": "MIT",
     "main": "index.js",
     "description": "React boilerplate, pwa, router",
     "scripts": {
         "clean": "rimraf dist",
         "svgstore": "rimraf .cache && webpack --config webpack/prebuild",
-        "publish": "npm version patch",
+        "publish": "npm version patch && npm publish",
         "prebuild": "yarn run clean",
         "predeploy": "yarn run clean",
         "preanalyze": "yarn run clean",
