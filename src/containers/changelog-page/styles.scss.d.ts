@@ -1,3 +1,4 @@
+true
 export const error: string;
 export const figure: string;
 export const figure__image: string;
