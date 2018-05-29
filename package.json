@@ -31,7 +31,8 @@
         "test-cover": "yarn run test --coverage",
         "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
         "size": "yarn size-limit",
-        "deploy": "webpack --config webpack/build.config --env deploy"
+        "deploy": "webpack --config webpack/build.config --env deploy",
+        "eject": ""
     },
     "keywords": [
         "react"
