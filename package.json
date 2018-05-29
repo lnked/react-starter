@@ -7,7 +7,8 @@
     "scripts": {
         "clean": "rimraf dist",
         "svgstore": "rimraf .cache && webpack --config webpack/prebuild",
-        "pub": "npm version patch && npm publish",
+        "prepub": "npm version patch",
+        "pub": "npm publish",
         "prebuild": "yarn run clean",
         "predeploy": "yarn run clean",
         "preanalyze": "yarn run clean",
