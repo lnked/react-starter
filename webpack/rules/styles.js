@@ -27,7 +27,7 @@ const usesConfig = [
             sourceMap: define.rs_development,
             importLoaders: 3,
             silent: true,
-            banner: true,
+            banner: false,
             modules: true,
             namedExport: true,
             camelCase: true,
