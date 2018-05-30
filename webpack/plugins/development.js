@@ -1,12 +1,14 @@
 'use strict';
 
+const define = require('../define');
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 const plugins = [
     new webpack.WatchIgnorePlugin([
         /css\.d\.ts$/,
-        /scss\.d\.ts$/
+        /scss\.d\.ts$/,
+        define.rs_node
     ]),
 
     new WebpackNotifierPlugin({ alwaysNotify: true }),

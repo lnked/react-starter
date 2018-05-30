@@ -5,6 +5,7 @@ const { resolve, dirname } = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const defaultConfig = require('./config');
+const proxy = require('./proxy');
 
 const stats = require('./stats');
 const define = require('./define');
@@ -28,7 +29,9 @@ module.exports = webpackMerge(defaultConfig, {
             errors: true,
             warnings: true
         },
-        compress: false,
+        // proxy: proxy.config,
+        progress: true,
+        compress: true,
         contentBase: define.rs_contentBase,
         watchContentBase: true,
         disableHostCheck: true,
@@ -36,8 +39,9 @@ module.exports = webpackMerge(defaultConfig, {
             disableDotRule: true
         },
         watchOptions: {
-            aggregateTimeout: 100,
-            poll: 300
+            aggregateTimeout: 300,
+            poll: 1000,
+            ignored: /node_modules/
         },
         stats: stats.config,
         port: define.rs_port,
