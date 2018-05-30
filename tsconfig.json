@@ -25,7 +25,7 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "mapRoot": "./",
-        "sourceRoot": "./",
+        "sourceRoot": "./src",
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
         "inlineSourceMap": false,
@@ -38,8 +38,8 @@
             "jest",
             "react",
             "enzyme",
-            "jest-styled-components",
-            "styled-components"
+            "styled-components",
+            "jest-styled-components"
         ],
         "typeRoots": [
             "typings",
@@ -50,7 +50,6 @@
             "dom",
             "es5"
         ],
-
         "paths": {
             "*": [
                 "src/*"
@@ -119,7 +118,6 @@
         "dist",
         "tests",
         "webpack",
-        "typings",
         "coverage",
         "node_modules",
         "**/node_modules/*"
