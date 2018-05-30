@@ -201,7 +201,7 @@
         "svgo-loader": "2.1.0",
         "sw-precache-webpack-plugin": "0.11.5",
         "ts-jest": "22.4.6",
-        "tslib": "1.9.1",
+        "tslib": "1.9.2",
         "tslint": "5.10.0",
         "tslint-loader": "3.6.0",
         "tslint-react": "3.6.0",
