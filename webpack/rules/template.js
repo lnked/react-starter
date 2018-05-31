@@ -15,6 +15,18 @@ const rules = [
             }
         ],
         include: define.rs_root
+    },
+    {
+        test: /\.html$/,
+        use: [
+            {
+                loader: 'prerender-loader',
+                options: {
+                    string: true
+                }
+            }
+        ],
+        include: define.rs_root
     }
 ];
 

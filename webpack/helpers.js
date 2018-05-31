@@ -8,6 +8,7 @@ const config = {
     hash: false,
     cache: define.rs_production,
     inject: true,
+    // compile: false,
     filetype: 'pug',
     prefetch: ['**/*.chunk.js'],
     preload: ['**/*.chunk.js'],
