@@ -12,6 +12,7 @@ const config = {
     filetype: 'pug',
     prefetch: ['**/*.chunk.js'],
     preload: ['**/*.chunk.js'],
+    chunksSortMode: 'dependency',
     production: define.rs_production,
     minify: define.rs_release && {
         caseSensitive: true,
