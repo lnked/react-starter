@@ -9,6 +9,10 @@ const rules = [
         use: ['raw-loader']
     },
     {
+        test: /\.md$/,
+        use: ['md-loader']
+    },
+    {
         test: /\.xml$/,
         use: [
             {

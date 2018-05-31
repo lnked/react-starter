@@ -3,3 +3,10 @@
     "db": "react-cms-641a6"
   }
 }
+
+{
+  "projects": {
+    "prod": "react-firebase-graphql",
+    "dev": "react-firebase-dev"
+  }
+}
