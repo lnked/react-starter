@@ -29,8 +29,8 @@ const usesConfig = [
             silent: true,
             banner: false,
             modules: true,
-            namedExport: true,
             camelCase: true,
+            namedExport: true,
             localIdentName: define.rs_release ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
         }
     },

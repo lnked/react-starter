@@ -6,6 +6,7 @@ export default function MainPage () {
 
     return (
         <div className={css.content}>
+            <div className={css.test55} />
             <h1 className={css.title}>Main Page</h1>
             <p className={css.description}>
                 Reference site about Lorem Ipsum, giving information on its origins.
