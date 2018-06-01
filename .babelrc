@@ -30,7 +30,15 @@
         "test": {
             "presets": [
                 "@babel/preset-env",
-                "@babel/preset-react"
+                "@babel/preset-react",
+                ["@babel/preset-stage-2", {
+                    "decoratorsLegacy": true
+                }]
+            ],
+            "plugins": ["transform-export-extensions"],
+            "only": [
+                "./**/*.js",
+                "node_modules/jest-runtime"
             ]
         },
         "development": {
