@@ -5,6 +5,7 @@
                 "node": "current",
                 "forceAllTransforms": true
             },
+            "loose": true,
             "debug": false,
             "useBuiltIns": false,
             "shippedProposals": true
@@ -18,14 +19,22 @@
     "plugins": [
         "dual-import",
         "transform-imports",
-        ["@babel/plugin-syntax-dynamic-import", {
-            "importCss": false
-        }],
+        "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-transform-react-jsx",
+        "react-loadable/babel",
         ["babel-plugin-styled-components", {
             "minify": false,
             "uglifyPure": false
+        }],
+        ["module-resolver", {
+            "root": ["./src"],
+            "alias": {
+                "react-loadable": "./src/index"
+            },
+            "extensions": [
+
+            ]
         }]
     ],
     "env": {

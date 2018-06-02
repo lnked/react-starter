@@ -26,9 +26,11 @@
 //     Checkbox
 // }
 
+import Icon from 'components/icon'
 import Spinner from 'components/spinner'
 
 export {
+    Icon,
     Spinner
 }
 

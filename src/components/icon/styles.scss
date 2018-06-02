@@ -1,0 +1,17 @@
+@import 'assets/styles/_global.scss';
+
+.icon {
+    fill: currentColor;
+    color: inherit;
+    line-height: 1;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    shape-rendering: geometricPrecision;
+    transition: color $a-micro-time $a-func;
+
+    &:not(:root) {
+        overflow: hidden;
+    }
+}
