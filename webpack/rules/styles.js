@@ -10,7 +10,8 @@ const cssConfig = [
         loader: 'css-loader',
         options: {
             module: true,
-            importLoaders: 1,
+            modules: true,
+            importLoaders: 2,
             sourceMap: define.rs_analyzer,
             modules: define.rs_production,
             minimize: define.rs_production,

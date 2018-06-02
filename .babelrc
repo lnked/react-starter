@@ -5,9 +5,9 @@
                 "node": "current",
                 "forceAllTransforms": true
             },
-            "loose": true,
-            "modules": false,
-            "useBuiltIns": false
+            "debug": false,
+            "useBuiltIns": false,
+            "shippedProposals": true
         }],
         ["@babel/preset-stage-2", {
             "decoratorsLegacy": true
@@ -18,7 +18,9 @@
     "plugins": [
         "dual-import",
         "transform-imports",
-        "@babel/plugin-syntax-dynamic-import",
+        ["@babel/plugin-syntax-dynamic-import", {
+            "importCss": false
+        }],
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-transform-react-jsx",
         ["babel-plugin-styled-components", {
@@ -30,15 +32,7 @@
         "test": {
             "presets": [
                 "@babel/preset-env",
-                "@babel/preset-react",
-                ["@babel/preset-stage-2", {
-                    "decoratorsLegacy": true
-                }]
-            ],
-            "plugins": ["transform-export-extensions"],
-            "only": [
-                "./**/*.js",
-                "node_modules/jest-runtime"
+                "@babel/preset-react"
             ]
         },
         "development": {

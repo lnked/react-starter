@@ -2,7 +2,8 @@
     "compilerOptions": {
         "jsx": "react",
         "target": "es5",
-        "module": "commonjs",
+        // "module": "commonjs",
+        "module": "esnext",
         "outDir": "dist",
         "allowJs": false,
         "sourceMap": true,
