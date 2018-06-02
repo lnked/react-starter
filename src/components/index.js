@@ -1,9 +1,7 @@
 // import Logo from 'components/logo'
 // import Radio from 'components/radio'
-// import Input from 'components/input'
 // import Title from 'components/title'
 // import Badge from 'components/badge'
-// import Button from 'components/button'
 // import Widget from 'components/widget'
 // import Loader from 'components/loader'
 // import Spinner from 'components/spinner'
@@ -14,7 +12,7 @@
 // export {
 //     Logo,
 //     Radio,
-//     Input,
+//
 //     Title,
 //     Badge,
 //     Button,
@@ -27,10 +25,14 @@
 // }
 
 import Icon from 'components/icon'
+import Input from 'components/input'
+import Button from 'components/button'
 import Spinner from 'components/spinner'
 
 export {
     Icon,
+    Input,
+    Button,
     Spinner
 }
 

@@ -48,7 +48,8 @@
             "plugins": [
                 "react-hot-loader/babel",
                 "@babel/plugin-syntax-class-properties",
-                "@babel/plugin-transform-react-display-name"
+                "@babel/plugin-transform-react-display-name",
+                "transform-react-remove-prop-types"
             ],
             "sourceMaps": true
         },

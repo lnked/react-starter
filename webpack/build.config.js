@@ -17,7 +17,7 @@ module.exports = webpackMerge(defaultConfig, {
 
     devtool: 'source-map',
 
-    bail: define.rs_production,
+    bail: true,
 
     stats: stats.config,
 

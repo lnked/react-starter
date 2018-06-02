@@ -6,7 +6,6 @@
         "target": "esnext",
         "module": "esnext",
         "outDir": "dist",
-        "noEmit": true,
         "allowJs": true,
         "sourceMap": true,
         "declaration": false,

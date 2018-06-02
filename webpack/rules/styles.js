@@ -9,11 +9,9 @@ const cssConfig = [
     {
         loader: 'css-loader',
         options: {
-            module: true,
-            modules: true,
-            importLoaders: 2,
-            sourceMap: define.rs_analyzer,
+            importLoaders: 1,
             modules: define.rs_production,
+            sourceMap: define.rs_analyzer,
             minimize: define.rs_production,
             discardComments: { removeAll: true },
             localIdentName: '[local]'

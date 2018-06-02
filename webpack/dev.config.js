@@ -15,11 +15,17 @@ module.exports = webpackMerge(defaultConfig, {
 
     devtool: 'cheap-module-inline-source-map',
 
-    watch: define.rs_development,
+    watch: true,
 
-    cache: define.rs_development,
+    cache: true,
 
     optimization: {},
+
+    node: {
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    },
 
     devServer: {
         hot: true,

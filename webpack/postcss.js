@@ -16,7 +16,10 @@ postcss.push(
     require('postcss-short-spacing'),
     require('postcss-simple-vars'),
     require('postcss-mixins'),
+    require('postcss-nesting'),
     require('postcss-nested'),
+    require('postcss-selector-matches'),
+    require('postcss-custom-properties'),
     require('postcss-custom-selectors'),
     require('postcss-custom-media'),
     require('postcss-media-minmax'),
@@ -25,6 +28,7 @@ postcss.push(
     require('postcss-position'),
     require('postcss-mq-keyframes'),
     require('postcss-quantity-queries'),
+    require('pleeease-filters'),
     require("postcss-cssnext")({
         autoprefixer: false,
         warnForDuplicates: false
@@ -61,7 +65,9 @@ if (define.rs_production) {
             colormin: true
         }),
         require('postcss-flexbugs-fixes'),
-        require('autoprefixer')
+        require('autoprefixer')({
+            flexbox: 'no-2009'
+        })
     );
 }
 

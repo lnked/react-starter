@@ -26,8 +26,12 @@ module.exports = {
             : resolve(define.rs_dist, 'assets'),
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
-        filename: define.rs_production ? 'js/[name].[chunkhash:5].js' : '[name].js',
-        chunkFilename: define.rs_production ? 'js/[name].[chunkhash:5].chunk.js' : '[name].chunk.js',
+        filename: define.rs_production
+                    ? 'js/[name].[chunkhash:5].js'
+                    : '[name].js',
+        chunkFilename: define.rs_production
+                    ? 'js/[name].[chunkhash:5].chunk.js'
+                    : '[name].chunk.js',
         jsonpFunction: 'WJ',
         hotUpdateFunction: 'UF'
     },
@@ -66,7 +70,7 @@ module.exports = {
 
     module: {
         unsafeCache: define.rs_development,
-        strictExportPresence: define.rs_development,
+        strictExportPresence: true,
 
         rules: rules.config,
         noParse: [

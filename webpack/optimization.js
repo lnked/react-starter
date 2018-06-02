@@ -30,7 +30,7 @@ module.exports = {
                 test: /[\\/]node_modules[\\/]/,
                 name: 'vendors',
                 minChunks: 2,
-                chunks: 'all',
+                chunks: 'initial',
                 enforce: true,
                 reuseExistingChunk: false
             },

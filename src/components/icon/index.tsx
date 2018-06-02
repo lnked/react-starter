@@ -2,9 +2,9 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 interface T {
-    symbol: string;
-    hidden: boolean;
-    className: string;
+    hidden?: boolean;
+    symbol?: string;
+    className?: string;
 }
 
 export default class Icon extends React.PureComponent<T, {}> {

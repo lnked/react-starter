@@ -2490,6 +2490,10 @@ babel-plugin-transform-react-pure-class-to-function@1.0.1:
   dependencies:
     babel-helper-is-react-class "^1.0.0"
 
+babel-plugin-transform-react-remove-prop-types@0.4.13:
+  version "0.4.13"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.13.tgz#331cfc05099a808238311d78319c27460d481189"
+
 babel-plugin-transform-regenerator@^6.24.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-regenerator/-/babel-plugin-transform-regenerator-6.26.0.tgz#e0703696fbde27f0a3efcacf8b4dca2f7b3a8f2f"
@@ -10533,7 +10537,7 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-pleeease-filters@^4.0.0:
+pleeease-filters@4.0.0, pleeease-filters@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/pleeease-filters/-/pleeease-filters-4.0.0.tgz#6632b2fb05648d2758d865384fbced79e1ccaec7"
   dependencies:
@@ -10756,16 +10760,16 @@ postcss-custom-media@6.0.0, postcss-custom-media@^6.0.0:
   dependencies:
     postcss "^6.0.1"
 
-postcss-custom-properties@^6.1.0:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-6.3.1.tgz#5c52abde313d7ec9368c4abf67d27a656cba8b39"
+postcss-custom-properties@7.0.0, postcss-custom-properties@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-7.0.0.tgz#24dc4fbe6d6ed550ea4fd3b11204660e9ffa3b33"
   dependencies:
     balanced-match "^1.0.0"
     postcss "^6.0.18"
 
-postcss-custom-properties@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-7.0.0.tgz#24dc4fbe6d6ed550ea4fd3b11204660e9ffa3b33"
+postcss-custom-properties@^6.1.0:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-6.3.1.tgz#5c52abde313d7ec9368c4abf67d27a656cba8b39"
   dependencies:
     balanced-match "^1.0.0"
     postcss "^6.0.18"
@@ -11071,6 +11075,12 @@ postcss-nested@3.0.0, postcss-nested@^3.0.0:
     postcss "^6.0.14"
     postcss-selector-parser "^3.1.1"
 
+postcss-nesting@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-5.0.0.tgz#973e3a7dc6426543affc0b0beb367c3b2a8d9923"
+  dependencies:
+    postcss "^6.0.21"
+
 postcss-nesting@^4.0.1, postcss-nesting@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-4.2.1.tgz#0483bce338b3f0828ced90ff530b29b98b00300d"
@@ -11230,7 +11240,7 @@ postcss-scss@^1.0.2:
   dependencies:
     postcss "^6.0.21"
 
-postcss-selector-matches@^3.0.0, postcss-selector-matches@^3.0.1:
+postcss-selector-matches@3.0.1, postcss-selector-matches@^3.0.0, postcss-selector-matches@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/postcss-selector-matches/-/postcss-selector-matches-3.0.1.tgz#e5634011e13950881861bbdd58c2d0111ffc96ab"
   dependencies:

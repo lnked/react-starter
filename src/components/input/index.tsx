@@ -120,7 +120,7 @@ export default class Input extends React.Component<T, S> {
 
         cn.push(css.control)
 
-        if (typeof(className) === 'string') {
+        if (typeof (className) === 'string') {
             cn.push(className)
         }
 
@@ -162,7 +162,7 @@ export default class Input extends React.Component<T, S> {
                     ? <button type="button"
                         className={css.clear}
                         onClick={this.handleClear}
-                        key={[this.prefix, 'clear'].join('.')}><Icon symbol="close" hidden={true} /></button>
+                        key={[this.prefix, 'clear'].join('.')}><Icon symbol="close" hidden /></button>
                     : ''
                 }
             </label>
