@@ -13,7 +13,7 @@ const define = require('./define');
 module.exports = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
-    devtool: 'cheap-module-inline-source-map',
+    devtool: 'cheap-module-source-map',
 
     watch: true,
 
