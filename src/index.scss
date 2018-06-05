@@ -1,8 +1,11 @@
+@import 'assets/styles/_root.scss';
+@import 'assets/styles/_global.scss';
+
+/* Fonts */
+@import 'assets/styles/_fonts.scss';
+
 /* Vendors */
 @import 'assets/styles/_reset.scss';
-
-/* @import 'assets/styles/_fonts.scss'; */
-@import 'assets/styles/_global.scss';
 
 /* Base style sheets */
 @import 'assets/styles/_base.scss';
