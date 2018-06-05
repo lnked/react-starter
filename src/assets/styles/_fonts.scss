@@ -11,3 +11,13 @@
     font-style: normal;
 }
 */
+
+@font-face {
+	font-family: 'PTRoubleSans';
+	src: url('assets/fonts/Ruble/PTRoubleSans.eot');
+	src: url('assets/fonts/Ruble/PTRoubleSans.woff2') format('woff2'),
+		 url('assets/fonts/Ruble/PTRoubleSans.woff') format('woff'),
+		 url('assets/fonts/Ruble/PTRoubleSans.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
