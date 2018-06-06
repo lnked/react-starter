@@ -35,12 +35,12 @@ input,
 button,
 select,
 textarea {
+    text-align: left;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     font-feature-settings: 'liga', 'kern';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: left;
 }
 
 svg {

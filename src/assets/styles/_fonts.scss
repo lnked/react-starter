@@ -1,17 +1,3 @@
-/*
-@font-face {
-    font-family: 'Darkenstone';
-    src: url(./Darkenstone.eot);
-    src: url(./Darkenstone.eot?#iefix') format('embedded-opentype'),
-         url(./Darkenstone.woff2') format('woff2'),
-         url(./Darkenstone.woff') format('woff'),
-         url(./Darkenstone.ttf') format('truetype'),
-         url(./Darkenstone.svg#Darkenstone') format('svg);
-    font-weight: normal;
-    font-style: normal;
-}
-*/
-
 @font-face {
 	font-family: 'PTRoubleSans';
 	src: url('assets/fonts/Ruble/PTRoubleSans.eot');
@@ -21,3 +7,24 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+    font-family: 'BLOKK';
+    src: url('assets/fonts/BLOKKNeue/Regular.eot');
+    src: url('assets/fonts/BLOKKNeue/Regular.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/BLOKKNeue/Regular.woff2') format('woff2'),
+         url('assets/fonts/BLOKKNeue/Regular.woff') format('woff'),
+         url('assets/fonts/BLOKKNeue/Regular.otf') format('opentype'),
+         url('assets/fonts/BLOKKNeue/Regular.ttf') format('truetype'),
+         url('assets/fonts/BLOKKNeue/Regular.svg#BLOKKRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'BLOKK';
+        src: url('assets/fonts/BLOKKNeue/Regular.svg') format('svg');
+    }
+} */

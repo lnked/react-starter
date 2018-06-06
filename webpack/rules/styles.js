@@ -1,6 +1,5 @@
 'use strict';
 
-const { resolve } = require('path');
 const define = require('../define');
 const postcss = require('../postcss');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
