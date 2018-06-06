@@ -50,7 +50,7 @@ module.exports = webpackMerge(defaultConfig, {
             ignored: /node_modules/
         },
         stats: stats.config,
-        port: define.rs_port,
+        // port: define.rs_port,
         host: define.rs_host
     }
 });

@@ -57,6 +57,7 @@
     "rules": {
         "no-debugger": 1,
         "no-alert": 0,
+        "camelcase": 0,
         "no-lone-blocks": 0,
         "jsx-quotes": 1,
         "react/display-name": [
