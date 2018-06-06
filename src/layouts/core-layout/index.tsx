@@ -1,6 +1,13 @@
 import * as React from 'react'
 import * as css from './styles.scss'
-
+// import classNames from "classnames"
+// const collapsed = true
+// <div
+//     className={classNames({
+//         'menu': true,
+//         'active': collapsed
+//     })}
+// />
 import { SvgFixer } from 'utils'
 
 interface T {
