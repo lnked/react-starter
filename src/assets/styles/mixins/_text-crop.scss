@@ -1,9 +1,9 @@
 @mixin text-crop($line-height: 1.3, $top-adjustment: 0, $bottom-adjustment: 0) {
     // Configured in Step 1
-    $top-crop: 11;
-    $bottom-crop: 9;
+    $top-crop: 0;
+    $bottom-crop: 3;
     $crop-font-size: 36;
-    $crop-line-height: 1.2;
+    $crop-line-height: .8;
 
     // Apply values to calculate em-based margins that work with any font size
     $dynamic-top-crop: max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
@@ -28,6 +28,7 @@
         margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
     }
 }
+
 // Mixin generated at: http://text-crop.eightshapes.com/?typeface-selection=google-font&typeface=Source%20Sans%20Pro&custom-typeface-name=Helvetica&custom-typeface-url=&custom-typeface-weight=400&custom-typeface-style=normal&weight-and-style=300&size=36&line-height=1.2&top-crop=11&bottom-crop=9
 
 /* Usage Examples
