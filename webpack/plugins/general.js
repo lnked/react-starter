@@ -17,8 +17,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 const BowerWebpackPlugin = require("bower-webpack-plugin");
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const plugins = [
+    new ProgressBarPlugin(),
     new webpack.DefinePlugin({
         'process.env': Object.assign(formatter(environment, true), {
             'BROWSER': true,

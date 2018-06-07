@@ -22,14 +22,11 @@ const usesConfig = [
     {
         loader: "typings-for-css-modules-loader",
         options: {
-            sourceMap: define.rs_development,
-            importLoaders: 3,
-            silent: true,
-            banner: false,
+            // silent: true,
+            // banner: false,
             modules: true,
             camelCase: true,
-            namedExport: true,
-            localIdentName: define.rs_release ? '_[hash:5]' : '[path]-[name]---[local]---[hash:base64:4]'
+            namedExport: true
         }
     },
     {
@@ -44,7 +41,9 @@ const usesConfig = [
     {
         loader: 'sass-loader',
         options: {
+            expanded: true,
             sourceMap: define.rs_development,
+            sourceMapContents: true,
             includePaths: [ define.rs_root ]
         }
     }
