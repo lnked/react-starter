@@ -9,8 +9,8 @@ const rules = [
         use: {
             loader: "url-loader",
             options: {
-                // Limit at 50k. Above that it emits separate files
-                limit: 50000,
+                // Limit at 25k. Above that it emits separate files
+                limit: 25000,
                 // url-loader sets mimetype if it's passed.
                 // Without this it derives it from the file extension
                 mimetype: "application/font-woff",
