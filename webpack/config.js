@@ -10,9 +10,8 @@ const plugins = require('./plugins');
 
 const entryPoint = require('./entry-point');
 
+// process.noDeprecation = true;
 // process.traceDeprecation = true;
-
-process.noDeprecation = true;
 
 module.exports = {
 

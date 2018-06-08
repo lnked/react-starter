@@ -28,6 +28,7 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_sourceMap: !isRelease,
     rs_distBase: _distBase_,
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
     rs_deploy: isDeploy,

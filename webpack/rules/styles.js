@@ -10,7 +10,7 @@ const cssConfig = [
         options: {
             importLoaders: 1,
             modules: define.rs_production,
-            sourceMap: define.rs_analyzer,
+            sourceMap: define.rs_sourceMap,
             minimize: define.rs_production,
             discardComments: { removeAll: true },
             localIdentName: '[local]'
@@ -32,7 +32,7 @@ const usesConfig = [
     {
         loader: 'postcss-loader',
         options: {
-            sourceMap: define.rs_development,
+            sourceMap: define.rs_sourceMap,
             plugins: () => {
                 return postcss.plugins;
             }
@@ -42,8 +42,8 @@ const usesConfig = [
         loader: 'sass-loader',
         options: {
             expanded: true,
-            sourceMap: define.rs_development,
-            sourceMapContents: true,
+            sourceMap: define.rs_sourceMap,
+            sourceMapContents: define.rs_sourceMap,
             includePaths: [ define.rs_root ]
         }
     }
