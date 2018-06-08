@@ -39,7 +39,7 @@ const plugins = [
     }),
 
     // new PrepackWebpackPlugin({
-    //     sourceMaps: true,
+    //     sourceMaps: define.rs_sourceMap,
     //     inlineExpressions: true
     // }),
 

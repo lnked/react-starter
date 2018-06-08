@@ -14,7 +14,7 @@ module.exports = {
         new UglifyJsPlugin({
             cache: true,
             parallel: require('os').cpus().length,
-            sourceMap: !define.rs_release,
+            sourceMap: define.rs_sourceMap,
             uglifyOptions: {
                 ie8: false,
                 mangle: true,
