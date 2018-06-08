@@ -1105,6 +1105,12 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-select@1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-1.2.7.tgz#1ae033f42d2660550e39ae6f4380a78a9850e402"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "16.3.13"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.13.tgz#47d466462b774556c1174ea0eda22c0578643362"
@@ -9691,9 +9697,9 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-mobx-react@5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.2.1.tgz#ee4b245978b4b1aebaa83dc9398ae36adbef0d78"
+mobx-react@5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.2.2.tgz#63a84b093e9a4facdcc5869c03d7db6406890e67"
   dependencies:
     hoist-non-react-statics "^2.5.0"
     react-lifecycles-compat "^3.0.2"
