@@ -103,7 +103,7 @@
         "@types/uglify-js": "3.0.2",
         "@types/webpack-dev-server": "2.9.4",
         "@types/webpack-env": "1.13.6",
-        "autoprefixer": "8.6.1",
+        "autoprefixer": "8.6.2",
         "awesome-typescript-loader": "5.0.0",
         "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "8.2.3",
