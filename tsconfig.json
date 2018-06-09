@@ -121,6 +121,21 @@
         "node_modules",
         "**/node_modules/*"
     ],
+    "plugins": [
+        {
+            "name": "typescript-styled-plugin",
+            "validate": true,
+            "lint": {
+                "vendorPrefix": "error",
+                "zeroUnits": "ignore"
+            },
+            "tags": [
+                "styled",
+                "css",
+                "sty"
+            ]
+        }
+    ],
     "awesomeTypescriptLoaderOptions": {
         "useCache": true,
         "useBabel": true,

@@ -51,7 +51,8 @@
         "import/ignore": [
             ".coffee",
             ".css",
-            ".scss"
+            ".scss",
+            ".scss.d.ts"
         ]
     },
     "rules": {
@@ -70,6 +71,7 @@
         "immutable/no-let": 0,
         "immutable/no-this": 0,
         "immutable/no-mutation": 0,
+        "react/prop-types": 0,
         "react/jsx-boolean-value": 0,
         "react/jsx-closing-bracket-location": 0,
         "react/jsx-curly-spacing": 0,
