@@ -18,10 +18,10 @@
     ],
     "plugins": [
         "transform-imports",
+        "react-loadable/babel",
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-transform-react-jsx",
-        "react-loadable/babel",
         ["babel-plugin-styled-components", {
             "ssr": true,
             "minify": false,
