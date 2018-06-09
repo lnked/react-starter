@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import { hot } from 'react-hot-loader'
 
-// import { routes } from 'settings/routes'
+import { routes } from 'settings/routes'
 
 import initState from 'state'
 
@@ -13,30 +13,17 @@ import {
     Switch
 } from 'react-router-dom'
 
-import Loadable from 'react-loadable'
+// import Loadable from 'react-loadable'
 
 // Layouts
 import { CoreLayout } from 'layouts'
+
+import { Preloader } from 'utils'
 
 // Segments
 import {
     Header
 } from 'segments'
-
-// Components
-import { Spinner } from 'components'
-
-const Loading = () => <div>Loading...</div>
-
-const MainPage = Loadable({
-    loader: () => import(/* webpackChunkName: "MainPage" */ 'containers/main-page'),
-    loading: Loading
-})
-
-const ChangelogPage = Loadable({
-    loader: () => import(/* webpackChunkName: "ChangelogPage" */ 'containers/changelog-page'),
-    loading: Loading
-})
 
 class App extends React.Component<{}, {}> {
     render () {
@@ -48,12 +35,15 @@ class App extends React.Component<{}, {}> {
                 <CoreLayout>
                     <Header />
 
-                    <Spinner />
-
                     <Switch>
 
-                        <Route path="/" exact component={MainPage} />
-                        <Route path="/changelog" exact component={ChangelogPage} />
+                        {routes.map(({ resolve, ...rest }: any, key) => {
+                            const Component = Preloader({
+                                loader: resolve
+                            })
+
+                            return <Route {...rest} key={key} component={Component} />
+                        })}
 
                         {/*
                         {routes.map(({ component: Component, ...rest }: any, key) => (

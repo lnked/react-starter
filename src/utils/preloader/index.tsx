@@ -1,3 +1,19 @@
+import * as React from 'react'
+import Loadable from 'react-loadable'
+
+import { Spinner } from 'components'
+
+const Loading = () => <Spinner />
+
+export default function Preloader (opts) {
+    return Loadable({
+        loading: Loading,
+        delay: 200,
+        timeout: 10000,
+        ...opts
+    })
+}
+
 // import * as React from 'react'
 // import * as Loadable from 'react-loadable'
 

@@ -1,20 +1,23 @@
-import {
-    NoMatch,
-    MainPage,
-    ChangelogPage
-} from 'containers'
+// import {
+//     NoMatch,
+//     MainPage,
+//     ChangelogPage
+// } from 'containers'
 
 export const routes: any = [
     {
         path: '/',
         exact: true,
-        component: MainPage
+        resolve: () => import(/* webpackMode: "lazy" webpackChunkName: "MainPage" */ 'containers/main-page')
+        // component: MainPage
     }, {
         path: '/changelog',
-        component: ChangelogPage
+        resolve: () => import(/* webpackMode: "lazy" webpackChunkName: "ChangelogPage" */ 'containers/changelog-page')
+        // component: ChangelogPage
     }, {
         status: 404,
         statusCode: 404,
-        component: NoMatch
+        resolve: () => import(/* webpackMode: "lazy" webpackChunkName: "NoMatch" */ 'containers/nomatch')
+        // component: NoMatch
     }
 ]
