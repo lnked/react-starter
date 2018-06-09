@@ -3,7 +3,6 @@
     "version": "2.2.10",
     "license": "MIT",
     "main": "index.js",
-    "private": true,
     "description": "React boilerplate, pwa, router",
     "scripts": {
         "clean": "rimraf dist",
