@@ -12,7 +12,7 @@ interface T {
 }
 
 const Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: T) => {
-    console.log(error, loading, pastSpinnerDelay, timedOut, pastDelay)
+    console.log('Loading: ', error, loading, pastSpinnerDelay, timedOut, pastDelay)
 
     if (error) {
         return <div>Error!</div>

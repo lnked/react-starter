@@ -13,17 +13,12 @@ import {
     Switch
 } from 'react-router-dom'
 
-// import Loadable from 'react-loadable'
-
 // Layouts
 import { CoreLayout } from 'layouts'
 
 import { Preloader } from 'utils'
 
-// Segments
-import {
-    Header
-} from 'segments'
+import { Header } from 'segments'
 
 class App extends React.Component<{}, {}> {
     render () {
@@ -38,11 +33,13 @@ class App extends React.Component<{}, {}> {
                     <Switch>
 
                         {routes.map(({ resolve, ...rest }: any, key) => {
-                            const Component = Preloader({
-                                loader: resolve
-                            })
+                            if (resolve) {
+                                rest.component = Preloader({
+                                    loader: resolve
+                                })
+                            }
 
-                            return <Route {...rest} key={key} component={Component} />
+                            return <Route {...rest} key={key} />
                         })}
 
                         {/*
