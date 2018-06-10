@@ -33,3 +33,12 @@ export default function Preloader (opts) {
         ...opts
     })
 }
+
+// const getChunk = chunkName =>
+//     import(/*  webpackMode: "lazy", webpackChunkName: "[request]" */ `containers/${chunkName}`)
+
+// const AboutUs = props => <ComponentChunk componentProps={props} loadChunk={getChunk('about-us')} />
+
+// const ProfilePage = props => (
+//     <ComponentChunk componentProps={props} loadChunk={getChunk('profile')} />
+// )
