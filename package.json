@@ -121,7 +121,6 @@
         "caniuse-lite": "1.0.30000851",
         "compression-webpack-plugin": "1.1.11",
         "copy-webpack-plugin": "4.5.1",
-        "critters-webpack-plugin": "1.0.0",
         "css-loader": "0.28.11",
         "css-mqpacker": "6.0.2",
         "cssnano": "3.10.0",

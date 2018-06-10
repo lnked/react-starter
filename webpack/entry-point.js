@@ -10,7 +10,8 @@ const entryPoint = Object.assign({}, {
         'react',
         'react-dom',
         'react-router-dom',
-        'axios'
+        'axios',
+        'store'
 
         // 'mobx',
         // 'mobx-react',

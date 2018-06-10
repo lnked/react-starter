@@ -34,7 +34,7 @@ module.exports = {
     rs_deploy: isDeploy,
     rs_release: isRelease,
     rs_analyzer: isAnalyze,
-    rs_generate_css: false, // isProduction
+    rs_generate_css: true, // isProduction
     rs_contentBase: `./${_distBase_}`,
     rs_asset_name: isDevelopment
                     ? '[path][name].[ext]?[hash:5]'
