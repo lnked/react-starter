@@ -62,7 +62,7 @@
         "classnames": "2.2.6",
         "core-js": "2.5.7",
         "mobx": "5.0.0",
-        "mobx-react": "5.2.2",
+        "mobx-react": "5.2.3",
         "react": "16.4.0",
         "react-dom": "16.4.0",
         "react-loadable": "5.4.0",
