@@ -8,11 +8,18 @@ const define = require('../define');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
+const Critters = require('critters-webpack-plugin');
 
 const plugins = [
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
         fileName: "../webpack-manifest.json"
+    }),
+
+    new Critters({
+        fonts: false,
+        external: false,
+        preload : 'js-lazy'
     }),
 
     // new PrepackWebpackPlugin({
