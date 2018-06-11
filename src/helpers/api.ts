@@ -27,3 +27,10 @@ export const auth = axios.create({
 export const noauth = axios.create({
     baseURL: API_URL
 })
+
+// const setupAxios = token =>
+//   (Axios.defaults.headers = {
+//     Authorization: `Bearer ${token}`,
+//   });
+
+// export default setupAxios;
