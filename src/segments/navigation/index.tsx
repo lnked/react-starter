@@ -1,10 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import {
-    Link,
-    NavLink
-} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // import { isActive } from 'helpers/predicts'
 
@@ -21,11 +18,6 @@ export default class Navigation extends React.Component<{}, S> {
         this.setState({
             isOpened: !this.state.isOpened
         })
-
-    navbarItem = (item) =>
-        <li key={item.id}>
-            <Link to={item.url} className={css.link}>{item.title}</Link>
-        </li>
 
     render () {
         return (

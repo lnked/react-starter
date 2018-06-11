@@ -9,6 +9,7 @@ const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 const Critters = require('critters-webpack-plugin');
+const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -21,6 +22,20 @@ const plugins = [
         external: false,
         preload : 'js-lazy'
     }),
+
+    // new HtmlCriticalWebpackPlugin({
+    //     base: define.rs_dist,
+    //     src: 'index.html',
+    //     dest: 'index.html',
+    //     inline: true,
+    //     minify: true,
+    //     extract: true,
+    //     width: 375,
+    //     height: 565,
+    //     penthouse: {
+    //         blockJSRequests: false
+    //     }
+    // }),
 
     // new PrepackWebpackPlugin({
     //     sourceMaps: define.rs_sourceMap,
