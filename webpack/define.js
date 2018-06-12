@@ -28,6 +28,7 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_preact: false,
     rs_sourceMap: !isRelease,
     rs_distBase: _distBase_,
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
@@ -37,7 +38,7 @@ module.exports = {
     rs_generate_css: isRelease,
     rs_contentBase: `./${_distBase_}`,
     rs_asset_name: isDevelopment
-                    ? '[path][name].[ext]?[hash:5]'
+                    ? '[path][name].[ext]?[hash:4]'
                     : '[hash:4].[ext]',
     rs_regexp_scripts: /\.(j|t)s[x]?$/i,
     rs_regexp_medias: /\.(mp4|webm|wav|mp3|m4a|aac|oga)$/i,

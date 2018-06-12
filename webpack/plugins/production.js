@@ -5,10 +5,10 @@ const glob = require('glob');
 const webpack = require('webpack');
 const define = require('../define');
 
+const Critters = require('critters-webpack-plugin');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
-const Critters = require('critters-webpack-plugin');
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 
 const plugins = [
@@ -42,9 +42,9 @@ const plugins = [
     //     inlineExpressions: true
     // }),
 
-    new WebpackChunkHash(),
-
     new webpack.HashedModuleIdsPlugin(),
+
+    new WebpackChunkHash(),
 
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()

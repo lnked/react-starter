@@ -4,6 +4,7 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 
+const alias = require('./alias');
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
@@ -31,8 +32,8 @@ module.exports = {
                     ? 'js/[name].[chunkhash:3].js'
                     : '[name].js',
         chunkFilename: define.rs_production
-                    ? 'js/[name].[chunkhash:3].ch.js'
-                    : '[name].ch.js',
+                    ? 'js/[name].[chunkhash:3].c.js'
+                    : '[name].c.js',
         jsonpFunction: 'WJ',
         hotUpdateFunction: 'UF'
     },
@@ -45,24 +46,7 @@ module.exports = {
         enforceModuleExtension: false,
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.es', '.es6', '.mjs', '.scss', '.css', '.json'],
         descriptionFiles: ['package.json', 'bower.json'],
-        alias: {
-            src: define.rs_root,
-            hocs: resolve(define.rs_root, 'hocs'),
-            utils: resolve(define.rs_root, 'utils'),
-            state: resolve(define.rs_root, 'state'),
-            typings: resolve(define.rs_root, 'typings'),
-            assets: resolve(define.rs_root, 'assets'),
-            config: resolve(define.rs_root, 'config'),
-            helpers: resolve(define.rs_root, 'helpers'),
-            layouts: resolve(define.rs_root, 'layouts'),
-            segments: resolve(define.rs_root, 'segments'),
-            containers: resolve(define.rs_root, 'containers'),
-            components: resolve(define.rs_root, 'components'),
-            images: resolve(define.rs_root, 'assets/images'),
-            styles: resolve(define.rs_root, 'assets/styles'),
-            scripts: resolve(define.rs_root, 'assets/scripts'),
-            svgstore: resolve(define.rs_root, 'assets/svgstore')
-        }
+        alias: alias.config
     },
 
     resolveLoader: {
