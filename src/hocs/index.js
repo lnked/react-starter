@@ -1,7 +1,11 @@
-// import logProps from 'log-props'
-// import withHandlers from 'with-handlers'
+import logProps from 'hocs/log-props'
+import withRequest from 'hocs/with-request'
+import withHandlers from 'hocs/with-handlers'
+import DynamicImport from 'hocs/dynamic-import'
 
-// export {
-//     logProps,
-//     withHandlers
-// }
+export {
+    logProps,
+    withRequest,
+    withHandlers,
+    DynamicImport
+}

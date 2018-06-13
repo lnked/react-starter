@@ -27,12 +27,14 @@
 import Icon from 'components/icon'
 import Input from 'components/input'
 import Button from 'components/button'
+import Loading from 'components/loading'
 import Spinner from 'components/spinner'
 
 export {
     Icon,
     Input,
     Button,
+    Loading,
     Spinner
 }
 

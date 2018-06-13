@@ -1,7 +1,7 @@
-const token = {
-    set: (token) => localStorage.setItem('token', token),
-    get: () => localStorage.getItem('token'),
-    del: () => localStorage.removeItem('token')
-}
+import store from 'store2'
 
-export default token
+export const TOKEN = {
+    set: (token) => store.set('token', token),
+    get: () => store.get('token'),
+    del: () => store.remove('token')
+}
