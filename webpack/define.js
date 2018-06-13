@@ -19,7 +19,7 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = process.argv.includes('development') || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
-const _port_ = process.env.PORT || randomInteger(3000, 8000);
+const _port_ = process.env.PORT // || randomInteger(3000, 8000);
 
 module.exports = {
     rs_host: _host_,
