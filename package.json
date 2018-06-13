@@ -63,6 +63,7 @@
         "core-js": "2.5.7",
         "mobx": "5.0.2",
         "mobx-react": "5.2.3",
+        "mobx-react-router": "4.0.4",
         "preact": "8.2.9",
         "preact-compat": "3.18.0",
         "react": "16.4.0",
