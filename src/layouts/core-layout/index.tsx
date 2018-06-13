@@ -1,13 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
-// import classNames from "classnames"
-// const collapsed = true
-// <div
-//     className={classNames({
-//         'menu': true,
-//         'active': collapsed
-//     })}
-// />
+
+import classNames from 'classnames/bind'
+
 import { SvgFixer } from 'utils'
 
 interface T {
@@ -17,6 +12,8 @@ interface T {
 interface S {
     title: string;
 }
+
+const cx = classNames.bind(css)
 
 export default class CoreLayout extends React.Component<T, S> {
     static defaultProps = {
@@ -30,14 +27,24 @@ export default class CoreLayout extends React.Component<T, S> {
     componentDidMount () {
         document.title = this.state.title
 
+        this.fixScroll()
         SvgFixer()
     }
 
+    componentDidUpdate () {
+        this.fixScroll()
+    }
+
+    fixScroll = () =>
+        window.scrollTo(0, 0)
+
     render () {
+        const { children } = this.props
+
         return (
-            <div className={css.layout}>
-                <section className={css.main}>
-                    {this.props.children}
+            <div className={cx({ layout: true })}>
+                <section className={cx({ main: true })}>
+                    {children}
                 </section>
             </div>
         )

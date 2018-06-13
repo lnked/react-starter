@@ -5,8 +5,6 @@ import { hot } from 'react-hot-loader'
 
 import { routes } from 'settings/routes'
 
-import initState from 'state'
-
 import {
     BrowserRouter as Router,
     Route,
@@ -22,16 +20,12 @@ import { Header } from 'segments'
 
 class App extends React.Component<{}, {}> {
     render () {
-        console.log('initState: ', initState)
-        console.log('process.env: ', process.env)
-
         return (
             <Router>
                 <CoreLayout>
                     <Header />
 
                     <Switch>
-
                         {routes.map(({ resolve, ...rest }: any, key) => {
                             if (resolve) {
                                 rest.component = Preloader({
@@ -49,7 +43,6 @@ class App extends React.Component<{}, {}> {
                             } />
                         ))}
                         */}
-
                     </Switch>
                 </CoreLayout>
             </Router>
