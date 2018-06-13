@@ -63,7 +63,6 @@
         "core-js": "2.5.7",
         "mobx": "5.0.2",
         "mobx-react": "5.2.3",
-        "mobx-react-router": "4.0.4",
         "preact": "8.2.9",
         "preact-compat": "3.18.0",
         "react": "16.4.0",
@@ -71,7 +70,7 @@
         "react-loadable": "5.4.0",
         "react-router-dom": "4.3.1",
         "recompose": "0.27.1",
-        "store": "2.0.12",
+        "store2": "2.7.0",
         "styled-components": "3.3.2",
         "validator": "10.3.0"
     },
