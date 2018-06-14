@@ -26,6 +26,12 @@ module.exports = {
                 priority: -20,
                 reuseExistingChunk: true
             },
+            styles: {
+                name: 'styles',
+                test: /\.css$/,
+                chunks: 'all',
+                enforce: true
+            },
             commons: {
                 test: /[\\/]node_modules[\\/]/,
                 name: 'vendors',
