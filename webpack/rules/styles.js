@@ -4,56 +4,68 @@ const define = require('../define');
 const postcss = require('../postcss');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const minimizeCssOptions = {
+    discardComments: { removeAll: true }
+};
+
 const cssConfig = [
     {
         loader: 'css-loader',
         options: {
-            importLoaders: 1,
-            modules: define.rs_production,
+            importLoaders: 3,
+            modules: true,
             sourceMap: define.rs_sourceMap,
-            minimize: define.rs_production,
-            discardComments: { removeAll: true },
-            localIdentName: '[local]'
+            localIdentName: define.rs_development
+                ? '[path][name]__[local]--[hash:base64:5]'
+                : '[sha1:hash:hex:4]',
+            minimize: define.rs_development
+                ? false
+                : minimizeCssOptions
         }
     }
 ];
 
-const usesConfig = [
-    {
+const usesConfig = [];
+
+if (define.rs_development) {
+    usesConfig.push({
         loader: "typings-for-css-modules-loader",
         options: {
-            // silent: true,
-            // banner: false,
+            silent: true,
+            banner: false,
             modules: true,
             camelCase: true,
             namedExport: true
         }
-    },
-    {
-        loader: 'postcss-loader',
-        options: {
-            sourceMap: define.rs_sourceMap,
-            plugins: () => {
-                return postcss.plugins;
-            }
-        }
-    },
-    {
-        loader: 'sass-loader',
-        options: {
-            expanded: true,
-            sourceMap: define.rs_sourceMap,
-            sourceMapContents: define.rs_sourceMap,
-            includePaths: [ define.rs_root ]
+    })
+}
+
+usesConfig.push({
+    loader: 'postcss-loader',
+    options: {
+        sourceMap: define.rs_sourceMap,
+        plugins: () => {
+            return postcss.plugins;
         }
     }
-];
+});
+
+usesConfig.push({
+    loader: 'sass-loader',
+    options: {
+        expanded: true,
+        sourceMap: define.rs_sourceMap,
+        sourceMapContents: define.rs_sourceMap,
+        includePaths: [ define.rs_root ]
+    }
+});
 
 const rules = define.rs_generate_css ? [
         {
             test: define.rs_regexp_styles,
             use: [
                 MiniCssExtractPlugin.loader,
+                ...cssConfig,
                 ...usesConfig
             ],
             include: [
@@ -75,6 +87,7 @@ const rules = define.rs_generate_css ? [
             {
                 loader: 'style-loader'
             },
+            ...cssConfig,
             ...usesConfig
         ],
         include: [

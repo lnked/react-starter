@@ -101,6 +101,7 @@
         }
     },
     "files": [
+        "typings/*.d.ts",
         "typings/**/*.d.ts"
     ],
     "filesGlob": [

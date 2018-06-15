@@ -68,7 +68,7 @@ const rules = [
     },
     {
         test: /\.ts[x]?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: [/(node_modules|bower_components)/, /\.(spec|e2e)\.ts(x?)$/],
         use: tsConfig
     }
 ];
