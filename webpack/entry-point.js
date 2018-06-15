@@ -5,8 +5,8 @@ const { resolve } = require('path');
 
 const entryPoint = Object.assign({}, {
     vendors: [
-        'core-js/es6/map',
-        'core-js/es6/set',
+        // 'core-js/es6/map',
+        // 'core-js/es6/set',
         'react',
         'react-dom',
         'react-router-dom',

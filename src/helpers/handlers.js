@@ -26,3 +26,5 @@ export const formatDeclOfNum = (n, titles) => {
 export const declOfNum = (n, titles) => {
     return [n, formatDeclOfNum(n, titles)].join(' ')
 }
+
+export const trim = (str) => str.replace(/^\s+|\s+$/g, '')
