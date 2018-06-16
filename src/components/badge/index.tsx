@@ -1,6 +1,10 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import styled from 'styled-components'
+
+console.log(styled)
+
 interface T {
     title?: string;
     bolded?: boolean;
