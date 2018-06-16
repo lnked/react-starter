@@ -17,7 +17,7 @@ export default function NoMatch ({ location }: P) {
             <div className={css.figure}>
                 <img
                     src={require('images/logo.svg')}
-                    className={css.figure__image}
+                    className={css.figureImage}
                     alt="Error: 4xx"
                 />
             </div>

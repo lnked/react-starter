@@ -125,13 +125,13 @@ export default class Input extends React.Component<T, S> {
         }
 
         if (error) {
-            cn.push(css.control_error)
+            cn.push(css.controlError)
         }
 
         if (multiline) {
-            cn.push(css.control_textarea)
+            cn.push(css.controlTextarea)
         } else {
-            cn.push(css.control_input)
+            cn.push(css.controlInput)
         }
 
         props.spellCheck = false

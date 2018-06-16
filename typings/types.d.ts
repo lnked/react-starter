@@ -1,11 +1,27 @@
 declare module "json-loader!*";
-declare module "*.css";
 declare module "*.json";
+declare module '*.css' {
+    const content: any;
+    export default content;
+}
+
+declare module '*.scss' {
+    interface IClassNames {
+        [className: string]: string
+    }
+
+    const classNames: IClassNames
+
+    export = classNames
+}
 
 // shared folder
+declare module "containers/*";
 declare module "components/*";
-declare module "services/*";
+declare module "segments/*";
+declare module "helpers/*";
 declare module "utils/*";
+declare module "store/*";
 
 declare const CLIENT_ASSETS: string;
 declare module "react-loadable/webpack";

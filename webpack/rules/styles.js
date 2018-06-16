@@ -15,30 +15,36 @@ const cssConfig = [
             importLoaders: 3,
             modules: true,
             sourceMap: define.rs_sourceMap,
+            minimize: define.rs_production,
             localIdentName: define.rs_development
                 ? '[path][name]__[local]--[hash:base64:5]'
-                : '[sha1:hash:hex:4]',
-            minimize: define.rs_development
-                ? false
-                : minimizeCssOptions
+                : '[sha1:hash:hex:4]'
         }
     }
 ];
 
 const usesConfig = [];
 
-if (define.rs_development) {
-    usesConfig.push({
-        loader: "typings-for-css-modules-loader",
-        options: {
-            silent: true,
-            banner: false,
-            modules: true,
-            camelCase: true,
-            namedExport: true
-        }
-    })
-}
+// if (define.rs_development) {
+//     usesConfig.push({
+//         loader: "typings-for-css-modules-loader",
+//         options: {
+//             modules: true,
+//             camelCase: true,
+//             namedExport: true
+//         }
+//     });
+// }
+
+usesConfig.push({
+    loader: 'typed-css-modules-loader',
+    options: {
+        silent: true,
+        modules: true,
+        camelCase: true,
+        namedExport: true
+    }
+});
 
 usesConfig.push({
     loader: 'postcss-loader',

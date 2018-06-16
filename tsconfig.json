@@ -1,11 +1,12 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
         "target": "esnext",
         "module": "esnext",
         "outDir": "dist",
         "sourceMap": true,
-        "declaration": false,
+        "declaration": true,
         "removeComments": true,
         "importHelpers": true,
         "downlevelIteration": true,
@@ -16,6 +17,7 @@
         "noImplicitThis": false,
         "strictNullChecks": true,
         "alwaysStrict": true,
+        "stripInternal": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
@@ -141,9 +143,10 @@
         "useCache": true,
         "useBabel": true,
         "forkChecker": true,
-        "transpileOnly": false,
+        "transpileOnly": true,
         "useWebpackText": true,
         "errorsAsWarnings": true,
-        "useTranspileModule": true
+        "useTranspileModule": true,
+        "usePreviousLoaderGeneratedFiles": true
     }
 }
