@@ -1,15 +1,27 @@
 import * as React from 'react'
-import * as css from './styles.scss'
+// import * as css from './styles.scss'
 
-interface T {
+import styled from 'styled-components'
+
+interface P {
     title?: string;
     bolded?: boolean;
-    className?: string;
     variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
-    children?: string | React.ReactChild | React.ReactNode | any[];
+    children?: React.ReactChild;
+    className?: string;
 }
 
-export default class Badge extends React.PureComponent<T, {}> {
+const StyledBadge = styled.div`
+    padding: 3px;
+    font-size: 1.3rem;
+    line-height: 1;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: baseline;
+    font-weight: ${(p: P) => p.bolded === true ? 700 : 400};
+`
+
+export default class Badge extends React.PureComponent<P, {}> {
     static defaultProps = {
         title: '',
         bolded: false,
@@ -18,24 +30,26 @@ export default class Badge extends React.PureComponent<T, {}> {
     }
 
     render () {
-        const cn: Array<string> = []
+        // const cn: Array<string> = []
 
-        const { title, children, variant, bolded, className } = this.props
+        // const { title, children, variant, bolded, className } = this.props
+        const { title, children, bolded } = this.props
 
-        cn.push(css.badge)
+        // cn.push(css.badge)
 
-        cn.push(css[`${variant}`])
+        // cn.push(css[`${variant}`])
 
-        if (bolded) {
-            cn.push(css.bold)
-        }
+        // if (bolded) {
+        //     cn.push(css.bold)
+        // }
 
-        if (className) {
-            cn.push(className)
-        }
+        // if (className) {
+        //     cn.push(className)
+        // }
 
         return (
-            <div className={cn.join(' ')}>{ title || children }</div>
+            // <div className={cn.join(' ')}>{ title || children }</div>
+            <StyledBadge>{ title || children } - {bolded ? '1' : '0'}</StyledBadge>
         )
     }
 }

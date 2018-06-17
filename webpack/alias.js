@@ -8,6 +8,7 @@ const alias =  {
     hocs: resolve(define.rs_root, 'hocs'),
     utils: resolve(define.rs_root, 'utils'),
     store: resolve(define.rs_root, 'store'),
+    theme: resolve(define.rs_root, 'theme'),
     typings: resolve(define.rs_root, 'typings'),
     assets: resolve(define.rs_root, 'assets'),
     config: resolve(define.rs_root, 'config'),

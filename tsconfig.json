@@ -2,9 +2,13 @@
     "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "target": "esnext",
+        "target": "es5",
         "module": "esnext",
+        "baseUrl": ".",
         "outDir": "dist",
+        "rootDir": "src",
+        "mapRoot": "./",
+        "sourceRoot": "./src",
         "sourceMap": true,
         "declaration": true,
         "removeComments": true,
@@ -24,11 +28,9 @@
         "noFallthroughCasesInSwitch": true,
         "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node",
-        "baseUrl": ".",
-        "mapRoot": "./",
-        "sourceRoot": "./src",
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
         "inlineSourceMap": false,
         "inlineSources": false,
         "preserveConstEnums": true,
@@ -39,11 +41,10 @@
             "jest",
             "react",
             "enzyme",
-            "styled-components",
-            "jest-styled-components"
-        ],
-        "typeRoots": [
             "typings",
+            "src/typings",
+            "styled-components",
+            "jest-styled-components",
             "node_modules/@types"
         ],
         "lib": [
@@ -127,10 +128,11 @@
     "plugins": [
         {
             "name": "typescript-styled-plugin",
-            "validate": true,
+            "validate": false,
             "lint": {
                 "vendorPrefix": "error",
-                "zeroUnits": "ignore"
+                "zeroUnits": "ignore",
+                "important": "warning"
             },
             "tags": [
                 "styled",

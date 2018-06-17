@@ -9,7 +9,7 @@ interface T {
     variant?: 'pure' | 'link' | 'info' | 'danger' | 'normal' | 'primary' | 'success' | 'warning' | 'subtle-link';
     className?: string;
     isDisabled?: boolean;
-    children?: string | React.ReactChild | React.ReactNode | any[];
+    children?: React.ReactChild;
     handleClick?: () => void | boolean;
 }
 

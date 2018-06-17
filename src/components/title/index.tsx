@@ -6,7 +6,7 @@ interface T {
     type: 'primary' | 'secondary';
     label: string;
     className: string;
-    children: string | React.ReactChild | React.ReactNode | any[];
+    children?: React.ReactChild;
 }
 
 export default class Title extends React.Component<T, {}> {

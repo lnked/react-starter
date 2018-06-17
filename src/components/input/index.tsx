@@ -7,7 +7,7 @@ interface T {
     type?: 'text' | 'number' | 'email' | 'tel' | 'email' | 'hidden' | 'password';
     name: string;
     value?: string | number;
-    children?: string | number;
+    children?: React.ReactChild;
     hint?: string;
     focus?: boolean;
     error?: string | boolean;

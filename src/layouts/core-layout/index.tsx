@@ -6,7 +6,7 @@ import classNames from 'classnames/bind'
 import { SvgFixer } from 'utils'
 
 interface T {
-    children?: string | React.ReactChild | React.ReactNode | any[];
+    children?: React.ReactChild;
 }
 
 interface S {

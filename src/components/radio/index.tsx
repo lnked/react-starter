@@ -7,7 +7,7 @@ interface T {
     checked?: boolean;
     className?: string;
     value?: string | number;
-    children?: React.ReactChild | any[] | boolean;
+    children?: React.ReactChild;
     handleChange?: (value: number | string | boolean) => void | boolean;
 }
 

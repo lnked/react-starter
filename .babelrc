@@ -24,6 +24,7 @@
         ["babel-plugin-styled-components", {
             "ssr": true,
             "minify": false,
+            "preprocess": true,
             "uglifyPure": false,
             "displayName": false
         }]

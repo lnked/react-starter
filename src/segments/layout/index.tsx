@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 interface T {
     className?: string;
-    children?: string | React.ReactChild | React.ReactNode | any[];
+    children?: React.ReactChild;
 }
 
 export default class Layout extends React.Component<T, {}> {
