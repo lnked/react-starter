@@ -1,4 +1,8 @@
 module.exports.config = [
+    // "/subject": "http://localhost:3000",
+    // "/tag": "http://localhost:3000",
+    // "/book": "http://localhost:3000",
+    // "/static": "http://localhost:3000"
     // '/some/path': {
     //     target: 'https://other-server.example.com',
     //     secure: false,

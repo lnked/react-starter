@@ -41,7 +41,7 @@ usesConfig.push({
     options: {
         silent: true,
         modules: true,
-        camelCase: true,
+        camelCase: 'dashesOnly',
         namedExport: true
     }
 });

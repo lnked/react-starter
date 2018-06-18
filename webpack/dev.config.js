@@ -35,7 +35,7 @@ module.exports = webpackMerge(defaultConfig, {
             errors: true,
             warnings: true
         },
-        // proxy: proxy.config,
+        proxy: proxy.config,
         progress: false,
         compress: true,
         contentBase: define.rs_contentBase,
