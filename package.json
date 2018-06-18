@@ -62,7 +62,7 @@
         "axios": "0.18.0",
         "classnames": "2.2.6",
         "core-js": "2.5.7",
-        "mobx": "5.0.2",
+        "mobx": "5.0.3",
         "mobx-react": "5.2.3",
         "preact": "8.2.9",
         "preact-compat": "3.18.0",
