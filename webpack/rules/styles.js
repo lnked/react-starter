@@ -14,6 +14,7 @@ const cssConfig = [
         options: {
             importLoaders: 3,
             modules: true,
+            camelCase: true,
             sourceMap: define.rs_sourceMap,
             minimize: define.rs_production,
             localIdentName: define.rs_development
@@ -41,7 +42,7 @@ usesConfig.push({
     options: {
         silent: true,
         modules: true,
-        camelCase: 'dashesOnly',
+        camelCase: true,
         namedExport: true
     }
 });
