@@ -34,10 +34,8 @@ const plugins = [
         verbose: false
     }),
 
-    new webpack.ContextReplacementPlugin(
-        /moment[\/\\]locale$/,
-        /(en-gb|en|ru)/
-    ),
+    // /(en-gb|en|ru)/
+    new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/(ru)$/),
 
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
