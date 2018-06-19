@@ -16,7 +16,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
-const BowerWebpackPlugin = require("bower-webpack-plugin");
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const plugins = [
@@ -39,14 +38,6 @@ const plugins = [
         /moment[\/\\]locale$/,
         /(en-gb|en|ru)/
     ),
-
-    // new BowerWebpackPlugin({
-    //     modulesDirectories: ["bower_components"],
-    //     manifestFiles:      "bower.json",
-    //     includes:           /.*/,
-    //     excludes:           [],
-    //     searchResolveModulesDirectories: true
-    // }),
 
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,

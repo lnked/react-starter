@@ -1,10 +1,16 @@
 'use strict';
 
-const webpack = require('webpack');
-const BowerWebpackPlugin = require('bower-webpack-plugin');
+const define = require('../define');
+const BowerWebpackPlugin = require("bower-webpack-plugin");
 
 const plugins = [
-    new BowerWebpackPlugin({})
+    new BowerWebpackPlugin({
+        modulesDirectories: ["bower_components"],
+        manifestFiles:      "bower.json",
+        includes:           /.*/,
+        excludes:           [],
+        searchResolveModulesDirectories: true
+    })
 ];
 
 module.exports.config = plugins;
