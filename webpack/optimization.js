@@ -7,8 +7,8 @@ module.exports = {
     minimize: define.rs_production,
     concatenateModules: define.rs_production,
     noEmitOnErrors: true,
-    namedModules: false,
-    namedChunks: false,
+    namedModules: true,
+    namedChunks: true,
     runtimeChunk: {
         name: 'startup'
     },

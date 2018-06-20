@@ -1133,14 +1133,14 @@
   dependencies:
     jimp "*"
 
-"@types/jsdom@11.0.5":
-  version "11.0.5"
-  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-11.0.5.tgz#b12fffc73eb3731b218e9665a50f023b6b84b5cb"
+"@types/jsdom@11.0.6":
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-11.0.6.tgz#20d6e8c83f15fef0b40c39b3faebe8bc7587d86e"
   dependencies:
     "@types/events" "*"
     "@types/node" "*"
     "@types/tough-cookie" "*"
-    parse5 "^3.0.2"
+    parse5 "^4.0.0"
 
 "@types/lodash@^4.14.53":
   version "4.14.109"
@@ -1199,9 +1199,9 @@
   dependencies:
     csstype "^2.2.0"
 
-"@types/react@16.4.0":
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.0.tgz#f7f639837bf1f8635f57616b12a1b0d193b6343a"
+"@types/react@16.4.1":
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.1.tgz#c53bbfb4a78933db587da085ac60dbf5fcf73f8f"
   dependencies:
     csstype "^2.2.0"
 
@@ -11232,7 +11232,7 @@ parse5@4.0.0, parse5@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
-parse5@^3.0.1, parse5@^3.0.2:
+parse5@^3.0.1:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.3.tgz#042f792ffdd36851551cf4e9e066b3874ab45b5c"
   dependencies:
