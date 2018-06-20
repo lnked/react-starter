@@ -1165,6 +1165,12 @@
     "@types/node" "*"
     "@types/react" "*"
 
+"@types/react-input-mask@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/react-input-mask/-/react-input-mask-1.2.1.tgz#b256c6d9b667bf2e59f7bd21aa9e87dad62cf0e8"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-loadable@5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.4.0.tgz#7a4f0673de07473525ab27959cf4c2601e25f37f"
@@ -12886,6 +12892,13 @@ react-hot-loader@4.3.3:
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
+
+react-input-mask@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-2.0.2.tgz#1726b16315eeedcb005d97b4f76d3a03c3d69df8"
+  dependencies:
+    invariant "^2.2.4"
+    warning "^3.0.0"
 
 react-is@^16.3.1:
   version "16.4.0"
