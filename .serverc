@@ -1,0 +1,28 @@
+{
+    "hot": true,
+    "hmr": true,
+    "open": true,
+    "overlay": {
+        "errors": true,
+        "warnings": true
+    },
+    "port": 8080,
+    "host": "0.0.0.0",
+    "stats": {
+    "assets": true,
+    "children": false,
+    "chunks": false,
+    "hash": false,
+    "modules": false,
+    "publicPath": false,
+    "chunkGroups": true,
+    "timings": true,
+    "version": false,
+    "warnings": true,
+    "contentBase": "./dist",
+    "optimizationBailout": true,
+    "colors": {
+        "green": "\u001b[32m"
+    }
+    }
+}

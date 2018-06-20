@@ -7,13 +7,13 @@ module.exports = {
     minimize: define.rs_production,
     concatenateModules: define.rs_production,
     noEmitOnErrors: true,
-    namedModules: true,
-    namedChunks: true,
+    namedModules: false,
+    namedChunks: false,
     runtimeChunk: {
         name: 'startup'
     },
     splitChunks: {
-        name: true,
+        name: false,
         chunks: 'async',
         minChunks: 1,
         minSize: 30000,

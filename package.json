@@ -16,6 +16,7 @@
         "postdeploy": "gh-pages -d dist",
         "postrelease": "yarn run size",
         "serve": "webpack-dev-server --config webpack/dev.config --env development",
+        "serve-new": "webpack-serve --config webpack/dev.config.js --env development",
         "build": "webpack --config webpack/build.config --env assemply",
         "release": "webpack --config webpack/build.config --env release",
         "analyze": "webpack --config webpack/build.config --env analyze",
@@ -74,7 +75,7 @@
         "recompose": "0.27.1",
         "store2": "2.7.0",
         "styled-components": "3.3.2",
-        "validator": "10.3.0"
+        "validator": "10.4.0"
     },
     "devDependencies": {
         "@babel/cli": "7.0.0-beta.51",
@@ -243,6 +244,7 @@
         "webpack-chunk-hash": "0.6.0",
         "webpack-cli": "3.0.8",
         "webpack-dev-server": "3.1.4",
+        "webpack-hot-client": "4.0.3",
         "webpack-manifest-plugin": "2.0.3",
         "webpack-merge": "4.1.3",
         "webpack-notifier": "1.6.0",

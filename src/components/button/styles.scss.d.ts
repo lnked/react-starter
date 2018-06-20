@@ -1,6 +1,7 @@
 export const button: string;
 export const link: string;
 export const pure: string;
+export const subtleLink: string;
 export const wide: string;
 export const loader: string;
 export const small: string;

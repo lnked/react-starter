@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Spinner } from 'components'
 
 interface T {
-    error: Error | null;
+    error: any | null;
     pastSpinnerDelay: boolean;
     timedOut: boolean;
     loading: boolean;

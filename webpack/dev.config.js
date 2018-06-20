@@ -2,6 +2,9 @@
 
 const { resolve, dirname } = require('path');
 
+// .serverc
+// const serve = require('webpack-serve');
+
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const defaultConfig = require('./config');
@@ -10,7 +13,7 @@ const proxy = require('./proxy');
 const stats = require('./stats');
 const define = require('./define');
 
-module.exports = webpackMerge(defaultConfig, {
+const webpackConfig = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
     devtool: 'cheap-module-source-map',
@@ -35,7 +38,7 @@ module.exports = webpackMerge(defaultConfig, {
             errors: true,
             warnings: true
         },
-        proxy: proxy.config,
+        // proxy: proxy.config,
         progress: false,
         compress: true,
         contentBase: define.rs_contentBase,
@@ -54,3 +57,5 @@ module.exports = webpackMerge(defaultConfig, {
         host: define.rs_host
     }
 });
+
+module.exports = webpackConfig;

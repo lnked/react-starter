@@ -17,6 +17,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 
 const plugins = [
     new ProgressBarPlugin(),
@@ -36,6 +37,10 @@ const plugins = [
 
     // /(en-gb|en|ru)/
     new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/(ru)$/),
+
+    new ReactLoadablePlugin({
+        filename: './dist/react-loadable.json',
+    }),
 
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
