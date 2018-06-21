@@ -75,7 +75,7 @@
         "react-transition-group": "2.3.1",
         "recompose": "0.27.1",
         "store2": "2.7.0",
-        "styled-components": "3.3.2",
+        "styled-components": "3.3.3",
         "validator": "10.4.0"
     },
     "devDependencies": {
