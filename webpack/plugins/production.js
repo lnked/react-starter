@@ -20,7 +20,8 @@ const plugins = [
     new Critters({
         fonts: false,
         external: false,
-        preload : 'js-lazy'
+        preload : 'js-lazy',
+        preloadFonts: true
     }),
 
     // new HtmlCriticalWebpackPlugin({
