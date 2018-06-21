@@ -64,6 +64,7 @@ const rules = [
     {
         test: define.rs_regexp_scripts,
         exclude: /(node_modules|bower_components)/,
+        // use: useConfig
         use: 'happypack/loader'
     },
     {

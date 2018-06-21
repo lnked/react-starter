@@ -1,31 +1,28 @@
-import { ui } from 'store/ui'
-import { crop } from 'store/crop'
-import { actions } from 'store/actions'
-import { computed } from 'store/computed'
-import { declaration } from 'store/declaration'
+import UiState from 'store/ui'
+import AppState from 'store/app'
+import CropsState from 'store/crops'
+import OrdersState from 'store/orders'
+import BuyersState from 'store/buyers'
+import DeclarationsState from 'store/declarations'
 
-import {
-    observable,
-    configure,
-    // reaction,
-    // autorun,
-    action
-    // when
-} from 'mobx'
+import { configure } from 'mobx'
 
 configure({
     enforceActions: process.env.NODE_ENV !== 'production'
 })
 
-export const store = observable({
-    ...ui,
-    ...crop,
-    ...actions,
-    ...computed,
-    ...declaration
-}, {
-    SET_CROP: action,
-    SET_CROPS: action,
-    SET_VIEW_TYPE: action,
-    SET_DECLARATION: action
-})
+const ui = new UiState()
+const app = new AppState()
+const crops = new CropsState()
+const orders = new OrdersState()
+const buyers = new BuyersState()
+const declarations = new DeclarationsState()
+
+export {
+    ui,
+    app,
+    crops,
+    buyers,
+    orders,
+    declarations
+}

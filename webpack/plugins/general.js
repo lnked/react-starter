@@ -15,12 +15,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 
 const plugins = [
     new ProgressBarPlugin(),
+
     new webpack.DefinePlugin({
         'process.env': Object.assign(formatter(environment, true), {
             'BROWSER': true,
@@ -49,8 +49,6 @@ const plugins = [
     }),
 
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
-
-    new ResourceHintWebpackPlugin(),
 
     new MiniCssExtractPlugin({
         filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',

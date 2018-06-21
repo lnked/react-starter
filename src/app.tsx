@@ -11,7 +11,11 @@ import {
     Switch
 } from 'react-router-dom'
 
-// Layouts
+import { Provider } from 'mobx-react'
+
+import { ui, app } from 'store'
+
+Layouts
 import { CoreLayout } from 'layouts'
 
 import { Preloader } from 'utils'
@@ -21,31 +25,33 @@ import { Header } from 'segments'
 class App extends React.Component<{}, {}> {
     render () {
         return (
-            <Router>
-                <CoreLayout>
-                    <Header />
+            <Provider ui={ui} store={app}>
+                <Router>
+                    <CoreLayout>
+                        <Header />
 
-                    <Switch>
-                        {routes.map(({ resolve, ...rest }: any, key) => {
-                            if (resolve) {
-                                rest.component = Preloader({
-                                    loader: resolve
-                                })
-                            }
+                        <Switch>
+                            {routes.map(({ resolve, ...rest }: any, key) => {
+                                if (resolve) {
+                                    rest.component = Preloader({
+                                        loader: resolve
+                                    })
+                                }
 
-                            return <Route {...rest} key={key} />
-                        })}
+                                return <Route {...rest} key={key} />
+                            })}
 
-                        {/*
-                        {routes.map(({ component: Component, ...rest }: any, key) => (
-                            <Route {...rest} key={key} render={(props: any) =>
-                                <Component {...props} className={`fade fade-${status}`} />
-                            } />
-                        ))}
-                        */}
-                    </Switch>
-                </CoreLayout>
-            </Router>
+                            {/*
+                            {routes.map(({ component: Component, ...rest }: any, key) => (
+                                <Route {...rest} key={key} render={(props: any) =>
+                                    <Component {...props} className={`fade fade-${status}`} />
+                                } />
+                            ))}
+                            */}
+                        </Switch>
+                    </CoreLayout>
+                </Router>
+            </Provider>
         )
     }
 }
