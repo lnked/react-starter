@@ -12,14 +12,14 @@ import { withRequest } from 'hocs'
 
 import { prepareField } from 'helpers/handlers'
 
-interface P {
+export interface P {
     title: string;
     policy: boolean;
     post: ((url: string, data: any) => any);
     handleSuccess: ((phone: string, response: any) => any);
 }
 
-interface S {
+export interface S {
     phone: string;
 }
 

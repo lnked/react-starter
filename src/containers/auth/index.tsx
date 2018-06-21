@@ -17,11 +17,11 @@ import {
     Organization
 } from './steps'
 
-interface P {
+export interface P {
     match: any;
 }
 
-interface S {
+export interface S {
     phone: string;
     ActiveComponent: any | boolean;
 }

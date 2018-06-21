@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+export interface T {
     hidden?: boolean;
     symbol?: string;
     className?: string;

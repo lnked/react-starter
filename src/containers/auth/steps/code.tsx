@@ -11,7 +11,7 @@ import {
 
 import { withRequest } from 'hocs'
 
-interface P {
+export interface P {
     phone: string;
     title: string;
     button: string;
@@ -20,7 +20,7 @@ interface P {
     handleSuccess: ((phone: string, response: any) => any);
 }
 
-interface S {
+export interface S {
     code: number | string;
 }
 
