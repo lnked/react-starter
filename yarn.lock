@@ -2127,9 +2127,9 @@ autoprefixer@^8.0.0:
     postcss "^6.0.22"
     postcss-value-parser "^3.2.3"
 
-awesome-typescript-loader@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-5.1.1.tgz#8669c3d64d4c910e6df36b40c45cba6c0a926d57"
+awesome-typescript-loader@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-5.2.0.tgz#d7bccf4823c45096ec24da4c12a1507d276ba15a"
   dependencies:
     chalk "^2.4.1"
     enhanced-resolve "^4.0.0"
@@ -5443,17 +5443,21 @@ escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-airbnb-base@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-12.1.0.tgz#386441e54a12ccd957b0a92564a4bafebd747944"
+eslint-config-airbnb-base@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-13.0.0.tgz#2ee6279c4891128e49d6445b24aa13c2d1a21450"
   dependencies:
     eslint-restricted-globals "^0.1.1"
+    object.assign "^4.1.0"
+    object.entries "^1.0.4"
 
-eslint-config-airbnb@16.1.0:
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-16.1.0.tgz#2546bfb02cc9fe92284bf1723ccf2e87bc45ca46"
+eslint-config-airbnb@17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-17.0.0.tgz#1bb8c4255483320bb68c3b614f71ae6058b0b2db"
   dependencies:
-    eslint-config-airbnb-base "^12.1.0"
+    eslint-config-airbnb-base "^13.0.0"
+    object.assign "^4.1.0"
+    object.entries "^1.0.4"
 
 eslint-config-standard@11.0.0:
   version "11.0.0"
@@ -12349,6 +12353,14 @@ postcss@6.0.22, postcss@^6, postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcs
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
+postcss@6.0.23:
+  version "6.0.23"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
+  dependencies:
+    chalk "^2.4.1"
+    source-map "^0.6.1"
+    supports-color "^5.4.0"
+
 postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.16:
   version "5.2.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
@@ -15495,9 +15507,9 @@ ts-jest@22.4.6:
     source-map-support "^0.5.5"
     yargs "^11.0.0"
 
-tslib@1.9.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.2.tgz#8be0cc9a1f6dc7727c38deb16c2ebd1a2892988e"
+tslib@1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.0"
