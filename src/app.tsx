@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import * as React from 'react'
 
 import { hot } from 'react-hot-loader'
@@ -15,17 +14,20 @@ import { Provider } from 'mobx-react'
 
 import { ui, app } from 'store'
 
-Layouts
 import { CoreLayout } from 'layouts'
 
 import { Preloader } from 'utils'
 
 import { Header } from 'segments'
 
+const store = {
+    ui, app
+}
+
 class App extends React.Component<{}, {}> {
     render () {
         return (
-            <Provider ui={ui} store={app}>
+            <Provider {...store}>
                 <Router>
                     <CoreLayout>
                         <Header />
