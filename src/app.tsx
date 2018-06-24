@@ -12,7 +12,7 @@ import {
 
 import { Provider } from 'mobx-react'
 
-import { ui, app } from 'store'
+// import { ui, app } from 'store'
 
 import { CoreLayout } from 'layouts'
 
@@ -20,14 +20,15 @@ import { Preloader } from 'utils'
 
 import { Header } from 'segments'
 
-const store = {
-    ui, app
-}
+// const store = {
+//     ui, app
+// }
 
 class App extends React.Component<{}, {}> {
     render () {
         return (
-            <Provider {...store}>
+            // <Provider {...store}>
+            <Provider>
                 <Router>
                     <CoreLayout>
                         <Header />

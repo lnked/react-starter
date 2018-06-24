@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Icon } from 'components'
+// import { Icon } from 'components'
 
 export interface T {
     type?: 'text' | 'number' | 'email' | 'tel' | 'email' | 'hidden' | 'password';
@@ -162,9 +162,11 @@ export default class Input extends React.Component<T, S> {
                     ? <button type="button"
                         className={css.clear}
                         onClick={this.handleClear}
-                        key={[this.prefix, 'clear'].join('.')}><Icon symbol="close" hidden /></button>
+                        key={[this.prefix, 'clear'].join('.')} />
                     : ''
                 }
+                {/* <Icon symbol="close" hidden /> */}
+                {/* </button> */}
             </label>
         )
     }
