@@ -36,6 +36,12 @@ const rules = [
                     digest: 'hex',
                 },
             },
+            {
+                loader: 'webp-loader',
+                options: {
+                    quality: 85
+                }
+            },
         ],
         exclude: [
             resolve(define.rs_root, '/assets/fonts'),
@@ -67,7 +73,7 @@ const rules = [
         options: {
             bypassOnDebug: define.rs_development,
             mozjpeg: {
-                quality: 70,
+                quality: 85,
                 progressive: true
             },
             pngquant:{

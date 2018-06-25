@@ -4,6 +4,9 @@ import * as css from './styles.scss'
 export default function ChangelogPage () {
     document.title = 'Changelog Page'
 
+    // <img src={'images/cat.jpg'} alt=""/>
+    // <img src={require('images/dog.jpg')} alt=""/>
+
     return (
         <div className={css.content}>
             <h1 className={css.title}>Changelog Page</h1>

@@ -16323,6 +16323,14 @@ webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
+webp-loader@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/webp-loader/-/webp-loader-0.4.0.tgz#c51314ca1eee9f20902416a634e7e917068cf7c0"
+  dependencies:
+    imagemin "^5.3.1"
+    imagemin-webp "^4.1.0"
+    loader-utils "^1.1.0"
+
 webpack-bundle-analyzer@2.13.1, webpack-bundle-analyzer@^2.13.1:
   version "2.13.1"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.13.1.tgz#07d2176c6e86c3cdce4c23e56fae2a7b6b4ad526"
