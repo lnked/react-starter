@@ -5,97 +5,75 @@ const define = require('../define');
 const svgo = require('../svgo');
 
 const rules = [
-    {
-        test: define.rs_regexp_images,
-        oneOf: [
+	{
+		test: define.rs_regexp_images,
+		oneOf: [
             {
-                issuer: define.rs_regexp_styles,
-                oneOf: [
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
                     {
-                        test: /\.svg$/,
-                        loader: 'svg-url-loader',
+                        loader: 'file-loader',
                         options: {
                             name: define.rs_asset_name,
-                            limit: 4096,
-                        },
-                    },
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            name: define.rs_asset_name,
-                            limit: 4096,
-                        },
-                    },
-                ],
+                            hash: 'sha512',
+                            digest: 'hex'
+                        }
+                    }
+                ]
             },
             {
-                loader: 'file-loader',
+                test: define.rs_regexp_images,
+                loader: 'image-webpack-loader',
                 options: {
-                    name: define.rs_asset_name,
-                    hash: 'sha512',
-                    digest: 'hex',
+                    bypassOnDebug: define.rs_development,
+                    mozjpeg: {
+                        quality: 80,
+                        progressive: define.rs_release
+                    },
+                    pngquant: {
+                        quality: '65-90',
+                        speed: 4
+                    },
+                    gifsicle: {
+                        colors: 256,
+                        interlaced: false,
+                        optimizationLevel: 3
+                    },
+                    optipng: {
+                        enabled: define.rs_release,
+                        optimizationLevel: 7
+                    },
+                    webp: {
+                        enabled: define.rs_release,
+                        quality: 80
+                    },
+                    svgo: svgo.config
                 },
+                exclude: [ resolve(define.rs_root, '/assets/fonts'), resolve(define.rs_root, '/assets/svgstore') ]
             },
-            {
-                loader: 'webp-loader',
-                options: {
-                    quality: 85
-                }
-            },
-        ],
-        exclude: [
-            resolve(define.rs_root, '/assets/fonts'),
-            resolve(define.rs_root, '/assets/svgstore')
-        ]
-    },
-    {
-        test: /\.(png|jpe?g)$/,
-        loaders: [
-            {
-                loader: 'lqip-loader',
-                options: {
-                    name: define.rs_asset_name,
-                    base64: true,
-                    palette: false
-                }
-            },
-            {
-                loader: 'url-loader',
-                options: {
-                    limit: 8000
-                }
-            }
-        ]
-    },
-    {
-        enforce: 'pre',
-        test: define.rs_regexp_images,
-        options: {
-            bypassOnDebug: define.rs_development,
-            mozjpeg: {
-                quality: 85,
-                progressive: true
-            },
-            pngquant:{
-                quality: '65-90',
-                speed: 4
-            },
-            gifsicle: {
-                colors: 256,
-                interlaced: false,
-                optimizationLevel: 3
-            },
-            optipng: {
-                optimizationLevel: 7
-            },
-            svgo: svgo.config
-        },
-        loader: 'image-webpack-loader',
-        exclude: [
-            resolve(define.rs_root, '/assets/fonts'),
-            resolve(define.rs_root, '/assets/svgstore')
-        ]
-    }
+			{
+				issuer: define.rs_regexp_styles,
+				oneOf: [
+					{
+						test: /\.svg$/,
+						loader: 'svg-url-loader',
+						options: {
+							name: define.rs_asset_name,
+							limit: 4096
+						}
+					},
+					{
+						loader: 'url-loader',
+						options: {
+							name: define.rs_asset_name,
+							limit: 4096
+						}
+					}
+				]
+			}
+		],
+		exclude: [ resolve(define.rs_root, '/assets/fonts'), resolve(define.rs_root, '/assets/svgstore') ]
+	},
 ];
 
 module.exports.config = rules;

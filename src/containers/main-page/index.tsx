@@ -3,6 +3,8 @@ import * as css from './styles.scss'
 
 import { Badge } from 'components'
 
+import src from 'images/dog.jpg'
+
 export function MainPage () {
     document.title = 'Main Page'
 
@@ -14,6 +16,10 @@ export function MainPage () {
             <p className={css.description}>
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
+
+            <img src={src} width={400} height={400} alt=""/>
+
+            <div className={css.image} />
         </div>
     )
 }
