@@ -1,7 +1,7 @@
 import * as React from 'react'
 // import * as css from './styles.scss'
 
-import styled, { StyledFunction } from 'styled-components'
+import styled from 'styled-components'
 
 interface P {
     title?: string;
@@ -11,47 +11,36 @@ interface P {
     className?: string;
 }
 
-const styledBadge: StyledFunction<P & React.HTMLProps<HTMLInputElement>> = styled.div
-
-const StyledBadge = styledBadge`
+const StyledBadge = styled.div`
     padding: 3px;
     font-size: 1.3rem;
     line-height: 1;
     border-radius: 2px;
     display: inline-block;
     vertical-align: baseline;
-    font-weight: ${p => p.bolded ? '700' : '400'};
+    font-weight: ${(props: P) => props.bolded ? '700' : '400'};
+    color: $c-primary-color;
+    border: 1px solid $c-info-border;
+    background-color: $c-info-background;
 `
+// color: ${props => props.variant};
+// border: 1px solid ${props => props.variant};
+// background-color: ${props => props.variant};
 
 export class Badge extends React.PureComponent<P, {}> {
     static defaultProps = {
         title: '',
-        bolded: false,
-        className: '',
-        variant: 'normal'
+        variant: 'normal',
+        className: ''
     }
 
     render () {
-        // const cn: Array<string> = []
-
-        // const { title, children, variant, bolded, className } = this.props
-        const { title, children, bolded } = this.props
-
-        // cn.push(css.badge)
-
-        // cn.push(css[`${variant}`])
-
-        // if (bolded) {
-        //     cn.push(css.bold)
-        // }
-
-        // if (className) {
-        //     cn.push(className)
-        // }
+        const { title, className, children, ...rest } = this.props
 
         return (
-            // <div className={cn.join(' ')}>{ title || children }</div>
-            <StyledBadge>{ title || children } - {bolded ? '1' : '0'}</StyledBadge>
+            <StyledBadge className={className} {...rest}>
+                { title || children }
+            </StyledBadge>
         )
     }
 }

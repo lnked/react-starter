@@ -11,8 +11,15 @@ export function MainPage () {
     return (
         <div className={css.content}>
             <h1 className={css.title}>Main Page</h1>
-            <Badge>Badge</Badge>
-            <Badge bolded={true}>Badge</Badge>
+
+            <Badge>default</Badge>
+            <Badge bolded info>info</Badge>
+            <Badge bolded normal>normal</Badge>
+            <Badge bolded primary>primary</Badge>
+            <Badge bolded success>success</Badge>
+            <Badge bolded warning>warning</Badge>
+            <Badge bolded danger>danger</Badge>
+
             <p className={css.description}>
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
