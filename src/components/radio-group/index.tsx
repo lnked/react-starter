@@ -30,8 +30,6 @@ export default class RadioGroup extends React.Component<P, S> {
         const { checked } = this.state
         const { name, children } = this.props
 
-        /* tslint:disable */
-        /* eslint-disable */
         const items: any = React.Children.map(children, (radio: any) => (
             React.cloneElement(radio, {
                 name,

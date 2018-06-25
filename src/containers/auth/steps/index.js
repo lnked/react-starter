@@ -52,3 +52,4 @@ export const Organization = (props) => (
             : <Component {...props} />}
     </DynamicImport>
 )
+/* eslint-enable */
