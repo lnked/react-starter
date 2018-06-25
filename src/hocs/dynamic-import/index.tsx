@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-export interface P {
+interface P {
     load: any;
     children?: React.ReactChild;
 }
 
-export interface S {
+interface S {
     component: any;
 }
 

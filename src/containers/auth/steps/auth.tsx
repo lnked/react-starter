@@ -12,11 +12,11 @@ import {
     Checkbox
 } from 'components'
 
-export interface P {
+interface P {
     post: ((url: string, data: any) => any);
 }
 
-export interface S {
+interface S {
     save: boolean;
     phone: string | number;
     secret: string | number;

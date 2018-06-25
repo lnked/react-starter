@@ -1,13 +1,13 @@
 import * as React from 'react'
 
-export interface P {
+interface P {
     name: string;
     checked?: boolean | string | number;
     children?: React.ReactChild;
     handleChange?: (value: number | string | boolean) => void | boolean;
 }
 
-export interface S {
+interface S {
     checked: boolean | string | number;
 }
 

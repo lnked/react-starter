@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export interface T {
+interface T {
     name: string;
     min: number;
     max: number;
@@ -12,7 +12,7 @@ export interface T {
     handleChange?: (count: number) => void | boolean;
 }
 
-export interface S {
+interface S {
     count: number;
 }
 

@@ -1,4 +1,4 @@
-// export default export interface T {
+// export default interface T {
 //     value?: string;
 //     format?: string;
 // }

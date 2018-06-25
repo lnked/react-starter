@@ -99,7 +99,7 @@ declare module 'fullcalendar/Mixin' {
 }
 declare module 'fullcalendar/EmitterMixin' {
     import Mixin from 'fullcalendar/Mixin';
-    export interface EmitterInterface {
+    interface EmitterInterface {
         on(types: any, handler: any): any;
         one(types: any, handler: any): any;
         off(types: any, handler: any): any;
@@ -254,7 +254,7 @@ declare module 'fullcalendar/Iterator' {
 }
 declare module 'fullcalendar/ListenerMixin' {
     import Mixin from 'fullcalendar/Mixin';
-    export interface ListenerInterface {
+    interface ListenerInterface {
         listenTo(other: any, arg: any, callback?: any): any;
         stopListeningTo(other: any, eventName?: any): any;
     }
@@ -486,7 +486,7 @@ declare module 'fullcalendar/EventFootprint' {
 }
 declare module 'fullcalendar/ParsableModelMixin' {
     import Mixin from 'fullcalendar/Mixin';
-    export interface ParsableModelInterface {
+    interface ParsableModelInterface {
         applyProps(rawProps: any): any;
         applyManualStandardProps(rawProps: any): any;
         applyMiscProps(rawProps: any): any;
@@ -1369,12 +1369,12 @@ declare module 'fullcalendar/src/types/input-types' {
     import EventSource from 'fullcalendar/EventSource';
     export type MomentInput = moment.Moment | Date | object | string | number;
     export type DurationInput = moment.Duration | object | string | number;
-    export interface RangeInput {
+    interface RangeInput {
         start?: MomentInput;
         end?: MomentInput;
     }
     export type ConstraintInput = RangeInput | BusinessHoursInput | 'businessHours';
-    export interface EventOptionsBase {
+    interface EventOptionsBase {
         className?: string | string[];
         editable?: boolean;
         startEditable?: boolean;
@@ -1387,7 +1387,7 @@ declare module 'fullcalendar/src/types/input-types' {
         borderColor?: string;
         textColor?: string;
     }
-    export interface EventObjectInput extends EventOptionsBase, RangeInput {
+    interface EventObjectInput extends EventOptionsBase, RangeInput {
         _id?: string;
         id?: string | number;
         title: string;
@@ -1398,7 +1398,7 @@ declare module 'fullcalendar/src/types/input-types' {
     }
     export type EventSourceFunction = (start: moment.Moment, end: moment.Moment, timezone: string, callback: ((events: EventObjectInput[]) => void)) => void;
     export type EventSourceSimpleInput = EventObjectInput[] | EventSourceFunction | string;
-    export interface EventSourceExtendedInput extends EventOptionsBase, JQueryAjaxSettings {
+    interface EventSourceExtendedInput extends EventOptionsBase, JQueryAjaxSettings {
         url?: string;
         events?: EventSourceSimpleInput;
         allDayDefault?: boolean;
@@ -1407,25 +1407,25 @@ declare module 'fullcalendar/src/types/input-types' {
         eventDataTransform?(eventData: any): EventObjectInput;
     }
     export type EventSourceInput = EventSourceSimpleInput | EventSourceExtendedInput;
-    export interface ToolbarInput {
+    interface ToolbarInput {
         left?: string;
         center?: string;
         right?: string;
     }
-    export interface CustomButtonInput {
+    interface CustomButtonInput {
         text: string;
         icon?: string;
         themeIcon?: string;
         bootstrapGlyphicon?: string;
         click(element: JQuery): void;
     }
-    export interface ButtonIconsInput {
+    interface ButtonIconsInput {
         prev?: string;
         next?: string;
         prevYear?: string;
         nextYear?: string;
     }
-    export interface ButtonTextCompoundInput {
+    interface ButtonTextCompoundInput {
         prev?: string;
         next?: string;
         prevYear?: string;
@@ -1436,30 +1436,30 @@ declare module 'fullcalendar/src/types/input-types' {
         day?: string;
         [viewId: string]: string;
     }
-    export interface BusinessHoursInput {
+    interface BusinessHoursInput {
         start?: MomentInput;
         end?: MomentInput;
         dow?: number[];
     }
-    export interface EventSegment {
+    interface EventSegment {
         event: EventObjectInput;
         start: moment.Moment;
         end: moment.Moment;
         isStart: boolean;
         isEnd: boolean;
     }
-    export interface CellInfo {
+    interface CellInfo {
         date: moment.Moment;
         dayEl: JQuery;
         moreEl: JQuery;
         segs: EventSegment[];
         hiddenSegs: EventSegment[];
     }
-    export interface DropInfo {
+    interface DropInfo {
         start: moment.Moment;
         end: moment.Moment;
     }
-    export interface OptionsInputBase {
+    interface OptionsInputBase {
         header?: boolean | ToolbarInput;
         footer?: boolean | ToolbarInput;
         customButtons?: {
@@ -1583,11 +1583,11 @@ declare module 'fullcalendar/src/types/input-types' {
         drop?(date: moment.Moment, jsEvent: MouseEvent, ui: any): void;
         eventReceive?(event: EventObjectInput): void;
     }
-    export interface ViewOptionsInput extends OptionsInputBase {
+    interface ViewOptionsInput extends OptionsInputBase {
         type?: string;
         buttonText?: string;
     }
-    export interface OptionsInput extends OptionsInputBase {
+    interface OptionsInput extends OptionsInputBase {
         buttonText?: ButtonTextCompoundInput;
         views?: {
             [viewId: string]: ViewOptionsInput;
@@ -1756,7 +1756,7 @@ declare module 'fullcalendar/Scroller' {
 }
 declare module 'fullcalendar/DayTableMixin' {
     import Mixin from 'fullcalendar/Mixin';
-    export interface DayTableInterface {
+    interface DayTableInterface {
         dayDates: any;
         daysPerRow: any;
         rowCnt: any;

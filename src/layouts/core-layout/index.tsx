@@ -5,11 +5,11 @@ import classNames from 'classnames/bind'
 
 import { SvgFixer } from 'utils'
 
-export interface T {
+interface T {
     children?: React.ReactChild;
 }
 
-export interface S {
+interface S {
     title: string;
 }
 

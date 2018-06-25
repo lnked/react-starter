@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 // import { Icon } from 'components'
 
-export interface T {
+interface T {
     type?: 'text' | 'number' | 'email' | 'tel' | 'email' | 'hidden' | 'password';
     name: string;
     value?: string | number;
@@ -22,7 +22,7 @@ export interface T {
     textControl?: React.ReactDOM
 }
 
-export interface S {
+interface S {
     value: string | number;
 }
 

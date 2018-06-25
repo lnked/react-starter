@@ -32,7 +32,7 @@ interface Window {
 }
 
 declare namespace Express {
-    export interface Request {
+    interface Request {
         todoId: number;
     }
 }

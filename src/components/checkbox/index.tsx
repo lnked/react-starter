@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export interface T {
+interface T {
     name: string;
     size?: string;
     theme?: string;
@@ -13,7 +13,7 @@ export interface T {
     handleChange?: (checked: string, status: boolean) => void | boolean;
 }
 
-export interface S {
+interface S {
     checked: boolean;
 }
 

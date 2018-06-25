@@ -6,7 +6,7 @@
             },
             "loose": true,
             "debug": false,
-            "modules": false,
+            // "modules": false,
             "useBuiltIns": false,
             "shippedProposals": true
         }],
@@ -21,8 +21,7 @@
         "add-module-exports",
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-syntax-dynamic-import",
-        ["@babel/plugin-transform-react-jsx"],
-        // ["@babel/plugin-transform-react-jsx", { "pragma":"h" }],
+        ["@babel/plugin-transform-react-jsx", { "pragma":"h" }],
         ["babel-plugin-styled-components", {
             "ssr": true,
             "minify": false,

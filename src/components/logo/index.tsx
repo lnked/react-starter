@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { NavLink } from 'react-router-dom'
 
-export interface T {
+interface T {
     link: string;
 }
 

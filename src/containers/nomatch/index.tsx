@@ -1,11 +1,11 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export interface Location {
+interface Location {
     pathname: string;
 }
 
-export interface P {
+interface P {
     location: Location;
 }
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface S {
+interface S {
     Component: any;
 }
 
