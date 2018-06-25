@@ -9,7 +9,7 @@ interface T {
     children?: React.ReactChild;
 }
 
-export default class Title extends React.Component<T, {}> {
+export class Title extends React.Component<T, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'primary',

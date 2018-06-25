@@ -4,7 +4,7 @@ import {
     computed
 } from 'mobx'
 
-export default class UiState {
+export class UiState {
     @observable viewType: string = 'grid'
 
     @computed

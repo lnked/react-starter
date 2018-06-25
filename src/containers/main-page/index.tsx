@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { Badge } from 'components'
 
-export default function MainPage () {
+export function MainPage () {
     document.title = 'Main Page'
 
     return (
@@ -17,3 +17,5 @@ export default function MainPage () {
         </div>
     )
 }
+
+export default MainPage

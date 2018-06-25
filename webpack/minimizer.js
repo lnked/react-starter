@@ -28,6 +28,7 @@ module.exports = {
                     booleans: true,
                     warnings: false,
                     dead_code: true,
+                    comparisons: false,
                     drop_console: define.rs_release,
                     drop_debugger: define.rs_release,
                     global_defs: {
@@ -36,6 +37,7 @@ module.exports = {
                 },
                 output: {
                     ecma: 8,
+                    ascii_only: true,
                     comments: false,
                     beautify: false,
                     indent_level: 0

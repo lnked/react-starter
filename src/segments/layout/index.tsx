@@ -6,7 +6,7 @@ interface T {
     children?: React.ReactChild;
 }
 
-export default class Layout extends React.Component<T, {}> {
+export class Layout extends React.Component<T, {}> {
     static defaultProps = {
         children: '',
         className: ''

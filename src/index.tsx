@@ -1,18 +1,27 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import App from './app'
 import 'index.scss'
 
-render(<App />, document.getElementById('app'))
+const rootElement = document.getElementById('app')
 
-document.body.classList.remove('loading')
+if (rootElement == null) {
+    throw new Error('No root element')
+}
 
-declare var module: any
+const renderApp = async () => {
+    const { App } = await import('./app' /* webpackChunkName: "app" */)
+    render(<App />, rootElement)
+    document.body.classList.remove('loading')
+}
+
+declare var module: {
+    hot: {
+        accept (paths: string, callback: () => void | Promise<void>): void;
+    }
+}
 
 if (module.hot) {
-    module.hot.accept((err) => {
-        if (err) {
-            console.error('Cannot apply HMR update.', err)
-        }
-    })
+    module.hot.accept('./app', renderApp)
 }
+
+renderApp()

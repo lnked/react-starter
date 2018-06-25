@@ -7,7 +7,7 @@ interface T {
     children?: React.ReactChild;
 }
 
-export default class Widget extends React.PureComponent<T, {}> {
+export class Widget extends React.PureComponent<T, {}> {
     render () {
         const cn: Array<string> = []
         const { title, children, className } = this.props

@@ -1,4 +1,4 @@
-import CoreLayout from 'layouts/core-layout'
+import { CoreLayout } from 'layouts/core-layout'
 
 export {
     CoreLayout

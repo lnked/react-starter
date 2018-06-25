@@ -48,7 +48,7 @@
     "size-limit": [
         {
             "path": [
-                "dist/**/*.{css,js,html}"
+                "dist/**/*.{css,js,html,svg,png}"
             ],
             "limit": "500 KB",
             "webpack": false
@@ -82,6 +82,7 @@
         "@babel/cli": "7.0.0-beta.51",
         "@babel/core": "7.0.0-beta.51",
         "@babel/node": "7.0.0-beta.51",
+        "@babel/plugin-proposal-class-properties": "7.0.0-beta.51",
         "@babel/plugin-syntax-class-properties": "7.0.0-beta.51",
         "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.51",
         "@babel/plugin-syntax-jsx": "7.0.0-beta.51",

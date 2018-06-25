@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as Loadable from 'react-loadable'
 
-export default class LoadingComponent extends React.Component<Loadable.LoadingComponentProps, {}> {
+export class LoadingComponent extends React.Component<Loadable.LoadingComponentProps, {}> {
     render () {
         const { children } = this.props
         return (
@@ -26,7 +26,7 @@ export default class LoadingComponent extends React.Component<Loadable.LoadingCo
 //     }
 // }
 
-// export default LoadingComponent
+// export LoadingComponent
 
 // const LoadableComponent = Loadable({
 //     loader: () => import('containers/home'),
@@ -34,11 +34,11 @@ export default class LoadingComponent extends React.Component<Loadable.LoadingCo
 //     delay: 300,
 // })
 
-// export default function PreLoader () {
+// export function PreLoader () {
 //     return <LoadableComponent />
 // }
 
-// export default function PreLoader (InputComponent) {
+// export function PreLoader (InputComponent) {
 //     return class extends React.Component {
 //         render() {
 //             return <InputComponent {...this.props} />;

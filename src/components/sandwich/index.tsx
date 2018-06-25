@@ -9,7 +9,7 @@ interface S {
     isOpened: boolean;
 }
 
-export default class Sandwich extends React.PureComponent<T, S> {
+export class Sandwich extends React.PureComponent<T, S> {
     static defaultProps = {
         isOpened: false
     }

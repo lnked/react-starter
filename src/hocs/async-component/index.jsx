@@ -22,7 +22,7 @@ const asyncComponent = (importComponent) => {
     }
 }
 
-export default asyncComponent
+export asyncComponent
 
 // usage
 
@@ -42,7 +42,7 @@ export default asyncComponent
 //     );
 // };
 
-// export default container;
+// export container;
 
 // import React, {Component} from 'react';
 // import {Route, Switch} from 'react-router-dom';
@@ -64,4 +64,4 @@ export default asyncComponent
 //     }
 // }
 
-// export default Routes;
+// export Routes;

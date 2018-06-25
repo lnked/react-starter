@@ -1,4 +1,4 @@
-export default () => {
+export const SvgFixer = () => {
     const baseUrl = window.location.href.replace(window.location.hash, '')
     const useList = document.querySelectorAll('use[*|href]')
 
@@ -10,3 +10,5 @@ export default () => {
         }
     })
 }
+
+export default SvgFixer

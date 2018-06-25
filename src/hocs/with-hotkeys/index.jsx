@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export default function withHotkeys (RComponent) {
+export function withHotkeys (RComponent) {
     class withHotkeysComponent extends React.Component {
         remove = (url, data) =>
             this.register().delete(url, data || {})

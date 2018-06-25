@@ -55,6 +55,7 @@ module.exports = {
 
     module: {
         unsafeCache: define.rs_development,
+        wrappedContextCritical: true,
         strictExportPresence: true,
 
         rules: rules.config,

@@ -9,7 +9,7 @@ interface S {
     isOpened: boolean;
 }
 
-export default class Navigation extends React.Component<{}, S> {
+export class Navigation extends React.Component<{}, S> {
     state = {
         isOpened: false
     }

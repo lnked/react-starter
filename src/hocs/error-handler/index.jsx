@@ -1,6 +1,6 @@
 // import React, { Component } from 'react'
 
-// export default function ErrorHandlerHOC(RComponent) {
+// export function ErrorHandlerHOC(RComponent) {
 
 //     class ErrorHandlerHOC extends Component {
 

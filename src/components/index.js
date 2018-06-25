@@ -26,11 +26,11 @@
 // }
 
 // import Icon from 'components/icon'
-import Input from 'components/input'
-import Badge from 'components/badge'
-import Button from 'components/button'
-import Loading from 'components/loading'
-import Spinner from 'components/spinner'
+import { Input } from 'components/input'
+import { Badge } from 'components/badge'
+import { Button } from 'components/button'
+import { Loading } from 'components/loading'
+import { Spinner } from 'components/spinner'
 
 export {
     // Icon,
@@ -40,5 +40,3 @@ export {
     Loading,
     Spinner
 }
-
-export default {}

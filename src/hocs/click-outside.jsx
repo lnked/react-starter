@@ -8,7 +8,7 @@ class MyComponent extends Component {
   }
 }
 
-export default onClickOutside(MyComponent)
+export onClickOutside(MyComponent)
 
 // // load the HOC:
 // var onClickOutside = require('react-onclickoutside');

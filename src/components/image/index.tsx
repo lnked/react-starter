@@ -1,3 +1,39 @@
+// {/* <IdealImage {...props} threshold={1000 /* ms */} /> */}
+// {/* <IdealImage
+//   {...props}
+//   srcSet={[
+//     {width: 100, src: 'cute-dog-100.jpg'},
+//     {width: 100, src: 'cute-dog-100.webp'},
+//   ]}
+// /> */}
+// {/* <IdealImage
+//   width={100}
+//   height={100}
+//   placeholder={{lqip: ''}}
+//   {...props}
+//   srcSet={[
+//     {width: 100, src: 'cute-dog-100.jpg'},
+//     {width: 200, src: 'cute-dog-200.jpg'},
+//   ]}
+// /> */}
+
+// {/* <div style={{background: `no-repeat cover url("${this.props.lqip}")`}}>
+// <svg width={this.props.width} height={this.props.height} />
+// </div>
+//  */}
+// load () {
+// const img = new Image()
+// img.onload = () => this.setState({loaded:true})
+// img.src = this.props.src
+// }
+// render() {
+// if (!this.state.loaded) {
+// return (<svg width={this.props.width} height={this.props.height} />)
+// } else {
+// return (<img {...this.props} />)
+// }
+// }
+
 // yarn add react-lazyload
 // import { lazyload } from 'react-lazyload';
 

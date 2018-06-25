@@ -4,7 +4,7 @@
 // });
 
 // // Использование:
-// export default withSort(Component);
+// export withSort(Component);
 
 
 // // C параметрами:
@@ -14,4 +14,4 @@
 // });
 
 // // Использование:
-// export default withSort(param1, param2)(Component);
+// export withSort(param1, param2)(Component);

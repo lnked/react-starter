@@ -2,7 +2,7 @@ import Loadable from 'react-loadable'
 
 import { Loading } from 'components'
 
-export default function Preloader (opts) {
+export function Preloader (opts) {
     return Loadable({
         loading: Loading,
         delay: 300,
@@ -10,6 +10,8 @@ export default function Preloader (opts) {
         ...opts
     })
 }
+
+export default Preloader
 
 // const getChunk = chunkName =>
 //     import(/*  webpackMode: "lazy", webpackChunkName: "[request]" */ `containers/${chunkName}`)

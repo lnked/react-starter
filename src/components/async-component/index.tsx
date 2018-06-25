@@ -4,7 +4,7 @@ interface S {
     Component: any;
 }
 
-export default (loader, collection) => (class AsyncComponent extends React.Component<{}, S> {
+export (loader, collection) => (class AsyncComponent extends React.Component<{}, S> {
     state = {
         Component: null
     }

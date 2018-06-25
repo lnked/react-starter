@@ -21,4 +21,4 @@
 // //   }
 // // }
 
-// // export default Enhance(MyComponent); // Enhanced component
+// // export Enhance(MyComponent); // Enhanced component

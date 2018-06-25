@@ -16,7 +16,7 @@ interface S {
     count: number;
 }
 
-export default class Quantity extends React.Component<T, S> {
+export class Quantity extends React.Component<T, S> {
     static defaultProps = {
         type: 'number',
         min: 1,

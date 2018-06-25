@@ -23,7 +23,7 @@ const StyledBadge = styledBadge`
     font-weight: ${p => p.bolded ? '700' : '400'};
 `
 
-export default class Badge extends React.PureComponent<P, {}> {
+export class Badge extends React.PureComponent<P, {}> {
     static defaultProps = {
         title: '',
         bolded: false,

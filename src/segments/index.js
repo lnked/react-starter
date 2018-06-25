@@ -1,6 +1,6 @@
-import Header from 'segments/header'
-import Layout from 'segments/layout'
-import Navigation from 'segments/navigation'
+import { Header } from 'segments/header'
+import { Layout } from 'segments/layout'
+import { Navigation } from 'segments/navigation'
 
 export {
     Header,
@@ -8,4 +8,4 @@ export {
     Navigation
 }
 
-export default {}
+export {}

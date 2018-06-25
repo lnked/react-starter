@@ -4,11 +4,13 @@
             "targets": {
                 "node": "current"
             },
-            "loose": true,
             "debug": false,
             "modules": false,
-            "useBuiltIns": false,
-            "shippedProposals": true
+            "useBuiltIns": "usage",
+            "shippedProposals": true,
+            "exclude": [
+                "web.dom.iterable"
+            ]
         }],
         ["@babel/preset-stage-2", {
             "decoratorsLegacy": true
@@ -17,6 +19,7 @@
         "@babel/preset-react"
     ],
     "plugins": [
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
         "transform-imports",
         "add-module-exports",
         "@babel/plugin-syntax-jsx",

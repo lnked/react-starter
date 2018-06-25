@@ -1,5 +1,5 @@
-import UiState from 'store/ui'
-import AppState from 'store/app'
+import { UiState } from 'store/ui'
+import { AppState } from 'store/app'
 
 import { configure } from 'mobx'
 
@@ -14,5 +14,3 @@ export {
     ui,
     app
 }
-
-export default {}

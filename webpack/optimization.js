@@ -4,8 +4,8 @@
 const define = require('./define');
 
 module.exports = {
-    minimize: define.rs_production,
-    concatenateModules: define.rs_production,
+    minimize: true,
+    concatenateModules: true,
     noEmitOnErrors: true,
     namedModules: true,
     namedChunks: true,
@@ -13,7 +13,7 @@ module.exports = {
         name: 'startup'
     },
     splitChunks: {
-        name: false,
+        name: true,
         chunks: 'async',
         minChunks: 1,
         minSize: 30000,
@@ -25,6 +25,11 @@ module.exports = {
                 minChunks: 2,
                 priority: -20,
                 reuseExistingChunk: true
+            },
+            polyfill: {
+                test: /core-js/,
+                reuseExistingChunk: true,
+                priority: 10
             },
             styles: {
                 name: 'styles',

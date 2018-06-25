@@ -5,7 +5,7 @@
 //     onClick: () => void
 // }
 
-// export default class Preloader extends React.Component<IWelcomeProps, {}> {
+// export class Preloader extends React.Component<IWelcomeProps, {}> {
 
 //     constructor(props: IWelcomeProps) {
 //         super(props)

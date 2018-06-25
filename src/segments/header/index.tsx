@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { Navigation } from 'segments'
 
-export default class Header extends React.Component<{}, {}> {
+export class Header extends React.Component<{}, {}> {
     render () {
         return (
             <div className={css.header}>

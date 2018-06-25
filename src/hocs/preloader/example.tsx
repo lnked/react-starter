@@ -25,4 +25,4 @@
 
 // }
 
-// export default Preloader(Welcome)
+// export Preloader(Welcome)

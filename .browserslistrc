@@ -1,6 +1,10 @@
 [production staging]
 > 0.25%
-edge >= 13
+Chrome >= 58
+Firefox >= 56
+Safari >= 10.1
+iOS >= 10.3
+Edge >= 13
 ie >= 10
 ie_mob >= 11
 Android >= 4

@@ -15,7 +15,7 @@ interface S {
 
 const cx = classNames.bind(css)
 
-export default class CoreLayout extends React.Component<T, S> {
+export class CoreLayout extends React.Component<T, S> {
     static defaultProps = {
         children: ''
     }
@@ -50,3 +50,5 @@ export default class CoreLayout extends React.Component<T, S> {
         )
     }
 }
+
+export default CoreLayout

@@ -13,7 +13,7 @@ interface T {
     handleClick?: () => void | boolean;
 }
 
-export default class Button extends React.PureComponent<T, {}> {
+export class Button extends React.PureComponent<T, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'button',

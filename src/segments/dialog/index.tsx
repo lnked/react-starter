@@ -10,7 +10,7 @@ interface T {
     placeholder?: string;
 }
 
-export default class Dialog extends React.PureComponent<T, {}> {
+export class Dialog extends React.PureComponent<T, {}> {
     static defaultProps = {
         type: 'alert',
         title: '',

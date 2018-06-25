@@ -6,6 +6,6 @@ import {
     // computed
 } from 'mobx'
 
-export default class AppState {
+export class AppState {
     @observable company_id: number = 13
 }

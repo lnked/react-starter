@@ -9,7 +9,7 @@ interface P {
     location: Location;
 }
 
-export default function NoMatch ({ location }: P) {
+export function NoMatch ({ location }: P) {
     document.title = '404 Not Found'
 
     return (
@@ -31,3 +31,5 @@ export default function NoMatch ({ location }: P) {
         </div>
     )
 }
+
+export default NoMatch

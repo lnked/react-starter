@@ -10,7 +10,7 @@ interface T {
     pastDelay: null;
 }
 
-const Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: T) => {
+export const Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: T) => {
     console.log(error, loading, pastSpinnerDelay, timedOut, pastDelay)
 
     if (error) {
@@ -23,5 +23,3 @@ const Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: T) => 
         return null
     }
 }
-
-export default Loading

@@ -7,7 +7,7 @@ interface T {
     className?: string;
 }
 
-export default class Icon extends React.PureComponent<T, {}> {
+export class Icon extends React.PureComponent<T, {}> {
     static defaultProps = {
         symbol: '',
         hidden: false,

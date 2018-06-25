@@ -6,7 +6,7 @@ interface T {
     children?: React.ReactChild;
 }
 
-export default class Content extends React.Component<T, {}> {
+export class Content extends React.Component<T, {}> {
     render () {
         const cn: Array<string> = []
         const { className, children } = this.props

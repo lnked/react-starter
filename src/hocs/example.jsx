@@ -18,7 +18,7 @@ function App({ data, create, update, remove }) {
     );
 }
 
-export default withCrud(App, 'api/todos');
+export withCrud(App, 'api/todos');
 
 // FORM
 
@@ -45,7 +45,7 @@ function Form({ onSubmit }) {
   );
 }
 
-export default Form;
+export Form;
 
 // LIST
 
@@ -67,4 +67,4 @@ function List({ todos, onToggle, onRemove }) {
   );
 }
 
-export default List;
+export List;

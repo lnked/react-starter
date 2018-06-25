@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export default function ChangelogPage () {
+export function ChangelogPage () {
     document.title = 'Changelog Page'
 
     // <img src={'images/cat.jpg'} alt=""/>
@@ -16,3 +16,5 @@ export default function ChangelogPage () {
         </div>
     )
 }
+
+export default ChangelogPage
