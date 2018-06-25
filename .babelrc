@@ -6,7 +6,7 @@
             },
             "loose": true,
             "debug": false,
-            // "modules": false,
+            "modules": false,
             "useBuiltIns": false,
             "shippedProposals": true
         }],

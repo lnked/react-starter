@@ -1,7 +1,7 @@
 import * as React from 'react'
 // import * as css from './styles.scss'
 
-import styled from 'styled-components'
+import styled, { StyledFunction } from 'styled-components'
 
 interface P {
     title?: string;
@@ -11,14 +11,16 @@ interface P {
     className?: string;
 }
 
-const StyledBadge = styled.div`
+const styledBadge: StyledFunction<P & React.HTMLProps<HTMLInputElement>> = styled.div
+
+const StyledBadge = styledBadge`
     padding: 3px;
     font-size: 1.3rem;
     line-height: 1;
     border-radius: 2px;
     display: inline-block;
     vertical-align: baseline;
-    font-weight: ${(p: P) => p.bolded === true ? 700 : 400};
+    font-weight: ${p => p.bolded ? '700' : '400'};
 `
 
 export default class Badge extends React.PureComponent<P, {}> {
