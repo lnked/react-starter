@@ -11,22 +11,24 @@ export interface P {
     children?: React.ReactChild;
 }
 
+// color: ${(props: P) =>
+//     (props.type === 'primary' && '#000') ||
+//     (props.type === 'secondary' && '#f00') ||
+//     'blue'};
+// font-size: ${(props: P) =>
+//     (props.size === 'tiny' && '1rem') ||
+//     (props.size === 'small' && '1.2rem') ||
+//     (props.size === 'medium' && '1.8rem') ||
+//     (props.size === 'huge' && '2.2rem') ||
+//     '1.6rem'};
+// text-align: ${(props: P) =>
+//     (props.center && 'center') ||
+//     'left'};
+
 const StyledTitle = styled.div`
     font-weight: 700;
     line-height: 1;
-    color: ${(props: P) =>
-        (props.type === 'primary' && '#000') ||
-        (props.type === 'secondary' && '#f00') ||
-        'blue'};
-    font-size: ${(props: P) =>
-        (props.size === 'tiny' && '1rem') ||
-        (props.size === 'small' && '1.2rem') ||
-        (props.size === 'medium' && '1.8rem') ||
-        (props.size === 'huge' && '2.2rem') ||
-        '1.6rem'};
-    text-align: ${(props: P) =>
-        (props.center && 'center') ||
-        'left'};
+
     &:not(:last-child) {
         margin-bottom: 20px;
     }

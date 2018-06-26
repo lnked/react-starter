@@ -57,11 +57,10 @@
         "selector-no-vendor-prefix": true,
         "media-feature-parentheses-space-inside": "never",
         "media-feature-name-no-vendor-prefix": true,
-        "no-empty-source": "always",
-        "declaration-colon-newline-after": "newer",
+        "declaration-colon-newline-after": "always-multi-line",
         "no-missing-end-of-source-newline": "never",
-        "property-no-vendor-prefix": "always",
-        "value-list-max-empty-lines": "never",
-        "rule-empty-line-before": false
+        "property-no-vendor-prefix": true,
+        "value-no-vendor-prefix": true,
+        "value-list-max-empty-lines": 1
     }
 }
