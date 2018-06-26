@@ -1,7 +1,9 @@
 import * as React from 'react'
-import * as css from './styles.scss'
+// import * as css from './styles.scss'
 
-interface T {
+import styled from 'styled-components'
+
+export interface P {
     size: 'small' | 'normal' | 'medium' | 'big';
     type: 'primary' | 'secondary';
     label: string;
@@ -9,7 +11,21 @@ interface T {
     children?: React.ReactChild;
 }
 
-export class Title extends React.Component<T, {}> {
+const StyledTitle = styled.div`
+    font-weight: 700;
+    line-height: 1;
+
+    color: ${props =>
+        (props.variant === 'primary' && '$black') ||
+        (props.variant === 'danger' && '$c-pink-swan')
+    };
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+`
+
+export class Title extends React.Component<P, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'primary',
@@ -17,27 +33,27 @@ export class Title extends React.Component<T, {}> {
     }
 
     render () {
-        const cn: Array<string> = []
-        const { type, size, label, children, className } = this.props
+        const { label, children, className } = this.props
 
-        cn.push(css.title)
+        // type, size
+        // cn.push(css.title)
 
-        if (type) {
-            cn.push(css[`title_${type}`])
-        }
+        // if (type) {
+        //     cn.push(css[`title_${type}`])
+        // }
 
-        if (size) {
-            cn.push(css[`title_size--${size}`])
-        }
+        // if (size) {
+        //     cn.push(css[`title_size--${size}`])
+        // }
 
-        if (className) {
-            cn.push(className)
-        }
+        // if (className) {
+        //     cn.push(className)
+        // }
 
         return (
-            <div className={cn.join(' ')}>
+            <StyledTitle className={className}>
                 {label || children}
-            </div>
+            </StyledTitle>
         )
     }
 }

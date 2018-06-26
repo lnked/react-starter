@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Badge } from 'components'
+import { Badge, Title } from 'components'
 
 import src from 'images/dog.jpg'
 
@@ -10,7 +10,9 @@ export function MainPage () {
 
     return (
         <div className={css.content}>
-            <h1 className={css.title}>Main Page</h1>
+            <Title secondary>Main Page</Title>
+            <Title size="small" primary>Main Page</Title>
+            <Title size="large" secondary>Main Page</Title>
 
             <Badge>default</Badge>
             <Badge bolded info>info</Badge>
