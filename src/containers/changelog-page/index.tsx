@@ -10,8 +10,8 @@ export function ChangelogPage () {
 
     return (
         <div className={css.content}>
-            <Title size="large" primary>Changelog Page</Title>
-            <Title size="large" secondary>Changelog Page</Title>
+            <Title size="huge" type="primary" center>Changelog Page</Title>
+            <Title size="medium" type="secondary" center>Changelog Page</Title>
 
             <p className={css.description}>
                 Reference site about Lorem Ipsum, giving information on its origins.

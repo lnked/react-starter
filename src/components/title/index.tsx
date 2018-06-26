@@ -1,12 +1,11 @@
 import * as React from 'react'
-// import * as css from './styles.scss'
-
 import styled from 'styled-components'
 
 export interface P {
-    size: 'small' | 'normal' | 'medium' | 'big';
+    size: 'tiny' | 'small' | 'normal' | 'medium' | 'huge';
     type: 'primary' | 'secondary';
     label: string;
+    center: boolean;
     className: string;
     children?: React.ReactChild;
 }
@@ -14,12 +13,16 @@ export interface P {
 const StyledTitle = styled.div`
     font-weight: 700;
     line-height: 1;
-
-    color: ${props =>
-        (props.type === 'primary' && 'black') ||
-        (props.type === 'secondary' && 'pink')
-    };
-
+    text-align: ${(props: P) => props.center ? 'center' : 'left'};
+    color: ${(props: P) =>
+        (props.type === 'primary' && '#000') ||
+        (props.type === 'secondary' && '#f00')};
+    font-size: ${(props: P) =>
+        (props.size === 'tiny' && '1rem') ||
+        (props.size === 'small' && '1.3rem') ||
+        (props.size === 'normal' && '2.1rem') ||
+        (props.size === 'medium' && '1.6rem') ||
+        (props.size === 'huge' && '2.8rem')};
     &:not(:last-child) {
         margin-bottom: 20px;
     }
@@ -29,29 +32,15 @@ export class Title extends React.Component<P, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'primary',
+        center: false,
         className: ''
     }
 
     render () {
-        const { label, children, className } = this.props
-
-        // type, size
-        // cn.push(css.title)
-
-        // if (type) {
-        //     cn.push(css[`title_${type}`])
-        // }
-
-        // if (size) {
-        //     cn.push(css[`title_size--${size}`])
-        // }
-
-        // if (className) {
-        //     cn.push(className)
-        // }
+        const { label, children, className, ...rest } = this.props
 
         return (
-            <StyledTitle className={className}>
+            <StyledTitle className={className} {...rest}>
                 {label || children}
             </StyledTitle>
         )

@@ -10,9 +10,9 @@ export function MainPage () {
 
     return (
         <div className={css.content}>
-            <Title secondary>Main Page</Title>
-            <Title size="small" primary>Main Page</Title>
-            <Title size="large" secondary>Main Page</Title>
+            <Title type="secondary" center>Main Page</Title>
+            <Title size="small" type="primary" center>Main Page</Title>
+            <Title size="medium" type="secondary" center>Main Page</Title>
 
             <Badge>default</Badge>
             <Badge bolded info>info</Badge>
