@@ -22,6 +22,11 @@ const StyledBadge = styled.div`
     color: $c-primary-color;
     border: 1px solid $c-info-border;
     background-color: $c-info-background;
+
+    background-color: ${props =>
+        (props.variant === 'primary' && '$primary') ||
+        (props.variant === 'danger' && '$danger')
+    }
 `
 // color: ${props => props.variant};
 // border: 1px solid ${props => props.variant};

@@ -947,7 +947,7 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@csstools/sass-import-resolve/-/sass-import-resolve-1.0.0.tgz#32c3cdb2f7af3cd8f0dca357b592e7271f3831b5"
 
-"@emmetio/extract-abbreviation@^0.1.4":
+"@emmetio/extract-abbreviation@0.1.6":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@emmetio/extract-abbreviation/-/extract-abbreviation-0.1.6.tgz#e4a9856c1057f0aff7d443b8536477c243abe28c"
 
@@ -1119,9 +1119,9 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@types/jest@23.1.1":
-  version "23.1.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.1.tgz#c54ab1a5f41aa693c0957222dd10414416d0c87b"
+"@types/jest@23.1.2":
+  version "23.1.2"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.2.tgz#a6cd37deb9110a8c63dc1435d6ee2518b3bd8e54"
 
 "@types/jsdom@11.0.6":
   version "11.0.6"
@@ -1187,9 +1187,9 @@
   dependencies:
     csstype "^2.2.0"
 
-"@types/react@16.4.1":
-  version "16.4.1"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.1.tgz#c53bbfb4a78933db587da085ac60dbf5fcf73f8f"
+"@types/react@16.4.2":
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.2.tgz#f1a9cf1ee85221530def2ac26aee20f910a9dac8"
   dependencies:
     csstype "^2.2.0"
 
@@ -3139,9 +3139,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000832"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000832.tgz#afe34c9f7c62139fd1c607db2ab7308bbb6a5158"
 
-caniuse-lite@1.0.30000858:
-  version "1.0.30000858"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000858.tgz#f6f203a9128bac507136de1cf6cfd966d2df027c"
+caniuse-lite@1.0.30000859:
+  version "1.0.30000859"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000859.tgz#da974adc5348fffe94724877a7ef8cb5d6d3d777"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000823, caniuse-lite@^1.0.30000830, caniuse-lite@^1.0.30000832:
   version "1.0.30000832"
@@ -3915,9 +3915,9 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-copy-webpack-plugin@4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.1.tgz#fc4f68f4add837cc5e13d111b20715793225d29c"
+copy-webpack-plugin@4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.2.tgz#d53444a8fea2912d806e78937390ddd7e632ee5c"
   dependencies:
     cacache "^10.0.4"
     find-cache-dir "^1.0.0"
@@ -15487,14 +15487,14 @@ typescript-plugin-styled-components@0.0.6:
   dependencies:
     ts-is-kind "^1.0.0"
 
-typescript-styled-plugin@0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.6.3.tgz#c9a5e7fa0d694118ae92515f3c7e91a1162f163f"
+typescript-styled-plugin@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.7.0.tgz#a809efa0ea2b9b887b8224ddb4ab21dc9d262a7c"
   dependencies:
     typescript-template-language-service-decorator "^1.2.0"
-    vscode-css-languageservice "^3.0.8"
-    vscode-emmet-helper "1.1.36"
-    vscode-languageserver-types "^3.6.0-next.1"
+    vscode-css-languageservice "^3.0.9-next.19"
+    vscode-emmet-helper "1.2.10"
+    vscode-languageserver-types "^3.8.2"
 
 typescript-template-language-service-decorator@^1.2.0:
   version "1.2.0"
@@ -16146,12 +16146,12 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vscode-css-languageservice@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/vscode-css-languageservice/-/vscode-css-languageservice-3.0.8.tgz#dc27a2f6eefd191bc603be6b9c0a59232a4c2b9f"
+vscode-css-languageservice@^3.0.9-next.19:
+  version "3.0.9-next.19"
+  resolved "https://registry.yarnpkg.com/vscode-css-languageservice/-/vscode-css-languageservice-3.0.9-next.19.tgz#193b1e0aa87c28d2b0dbe6ddd655bfe10501ae68"
   dependencies:
-    vscode-languageserver-types "^3.6.1"
-    vscode-nls "^3.2.1"
+    vscode-languageserver-types "^3.7.2"
+    vscode-nls "^3.2.2"
 
 vscode-debugadapter@^1.24.0:
   version "1.29.0"
@@ -16164,19 +16164,23 @@ vscode-debugprotocol@1.29.0, vscode-debugprotocol@^1.24.0:
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/vscode-debugprotocol/-/vscode-debugprotocol-1.29.0.tgz#520030db8486f7d9e1f889ece82538efe7ec6fac"
 
-vscode-emmet-helper@1.1.36:
-  version "1.1.36"
-  resolved "https://registry.yarnpkg.com/vscode-emmet-helper/-/vscode-emmet-helper-1.1.36.tgz#537cbf91041a3d426f6f24dd9834550a26e61685"
+vscode-emmet-helper@1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/vscode-emmet-helper/-/vscode-emmet-helper-1.2.10.tgz#c4e08c721fa379f57e53c6bdf2843d4b3c830d16"
   dependencies:
-    "@emmetio/extract-abbreviation" "^0.1.4"
+    "@emmetio/extract-abbreviation" "0.1.6"
     jsonc-parser "^1.0.0"
     vscode-languageserver-types "^3.6.0-next.1"
 
-vscode-languageserver-types@^3.6.0-next.1, vscode-languageserver-types@^3.6.1:
+vscode-languageserver-types@^3.6.0-next.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.8.1.tgz#378afd8b38717abf7049d5d35e9758b9c311f99a"
 
-vscode-nls@^3.2.1:
+vscode-languageserver-types@^3.7.2, vscode-languageserver-types@^3.8.2:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.8.2.tgz#2550b8d852195328a735c56dbf4e72b8da31613f"
+
+vscode-nls@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/vscode-nls/-/vscode-nls-3.2.2.tgz#3817eca5b985c2393de325197cf4e15eb2aa5350"
 
