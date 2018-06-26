@@ -11,6 +11,15 @@ interface P {
     className?: string;
 }
 
+// color: ${props => props.variant};
+// border: 1px solid ${props => props.variant};
+// background-color: ${props => props.variant};
+
+// background-color: ${props =>
+//     (props.variant === 'primary' && '$primary') ||
+//     (props.variant === 'danger' && '$danger')
+// };
+
 const StyledBadge = styled.div`
     padding: 3px;
     font-size: 1.3rem;
@@ -22,15 +31,7 @@ const StyledBadge = styled.div`
     color: $c-primary-color;
     border: 1px solid $c-info-border;
     background-color: $c-info-background;
-
-    background-color: ${props =>
-        (props.variant === 'primary' && '$primary') ||
-        (props.variant === 'danger' && '$danger')
-    }
 `
-// color: ${props => props.variant};
-// border: 1px solid ${props => props.variant};
-// background-color: ${props => props.variant};
 
 export class Badge extends React.PureComponent<P, {}> {
     static defaultProps = {
