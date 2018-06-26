@@ -16,8 +16,8 @@ const StyledTitle = styled.div`
     line-height: 1;
 
     color: ${props =>
-        (props.variant === 'primary' && '$black') ||
-        (props.variant === 'danger' && '$c-pink-swan')
+        (props.type === 'primary' && 'black') ||
+        (props.type === 'secondary' && 'pink')
     };
 
     &:not(:last-child) {
