@@ -3,11 +3,12 @@
 const { resolve } = require('path');
 const { randomInteger } = require('./functions');
 
+const _source_ = 'src';
 const _distBase_ = 'dist';
 
 const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
-const _root_ = resolve(__dirname, '../src');
+const _root_ = resolve(__dirname, `../${_source_}`);
 const _dist_ = resolve(__dirname, `../${_distBase_}`);
 
 const isDeploy  = process.argv.includes('deploy');
@@ -19,7 +20,7 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = process.argv.includes('development') || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
-const _port_ = process.env.PORT // || randomInteger(3000, 8000);
+const _port_ = process.env.PORT || randomInteger(8081, 8088);
 
 module.exports = {
     rs_host: _host_,
@@ -30,6 +31,7 @@ module.exports = {
     rs_node: _node_,
     rs_preact: false,
     rs_sourceMap: !isRelease,
+    rs_source: _source_,
     rs_distBase: _distBase_,
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
     rs_deploy: isDeploy,

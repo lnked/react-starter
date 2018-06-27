@@ -18,7 +18,7 @@ const webpackConfig = webpackMerge(defaultConfig, {
 
     devtool: 'cheap-module-source-map',
 
-    watch: true,
+    // watch: true,
 
     cache: true,
 
@@ -34,15 +34,14 @@ const webpackConfig = webpackMerge(defaultConfig, {
         hot: true,
         open: true,
         inline: true,
+        contentBase: define.rs_contentBase,
         overlay: {
             errors: true,
             warnings: true
         },
-        // proxy: proxy.config,
         progress: false,
         compress: true,
-        contentBase: define.rs_contentBase,
-        watchContentBase: true,
+        watchContentBase: false,
         disableHostCheck: true,
         historyApiFallback: {
             disableDotRule: true
@@ -54,7 +53,8 @@ const webpackConfig = webpackMerge(defaultConfig, {
         },
         stats: stats.config,
         port: define.rs_port,
-        host: define.rs_host
+        host: define.rs_host,
+        // proxy: proxy.config,
     }
 });
 

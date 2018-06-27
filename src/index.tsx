@@ -9,7 +9,7 @@ if (rootElement == null) {
 }
 
 const renderApp = async () => {
-    const { App } = await import('./app' /* webpackChunkName: "app" */)
+    const { App } = await import('./app' /* webpackChunkName: "App" */)
     render(<App />, rootElement)
     document.body.classList.remove('loading')
 }

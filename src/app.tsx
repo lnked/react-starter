@@ -1,7 +1,5 @@
 import * as React from 'react'
 
-// import { hot } from 'react-hot-loader'
-
 import { routes } from 'settings/routes'
 
 import {
@@ -58,5 +56,4 @@ class App extends React.Component<{}, {}> {
     }
 }
 
-// export default hot(module)(App)
 export { App }
