@@ -18,7 +18,7 @@ const webpackConfig = webpackMerge(defaultConfig, {
 
     devtool: 'cheap-module-source-map',
 
-    // watch: true,
+    watch: true,
 
     cache: true,
 
@@ -33,14 +33,17 @@ const webpackConfig = webpackMerge(defaultConfig, {
     devServer: {
         hot: true,
         open: true,
+        quiet: false,
+        noInfo: true,
         inline: true,
+        hotOnly: false,
         contentBase: define.rs_contentBase,
         overlay: {
             errors: true,
             warnings: true
         },
-        progress: false,
         compress: true,
+        progress: false,
         watchContentBase: false,
         disableHostCheck: true,
         historyApiFallback: {
