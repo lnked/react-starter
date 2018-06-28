@@ -68,6 +68,8 @@
         "preact": "8.2.9",
         "preact-compat": "3.18.0",
         "react": "16.4.1",
+        "react-addons-css-transition-group": "15.6.2",
+        "react-animated-css": "1.0.4",
         "react-dom": "16.4.1",
         "react-input-mask": "2.0.2",
         "react-loadable": "5.4.0",
