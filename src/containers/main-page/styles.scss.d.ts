@@ -1,4 +1,5 @@
 export const image: string;
+export const group: string;
 export const error: string;
 export const figure: string;
 export const figureImage: string;

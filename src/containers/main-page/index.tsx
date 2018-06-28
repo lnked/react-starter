@@ -26,9 +26,10 @@ export function MainPage () {
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
 
-            <img src={src} width={400} height={400} alt=""/>
-
-            <div className={css.image} />
+            <div className={css.group}>
+                <img src={src} width={400} alt=""/>
+                <div className={css.image} />
+            </div>
         </div>
     )
 }

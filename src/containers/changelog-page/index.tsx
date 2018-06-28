@@ -19,7 +19,7 @@ export function ChangelogPage () {
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
 
-            <img src={image} width={400} height={400} alt=""/>
+            <img src={image} width={400} alt=""/>
         </div>
     )
 }

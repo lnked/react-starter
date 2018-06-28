@@ -3,9 +3,14 @@
 .image {
     width: 400px;
     height: 400px;
-    border: 1px solid lime;
     background: url(images/cat.jpg) no-repeat;
     background-size: cover;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .error {
