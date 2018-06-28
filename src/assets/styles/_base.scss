@@ -30,15 +30,20 @@ body {
     background-color: #fafafa;
 }
 
+p,
+div,
 body,
 input,
 button,
 select,
 textarea {
+    font-feature-settings: 'kern', 'onum', 'liga';
+}
+
+textarea {
     text-align: left;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
-    font-feature-settings: 'liga', 'kern';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

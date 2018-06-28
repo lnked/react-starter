@@ -6,3 +6,173 @@
     align-items: stretch;
     justify-content: space-between;
 }
+
+// .body-text table {
+//     width: 100%
+// }
+
+// .body-text table tr {
+//     border-bottom: 1px solid #222223
+// }
+
+// .body-text table tr:last-child {
+//     border-bottom: 0
+// }
+
+// .animate .body-text__wysiwyg>* {
+//     transition: opacity .5s ease;
+//     opacity: 0;
+// }
+
+// .body-text--visible .body-text__wysiwyg>* {
+//     opacity: 1;
+// }
+
+// .body-text__wysiwyg>:nth-child(1),.body-text__wysiwyg>:nth-child(1):after {
+//     transition-delay: 0s
+// }
+
+// .body-text__wysiwyg>:nth-child(2),.body-text__wysiwyg>:nth-child(2):after {
+//     transition-delay: .1s
+// }
+
+// .body-text__wysiwyg>:nth-child(3),.body-text__wysiwyg>:nth-child(3):after {
+//     transition-delay: .2s
+// }
+
+// .body-text__wysiwyg>:nth-child(4),.body-text__wysiwyg>:nth-child(4):after {
+//     transition-delay: .3s
+// }
+
+// .body-text__wysiwyg>:nth-child(5),.body-text__wysiwyg>:nth-child(5):after {
+//     transition-delay: .4s
+// }
+
+// .body-text__wysiwyg>:nth-child(6),.body-text__wysiwyg>:nth-child(6):after {
+//     transition-delay: .5s
+// }
+
+// .body-text__wysiwyg>:nth-child(7),.body-text__wysiwyg>:nth-child(7):after {
+//     transition-delay: .6s
+// }
+
+// .body-text__wysiwyg>:nth-child(8),.body-text__wysiwyg>:nth-child(8):after {
+//     transition-delay: .7s
+// }
+
+// .body-text__wysiwyg>:nth-child(9),.body-text__wysiwyg>:nth-child(9):after {
+//     transition-delay: .8s
+// }
+
+// .body-text__wysiwyg>:nth-child(10),.body-text__wysiwyg>:nth-child(10):after {
+//     transition-delay: .9s
+// }
+
+// .body-text__wysiwyg>:nth-child(11),.body-text__wysiwyg>:nth-child(11):after {
+//     transition-delay: 1s
+// }
+
+// .body-text__wysiwyg>:nth-child(12),.body-text__wysiwyg>:nth-child(12):after {
+//     transition-delay: 1.1s
+// }
+
+// .body-text__wysiwyg>:nth-child(13),.body-text__wysiwyg>:nth-child(13):after {
+//     transition-delay: 1.2s
+// }
+
+// .body-text__wysiwyg>:nth-child(14),.body-text__wysiwyg>:nth-child(14):after {
+//     transition-delay: 1.3s
+// }
+
+// .body-text__wysiwyg>:nth-child(15),.body-text__wysiwyg>:nth-child(15):after {
+//     transition-delay: 1.4s
+// }
+
+// .body-text__wysiwyg>:nth-child(16),.body-text__wysiwyg>:nth-child(16):after {
+//     transition-delay: 1.5s
+// }
+
+// .animate .body-text__quote:after,.animate .body-text__quote:before {
+//     transition: opacity .5s ease,transform .5s ease;
+//     opacity: 0
+// }
+
+// .body-text__wysiwyg>:nth-child(1).body-text__quote:after,.body-text__wysiwyg>:nth-child(1).body-text__quote:before {
+//     transition-delay: 0s
+// }
+
+// .body-text__wysiwyg>:nth-child(2).body-text__quote:after,.body-text__wysiwyg>:nth-child(2).body-text__quote:before {
+//     transition-delay: .2s
+// }
+
+// .body-text__wysiwyg>:nth-child(3).body-text__quote:after,.body-text__wysiwyg>:nth-child(3).body-text__quote:before {
+//     transition-delay: .4s
+// }
+
+// .body-text__wysiwyg>:nth-child(4).body-text__quote:after,.body-text__wysiwyg>:nth-child(4).body-text__quote:before {
+//     transition-delay: .6s
+// }
+
+// .body-text__wysiwyg>:nth-child(5).body-text__quote:after,.body-text__wysiwyg>:nth-child(5).body-text__quote:before {
+//     transition-delay: .8s
+// }
+
+// .body-text__wysiwyg>:nth-child(6).body-text__quote:after,.body-text__wysiwyg>:nth-child(6).body-text__quote:before {
+//     transition-delay: 1s
+// }
+
+// .body-text__wysiwyg>:nth-child(7).body-text__quote:after,.body-text__wysiwyg>:nth-child(7).body-text__quote:before {
+//     transition-delay: 1.2s
+// }
+
+// .body-text__wysiwyg>:nth-child(8).body-text__quote:after,.body-text__wysiwyg>:nth-child(8).body-text__quote:before {
+//     transition-delay: 1.4s
+// }
+
+// .body-text__wysiwyg>:nth-child(9).body-text__quote:after,.body-text__wysiwyg>:nth-child(9).body-text__quote:before {
+//     transition-delay: 1.6s
+// }
+
+// .body-text__wysiwyg>:nth-child(10).body-text__quote:after,.body-text__wysiwyg>:nth-child(10).body-text__quote:before {
+//     transition-delay: 1.8s
+// }
+
+// .body-text__wysiwyg>:nth-child(11).body-text__quote:after,.body-text__wysiwyg>:nth-child(11).body-text__quote:before {
+//     transition-delay: 2s
+// }
+
+// .body-text__wysiwyg>:nth-child(12).body-text__quote:after,.body-text__wysiwyg>:nth-child(12).body-text__quote:before {
+//     transition-delay: 2.2s
+// }
+
+// .body-text__wysiwyg>:nth-child(13).body-text__quote:after,.body-text__wysiwyg>:nth-child(13).body-text__quote:before {
+//     transition-delay: 2.4s
+// }
+
+// .body-text__wysiwyg>:nth-child(14).body-text__quote:after,.body-text__wysiwyg>:nth-child(14).body-text__quote:before {
+//     transition-delay: 2.6s
+// }
+
+// .body-text__wysiwyg>:nth-child(15).body-text__quote:after,.body-text__wysiwyg>:nth-child(15).body-text__quote:before {
+//     transition-delay: 2.8s
+// }
+
+// .body-text__wysiwyg>:nth-child(16).body-text__quote:after,.body-text__wysiwyg>:nth-child(16).body-text__quote:before {
+//     transition-delay: 3s
+// }
+
+// .body-text--visible .body-text__link {
+//     opacity: 1;
+//     transform: translateX(0);
+//     transition-delay: .4s
+// }
+
+// .animate .body-text__photo-container {
+//     transition: opacity .5s ease;
+//     opacity: 0
+// }
+
+// .body-text--visible .body-text__photo-container {
+//     opacity: 1;
+//     transition-delay: .3s
+// }
