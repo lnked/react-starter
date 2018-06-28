@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { Icon, Input, Button } from 'components'
 
-interface T {
+export interface T {
     type?: 'alert' | 'prompt' | 'confirm';
     title?: string;
     value?: string | number;

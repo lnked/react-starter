@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+export interface T {
     type?: string;
     size?: 'small' | 'large' | 'normal' | 'medium';
     label?: string;

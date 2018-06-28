@@ -1,10 +1,13 @@
 import * as React from 'react'
 import * as css from './styles.scss'
+import classNames from 'classnames/bind'
 
-interface T {
+export interface T {
     className?: string;
     children?: React.ReactChild;
 }
+
+const cx = classNames.bind(css)
 
 export class Layout extends React.Component<T, {}> {
     static defaultProps = {
@@ -13,17 +16,10 @@ export class Layout extends React.Component<T, {}> {
     }
 
     render () {
-        const cn: Array<string> = []
         const { className, children } = this.props
 
-        cn.push(css.layout)
-
-        if (className) {
-            cn.push(className)
-        }
-
         return (
-            <div className={cn.join(' ')}>
+            <div className={cx({ layout: true }, className)}>
                 {children}
             </div>
         )

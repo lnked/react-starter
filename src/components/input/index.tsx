@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface S {
+export interface S {
     value: string;
 }
 

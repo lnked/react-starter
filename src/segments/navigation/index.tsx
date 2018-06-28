@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 // import { isActive } from 'helpers/predicts'
 
-interface S {
+export interface S {
     isOpened: boolean;
 }
 
