@@ -65,5 +65,9 @@ module.exports = {
 
     plugins: plugins.config,
 
-    node: false
+    node: {
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    }
 };

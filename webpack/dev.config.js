@@ -24,12 +24,6 @@ const webpackConfig = webpackMerge(defaultConfig, {
 
     optimization: {},
 
-    node: {
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty'
-    },
-
     devServer: {
         hot: true,
         open: true,
