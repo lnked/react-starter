@@ -1,9 +1,9 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Badge, Title } from 'components'
+import { Badge, Picture, Title } from 'components'
 
-import src from 'images/dog.jpg'
+import dog from 'images/dog.jpg'
 
 export function MainPage () {
     document.title = 'Main Page'
@@ -27,8 +27,7 @@ export function MainPage () {
             </p>
 
             <div className={css.group}>
-                <img src={src} width={400} alt=""/>
-                <div className={css.image} />
+                <Picture image={dog} width={400} alt=""/>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Title, Input } from 'components'
+import { Title, Picture, Input } from 'components'
 
 import image from 'images/cat.jpg'
 
@@ -19,7 +19,8 @@ export function ChangelogPage () {
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
 
-            <img src={image} width={400} alt=""/>
+            <Picture image={require('images/dog.jpg')} width={400} alt="" />
+            <Picture image={image} width={400} alt="" />
         </div>
     )
 }

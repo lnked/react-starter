@@ -1052,6 +1052,10 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/bluebird@^3.0.37":
+  version "3.5.21"
+  resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.21.tgz#567615589cc913e84a28ecf9edb031732bdf2634"
+
 "@types/cheerio@*":
   version "0.22.7"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.7.tgz#4a92eafedfb2b9f4437d3a4410006d81114c66ce"
@@ -1107,6 +1111,12 @@
   version "23.1.3"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.3.tgz#4db19b2e7627dc254bbed5781b5609c621b5ad8e"
 
+"@types/jimp@^0.2.0":
+  version "0.2.28"
+  resolved "https://registry.yarnpkg.com/@types/jimp/-/jimp-0.2.28.tgz#88dc2aae028eca50008d70c2f6926b2a2d4f30e7"
+  dependencies:
+    jimp "*"
+
 "@types/jsdom@11.0.6":
   version "11.0.6"
   resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-11.0.6.tgz#20d6e8c83f15fef0b40c39b3faebe8bc7587d86e"
@@ -1116,6 +1126,10 @@
     "@types/tough-cookie" "*"
     parse5 "^4.0.0"
 
+"@types/lodash@^4.14.53":
+  version "4.14.110"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.110.tgz#fb07498f84152947f30ea09d89207ca07123461e"
+
 "@types/mime@*":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
@@ -1124,7 +1138,7 @@
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.0.2.tgz#180046ebbc37de8b64777765c2486ebecb59448e"
 
-"@types/node@^8.0.24":
+"@types/node@^8.0.24", "@types/node@^8.0.53":
   version "8.10.20"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.20.tgz#fe674ea52e13950ab10954433a7824438aabbcac"
 
@@ -2626,7 +2640,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.4.1, bluebird@^3.5.1:
+bluebird@^3.4.1, bluebird@^3.4.7, bluebird@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -3591,6 +3605,13 @@ color@^1.0.3:
 color@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/color/-/color-2.0.1.tgz#e4ed78a3c4603d0891eba5430b04b86314f4c839"
+  dependencies:
+    color-convert "^1.9.1"
+    color-string "^1.5.2"
+
+color@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.0.0.tgz#d920b4328d534a3ac8295d68f7bd4ba6c427be9a"
   dependencies:
     color-convert "^1.9.1"
     color-string "^1.5.2"
@@ -6349,6 +6370,10 @@ fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
 
+fs-copy-file-sync@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/fs-copy-file-sync/-/fs-copy-file-sync-1.1.1.tgz#11bf32c096c10d126e5f6b36d06eece776062918"
+
 fs-extra@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.0.tgz#0f0afb290bb3deb87978da816fcd3c7797f3a817"
@@ -8820,7 +8845,7 @@ jest@23.2.0:
     import-local "^1.0.0"
     jest-cli "^23.2.0"
 
-jimp@^0.2.13, jimp@^0.2.21, jimp@^0.2.28:
+jimp@*, jimp@^0.2.13, jimp@^0.2.21, jimp@^0.2.27, jimp@^0.2.28:
   version "0.2.28"
   resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.2.28.tgz#dd529a937190f42957a7937d1acc3a7762996ea2"
   dependencies:
@@ -9756,6 +9781,21 @@ lpad-align@^1.0.1:
     longest "^1.0.0"
     meow "^3.3.0"
 
+lqip-loader@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/lqip-loader/-/lqip-loader-2.1.1.tgz#3bf05a9634ddd040d4d22eddcb4e654b008dd4ca"
+  dependencies:
+    loader-utils "^1.1.0"
+    lqip "^2.0.3"
+
+lqip@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/lqip/-/lqip-2.0.3.tgz#006f5e79edf0d6fef8b3dfdc132595734e928987"
+  dependencies:
+    lodash.sortby "^4.7.0"
+    node-vibrant "^3.0.0-alpha.2"
+    sharp "^0.20.0"
+
 lru-cache@^4.0.1, lru-cache@^4.1.1:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.2.tgz#45234b2e6e2f2b33da125624c4664929a0224c3f"
@@ -10464,6 +10504,19 @@ node-status-codes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/node-status-codes/-/node-status-codes-1.0.0.tgz#5ae5541d024645d32a58fcddc9ceecea7ae3ac2f"
 
+node-vibrant@^3.0.0-alpha.2:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/node-vibrant/-/node-vibrant-3.0.0.tgz#3ef4540dea2bdd7680ed181b8b08eaddfe74a568"
+  dependencies:
+    "@types/bluebird" "^3.0.37"
+    "@types/jimp" "^0.2.0"
+    "@types/lodash" "^4.14.53"
+    "@types/node" "^8.0.53"
+    bluebird "^3.4.7"
+    jimp "^0.2.27"
+    lodash "^4.17.4"
+    url "^0.11.0"
+
 node-zip@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/node-zip/-/node-zip-1.1.1.tgz#94d1ad674a3cd46a1588dd736f4a9a78c757eb62"
@@ -10566,7 +10619,7 @@ npm-run-path@^2.0.0:
   dependencies:
     path-key "^2.0.0"
 
-"npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.1, npmlog@^4.0.2:
+"npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.1, npmlog@^4.0.2, npmlog@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-4.1.2.tgz#08a7f2a8bf734604779a9efa4ad5cc717abb954b"
   dependencies:
@@ -12206,6 +12259,26 @@ preact@8.2.9:
 prebuild-install@^2.3.0:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-2.5.3.tgz#9f65f242782d370296353710e9bc843490c19f69"
+  dependencies:
+    detect-libc "^1.0.3"
+    expand-template "^1.0.2"
+    github-from-package "0.0.0"
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    node-abi "^2.2.0"
+    noop-logger "^0.1.1"
+    npmlog "^4.0.1"
+    os-homedir "^1.0.1"
+    pump "^2.0.1"
+    rc "^1.1.6"
+    simple-get "^2.7.0"
+    tar-fs "^1.13.0"
+    tunnel-agent "^0.6.0"
+    which-pm-runs "^1.0.0"
+
+prebuild-install@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-4.0.0.tgz#206ce8106ce5efa4b6cf062fc8a0a7d93c17f3a8"
   dependencies:
     detect-libc "^1.0.3"
     expand-template "^1.0.2"
@@ -14010,6 +14083,21 @@ shallowequal@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.0.2.tgz#1561dbdefb8c01408100319085764da3fcf83f8f"
 
+sharp@^0.20.0:
+  version "0.20.5"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.20.5.tgz#fc19d9639b1c792fa68a21624c75069923e79edd"
+  dependencies:
+    color "^3.0.0"
+    detect-libc "^1.0.3"
+    fs-copy-file-sync "^1.1.1"
+    nan "^2.10.0"
+    npmlog "^4.1.2"
+    prebuild-install "^4.0.0"
+    semver "^5.5.0"
+    simple-get "^2.8.1"
+    tar "^4.4.4"
+    tunnel-agent "^0.6.0"
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -14049,7 +14137,7 @@ simple-concat@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/simple-concat/-/simple-concat-1.0.0.tgz#7344cbb8b6e26fb27d66b2fc86f9f6d5997521c6"
 
-simple-get@^2.7.0:
+simple-get@^2.7.0, simple-get@^2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/simple-get/-/simple-get-2.8.1.tgz#0e22e91d4575d87620620bc91308d57a77f44b5d"
   dependencies:
@@ -15058,7 +15146,7 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-tar@^4.3.0:
+tar@^4.3.0, tar@^4.4.4:
   version "4.4.4"
   resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.4.tgz#ec8409fae9f665a4355cc3b4087d0820232bb8cd"
   dependencies:

@@ -32,6 +32,7 @@ import { Badge } from 'components/badge'
 import { Button } from 'components/button'
 import { Loading } from 'components/loading'
 import { Spinner } from 'components/spinner'
+import { Picture } from 'components/picture'
 
 export {
     // Icon,
@@ -40,5 +41,6 @@ export {
     Title,
     Button,
     Loading,
+    Picture,
     Spinner
 }

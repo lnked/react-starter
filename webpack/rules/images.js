@@ -8,11 +8,9 @@ const rules = [
     {
         test: define.rs_regexp_images,
         oneOf: [
-            // Inline lightweight images into CSS
             {
                 issuer: define.rs_regexp_styles,
                 oneOf: [
-                    // Inline lightweight SVGs as UTF-8 encoded DataUrl string
                     {
                         test: /\.svg$/,
                         loader: 'svg-url-loader',
@@ -21,19 +19,15 @@ const rules = [
                             limit: 4096, // 4kb
                         },
                     },
-
-                    // Inline lightweight images as Base64 encoded DataUrl string
                     {
                         loader: 'url-loader',
                         options: {
                             name: define.rs_asset_name,
-                            limit: 4096, // 4kb
+                            limit: 8192, // 4kb
                         },
                     },
                 ],
             },
-
-            // Or return public URL to image resource
             {
                 loader: 'file-loader',
                 options: {
@@ -43,7 +37,24 @@ const rules = [
                 },
             },
         ],
+        exclude: [
+            resolve(define.rs_root, '/assets/fonts'),
+            resolve(define.rs_root, '/assets/svgstore')
+        ]
     },
+    // {
+    //     test: /\.jpe?g$/,
+    //     loaders: [
+    //         {
+    //             loader: 'lqip-loader',
+    //             options: {
+    //                 name: '[hash:4].[ext]',
+    //                 base64: true,
+    //                 palette: true
+    //             }
+    //         },
+    //     ]
+    // },
     {
         test: define.rs_regexp_images,
         loader: 'image-webpack-loader',
