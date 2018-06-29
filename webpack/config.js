@@ -8,7 +8,6 @@ const alias = require('./alias');
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
-
 const entryPoint = require('./entry-point');
 
 // process.noDeprecation = true;

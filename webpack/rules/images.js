@@ -7,45 +7,71 @@ const svgo = require('../svgo');
 const rules = [
     {
         test: define.rs_regexp_images,
-        use: [
+        oneOf: [
+            // Inline lightweight images into CSS
+            {
+                issuer: define.rs_regexp_styles,
+                oneOf: [
+                    // Inline lightweight SVGs as UTF-8 encoded DataUrl string
+                    {
+                        test: /\.svg$/,
+                        loader: 'svg-url-loader',
+                        options: {
+                            name: define.rs_asset_name,
+                            limit: 4096, // 4kb
+                        },
+                    },
+
+                    // Inline lightweight images as Base64 encoded DataUrl string
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: define.rs_asset_name,
+                            limit: 4096, // 4kb
+                        },
+                    },
+                ],
+            },
+
+            // Or return public URL to image resource
             {
                 loader: 'file-loader',
                 options: {
                     name: define.rs_asset_name,
                     hash: 'sha512',
-                    digest: 'hex',
-                    useRelativePath: false
-                }
+                    digest: 'hex'
+                },
             },
-            {
-                loader: 'image-webpack-loader',
-                options: {
-                    bypassOnDebug: define.rs_development,
-                    mozjpeg: {
-                        quality: 80,
-                        progressive: define.rs_release
-                    },
-                    pngquant: {
-                        quality: '65-90',
-                        speed: 4
-                    },
-                    gifsicle: {
-                        colors: 256,
-                        interlaced: true,
-                        optimizationLevel: 3
-                    },
-                    optipng: {
-                        enabled: define.rs_release,
-                        optimizationLevel: 7
-                    },
-                    webp: {
-                        enabled: define.rs_release,
-                        quality: 80
-                    },
-                    svgo: svgo.config
-                }
-            }
         ],
+    },
+    {
+        test: define.rs_regexp_images,
+        loader: 'image-webpack-loader',
+        options: {
+            bypassOnDebug: define.rs_development,
+            mozjpeg: {
+                quality: 80,
+                progressive: define.rs_release
+            },
+            pngquant: {
+                quality: '65-90',
+                speed: 4
+            },
+            gifsicle: {
+                colors: 256,
+                interlaced: true,
+                optimizationLevel: 3
+            },
+            optipng: {
+                enabled: define.rs_release,
+                optimizationLevel: 7
+            },
+            webp: {
+                enabled: define.rs_release,
+                quality: 80
+            },
+            svgo: svgo.config
+        },
         exclude: [
             resolve(define.rs_root, '/assets/fonts'),
             resolve(define.rs_root, '/assets/svgstore')
