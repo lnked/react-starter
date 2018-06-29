@@ -18,6 +18,14 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 
+// const layouts = {};
+
+// glob.sync(`${basePath}/src/layouts/*.?(pug|jade)`).forEach((item) => {
+//     layouts.plugins.push(
+//         new HtmlWebpackPlugin(helpers.generateConfig(item, 'app', 'vendors'))
+//     );
+// });
+
 const plugins = [
     new ProgressBarPlugin(),
 
