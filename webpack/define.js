@@ -20,7 +20,7 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = process.argv.includes('development') || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
-const _port_ = process.env.PORT || randomInteger(8081, 8088);
+const _port_ = process.env.PORT || randomInteger(8081, 8084);
 
 module.exports = {
     rs_host: _host_,
@@ -45,7 +45,7 @@ module.exports = {
     rs_regexp_scripts: /\.(j|t)s[x]?$/i,
     rs_regexp_medias: /\.(mp4|webm|wav|mp3|m4a|aac|oga)$/i,
     rs_regexp_styles: /\.(css|less|styl|s(a|c)ss|sss)$/i, // /\.(s(a|c)ss)$/
-    rs_regexp_images: /\.(bmp|gif|jpe?g|png|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
+    rs_regexp_images: /\.(?:ico|bmp|gif|png|jpe?g|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
     rs_production: isProduction,
     rs_development: isDevelopment,
     rs_output_path: isProduction
