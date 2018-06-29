@@ -42,19 +42,6 @@ const rules = [
             resolve(define.rs_root, '/assets/svgstore')
         ]
     },
-    // {
-    //     test: /\.jpe?g$/,
-    //     loaders: [
-    //         {
-    //             loader: 'lqip-loader',
-    //             options: {
-    //                 name: '[hash:4].[ext]',
-    //                 base64: true,
-    //                 palette: true
-    //             }
-    //         },
-    //     ]
-    // },
     {
         test: define.rs_regexp_images,
         loader: 'image-webpack-loader',
