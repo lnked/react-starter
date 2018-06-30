@@ -10,7 +10,7 @@ const vendors = [
     'react-dom',
     'react-router-dom',
     'axios',
-    'store',
+    'store2',
     // 'mobx',
     // 'mobx-react',
     // 'mobx-state-tree',
