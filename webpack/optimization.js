@@ -39,12 +39,17 @@ module.exports = {
             },
             commons: {
                 test: /[\\/]node_modules[\\/]/,
-                name: 'vendors',
-                minChunks: 2,
-                chunks: 'initial',
-                enforce: true,
-                reuseExistingChunk: false
+                name: "vendor",
+                chunks: "all"
             },
+            // commons: {
+            //     test: /[\\/]node_modules[\\/]/,
+            //     name: 'vendors',
+            //     minChunks: 2,
+            //     chunks: 'initial',
+            //     enforce: true,
+            //     reuseExistingChunk: false
+            // },
             vendors: {
                 test: /[\\/]node_modules[\\/]/,
                 priority: -10

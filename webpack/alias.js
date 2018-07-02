@@ -20,7 +20,8 @@ const alias =  {
     images: resolve(define.rs_root, 'assets/images'),
     styles: resolve(define.rs_root, 'assets/styles'),
     scripts: resolve(define.rs_root, 'assets/scripts'),
-    svgstore: resolve(define.rs_root, 'assets/svgstore')
+    svgstore: resolve(define.rs_root, 'assets/svgstore'),
+    mobx: resolve(define.rs_node, 'mobx')
 }
 
 if (define.rs_preact) {
