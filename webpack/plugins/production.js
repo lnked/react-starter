@@ -11,6 +11,8 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 
+console.log('regular', `${path.resolve(define.rs_root)}/(([\w\-]+/)?([\w\-]+/)?)?[\w\-]+.(j|t)sx?`)
+
 const plugins = [
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
