@@ -10,8 +10,7 @@ const WebpackChunkHash = require('webpack-chunk-hash');
 const WebpackManifestPlugin = require('webpack-manifest-plugin');
 const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
-
-console.log('regular', `${path.resolve(define.rs_root)}/(([\w\-]+/)?([\w\-]+/)?)?[\w\-]+.(j|t)sx?`)
+const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
 const plugins = [
     new WebpackManifestPlugin({
@@ -25,6 +24,13 @@ const plugins = [
         preload : 'js-lazy',
         preloadFonts: true
     }),
+
+    new ReplacePlugin([{
+        partten: /\/Users\/lnked\/web\/[\w\-\d\.\s]+\/(src\/)?[\w\d\-\/\.\<\>\s]+/gi,
+        replacement: () => {
+            return '';
+        }
+    }]),
 
     // new HtmlCriticalWebpackPlugin({
     //     base: define.rs_dist,
