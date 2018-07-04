@@ -3,8 +3,6 @@ import * as css from './styles.scss'
 
 import { Title, Picture, Input } from 'components'
 
-import image from 'images/cat.jpg'
-
 export function ChangelogPage () {
     document.title = 'Changelog Page'
 
@@ -20,7 +18,7 @@ export function ChangelogPage () {
             </p>
 
             <Picture image={require('images/dog.jpg')} width={400} alt="" />
-            <Picture image={image} width={400} alt="" />
+            <Picture image={require('images/cat.jpg')} width={400} alt="" />
         </div>
     )
 }

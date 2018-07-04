@@ -3,8 +3,6 @@ import * as css from './styles.scss'
 
 import { Badge, Picture, Title } from 'components'
 
-import dog from 'images/dog.jpg'
-
 export function MainPage () {
     document.title = 'Main Page'
 
@@ -27,7 +25,7 @@ export function MainPage () {
             </p>
 
             <div className={css.group}>
-                <Picture image={dog} width={400} alt=""/>
+                <Picture image={require('images/dog.jpg')} width={400} alt=""/>
             </div>
         </div>
     )
