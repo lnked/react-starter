@@ -3,16 +3,24 @@
 const define = require('./define');
 const path = require('path');
 
-// const webpack = require('webpack');
-// const resolver = require('postcss-import-resolver')
+const webpack = require('webpack');
+const resolver = require('postcss-import-resolver')
 
 const plugins = [];
 
 plugins.push(
     require('precss'),
     require('postcss-import')({
-        root: define.rs_root,
-        path: define.rs_root
+        // addDependencyTo: webpack,
+        path: [
+            define.rs_root,
+            path.resolve(define.rs_root, 'assets/styles')
+        ],
+        // resolve: resolver({
+        //     alias: {
+        //       '~': 'src/'
+        //     }
+        // })
     }),
     require('postcss-nested'),
     require('postcss-calc'),
@@ -70,6 +78,6 @@ if (define.rs_production) {
 }
 
 module.exports = ({ file, options, env }) => ({
-    // parser: file.extname === '.sss' ? 'sugarss' : 'postcss-scss',
+    parser: file.extname === '.sss' ? 'sugarss' : 'postcss-scss',
     plugins: plugins
 })
