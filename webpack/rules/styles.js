@@ -12,7 +12,7 @@ const cssConfig = [
     {
         loader: 'css-loader',
         options: {
-            importLoaders: 4,
+            importLoaders: 3,
             modules: true,
             camelCase: true,
             sourceMap: define.rs_sourceMap,
