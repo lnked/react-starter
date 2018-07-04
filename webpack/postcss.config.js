@@ -1,23 +1,26 @@
 'use strict';
 
-const postcss = [];
-
 const define = require('./define');
-const { resolve } = require('path');
+const path = require('path');
 
-postcss.push(
+// const webpack = require('webpack');
+// const resolver = require('postcss-import-resolver')
+
+const plugins = [];
+
+plugins.push(
     require('precss'),
     require('postcss-import')({
         root: define.rs_root,
         path: define.rs_root
     }),
+    require('postcss-nested'),
     require('postcss-calc'),
     require('postcss-selector-not'),
     require('postcss-short-spacing'),
     require('postcss-simple-vars'),
     require('postcss-mixins'),
     require('postcss-nesting'),
-    require('postcss-nested'),
     require('postcss-selector-matches'),
     require('postcss-custom-properties'),
     require('postcss-custom-selectors'),
@@ -43,17 +46,12 @@ postcss.push(
 );
 
 if (define.rs_production) {
-    postcss.push(
+    plugins.push(
         require('postcss-will-change-transition'),
         require('postcss-will-change'),
         require('postcss-discard-comments'),
         require('postcss-color-rgba-fallback'),
         require('postcss-emptymediaqueries'),
-        // require('postcss-uncss')({
-        //     html: [
-        //         resolve(__dirname, 'app')
-        //     ]
-        // }),
         require('cssnano')({
             safe: true,
             calc: false,
@@ -71,4 +69,7 @@ if (define.rs_production) {
     );
 }
 
-module.exports.plugins = postcss;
+module.exports = ({ file, options, env }) => ({
+    // parser: file.extname === '.sss' ? 'sugarss' : 'postcss-scss',
+    plugins: plugins
+})

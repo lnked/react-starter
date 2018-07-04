@@ -1,8 +1,8 @@
 'use strict';
 
 const define = require('../define');
-const postcss = require('../postcss');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { resolve } = require('path');
 
 const minimizeCssOptions = {
     discardComments: { removeAll: true }
@@ -29,17 +29,6 @@ const cssConfig = [
 
 const usesConfig = [];
 
-// if (define.rs_development) {
-//     usesConfig.push({
-//         loader: "typings-for-css-modules-loader",
-//         options: {
-//             modules: true,
-//             camelCase: true,
-//             namedExport: true
-//         }
-//     });
-// }
-
 usesConfig.push({
     loader: 'typed-css-modules-loader',
     options: {
@@ -54,8 +43,8 @@ usesConfig.push({
     loader: 'postcss-loader',
     options: {
         sourceMap: define.rs_sourceMap,
-        plugins: () => {
-            return postcss.plugins;
+        config: {
+            path: resolve(__dirname, '../postcss.config.js')
         }
     }
 });
