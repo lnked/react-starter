@@ -78,6 +78,6 @@ if (define.rs_production) {
 }
 
 module.exports = ({ file, options, env }) => ({
-    parser: file.extname === '.sss' ? 'sugarss' : 'postcss-scss',
+    // parser: file.extname === '.sss' ? 'sugarss' : 'postcss-scss',
     plugins: plugins
 })
