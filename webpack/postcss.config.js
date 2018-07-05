@@ -4,14 +4,14 @@ const define = require('./define');
 const path = require('path');
 
 const webpack = require('webpack');
-const resolver = require('postcss-import-resolver')
+// const resolver = require('postcss-import-resolver')
 
 const plugins = [];
 
 plugins.push(
     require('precss'),
     require('postcss-import')({
-        // addDependencyTo: webpack,
+        addDependencyTo: webpack,
         path: [
             define.rs_root,
             path.resolve(define.rs_root, 'assets/styles')

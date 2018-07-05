@@ -22,7 +22,7 @@ module.exports = webpackMerge(defaultConfig, {
     stats: stats.config,
 
     performance: define.rs_release && {
-        hints: 'errors',
+        hints: 'warning',
         maxAssetSize: 500000,
         maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))

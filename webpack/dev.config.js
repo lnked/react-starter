@@ -16,7 +16,7 @@ const define = require('./define');
 const webpackConfig = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
-    devtool: 'cheap-module-source-map',
+    devtool: 'cheap-module-eval-source-map',
 
     watch: true,
 

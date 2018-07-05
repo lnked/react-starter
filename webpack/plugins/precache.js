@@ -1,6 +1,6 @@
 'use strict';
 
-const { join } = require('path');
+const { join, resolve } = require('path');
 
 const define  = require('../define');
 const environment = require('../environment').config;
@@ -14,26 +14,25 @@ const plugins = [
         minify: true,
         verbose: false,
         cacheId: cache,
-        filename: '../sw.js',
+        filename: resolve(define.rs_dist, 'sw.js'),
         stripPrefix: `${define.rs_distBase}/`,
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
         navigateFallback: '/index.html',
 
         staticFileGlobs: [
-            `${define.rs_distBase}/*.html`,
-            `${define.rs_distBase}/*.json`,
             `${define.rs_distBase}/**/*.js`,
-            `${define.rs_distBase}/**/*.br`,
+            `${define.rs_distBase}/**/*.json`,
             `${define.rs_distBase}/**/*.gz`,
+            `${define.rs_distBase}/**/*.gz`,
+            `${define.rs_distBase}/**/*.br`,
             `${define.rs_distBase}/**/*.css`,
             `${define.rs_distBase}/**/*.png`,
             `${define.rs_distBase}/**/*.gif`,
             `${define.rs_distBase}/**/*.svg`,
-            `${define.rs_distBase}/**/*.jpg`,
+            `${define.rs_distBase}/**/*.jpe?g`,
             `${define.rs_distBase}/**/*.html`,
-            `${define.rs_distBase}/**/*.woff`,
-            `${define.rs_distBase}/**/*.woff2`,
+            `${define.rs_distBase}/**/*.woff2?`,
             `${define.rs_distBase}/assets/images/**.*`,
             `${define.rs_distBase}/assets/manifest.webmanifest`
         ],
@@ -42,7 +41,8 @@ const plugins = [
 
         mergeStaticsConfig: false,
 
-        maximumFileSizeToCacheInBytes: 8388608,
+        maximumFileSizeToCacheInBytes: 18388608 ,
+
         staticFileGlobsIgnorePatterns: [
             /\.map$/,
             /\.DS_Store$/,
@@ -50,7 +50,9 @@ const plugins = [
             /\.cache$/,
             /\.gitkeep$/,
             /\.robots.txt$/,
-            /webpack-manifest\.json$/
+            /react\-loadable.json$/,
+            /asset\-manifest\.json$/,
+            /webpack\-manifest\.json$/
         ],
 
         runtimeCaching: [
