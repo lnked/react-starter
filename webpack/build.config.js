@@ -15,14 +15,14 @@ const minimizer = require('./minimizer');
 module.exports = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
-    devtool: 'source-map',
+    devtool: define.rs_release ? false : 'source-map',
 
     bail: true,
 
     stats: stats.config,
 
     performance: define.rs_release && {
-        hints: 'warning',
+        hints: 'errors',
         maxAssetSize: 500000,
         maxEntrypointSize: 500000,
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
