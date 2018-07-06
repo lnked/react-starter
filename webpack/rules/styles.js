@@ -8,6 +8,21 @@ const minimizeCssOptions = {
     discardComments: { removeAll: true }
 };
 
+const styleLoader = [
+    {
+        loader: 'style-loader'
+    }
+]
+
+const miniCssLoader = [
+    {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+            publicPath: './'
+        }
+    }
+]
+
 const cssConfig = [
     {
         loader: 'css-loader',
@@ -63,7 +78,7 @@ const rules = define.rs_generate_css ? [
         {
             test: define.rs_regexp_styles,
             use: [
-                MiniCssExtractPlugin.loader,
+                ...miniCssLoader,
                 ...cssConfig,
                 ...usesConfig
             ],
@@ -75,7 +90,7 @@ const rules = define.rs_generate_css ? [
         {
             test: /\.css$/,
             use: [
-                MiniCssExtractPlugin.loader,
+                ...miniCssLoader,
                 ...cssConfig
             ]
         }
@@ -83,9 +98,7 @@ const rules = define.rs_generate_css ? [
     {
         test: define.rs_regexp_styles,
         use: [
-            {
-                loader: 'style-loader'
-            },
+            ...styleLoader,
             ...cssConfig,
             ...usesConfig
         ],
@@ -97,9 +110,7 @@ const rules = define.rs_generate_css ? [
     {
         test: /\.(css)$/,
         use: [
-            {
-                loader: 'style-loader'
-            },
+            ...styleLoader,
             ...cssConfig
         ]
     }

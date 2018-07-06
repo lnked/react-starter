@@ -30,7 +30,7 @@ module.exports = {
     rs_dist: _dist_,
     rs_node: _node_,
     rs_preact: false,
-    rs_sourceMap: !isRelease,
+    rs_sourceMap: true,
     rs_source: _source_,
     rs_distBase: _distBase_,
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer

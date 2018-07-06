@@ -17,6 +17,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
+const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
 // const layouts = {};
 
@@ -58,9 +59,20 @@ const plugins = [
 
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
 
+    new CssUrlRelativePlugin({
+        importLoaders: 3,
+        modules: true,
+        camelCase: true,
+        sourceMap: define.rs_sourceMap,
+        minimize: define.rs_production,
+        localIdentName: define.rs_development
+            ? '[path][name]__[local]--[hash:base64:5]'
+            : '[sha1:hash:hex:4]'
+    }),
+
     new MiniCssExtractPlugin({
-        filename: define.rs_production ? 'css/[name].[contenthash:5].css' : '[name].css',
-        chunkFilename: "[id].css"
+        filename: define.rs_production ? 'css/[name].[contenthash:4].css' : '[name].css',
+        chunkFilename: define.rs_production ? '[id].[hash:3].css' : '[id].css',
     }),
 
     new ScriptExtHtmlWebpackPlugin({

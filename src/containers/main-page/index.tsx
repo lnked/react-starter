@@ -25,6 +25,7 @@ export function MainPage () {
             </p>
 
             <div className={css.group}>
+                <div className={css.image} />
                 <Picture image={require('images/cat.jpg')} width={400} alt=""/>
             </div>
         </div>
