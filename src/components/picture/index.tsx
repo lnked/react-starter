@@ -44,26 +44,35 @@ export class Picture extends React.Component<P, {}> {
         const { loaded } = this.state
         const { className, image, width, height, title, alt } = this.props
 
-        const props: any = {
-            width,
-            height
-        }
+        // const props: any = {
+        //     width,
+        //     height
+        // }
 
-        if (title) {
-            props.title = title
-        }
+        // if (title) {
+        //     props.title = title
+        // }
 
-        const img = {
-            width,
-            height,
-            maxWidth: '100%',
-            border: '1px solid red'
-        }
+        // const img = {
+        //     width,
+        //     height,
+        //     maxWidth: '100%',
+        //     border: '1px solid red'
+        // }
 
         return (
             <div className={cx({ image: true }, className)}>
-                {loaded && <img src={image} {...props} alt={alt} />}
-                {!loaded && <svg style={img} />}
+                {loaded &&
+                    <img
+                        src={image}
+                        width={width}
+                        height={height}
+                        title={title}
+                        alt={alt}
+                    />
+                }
+                {/* {loaded && <img src={image} {...props} alt={alt} />} */}
+                {/* {!loaded && <svg style={img} />} */}
 
                 {/*
                 <div style={{background: `no-repeat cover url("${lqip}")`}}>

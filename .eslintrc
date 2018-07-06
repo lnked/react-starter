@@ -1,4 +1,5 @@
 {
+    "root": true,
     "parser": "babel-eslint",
     "extends": [
         "standard",
@@ -67,7 +68,7 @@
                 "ignoreTranspilerName": false
             }
         ],
-        "jsx-a11y/label-has-for": 0,
+        "jsx-a11y/label-has-associated-control": 0,
         "immutable/no-let": 0,
         "immutable/no-this": 0,
         "immutable/no-mutation": 0,
