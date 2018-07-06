@@ -23,7 +23,7 @@ html(
 
         title React template
 
-        script(src=https://cdn.ravenjs.com/3.24.0/raven.min.js, crossorigin=anonymous)
+        script(src='https://cdn.ravenjs.com/3.24.0/raven.min.js', crossorigin='anonymous')
 
     body.loading
         svg(xmlns='http://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
@@ -42,13 +42,13 @@ html(
                     | , Safari or Firefox for a better experience.
 
         script.
+            Raven.config('https://b1633193741740e58c7122d526174117@sentry.io/1238565', {
+                release: '1-0-0',
+                environment: 'development-test'
+            }).install();
+
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                     navigator.serviceWorker.register('/sw.js');
                 });
             }
-
-            Raven.config('https://b1633193741740e58c7122d526174117@sentry.io/1238565', {
-                release: '1-0-0',
-                environment: 'development-test',
-            }).install()
