@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Title, Picture, Input } from 'components'
+import { Title, Input } from 'components'
 
 export function ChangelogPage () {
     document.title = 'Changelog Page'
@@ -16,9 +16,6 @@ export function ChangelogPage () {
             <p className={css.description}>
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
-
-            <Picture image={require('images/dog.jpg')} width={400} alt="" />
-            <Picture image={require('images/cat.jpg')} width={400} alt="" />
         </div>
     )
 }

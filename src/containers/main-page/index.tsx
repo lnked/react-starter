@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Badge, Picture, Title } from 'components'
+import { Badge, Title } from 'components'
 
 export function MainPage () {
     document.title = 'Main Page'
@@ -26,7 +26,6 @@ export function MainPage () {
 
             <div className={css.group}>
                 <div className={css.image} />
-                <Picture image={require('images/cat.jpg')} width={400} alt=""/>
             </div>
         </div>
     )
