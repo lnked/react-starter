@@ -1,3 +1,3 @@
 import * as React from 'react'
 
-export ({ label }) => <h1>{label}</h1>
+export const Label = ({ label }: { label: string }) => <h1>{label}</h1>

@@ -14,7 +14,7 @@ export interface S {
 export class RadioGroup extends React.Component<P, S> {
     static defaultProps = {
         checked: false,
-        handleChange: (value) => {
+        handleChange: (value: string | number) => {
             console.log('check radio: = ', value)
         }
     }

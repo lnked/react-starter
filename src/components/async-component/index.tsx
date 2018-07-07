@@ -4,14 +4,14 @@ export interface S {
     Component: any;
 }
 
-export (loader, collection) => (class AsyncComponent extends React.Component<{}, S> {
+export const AsyncComponent = (loader: any, collection: any) => (class AsyncComponent extends React.Component<{}, S> {
     state = {
         Component: null
     }
 
     componentDidMount () {
         if (!this.state.Component) {
-            loader().then((Component) => {
+            loader().then((Component: any) => {
                 this.setState({ Component })
             })
         }

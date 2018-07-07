@@ -2,7 +2,7 @@ import Loadable from 'react-loadable'
 
 import { Loading } from 'components'
 
-export function Preloader (opts) {
+export const Preloader = (opts: any): any => {
     return Loadable({
         loading: Loading,
         delay: 300,

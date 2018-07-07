@@ -44,7 +44,9 @@
             "typings",
             "src/typings",
             "styled-components",
-            "jest-styled-components",
+            "jest-styled-components"
+        ],
+        "typeRoots": [
             "node_modules/@types"
         ],
         "lib": [
@@ -103,10 +105,6 @@
             ]
         }
     },
-    "files": [
-        "typings/*.d.ts",
-        "typings/**/*.d.ts"
-    ],
     "filesGlob": [
         "src/**/*.ts",
         "src/**/*.tsx",
@@ -121,9 +119,7 @@
         "dist",
         "tests",
         "webpack",
-        "coverage",
-        "node_modules",
-        "**/node_modules/*"
+        "coverage"
     ],
     "plugins": [
         {

@@ -1,4 +1,4 @@
-        import * as React from 'react'
+import * as React from 'react'
 import * as css from './styles.scss'
 
 export class Loader extends React.PureComponent<{}, {}> {
