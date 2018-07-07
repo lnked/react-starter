@@ -23,10 +23,6 @@ export function MainPage () {
             <p className={css.description}>
                 Reference site about Lorem Ipsum, giving information on its origins.
             </p>
-
-            <div className={css.group}>
-                <div className={css.image} />
-            </div>
         </div>
     )
 }
