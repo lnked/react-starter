@@ -12,7 +12,7 @@ const rules = [
             options: {
                 name,
                 // Limit at 25k. Above that it emits separate files
-                limit: 10240,
+                limit: 25 * 1024,
                 // url-loader sets mimetype if it's passed.
                 // Without this it derives it from the file extension
                 mimetype: "application/font-woff",
@@ -28,7 +28,7 @@ const rules = [
         loader: 'url-loader',
         options: {
             name,
-            limit: 10240,
+            limit: 10 * 1024,
             mimetype: 'application/octet-stream',
             outputPath: 'fonts/'
         },
@@ -48,7 +48,7 @@ const rules = [
         loader: 'url-loader',
         options: {
             name,
-            limit: 10240,
+            limit: 10 * 1024,
             mimetype: 'image/svg+xml',
             outputPath: 'fonts/'
         },

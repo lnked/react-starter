@@ -14,7 +14,6 @@ const entryPoint = require('./entry-point');
 // process.traceDeprecation = true;
 
 module.exports = {
-
     context: define.rs_root,
 
     target: define.rs_target,
