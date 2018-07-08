@@ -44,6 +44,12 @@ const plugins = [
         verbose: false
     }),
 
+    // new webpack.DllPlugin({
+    //     context: __dirname,
+    //     name: '[name]_[hash]',
+    //     path: resolve(define.rs_dist, 'manifest.json'),
+    // }),
+
     // /(en-gb|en|ru)/
     new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/(ru)$/),
 
