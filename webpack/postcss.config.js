@@ -62,6 +62,8 @@ if (define.rs_production) {
         require('postcss-will-change'),
         require('postcss-discard-comments'),
         require('postcss-color-rgba-fallback'),
+        require('postcss-reduce-idents'),
+        require('postcss-minify-font-values'),
         require('postcss-emptymediaqueries'),
         require('cssnano')({
             safe: true,
