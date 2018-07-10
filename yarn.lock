@@ -1323,9 +1323,9 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@types/jest@23.1.4":
-  version "23.1.4"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.4.tgz#71e1e2d08b1db742f479ee2795536ebc999a2419"
+"@types/jest@23.1.5":
+  version "23.1.5"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.5.tgz#e31be003956e1fa8c860124d99bea9ae327ae37b"
 
 "@types/jimp@^0.2.0":
   version "0.2.28"
@@ -4096,9 +4096,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000832"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000832.tgz#afe34c9f7c62139fd1c607db2ab7308bbb6a5158"
 
-caniuse-lite@1.0.30000864, caniuse-lite@^1.0.30000864:
-  version "1.0.30000864"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000864.tgz#7a08c78da670f23c06f11aa918831b8f2dd60ddc"
+caniuse-lite@1.0.30000865:
+  version "1.0.30000865"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000865.tgz#70026616e8afe6e1442f8bb4e1092987d81a2f25"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000823, caniuse-lite@^1.0.30000830, caniuse-lite@^1.0.30000832:
   version "1.0.30000832"
@@ -4111,6 +4111,10 @@ caniuse-lite@^1.0.30000844:
 caniuse-lite@^1.0.30000859:
   version "1.0.30000859"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000859.tgz#da974adc5348fffe94724877a7ef8cb5d6d3d777"
+
+caniuse-lite@^1.0.30000864:
+  version "1.0.30000864"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000864.tgz#7a08c78da670f23c06f11aa918831b8f2dd60ddc"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -17535,9 +17539,9 @@ typescript-plugin-styled-components@0.0.6:
   dependencies:
     ts-is-kind "^1.0.0"
 
-typescript-styled-plugin@0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.8.1.tgz#2f7dcd291249681afc7dfeb598584b27f3a0f363"
+typescript-styled-plugin@0.9.2:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/typescript-styled-plugin/-/typescript-styled-plugin-0.9.2.tgz#cb36906bc4cd8a9b63f7e79a7ccf802561f18485"
   dependencies:
     typescript-template-language-service-decorator "^1.5.0"
     vscode-css-languageservice "^3.0.9-next.19"
