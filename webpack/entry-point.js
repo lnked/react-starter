@@ -3,7 +3,7 @@
 const define = require('./define');
 const { resolve } = require('path');
 
-const vendors = [
+const bundle = [
     // 'core-js/es6/map',
     // 'core-js/es6/set',
     'react',
@@ -16,18 +16,18 @@ const vendors = [
     // 'mobx-state-tree',
 ];
 
-const index = [
+const client = [
     ...define.rs_development ? [
         '@babel/polyfill',
         `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
         'webpack/hot/only-dev-server',
     ] : [],
-    resolve(define.rs_root, 'index'),
+    resolve(define.rs_root, 'client'),
 ];
 
 const entryPoint = {
-    vendors,
-    index
+    bundle,
+    client
 }
 
 module.exports.config = entryPoint;

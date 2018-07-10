@@ -23,7 +23,7 @@ const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
 // glob.sync(`${basePath}/src/layouts/*.?(pug|jade)`).forEach((item) => {
 //     layouts.plugins.push(
-//         new HtmlWebpackPlugin(helpers.generateConfig(item, 'app', 'vendors'))
+//         new HtmlWebpackPlugin(helpers.generateConfig(item, 'app', 'bundle'))
 //     );
 // });
 
@@ -63,7 +63,7 @@ const plugins = [
         options: {}
     }),
 
-    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'vendors')),
+    new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
 
     new CssUrlRelativePlugin({
         importLoaders: 3,
@@ -82,7 +82,7 @@ const plugins = [
     }),
 
     new ScriptExtHtmlWebpackPlugin({
-        defer: [/vendors/, /.*bundle/],
+        defer: [/vendors/, /bundle/, /.*bundle/],
         inline: 'startup',
         defaultAttribute: 'async'
     }),

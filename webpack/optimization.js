@@ -40,18 +40,18 @@ module.exports = {
             },
             commons: {
                 test: /[\\/]node_modules[\\/]/,
-                name: "vendor",
+                name: "commons",
                 chunks: "all"
             },
             // commons: {
             //     test: /[\\/]node_modules[\\/]/,
-            //     name: 'vendors',
+            //     name: 'bundle',
             //     minChunks: 2,
             //     chunks: 'initial',
             //     enforce: true,
             //     reuseExistingChunk: false
             // },
-            vendors: {
+            bundle: {
                 test: /[\\/]node_modules[\\/]/,
                 priority: -10
             }
