@@ -1,7 +1,7 @@
 'use strict';
 
 const { resolve } = require('path');
-const { randomInteger } = require('./functions');
+const { randomInteger, parseArguments } = require('./functions');
 
 const _source_ = 'src';
 const _distBase_ = 'dist';
@@ -11,13 +11,15 @@ const _base_ = resolve(__dirname, '../');
 const _root_ = resolve(__dirname, `../${_source_}`);
 const _dist_ = resolve(__dirname, `../${_distBase_}`);
 
-const isDeploy  = process.argv.includes('deploy');
-const isAnalyze = process.argv.includes('analyze');
-const isRelease = process.argv.includes('release') || isAnalyze;
-const isAssemply = process.argv.includes('assemply');
+const options = parseArguments(process.argv);
+
+const isDeploy  = options.opts === 'deploy';
+const isAnalyze = options.opts === 'analyze';
+const isRelease = options.opts === 'release' || isAnalyze;
+const isAssemply = options.opts === 'assemply';
 
 const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
-const isDevelopment = process.argv.includes('development') || !isProduction;
+const isDevelopment = options.opts === 'development' || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
 const _port_ = process.env.PORT || randomInteger(8081, 8084);
@@ -52,5 +54,5 @@ module.exports = {
     rs_output_path: isProduction
                     ? '/assets/'
                     : '',
-    rs_environment: isProduction ? 'production' : 'development'
+    rs_environment: options.env || 'development'
 }

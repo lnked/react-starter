@@ -5,11 +5,11 @@ const { resolve } = require('path');
 const define = require('./define');
 
 const fs = require('fs');
-const staging = `.env.${define.rs_environment}`;
+const file = `.env.${define.rs_environment}`;
 const dotenv = require('dotenv');
 
 const config = dotenv.config({
-    path: resolve(process.cwd(), staging)
+    path: resolve(process.cwd(), file)
 });
 
 const formatter = (params, stringify = false) => {
