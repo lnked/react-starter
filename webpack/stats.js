@@ -11,6 +11,7 @@ module.exports.config = {
     timings: true,
     version: false,
     warnings: true,
+    entripoints: true,
     optimizationBailout: true,
     colors: {
         green: '\u001b[32m',

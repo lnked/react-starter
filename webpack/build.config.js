@@ -15,7 +15,7 @@ const minimizer = require('./minimizer');
 module.exports = webpackMerge(defaultConfig, {
     mode: define.rs_environment,
 
-    devtool: 'source-map',
+    devtool: false,
 
     bail: true,
 
