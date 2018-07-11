@@ -14,7 +14,8 @@
             ]
         }],
         ["@babel/preset-stage-2", {
-            "decoratorsLegacy": true
+            "decoratorsLegacy": true,
+            "pipelaneProposal": "minimal"
         }],
         "@babel/preset-typescript",
         "@babel/preset-react"

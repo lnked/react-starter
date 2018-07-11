@@ -3,6 +3,8 @@
 const { resolve } = require('path');
 const { randomInteger, parseArguments } = require('./functions');
 
+const options = parseArguments(process.argv);
+
 const _source_ = 'src';
 const _distBase_ = 'dist';
 
@@ -10,8 +12,6 @@ const _node_ = resolve(__dirname, '../node_modules');
 const _base_ = resolve(__dirname, '../');
 const _root_ = resolve(__dirname, `../${_source_}`);
 const _dist_ = resolve(__dirname, `../${_distBase_}`);
-
-const options = parseArguments(process.argv);
 
 const isDeploy  = options.opts === 'deploy';
 const isAnalyze = options.opts === 'analyze';
