@@ -27,10 +27,10 @@ module.exports = {
         pathinfo: define.rs_development,
         publicPath: define.rs_output_path,
         filename: define.rs_production
-                    ? 'js/[name].[chunkhash:3].js'
+                    ? 'js/[name].[hash:4].js'
                     : '[name].js',
         chunkFilename: define.rs_production
-                    ? 'js/[name].[chunkhash:3].c.js'
+                    ? 'js/[name].[hash:4].c.js'
                     : '[name].c.js',
         jsonpFunction: 'WJ',
         hotUpdateFunction: 'UF'

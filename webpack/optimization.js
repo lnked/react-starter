@@ -7,8 +7,6 @@ module.exports = {
     minimize: true,
     concatenateModules: true,
     noEmitOnErrors: true,
-    namedModules: true,
-    namedChunks: true,
     runtimeChunk: {
         name: 'startup'
     },
