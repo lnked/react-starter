@@ -47,10 +47,10 @@ export asyncComponent
 // import React, {Component} from 'react';
 // import {Route, Switch} from 'react-router-dom';
 
-// import HomePage from './containers/HomePage';
+// import HomePage from './pages/HomePage';
 
 // const AsyncProfilePage    = asyncComponent(() => {
-//     return import('./containers/ProfilePage');
+//     return import('./pages/ProfilePage');
 // });
 
 // class Routes extends Component {

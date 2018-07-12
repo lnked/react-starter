@@ -7,7 +7,7 @@ export const routes: any = [
                 webpackMode: "lazy",
                 webpackChunkName: "MainPage"
             */
-            'containers/main-page'
+            'pages/main-page'
         )
     }, {
         path: '/changelog',
@@ -16,7 +16,7 @@ export const routes: any = [
                 webpackMode: "lazy",
                 webpackChunkName: "ChangelogPage"
             */
-            'containers/changelog-page'
+            'pages/changelog-page'
         )
     }, {
         status: 404,
@@ -26,7 +26,7 @@ export const routes: any = [
                 webpackMode: "lazy",
                 webpackChunkName: "NoMatch"
             */
-            'containers/nomatch'
+            'pages/nomatch'
         )
     }
 ]

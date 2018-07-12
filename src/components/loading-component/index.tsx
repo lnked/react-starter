@@ -29,7 +29,7 @@ export class LoadingComponent extends React.Component<Loadable.LoadingComponentP
 // export LoadingComponent
 
 // const LoadableComponent = Loadable({
-//     loader: () => import('containers/home'),
+//     loader: () => import('pages/home'),
 //     LoadingComponent: Loading,
 //     delay: 300,
 // })

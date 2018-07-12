@@ -14,7 +14,7 @@ export const Preloader = (opts: any): any => {
 export default Preloader
 
 // const getChunk = chunkName =>
-//     import(/*  webpackMode: "lazy", webpackChunkName: "[request]" */ `containers/${chunkName}`)
+//     import(/*  webpackMode: "lazy", webpackChunkName: "[request]" */ `pages/${chunkName}`)
 
 // const AboutUs = props => <ComponentChunk componentProps={props} loadChunk={getChunk('about-us')} />
 
