@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { Badge, Title } from 'components'
 
-import { src, preview, dimensions } from './assets/image.jpg'
+import src from './assets/image.jpg'
 
 export function MainPage () {
     document.title = 'Main Page'
@@ -28,9 +28,6 @@ export function MainPage () {
 
             <div className={css.group}>
                 <div className={css.image} />
-                <p>src: {src}</p>
-                <p>preview: {preview}</p>
-                <p>dimensions : {dimensions}</p>
                 <img src={src} alt="" />
             </div>
         </div>

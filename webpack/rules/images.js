@@ -13,26 +13,44 @@ const options = {
 
 const loaders = [];
 
-if (define.rs_imagesPlaceholders)
-{
-    loaders.push({
-        test: /\.(gif|png|jpe?g)$/i,
-        use: [
-            {
-                loader: "image-trace-loader",
-                options: {
-                    color: options.traceColor,
-                }
-            },
-            {
-                loader: 'sqip-loader',
-                options: {
-                    numberOfPrimitives: 20
-                }
-            }
-        ]
-    });
-}
+// if (define.rs_imagesPlaceholders)
+// {
+//     loaders.push({
+//         test: /\.(gif|png|jpe?g)$/i,
+//         use: [
+//             {
+//                 loader: 'sqip-loader',
+//                 options: {
+//                     numberOfPrimitives: 20
+//                 }
+//             },
+//             {
+//                 loader: 'url-loader',
+//                 options: {
+//                     limit: 8192
+//                 }
+//             }
+//         ]
+//     });
+
+//     loaders.push({
+//         test: /\.(gif|png|jpe?g)$/i,
+//         use: [
+//             {
+//                 loader: "image-trace-loader",
+//                 options: {
+//                     color: options.traceColor,
+//                 }
+//             },
+//             {
+//                 loader: 'sqip-loader',
+//                 options: {
+//                     numberOfPrimitives: 20
+//                 }
+//             }
+//         ]
+//     });
+// }
 
 loaders.push({
     test: define.rs_regexp_images,
