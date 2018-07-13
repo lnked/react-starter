@@ -17,7 +17,7 @@
         "isolatedModules": false,
         "strict": true,
         "skipLibCheck": true,
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "noImplicitThis": false,
         "strictNullChecks": true,
         "alwaysStrict": true,
