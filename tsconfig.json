@@ -2,7 +2,7 @@
     "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "target": "es5",
+        "target": "esnext",
         "module": "esnext",
         "baseUrl": ".",
         "outDir": "dist",
