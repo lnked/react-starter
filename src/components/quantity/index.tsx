@@ -71,7 +71,7 @@ export class Quantity extends React.Component<T, S> {
         }
     }
 
-    handleChange = (e) => {
+    handleChange = (e: Event) => {
         const re = /^\d+$/
 
         if (re.test(e.nativeEvent.target.value)) {

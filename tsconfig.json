@@ -1,5 +1,4 @@
 {
-    "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
         "target": "es5",
@@ -10,6 +9,7 @@
         "mapRoot": "./",
         "sourceRoot": "./src",
         "sourceMap": true,
+        "diagnostics": true,
         "declaration": false,
         "removeComments": true,
         "importHelpers": true,
@@ -18,7 +18,7 @@
         "strict": true,
         "skipLibCheck": true,
         "noImplicitAny": false,
-        "noImplicitThis": false,
+        "noImplicitThis": true,
         "strictNullChecks": true,
         "alwaysStrict": true,
         "stripInternal": true,
@@ -108,6 +108,8 @@
             ]
         }
     },
+    "compileOnSave": false,
+    "buildOnSave": false,
     "filesGlob": [
         "src/**/*.ts",
         "src/**/*.tsx",
@@ -141,8 +143,8 @@
         }
     ],
     "awesomeTypescriptLoaderOptions": {
-        "useCache": true,
         "useBabel": true,
+        "useCache": false,
         "forkChecker": true,
         "transpileOnly": true,
         "useWebpackText": true,
