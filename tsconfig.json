@@ -2,7 +2,7 @@
     "compileOnSave": true,
     "compilerOptions": {
         "jsx": "react",
-        "target": "esnext",
+        "target": "es5",
         "module": "esnext",
         "baseUrl": ".",
         "outDir": "dist",
@@ -10,7 +10,7 @@
         "mapRoot": "./",
         "sourceRoot": "./src",
         "sourceMap": true,
-        "declaration": true,
+        "declaration": false,
         "removeComments": true,
         "importHelpers": true,
         "downlevelIteration": true,
@@ -47,9 +47,12 @@
             "jest-styled-components"
         ],
         "typeRoots": [
+            "typings",
+            "src/typings",
             "node_modules/@types"
         ],
         "lib": [
+            "es2017",
             "es2015",
             "es6",
             "dom"
