@@ -2,8 +2,6 @@
 
 const { resolve, dirname } = require('path');
 
-const ignoredFiles = require('react-dev-utils/ignoredFiles');
-
 // .serverc
 // const serve = require('webpack-serve');
 
@@ -15,6 +13,10 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 
 const stats = require('./stats');
 const define = require('./define');
+
+const ignoredFiles = require('react-dev-utils/ignoredFiles');
+const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
+const noopServiceWorkerMiddleware = require('react-dev-utils/noopServiceWorkerMiddleware');
 
 const webpackConfig = webpackMerge(config, {
     mode: define.rs_environment,
@@ -71,10 +73,11 @@ const webpackConfig = webpackMerge(config, {
             ignored: ignoredFiles(define.rs_root)
         },
 
-        overlay: {
-            errors: true,
-            warnings: true
-        },
+        overlay: false,
+        // overlay: {
+        //     errors: true,
+        //     warnings: true
+        // },
 
         historyApiFallback: {
             disableDotRule: true,
@@ -91,6 +94,17 @@ const webpackConfig = webpackMerge(config, {
         stats: stats.config,
 
         // proxy: proxy.config,
+
+        before(app) {
+            // This lets us open files from the runtime error overlay.
+            app.use(errorOverlayMiddleware());
+            // This service worker file is effectively a 'no-op' that will reset any
+            // previous service worker registered for the same host:port combination.
+            // We do this in development to avoid hitting the production cache if
+            // it used the same host and port.
+            // https://github.com/facebookincubator/create-react-app/issues/2272#issuecomment-302832432
+            app.use(noopServiceWorkerMiddleware());
+        },
     },
 
     node: {

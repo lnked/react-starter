@@ -10,7 +10,10 @@ const minimizeCssOptions = {
 
 const styleLoader = [
     {
-        loader: 'style-loader'
+        loader: 'style-loader',
+        options: {
+            hmr: define.rs_development
+        }
     }
 ]
 

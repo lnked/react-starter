@@ -37,5 +37,13 @@ module.exports = webpackMerge(config, {
         assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
     },
 
-    optimization: webpackMerge(optimization, minimizer)
+    optimization: webpackMerge(optimization, minimizer),
+
+    node: {
+        dgram: 'empty',
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        child_process: 'empty',
+    }
 });

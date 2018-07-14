@@ -22,6 +22,7 @@ useConfig.push(
         loader: 'babel-loader',
         options: {
             babelrc: true,
+            compact: define.rs_production,
             cacheDirectory: define.rs_development
         }
     }

@@ -19,6 +19,7 @@ const plugins = [
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
         navigateFallback: '/index.html',
+        navigateFallbackWhitelist: [/^(?!\/__).*/],
 
         staticFileGlobs: [
             `${define.rs_distBase}/**/*.js`,
@@ -41,7 +42,7 @@ const plugins = [
 
         mergeStaticsConfig: false,
 
-        maximumFileSizeToCacheInBytes: 18388608 ,
+        maximumFileSizeToCacheInBytes: 18388608,
 
         staticFileGlobsIgnorePatterns: [
             /\.map$/,
@@ -50,9 +51,9 @@ const plugins = [
             /\.cache$/,
             /\.gitkeep$/,
             /\.robots.txt$/,
-            /react\-loadable.json$/,
-            /asset\-manifest\.json$/,
-            /webpack\-manifest\.json$/
+            /react-loadable\.json$/,
+            /asset-manifest\.json$/,
+            /webpack-manifest\.json$/
         ],
 
         runtimeCaching: [
