@@ -16,8 +16,9 @@ const bundle = [
 const client = [
     ...define.rs_development ? [
         '@babel/polyfill',
-        `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
-        'webpack/hot/only-dev-server',
+        'react-dev-utils/webpackHotDevClient',
+        // `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
+        // 'webpack/hot/only-dev-server',
     ] : [],
     resolve(define.rs_root, 'client')
 ];

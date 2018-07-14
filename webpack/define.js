@@ -22,7 +22,8 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = options.opts === 'development' || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
-const _port_ = process.env.PORT || randomInteger(8081, 8084);
+const _port_ = parseInt(process.env.PORT, 10) || 3000;
+const _protocol_ = process.env.HTTPS === 'true' ? 'https' : 'http';
 
 module.exports = {
     rs_host: _host_,
@@ -31,10 +32,12 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_protocol: _protocol_,
     rs_preact: false,
     rs_sourceMap: true,
     rs_source: _source_,
     rs_distBase: _distBase_,
+    rs_packageJson: resolve(_base_, 'package.json'),
     rs_target: 'web', // 'web' | 'node' | electron-main | electron-renderer
     rs_deploy: isDeploy,
     rs_release: isRelease,
@@ -53,6 +56,6 @@ module.exports = {
     rs_development: isDevelopment,
     rs_output_path: isProduction
                     ? '/assets/'
-                    : '',
+                    : '/',
     rs_environment: options.env || 'development'
 }

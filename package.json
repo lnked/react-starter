@@ -226,6 +226,7 @@
     "pug": "2.0.3",
     "pug-loader": "2.4.0",
     "raw-loader": "0.5.1",
+    "react-dev-utils": "5.0.1",
     "react-hot-loader": "4.3.3",
     "react-test-renderer": "16.4.1",
     "replace-bundle-webpack-plugin": "1.0.0",

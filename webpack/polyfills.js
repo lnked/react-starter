@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * This file includes polyfills and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -41,9 +43,24 @@ const polyfills = [];
 /** IE10 and IE11 requires the following for the Reflect API. */
 // polyfills.push('core-js/es6/reflect');
 
+// if (typeof Promise === 'undefined') {
+//     // Rejection tracking prevents a common issue where React gets into an
+//     // inconsistent state due to an error, but it gets swallowed by a Promise,
+//     // and the user has no idea what causes React's erratic future behavior.
+//     polyfills.push('promise/lib/rejection-tracking');
+//     window.Promise = require('promise/lib/es6-extensions.js');
+// }
+
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT, you can remove.
 polyfills.push('core-js/es7/reflect');
+
+// fetch() polyfill for making API calls.
+// polyfills.push('whatwg-fetch');
+
+// In tests, polyfill requestAnimationFrame since jsdom doesn't provide it yet.
+// We don't polyfill it in the browser--this is user's responsibility.
+// polyfills.push('raf');
 
 /**
  * Required to support Web Animations.

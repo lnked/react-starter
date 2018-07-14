@@ -14611,7 +14611,7 @@ react-animated-css@1.0.4:
     prop-types "^15.5.10"
     react "^15.6.1"
 
-react-dev-utils@^5.0.0:
+react-dev-utils@5.0.1, react-dev-utils@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.1.tgz#1f396e161fe44b595db1b186a40067289bf06613"
   dependencies:

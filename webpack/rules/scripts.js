@@ -1,7 +1,9 @@
 'use strict';
 
 const { resolve } = require('path');
+
 const define = require('../define');
+const eslintFormatter = require('react-dev-utils/eslintFormatter');
 
 const tsConfig = [];
 const useConfig = [];
@@ -42,7 +44,8 @@ const rules = [
         enforce: 'pre',
         test: define.rs_regexp_scripts,
         options: {
-            fix: false
+            fix: false,
+            formatter: eslintFormatter
         },
         loader: 'eslint-loader',
         include: define.rs_root

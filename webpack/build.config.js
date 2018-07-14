@@ -1,10 +1,10 @@
 'use strict';
 
-const { resolve } = require('path');
+const { resolve, relative } = require('path');
 
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
-const defaultConfig = require('./config');
+const config = require('./config');
 
 const stats = require('./stats');
 const define = require('./define');
@@ -12,7 +12,7 @@ const define = require('./define');
 const optimization = require('./optimization');
 const minimizer = require('./minimizer');
 
-module.exports = webpackMerge(defaultConfig, {
+module.exports = webpackMerge(config, {
     mode: define.rs_environment,
 
     devtool: false,
@@ -20,6 +20,15 @@ module.exports = webpackMerge(defaultConfig, {
     bail: true,
 
     stats: stats.config,
+
+    output: {
+        ...config.output,
+        path: resolve(define.rs_dist, 'assets'),
+        filename: 'js/[name].[chunkhash:5].js',
+        chunkFilename: 'js/[name].[chunkhash:5].chunk.js',
+        devtoolModuleFilenameTemplate: info =>
+            relative(define.rs_root, info.absoluteResourcePath).replace(/\\/g, '/')
+    },
 
     performance: define.rs_release && {
         hints: 'warning',

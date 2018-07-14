@@ -3,6 +3,7 @@
 const define = require('../define');
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 
 const plugins = [
     new webpack.WatchIgnorePlugin([
@@ -19,8 +20,12 @@ const plugins = [
     // make hot reloading work
     new webpack.HotModuleReplacementPlugin(),
 
+    // new WatchMissingNodeModulesPlugin(define.rs_node),
+
     // don't spit out any errors in compiled assets
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 ];
 
 module.exports.config = plugins;
