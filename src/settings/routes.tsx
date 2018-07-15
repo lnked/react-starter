@@ -4,7 +4,6 @@ export const routes: any = [
         exact: true,
         resolve: () => import(
             /*
-                webpackMode: "lazy",
                 webpackChunkName: "MainPage"
             */
             'pages/main-page'
@@ -13,7 +12,6 @@ export const routes: any = [
         path: '/changelog',
         resolve: () => import(
             /*
-                webpackMode: "lazy",
                 webpackChunkName: "ChangelogPage"
             */
             'pages/changelog-page'
@@ -23,7 +21,6 @@ export const routes: any = [
         statusCode: 404,
         resolve: () => import(
             /*
-                webpackMode: "lazy",
                 webpackChunkName: "NoMatch"
             */
             'pages/nomatch'
