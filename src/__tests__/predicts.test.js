@@ -1,3 +1,5 @@
+test('predicts', () => {})
+
 // import {
 //     isInt
 //     // isNull,
@@ -7,8 +9,6 @@
 //     // isActive,
 //     // isUndefined
 // } from 'helpers/predicts'
-
-test('predicts', () => {})
 
 // test('isInt(1) to equal true', () => {
 //     expect(isInt(1)).toBeTruthy()

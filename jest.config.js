@@ -1,6 +1,11 @@
 // Jest configuration
 // https://facebook.github.io/jest/docs/en/configuration.html
 module.exports = {
+    setupFiles: [
+        '<rootDir>/webpack/jest/shim.js',
+        '<rootDir>/webpack/jest/setup.js'
+    ],
+
     // Modules can be explicitly auto-mocked using jest.mock(moduleName).
     // https://facebook.github.io/jest/docs/en/configuration.html#automock-boolean
     automock: false, // [boolean]
@@ -39,16 +44,16 @@ module.exports = {
     ],
 
     testMatch: [
-        '<rootDir>/src/**/__tests__/**/*.{js,jsx}',
-        '<rootDir>/src/**/?(*.)(spec|test).{js,jsx}'
+        '<rootDir>/src/**/__tests__/**/*.(ts|tsx|js|jsx)',
+        '<rootDir>/src/**/?(*.)(spec|test).(ts|tsx|js|jsx)'
     ],
 
     testEnvironment: 'jsdom',
 
     transform: {
         '^(?!.*\\.(jsx?|json|css|less|styl|s(a|c)?ss)$)': '<rootDir>/webpack/jest/fileTransformer.js',
-        '\\.(jsx?)$': '<rootDir>/node_modules/babel-jest',
-        '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
+        '^.+\\.(tsx?)$': '<rootDir>/webpack/jest/tsPreprocessor.js',
+        '^.+\\.(jsx?)$': '<rootDir>/node_modules/babel-jest'
     },
 
     testPathIgnorePatterns: [
