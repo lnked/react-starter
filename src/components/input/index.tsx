@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as css from './styles.scss'
 
 export interface S {
     value: string;
@@ -21,7 +22,7 @@ export class Input extends React.Component<{}, S> {
         const { value } = this.state
 
         return (
-            <div>
+            <div className={css.wrapper}>
                 <p>value: {value}</p>
                 <input value={value} onChange={this.handleChange} />
             </div>

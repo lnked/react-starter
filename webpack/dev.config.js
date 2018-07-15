@@ -73,11 +73,10 @@ const webpackConfig = webpackMerge(config, {
             ignored: ignoredFiles(define.rs_root)
         },
 
-        overlay: false,
-        // overlay: {
-        //     errors: true,
-        //     warnings: true
-        // },
+        overlay: {
+            errors: true,
+            warnings: true
+        },
 
         historyApiFallback: {
             disableDotRule: true,
