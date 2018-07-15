@@ -9,8 +9,8 @@ const bundle = [
     'react',
     'react-dom',
     'react-router-dom',
-    'axios',
-    'store2'
+    // 'axios'
+    // 'store2'
 ];
 
 const client = [
