@@ -53,7 +53,7 @@ const polyfills = [];
 
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT, you can remove.
-polyfills.push('core-js/es7/reflect');
+// polyfills.push('core-js/es7/reflect');
 
 // fetch() polyfill for making API calls.
 // polyfills.push('whatwg-fetch');

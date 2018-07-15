@@ -6,8 +6,7 @@ const webpack = require('webpack');
 const define = require('./define');
 
 module.exports = {
-
-    mode: define.rs_environment,
+    mode: 'production',
 
     context: define.rs_root,
 

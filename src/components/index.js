@@ -27,8 +27,8 @@
 
 // import Icon from 'components/icon'
 import { Input } from 'components/input'
-import { Title } from 'components/title'
-import { Badge } from 'components/badge'
+// import { Title } from 'components/title'
+// import { Badge } from 'components/badge'
 import { Button } from 'components/button'
 import { Loading } from 'components/loading'
 import { Spinner } from 'components/spinner'
@@ -37,8 +37,8 @@ import { Picture } from 'components/picture'
 export {
     // Icon,
     Input,
-    Badge,
-    Title,
+    // Badge,
+    // Title,
     Button,
     Loading,
     Picture,

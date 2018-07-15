@@ -57,5 +57,8 @@ module.exports = {
     rs_output_path: isProduction
                     ? '/assets/'
                     : '/',
+    rs_mode: isProduction
+            ? 'production'
+            : 'development',
     rs_environment: options.env || 'local'
 }
