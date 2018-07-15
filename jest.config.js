@@ -27,7 +27,7 @@ module.exports = {
 
     // https://facebook.github.io/jest/docs/en/configuration.html#collectcoveragefrom-array
     collectCoverageFrom: [
-        'src/**/*.{js,jsx,mjs}',
+        'src/**/*.{js,jsx,ts,tsx}',
         '!**/node_modules/**'
     ],
 
@@ -39,18 +39,16 @@ module.exports = {
     ],
 
     testMatch: [
-        '<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}',
-        '<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}'
+        '<rootDir>/src/**/__tests__/**/*.{js,jsx}',
+        '<rootDir>/src/**/?(*.)(spec|test).{js,jsx}'
     ],
 
-    // testEnvironment: 'node',
     testEnvironment: 'jsdom',
 
     transform: {
-        '^.+\\.(jsx?,mjs)$': '<rootDir>/webpack/jest/transformer.js'
-        // '^.+\\.(jsx?,mjs)$': '<rootDir>/node_modules/babel-jest',
-        // '^.+\\.(tsx?)?$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
-        // '^.+\\.(css|s(a|c)ss|less)$': '<rootDir>/node_modules/jest-css-modules'
+        '^(?!.*\\.(jsx?|json|css|less|styl|s(a|c)?ss)$)': '<rootDir>/webpack/jest/fileTransformer.js',
+        '\\.(jsx?)$': '<rootDir>/node_modules/babel-jest',
+        '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
     },
 
     testPathIgnorePatterns: [
@@ -58,7 +56,7 @@ module.exports = {
     ],
 
     transformIgnorePatterns: [
-        '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx|mjs)$'
+        '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx|)$'
     ],
 
     coveragePathIgnorePatterns: [
@@ -91,7 +89,7 @@ module.exports = {
         'web.jsx',
         'json',
         'node',
-        'mjs'
+        ''
     ],
 
     moduleDirectories: [
@@ -102,7 +100,6 @@ module.exports = {
     // A map from regular expressions to module names that allow to stub out resources,
     // like images or styles with a single module.
     moduleNameMapper: {
-        '^react(.*)$': '<rootDir>/node_modules/$1',
         '^pages/(.*)': '<rootDir>/src/pages/$1',
         '^layouts/(.*)': '<rootDir>/src/layouts/$1',
         '^segments/(.*)': '<rootDir>/src/segments/$1',

@@ -1,28 +1,28 @@
-test('test', () => {})
-
 // import {
-//     isInt,
+//     isInt
 //     // isNull,
 //     // isPhone,
 //     // isFloat,
 //     // compare,
 //     // isActive,
-//     isUndefined
+//     // isUndefined
 // } from 'helpers/predicts'
 
+test('predicts', () => {})
+
 // test('isInt(1) to equal true', () => {
-//     expect(isInt(1)).toBe(true)
+//     expect(isInt(1)).toBeTruthy()
 // })
 
 // test('isInt("1") to equal false', () => {
-//     expect(isInt('1')).toBe(false)
+//     expect(isInt('1')).toBeFalsy()
 // })
 
-// test('isInt(param) to equal true', () => {
-//     expect(isUndefined(param)).toBe(true)
+// test('isUndefined(param) to equal true', () => {
+//     expect(isUndefined(param)).toBeTruthy()
 // })
 
-// test('isInt(param) to equal true', () => {
+// test('isUndefined(param) to equal true', () => {
 //     const param = ''
-//     expect(isUndefined(param)).toBe(false)
+//     expect(isUndefined(param)).toBeFalsy()
 // })
