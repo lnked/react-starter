@@ -39,8 +39,6 @@
         "test": {
             "presets": [
                 "@babel/preset-env",
-                "@babel/preset-stage-2",
-                "@babel/preset-typescript",
                 "@babel/preset-react"
             ],
             "plugins": [
@@ -70,7 +68,6 @@
             "ignore": [
                 "dist",
                 "tests",
-                "**/*.test.js",
                 "node_modules"
             ]
         }

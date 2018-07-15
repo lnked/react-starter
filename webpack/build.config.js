@@ -13,7 +13,7 @@ const optimization = require('./optimization');
 const minimizer = require('./minimizer');
 
 module.exports = webpackMerge(config, {
-    mode: define.rs_environment,
+    mode: 'production',
 
     devtool: false,
 

@@ -47,9 +47,10 @@ module.exports = {
     testEnvironment: 'jsdom',
 
     transform: {
-        '^.+\\.(jsx?,mjs)$': '<rootDir>/node_modules/babel-jest',
-        '^.+\\.(tsx?)?$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
-        '^.+\\.(css|s(a|c)ss|less)$': '<rootDir>/node_modules/jest-css-modules'
+        '^.+\\.(jsx?,mjs)$': '<rootDir>/webpack/jest/transformer.js'
+        // '^.+\\.(jsx?,mjs)$': '<rootDir>/node_modules/babel-jest',
+        // '^.+\\.(tsx?)?$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
+        // '^.+\\.(css|s(a|c)ss|less)$': '<rootDir>/node_modules/jest-css-modules'
     },
 
     testPathIgnorePatterns: [
