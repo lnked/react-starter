@@ -3071,17 +3071,6 @@ babel-plugin-transform-function-bind@^6.22.0:
     babel-plugin-syntax-function-bind "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-imports@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-imports/-/babel-plugin-transform-imports-1.5.0.tgz#3105082ab489b1cee162e42d2ffe7b8f7c685f2e"
-  dependencies:
-    babel-types "^6.6.0"
-    is-valid-path "^0.1.1"
-    lodash.camelcase "^4.3.0"
-    lodash.findkey "^4.6.0"
-    lodash.kebabcase "^4.1.1"
-    lodash.snakecase "^4.1.1"
-
 babel-plugin-transform-inline-consecutive-adds@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-inline-consecutive-adds/-/babel-plugin-transform-inline-consecutive-adds-0.3.0.tgz#f07d93689c0002ed2b2b62969bdd99f734e03f57"
@@ -3422,7 +3411,7 @@ babel-traverse@^6.0.0, babel-traverse@^6.18.0, babel-traverse@^6.24.1, babel-tra
     invariant "^2.2.2"
     lodash "^4.17.4"
 
-babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0, babel-types@^6.6.0, babel-types@^6.9.0:
+babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0, babel-types@^6.9.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   dependencies:
@@ -9452,12 +9441,6 @@ is-installed-globally@^0.1.0:
     global-dirs "^0.1.0"
     is-path-inside "^1.0.0"
 
-is-invalid-path@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/is-invalid-path/-/is-invalid-path-0.1.0.tgz#307a855b3cf1a938b44ea70d2c61106053714f34"
-  dependencies:
-    is-glob "^2.0.0"
-
 is-jpg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-jpg/-/is-jpg-1.0.1.tgz#296d57fdd99ce010434a7283e346ab9a1035e975"
@@ -9639,12 +9622,6 @@ is-utf8@^0.2.0:
 is-valid-glob@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/is-valid-glob/-/is-valid-glob-0.3.0.tgz#d4b55c69f51886f9b65c70d6c2622d37e29f48fe"
-
-is-valid-path@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/is-valid-path/-/is-valid-path-0.1.1.tgz#110f9ff74c37f663e1ec7915eb451f2db93ac9df"
-  dependencies:
-    is-invalid-path "^0.1.0"
 
 is-whitespace-character@^1.0.0:
   version "1.0.2"
@@ -10835,10 +10812,6 @@ lodash.filter@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
 
-lodash.findkey@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.findkey/-/lodash.findkey-4.6.0.tgz#83058e903b51cbb759d09ccf546dea3ea39c4718"
-
 lodash.flatten@^4.2.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
@@ -10900,10 +10873,6 @@ lodash.isplainobject@^4.0.6:
 lodash.isstring@4.0.1, lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
-
-lodash.kebabcase@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
 
 lodash.keys@^3.0.0, lodash.keys@^3.1.2:
   version "3.1.2"
@@ -10972,10 +10941,6 @@ lodash.restparam@^3.0.0:
 lodash.result@4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.result/-/lodash.result-4.5.2.tgz#cb45b27fb914eaa8d8ee6f0ce7b2870b87cb70aa"
-
-lodash.snakecase@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz#39d714a35357147837aefd64b5dcbb16becd8f8d"
 
 lodash.some@^4.4.0, lodash.some@^4.6.0:
   version "4.6.0"

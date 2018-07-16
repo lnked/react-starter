@@ -53,7 +53,7 @@
         },
         "development": {
             "plugins": [
-                "react-hot-loader/babel",
+                // "react-hot-loader/babel",
                 "@babel/plugin-syntax-class-properties",
                 "@babel/plugin-transform-react-display-name",
                 "transform-react-remove-prop-types"
