@@ -28,7 +28,6 @@
         ["@babel/plugin-proposal-class-properties", { "loose": true }],
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-syntax-dynamic-import",
-        // ["@babel/plugin-transform-react-jsx", { "pragma": "h" }],
         "@babel/plugin-transform-react-jsx",
         ["babel-plugin-styled-components", {
             "ssr": true,
@@ -40,16 +39,17 @@
     ],
     "env": {
         "test": {
-            "presets": [
-                "@babel/preset-env",
-                "@babel/preset-react",
-                "@babel/preset-typescript",
-                ["@babel/preset-stage-2", {
-                    "decoratorsLegacy": true
-                }]
-            ],
+            // "presets": [
+            //     "@babel/preset-env",
+            //     "@babel/preset-react",
+            //     "@babel/preset-typescript",
+            //     ["@babel/preset-stage-2", {
+            //         "decoratorsLegacy": true
+            //     }]
+            // ],
             "plugins": [
-                "transform-es2015-modules-commonjs"
+                "transform-es2015-modules-commonjs",
+                "@babel/plugin-syntax-dynamic-import"
             ]
         },
         "development": {

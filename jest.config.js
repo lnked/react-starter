@@ -48,14 +48,15 @@ module.exports = {
         '<rootDir>/src/**/?(*.)(spec|test).(ts|tsx|js|jsx)'
     ],
 
-    testEnvironment: 'jsdom',
+    testEnvironment: 'jest-environment-jsdom',
 
     transform: {
-        '^(?!.*\\.(jsx?|json|css|less|styl|s(a|c)?ss)$)': '<rootDir>/webpack/jest/fileTransformer.js',
-        // '\\.(tsx?)$': '<rootDir>/webpack/jest/tsPreprocessor.js',
+        '^(?!.*\\.(jsx?|tsx?|json|css|less|styl|s(a|c)?ss)$)': '<rootDir>/webpack/jest/fileTransformer.js',
         '\\.(jsx?)$': '<rootDir>/node_modules/babel-jest',
-        // '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
+        // '\\.(tsx?)$': '<rootDir>/node_modules/babel-jest'
         '\\.(tsx?)$': 'ts-jest'
+        // '\\.(tsx?)$': '<rootDir>/webpack/jest/tsPreprocessor.js'
+        // '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
     },
 
     testPathIgnorePatterns: [
