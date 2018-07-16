@@ -4,7 +4,7 @@
             "targets": {
                 "node": "current"
             },
-            "loose" : false,
+            "loose" : true,
             "debug": false,
             "modules": false,
             "useBuiltIns": "usage",
@@ -21,9 +21,11 @@
         "@babel/preset-react"
     ],
     "plugins": [
-        ["@babel/plugin-proposal-class-properties", { "loose": true }],
-        "transform-imports",
+        ["import", { "libraryName": "lodash", "libraryDirectory": "", "camel2DashComponentName": false}, "lodash"],
+        ["import", { "libraryName": "react-router", "libraryDirectory": "es", "camel2DashComponentName": false}, "react-router"],
+        ["import", { "libraryName": "react-router-dom", "libraryDirectory": "es", "camel2DashComponentName": false}, "react-router-dom"],
         "add-module-exports",
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-syntax-dynamic-import",
         ["@babel/plugin-transform-react-jsx", { "pragma": "h" }],

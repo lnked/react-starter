@@ -21,7 +21,7 @@ declare var module: {
     }
 }
 
-if (process.env.NODE_ENV === 'development' && module.hot) {
+if (module.hot) {
     module.hot.accept('./app', renderApp)
 }
 

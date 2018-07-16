@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom'
 
 // import { Provider } from 'mobx-react'
-
 // import { ui, app } from 'store'
 
 import { CoreLayout } from 'layouts'

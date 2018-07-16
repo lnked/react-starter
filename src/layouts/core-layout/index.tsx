@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import classNames from 'classnames/bind'
 
-import { SvgFixer } from 'utils'
+// import { SvgFixer } from 'utils'
 
 export interface T {
     children?: React.ReactChild;
@@ -28,7 +28,7 @@ export class CoreLayout extends React.Component<T, S> {
         document.title = this.state.title
 
         this.fixScroll()
-        SvgFixer()
+        // SvgFixer()
     }
 
     componentDidUpdate () {

@@ -27,10 +27,6 @@ const CssUrlRelativePlugin = require('css-url-relative-plugin');
 //     );
 // });
 
-console.log({
-    'NODE_ENV': JSON.stringify(define.rs_mode)
-})
-
 const plugins = [
     new ProgressBarPlugin(),
 
@@ -39,7 +35,8 @@ const plugins = [
             'BROWSER': true,
             'NODE_ENV': JSON.stringify(define.rs_mode)
         }),
-        '__DEV__': define.rs_development
+        '__DEV__': define.rs_development,
+        '__PROD__': define.rs_production
     }),
 
     new HappyPack({

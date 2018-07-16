@@ -7,8 +7,7 @@ const { polyfills } = require('./polyfills')
 const bundle = [
     ...polyfills,
     'react',
-    'react-dom',
-    'react-router-dom',
+    // 'react-router-dom',
     // 'axios'
     // 'store2'
 ];
