@@ -1,18 +1,18 @@
+import {
+    isInt
+    // isNull,
+    // isPhone,
+    // isFloat,
+    // compare,
+    // isActive,
+    // isUndefined
+} from 'helpers/predicts'
+
 test('predicts', () => {})
 
-// import {
-//     isInt
-//     // isNull,
-//     // isPhone,
-//     // isFloat,
-//     // compare,
-//     // isActive,
-//     // isUndefined
-// } from 'helpers/predicts'
-
-// test('isInt(1) to equal true', () => {
-//     expect(isInt(1)).toBeTruthy()
-// })
+test('isInt(1) to equal true', () => {
+    expect(isInt(1)).toBeTruthy()
+})
 
 // test('isInt("1") to equal false', () => {
 //     expect(isInt('1')).toBeFalsy()

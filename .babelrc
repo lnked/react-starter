@@ -28,7 +28,8 @@
         ["@babel/plugin-proposal-class-properties", { "loose": true }],
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-syntax-dynamic-import",
-        ["@babel/plugin-transform-react-jsx", { "pragma": "h" }],
+        // ["@babel/plugin-transform-react-jsx", { "pragma": "h" }],
+        "@babel/plugin-transform-react-jsx",
         ["babel-plugin-styled-components", {
             "ssr": true,
             "minify": false,
@@ -53,7 +54,7 @@
         },
         "development": {
             "plugins": [
-                // "react-hot-loader/babel",
+                "react-hot-loader/babel",
                 "@babel/plugin-syntax-class-properties",
                 "@babel/plugin-transform-react-display-name",
                 "transform-react-remove-prop-types"

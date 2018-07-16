@@ -6,7 +6,6 @@
 // // Использование:
 // export withSort(Component);
 
-
 // // C параметрами:
 // const withSort = (...params) => WrappedComponent => props => {
 //   // params usage

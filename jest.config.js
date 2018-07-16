@@ -52,8 +52,10 @@ module.exports = {
 
     transform: {
         '^(?!.*\\.(jsx?|json|css|less|styl|s(a|c)?ss)$)': '<rootDir>/webpack/jest/fileTransformer.js',
-        '^.+\\.(tsx?)$': '<rootDir>/webpack/jest/tsPreprocessor.js',
-        '^.+\\.(jsx?)$': '<rootDir>/node_modules/babel-jest'
+        // '\\.(tsx?)$': '<rootDir>/webpack/jest/tsPreprocessor.js',
+        '\\.(jsx?)$': '<rootDir>/node_modules/babel-jest',
+        // '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
+        '\\.(tsx?)$': 'ts-jest'
     },
 
     testPathIgnorePatterns: [
@@ -72,11 +74,10 @@ module.exports = {
     coverageDirectory: '<rootDir>/coverage', // [string]
 
     globals: {
-        __DEV__: true,
         NODE_ENV: 'test',
         'ts-jest': {
-            useBabelrc: true,
-            enableTsDiagnostics: true
+            useBabelrc: true
+            // tsConfigFile: './tsconfig.jest.json'
         }
     },
 
@@ -86,15 +87,12 @@ module.exports = {
     // The default extensions Jest will look for.
     // https://facebook.github.io/jest/docs/en/configuration.html#modulefileextensions-array-string
     moduleFileExtensions: [
-        'web.js',
         'ts',
         'tsx',
         'js',
         'jsx',
-        'web.jsx',
         'json',
-        'node',
-        ''
+        'node'
     ],
 
     moduleDirectories: [

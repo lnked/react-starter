@@ -18,7 +18,7 @@ export class Sandwich extends React.PureComponent<T, S> {
         isOpened: false
     }
 
-    static getDerivedStateFromProps(nextProps, prevState) {
+    static getDerivedStateFromProps (nextProps, prevState) {
         if (prevState.isOpened !== nextProps.isOpened) {
             return {
                 isOpened: nextProps.isOpened

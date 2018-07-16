@@ -33,7 +33,7 @@ export class RadioGroup extends React.Component<P, S> {
         const items: any = React.Children.map(children, (radio: any) => (
             React.cloneElement(radio, {
                 name,
-                checked: checked && (checked == radio.props.value),
+                checked: checked && (checked === radio.props.value),
                 handleChange: this.handleChange
             })
         ))

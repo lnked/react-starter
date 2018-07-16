@@ -31,7 +31,7 @@
             }
         ],
         "semicolon": [
-            true,
+            false,
             "never",
             "ignore-interfaces"
         ],
@@ -84,6 +84,7 @@
         "jsx-no-lambda": false,
         "jsx-self-close": true,
         "interface-name": false,
+        "no-empty-interface": false,
         "jsx-no-string-ref": true,
         "jsx-curly-spacing": "always",
         "jsx-wrap-multiline": true,
