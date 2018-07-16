@@ -95,6 +95,18 @@ const plugins = [
             to: define.rs_dist,
             force: true,
             cache: true
+        }, {
+            context: 'assets/images',
+            from: { glob: '**/*', dot: true },
+            to: resolve(define.rs_dist, 'img'),
+            force: true,
+            cache: true
+        }, {
+            context: 'assets/fonts/SF',
+            from: { glob: '**/*', dot: true },
+            to: resolve(define.rs_dist, 'assets/fonts/SF'),
+            force: true,
+            cache: true
         }
     ], {
         ignore: [
