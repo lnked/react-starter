@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* tslint:disable:max-line-length */
 export const routes: any = [
     {
         path: '/',
