@@ -1,3 +1,15 @@
+import React from 'react'
+import Link from '../../test-utils/link'
+import renderer from 'react-test-renderer'
+
+it('отображается корректно', () => {
+    const tree = renderer.create(
+        <Link page="http://www.facebook.com">Facebook</Link>
+    ).toJSON()
+
+    expect(tree).toMatchSnapshot()
+})
+
 // // Link.react.test.js
 // import React from 'react';
 // import Link from '../Link.react';

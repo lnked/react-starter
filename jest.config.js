@@ -53,14 +53,14 @@ module.exports = {
     transform: {
         '^(?!.*\\.(jsx?|tsx?|json|css|less|styl|s(a|c)?ss)$)': '<rootDir>/webpack/jest/fileTransformer.js',
         '\\.(jsx?)$': '<rootDir>/node_modules/babel-jest',
-        // '\\.(tsx?)$': '<rootDir>/node_modules/babel-jest'
-        '\\.(tsx?)$': 'ts-jest'
+        '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest'
+        // '\\.(tsx?)$': 'ts-jest'
         // '\\.(tsx?)$': '<rootDir>/webpack/jest/tsPreprocessor.js'
         // '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
     },
 
     testPathIgnorePatterns: [
-        '/node_modules/'
+        '/node_modules/', '__snapshots__'
     ],
 
     transformIgnorePatterns: [
