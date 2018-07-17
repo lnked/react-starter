@@ -7,13 +7,14 @@
             "loose" : true,
             "debug": false,
             "modules": false,
-            "useBuiltIns": "usage",
+            "useBuiltIns": "entry",
             "shippedProposals": true,
             "exclude": [
                 "web.dom.iterable"
             ]
         }],
         ["@babel/preset-stage-2", {
+            "loose": true,
             "decoratorsLegacy": true,
             "pipelaneProposal": "minimal"
         }],
@@ -21,10 +22,10 @@
         "@babel/preset-react"
     ],
     "plugins": [
+        "add-module-exports",
         ["import", { "libraryName": "lodash", "libraryDirectory": "", "camel2DashComponentName": false}, "lodash"],
         ["import", { "libraryName": "react-router", "libraryDirectory": "es", "camel2DashComponentName": false}, "react-router"],
         ["import", { "libraryName": "react-router-dom", "libraryDirectory": "es", "camel2DashComponentName": false}, "react-router-dom"],
-        "add-module-exports",
         ["@babel/plugin-proposal-class-properties", { "loose": true }],
         "@babel/plugin-syntax-jsx",
         "@babel/plugin-syntax-dynamic-import",
@@ -35,21 +36,10 @@
             "preprocess": true,
             "uglifyPure": false,
             "displayName": false
-        }],
-        ["transform-class-properties", { "loose": true }],
-        "transform-object-rest-spread",
-        "dynamic-import-node"
+        }]
     ],
     "env": {
         "test": {
-            // "presets": [
-            //     "@babel/preset-env",
-            //     "@babel/preset-react",
-            //     "@babel/preset-typescript",
-            //     ["@babel/preset-stage-2", {
-            //         "decoratorsLegacy": true
-            //     }]
-            // ],
             "plugins": [
                 "transform-es2015-modules-commonjs",
                 "@babel/plugin-syntax-dynamic-import"
