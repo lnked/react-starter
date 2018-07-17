@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import src from './assets/image.jpg'
+// import src from 'pages/main-page/assets/image.jpg'
 
 export function MainPage () {
     document.title = 'Main Page'
@@ -24,11 +24,12 @@ export function MainPage () {
                 <li>Typescript</li>
                 <li>Jest/Enzyme</li>
             </ul>
-
+            {/*
             <div className={css.group}>
                 <div className={css.image} />
                 <img src={src} alt="" />
             </div>
+            */}
         </div>
     )
 }
