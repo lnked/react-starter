@@ -15,8 +15,15 @@ export function MainPage () {
             */}
 
             <p className={css.description}>
-                Reference site about Lorem Ipsum, giving information on its origins.
+                Отличный сборщик рекат проектов
             </p>
+
+            <ul>
+                <li>HMR</li>
+                <li>PWA</li>
+                <li>Typescript</li>
+                <li>Jest/Enzyme</li>
+            </ul>
 
             <div className={css.group}>
                 <div className={css.image} />
