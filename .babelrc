@@ -35,7 +35,10 @@
             "preprocess": true,
             "uglifyPure": false,
             "displayName": false
-        }]
+        }],
+        ["transform-class-properties", { "loose": true }],
+        "transform-object-rest-spread",
+        "dynamic-import-node"
     ],
     "env": {
         "test": {

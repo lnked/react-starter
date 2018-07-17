@@ -18,6 +18,8 @@ const plugins = [
         fileName: "../webpack-manifest.json"
     }),
 
+    // new webpack.IgnorePlugin(/react-hot-loader$/),
+
     new Critters({
         fonts: false,
         external: false,
