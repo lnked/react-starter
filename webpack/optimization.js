@@ -5,8 +5,9 @@ const define = require('./define');
 
 module.exports = {
     minimize: true,
-    concatenateModules: true,
+    sideEffects: true,
     noEmitOnErrors: true,
+    concatenateModules: true,
     runtimeChunk: {
         name: 'startup'
     },

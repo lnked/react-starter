@@ -4,7 +4,7 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 
-const alias = require('./alias');
+const aliases = require('./aliases');
 const rules = require('./rules');
 const define = require('./define');
 const plugins = require('./plugins');
@@ -34,7 +34,7 @@ module.exports = {
         enforceModuleExtension: false,
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.es', '.es6', '.mjs', '.scss', '.css', '.json'],
         descriptionFiles: ['package.json', 'bower.json'],
-        alias: alias.config
+        alias: aliases.config
     },
 
     resolveLoader: {
