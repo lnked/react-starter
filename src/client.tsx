@@ -15,14 +15,10 @@ const renderApp = async () => {
     document.body.classList.remove('loading')
 }
 
-declare var module: {
-    hot: {
-        accept (paths: string, callback: () => void | Promise<void>): void;
+if (!(process.env.NODE_ENV === 'production')) {
+    if (module.hot) {
+        module.hot.accept('./app', renderApp)
     }
-}
-
-if (module.hot) {
-    module.hot.accept('./app', renderApp)
 }
 
 renderApp()

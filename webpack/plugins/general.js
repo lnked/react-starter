@@ -33,8 +33,11 @@ const plugins = [
     new webpack.DefinePlugin({
         'process.env': Object.assign(formatter(environment, true), {
             'BROWSER': true,
-            'NODE_ENV': JSON.stringify(define.rs_mode)
+            // 'NODE_ENV': JSON.stringify(define.rs_mode),
+            // 'BABEL_ENV': JSON.stringify(define.rs_mode)
         }),
+        'process.env.NODE_ENV': JSON.stringify(define.rs_mode),
+        'process.env.BABEL_ENV': JSON.stringify(define.rs_mode),
         '__DEV__': define.rs_development,
         '__PROD__': define.rs_production
     }),
