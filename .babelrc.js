@@ -3,7 +3,7 @@
 const entry = require('./webpack/entry-point').config;
 
 const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'development'
-const loose = false
+const loose = true
 
 let useBuiltIns = false
 let usePolyfile = false
@@ -29,11 +29,10 @@ const sourceMaps = development
 presets.push(
     ['@babel/preset-env', {
         targets: {
-            node: 'current',
-            browsers: ['last 2 versions', 'safari >= 7']
+            node: 'current'
         },
-        debug: true,
-        loose : loose,
+        loose,
+        debug: false,
         modules: false,
         useBuiltIns,
         shippedProposals: true,
@@ -43,7 +42,7 @@ presets.push(
         ]
     }],
     ['@babel/preset-stage-2', {
-        loose: loose,
+        loose,
         decoratorsLegacy: true,
         pipelaneProposal: 'minimal'
     }],
@@ -64,7 +63,7 @@ plugins.push(
     ['import', { libraryName: 'lodash', 'libraryDirectory': '', 'camel2DashComponentName': false}, 'lodash'],
     ['import', { libraryName: 'react-router', 'libraryDirectory': 'es', 'camel2DashComponentName': false}, 'react-router'],
     ['import', { libraryName: 'react-router-dom', 'libraryDirectory': 'es', 'camel2DashComponentName': false}, 'react-router-dom'],
-    ['@babel/plugin-proposal-class-properties', { loose: loose }],
+    ['@babel/plugin-proposal-class-properties', { loose }],
     '@babel/plugin-syntax-jsx',
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-transform-react-jsx',
