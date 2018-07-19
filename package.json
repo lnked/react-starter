@@ -156,7 +156,7 @@
     "eslint": "4.19.1",
     "eslint-config-airbnb": "17.0.0",
     "eslint-config-standard": "11.0.0",
-    "eslint-loader": "2.0.0",
+    "eslint-loader": "2.1.0",
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.13.0",
     "eslint-plugin-jest": "21.18.0",
