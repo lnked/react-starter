@@ -39,10 +39,10 @@ const cssConfig = [
                 ? '[path][name]__[local]--[hash:base64:5]'
                 : '[sha1:hash:hex:4]'
         }
-    },
-    {
-        loader: 'resolve-url-loader'
     }
+    // {
+    //     loader: 'resolve-url-loader'
+    // }
 ];
 
 const usesConfig = [];

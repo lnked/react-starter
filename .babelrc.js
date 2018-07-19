@@ -35,8 +35,8 @@ presets.push(
         debug: false,
         modules: false,
         useBuiltIns,
-        shippedProposals: true,
-        forceAllTransforms: production,
+        shippedProposals: false,
+        // forceAllTransforms: production,
         exclude: [
             'web.dom.iterable'
         ]
@@ -44,9 +44,9 @@ presets.push(
     ['@babel/preset-stage-2', {
         loose,
         decoratorsLegacy: true,
-        pipelaneProposal: 'minimal'
+        // pipelaneProposal: 'minimal'
     }],
-    '@babel/preset-typescript',
+    // '@babel/preset-typescript',
     '@babel/preset-react'
 )
 
@@ -59,39 +59,39 @@ if (production) {
 ///////////////////////////////////////////////////////////////
 
 plugins.push(
-    'add-module-exports',
+    // 'add-module-exports',
     ['import', { libraryName: 'lodash', 'libraryDirectory': '', 'camel2DashComponentName': false}, 'lodash'],
     ['import', { libraryName: 'react-router', 'libraryDirectory': 'es', 'camel2DashComponentName': false}, 'react-router'],
     ['import', { libraryName: 'react-router-dom', 'libraryDirectory': 'es', 'camel2DashComponentName': false}, 'react-router-dom'],
-    ['@babel/plugin-proposal-class-properties', { loose }],
-    '@babel/plugin-syntax-jsx',
-    '@babel/plugin-syntax-dynamic-import',
-    '@babel/plugin-transform-react-jsx',
-    ['babel-plugin-styled-components', {
-        ssr: true,
-        minify: false,
-        preprocess: true,
-        uglifyPure: false,
-        displayName: false
-    }]
+    // ['@babel/plugin-proposal-class-properties', { loose }],
+    // '@babel/plugin-syntax-jsx',
+    // '@babel/plugin-syntax-dynamic-import',
+    // '@babel/plugin-transform-react-jsx',
+    // ['babel-plugin-styled-components', {
+    //     ssr: true,
+    //     minify: false,
+    //     preprocess: true,
+    //     uglifyPure: false,
+    //     displayName: false
+    // }]
 )
 
 if (production) {
-    plugins.push('@babel/plugin-transform-react-constant-elements')
-    plugins.push('@babel/plugin-transform-react-inline-elements')
-    plugins.push('transform-react-pure-class-to-function')
+    // plugins.push('@babel/plugin-transform-react-constant-elements')
+    // plugins.push('@babel/plugin-transform-react-inline-elements')
+    // plugins.push('transform-react-pure-class-to-function')
 }
 
 if (development) {
-    plugins.push('react-hot-loader/babel')
-    plugins.push('@babel/plugin-syntax-class-properties')
-    plugins.push('@babel/plugin-transform-react-display-name')
-    plugins.push('transform-react-remove-prop-types')
+    // plugins.push('react-hot-loader/babel')
+    // plugins.push('@babel/plugin-syntax-class-properties')
+    // plugins.push('@babel/plugin-transform-react-display-name')
+    // plugins.push('transform-react-remove-prop-types')
 }
 
 if (test) {
-    plugins.push('transform-es2015-modules-commonjs')
-    plugins.push('@babel/plugin-syntax-dynamic-import')
+    // plugins.push('transform-es2015-modules-commonjs')
+    // plugins.push('@babel/plugin-syntax-dynamic-import')
 }
 
 ///////////////////////////////////////////////////////////////
@@ -99,9 +99,9 @@ if (test) {
 ///////////////////////////////////////////////////////////////
 
 if (production) {
-    ignore.push('dist')
-    ignore.push('tests')
-    ignore.push('node_modules')
+        // ignore.push('dist')
+        // ignore.push('tests')
+        // ignore.push('node_modules')
 }
 
 module.exports = {

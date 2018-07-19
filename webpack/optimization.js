@@ -21,67 +21,41 @@ module.exports = {
         maxInitialRequests: 3,
         automaticNameDelimiter: '~',
         cacheGroups: {
+            default: false,
             default: {
                 minChunks: 2,
                 priority: -20,
-                reuseExistingChunk: true
+                reuseExistingChunk: false
             },
             polyfill: {
                 test: /core-js/,
-                reuseExistingChunk: true,
+                reuseExistingChunk: false,
                 priority: 10
             },
             styles: {
                 name: 'styles',
-                test: /\.css$/,
+                test: /\.s?css$/,
                 chunks: 'all',
+                minChunks: 1,
+                reuseExistingChunk: true,
                 enforce: true
             },
             commons: {
                 test: /[\\/]node_modules[\\/]/,
-                name: "commons",
-                chunks: "all"
+                name: 'commons',
+                minChunks: 2,
+                chunks: 'initial',
+                enforce: true,
+                reuseExistingChunk: false
             },
-            // commons: {
-            //     test: /[\\/]node_modules[\\/]/,
-            //     name: 'bundle',
-            //     minChunks: 2,
-            //     chunks: 'initial',
-            //     enforce: true,
-            //     reuseExistingChunk: false
-            // },
             bundle: {
-                test: /[\\/]node_modules[\\/]/,
-                priority: -10
+                // test: /[\\/]node_modules[\\/]/,
+                // priority: -10
+                name: 'commons',
+                chunks: 'all',
+                minChunks: 3,
+                reuseExistingChunk: false,
             }
         }
     }
-
-    // splitChunks: {
-    //   chunks: 'all',
-    //   cacheGroups: {
-    //     default: false,
-    //     // Custom common chunk
-    //     bundle: {
-    //       name: 'commons',
-    //       chunks: 'all',
-    //       minChunks: 3,
-    //       reuseExistingChunk: false,
-    //     },
-    //     // Customer vendor
-    //     vendor: {
-    //       filename: 'vendorbundle.js',
-    //       test: m => /node_modules/.test(m.context),
-    //     },
-    //     // Merge all the CSS into one file
-    //     styles: {
-    //       name: 'styles',
-    //       test: /\.s?css$/,
-    //       chunks: 'all',
-    //       minChunks: 1,
-    //       reuseExistingChunk: true,
-    //       enforce: true,
-    //     },
-    //   },
-    // },
 };
