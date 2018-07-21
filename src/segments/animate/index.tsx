@@ -1,7 +1,7 @@
 import * as React from 'react'
 // import * as css from './styles.scss'
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 export class Animate extends React.Component {
     state = { items: ['hello', 'world', 'click', 'me'] }
@@ -14,11 +14,10 @@ export class Animate extends React.Component {
     // componentDidLeave()
 
     handleAdd = () => {
-        const newItems = this.state.items.concat([
-            prompt('Enter some text')
-        ])
-
-        this.setState({ items: newItems })
+        // const newItems = this.state.items.concat([
+        //     prompt('Enter some text')
+        // ])
+        // this.setState({ items: newItems })
     }
 
     handleRemove (i) {
@@ -28,11 +27,11 @@ export class Animate extends React.Component {
     }
 
     render () {
-        const items = this.state.items.map((item, i) => (
-            <div key={item} onClick={() => this.handleRemove(i)}>
-                {item}
-            </div>
-        ))
+        // const items = this.state.items.map((item, i) => (
+        //     <div key={item} onClick={() => this.handleRemove(i)}>
+        //         {item}
+        //     </div>
+        // ))
 
         // <ReactCSSTransitionGroup
         //     transitionName="example"
@@ -46,13 +45,13 @@ export class Animate extends React.Component {
         return (
             <div>
                 <button onClick={this.handleAdd}>Add Item</button>
-                <ReactCSSTransitionGroup
+                {/* <ReactCSSTransitionGroup
                     transitionName="example"
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={300}>
 
                     {items}
-                </ReactCSSTransitionGroup>
+                </ReactCSSTransitionGroup> */}
             </div>
         )
     }

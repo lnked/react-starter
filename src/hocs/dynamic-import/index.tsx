@@ -2,7 +2,7 @@ import * as React from 'react'
 
 export interface P {
     load: any;
-    children?: React.ReactChild;
+    children: any;
 }
 
 export interface S {

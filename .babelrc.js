@@ -21,6 +21,23 @@ const presets = []
 const plugins = []
 const ignore = []
 const sourceMaps = development
+const imports = [
+    {
+        libraryName: 'lodash',
+        libraryDirectory: '',
+        camel2DashComponentName: false
+    },
+    {
+        libraryName: 'react-router',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false
+    },
+    {
+        libraryName: 'react-router-dom',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false
+    },
+]
 
 ///////////////////////////////////////////////////////////////
 //////////////////   PRESETS   ////////////////////////////////
@@ -36,19 +53,24 @@ presets.push(
         modules: false,
         useBuiltIns,
         shippedProposals: false,
-        // forceAllTransforms: production,
+        forceAllTransforms: production,
         exclude: [
             'web.dom.iterable'
         ]
-    }],
+    }]
+)
+
+presets.push(
     ['@babel/preset-stage-2', {
         loose,
         decoratorsLegacy: true,
-        // pipelaneProposal: 'minimal'
-    }],
-    // '@babel/preset-typescript',
-    '@babel/preset-react'
+        pipelaneProposal: 'minimal'
+    }]
 )
+
+// presets.push('@babel/preset-typescript')
+
+presets.push('@babel/preset-react')
 
 if (production) {
     presets.push('minify')
@@ -58,40 +80,51 @@ if (production) {
 //////////////////   PLUGINS   ////////////////////////////////
 ///////////////////////////////////////////////////////////////
 
+// plugins.push(
+//     ["transform-runtime", {
+//         "polyfill": true,
+//         "regenerator": true
+//     }]
+// )
+
+plugins.push('transform-async-to-generator')
+
+imports.map(item => {
+    plugins.push(
+        [
+            'import', {
+                libraryName: item.libraryName,
+                libraryDirectory: item.libraryDirectory,
+                camel2DashComponentName: item.camel2DashComponentName
+            },
+            item.libraryName
+        ]
+    );
+})
+
 plugins.push(
-    // 'add-module-exports',
-    ['import', { libraryName: 'lodash', 'libraryDirectory': '', 'camel2DashComponentName': false}, 'lodash'],
-    ['import', { libraryName: 'react-router', 'libraryDirectory': 'es', 'camel2DashComponentName': false}, 'react-router'],
-    ['import', { libraryName: 'react-router-dom', 'libraryDirectory': 'es', 'camel2DashComponentName': false}, 'react-router-dom'],
-    // ['@babel/plugin-proposal-class-properties', { loose }],
-    // '@babel/plugin-syntax-jsx',
-    // '@babel/plugin-syntax-dynamic-import',
-    // '@babel/plugin-transform-react-jsx',
-    // ['babel-plugin-styled-components', {
-    //     ssr: true,
-    //     minify: false,
-    //     preprocess: true,
-    //     uglifyPure: false,
-    //     displayName: false
-    // }]
-)
+    ['babel-plugin-styled-components', {
+        ssr: true,
+        minify: false,
+        preprocess: true,
+        uglifyPure: false,
+        displayName: false
+    }]
+);
 
 if (production) {
-    // plugins.push('@babel/plugin-transform-react-constant-elements')
-    // plugins.push('@babel/plugin-transform-react-inline-elements')
-    // plugins.push('transform-react-pure-class-to-function')
+    plugins.push('@babel/plugin-transform-react-constant-elements')
+    plugins.push('@babel/plugin-transform-react-inline-elements')
+    plugins.push('transform-react-pure-class-to-function')
+    plugins.push('transform-react-remove-prop-types')
 }
 
 if (development) {
     // plugins.push('react-hot-loader/babel')
-    // plugins.push('@babel/plugin-syntax-class-properties')
-    // plugins.push('@babel/plugin-transform-react-display-name')
-    // plugins.push('transform-react-remove-prop-types')
 }
 
 if (test) {
     // plugins.push('transform-es2015-modules-commonjs')
-    // plugins.push('@babel/plugin-syntax-dynamic-import')
 }
 
 ///////////////////////////////////////////////////////////////

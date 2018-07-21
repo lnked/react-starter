@@ -21,6 +21,8 @@ const polyfills = [];
  * BROWSER POLYFILLS
  */
 
+// polyfills.push('@babel/polyfill');
+
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 // polyfills.push('core-js/es6/symbol');
 // polyfills.push('core-js/es6/object');

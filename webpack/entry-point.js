@@ -6,7 +6,6 @@ const { polyfills } = require('./polyfills')
 
 const bundle = [
     ...polyfills,
-    // '@babel/polyfill',
     'react',
     // 'react-router-dom',
     // 'axios'

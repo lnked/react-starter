@@ -40,8 +40,8 @@
             "jest",
             "react",
             "enzyme",
-            "typings",
-            "src/typings",
+            "react-router",
+            "react-router-dom",
             "styled-components",
             "jest-styled-components"
         ],
@@ -141,13 +141,13 @@
         }
     ],
     "awesomeTypescriptLoaderOptions": {
-        "useBabel": true,
+        "useBabel": false,
         "useCache": false,
         "forkChecker": true,
         "transpileOnly": true,
         "useWebpackText": true,
         "errorsAsWarnings": true,
         "useTranspileModule": true,
-        "usePreviousLoaderGeneratedFiles": true
+        "forceIsolatedModules": false
     }
 }

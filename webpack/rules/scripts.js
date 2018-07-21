@@ -6,9 +6,9 @@ const define = require('../define');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 
 const tsConfig = [];
-const useConfig = [];
+const jsConfig = [];
 
-useConfig.push(
+jsConfig.push(
     {
         loader: 'cache-loader',
         options: {
@@ -17,7 +17,7 @@ useConfig.push(
     }
 );
 
-useConfig.push(
+jsConfig.push(
     {
         loader: 'babel-loader',
         options: {
@@ -28,11 +28,11 @@ useConfig.push(
     }
 );
 
-tsConfig.push(
-    {
-        loader: 'babel-loader'
-    }
-);
+// tsConfig.push(
+//     {
+//         loader: 'babel-loader'
+//     }
+// );
 
 tsConfig.push(
     {
@@ -68,15 +68,16 @@ const rules = [
     {
         test: define.rs_regexp_scripts,
         exclude: /(node_modules|bower_components)/,
-        // use: useConfig
-        use: 'happypack/loader'
+        use: jsConfig
+        // use: 'happypack/loader'
     },
     {
         test: /\.ts[x]?$/,
-        exclude: [/(node_modules|bower_components)/, /\.(spec|e2e)\.ts(x?)$/],
-        use: tsConfig
+        // exclude: [/(node_modules|bower_components)/, /\.(spec|e2e)\.ts(x?)$/],
+        exclude: [/(node_modules|bower_components)/],
+        use: tsConfig,
     }
 ];
 
 module.exports.config = rules;
-module.exports.loaders = useConfig;
+module.exports.loaders = jsConfig;

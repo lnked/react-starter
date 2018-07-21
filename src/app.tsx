@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { routes } from 'settings/routes'
+import { isUndefined } from 'helpers/predicts'
 
 import {
     BrowserRouter as Router,
@@ -8,9 +9,10 @@ import {
     Switch
 } from 'react-router-dom'
 
-// import { MainPage } from 'pages'
+import { MainPage } from 'pages'
 
 // import { Provider } from 'mobx-react'
+
 // import { ui, app } from 'store'
 
 import { CoreLayout } from 'layouts'
@@ -32,10 +34,10 @@ class App extends React.Component<{}, {}> {
                     <Header />
 
                     <Switch>
-                        {/* <Route path="/main" exact={true} component={MainPage} /> */}
+                        <Route path="/main" exact={true} component={MainPage} />
 
                         {routes.map(({ resolve, ...rest }: any, key) => {
-                            if (resolve) {
+                            if (!isUndefined(resolve)) {
                                 rest.component = Preloader({
                                     loader: resolve
                                 })

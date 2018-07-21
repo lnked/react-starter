@@ -71,11 +71,11 @@ export class Quantity extends React.Component<T, S> {
         }
     }
 
-    handleChange = (e: Event) => {
+    handleChange = (e: any) => {
         const re = /^\d+$/
 
-        if (re.test(e.nativeEvent.target.value)) {
-            this.changeValue(parseInt(e.nativeEvent.target.value, 10))
+        if (re.test(e.target.value)) {
+            this.changeValue(parseInt(e.target.value, 10))
         }
     }
 

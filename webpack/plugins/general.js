@@ -42,11 +42,11 @@ const plugins = [
         '__PROD__': define.rs_production
     }),
 
-    new HappyPack({
-        loaders: scripts.loaders,
-        threads: 4,
-        verbose: false
-    }),
+    // new HappyPack({
+    //     loaders: scripts.loaders,
+    //     threads: 4,
+    //     verbose: false
+    // }),
 
     // new webpack.DllPlugin({
     //     context: __dirname,

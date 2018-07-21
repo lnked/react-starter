@@ -2,14 +2,13 @@ import Loadable from 'react-loadable'
 
 import { Loading } from 'components'
 
-export const Preloader = (opts: any): any => {
-    return Loadable({
+export const Preloader = (opts: any): any =>
+    Loadable({
         loading: Loading,
         delay: 300,
-        timeout: 10000,
+        timeout: 1000,
         ...opts
     })
-}
 
 export default Preloader
 
