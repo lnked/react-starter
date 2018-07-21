@@ -28,15 +28,19 @@ jsConfig.push(
     }
 );
 
-// tsConfig.push(
-//     {
-//         loader: 'babel-loader'
-//     }
-// );
-
 tsConfig.push(
     {
-        loader: 'awesome-typescript-loader'
+        loader: 'awesome-typescript-loader',
+        options: {
+            useBabel: false,
+            useCache: false,
+            forkChecker: true,
+            transpileOnly: true,
+            useWebpackText: true,
+            errorsAsWarnings: true,
+            useTranspileModule: true,
+            forceIsolatedModules: false
+        }
     }
 );
 

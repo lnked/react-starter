@@ -124,7 +124,7 @@ if (development) {
 }
 
 if (test) {
-    // plugins.push('transform-es2015-modules-commonjs')
+    plugins.push('transform-es2015-modules-commonjs')
 }
 
 ///////////////////////////////////////////////////////////////

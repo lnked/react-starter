@@ -9,7 +9,7 @@ import {
     Switch
 } from 'react-router-dom'
 
-import { MainPage } from 'pages'
+// import { MainPage } from 'pages'
 
 // import { Provider } from 'mobx-react'
 
@@ -34,7 +34,6 @@ class App extends React.Component<{}, {}> {
                     <Header />
 
                     <Switch>
-                        <Route path="/main" exact={true} component={MainPage} />
 
                         {routes.map(({ resolve, ...rest }: any, key) => {
                             if (!isUndefined(resolve)) {
@@ -54,6 +53,8 @@ class App extends React.Component<{}, {}> {
                         ))}
                         */}
                     </Switch>
+
+                    {/* <Route path="/main" exact={true} component={MainPage} /> */}
                 </CoreLayout>
             </Router>
             // </Provider>
