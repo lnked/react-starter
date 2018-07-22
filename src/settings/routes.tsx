@@ -4,6 +4,17 @@
 //     // ChangelogPage
 // } from 'pages'
 
+// import loadable from 'loadable-components'
+
+// export const Home = loadable(() => import('./Home'))
+// export const About = loadable(() => import('./About'))
+// export const Contact = loadable(() => import('./Contact'))
+
+// export const Home = loadable(() => import('./Home'), {
+//     LoadingComponent: (props) => <div>Loading...</div>,
+//     ErrorComponent: ({ error, props }) => <div>Oups an error occurs.</div>,
+// })
+
 /* eslint-disable */
 /* tslint:disable:max-line-length */
 export const routes: any = [

@@ -57,9 +57,9 @@ const plugins = [
     // /(en-gb|en|ru)/
     new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/(ru)$/),
 
-    new ReactLoadablePlugin({
-        filename: './dist/react-loadable.json',
-    }),
+    // new ReactLoadablePlugin({
+    //     filename: './dist/react-loadable.json',
+    // }),
 
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
