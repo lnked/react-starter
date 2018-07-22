@@ -16,7 +16,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
+// const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
 // const layouts = {};

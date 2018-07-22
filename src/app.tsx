@@ -8,8 +8,6 @@ import {
     Switch
 } from 'react-router-dom'
 
-// import { MainPage } from 'pages'
-
 // import { Provider } from 'mobx-react'
 
 // import { ui, app } from 'store'
@@ -35,8 +33,6 @@ class App extends React.Component<{}, {}> {
                             <Route key={key} {...rest} />
                         )}
                     </Switch>
-
-                    {/* <Route path="/main" exact={true} component={MainPage} /> */}
                 </CoreLayout>
             </Router>
             // </Provider>
