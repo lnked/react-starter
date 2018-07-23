@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Spinner } from 'components'
 
-export interface T {
+export interface P {
     error: any | null;
     pastSpinnerDelay: boolean;
     timedOut: boolean;
@@ -10,7 +10,7 @@ export interface T {
     pastDelay: null;
 }
 
-export const Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: T) => {
+export const Loading = ({error, loading, pastSpinnerDelay, timedOut, pastDelay}: P) => {
     console.log(error, loading, pastSpinnerDelay, timedOut, pastDelay)
 
     if (error) {
