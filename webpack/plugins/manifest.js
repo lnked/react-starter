@@ -34,7 +34,7 @@ const plugins = [
     }),
     new WebpackPwaManifest({
         filename: "../manifest.webmanifest",
-        includeDirectory: true,
+        // includeDirectory: true,
         name: JSON.parse(environment.APP_NAME),
         short_name: JSON.parse(environment.APP_NAME_SHORT),
         description: JSON.parse(environment.APP_NAME_DESC),
