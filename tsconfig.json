@@ -11,7 +11,8 @@
         "diagnostics": true,
         "declaration": false,
         "removeComments": true,
-        "importHelpers": true,
+        "importHelpers": false,
+        "noEmitHelpers": false,
         "downlevelIteration": true,
         "isolatedModules": false,
         "strict": true,
@@ -59,9 +60,9 @@
             "*": [
                 "src/*"
             ],
-            "tslib": [
-                "node_modules/tslib/tslib.d.ts"
-            ],
+            // "tslib": [
+            //     "node_modules/tslib/tslib.d.ts"
+            // ],
             "hocs": [
                 "src/hocs"
             ],

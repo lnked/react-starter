@@ -10,7 +10,10 @@ const jsConfig = [];
 
 jsConfig.push(
     {
-        loader: 'cache-loader'
+        loader: 'cache-loader',
+        options: {
+            cacheDirectory: resolve(define.rs_base, '.cache/loader')
+        }
     }
 );
 
@@ -75,7 +78,7 @@ const rules = [
         test: /\.ts[x]?$/,
         // exclude: [/(node_modules|bower_components)/, /\.(spec|e2e)\.ts(x?)$/],
         exclude: [/(node_modules|bower_components)/],
-        use: tsConfig,
+        use: [...jsConfig, ...tsConfig],
     }
 ];
 
