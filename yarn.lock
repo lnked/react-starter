@@ -2078,10 +2078,6 @@ async-limiter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
-async@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/async/-/async-1.5.0.tgz#2796642723573859565633fc6274444bee2f8ce3"
-
 async@2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/async/-/async-2.1.4.tgz#2d2160c7788032e4dd6cbe2502f1f9a2c8f6cde4"
@@ -8228,15 +8224,6 @@ handlebars@^4.0.3:
   optionalDependencies:
     uglify-js "^2.6"
 
-happypack@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/happypack/-/happypack-5.0.0.tgz#59606b6161acfbd69e99072e5c63f5d165e48b0e"
-  dependencies:
-    async "1.5.0"
-    json-stringify-safe "5.0.1"
-    loader-utils "1.1.0"
-    serialize-error "^2.1.0"
-
 har-schema@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-1.0.5.tgz#d263135f43307c02c602afc8fe95970c0151369e"
@@ -8555,6 +8542,10 @@ html-webpack-plugin@^2.30.1:
     lodash "^4.17.3"
     pretty-error "^2.0.2"
     toposort "^1.0.0"
+
+html-webpack-polyfill-io-plugin@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-polyfill-io-plugin/-/html-webpack-polyfill-io-plugin-1.0.0.tgz#435209c03e8f3a4e734fa9fa083f8a870f455c60"
 
 htmlparser2@3.9.2, htmlparser2@^3.9.1, htmlparser2@^3.9.2:
   version "3.9.2"
@@ -10103,7 +10094,7 @@ json-stable-stringify@^1.0.0, json-stable-stringify@^1.0.1:
   dependencies:
     jsonify "~0.0.0"
 
-json-stringify-safe@5.0.1, json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
+json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 

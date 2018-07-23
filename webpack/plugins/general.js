@@ -9,7 +9,6 @@ const scripts = require('../rules/scripts')
 const environment = require('../environment').config;
 const formatter = require('../environment').formatter;
 
-const HappyPack = require('happypack');
 const SvgStore = require('webpack-svgstore-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -17,6 +16,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
+const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin')
 
 // const layouts = {};
 
@@ -31,21 +31,13 @@ const plugins = [
 
     new webpack.DefinePlugin({
         'process.env': Object.assign(formatter(environment, true), {
-            'BROWSER': true,
-            // 'NODE_ENV': JSON.stringify(define.rs_mode),
-            // 'BABEL_ENV': JSON.stringify(define.rs_mode)
+            'BROWSER': true
         }),
         'process.env.NODE_ENV': JSON.stringify(define.rs_mode),
         'process.env.BABEL_ENV': JSON.stringify(define.rs_mode),
         '__DEV__': define.rs_development,
         '__PROD__': define.rs_production
     }),
-
-    // new HappyPack({
-    //     loaders: scripts.loaders,
-    //     threads: 4,
-    //     verbose: false
-    // }),
 
     // new webpack.DllPlugin({
     //     context: __dirname,
@@ -63,6 +55,24 @@ const plugins = [
     }),
 
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
+
+    new HtmlWebpackPolyfillIOPlugin({
+        minify: define.rs_production,
+        // features: [
+        //     'Intl',
+        //     'Map',
+        //     'Set',
+        //     'Array.isArray',
+        //     'Array.prototype.find',
+        //     'Array.prototype.some',
+        //     'Object.assign',
+        //     'Promise',
+        // ],
+        // flags: 'always', // Include all specified features regardless of user-agent
+        // unknown: 'polyfill', // Polyfill all listed features if user-agent is unkown
+        // callback: 'polyfillHasLoaded',
+        // rum: true, // Allow real-user monitoring
+    }),
 
     new CssUrlRelativePlugin({
         importLoaders: 3,

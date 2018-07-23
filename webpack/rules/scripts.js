@@ -10,10 +10,7 @@ const jsConfig = [];
 
 jsConfig.push(
     {
-        loader: 'cache-loader',
-        options: {
-            cacheDirectory: resolve(define.rs_base, '.cache/happypack')
-        }
+        loader: 'cache-loader'
     }
 );
 
@@ -73,7 +70,6 @@ const rules = [
         test: define.rs_regexp_scripts,
         exclude: /(node_modules|bower_components)/,
         use: jsConfig
-        // use: 'happypack/loader'
     },
     {
         test: /\.ts[x]?$/,
