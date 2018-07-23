@@ -1,7 +1,7 @@
 // import { SvgFixer } from 'utils/svg-fixer'
-import { Preloader } from 'utils/preloader'
+import { loadComponent } from 'utils/load-component'
 
 export {
     // SvgFixer,
-    Preloader
+    loadComponent
 }
