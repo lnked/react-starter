@@ -8,11 +8,11 @@ export const MainPage = loadComponent(() =>
 )
 
 export const ChangelogPage = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackChunkName: "ChangelogPage" */ 'pages/changelog-page')
+    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "ChangelogPage" */ 'pages/changelog-page')
 )
 
 export const NoMatch = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackChunkName: "NoMatch" */ 'pages/nomatch')
+    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ 'pages/nomatch')
 )
 
 export const routes: any = [

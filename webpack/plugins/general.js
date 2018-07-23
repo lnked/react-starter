@@ -16,7 +16,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-// const ReactLoadablePlugin = require('react-loadable/webpack').ReactLoadablePlugin;
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
 // const layouts = {};
@@ -56,10 +55,6 @@ const plugins = [
 
     // /(en-gb|en|ru)/
     new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/(ru)$/),
-
-    // new ReactLoadablePlugin({
-    //     filename: './dist/react-loadable.json',
-    // }),
 
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
