@@ -33,7 +33,8 @@ const plugins = [
         }
     }),
     new WebpackPwaManifest({
-        filename: "manifest.webmanifest",
+        filename: "../manifest.webmanifest",
+        includeDirectory: true,
         name: JSON.parse(environment.APP_NAME),
         short_name: JSON.parse(environment.APP_NAME_SHORT),
         description: JSON.parse(environment.APP_NAME_DESC),
@@ -43,7 +44,7 @@ const plugins = [
         display: 'standalone',
         orientation: 'any',
         start_url: './index.html',
-        inject: true,
+        inject: false,
         fingerprints: false,
         ios: false,
         publicPath: null,
