@@ -32,6 +32,14 @@ class App extends React.Component<{}, {}> {
                         {routes.map(({ ...rest }: any, key) =>
                             <Route key={key} {...rest} />
                         )}
+
+                        {/*
+                        {routes.map(({ component: Component, ...rest }: any, key) => (
+                            <Route {...rest} key={key} render={(props: any) =>
+                                <Component {...props} className={`fade fade-${status}`} />
+                            } />
+                        ))}
+                        */}
                     </Switch>
                 </CoreLayout>
             </Router>
