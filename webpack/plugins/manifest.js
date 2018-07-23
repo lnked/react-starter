@@ -43,7 +43,7 @@ const plugins = [
         lang: 'ru-RU',
         display: 'standalone',
         orientation: 'any',
-        start_url: './index.html',
+        start_url: '/index.html',
         inject: false,
         fingerprints: false,
         ios: false,
