@@ -54,9 +54,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
     config.filename = resolve(define.rs_dist, [script, 'html'].join('.'));
     // config.svgContext = fileContent('.cache/svgstore/svgstore.svg');
 
-    config.basePath = define.rs_production
-        ? '/assets/'
-        : '/';
+    config.basePath = define.rs_output_path;
 
     if (chunksList !== undefined) {
         config.chunks = chunksList;
