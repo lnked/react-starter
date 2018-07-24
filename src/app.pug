@@ -7,6 +7,8 @@ html(
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
+        title React template
+
         meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=5')
 
         base(href=htmlWebpackPlugin.options.basePath)
@@ -24,9 +26,6 @@ html(
         //- link(rel='manifest', href='/manifest.webmanifest')
         //- script(async, src='https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js', integrity='sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA', crossorigin='anonymous')
         //- script(src='https://cdn.ravenjs.com/3.24.0/raven.min.js', crossorigin='anonymous')
-
-        title React template
-
     body.loading
         svg(xmlns='http://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
             != htmlWebpackPlugin.options.svgContext
