@@ -5,6 +5,10 @@ const define = require('../define');
 
 const rules = [
     {
+        test: define.rs_regexp_files,
+        use: ['file-loader']
+    },
+    {
         test: /\.txt$/,
         use: ['raw-loader']
     },

@@ -50,7 +50,8 @@ module.exports = {
                     ? '[path][name].[ext]?[hash:4]'
                     : '[hash:4].[ext]',
     rs_regexp_scripts: /\.(j|t)s[x]?$/i,
-    rs_regexp_medias: /\.(mp4|webm|wav|mp3|m4a|aac|oga)$/i,
+    rs_regexp_files: /\.(wexbim|docx?|csv|xlsx|pdf)$/i,
+    rs_regexp_medias: /\.(mp4|webm|wav|avi|mp3|mov|m4a|aac|oga)$/i,
     rs_regexp_styles: /\.(css|less|styl|s(a|c)?ss)$/i, // /\.(s(a|c)?ss)$/
     rs_regexp_images: /\.(?:ico|bmp|gif|png|jpe?g|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
     rs_production: isProduction,
