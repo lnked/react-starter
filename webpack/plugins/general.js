@@ -18,6 +18,8 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin')
 
+const HappyPack = require('happypack');
+
 // const layouts = {};
 
 // glob.sync(`${basePath}/src/layouts/*.?(pug|jade)`).forEach((item) => {
@@ -127,5 +129,15 @@ const plugins = [
         copyUnmodified: true
     })
 ];
+
+if (define.rs_parallel) {
+    plugins.push(
+        new HappyPack({
+            loaders: scripts.loaders,
+            threads: define.rs_parallel,
+            verbose: false
+        }),
+    )
+}
 
 module.exports.config = plugins;

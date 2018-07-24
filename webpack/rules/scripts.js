@@ -72,7 +72,9 @@ const rules = [
     {
         test: define.rs_regexp_scripts,
         exclude: /(node_modules|bower_components)/,
-        use: jsConfig
+        use: define.rs_parallel
+            ? 'happypack/loader'
+            : jsConfig
     },
     {
         test: /\.ts[x]?$/,

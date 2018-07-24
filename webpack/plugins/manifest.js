@@ -33,12 +33,12 @@ const plugins = [
         }
     }),
     new WebpackPwaManifest({
-        filename: "../manifest.webmanifest",
+        filename: "/manifest.webmanifest",
         includeDirectory: true,
-        inject: false,
+        inject: true,
         fingerprints: false,
         ios: false,
-        publicPath: null,
+        publicPath: '',
         name: JSON.parse(environment.APP_NAME),
         dir: 'auto',
         lang: 'ru-RU',
