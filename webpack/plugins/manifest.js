@@ -12,7 +12,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const plugins = [
     new FaviconsWebpackPlugin({
         logo: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
-        prefix: '/',
+        prefix: '_',
         inject: true,
         emitStats: false,
         statsFilename: '[hash:4].json',
