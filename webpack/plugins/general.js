@@ -16,7 +16,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
-const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin')
+const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
 
 const HappyPack = require('happypack');
 

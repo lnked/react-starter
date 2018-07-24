@@ -176,7 +176,7 @@
     "html-critical-webpack-plugin": "2.1.0",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
-    "html-webpack-polyfill-io-plugin": "1.0.0",
+    "html-webpack-polyfill-io-plugin2": "0.0.0-development",
     "identity-obj-proxy": "3.0.0",
     "image-trace-loader": "0.1.0",
     "image-webpack-loader": "4.3.1",

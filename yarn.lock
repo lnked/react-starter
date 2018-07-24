@@ -8573,9 +8573,9 @@ html-webpack-plugin@^2.30.1:
     pretty-error "^2.0.2"
     toposort "^1.0.0"
 
-html-webpack-polyfill-io-plugin@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/html-webpack-polyfill-io-plugin/-/html-webpack-polyfill-io-plugin-1.0.0.tgz#435209c03e8f3a4e734fa9fa083f8a870f455c60"
+html-webpack-polyfill-io-plugin2@0.0.0-development:
+  version "0.0.0-development"
+  resolved "https://registry.yarnpkg.com/html-webpack-polyfill-io-plugin2/-/html-webpack-polyfill-io-plugin2-0.0.0-development.tgz#da53bfc961b1fee9f187ca09637f0fa4d1aa9e49"
 
 htmlparser2@3.9.2, htmlparser2@^3.9.1, htmlparser2@^3.9.2:
   version "3.9.2"
