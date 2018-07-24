@@ -44,6 +44,7 @@ const plugins = [
         display: 'standalone',
         orientation: 'any',
         start_url: '/index.html',
+        theme_color: JSON.parse(environment.APP_THEME_COLOR),
         inject: false,
         fingerprints: false,
         ios: false,
