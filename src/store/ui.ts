@@ -5,15 +5,13 @@ import {
 } from 'mobx'
 
 export class UiState {
-    @observable viewType: string = 'grid'
+    @observable type: string = 'grid'
 
-    @computed
-    get view_type () {
-        return this.viewType
+    @computed get view_type () {
+        return this.type
     }
 
-    @action
-    SET_VIEW_TYPE (type: string) {
-        this.viewType = type
+    @action set (type: string) {
+        this.type = type
     }
 }
