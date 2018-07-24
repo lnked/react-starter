@@ -10,7 +10,7 @@ import {
 
 import { createBrowserHistory } from 'history'
 
-import { createStores } from 'store/create-store'
+import { createStores } from 'store'
 
 import { Provider } from 'mobx-react'
 
@@ -18,7 +18,7 @@ import { CoreLayout } from 'layouts'
 
 import { Header } from 'segments'
 
-const defaultStore = {}
+const defaultStore = []
 
 // prepare MobX stores
 const history = createBrowserHistory()
@@ -28,8 +28,8 @@ export class App extends React.Component<{}, {}> {
     render () {
         return (
             <Provider {...rootStore}>
-                <Router>
-                    <CoreLayout>
+                <CoreLayout>
+                    <Router>
                         <Header />
 
                         <Switch>
@@ -45,8 +45,8 @@ export class App extends React.Component<{}, {}> {
                             ))}
                             */}
                         </Switch>
-                    </CoreLayout>
-                </Router>
+                    </Router>
+                </CoreLayout>
             </Provider>
         )
     }
