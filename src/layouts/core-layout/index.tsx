@@ -35,6 +35,15 @@ export class CoreLayout extends React.Component<T, S> {
         this.fixScroll()
     }
 
+    renderDevTool () {
+        if (process.env.NODE_ENV !== 'production') {
+            const DevTools = require('mobx-react-devtools').default
+            return <DevTools />
+        }
+
+        return null
+    }
+
     fixScroll = () =>
         window.scrollTo(0, 0)
 
@@ -45,6 +54,7 @@ export class CoreLayout extends React.Component<T, S> {
             <div className={cx({ layout: true })}>
                 <section className={cx({ main: true })}>
                     {children}
+                    {this.renderDevTool()}
                 </section>
             </div>
         )

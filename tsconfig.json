@@ -2,10 +2,10 @@
     "compilerOptions": {
         "jsx": "react",
         "target": "es5",
-        "module": "esnext",
-        "baseUrl": ".",
+        "module": "es6",
+        "baseUrl": "src",
         "outDir": "dist",
-        "rootDir": "src",
+        // "rootDir": "src",
         "sourceRoot": "./src",
         "sourceMap": true,
         "diagnostics": true,
@@ -31,11 +31,10 @@
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
-        "inlineSourceMap": false,
         "inlineSources": false,
         "preserveConstEnums": true,
-        "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "types": [
             "node",
             "jest",
@@ -52,9 +51,10 @@
             "node_modules/@types"
         ],
         "lib": [
-            "dom",
-            "es5",
-            "es2015"
+            // "dom",
+            // "es5",
+            // "es2015"
+            "es6", "es7", "dom"
         ],
         "paths": {
             "*": [
@@ -123,7 +123,8 @@
         "dist",
         "tests",
         "webpack",
-        "coverage"
+        "coverage",
+        "node_modules"
     ],
     "plugins": [
         {

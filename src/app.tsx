@@ -8,44 +8,46 @@ import {
     Switch
 } from 'react-router-dom'
 
-// import { Provider } from 'mobx-react'
+import { createBrowserHistory } from 'history'
 
-// import { ui, app } from 'store'
+import { createStores } from 'store/create-store'
+
+import { Provider } from 'mobx-react'
 
 import { CoreLayout } from 'layouts'
 
 import { Header } from 'segments'
 
-// const store = {
-//     ui, app
-// }
+const defaultStore = {}
 
-class App extends React.Component<{}, {}> {
+// prepare MobX stores
+const history = createBrowserHistory()
+const rootStore = createStores(history, defaultStore)
+
+export class App extends React.Component<{}, {}> {
     render () {
         return (
-            // <Provider {...store}>
-            <Router>
-                <CoreLayout>
-                    <Header />
+            <Provider {...rootStore}>
+                <Router>
+                    <CoreLayout>
+                        <Header />
 
-                    <Switch>
-                        {routes.map(({ ...rest }: any, key) =>
-                            <Route key={key} {...rest} />
-                        )}
+                        <Switch>
+                            {routes.map(({ ...rest }: any, key) =>
+                                <Route key={key} {...rest} />
+                            )}
 
-                        {/*
-                        {routes.map(({ component: Component, ...rest }: any, key) => (
-                            <Route {...rest} key={key} render={(props: any) =>
-                                <Component {...props} className={`fade fade-${status}`} />
-                            } />
-                        ))}
-                        */}
-                    </Switch>
-                </CoreLayout>
-            </Router>
-            // </Provider>
+                            {/*
+                            {routes.map(({ component: Component, ...rest }: any, key) => (
+                                <Route {...rest} key={key} render={(props: any) =>
+                                    <Component {...props} className={`fade fade-${status}`} />
+                                } />
+                            ))}
+                            */}
+                        </Switch>
+                    </CoreLayout>
+                </Router>
+            </Provider>
         )
     }
 }
-
-export { App }

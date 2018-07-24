@@ -6,3 +6,9 @@ declare const require: {
     (paths: string[], callback: (...modules: any[]) => void): void;
     ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
 };
+
+// for style loader
+declare module '*.scss' {
+    const styles: any;
+    export = styles;
+  }

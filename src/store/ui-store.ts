@@ -4,7 +4,7 @@ import {
     computed
 } from 'mobx'
 
-export class UiState {
+export class UiStore {
     @observable type: string = 'grid'
 
     @computed get view_type () {
@@ -15,3 +15,5 @@ export class UiState {
         this.type = type
     }
 }
+
+export default UiStore
