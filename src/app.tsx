@@ -25,11 +25,20 @@ const history = createBrowserHistory()
 const rootStore = createStores(history, defaultStore)
 
 export class App extends React.Component<{}, {}> {
+    renderDevTool () {
+        if (process.env.NODE_ENV !== 'production') {
+            const DevTools = require('mobx-react-devtools').default
+            return <DevTools />
+        }
+
+        return null
+    }
+
     render () {
         return (
             <Provider {...rootStore}>
-                <CoreLayout>
-                    <Router>
+                <Router>
+                    <CoreLayout>
                         <Header />
 
                         <Switch>
@@ -45,8 +54,10 @@ export class App extends React.Component<{}, {}> {
                             ))}
                             */}
                         </Switch>
-                    </Router>
-                </CoreLayout>
+
+                        {this.renderDevTool()}
+                    </CoreLayout>
+                </Router>
             </Provider>
         )
     }

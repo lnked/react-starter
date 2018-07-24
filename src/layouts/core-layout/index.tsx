@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import classNames from 'classnames/bind'
 
-// import { SvgFixer } from 'utils'
+import { SvgFixer } from 'utils'
 
 export interface T {
     children?: React.ReactChild;
@@ -28,20 +28,11 @@ export class CoreLayout extends React.Component<T, S> {
         document.title = this.state.title
 
         this.fixScroll()
-        // SvgFixer()
+        SvgFixer()
     }
 
     componentDidUpdate () {
         this.fixScroll()
-    }
-
-    renderDevTool () {
-        if (process.env.NODE_ENV !== 'production') {
-            const DevTools = require('mobx-react-devtools').default
-            return <DevTools />
-        }
-
-        return null
     }
 
     fixScroll = () =>
@@ -54,7 +45,6 @@ export class CoreLayout extends React.Component<T, S> {
             <div className={cx({ layout: true })}>
                 <section className={cx({ main: true })}>
                     {children}
-                    {this.renderDevTool()}
                 </section>
             </div>
         )
