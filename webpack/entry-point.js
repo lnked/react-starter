@@ -7,6 +7,8 @@ const { polyfills } = require('./polyfills')
 const bundle = [
     ...polyfills,
     'react',
+    // 'mobx',
+    // 'mobx-react'
     // 'react-router-dom',
     // 'axios'
     // 'store2'

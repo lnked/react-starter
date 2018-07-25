@@ -42,9 +42,8 @@ const plugins = [
     }),
 
     // new webpack.DllPlugin({
-    //     context: __dirname,
+    //     path: resolve(define.rs_dist, '[name]-manifest.json'),
     //     name: '[name]_[hash]',
-    //     path: resolve(define.rs_dist, 'manifest.json'),
     // }),
 
     // /(en-gb|en|ru)/

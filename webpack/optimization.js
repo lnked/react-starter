@@ -21,15 +21,14 @@ module.exports = {
         maxInitialRequests: 3,
         automaticNameDelimiter: '~',
         cacheGroups: {
-            default: false,
             default: {
                 minChunks: 2,
                 priority: -20,
-                reuseExistingChunk: false
+                reuseExistingChunk: true
             },
             polyfill: {
                 test: /core-js/,
-                reuseExistingChunk: false,
+                reuseExistingChunk: true,
                 priority: 10
             },
             styles: {
@@ -46,7 +45,7 @@ module.exports = {
                 minChunks: 2,
                 chunks: 'initial',
                 enforce: true,
-                reuseExistingChunk: false
+                reuseExistingChunk: true
             },
             bundle: {
                 // test: /[\\/]node_modules[\\/]/,
@@ -54,7 +53,7 @@ module.exports = {
                 name: 'commons',
                 chunks: 'all',
                 minChunks: 3,
-                reuseExistingChunk: false,
+                reuseExistingChunk: true
             }
         }
     }
