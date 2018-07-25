@@ -4,8 +4,6 @@
 /.coverage
 /features.md
 /src/settings/routes.js
-/src/settings/fidebase.js
-/src/settings/fidebase.ts
 /code-example
 /.env.production
 /.env.development
