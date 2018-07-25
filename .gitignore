@@ -3,7 +3,6 @@
 /fabfile.pyc
 /.coverage
 /features.md
-/src/settings/routes.js
 /code-example
 /.env.production
 /.env.development
@@ -12,7 +11,6 @@
 /dist
 /.cache
 /.awcache
-/code-example
 
 # Numerous always-ignore extensions
 *.bak
