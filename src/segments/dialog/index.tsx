@@ -44,3 +44,5 @@ export class Dialog extends React.PureComponent<T, {}> {
         )
     }
 }
+
+export default Dialog

@@ -24,3 +24,5 @@ export class Content extends React.Component<T, {}> {
         )
     }
 }
+
+export default Content

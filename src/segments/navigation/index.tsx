@@ -15,8 +15,10 @@ export class Navigation extends React.Component<{}, S> {
     }
 
     handleOpenMenu = () =>
-        this.setState({
-            isOpened: !this.state.isOpened
+        this.setState((state: S) => {
+            return {
+                isOpened: !state.isOpened
+            }
         })
 
     render () {
@@ -38,3 +40,5 @@ export class Navigation extends React.Component<{}, S> {
         )
     }
 }
+
+export default Navigation
