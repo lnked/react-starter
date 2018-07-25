@@ -145,7 +145,7 @@
     "css-loader": "1.0.0",
     "css-mqpacker": "7.0.0",
     "css-url-relative-plugin": "1.0.0",
-    "cssnano": "4.0.3",
+    "cssnano": "4.0.4",
     "cucumber": "4.2.1",
     "dotenv": "6.0.0",
     "electron": "2.0.5",
