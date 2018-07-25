@@ -2,10 +2,9 @@
     "compilerOptions": {
         "jsx": "react",
         "target": "es5",
-        "module": "es6",
+        "module": "esnext",
         "baseUrl": "src",
         "outDir": "dist",
-        // "rootDir": "src",
         "sourceRoot": "./src",
         "sourceMap": true,
         "diagnostics": true,
@@ -51,10 +50,12 @@
             "node_modules/@types"
         ],
         "lib": [
-            // "dom",
-            // "es5",
-            // "es2015"
-            "es6", "es7", "dom"
+            "dom",
+            "es5",
+            "es2015"
+            // "es6",
+            // "es7",
+            // "dom"
         ],
         "paths": {
             "*": [

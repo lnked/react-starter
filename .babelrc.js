@@ -23,6 +23,11 @@ const ignore = []
 const sourceMaps = development
 const imports = [
     {
+        libraryName: 'core-js',
+        libraryDirectory: 'modules',
+        camel2DashComponentName: true
+    },
+    {
         libraryName: 'lodash',
         libraryDirectory: '',
         camel2DashComponentName: false
