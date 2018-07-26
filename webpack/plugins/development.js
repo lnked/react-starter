@@ -15,15 +15,15 @@ const plugins = [
 
     new WebpackNotifierPlugin({ alwaysNotify: true }),
 
-    // show module names instead of numbers in webpack stats
-    new webpack.NamedModulesPlugin(),
+    new CaseSensitivePathsPlugin(),
+
+    // new WatchMissingNodeModulesPlugin(define.rs_node),
 
     // make hot reloading work
     new webpack.HotModuleReplacementPlugin(),
 
-    new CaseSensitivePathsPlugin(),
-
-    // new WatchMissingNodeModulesPlugin(define.rs_node),
+    // show module names instead of numbers in webpack stats
+    new webpack.NamedModulesPlugin(),
 
     // don't spit out any errors in compiled assets
     new webpack.NoEmitOnErrorsPlugin(),

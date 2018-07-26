@@ -9,16 +9,13 @@ const webpack = require('webpack');
 const plugins = [];
 
 plugins.push(
-    require('precss'),
-    // require('postcss-easy-import')({
-    //     prefix: '_'
-    // }),
+    // require('precss'),
     require('postcss-import')({
         addDependencyTo: webpack,
         path: [
             define.rs_root,
             path.resolve(define.rs_root, 'assets/styles')
-        ],
+        ]
         // resolve: resolver({
         //     alias: {
         //       '~': 'src/'
@@ -26,12 +23,12 @@ plugins.push(
         // })
     }),
     require('postcss-nested'),
+    require('postcss-nesting'),
     require('postcss-calc'),
     require('postcss-selector-not'),
     require('postcss-short-spacing'),
     require('postcss-simple-vars'),
     require('postcss-mixins'),
-    require('postcss-nesting'),
     require('postcss-selector-matches'),
     require('postcss-custom-properties'),
     require('postcss-custom-selectors'),
@@ -83,6 +80,7 @@ if (define.rs_production) {
 }
 
 module.exports = ({ file, options, env }) => ({
-    // parser: file.extname === '.sss' ? 'sugarss' : 'postcss-scss',
+    // parser: require('postcss-sass'),
+    // syntax: require('postcss-sass'),
     plugins: plugins
 })

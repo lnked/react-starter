@@ -30,7 +30,7 @@ const cssConfig = [
     {
         loader: 'css-loader',
         options: {
-            importLoaders: 3,
+            importLoaders: 2,
             modules: true,
             camelCase: true,
             sourceMap: define.rs_sourceMap,
@@ -50,10 +50,11 @@ const usesConfig = [];
 usesConfig.push({
     loader: 'typed-css-modules-loader',
     options: {
+        sourceMap: define.rs_sourceMap,
         silent: true,
         modules: true,
         camelCase: true,
-        namedExport: true
+        namedExport: true,
     }
 });
 

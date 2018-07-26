@@ -137,9 +137,13 @@ if (test) {
 ///////////////////////////////////////////////////////////////
 
 if (production) {
-        // ignore.push('dist')
-        // ignore.push('tests')
-        // ignore.push('node_modules')
+    ignore.push('dist')
+    ignore.push('tests')
+    ignore.push('node_modules')
+}
+
+if (!test) {
+    ignore.push(`**/__tests__`)
 }
 
 module.exports = {

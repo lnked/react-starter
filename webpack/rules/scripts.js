@@ -35,6 +35,7 @@ tsConfig.push(
             useBabel: false,
             useCache: false,
             forkChecker: true,
+            happyPackMode: !!define.rs_parallel,
             transpileOnly: true,
             useWebpackText: true,
             errorsAsWarnings: true,
@@ -67,7 +68,8 @@ const rules = [
     {
         enforce: 'pre',
         test: /\.(t|j)s[x]?$/,
-        loader: 'source-map-loader'
+        loader: 'source-map-loader',
+        exclude: /(node_modules|bower_components)/
     },
     {
         test: define.rs_regexp_scripts,

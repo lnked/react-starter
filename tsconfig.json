@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "strict": true,
         "jsx": "react",
         "target": "es5",
         "module": "esnext",
@@ -14,8 +15,8 @@
         "noEmitHelpers": false,
         "downlevelIteration": true,
         "isolatedModules": false,
-        "strict": true,
         "skipLibCheck": true,
+        "noStrictGenericChecks": true,
         "noImplicitAny": false,
         "noImplicitThis": true,
         "strictNullChecks": true,
@@ -30,7 +31,6 @@
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
-        "inlineSources": false,
         "preserveConstEnums": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -39,23 +39,22 @@
             "jest",
             "react",
             "enzyme",
+            "react-dom",
             "react-router",
             "react-router-dom",
             "styled-components",
             "jest-styled-components"
         ],
         "typeRoots": [
-            "typings",
-            "src/typings",
-            "node_modules/@types"
+            "./typings",
+            "./src/typings",
+            "./node_modules/@types"
         ],
         "lib": [
             "dom",
             "es5",
-            "es2015"
-            // "es6",
-            // "es7",
-            // "dom"
+            "scripthost",
+            "es2015.promise"
         ],
         "paths": {
             "*": [
