@@ -30,8 +30,8 @@ if (define.rs_release || define.rs_deploy) {
 
 if (define.rs_analyzer) {
     plugins.push(
-        ...require('./plugins/analyzer').config,
-        ...require('./plugins/visualizer').config
+        ...require('./plugins/visualizer').config,
+        ...require('./plugins/analyzer').config
     )
 }
 
