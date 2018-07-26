@@ -11246,9 +11246,9 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@0.x.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdir
   dependencies:
     minimist "0.0.8"
 
-mobx-react-devtools@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-6.0.1.tgz#24fdb14349e1b0b5a014d7c031cfe8188ed9c418"
+mobx-react-devtools@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-6.0.2.tgz#a940b32701625dd8b6659bae6234b192bd17a37b"
 
 mobx-react-router@4.0.4:
   version "4.0.4"
