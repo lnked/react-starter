@@ -16,7 +16,7 @@ const plugins = [
         inject: true,
         emitStats: false,
         statsFilename: '[hash:4].json',
-        persistentCache: true,
+        persistentCache: false,
         title: JSON.parse(environment.APP_NAME),
         background: JSON.parse(environment.APP_BG_COLOR),
         icons: {
