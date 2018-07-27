@@ -24,6 +24,7 @@
     "lint:fix": "eslint ./src --fix .js[x] && stylelint --fix",
     "lint:tslint": "tslint -c tslint.json './src/**/*.{ts,tsx}'",
     "lint": "yarn run lint:scripts && yarn run lint:css && yarn run lint:styles && yarn run lint:tslint",
+    "precommit": "lint-staged",
     "test": "jest",
     "start": "yarn run serve",
     "test-watch": "yarn run test --watch --notify",
@@ -44,6 +45,9 @@
   "keywords": [
     "react"
   ],
+  "lint-staged": {
+    "*": ["yarn run lint:fix", "git add"]
+  },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
     "type": "git"
