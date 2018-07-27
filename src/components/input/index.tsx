@@ -1,5 +1,6 @@
 import * as React from 'react'
-import * as css from './styles.scss'
+
+import { Template } from './template'
 
 export interface S {
     value: string;
@@ -11,10 +12,12 @@ export class Input extends React.Component<{}, S> {
     }
 
     handleChange = (e: any) => {
-        const value = e.target.value
+        const { value } = e.target
 
-        this.setState({
-            value
+        this.setState((state: S) => {
+            return {
+                ...state, value
+            }
         })
     }
 
@@ -22,10 +25,10 @@ export class Input extends React.Component<{}, S> {
         const { value } = this.state
 
         return (
-            <div className={css.wrapper}>
-                <p>value: {value}</p>
-                <input value={value} onChange={this.handleChange} />
-            </div>
+            <Template
+                value={value}
+                handleChange={this.handleChange}
+            />
         )
     }
 }

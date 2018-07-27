@@ -1,4 +1,5 @@
-import { observable, action, extendObservable } from 'mobx'
+// import { observable, action, extendObservable } from 'mobx'
+import { observable, action } from 'mobx'
 
 export class AppStore {
     static defaultState: any = {
@@ -14,7 +15,8 @@ export class AppStore {
     @observable query: string = ''
 
     constructor (initialState?: any) {
-        extendObservable(this, {...AppStore.defaultState, ...initialState})
+        console.log(initialState)
+        // extendObservable(this, {...AppStore.defaultState, ...initialState})
     }
 
     @action loadTags = (query: string) => {
