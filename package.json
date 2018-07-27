@@ -25,6 +25,7 @@
     "lint:tslint": "tslint -c tslint.json './src/**/*.{ts,tsx}'",
     "lint": "yarn run lint:scripts && yarn run lint:css && yarn run lint:styles && yarn run lint:tslint",
     "precommit": "lint-staged",
+    "postcommit": "git update-index --again",
     "test": "jest",
     "start": "yarn run serve",
     "test-watch": "yarn run test --watch --notify",
