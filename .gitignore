@@ -4,8 +4,6 @@
 /.coverage
 /features.md
 /code-example
-.env.production
-.env.development
 
 # Compiled output
 /dist
