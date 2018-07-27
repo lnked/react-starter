@@ -1,9 +1,10 @@
 import { History } from 'history'
 
+import { configure } from 'mobx'
+
 import {
     UiStore,
     AppStore,
-    configure,
     RouterStore
 } from 'store'
 
@@ -18,13 +19,13 @@ export const createStores = (history: History, defaultStore?: any[]) => {
     const appStore = new AppStore(defaultStore)
     const routerStore = new RouterStore(history)
 
-    // mobx.extras.isolateGlobalState()
-    // mobx.useStrict(true)
-    // useStrict(true)
-
     configure({
         enforceActions: true
     })
+
+    // mobx.extras.isolateGlobalState()
+    // mobx.useStrict(true)
+    // useStrict(true)
 
     return {
         [STORE_UI]: uiStore,
