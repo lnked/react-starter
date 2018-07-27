@@ -14,18 +14,14 @@ import {
     STORE_ROUTER
 } from 'settings/constants'
 
-export const createStores = (history: History, defaultStore?: any[]) => {
+export const createStore = (history: History, initialState?: any[]) => {
     const uiStore = new UiStore()
-    const appStore = new AppStore(defaultStore)
+    const appStore = new AppStore(initialState)
     const routerStore = new RouterStore(history)
 
     configure({
         enforceActions: true
     })
-
-    // mobx.extras.isolateGlobalState()
-    // mobx.useStrict(true)
-    // useStrict(true)
 
     return {
         [STORE_UI]: uiStore,

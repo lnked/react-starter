@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export interface T {
+export interface P {
     name: string;
     min: number;
     max: number;
@@ -16,7 +16,7 @@ export interface S {
     count: number;
 }
 
-export class Quantity extends React.Component<T, S> {
+export class Quantity extends React.Component<P, S> {
     static defaultProps = {
         type: 'number',
         min: 1,
@@ -32,13 +32,14 @@ export class Quantity extends React.Component<T, S> {
         count: 0
     }
 
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (prevState.count !== nextProps.count) {
+    static getDerivedStateFromProps (props: P, state: S) {
+        if (state.count !== props.count) {
             return {
-                ...prevState,
-                ...nextProps
+                ...state,
+                ...props
             }
         }
+
         return null
     }
 

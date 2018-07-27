@@ -10,7 +10,7 @@ import {
 
 import { createBrowserHistory } from 'history'
 
-import { createStores } from 'store'
+import { createStore } from 'store'
 
 import { Provider } from 'mobx-react'
 
@@ -18,13 +18,13 @@ import { CoreLayout } from 'layouts'
 
 import { Header } from 'segments'
 
-const defaultStore = {
+const initialState = {
     test: 'xxx'
 }
 
 // prepare MobX stores
 const history = createBrowserHistory()
-const rootStore = createStores(history, defaultStore)
+const rootStore = createStore(history, initialState)
 
 export class App extends React.Component<{}, {}> {
     renderDevTool () {

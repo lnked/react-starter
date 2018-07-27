@@ -1,4 +1,3 @@
-// import { observable, action } from 'mobx'
 import { observable, action, extendObservable } from 'mobx'
 
 export class AppStore {
