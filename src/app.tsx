@@ -18,7 +18,9 @@ import { CoreLayout } from 'layouts'
 
 import { Header } from 'segments'
 
-const defaultStore = []
+const defaultStore = {
+    test: 'xxx'
+}
 
 // prepare MobX stores
 const history = createBrowserHistory()
