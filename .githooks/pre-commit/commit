@@ -10,6 +10,8 @@ if [[ -z "$SOURCE_COMMIT" ]]; then
     echo "$ENV:$SOURCE_COMMIT" | tee -i $CHANGELOG # -ai | write new line
 fi
 
+git add CHANGELOG
+
 # "predev-build": "./.commit development",
 # "preprod-build": "./.commit production",
 # "prestage-build": "./.commit staging",
