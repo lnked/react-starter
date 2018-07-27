@@ -31,4 +31,4 @@ export const fetchData = (dataDepsFn) => (Component) =>
             ? <Loader />
             : <Component {...this.props} {...data} />
     }
-}
+    }

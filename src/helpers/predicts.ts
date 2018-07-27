@@ -20,4 +20,4 @@ export const isFloat = (n: any): boolean => Number(n) === n && n % 1 !== 0
 
 export const isNull = (x: any): boolean => typeof x === 'object' && x === null
 
-export const isPhone = (phone: string): boolean => phone.replace(/[a-zA-Z\s\-_)(+]+/mg, '').length === 11
+export const isPhone = (phone: string): boolean => phone.replace(/[\s()+\-A-Z_a-z]+/gm, '').length === 11

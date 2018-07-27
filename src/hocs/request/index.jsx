@@ -1,7 +1,7 @@
 import * as React from 'react'
 import axios from 'axios'
 
-export function RequestHOC(RComponent, apiUrl) {
+export function RequestHOC (RComponent, apiUrl) {
     class RequestHOC extends React.Component {
         state = {
             data: []

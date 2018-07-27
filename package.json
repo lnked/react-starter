@@ -21,7 +21,7 @@
     "lint:scripts": "eslint ./src --ext './src/**/*.{ts,tsx,js,jsx}' --ignore-path .gitignore",
     "lint:styles": "stylelint './src/**/*.{css,less,styl,scss,sass,sss}'",
     "lint:css": "stylelint './src/**/*.{ts,tsx,js,jsx}'",
-    "lint:fix": "eslint ./src --fix .js[x] && stylelint --fix",
+    "lint:fix": "eslint ./src --fix './src/**/*.{ts,tsx,js,jsx}' && stylelint --fix",
     "lint:tslint": "tslint -c tslint.json './src/**/*.{ts,tsx}'",
     "lint": "yarn run lint:scripts && yarn run lint:css && yarn run lint:styles && yarn run lint:tslint",
     "precommit": "lint-staged",
@@ -46,7 +46,7 @@
     "react"
   ],
   "lint-staged": {
-    "*": ["yarn run lint:fix", "git add"]
+    "./src/**/*.{ts,tsx,js,jsx}": ["yarn run lint:fix", "git add"]
   },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
