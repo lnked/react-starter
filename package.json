@@ -47,7 +47,10 @@
     "react"
   ],
   "lint-staged": {
-    "./src/**/*.{ts,tsx,js,jsx}": ["yarn run lint:fix", "git add"]
+    "./src/**/*.{ts,tsx,js,jsx}": [
+      "yarn run lint:fix",
+      "git add"
+    ]
   },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
@@ -176,6 +179,7 @@
     "file-loader": "1.1.11",
     "firebase-tools": "4.0.0",
     "gh-pages": "1.2.0",
+    "git-hooks": "1.1.10",
     "happypack": "5.0.0",
     "html-critical-webpack-plugin": "2.1.0",
     "html-loader": "0.5.5",
