@@ -36,9 +36,6 @@
     "eject": "",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "predev-build": "./.commit development",
-    "preprod-build": "./.commit production",
-    "prestage-build": "./.commit staging",
     "dev-build": "yarn release --env development",
     "prod-build": "yarn release --env production",
     "stage-build": "yarn release --env staging"

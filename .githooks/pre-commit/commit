@@ -9,3 +9,7 @@ if [[ -z "$SOURCE_COMMIT" ]]; then
 	export SOURCE_COMMIT="${SOURCE_COMMIT:-$(git rev-parse HEAD)}"
     echo "$ENV:$SOURCE_COMMIT" | tee -i $CHANGELOG # -ai | write new line
 fi
+
+# "predev-build": "./.commit development",
+# "preprod-build": "./.commit production",
+# "prestage-build": "./.commit staging",
