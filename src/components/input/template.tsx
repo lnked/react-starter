@@ -10,12 +10,14 @@ export interface P {
 
 const cx = classNames.bind(css)
 
-export const Template = ({ value, handleChange }) => (
-    <div className={cx({ wrapper: true })}>
-        <p>value: {value}</p>
-        <input
-            value={value}
-            onChange={handleChange}
-        />
-    </div>
-)
+export const Template = ({ value, handleChange }) => {
+    return (
+        <div className={cx({ wrapper: true })}>
+            <p>value: {value}</p>
+            <input
+                value={value}
+                onChange={handleChange}
+            />
+        </div>
+    )
+}
