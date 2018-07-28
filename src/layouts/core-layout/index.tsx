@@ -8,7 +8,7 @@ import { SvgFixer } from 'utils'
 import { Header } from 'segments'
 
 interface P {
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 interface S {

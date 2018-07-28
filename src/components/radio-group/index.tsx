@@ -3,7 +3,7 @@ import * as React from 'react'
 interface P {
     name: string;
     checked?: boolean | string | number;
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
     handleChange?: (value: number | string | boolean) => void | boolean;
 }
 

@@ -2,7 +2,7 @@ import * as React from 'react'
 
 interface T {
     load: any;
-    children: any;
+    children?: any;
 }
 
 interface S {
@@ -24,6 +24,9 @@ export class DynamicImport extends React.Component<T, S> {
     }
 
     render () {
-        return this.props.children(this.state.component)
+        const { children } = this.props
+        const { component } = this.state
+
+        return children && children(component)
     }
 }

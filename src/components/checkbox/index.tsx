@@ -9,7 +9,7 @@ interface P {
     checked?: boolean;
     className?: string;
     value?: string | number;
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
     handleChange?: (checked: string, status: boolean) => void | boolean;
 }
 

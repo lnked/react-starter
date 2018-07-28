@@ -26,6 +26,7 @@
         "ecmaFeatures": {
             "jsx": true,
             "classes": true,
+            "globalReturn": false,
             "impliedStrict": true,
             "experimentalObjectRestSpread": true
         }
@@ -36,15 +37,19 @@
         "browser": true
     },
     "globals": {
+        "window": true,
+        "document": true,
         "typeof": true,
         "declare": true,
         "beforeEach": true,
         "describe": true,
         "expect": true,
         "it": true,
+        "JSX": true,
         "React": true,
         "xdescribe": true,
-        "xit": true
+        "xit": true,
+        "_": true
     },
     "settings": {
         "import/resolver": "webpack",
@@ -101,7 +106,7 @@
         "react/jsx-no-bind": 0,
         "react/jsx-no-duplicate-props": 1,
         "react/jsx-no-literals": 0,
-        "react/jsx-no-undef": 1,
+        "react/jsx-no-undef": [1, { "allowGlobals": true }],
         "react/jsx-pascal-case": 1,
         "react/jsx-sort-props": 0,
         "react/jsx-uses-react": 1,

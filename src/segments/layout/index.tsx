@@ -4,7 +4,7 @@ import classNames from 'classnames/bind'
 
 interface T {
     className?: string;
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 const cx = classNames.bind(css)

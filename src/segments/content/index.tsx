@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 interface T {
     className?: string;
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 export class Content extends React.Component<T, {}> {

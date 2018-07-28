@@ -4,7 +4,7 @@ import * as css from './styles.scss'
 interface T {
     title: string;
     className?: string;
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 export class Widget extends React.PureComponent<T, {}> {

@@ -7,7 +7,7 @@ interface P {
     title?: string;
     bolded?: boolean;
     variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
     className?: string;
 }
 

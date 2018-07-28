@@ -7,7 +7,7 @@ interface T {
     checked?: boolean;
     className?: string;
     value?: string | number;
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | string;
     handleChange?: (value: number | string | boolean) => void | boolean;
 }
 
