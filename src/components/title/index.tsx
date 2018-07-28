@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 // import styled, { ThemeProvider } from 'styled-components'
 
-export interface P {
+interface P {
     size: 'tiny' | 'small' | 'normal' | 'medium' | 'huge';
     type: 'primary' | 'secondary';
     label: string;

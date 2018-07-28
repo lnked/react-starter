@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import classNames from 'classnames/bind'
 
-export interface P {
+interface P {
     image: any;
     lqip?: string;
     width?: number;

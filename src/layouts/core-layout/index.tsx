@@ -5,17 +5,17 @@ import classNames from 'classnames/bind'
 
 import { SvgFixer } from 'utils'
 
-export interface T {
+interface P {
     children?: React.ReactChild;
 }
 
-export interface S {
+interface S {
     title: string;
 }
 
 const cx = classNames.bind(css)
 
-export class CoreLayout extends React.Component<T, S> {
+export class CoreLayout extends React.Component<P, S> {
     static defaultProps = {
         children: ''
     }

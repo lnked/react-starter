@@ -2,19 +2,22 @@ import * as React from 'react'
 
 import { Template } from './template'
 
-export interface P {
+interface P {
     name: string;
-    integer: boolean;
-    floating: boolean;
+    label?: string;
     value?: string | number;
+    integer?: boolean;
+    floating?: boolean;
 }
 
-export interface S {
+interface S {
     value?: string | number;
 }
 
 export class Input extends React.Component<P, S> {
     static defaultProps = {
+        label: '',
+        value: '',
         integer: false,
         floating: false
     }
@@ -60,9 +63,11 @@ export class Input extends React.Component<P, S> {
 
     render () {
         const { value } = this.state
+        const { label } = this.props
 
         return (
             <Template
+                label={label}
                 value={value}
                 handleChange={this.handleChange}
             />

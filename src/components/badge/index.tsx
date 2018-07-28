@@ -3,7 +3,7 @@ import * as React from 'react'
 
 import styled from 'styled-components'
 
-export interface P {
+interface P {
     title?: string;
     bolded?: boolean;
     variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';

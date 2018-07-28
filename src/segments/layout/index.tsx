@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 import classNames from 'classnames/bind'
 
-export interface T {
+interface T {
     className?: string;
     children?: React.ReactChild;
 }

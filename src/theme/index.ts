@@ -1,4 +1,4 @@
-// export interface ThemeInterface {
+// interface ThemeInterface {
 //     primaryColor: string;
 // }
 

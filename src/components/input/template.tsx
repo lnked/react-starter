@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import classNames from 'classnames/bind'
 
-export interface P {
+interface P {
     value: string;
     label: string;
     handleChange: (e: any) => void;
