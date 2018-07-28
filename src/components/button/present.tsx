@@ -10,7 +10,7 @@ interface P {
 
 const cx = classNames.bind(css)
 
-export const Template = ({ children }: P) => (
+export const Present = ({ children }: P) => (
     <button className={cx({ button: true })}>
         {children}
     </button>

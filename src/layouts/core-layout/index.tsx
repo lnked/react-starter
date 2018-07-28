@@ -5,7 +5,7 @@ import classNames from 'classnames/bind'
 
 import { SvgFixer } from 'utils'
 
-import { Header } from 'segments'
+import { Header } from 'compound'
 
 interface P {
     children?: JSX.Element[] | JSX.Element | string;

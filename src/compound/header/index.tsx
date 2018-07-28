@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Navigation } from 'segments'
+import { Navigation } from 'compound'
 
 export class Header extends React.Component<{}, {}> {
     render () {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Template } from './template'
+import { Present } from './present'
 
 interface P {
     name: string;
@@ -74,7 +74,7 @@ export class Input extends React.Component<P, S> {
         const { label } = this.props
 
         return (
-            <Template
+            <Present
                 label={label}
                 value={value}
                 referrer={this.input}

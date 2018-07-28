@@ -1,6 +1,18 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+// const Number = styled.h1`
+//   font-size: 36px;
+//   line-height: 40px;
+//   margin-right: 5px;
+//   padding: 0px;
+// `;
+// //..
+// <Container>
+//   <Number>{skipRatePre}</Number>
+//   <InfoName>Skip Rate</InfoName>
+// </Container>
+
 import classNames from 'classnames/bind'
 
 interface P {
@@ -12,7 +24,7 @@ interface P {
 
 const cx = classNames.bind(css)
 
-export const Template = ({ referrer, value, label, handleChange }: P) => (
+export const Present = ({ referrer, value, label, handleChange }: P) => (
     <div className={cx({ wrapper: true })}>
         <p>{label}</p>
         <p>value: {value}</p>

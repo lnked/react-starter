@@ -15,7 +15,7 @@ const alias =  {
     config: resolve(define.rs_root, 'config'),
     helpers: resolve(define.rs_root, 'helpers'),
     layouts: resolve(define.rs_root, 'layouts'),
-    segments: resolve(define.rs_root, 'segments'),
+    compound: resolve(define.rs_root, 'compound'),
     components: resolve(define.rs_root, 'components'),
     images: resolve(define.rs_root, 'assets/images'),
     styles: resolve(define.rs_root, 'assets/styles'),
