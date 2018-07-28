@@ -16,6 +16,20 @@ import { inject, observer } from 'mobx-react'
 export class MainPage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Main Page'
+
+        Notification.requestPermission((permission) => {
+            console.log('Результат запроса прав:', permission)
+
+            const notification = new Notification('Сколько ТЫЖ программистов нужно чтобы вкрутить лампочку?',
+                { body: 'Только ты!', dir: 'auto', icon: 'icon.jpg' }
+            )
+
+            notification.onshow = () => { alert('onshow') }
+            notification.onclick = () => { alert('click') }
+            notification.onerror = () => { alert('onerror') }
+
+            // const notification = new Notification(title, options)
+        })
     }
 
     render () {
