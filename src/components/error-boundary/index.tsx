@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 interface P {
-    children: any[] | React.ReactChild;
+    children: any[] | any;
 }
 
 interface S {

@@ -24,13 +24,15 @@ export class Navigation extends React.Component<{}, S> {
     render () {
         return (
             <nav className={css.navigation}>
-                <NavLink to="/" exact className={css.link} activeClassName={css.active}>
-                    Main page
-                </NavLink>
+                <div className={css.group}>
+                    <NavLink to="/" exact className={css.link} activeClassName={css.active}>
+                        Main page
+                    </NavLink>
 
-                <NavLink to="/changelog" className={css.link} activeClassName={css.active}>
-                    Another page
-                </NavLink>
+                    <NavLink to="/changelog" className={css.link} activeClassName={css.active}>
+                        Another page
+                    </NavLink>
+                </div>
 
                 <a href="https://github.com/lnked/react-starter"
                     target="_blank"

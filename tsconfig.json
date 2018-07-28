@@ -4,7 +4,7 @@
         "jsx": "react",
         "target": "es5",
         "module": "esnext",
-        "baseUrl": "src",
+        "baseUrl": "./src",
         "outDir": "dist",
         "sourceRoot": "./src",
         "sourceMap": true,

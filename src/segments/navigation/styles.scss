@@ -7,15 +7,15 @@
     justify-content: space-between;
 }
 
-.nav-list {
+.group {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .link {
-    color: #fff;
+    color: #fafafa;
     font-size: 1.6rem;
     line-height: 1;
     margin: 0 30px;

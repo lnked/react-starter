@@ -1,6 +1,26 @@
 declare var __VERSION__: string
 declare var __IN_DEBUG__: boolean
 
+// declare namespace React {
+//     interface ReactChild {
+//         [elemName: string]: any;
+//     }
+// }
+
+declare namespace JSX {
+    interface IntrinsicElements {
+        [elemName: string]: any;
+    }
+
+    interface ElementClass {
+        render: any;
+    }
+
+    interface ElementChildrenAttribute {
+        children: {};
+    }
+}
+
 declare module 'hocs'
 declare module 'store'
 declare module 'utils'
