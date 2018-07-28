@@ -24,11 +24,9 @@ export class MainPage extends React.Component<any, any> {
                 { body: 'Только ты!', dir: 'auto', icon: 'icon.jpg' }
             )
 
-            notification.onshow = () => { alert('onshow') }
-            notification.onclick = () => { alert('click') }
-            notification.onerror = () => { alert('onerror') }
-
-            // const notification = new Notification(title, options)
+            notification.onshow = () => { console.log('onshow') }
+            notification.onclick = () => { console.log('click') }
+            notification.onerror = () => { console.log('onerror') }
         })
     }
 
