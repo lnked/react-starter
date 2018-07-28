@@ -67,7 +67,7 @@
     "port": "3000"
   },
   "dependencies": {
-    "@babel/polyfill": "7.0.0-beta.54",
+    "@babel/polyfill": "7.0.0-beta.55",
     "animated": "0.2.2",
     "axios": "0.18.0",
     "axios-cache-adapter": "2.1.1",

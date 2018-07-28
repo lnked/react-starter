@@ -25,5 +25,3 @@ export class Layout extends React.Component<T, {}> {
         )
     }
 }
-
-export default Layout

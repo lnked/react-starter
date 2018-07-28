@@ -124,10 +124,6 @@ if (production) {
     plugins.push('transform-react-remove-prop-types')
 }
 
-if (development) {
-    // plugins.push('react-hot-loader/babel')
-}
-
 if (test) {
     plugins.push('transform-es2015-modules-commonjs')
 }

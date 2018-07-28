@@ -42,5 +42,3 @@ export class Navigation extends React.Component<{}, S> {
         )
     }
 }
-
-export default Navigation
