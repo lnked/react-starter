@@ -14,7 +14,7 @@ const renderApp = async () => {
     document.body.classList.remove('loading')
 }
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV !== 'production') {
     if (module.hot) {
         module.hot.accept('./app', renderApp)
     }

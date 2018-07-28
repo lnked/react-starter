@@ -5,6 +5,8 @@ import classNames from 'classnames/bind'
 
 import { SvgFixer } from 'utils'
 
+import { Header } from 'segments'
+
 interface P {
     children?: React.ReactChild;
 }
@@ -43,6 +45,8 @@ export class CoreLayout extends React.Component<P, S> {
 
         return (
             <div className={cx({ layout: true })}>
+                <Header />
+
                 <section className={cx({ main: true })}>
                     {children}
                 </section>

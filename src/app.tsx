@@ -14,9 +14,9 @@ import { createStore } from 'store'
 
 import { Provider } from 'mobx-react'
 
-import { CoreLayout } from 'layouts'
+import { ErrorBoundary } from 'components'
 
-import { Header } from 'segments'
+import { CoreLayout } from 'layouts'
 
 const initialState = {
     test: 'xxx'
@@ -39,27 +39,27 @@ export class App extends React.Component<{}, {}> {
     render () {
         return (
             <Provider {...rootStore}>
-                <Router>
-                    <CoreLayout>
-                        <Header />
+                <ErrorBoundary>
+                    <Router>
+                        <CoreLayout>
+                            <Switch>
+                                {routes.map(({ ...rest }: any, key) =>
+                                    <Route key={key} {...rest} />
+                                )}
 
-                        <Switch>
-                            {routes.map(({ ...rest }: any, key) =>
-                                <Route key={key} {...rest} />
-                            )}
+                                {/*
+                                {routes.map(({ component: Component, ...rest }: any, key) => (
+                                    <Route {...rest} key={key} render={(props: any) =>
+                                        <Component {...props} className={`fade fade-${status}`} />
+                                    } />
+                                ))}
+                                */}
+                            </Switch>
 
-                            {/*
-                            {routes.map(({ component: Component, ...rest }: any, key) => (
-                                <Route {...rest} key={key} render={(props: any) =>
-                                    <Component {...props} className={`fade fade-${status}`} />
-                                } />
-                            ))}
-                            */}
-                        </Switch>
-
-                        {this.renderDevTool()}
-                    </CoreLayout>
-                </Router>
+                            {this.renderDevTool()}
+                        </CoreLayout>
+                    </Router>
+                </ErrorBoundary>
             </Provider>
         )
     }

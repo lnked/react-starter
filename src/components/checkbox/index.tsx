@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+interface P {
     name: string;
     size?: string;
     theme?: string;
@@ -17,7 +17,7 @@ interface S {
     checked: boolean;
 }
 
-export class Checkbox extends React.PureComponent<T, S> {
+export class Checkbox extends React.PureComponent<P, S> {
     static defaultProps = {
         size: 'normal',
         theme: '',
@@ -33,10 +33,10 @@ export class Checkbox extends React.PureComponent<T, S> {
         checked: false
     }
 
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (prevState.checked !== nextProps.checked) {
+    static getDerivedStateFromProps (props: P, state: S) {
+        if (state.checked !== props.checked) {
             return {
-                checked: nextProps.checked
+                checked: props.checked
             }
         }
 

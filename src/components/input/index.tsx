@@ -22,6 +22,8 @@ export class Input extends React.Component<P, S> {
         floating: false
     }
 
+    input: any = React.createRef()
+
     state = {
         value: ''
     }
@@ -38,6 +40,12 @@ export class Input extends React.Component<P, S> {
     //         touch: false
     //     }
     // }
+
+    componentDidMount () {
+        if (this.input && this.input.current) {
+            this.input.current.value = 'xxx'
+        }
+    }
 
     prepared = (value: string) => {
         const { integer, floating } = this.props
@@ -69,6 +77,7 @@ export class Input extends React.Component<P, S> {
             <Template
                 label={label}
                 value={value}
+                referrer={this.input}
                 handleChange={this.handleChange}
             />
         )
