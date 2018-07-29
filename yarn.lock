@@ -110,6 +110,12 @@
   dependencies:
     "@babel/types" "7.0.0-beta.54"
 
+"@babel/helper-annotate-as-pure@7.0.0-beta.55":
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0-beta.55.tgz#3c3e4c00e14e7dea917938e35ed5d9156cdd35ce"
+  dependencies:
+    "@babel/types" "7.0.0-beta.55"
+
 "@babel/helper-builder-binary-assignment-operator-visitor@7.0.0-beta.54":
   version "7.0.0-beta.54"
   resolved "https://registry.yarnpkg.com/@babel/helper-builder-binary-assignment-operator-visitor/-/helper-builder-binary-assignment-operator-visitor-7.0.0-beta.54.tgz#d0a1967635b9eebcafdba80491917ee4981c12fa"
@@ -122,6 +128,13 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.0.0-beta.54.tgz#cad582ab1cb831f4dc34e9bcb4c4fa2f1fb6c986"
   dependencies:
     "@babel/types" "7.0.0-beta.54"
+    esutils "^2.0.0"
+
+"@babel/helper-builder-react-jsx@7.0.0-beta.55":
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.0.0-beta.55.tgz#9f5ef443e3610cf8be450685cbc3658480cfcd8f"
+  dependencies:
+    "@babel/types" "7.0.0-beta.55"
     esutils "^2.0.0"
 
 "@babel/helper-call-delegate@7.0.0-beta.54":
@@ -232,6 +245,10 @@
 "@babel/helper-plugin-utils@7.0.0-beta.54":
   version "7.0.0-beta.54"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.54.tgz#61d2a9a0f9a3e31838a458debb9eebd7bdd249b4"
+
+"@babel/helper-plugin-utils@7.0.0-beta.55":
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.55.tgz#31f40777efd6b961da8496a923c22d2b062b3f73"
 
 "@babel/helper-regex@7.0.0-beta.54":
   version "7.0.0-beta.54"
@@ -692,12 +709,12 @@
     "@babel/helper-get-function-arity" "7.0.0-beta.54"
     "@babel/helper-plugin-utils" "7.0.0-beta.54"
 
-"@babel/plugin-transform-react-constant-elements@7.0.0-beta.54":
-  version "7.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-constant-elements/-/plugin-transform-react-constant-elements-7.0.0-beta.54.tgz#e5bbaceeeaa9197d01781d2e2ca4d1e782558202"
+"@babel/plugin-transform-react-constant-elements@7.0.0-beta.55":
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-constant-elements/-/plugin-transform-react-constant-elements-7.0.0-beta.55.tgz#0f26185822342add98d34a01abfc58068ffea8ea"
   dependencies:
-    "@babel/helper-annotate-as-pure" "7.0.0-beta.54"
-    "@babel/helper-plugin-utils" "7.0.0-beta.54"
+    "@babel/helper-annotate-as-pure" "7.0.0-beta.55"
+    "@babel/helper-plugin-utils" "7.0.0-beta.55"
 
 "@babel/plugin-transform-react-display-name@7.0.0-beta.54":
   version "7.0.0-beta.54"
@@ -705,12 +722,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.54"
 
-"@babel/plugin-transform-react-inline-elements@7.0.0-beta.54":
-  version "7.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-inline-elements/-/plugin-transform-react-inline-elements-7.0.0-beta.54.tgz#2e7edf4aaea692c28f0feecb77748e31d1ae8dcf"
+"@babel/plugin-transform-react-inline-elements@7.0.0-beta.55":
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-inline-elements/-/plugin-transform-react-inline-elements-7.0.0-beta.55.tgz#7cc240759cec81601c281af0dcd019f5cc5e6bc9"
   dependencies:
-    "@babel/helper-builder-react-jsx" "7.0.0-beta.54"
-    "@babel/helper-plugin-utils" "7.0.0-beta.54"
+    "@babel/helper-builder-react-jsx" "7.0.0-beta.55"
+    "@babel/helper-plugin-utils" "7.0.0-beta.55"
 
 "@babel/plugin-transform-react-jsx-self@7.0.0-beta.54":
   version "7.0.0-beta.54"
