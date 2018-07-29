@@ -100,7 +100,7 @@
     "@babel/preset-react": "7.0.0-beta.54",
     "@babel/preset-stage-2": "7.0.0-beta.54",
     "@babel/preset-typescript": "7.0.0-beta.55",
-    "@babel/register": "7.0.0-beta.54",
+    "@babel/register": "7.0.0-beta.55",
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-links": "^3.4.8",
     "@storybook/addons": "^3.4.8",
