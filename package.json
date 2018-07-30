@@ -216,7 +216,7 @@
     "postcss-custom-selectors": "4.0.1",
     "postcss-discard-comments": "4.0.0",
     "postcss-emptymediaqueries": "0.0.2",
-    "postcss-flexbugs-fixes": "4.0.0",
+    "postcss-flexbugs-fixes": "4.1.0",
     "postcss-hexrgba": "1.0.1",
     "postcss-import": "11.1.0",
     "postcss-import-resolver": "1.1.0",
