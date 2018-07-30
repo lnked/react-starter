@@ -118,10 +118,10 @@ plugins.push(
 );
 
 if (production) {
-    plugins.push('@babel/plugin-transform-react-constant-elements')
-    plugins.push('@babel/plugin-transform-react-inline-elements')
     plugins.push('transform-react-pure-class-to-function')
     plugins.push('transform-react-remove-prop-types')
+    plugins.push('@babel/plugin-transform-react-inline-elements')
+    plugins.push('@babel/plugin-transform-react-constant-elements')
 }
 
 if (test) {
