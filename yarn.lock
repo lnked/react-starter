@@ -1485,9 +1485,16 @@
     "@types/react" "*"
     "@types/react-router" "*"
 
-"@types/react-router@*", "@types/react-router@4.0.29":
+"@types/react-router@*":
   version "4.0.29"
   resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.29.tgz#1a906dd99abf21297a5b7cf003d1fd36e7a92069"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-router@4.0.30":
+  version "4.0.30"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.30.tgz#64bcd886befd1f932779b74d17954adbefb7a3a7"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
@@ -1511,9 +1518,9 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@types/stylelint@7.11.1":
-  version "7.11.1"
-  resolved "https://registry.yarnpkg.com/@types/stylelint/-/stylelint-7.11.1.tgz#40b79389667eeacf7685cb7b8d475837fb796aaf"
+"@types/stylelint@9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@types/stylelint/-/stylelint-9.4.0.tgz#16331412b31c000eb6766586dbe7ffa4eea1920e"
 
 "@types/tapable@*":
   version "1.0.4"
