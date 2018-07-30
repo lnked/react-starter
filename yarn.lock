@@ -6627,9 +6627,9 @@ eslint-plugin-security@1.4.0:
   dependencies:
     safe-regex "^1.1.0"
 
-eslint-plugin-sonarjs@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.1.0.tgz#fedf6e67296c30470002c48d10a701d69e40af8a"
+eslint-plugin-sonarjs@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.1.1.tgz#482489ef664e0cd19bedeb95c9756922cf5dcf1e"
 
 eslint-plugin-standard@3.1.0:
   version "3.1.0"
