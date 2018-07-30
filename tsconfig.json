@@ -8,7 +8,6 @@
         "outDir": "dist",
         "sourceRoot": "./src",
         "sourceMap": true,
-        "composite": true,
         "declaration": true,
         "diagnostics": true,
         "removeComments": true,
