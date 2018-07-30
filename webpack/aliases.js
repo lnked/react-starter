@@ -10,18 +10,17 @@ const alias =  {
     store: resolve(define.rs_root, 'store'),
     theme: resolve(define.rs_root, 'theme'),
     pages: resolve(define.rs_root, 'pages'),
-    typings: resolve(define.rs_root, 'typings'),
     assets: resolve(define.rs_root, 'assets'),
     config: resolve(define.rs_root, 'config'),
+    typings: resolve(define.rs_root, 'typings'),
     helpers: resolve(define.rs_root, 'helpers'),
     layouts: resolve(define.rs_root, 'layouts'),
-    compound: resolve(define.rs_root, 'compound'),
-    components: resolve(define.rs_root, 'components'),
     images: resolve(define.rs_root, 'assets/images'),
     styles: resolve(define.rs_root, 'assets/styles'),
     scripts: resolve(define.rs_root, 'assets/scripts'),
+    compound: resolve(define.rs_root, 'compound'),
     svgstore: resolve(define.rs_root, 'assets/svgstore'),
-    mobx: resolve(define.rs_node, 'mobx')
+    components: resolve(define.rs_root, 'components')
 }
 
 if (define.rs_preact) {

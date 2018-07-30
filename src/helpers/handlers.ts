@@ -33,4 +33,4 @@ export const declOfNum = (n, titles) => {
 
 export const trim = (str) => str.replace(/^\s+|\s+$/g, '')
 
-export const kebabCase = string => string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
+export const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
