@@ -65,14 +65,6 @@ presets.push(
     }]
 )
 
-presets.push(
-    ['@babel/preset-stage-2', {
-        loose,
-        decoratorsLegacy: true,
-        pipelaneProposal: 'minimal'
-    }]
-)
-
 // presets.push('@babel/preset-typescript')
 
 presets.push('@babel/preset-react')
@@ -92,8 +84,6 @@ if (production) {
 //     }]
 // )
 
-plugins.push('transform-async-to-generator')
-
 imports.map(item => {
     plugins.push(
         [
@@ -106,6 +96,23 @@ imports.map(item => {
         ]
     );
 })
+
+plugins.push('transform-async-to-generator')
+
+plugins.push(["@babel/plugin-proposal-pipeline-operator", { "proposal": "minimal" }]);
+
+// Stage 2
+plugins.push(["@babel/plugin-proposal-decorators", { "legacy": true }]);
+plugins.push("@babel/plugin-proposal-function-sent");
+plugins.push("@babel/plugin-proposal-export-namespace-from");
+plugins.push("@babel/plugin-proposal-numeric-separator");
+plugins.push("@babel/plugin-proposal-throw-expressions");
+
+// Stage 3
+plugins.push("@babel/plugin-syntax-dynamic-import");
+plugins.push("@babel/plugin-syntax-import-meta");
+plugins.push(["@babel/plugin-proposal-class-properties", { "loose": false }]);
+plugins.push("@babel/plugin-proposal-json-strings");
 
 plugins.push(
     ['babel-plugin-styled-components', {
