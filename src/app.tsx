@@ -10,13 +10,13 @@ import {
 
 import { createBrowserHistory } from 'history'
 
-import { createStore } from 'store'
-
-import { Provider } from 'mobx-react'
-
 import { ErrorBoundary } from 'components'
 
 import { CoreLayout } from 'layouts'
+
+import { createStore } from 'store'
+
+import { Provider } from 'mobx-react'
 
 const initialState = {
     test: 'xxx'
