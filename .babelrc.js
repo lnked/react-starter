@@ -65,7 +65,7 @@ presets.push(
     }]
 )
 
-// presets.push('@babel/preset-typescript')
+presets.push('@babel/preset-typescript')
 
 presets.push('@babel/preset-react')
 
