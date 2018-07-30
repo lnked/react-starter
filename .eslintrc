@@ -37,6 +37,7 @@
         "browser": true
     },
     "globals": {
+        "process": true,
         "window": true,
         "document": true,
         "typeof": true,
