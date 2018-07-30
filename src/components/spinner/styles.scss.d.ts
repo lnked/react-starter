@@ -1,2 +1,2 @@
 export const spinner: string;
-export const bounce: string;
+export const a: string;
