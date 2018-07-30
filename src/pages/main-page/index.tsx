@@ -17,17 +17,19 @@ export class MainPage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Main Page'
 
-        Notification.requestPermission((permission) => {
-            console.log('Результат запроса прав:', permission)
+        if (location.protocol.indexOf('https')) {
+            Notification.requestPermission((permission) => {
+                console.log('Результат запроса прав:', permission)
 
-            const notification = new Notification('Сколько ТЫЖ программистов нужно чтобы вкрутить лампочку?',
-                { body: 'Только ты!', dir: 'auto', icon: 'icon.jpg' }
-            )
+                const notification = new Notification('Сколько ТЫЖ программистов нужно чтобы вкрутить лампочку?',
+                    { body: 'Только ты!', dir: 'auto', icon: 'icon.jpg' }
+                )
 
-            notification.onshow = () => { console.log('onshow') }
-            notification.onclick = () => { console.log('click') }
-            notification.onerror = () => { console.log('onerror') }
-        })
+                notification.onshow = () => { console.log('onshow') }
+                notification.onclick = () => { console.log('click') }
+                notification.onerror = () => { console.log('onerror') }
+            })
+        }
     }
 
     render () {
