@@ -4,15 +4,15 @@
 import { loadComponent } from 'utils'
 
 export const MainPage = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackChunkName: "MainPage" */ '../pages/main-page')
+    import(/* webpackMode: "lazy", webpackChunkName: "MainPage" */ 'pages/main-page')
 )
 
 export const ChangelogPage = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "ChangelogPage" */ '../pages/changelog-page')
+    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "ChangelogPage" */ 'pages/changelog-page')
 )
 
 export const NoMatch = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ '../pages/nomatch')
+    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ 'pages/nomatch')
 )
 
 export const routes: any = [
