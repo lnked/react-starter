@@ -54,11 +54,6 @@ const webpackConfig = webpackMerge(config, {
 
         compress: true,
 
-        // noInfo: true,
-        // inline: true,
-        // hotOnly: false,
-        // progress: false,
-
         watchContentBase: false,
 
         disableHostCheck: true,
@@ -103,7 +98,7 @@ const webpackConfig = webpackMerge(config, {
             // it used the same host and port.
             // https://github.com/facebookincubator/create-react-app/issues/2272#issuecomment-302832432
             app.use(noopServiceWorkerMiddleware());
-        },
+        }
     },
 
     node: {

@@ -17,7 +17,7 @@ export class MainPage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Main Page'
 
-        if (location.protocol.indexOf('https')) {
+        if (location.protocol.indexOf('https') >= 0) {
             Notification.requestPermission((permission) => {
                 console.log('Результат запроса прав:', permission)
 

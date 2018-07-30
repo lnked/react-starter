@@ -3,7 +3,6 @@
 const { resolve } = require('path');
 
 const define = require('../define');
-const eslintFormatter = require('react-dev-utils/eslintFormatter');
 
 const tsConfig = [];
 const jsConfig = [];
@@ -50,8 +49,7 @@ const rules = [
         enforce: 'pre',
         test: define.rs_regexp_scripts,
         options: {
-            fix: false,
-            formatter: eslintFormatter
+            fix: false
         },
         loader: 'eslint-loader',
         include: define.rs_root

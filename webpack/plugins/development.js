@@ -4,7 +4,6 @@ const define = require('../define');
 const webpack = require('webpack');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-// const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 
 const plugins = [
     new webpack.WatchIgnorePlugin([
@@ -16,8 +15,6 @@ const plugins = [
     new WebpackNotifierPlugin({ alwaysNotify: true }),
 
     new CaseSensitivePathsPlugin(),
-
-    // new WatchMissingNodeModulesPlugin(define.rs_node),
 
     // make hot reloading work
     new webpack.HotModuleReplacementPlugin(),
