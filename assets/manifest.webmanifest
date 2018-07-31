@@ -1,37 +1,37 @@
 {
   "icons": [
     {
-      "src": "../assets/icon_1024x1024.svg",
+      "src": "./icon_1024x1024.svg",
       "sizes": "1024x1024",
       "type": "image/svg+xml"
     },
     {
-      "src": "../assets/icon_512x512.svg",
+      "src": "./icon_512x512.svg",
       "sizes": "512x512",
       "type": "image/svg+xml"
     },
     {
-      "src": "../assets/icon_384x384.svg",
+      "src": "./icon_384x384.svg",
       "sizes": "384x384",
       "type": "image/svg+xml"
     },
     {
-      "src": "../assets/icon_256x256.svg",
+      "src": "./icon_256x256.svg",
       "sizes": "256x256",
       "type": "image/svg+xml"
     },
     {
-      "src": "../assets/icon_192x192.svg",
+      "src": "./icon_192x192.svg",
       "sizes": "192x192",
       "type": "image/svg+xml"
     },
     {
-      "src": "../assets/icon_128x128.svg",
+      "src": "./icon_128x128.svg",
       "sizes": "128x128",
       "type": "image/svg+xml"
     },
     {
-      "src": "../assets/icon_96x96.svg",
+      "src": "./icon_96x96.svg",
       "sizes": "96x96",
       "type": "image/svg+xml"
     }
