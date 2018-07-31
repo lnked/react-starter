@@ -56,7 +56,7 @@ presets.push(
         loose,
         debug: false,
         modules: false,
-        useBuiltIns,
+        useBuiltIns: false,
         shippedProposals: false,
         forceAllTransforms: production,
         exclude: [
