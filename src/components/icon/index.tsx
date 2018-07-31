@@ -28,9 +28,7 @@ export class Icon extends React.PureComponent<P, {}> {
         const { symbol, hidden, className } = this.props
 
         return (
-            <svg className={cx({ icon: true }, className)}
-                key={`icon_${symbol}`}
-                role="presentation" aria-hidden={hidden}>
+            <svg className={cx(css.icon, className)} key={`ico_${symbol}`} role="presentation" aria-hidden={hidden}>
                 <use xlinkHref={`${this.baseUrl}#${symbol}`} />
             </svg>
         )

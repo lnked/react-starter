@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import classNames from 'classnames/bind'
+
 import {
     STORE_UI,
     STORE_APP,
@@ -12,6 +14,8 @@ import { inject, observer } from 'mobx-react'
 import { Icon } from 'components'
 
 // import src from 'pages/main-page/assets/image.jpg'
+
+const cx = classNames.bind(css)
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
@@ -40,9 +44,17 @@ export class MainPage extends React.Component<any, any> {
                     <li>Jest/Enzyme</li>
                 </ul>
 
-                <Icon symbol="close" className={css.icon} />
+                <p>You can use SVG Sprite icons</p>
 
-                <Icon symbol="settings" className={css.icon} />
+                <div className={css.iconSet}>
+                    <Icon symbol="favorite" className={cx({icon: true, icon1: true})} />
+                    <Icon symbol="favorite" className={cx({icon: true, icon2: true})} />
+                    <Icon symbol="favorite" className={cx({icon: true, icon3: true})} />
+                    <Icon symbol="favorite" className={cx({icon: true, icon4: true})} />
+                    <Icon symbol="favorite" className={cx({icon: true, icon5: true})} />
+                    <Icon symbol="favorite" className={cx({icon: true, icon6: true})} />
+                    <Icon symbol="favorite" className={cx({icon: true, icon7: true})} />
+                </div>
 
                 {/*
                 <div className={css.group}>

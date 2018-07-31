@@ -11,12 +11,58 @@
     padding: 20px;
 }
 
+.icon-set {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .icon {
-    margin: 20px;
-    color: rgba(134, 53, 228, 0.808);
     width: 50px;
     height: 50px;
-    border: 1px solid lime;
+    margin: 5px;
+}
+
+.icon1 {
+    width: 10px;
+    height: 10px;
+    color: rgb(238, 15, 15);
+}
+
+.icon2 {
+    width: 15px;
+    height: 15px;
+    color: rgb(238, 135, 17);
+}
+
+.icon3 {
+    width: 20px;
+    height: 20px;
+    color: rgb(247, 231, 9);
+}
+
+.icon4 {
+    width: 25px;
+    height: 25px;
+    color: rgb(0, 165, 102);
+}
+
+.icon5 {
+    width: 30px;
+    height: 30px;
+    color: rgb(67, 202, 247);
+}
+
+.icon6 {
+    width: 35px;
+    height: 35px;
+    color: rgb(25, 64, 236);
+}
+
+.icon7 {
+    width: 40px;
+    height: 40px;
+    color: rgb(201, 27, 201);
 }
 
 .description {
