@@ -22,10 +22,7 @@ html(
         meta(name='keywords', content='React, starter, pwa')
         meta(name='description', content='React-starter a react web sterter kit')
         meta(name='author', content='Edik Bulikyan <ed.proff@gmail.com>')
-
         //- link(rel='manifest', href='/manifest.webmanifest')
-        //- script(async, src='https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js', integrity='sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA', crossorigin='anonymous')
-        //- script(src='https://cdn.ravenjs.com/3.24.0/raven.min.js', crossorigin='anonymous')
     body.loading
         svg(xmlns='http://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
             != htmlWebpackPlugin.options.svgContext
@@ -43,11 +40,6 @@ html(
                     | , Safari or Firefox for a better experience.
 
         script.
-            //- Raven.config('https://b1633193741740e58c7122d526174117@sentry.io/1238565', {
-            //-     release: '1-0-0',
-            //-     environment: 'development-test'
-            //- }).install();
-
             if ('serviceWorker' in navigator && location.protocol.indexOf('https') >= 0) {
                 window.addEventListener('load', function() {
                     navigator.serviceWorker.register('../sw.js');

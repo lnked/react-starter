@@ -45,7 +45,6 @@ const plugins = [
         display: 'standalone',
         orientation: 'any',
         description: JSON.parse(environment.APP_NAME_DESC),
-        // start_url: '/index.html',
         start_url: '.',
         short_name: JSON.parse(environment.APP_NAME_SHORT),
         theme_color: JSON.parse(environment.APP_THEME_COLOR),
@@ -54,11 +53,11 @@ const plugins = [
         related_applications: [
             // {
             //     "platform": "play",
-            //     "url": "https://play.google.com/store/apps/details?id=ru.agroclub"
+            //     "url": "https://play.google.com/store/apps/details?id={id_play}"
             // },
             // {
             //     "platform": "itunes",
-            //     "url": "https://itunes.apple.com/us/app/агро-клуб/id1401935493?ls=1&mt=8"
+            //     "url": "https://itunes.apple.com/us/app/?ls=1&mt=8"
             // }
         ],
         icons: [
