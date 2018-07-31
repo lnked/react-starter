@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const { resolve } = require('path');
 
 const webpack = require('webpack');
@@ -17,6 +18,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
+const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
 
 const HappyPack = require('happypack');
 
@@ -56,6 +58,15 @@ const plugins = [
     }),
 
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
+
+    new SvgSpriteHtmlWebpackPlugin({
+        includeFiles: [
+            './src/assets/svgstore/*.svg'
+        ],
+        generateSymbolId: function(svgFilePath) {
+            return path.basename(svgFilePath).replace(/\.svg/gi, '').toString()
+        }
+    }),
 
     new HtmlWebpackPolyfillIOPlugin({
         minify: define.rs_production,

@@ -6,6 +6,45 @@
 // const glob = require('glob');
 // const config = require('../config');
 
+// if (define.rs_imagesPlaceholders)
+// {
+//     loaders.push({
+//         test: /\.(gif|png|jpe?g)$/i,
+//         use: [
+//             {
+//                 loader: 'sqip-loader',
+//                 options: {
+//                     numberOfPrimitives: 20
+//                 }
+//             },
+//             {
+//                 loader: 'url-loader',
+//                 options: {
+//                     limit: 8192
+//                 }
+//             }
+//         ]
+//     });
+
+//     loaders.push({
+//         test: /\.(gif|png|jpe?g)$/i,
+//         use: [
+//             {
+//                 loader: "image-trace-loader",
+//                 options: {
+//                     color: options.traceColor,
+//                 }
+//             },
+//             {
+//                 loader: 'sqip-loader',
+//                 options: {
+//                     numberOfPrimitives: 20
+//                 }
+//             }
+//         ]
+//     });
+// }
+
 // const pushRules = (nextConfig = {}, rules = {}) => {
 //     return Object.assign({}, nextConfig, {
 //         webpack(config, options) {

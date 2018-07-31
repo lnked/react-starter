@@ -1,34 +1,37 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+import classNames from 'classnames/bind'
+
+interface P {
+    symbol: string;
     hidden?: boolean;
-    symbol?: string;
     className?: string;
 }
 
-export class Icon extends React.PureComponent<T, {}> {
+const cx = classNames.bind(css)
+
+export class Icon extends React.PureComponent<P, {}> {
     static defaultProps = {
         symbol: '',
         hidden: false,
         className: ''
     }
 
+    baseUrl: string = ''
+
+    componentDidMount () {
+        this.baseUrl = window.location.href.replace(window.location.hash, '')
+    }
+
     render () {
-        const cn: Array<string> = []
         const { symbol, hidden, className } = this.props
 
-        const baseUrl = window.location.href.replace(window.location.hash, '')
-
-        cn.push(css.icon)
-
-        if (className) {
-            cn.push(className)
-        }
-
         return (
-            <svg className={cn.join(' ')} key={`icon_${symbol}`} role="presentation" aria-hidden={hidden}>
-                <use xlinkHref={`${baseUrl}#${symbol}`} />
+            <svg className={cx({ icon: true }, className)}
+                key={`icon_${symbol}`}
+                role="presentation" aria-hidden={hidden}>
+                <use xlinkHref={`${this.baseUrl}#${symbol}`} />
             </svg>
         )
     }

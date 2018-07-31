@@ -3,6 +3,7 @@
 const { resolve } = require('path');
 const define = require('../define');
 const svgo = require('../svgo');
+const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
 
 const options = {
     style: true,
@@ -13,44 +14,11 @@ const options = {
 
 const loaders = [];
 
-// if (define.rs_imagesPlaceholders)
-// {
-//     loaders.push({
-//         test: /\.(gif|png|jpe?g)$/i,
-//         use: [
-//             {
-//                 loader: 'sqip-loader',
-//                 options: {
-//                     numberOfPrimitives: 20
-//                 }
-//             },
-//             {
-//                 loader: 'url-loader',
-//                 options: {
-//                     limit: 8192
-//                 }
-//             }
-//         ]
-//     });
-
-//     loaders.push({
-//         test: /\.(gif|png|jpe?g)$/i,
-//         use: [
-//             {
-//                 loader: "image-trace-loader",
-//                 options: {
-//                     color: options.traceColor,
-//                 }
-//             },
-//             {
-//                 loader: 'sqip-loader',
-//                 options: {
-//                     numberOfPrimitives: 20
-//                 }
-//             }
-//         ]
-//     });
-// }
+loaders.push({
+    test: /\.svg$/,
+    use: SvgSpriteHtmlWebpackPlugin.getLoader(),
+    include: resolve(define.rs_root, '/assets/svgstore')
+})
 
 loaders.push({
     test: define.rs_regexp_images,
@@ -121,7 +89,7 @@ loaders.push({
     },
     exclude: [
         resolve(define.rs_root, '/assets/fonts'),
-        resolve(define.rs_root, '/assets/svgstore')
+        // resolve(define.rs_root, '/assets/svgstore')
     ]
 });
 

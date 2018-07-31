@@ -264,6 +264,7 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-order": "0.8.1",
     "stylelint-processor-styled-components": "1.3.2",
+    "svg-sprite-html-webpack": "2.1.0",
     "svg-url-loader": "2.3.2",
     "svgo": "1.0.5",
     "svgo-loader": "2.1.0",

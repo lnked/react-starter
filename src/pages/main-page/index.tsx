@@ -9,6 +9,8 @@ import {
 
 import { inject, observer } from 'mobx-react'
 
+import { Icon } from 'components'
+
 // import src from 'pages/main-page/assets/image.jpg'
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
@@ -16,20 +18,6 @@ import { inject, observer } from 'mobx-react'
 export class MainPage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Main Page'
-
-        if (location.protocol.indexOf('https') >= 0) {
-            Notification.requestPermission((permission) => {
-                console.log('Результат запроса прав:', permission)
-
-                const notification = new Notification('Сколько ТЫЖ программистов нужно чтобы вкрутить лампочку?',
-                    { body: 'Только ты!', dir: 'auto', icon: 'icon.jpg' }
-                )
-
-                notification.onshow = () => { console.log('onshow') }
-                notification.onclick = () => { console.log('click') }
-                notification.onerror = () => { console.log('onerror') }
-            })
-        }
     }
 
     render () {
@@ -51,6 +39,11 @@ export class MainPage extends React.Component<any, any> {
                     <li>Typescript</li>
                     <li>Jest/Enzyme</li>
                 </ul>
+
+                <Icon symbol="close" className={css.icon} />
+
+                <Icon symbol="settings" className={css.icon} />
+
                 {/*
                 <div className={css.group}>
                     <div className={css.image} />
