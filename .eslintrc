@@ -92,6 +92,7 @@
             }
         ],
         "allowTernary": true,
+        "no-switch-case-fall-through": true,
         "optimize-regex/optimize-regex": "warn",
         "jsx-a11y/label-has-associated-control": 0,
         "immutable/no-let": 0,
