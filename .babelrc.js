@@ -56,7 +56,7 @@ presets.push(
         loose,
         debug: false,
         modules: false,
-        useBuiltIns: false,
+        useBuiltIns,
         shippedProposals: false,
         forceAllTransforms: production,
         exclude: [
@@ -76,13 +76,6 @@ if (production) {
 ///////////////////////////////////////////////////////////////
 //////////////////   PLUGINS   ////////////////////////////////
 ///////////////////////////////////////////////////////////////
-
-// plugins.push(
-//     ["transform-runtime", {
-//         "polyfill": true,
-//         "regenerator": true
-//     }]
-// )
 
 imports.map(item => {
     plugins.push(
