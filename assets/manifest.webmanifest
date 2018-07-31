@@ -1,0 +1,51 @@
+{
+  "icons": [
+    {
+      "src": "/assets/icon_1024x1024.svg",
+      "sizes": "1024x1024",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon_512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon_384x384.svg",
+      "sizes": "384x384",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon_256x256.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon_192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon_128x128.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/icon_96x96.svg",
+      "sizes": "96x96",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "React starter",
+  "short_name": "RS-PWA",
+  "orientation": "any",
+  "display": "standalone",
+  "start_url": ".",
+  "dir": "auto",
+  "lang": "ru-RU",
+  "description": "React-starter a react web sterter kit!",
+  "theme_color": "#3367D6",
+  "background_color": "#2185d0",
+  "prefer_related_applications": false,
+  "related_applications": []
+}
