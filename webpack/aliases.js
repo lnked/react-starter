@@ -23,11 +23,12 @@ const alias =  {
     components: resolve(define.rs_root, 'components')
 }
 
-if (define.rs_preact) {
-    alias['react'] = 'preact-compat';
-    alias['react-dom'] = 'preact-compat';
-    alias['create-react-class'] = 'preact-compat/lib/create-react-class';
-    alias['react-dom-factories'] = 'preact-compat/lib/react-dom-factories';
+module.exports.config = {
+    ...alias,
+    ...define.rs_preact ? {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat',
+        'create-react-class': 'preact-compat/lib/create-react-class',
+        'react-dom-factories': 'preact-compat/lib/react-dom-factories'
+    } : []
 }
-
-module.exports.config = alias;

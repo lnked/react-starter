@@ -37,6 +37,7 @@
         "browser": true
     },
     "globals": {
+        "module": true,
         "process": true,
         "window": true,
         "document": true,

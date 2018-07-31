@@ -22,7 +22,7 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply;
 const isDevelopment = options.opts === 'development' || !isProduction;
 
 const _host_ = process.env.HOST || '0.0.0.0';
-const _port_ = parseInt(process.env.PORT, 10) || 3000;
+const _port_ = parseInt(process.env.PORT, 10) || 4000;
 const _protocol_ = process.env.HTTPS === 'true' ? 'https' : 'http';
 
 module.exports = {
@@ -57,9 +57,8 @@ module.exports = {
     rs_regexp_images: /\.(?:ico|bmp|gif|png|jpe?g|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_output_path: isProduction
-                    ? '/assets/'
-                    : '/',
+    rs_base_path: './assets/',
+    rs_output_path: './',
     rs_mode: isProduction
             ? 'production'
             : 'development',

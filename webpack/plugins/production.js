@@ -13,10 +13,10 @@ const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
 const plugins = [
-    new WebpackManifestPlugin({
-        basePath: define.rs_output_path,
-        fileName: "../webpack-manifest.json"
-    }),
+    // new WebpackManifestPlugin({
+    //     basePath: define.rs_output_path,
+    //     fileName: "../webpack-manifest.json"
+    // }),
 
     // new webpack.IgnorePlugin(/react-hot-loader$/),
 

@@ -32,7 +32,7 @@
     "test-cover": "yarn run test --coverage",
     "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
     "size": "yarn size-limit",
-    "deploy": "webpack --config webpack/build.config --opts deploy",
+    "deploy": "webpack --config webpack/build.config -p --opts deploy",
     "eject": "",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
