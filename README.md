@@ -86,9 +86,12 @@ Fix
 yarn run lint:fix
 ```
 
-## Expected
+## Features
 - [x] TypeScript
-- [x] Redux / MobX
+- [x] Styled Components
+- [x] PostCss / scss
+- [x] Svg sprites
+- [x] MobX
 - [x] Tests
 
 ## Get in touch
