@@ -77,6 +77,14 @@
             "packageDir": "./"
             }
         ],
+        "jsx-a11y/label-has-associated-control": 0,
+        "jsx-a11y/label-has-for": [ 2, {
+            "components": [ "Label" ],
+            "required": {
+                "some": [ "nesting", "id" ]
+            },
+            "allowChildren": false
+        }],
         "sonarjs/cognitive-complexity": ["error", 30],
         "no-loops/no-loops": 2,
         "no-use-extend-native/no-use-extend-native": 2,
@@ -95,7 +103,6 @@
         "allowTernary": true,
         "no-switch-case-fall-through": true,
         "optimize-regex/optimize-regex": "warn",
-        "jsx-a11y/label-has-associated-control": 0,
         "immutable/no-let": 0,
         "immutable/no-this": 0,
         "immutable/no-mutation": 0,
