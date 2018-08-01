@@ -37,7 +37,7 @@ export class MainPage extends React.Component<any, any> {
                     Отличный сборщик рекат проектов
                 </p>
 
-                <ul>
+                <ul className={css.list}>
                     <li>HMR</li>
                     <li>PWA</li>
                     <li>Typescript</li>

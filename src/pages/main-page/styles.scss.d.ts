@@ -1,5 +1,6 @@
 export const group: string;
 export const content: string;
+export const list: string;
 export const iconSet: string;
 export const icon: string;
 export const icon1: string;
