@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import { routes } from 'settings/routes'
 
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
 import {
     BrowserRouter as Router,
     Route,
@@ -41,15 +43,22 @@ export class App extends React.Component<{}, {}> {
             <Provider {...rootStore}>
                 <ErrorBoundary>
                     <Router>
-                        <CoreLayout>
-                            <Switch location={location}>
-                                {routes.map(({ ...rest }: any, key) =>
-                                    <Route key={key} {...rest} />
-                                )}
-                            </Switch>
+                        <Route render={({ location }) => (
+                            <CoreLayout>
 
-                            {this.renderDevTool()}
-                        </CoreLayout>
+                                <TransitionGroup>
+                                    <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                                        <Switch location={location}>
+                                            {routes.map(({ ...rest }: any, key) =>
+                                                <Route key={key} {...rest} />
+                                            )}
+                                        </Switch>
+                                    </CSSTransition>
+                                </TransitionGroup>
+
+                                {this.renderDevTool()}
+                            </CoreLayout>
+                        )} />
                     </Router>
                 </ErrorBoundary>
             </Provider>
