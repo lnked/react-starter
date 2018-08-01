@@ -12,7 +12,7 @@ const plugins = [
     // @ts-ignore
     new SWPrecacheWebpackPlugin({
         minify: true,
-        verbose: true,
+        verbose: false,
         cacheId: cache,
         filename: resolve(define.rs_dist, 'sw.js'),
         stripPrefix: `${define.rs_distBase}/`,

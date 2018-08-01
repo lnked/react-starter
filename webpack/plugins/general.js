@@ -110,6 +110,12 @@ const plugins = [
 
     new CopyWebpackPlugin([
         {
+            context: `assets/misc-${define.rs_environment}`,
+            from: { glob: '**/*', dot: true },
+            to: define.rs_dist,
+            force: true,
+            cache: true
+        }, {
             context: 'assets/misc',
             from: { glob: '**/*', dot: true },
             to: define.rs_dist,
