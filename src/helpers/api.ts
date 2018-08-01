@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { setupCache } from 'axios-cache-adapter'
 
 import { TOKEN } from './token'
 
@@ -12,15 +11,7 @@ const headers: any = {
     'Content-Type': 'application/json; charset=utf-8'
 }
 
-const config: any = {
+export const request: any = axios.create({
     baseURL: API_URL,
     headers
-}
-
-const cache = setupCache({
-    maxAge: 15 * 60 * 1000
 })
-
-config.adapter = cache.adapter
-
-export const request = axios.create(config)

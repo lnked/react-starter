@@ -13,17 +13,17 @@ import { Input } from 'components'
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
-export class ChangelogPage extends React.Component<any, any> {
+export class ExamplePage extends React.Component<any, any> {
     componentDidMount () {
-        document.title = 'Changelog Page'
+        document.title = 'Example Page'
     }
 
     render () {
         return (
             <div className={css.content}>
                 {/*
-                <Title size="huge" type="primary" center>Changelog Page</Title>
-                <Title size="medium" type="secondary" center>Changelog Page</Title>
+                <Title size="huge" type="primary" center>Example Page</Title>
+                <Title size="medium" type="secondary" center>Example Page</Title>
                 */}
 
                 <Input type="text" />
@@ -36,4 +36,4 @@ export class ChangelogPage extends React.Component<any, any> {
     }
 }
 
-export default ChangelogPage
+export default ExamplePage
