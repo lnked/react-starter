@@ -1,0 +1,23 @@
+@import 'styles/_global.scss';
+
+.locale {
+    display: flex;
+    align-items: center;
+    justify-content: space-end;
+    margin-left: 20px;
+}
+
+.link {
+    color: #fafafa;
+    font-size: 1.6rem;
+    line-height: 1;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.active {
+    color: rgb(137, 255, 113);
+}

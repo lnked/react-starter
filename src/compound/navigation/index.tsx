@@ -29,7 +29,7 @@ export class Navigation extends React.Component<{}, S> {
                         Main page
                     </NavLink>
 
-                    <NavLink to="/example" className={css.link} activeClassName={css.active}>
+                    <NavLink to="/ru/example" className={css.link} activeClassName={css.active}>
                         Example page
                     </NavLink>
                 </div>

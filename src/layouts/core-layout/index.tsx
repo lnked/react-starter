@@ -27,14 +27,21 @@ export class CoreLayout extends React.Component<P, S> {
     }
 
     componentDidMount () {
-        document.title = this.state.title
-
-        this.fixScroll()
-        SvgFixer()
+        this.withRender()
     }
 
     componentDidUpdate () {
+        this.withRender()
+    }
+
+    withRender = () => {
+        SvgFixer()
         this.fixScroll()
+        this.documentTitle()
+    }
+
+    documentTitle = () => {
+        document.title = this.state.title
     }
 
     fixScroll = () =>

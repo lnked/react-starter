@@ -15,12 +15,12 @@ export const NoMatch = loadComponent(() =>
     import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ 'pages/nomatch')
 )
 
-const locale: string = '/:locale(ru|en|de)?'
+const locale: string = '/:locale(ru|en|de)'
 
 export const routes: any = [
     {
-        path: `${locale}/`,
         exact: true,
+        path: `${locale}?`,
         component: MainPage
     },
     {
