@@ -45,7 +45,8 @@
             "check-format",
             "allow-snake-case",
             "allow-pascal-case",
-            "allow-leading-underscore"
+            "allow-leading-underscore",
+            "allow-trailing-underscore"
         ],
         "member-ordering": [
             true,
@@ -99,6 +100,7 @@
         "object-literal-sort-keys": false,
         "interface-over-type-literal": false,
         "space-before-function-paren": true,
+        "no-consecutive-blank-lines": [true, 2],
         "no-object-literal-type-assertion": false
     },
     "rulesDirectory": []
