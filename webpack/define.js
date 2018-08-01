@@ -57,7 +57,7 @@ module.exports = {
     rs_regexp_images: /\.(?:ico|bmp|gif|png|jpe?g|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
     rs_production: isProduction,
     rs_development: isDevelopment,
-    rs_base_path: './assets/',
+    rs_base_path: '/assets/',
     rs_output_path: './',
     rs_mode: isProduction
             ? 'production'
