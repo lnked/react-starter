@@ -9,6 +9,7 @@
         "sourceRoot": "./src",
         "sourceMap": true,
         "declaration": true,
+        "declarationMap": true,
         "diagnostics": true,
         "removeComments": true,
         "importHelpers": false,
@@ -17,12 +18,13 @@
         "isolatedModules": false,
         "skipLibCheck": true,
         "noStrictGenericChecks": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "noImplicitThis": true,
         "strictNullChecks": true,
         "alwaysStrict": true,
         "stripInternal": true,
         "noUnusedLocals": true,
+        "esModuleInterop": true,
         "noImplicitReturns": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
@@ -51,10 +53,12 @@
             "./node_modules/@types"
         ],
         "lib": [
-            "dom",
-            "es5",
-            "scripthost",
-            "es2015.promise"
+            // "dom",
+            // "es5",
+            // "scripthost",
+            // "es2015.promise"
+            "es6",
+            "es2017.object"
         ],
         "paths": {
             "*": [
