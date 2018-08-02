@@ -20,7 +20,7 @@ export class Animate extends React.Component {
         // this.setState({ items: newItems })
     }
 
-    handleRemove (i) {
+    handleRemove = (i) => {
         const newItems = this.state.items.slice()
         newItems.splice(i, 1)
         this.setState({ items: newItems })
