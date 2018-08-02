@@ -29,7 +29,7 @@ const imports = [
     },
     {
         libraryName: 'lodash',
-        libraryDirectory: '',
+        libraryDirectory: '_',
         camel2DashComponentName: false
     },
     {
@@ -41,7 +41,7 @@ const imports = [
         libraryName: 'react-router-dom',
         libraryDirectory: 'es',
         camel2DashComponentName: false
-    },
+    }
 ]
 
 ///////////////////////////////////////////////////////////////
@@ -116,6 +116,10 @@ plugins.push(
         displayName: false
     }]
 );
+
+if (development) {
+    plugins.push('react-hot-loader/babel')
+}
 
 if (production) {
     plugins.push('transform-react-pure-class-to-function')

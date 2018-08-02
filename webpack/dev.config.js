@@ -54,7 +54,7 @@ const webpackConfig = webpackMerge(config, {
 
         compress: true,
 
-        watchContentBase: false,
+        watchContentBase: true,
 
         disableHostCheck: true,
 
@@ -62,7 +62,7 @@ const webpackConfig = webpackMerge(config, {
 
         publicPath: config.output.publicPath,
 
-        quiet: true,
+        quiet: false,
 
         watchOptions: {
             ignored: ignoredFiles(define.rs_root)

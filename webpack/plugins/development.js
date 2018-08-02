@@ -9,7 +9,7 @@ const plugins = [
     new webpack.WatchIgnorePlugin([
         /css\.d\.ts$/,
         /scss\.d\.ts$/,
-        define.rs_node
+        /node_modules/
     ]),
 
     new WebpackNotifierPlugin({ alwaysNotify: true }),
