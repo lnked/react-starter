@@ -37,7 +37,7 @@ const cssConfig = [
             minimize: define.rs_production,
             localIdentName: define.rs_development
                 ? '[path][name]__[local]--[hash:base64:5]'
-                : '[sha1:hash:hex:4]'
+                : '[sha1:hash:hex:5]'
         }
     }
     // {

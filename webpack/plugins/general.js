@@ -83,7 +83,7 @@ const plugins = [
         // flags: 'always', // Include all specified features regardless of user-agent
         // unknown: 'polyfill', // Polyfill all listed features if user-agent is unkown
         // callback: 'polyfillHasLoaded',
-        rum: true // Allow real-user monitoring
+        // rum: true // Allow real-user monitoring
     }),
 
     new CssUrlRelativePlugin({
