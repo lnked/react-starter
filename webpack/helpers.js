@@ -10,8 +10,8 @@ const config = {
     inject: true,
     compile: false,
     filetype: 'pug',
-    prefetch: ['**/*.chunk.js'],
-    preload: ['**/*.chunk.js'],
+    prefetch: ['**/*.min.js'],
+    preload: ['**/*.min.js'],
     chunksSortMode: 'dependency',
     production: define.rs_production,
     minify: define.rs_release && {

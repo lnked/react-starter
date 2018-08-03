@@ -29,7 +29,7 @@ const webpackConfig = webpackMerge(config, {
         ...config.output,
         pathinfo: true,
         filename: '[name].js',
-        chunkFilename: '[name].chunk.js',
+        chunkFilename: '[name].min.js',
         devtoolModuleFilenameTemplate: info =>
             resolve(info.absoluteResourcePath).replace(/\\/g, '/')
     },

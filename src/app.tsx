@@ -19,7 +19,12 @@ import { createStore } from 'store'
 import { Provider } from 'mobx-react'
 
 const initialState = {
-    test: 'xxx'
+    // app: {
+    //     query: 'initial state query'
+    // },
+    // ui: {
+    //     type: 'test 1'
+    // }
 }
 
 // prepare MobX stores
@@ -29,7 +34,7 @@ const rootStore = createStore(history, initialState)
 export class App extends React.Component<{}, {}> {
     renderDevTool = () => {
         if (process.env.NODE_ENV !== 'production') {
-            const DevTools: any = require('mobx-react-devtools').default
+            const DevTools = require('mobx-react-devtools').default
             return <DevTools />
         }
 

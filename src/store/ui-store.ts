@@ -7,6 +7,10 @@ import {
 export class UiStore {
     @observable type: string = 'grid'
 
+    // constructor (initialState?: any) {
+    //     console.log(initialState)
+    // }
+
     @computed get view_type () {
         return this.type
     }
