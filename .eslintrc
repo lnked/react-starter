@@ -40,6 +40,7 @@
         "module": true,
         "process": true,
         "window": true,
+        "location": true,
         "document": true,
         "typeof": true,
         "declare": true,
@@ -49,6 +50,7 @@
         "it": true,
         "JSX": true,
         "React": true,
+        "Reflect": true,
         "xdescribe": true,
         "xit": true,
         "_": true
