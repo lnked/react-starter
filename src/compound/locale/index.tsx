@@ -5,7 +5,7 @@ import classNames from 'classnames/bind'
 
 import { NavLink } from 'react-router-dom'
 
-export interface P {
+interface P {
     className?: string;
     handleChange?: () => void | boolean;
 }

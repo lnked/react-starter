@@ -29,7 +29,7 @@ const rootStore = createStore(history, initialState)
 export class App extends React.Component<{}, {}> {
     renderDevTool = () => {
         if (process.env.NODE_ENV !== 'production') {
-            const DevTools = require('mobx-react-devtools').default
+            const DevTools: any = require('mobx-react-devtools').default
             return <DevTools />
         }
 
@@ -42,9 +42,9 @@ export class App extends React.Component<{}, {}> {
                 <ErrorBoundary>
                     <Router>
                         <CoreLayout>
-                            <Switch location={location}>
-                                {routes.map(({ ...rest }: any, key) =>
-                                    <Route key={key} {...rest} />
+                            <Switch>
+                                {routes.map(({ ...rest }: any, index: number) =>
+                                    <Route key={index} {...rest} />
                                 )}
                             </Switch>
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface T {
+interface P {
     load: any;
     children?: any;
 }
@@ -9,7 +9,7 @@ interface S {
     component: any;
 }
 
-export class DynamicImport extends React.Component<T, S> {
+export class DynamicImport extends React.Component<P, S> {
     state = {
         component: null
     }

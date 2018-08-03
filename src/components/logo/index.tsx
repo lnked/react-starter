@@ -3,11 +3,11 @@ import * as css from './styles.scss'
 
 import { NavLink } from 'react-router-dom'
 
-interface T {
+interface P {
     link: string;
 }
 
-export class Logo extends React.PureComponent<T, {}> {
+export class Logo extends React.PureComponent<P, {}> {
     static defaultProps = {
         link: '/'
     }

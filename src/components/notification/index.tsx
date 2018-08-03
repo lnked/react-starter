@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export interface P {
+interface P {
     children?: React.ReactChild;
 }
 

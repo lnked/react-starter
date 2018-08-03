@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+interface P {
     isOpened?: boolean;
 }
 
@@ -9,7 +9,7 @@ interface S {
     isOpened: boolean;
 }
 
-export class Sandwich extends React.PureComponent<T, S> {
+export class Sandwich extends React.PureComponent<P, S> {
     static defaultProps = {
         isOpened: false
     }

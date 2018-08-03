@@ -1,13 +1,13 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+interface P {
     title: string;
     className?: string;
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-export class Widget extends React.PureComponent<T, {}> {
+export class Widget extends React.PureComponent<P, {}> {
     render () {
         const cn: Array<string> = []
         const { title, children, className } = this.props

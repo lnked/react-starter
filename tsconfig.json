@@ -2,14 +2,14 @@
     "compilerOptions": {
         "strict": true,
         "jsx": "react",
-        "target": "es5",
+        "target": "es6",
         "module": "esnext",
-        "baseUrl": "./src",
+        "baseUrl": "./",
+        "rootDir": "src",
         "outDir": "dist",
-        "sourceRoot": "./src",
         "sourceMap": true,
         "declaration": true,
-        "declarationMap": true,
+        "declarationMap": false,
         "diagnostics": true,
         "removeComments": true,
         "importHelpers": false,
@@ -28,7 +28,7 @@
         "noImplicitReturns": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "suppressImplicitAnyIndexErrors": true,
+        "suppressImplicitAnyIndexErrors": false,
         "moduleResolution": "node",
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
@@ -48,87 +48,78 @@
             "jest-styled-components"
         ],
         "typeRoots": [
-            "./typings",
-            "./src/typings",
-            "./node_modules/@types"
+            "typings",
+            "src/typings",
+            "node_modules/@types"
         ],
         "lib": [
-            // "dom",
-            // "es5",
-            // "scripthost",
-            // "es2015.promise"
+            "es5",
             "es6",
-            "es2017.object"
+            "es2015.iterable",
+            "scripthost",
+            "dom"
         ],
         "paths": {
             "*": [
-                "./src/*"
+                "src/*"
             ],
             "tslib": [
-                "./node_modules/tslib/tslib.d.ts"
+                "node_modules/tslib/tslib.d.ts"
             ],
             "hocs": [
-                "./src/hocs"
+                "src/hocs"
             ],
             "compound": [
-                "./src/compound"
+                "src/compound"
             ],
             "layouts": [
-                "./src/layouts"
+                "src/layouts"
             ],
             "variables": [
-                "./src/variables"
+                "src/variables"
             ],
             "pages": [
-                "./src/pages"
+                "src/pages"
             ],
             "components": [
-                "./src/components"
+                "src/components"
             ],
             "typings": [
-                "./src/typings"
+                "src/typings"
             ],
             "assets": [
-                "./src/assets"
+                "src/assets"
             ],
             "utils": [
-                "./src/utils"
+                "src/utils"
             ],
             "config": [
-                "./src/config"
+                "src/config"
             ],
             "styles": [
-                "./src/assets/styles"
+                "src/assets/styles"
             ],
             "images": [
-                "./src/assets/images"
+                "src/assets/images"
             ],
             "scripts": [
-                "./src/assets/scripts"
+                "src/assets/scripts"
             ],
             "svgstore": [
-                "./src/assets/svgstore"
+                "src/assets/svgstore"
             ]
         }
     },
     "compileOnSave": false,
     "buildOnSave": false,
-    "filesGlob": [
-        "./src/**/*.ts",
-        "./src/**/*.tsx",
-        "./src/**/*.scss",
-        "!node_modules/**/*"
-    ],
     "include": [
-        "./src/**/*.ts",
-        "./src/**/*.tsx"
+        "src/**/*"
     ],
     "exclude": [
         "dist",
         "tests",
         "webpack",
-        "coverage",
-        "node_modules"
+        "node_modules/**"
     ],
     "plugins": [
         {

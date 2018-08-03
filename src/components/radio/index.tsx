@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+interface P {
     name: string;
     label?: string;
     checked?: boolean;
@@ -15,7 +15,7 @@ interface S {
     checked: any;
 }
 
-export class Radio extends React.PureComponent<T, S> {
+export class Radio extends React.PureComponent<P, S> {
     static defaultProps = {
         label: '',
         value: '',

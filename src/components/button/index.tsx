@@ -1,7 +1,9 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+import classNames from 'classnames/bind'
+
+interface P {
     type?: string;
     size?: 'small' | 'large' | 'normal' | 'medium';
     label?: string;
@@ -13,7 +15,9 @@ interface T {
     handleClick?: () => void | boolean;
 }
 
-export class Button extends React.PureComponent<T, {}> {
+const cx = classNames.bind(css)
+
+export class Button extends React.PureComponent<P, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'button',
@@ -32,23 +36,14 @@ export class Button extends React.PureComponent<T, {}> {
     }
 
     render () {
-        const cn: Array<string> = []
         const { label, children, type, size, variant, isIcon, isDisabled, className } = this.props
 
-        cn.push(css.button)
-        cn.push(css[`${size}`])
-        cn.push(css[`${variant}`])
-
-        if (isIcon) {
-            cn.push(css.icon)
-        }
-
-        if (className) {
-            cn.push(className)
-        }
-
         return (
-            <button type={type} onClick={this.handleClick} className={cn.join(' ')} disabled={isDisabled}>
+            <button
+                type={type}
+                onClick={this.handleClick}
+                className={cx(css.button, { icon: isIcon }, [size], [variant], className)}
+                disabled={isDisabled}>
                 {label || children}
             </button>
         )

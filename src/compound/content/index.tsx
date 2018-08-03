@@ -1,12 +1,12 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface T {
+interface P {
     className?: string;
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-export class Content extends React.Component<T, {}> {
+export class Content extends React.Component<P, {}> {
     render () {
         const cn: Array<string> = []
         const { className, children } = this.props

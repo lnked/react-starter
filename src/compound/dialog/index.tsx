@@ -3,14 +3,14 @@ import * as css from './styles.scss'
 
 import { Icon, Input, Button } from 'components'
 
-interface T {
+interface P {
     type?: 'alert' | 'prompt' | 'confirm';
     title?: string;
     value?: string | number;
     placeholder?: string;
 }
 
-export class Dialog extends React.PureComponent<T, {}> {
+export class Dialog extends React.PureComponent<P, {}> {
     static defaultProps = {
         type: 'alert',
         title: '',

@@ -2,14 +2,14 @@ import * as React from 'react'
 import * as css from './styles.scss'
 import classNames from 'classnames/bind'
 
-interface T {
+interface P {
     className?: string;
     children?: JSX.Element[] | JSX.Element | string;
 }
 
 const cx = classNames.bind(css)
 
-export class Layout extends React.Component<T, {}> {
+export class Layout extends React.Component<P, {}> {
     static defaultProps = {
         children: '',
         className: ''

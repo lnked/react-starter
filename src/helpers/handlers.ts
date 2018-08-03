@@ -1,4 +1,4 @@
-export const createMarkup = (data) => {
+export const createMarkup = (data: any) => {
     return {__html: data}
 }
 
@@ -6,18 +6,14 @@ export const concat = (...rest: string[]) => {
     return rest.concat(' ')
 }
 
-export const ucfirst = (str) => {
+export const ucfirst = (str: string) => {
     const f = str.charAt(0).toUpperCase()
     return f + str.substr(1, str.length - 1)
 }
 
-export const formatMoney = (num, penny) => {
-    if (typeof penny === 'undefined') {
-        penny = false
-    }
-
+export const formatMoney = (num: number, penny: number = 0) => {
     const formatter = new Intl.NumberFormat('ru')
-
+    console.log(penny)
     return formatter.format(num)
 }
 
@@ -27,10 +23,10 @@ export const formatDeclOfNum = (n: number, titles: Array<string>) => {
     return titles[(n % 100 > 4 && n % 100 < 20) ? 2 : cases[(n % 10 < 5) ? n % 10 : 5]]
 }
 
-export const declOfNum = (n, titles) => {
+export const declOfNum = (n: number, titles: Array<string>) => {
     return [n, formatDeclOfNum(n, titles)].join(' ')
 }
 
-export const trim = (str) => str.replace(/^\s+|\s+$/g, '')
+export const trim = (str: string) => str.replace(/^\s+|\s+$/g, '')
 
 export const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
