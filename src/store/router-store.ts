@@ -2,11 +2,11 @@ import { History } from 'history'
 
 import {
     RouterStore as BaseRouterStore,
-    syncHistoryWithStore
+    syncHistoryWithStore,
 } from 'mobx-react-router'
 
 import {
-    observable
+    observable,
 } from 'mobx'
 
 export class RouterStore extends BaseRouterStore {

@@ -1,7 +1,7 @@
 import {
     observable,
     action,
-    computed
+    computed,
 } from 'mobx'
 
 export class UiStore {

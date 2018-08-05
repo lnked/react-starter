@@ -15,7 +15,7 @@ export class Dialog extends React.PureComponent<P, {}> {
         type: 'alert',
         title: '',
         value: '',
-        placeholder: ''
+        placeholder: '',
     }
 
     render () {

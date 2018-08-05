@@ -19,11 +19,11 @@ const cx = classNames.bind(css)
 
 export class CoreLayout extends React.Component<P, S> {
     static defaultProps = {
-        children: ''
+        children: '',
     }
 
     state = {
-        title: 'React Starter App'
+        title: 'React Starter App',
     }
 
     componentDidMount () {

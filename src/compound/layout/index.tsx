@@ -12,7 +12,7 @@ const cx = classNames.bind(css)
 export class Layout extends React.Component<P, {}> {
     static defaultProps = {
         children: '',
-        className: ''
+        className: '',
     }
 
     render () {

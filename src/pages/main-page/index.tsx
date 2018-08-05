@@ -6,7 +6,7 @@ import classNames from 'classnames/bind'
 import {
     STORE_UI,
     STORE_APP,
-    STORE_ROUTER
+    STORE_ROUTER,
 } from 'settings/constants'
 
 import { inject, observer } from 'mobx-react'

@@ -5,7 +5,7 @@ import { routes } from 'settings/routes'
 import {
     BrowserRouter as Router,
     Route,
-    Switch
+    Switch,
 } from 'react-router-dom'
 
 import { createBrowserHistory } from 'history'

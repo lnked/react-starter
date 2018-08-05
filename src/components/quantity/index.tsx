@@ -25,18 +25,18 @@ export class Quantity extends React.Component<P, S> {
         count: 1,
         handleChange: (count) => {
             console.log(': = ', count)
-        }
+        },
     }
 
     state = {
-        count: 0
+        count: 0,
     }
 
     static getDerivedStateFromProps (props: P, state: S) {
         if (state.count !== props.count) {
             return {
                 ...state,
-                ...props
+                ...props,
             }
         }
 
@@ -51,7 +51,7 @@ export class Quantity extends React.Component<P, S> {
     changeValue = (count) => {
         const {
             min,
-            max
+            max,
         } = this.props
 
         if (count > max || count < min) {

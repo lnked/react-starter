@@ -8,7 +8,7 @@ const authToken = TOKEN.get()
 
 const headers: any = {
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
 }
 
 if (authToken) {
@@ -17,5 +17,5 @@ if (authToken) {
 
 export const request = axios.create({
     baseURL: API_URL,
-    headers
+    headers,
 })

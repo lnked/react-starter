@@ -19,13 +19,13 @@ export class Input extends React.Component<P, S> {
         label: '',
         value: '',
         integer: false,
-        floating: false
+        floating: false,
     }
 
     input: any = React.createRef()
 
     state = {
-        value: ''
+        value: '',
     }
 
     // static getDerivedStateFromProps (props: P, state: S) {
@@ -64,7 +64,7 @@ export class Input extends React.Component<P, S> {
 
         this.setState((state: S) => {
             return {
-                ...state, value
+                ...state, value,
             }
         })
     }

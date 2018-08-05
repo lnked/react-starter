@@ -16,11 +16,11 @@ export class RadioGroup extends React.Component<P, S> {
         checked: false,
         handleChange: (value: string | number) => {
             console.log('check radio: = ', value)
-        }
+        },
     }
 
     state = {
-        checked: this.props.checked || false
+        checked: this.props.checked || false,
     }
 
     handleChange = (checked: boolean | string | number) =>
@@ -34,7 +34,7 @@ export class RadioGroup extends React.Component<P, S> {
             React.cloneElement(radio, {
                 name,
                 checked: checked && (checked === radio.props.value),
-                handleChange: this.handleChange
+                handleChange: this.handleChange,
             })
         ))
 

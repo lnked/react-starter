@@ -9,7 +9,7 @@ interface P {
 
 export class Logo extends React.PureComponent<P, {}> {
     static defaultProps = {
-        link: '/'
+        link: '/',
     }
 
     render () {

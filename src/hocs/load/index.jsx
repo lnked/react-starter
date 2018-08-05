@@ -3,7 +3,7 @@ export const fetchData = (dataDepsFn) => (Component) =>
     // State relating to data fetching
     state = {
         isLoading: true,
-        data: {}
+        data: {},
     }
 
     componentDidMount () {
@@ -21,7 +21,7 @@ export const fetchData = (dataDepsFn) => (Component) =>
             .then(data => data.reduce(mergeData, {}))
             .then(dataObj => this.setState({
                 data: dataObj,
-                isLoading: false
+                isLoading: false,
             }))
     }
 

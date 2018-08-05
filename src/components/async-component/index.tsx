@@ -6,7 +6,7 @@ interface S {
 
 export const AsyncComponent = (loader: any, collection: any) => (class AsyncComponent extends React.Component<{}, S> {
     state = {
-        Component: null
+        Component: null,
     }
 
     componentDidMount () {

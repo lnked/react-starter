@@ -9,6 +9,6 @@ export {
     withHotkeys,
     withRequest,
     withHandlers,
-    DynamicImport
+    DynamicImport,
 }
 

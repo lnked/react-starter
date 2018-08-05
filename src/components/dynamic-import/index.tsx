@@ -11,14 +11,14 @@ interface S {
 
 export class DynamicImport extends React.Component<P, S> {
     state = {
-        component: null
+        component: null,
     }
 
     componentDidMount () {
         this.props.load()
             .then((component) => {
                 this.setState(() => ({
-                    component: component.default ? component.default : component
+                    component: component.default ? component.default : component,
                 }))
             })
     }

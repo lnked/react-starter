@@ -11,17 +11,17 @@ interface S {
 
 export class Sandwich extends React.PureComponent<P, S> {
     static defaultProps = {
-        isOpened: false
+        isOpened: false,
     }
 
     state = {
-        isOpened: false
+        isOpened: false,
     }
 
     static getDerivedStateFromProps (nextProps, prevState) {
         if (prevState.isOpened !== nextProps.isOpened) {
             return {
-                isOpened: nextProps.isOpened
+                isOpened: nextProps.isOpened,
             }
         }
 
@@ -30,7 +30,7 @@ export class Sandwich extends React.PureComponent<P, S> {
 
     handleChange = () => {
         this.setState({
-            isOpened: !this.state.isOpened
+            isOpened: !this.state.isOpened,
         })
     }
 
@@ -42,7 +42,7 @@ export class Sandwich extends React.PureComponent<P, S> {
                 <span className={!isOpened
                     ? css.sandwich__ln
                     : [
-                        css.sandwich__ln, css.sandwich__ln_open
+                        css.sandwich__ln, css.sandwich__ln_open,
                     ].join(' ')}
                 />
             </button>

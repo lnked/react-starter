@@ -15,7 +15,7 @@ const cx = classNames.bind(css)
 export class Locale extends React.Component<P, {}> {
     static defaultProps = {
         className: '',
-        handleChange: false
+        handleChange: false,
     }
 
     handleChange = (e: any) => {
@@ -30,7 +30,7 @@ export class Locale extends React.Component<P, {}> {
         const list: Array<string> = [
             'ru',
             'en',
-            'de'
+            'de',
         ]
 
         const { className } = this.props

@@ -26,7 +26,7 @@ export class Button extends React.PureComponent<P, {}> {
         isDisabled: false,
         handleClick: () => {
             console.log(' click button ')
-        }
+        },
     }
 
     handleClick = () => {

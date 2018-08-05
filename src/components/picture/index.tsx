@@ -21,11 +21,11 @@ export class Picture extends React.Component<P, {}> {
         height: 'auto',
         alt: '',
         preload: false,
-        className: ''
+        className: '',
     }
 
     state = {
-        loaded: false
+        loaded: false,
     }
 
     componentDidMount () {

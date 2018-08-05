@@ -11,13 +11,13 @@ interface S {
 
 export class Navigation extends React.Component<{}, S> {
     state = {
-        isOpened: false
+        isOpened: false,
     }
 
     handleOpenMenu = () =>
         this.setState((state: S) => {
             return {
-                isOpened: !state.isOpened
+                isOpened: !state.isOpened,
             }
         })
 

@@ -37,7 +37,7 @@ export class Badge extends React.PureComponent<P, {}> {
     static defaultProps = {
         title: '',
         variant: 'normal',
-        className: ''
+        className: '',
     }
 
     render () {

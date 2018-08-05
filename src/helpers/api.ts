@@ -8,10 +8,10 @@ const headers: any = {
     'Accept': 'application/json',
     'Authorization': `Token ${TOKEN.get()}`,
     'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Type': 'application/json; charset=utf-8',
 }
 
 export const request: any = axios.create({
     baseURL: API_URL,
-    headers
+    headers,
 })

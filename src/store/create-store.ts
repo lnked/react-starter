@@ -5,13 +5,13 @@ import { configure } from 'mobx'
 import {
     UiStore,
     AppStore,
-    RouterStore
+    RouterStore,
 } from 'store'
 
 import {
     STORE_UI,
     STORE_APP,
-    STORE_ROUTER
+    STORE_ROUTER,
 } from 'settings/constants'
 
 export const createStore = (history: History, initialState?: any[]) => {
@@ -21,12 +21,12 @@ export const createStore = (history: History, initialState?: any[]) => {
     const routerStore = new RouterStore(history)
 
     configure({
-        enforceActions: true
+        enforceActions: true,
     })
 
     return {
         [STORE_UI]: uiStore,
         [STORE_APP]: appStore,
-        [STORE_ROUTER]: routerStore
+        [STORE_ROUTER]: routerStore,
     }
 }

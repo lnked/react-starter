@@ -23,17 +23,17 @@ export class Radio extends React.PureComponent<P, S> {
         className: '',
         handleChange: (value) => {
             console.log('check radio: = ', value)
-        }
+        },
     }
 
     state = {
-        checked: false
+        checked: false,
     }
 
     static getDerivedStateFromProps (nextProps, prevState) {
         if (prevState.checked !== nextProps.checked) {
             return {
-                checked: nextProps.checked
+                checked: nextProps.checked,
             }
         }
 
@@ -63,7 +63,7 @@ export class Radio extends React.PureComponent<P, S> {
             value,
             checked,
             className: css.input,
-            onChange: this.handleChange
+            onChange: this.handleChange,
         }
 
         return (

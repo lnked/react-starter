@@ -15,7 +15,7 @@ export class Icon extends React.PureComponent<P, {}> {
     static defaultProps = {
         symbol: '',
         hidden: false,
-        className: ''
+        className: '',
     }
 
     baseUrl: string = ''

@@ -10,7 +10,7 @@ interface S {
 
 export class ErrorBoundary extends React.PureComponent<P, S> {
     state = {
-        hasError: false
+        hasError: false,
     }
 
     componentDidCatch (error: any, info: any) {

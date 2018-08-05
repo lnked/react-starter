@@ -30,7 +30,7 @@ export class Title extends React.Component<P, {}> {
         size: 'normal',
         type: 'primary',
         center: false,
-        className: ''
+        className: '',
     }
 
     render () {

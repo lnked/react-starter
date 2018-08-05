@@ -25,18 +25,18 @@ export class Checkbox extends React.PureComponent<P, S> {
         value: '',
         className: '',
         checked: false,
-        handleChange: false
+        handleChange: false,
     }
 
     state = {
         // checked: this.props.checked || false
-        checked: false
+        checked: false,
     }
 
     static getDerivedStateFromProps (props: P, state: S) {
         if (state.checked !== props.checked) {
             return {
-                checked: props.checked
+                checked: props.checked,
             }
         }
 
@@ -65,7 +65,7 @@ export class Checkbox extends React.PureComponent<P, S> {
             value,
             checked,
             className: css.input,
-            onChange: this.handleChange
+            onChange: this.handleChange,
         }
 
         return props

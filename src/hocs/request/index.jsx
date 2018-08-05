@@ -4,7 +4,7 @@ import axios from 'axios'
 export function RequestHOC (RComponent, apiUrl) {
     class RequestHOC extends React.Component {
         state = {
-            data: []
+            data: [],
         }
 
         componentDidMount () {
@@ -34,7 +34,7 @@ export function RequestHOC (RComponent, apiUrl) {
 
                         return {
                             ...item,
-                            ...updatedItem
+                            ...updatedItem,
                         }
                     })
 

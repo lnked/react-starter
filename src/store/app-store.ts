@@ -4,7 +4,7 @@ export class AppStore {
     static defaultState: any = {
         query: '',
         isLoading: false,
-        results: []
+        results: [],
     }
 
     // @observable results: string[]

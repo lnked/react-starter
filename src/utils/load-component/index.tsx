@@ -18,7 +18,7 @@ export const loadComponent = (resolve: any, options: any): any =>
         //         Oups an error occurs.
         //     </div>
         // ),
-        ...options
+        ...options,
     })
 
 export default loadComponent
