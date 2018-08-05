@@ -12,7 +12,7 @@
         "noLib": false,
         "listFiles": false,
         "sourceMap": true,
-        "declaration": true,
+        "declaration": false,
         "declarationMap": false,
         "diagnostics": true,
         "removeComments": true,
