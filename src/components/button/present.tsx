@@ -1,14 +1,14 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 interface P {
     primary?: boolean;
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
 export const Present = ({ children }: P) => (
     <button className={cx({ button: true })}>

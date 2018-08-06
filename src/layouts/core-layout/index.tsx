@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 import { SvgFixer } from 'utils'
 
@@ -15,7 +15,7 @@ interface S {
     title: string;
 }
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
 export class CoreLayout extends React.Component<P, S> {
     static defaultProps = {

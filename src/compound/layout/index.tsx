@@ -1,27 +1,18 @@
 import * as React from 'react'
 import * as css from './styles.scss'
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 interface P {
     className?: string;
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
-export class Layout extends React.Component<P, {}> {
-    static defaultProps = {
-        children: '',
-        className: '',
-    }
-
-    render () {
-        const { className, children } = this.props
-
-        return (
-            <div className={cx({ layout: true }, className)}>
-                {children}
-            </div>
-        )
-    }
+export const Layout = ({ children = '', className = '' }: P) => {
+    return (
+        <div className={cx({ layout: true }, className)}>
+            {children}
+        </div>
+    )
 }

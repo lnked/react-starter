@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 import {
     STORE_UI,
@@ -15,7 +15,7 @@ import { Icon } from 'components'
 
 // import src from 'pages/main-page/assets/image.jpg'
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer

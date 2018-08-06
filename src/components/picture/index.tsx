@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 interface P {
     image: any;
@@ -13,7 +13,7 @@ interface P {
     className?: string;
 }
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
 export class Picture extends React.Component<P, {}> {
     static defaultProps = {

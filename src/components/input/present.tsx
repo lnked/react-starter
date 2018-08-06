@@ -13,7 +13,7 @@ import * as css from './styles.scss'
 //   <InfoName>Skip Rate</InfoName>
 // </Container>
 
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 interface P {
     value?: string;
@@ -22,7 +22,7 @@ interface P {
     handleChange: (e: any) => void;
 }
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
 export const Present = ({ referrer, value, label, handleChange }: P) => (
     <div className={cx({ wrapper: true })}>

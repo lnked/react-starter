@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import classNames from 'classnames/bind'
+import { сlasses } from 'helpers'
 
 interface P {
     symbol: string;
@@ -9,7 +9,7 @@ interface P {
     className?: string;
 }
 
-const cx = classNames.bind(css)
+const cx = сlasses.bind(css)
 
 export class Icon extends React.PureComponent<P, {}> {
     static defaultProps = {

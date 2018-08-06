@@ -15,7 +15,7 @@ import {
 } from 'settings/constants'
 
 export const createStore = (history: History, initialState?: any[]) => {
-    console.log(initialState)
+    // console.log(initialState)
     const uiStore = new UiStore()
     const appStore = new AppStore()
     const routerStore = new RouterStore(history)
