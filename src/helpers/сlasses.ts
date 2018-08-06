@@ -7,6 +7,9 @@ export const сlasses: S = {
     styler: (sheets, ...args: Array<any>): string => {
         const css: Array<string> = []
 
+        console.log({sheets})
+        console.log({args})
+
         if (args.length) {
             Object.keys(args).map(id => {
                 const item = args[id]

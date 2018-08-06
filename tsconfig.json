@@ -60,6 +60,7 @@
             "es5",
             "dom",
             "scripthost",
+            "es2015",
             "es2015.iterable"
         ],
         "paths": {

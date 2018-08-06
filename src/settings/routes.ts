@@ -3,13 +3,13 @@
 
 import { loadComponent } from 'utils'
 
-export const MainPage = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackChunkName: "MainPage" */ 'pages/main-page')
-)
+// export const MainPage = loadComponent(() =>
+//     import(/* webpackMode: "lazy", webpackChunkName: "MainPage" */ 'pages/main-page')
+// )
 
-export const ExamplePage = loadComponent(() =>
-    import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "ExamplePage" */ 'pages/example-page')
-)
+// export const ExamplePage = loadComponent(() =>
+//     import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "ExamplePage" */ 'pages/example-page')
+// )
 
 export const NoMatch = loadComponent(() =>
     import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ 'pages/nomatch')
@@ -18,15 +18,15 @@ export const NoMatch = loadComponent(() =>
 const locale: string = '/:locale(ru|en|de)'
 
 export const routes: any = [
-    {
-        exact: true,
-        path: `${locale}?`,
-        component: MainPage
-    },
-    {
-        path: `${locale}/example`,
-        component: ExamplePage,
-    },
+    // {
+    //     exact: true,
+    //     path: `${locale}?`,
+    //     component: MainPage
+    // },
+    // {
+    //     path: `${locale}/example`,
+    //     component: ExamplePage,
+    // },
     {
         status: 404,
         statusCode: 404,
