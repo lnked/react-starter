@@ -141,7 +141,7 @@
     "react": "16.4.2",
     "react-animated-css": "1.0.4",
     "react-dom": "16.4.2",
-    "react-input-mask": "2.0.2",
+    "react-input-mask": "2.0.3",
     "react-router-dom": "4.3.1",
     "react-transition-group": "2.4.0",
     "recompose": "0.28.1",
