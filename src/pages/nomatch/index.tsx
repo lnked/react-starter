@@ -15,8 +15,8 @@ export const NoMatch = ({ location }: P) => {
     document.title = '404 Not Found'
 
     return (
-        <div className={cx({ error: true })}>
-            <div className={cx({ figure: true })}>
+        <div className={cx(css.error)}>
+            <div className={cx(css.figure)}>
                 <img src={require('images/logo.svg')} className={cx({ figureImage: true })} alt="Error: 4xx" />
             </div>
 

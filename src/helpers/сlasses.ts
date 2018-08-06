@@ -1,35 +1,32 @@
 interface S {
-    bind: (sheets: any, args: Array<any>) => string;
-    styler: (sheets: any) => void;
+    bind: (css: any, args: Array<any>) => string;
+    styler: (css: any) => void;
 }
 
 export const сlasses: S = {
-    styler: (sheets, ...args: Array<any>): string => {
-        const css: Array<string> = []
-
-        console.log({sheets})
-        console.log({args})
+    styler: (css, ...args: Array<any>): string => {
+        const r: Array<string> = []
 
         if (args.length) {
             Object.keys(args).map(id => {
                 const item = args[id]
 
                 if (typeof item === 'string') {
-                    css.push(sheets[item] || item)
+                    r.push(item)
                 } else {
                     Object.keys(item).map(name => {
                         if (item[name]) {
-                            css.push(sheets[name] || name)
+                            r.push(css[name])
                         }
                     })
                 }
             })
         }
 
-        return css.join(' ')
+        return r.join(' ')
     },
 
-    bind: (sheets) => {
-        return сlasses.styler.bind(сlasses, sheets)
+    bind: (css) => {
+        return сlasses.styler.bind(сlasses, css)
     },
 }
