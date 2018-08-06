@@ -71,6 +71,12 @@ export class Picture extends React.Component<P, {}> {
                         alt={alt}
                     />
                 }
+                {/*
+                <picture>
+                    <source srcset="your-image.webp" type="image/webp">
+                    <img src="your-image.jpg">
+                </picture>
+                */}
                 {/* {loaded && <img src={image} {...props} alt={alt} />} */}
                 {/* {!loaded && <svg style={img} />} */}
 
