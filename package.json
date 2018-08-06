@@ -40,17 +40,73 @@
     "build-storybook": "build-storybook",
     "dev-build": "yarn release --env development",
     "prod-build": "yarn release --env production",
-    "stage-build": "yarn release --env staging"
+    "stage-build": "yarn release --env staging",
+    "electron-rebuild": "electron-rebuild --parallel --force --types prod,dev,optional --module-dir src",
+    "package": "yarn release --env production && electron-builder build --publish never",
+    "package-all": "yarn release --env production && electron-builder build -mwl",
+    "package-linux": "yarn release --env production && electron-builder build --linux",
+    "package-win": "yarn release --env production && electron-builder build --win --x64"
   },
   "keywords": [
     "react"
   ],
   "lint-staged": {
     "./src/**/*.{ts,tsx,js,jsx}": [
-        "node_modules/.bin/eslint --max-warnings=0",
-        "yarn run lint:fix",
-        "git add"
+      "node_modules/.bin/eslint --max-warnings=0",
+      "yarn run lint:fix",
+      "git add"
+    ],
+    "*.(js|jsx)": [
+      "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
+      "prettier --ignore-path .eslintignore --single-quote --write",
+      "git add"
+    ],
+    "*.(json|css|scss|md)|.(babelrc|prettierrc|eslintrc)": [
+      "prettier --ignore-path .eslintignore --write",
+      "git add"
     ]
+  },
+  "build": {
+    "productName": "ElectronReact",
+    "appId": "org.develar.ElectronReact",
+    "files": [
+      "dist/",
+      "node_modules/",
+      "app.html",
+      "main.prod.js",
+      "main.prod.js.map",
+      "package.json"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    }
   },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
@@ -167,6 +223,9 @@
     "docz": "0.9.5",
     "dotenv": "6.0.0",
     "electron": "2.0.6",
+    "electron-builder": "20.26.1",
+    "electron-devtools-installer": "2.2.4",
+    "electron-rebuild": "1.8.2",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.4",
