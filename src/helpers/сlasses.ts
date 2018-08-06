@@ -11,7 +11,9 @@ export const сlasses: S = {
             Object.keys(args).map(id => {
                 const item = args[id]
 
-                if (typeof item === 'string') {
+                const type = typeof item
+
+                if (['string', 'number'].indexOf(type) >= 0) {
                     r.push(item)
                 } else {
                     Object.keys(item).map(name => {
