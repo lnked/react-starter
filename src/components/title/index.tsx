@@ -25,7 +25,7 @@ interface P {
 //     (props.center && 'center') ||
 //     'left'};
 
-export class Title extends React.Component<P, {}> {
+export class Title extends React.PureComponent<P, {}> {
     static defaultProps = {
         size: 'normal',
         type: 'primary',

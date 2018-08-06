@@ -6,7 +6,7 @@ interface P {
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-export class Content extends React.Component<P, {}> {
+export class Content extends React.PureComponent<P, {}> {
     render () {
         const cn: Array<string> = []
         const { className, children } = this.props

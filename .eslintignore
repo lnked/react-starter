@@ -1,10 +1,12 @@
-webpack
-typings
-coverage
-node_modules
+webpack/*
+typings/*
+coverage/
+node_modules/
+**/*.d.ts
+**/*.scss.d.ts
 
 # tmp
-dist
-logs
-.cache
-.awcache
+dist/*
+logs/
+.cache/
+.awcache/

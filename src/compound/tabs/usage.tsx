@@ -4,22 +4,22 @@
 // import Tabs from './Tabs'
 // require('./styles.css')
 
-// function App () {
+// function App() {
 //     return (
 //         <div>
 //             <h1>Tabs Demo</h1>
 //             <Tabs>
 //                 <div label="Gator">
 //                     See ya later, <em>Alligator</em>!
-//                 </div>
+// </div>
 
 //                 <div label="Croc">
 //                     After 'while, <em>Crocodile</em>!
-//                 </div>
+// </div>
 
 //                 <div label="Sarcosuchus">
 //                     Nothing to see here, this tab is <em>extinct</em>!
-//                 </div>
+// </div>
 //             </Tabs>
 //         </div>
 //     )

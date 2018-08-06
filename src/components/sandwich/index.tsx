@@ -18,10 +18,10 @@ export class Sandwich extends React.PureComponent<P, S> {
         isOpened: false,
     }
 
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (prevState.isOpened !== nextProps.isOpened) {
+    static getDerivedStateFromProps (props: P, state: S) {
+        if (state.isOpened !== props.isOpened) {
             return {
-                isOpened: nextProps.isOpened,
+                isOpened: props.isOpened,
             }
         }
 
@@ -29,8 +29,10 @@ export class Sandwich extends React.PureComponent<P, S> {
     }
 
     handleChange = () => {
-        this.setState({
-            isOpened: !this.state.isOpened,
+        this.setState((state: S) => {
+            return {
+                isOpened: !state.isOpened,
+            }
         })
     }
 

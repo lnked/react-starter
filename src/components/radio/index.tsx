@@ -21,7 +21,7 @@ export class Radio extends React.PureComponent<P, S> {
         value: '',
         checked: false,
         className: '',
-        handleChange: (value) => {
+        handleChange: (value: number | string | boolean) => {
             console.log('check radio: = ', value)
         },
     }
@@ -30,10 +30,10 @@ export class Radio extends React.PureComponent<P, S> {
         checked: false,
     }
 
-    static getDerivedStateFromProps (nextProps, prevState) {
-        if (prevState.checked !== nextProps.checked) {
+    static getDerivedStateFromProps (props: P, state: S) {
+        if (state.checked !== props.checked) {
             return {
-                checked: nextProps.checked,
+                checked: props.checked,
             }
         }
 
@@ -43,7 +43,11 @@ export class Radio extends React.PureComponent<P, S> {
     handleChange = (e: any) => {
         const checked = e.target.value
 
-        this.setState({ checked: !this.state.checked }, () => {
+        this.setState((state: S) => {
+            return {
+                checked: !state.checked,
+            }
+        }, () => {
             if (this.props.handleChange) {
                 this.props.handleChange(checked)
             }

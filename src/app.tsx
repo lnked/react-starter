@@ -19,12 +19,8 @@ import { createStore } from 'store'
 import { Provider } from 'mobx-react'
 
 const initialState = {
-    app: {
-        query: 'initial state query',
-    },
-    ui: {
-        type: 'test 1',
-    },
+    app: {query: 'initial state query'},
+    ui: {type: 'test 1'},
 }
 
 // prepare MobX stores
