@@ -48,7 +48,14 @@
     "package": "yarn release --env production && electron-builder build --publish never",
     "package-all": "yarn release --env production && electron-builder build -mwl",
     "package-linux": "yarn release --env production && electron-builder build --linux",
-    "package-win": "yarn release --env production && electron-builder build --win --x64"
+    "package-win": "yarn release --env production && electron-builder build --win --x64",
+    "pack": "electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]",
+    "package-mac": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=darwin --arch=x64 --icon=./dist/icons/icon.icns --prune=true --out=./release-builds",
+    "pack:dmg": "electron-installer-dmg ./dist react-starter.app --overwrite --asar=true --prune=true --icon=./dist/icons/icon.icns --background=./dist/img/background.png --out=./release-builds",
+    "xpackage-mac": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=darwin --arch=x64 --icon=./dist/icons/icon.icns --prune=true --out=./release-builds",
+    "xpackage-win": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=./dist/icons/icon.ico --prune=true --out=./release-builds",
+    "xpackage-linux": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=linux --arch=x64 --icon=./dist/icons/1024x1024.png --prune=true --out=./release-builds",
+    "xcreate-installer-mac": "electron-installer-dmg ./dist react-starter.app --out=./release-builds --overwrite --icon=./icons/icon.icns"
   },
   "keywords": [
     "react"
@@ -226,6 +233,7 @@
     "electron": "2.0.6",
     "electron-builder": "20.26.1",
     "electron-devtools-installer": "2.2.4",
+    "electron-packager": "12.1.0",
     "electron-rebuild": "1.8.2",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",

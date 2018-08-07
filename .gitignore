@@ -4,6 +4,7 @@
 /.coverage
 /features.md
 /code-example
+/release-builds
 /src/**/*.scss.d.ts
 
 # Compiled output
