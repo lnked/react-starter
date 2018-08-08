@@ -56,7 +56,6 @@
     "xpackage-win": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=./dist/icons/icon.ico --prune=true --out=./release-builds",
     "xpackage-linux": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=linux --arch=x64 --icon=./dist/icons/1024x1024.png --prune=true --out=./release-builds",
     "xcreate-installer-mac": "electron-installer-dmg ./dist react-starter.app --out=./release-builds --overwrite --icon=./icons/icon.icns",
-
     "electron-app": "electron ./src/assets/app/ --debug",
     "el-start": "electron src/main.js",
     "el-build": "./scripts/build-all.sh",
@@ -242,7 +241,7 @@
     "cucumber": "4.2.1",
     "docz": "0.9.6",
     "dotenv": "6.0.0",
-    "electron": "2.0.6",
+    "electron": "2.0.7",
     "electron-builder": "20.27.1",
     "electron-devtools-installer": "2.2.4",
     "electron-packager": "12.1.0",
