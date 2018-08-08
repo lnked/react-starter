@@ -2986,30 +2986,29 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-app-builder-bin@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-2.0.0.tgz#bda985bee14370b254841a9982753b8f383415c5"
+app-builder-bin@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-2.1.1.tgz#02c6adfbfa3c09404a23ff7874d2cab5a8fcb9ca"
 
-app-builder-lib@20.26.1, app-builder-lib@~20.26.0:
-  version "20.26.1"
-  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-20.26.1.tgz#5165875e23436244a287594676235a25f8d15bd9"
+app-builder-lib@20.27.1, app-builder-lib@~20.27.0:
+  version "20.27.1"
+  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-20.27.1.tgz#02d5da95cc68256ec3812999e9686d7f6dfdfcc1"
   dependencies:
     "7zip-bin" "~4.0.2"
-    app-builder-bin "2.0.0"
+    app-builder-bin "2.1.1"
     async-exit-hook "^2.0.1"
     bluebird-lst "^1.0.5"
-    builder-util "5.20.1"
+    builder-util "6.0.0"
     builder-util-runtime "4.4.1"
     chromium-pickle-js "^0.2.0"
     debug "^3.1.0"
     ejs "^2.6.1"
     electron-osx-sign "0.4.10"
-    electron-publish "20.26.0"
-    env-paths "^1.0.0"
+    electron-publish "20.27.0"
     fs-extra-p "^4.6.1"
     hosted-git-info "^2.7.1"
     is-ci "^1.1.0"
-    isbinaryfile "^3.0.2"
+    isbinaryfile "^3.0.3"
     js-yaml "^3.12.0"
     lazy-val "^1.0.3"
     minimatch "^3.0.4"
@@ -3018,7 +3017,6 @@ app-builder-lib@20.26.1, app-builder-lib@~20.26.0:
     read-config-file "3.1.0"
     sanitize-filename "^1.6.1"
     semver "^5.5.0"
-    sumchecker "^2.0.2"
     temp-file "^3.1.3"
 
 app-root-path@^2.0.1:
@@ -5222,12 +5220,12 @@ builder-util-runtime@4.4.1, builder-util-runtime@^4.4.1:
     fs-extra-p "^4.6.1"
     sax "^1.2.4"
 
-builder-util@5.20.1, builder-util@~5.20.0:
-  version "5.20.1"
-  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-5.20.1.tgz#64544def24a9fbbdc77ac0c027661bb3dbb520a2"
+builder-util@6.0.0, builder-util@~6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-6.0.0.tgz#5f4941c096778758d8c186ef95eaa0e8b536cab8"
   dependencies:
     "7zip-bin" "~4.0.2"
-    app-builder-bin "2.0.0"
+    app-builder-bin "2.1.1"
     bluebird-lst "^1.0.5"
     builder-util-runtime "^4.4.1"
     chalk "^2.4.1"
@@ -7429,13 +7427,13 @@ discontinuous-range@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
 
-dmg-builder@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-5.1.0.tgz#fc8528ab3b053e6e4d42087ed63f613894466271"
+dmg-builder@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-5.2.0.tgz#93d0c327fdd536794d8b7cf4fb16d1748ed8d9cf"
   dependencies:
-    app-builder-lib "~20.26.0"
+    app-builder-lib "~20.27.0"
     bluebird-lst "^1.0.5"
-    builder-util "~5.20.0"
+    builder-util "~6.0.0"
     fs-extra-p "^4.6.1"
     iconv-lite "^0.4.23"
     js-yaml "^3.12.0"
@@ -7834,16 +7832,16 @@ ejs@^2.5.7, ejs@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
-electron-builder@20.26.1:
-  version "20.26.1"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.26.1.tgz#a8a99fc6484547b9ee62cee79adeea665707523c"
+electron-builder@20.27.1:
+  version "20.27.1"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.27.1.tgz#f3405280b5c5c5b2c7c0e8c6ac4c0d6b63375573"
   dependencies:
-    app-builder-lib "20.26.1"
+    app-builder-lib "20.27.1"
     bluebird-lst "^1.0.5"
-    builder-util "5.20.1"
+    builder-util "6.0.0"
     builder-util-runtime "4.4.1"
     chalk "^2.4.1"
-    dmg-builder "5.1.0"
+    dmg-builder "5.2.0"
     fs-extra-p "^4.6.1"
     is-ci "^1.1.0"
     lazy-val "^1.0.3"
@@ -7922,12 +7920,12 @@ electron-packager@12.1.0:
     semver "^5.3.0"
     yargs-parser "^10.0.0"
 
-electron-publish@20.26.0:
-  version "20.26.0"
-  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-20.26.0.tgz#406f9ccc10d09925492497cb4bee869f664a5945"
+electron-publish@20.27.0:
+  version "20.27.0"
+  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-20.27.0.tgz#0f44befa800b94458c78a8f63a4bc9109c5b5b10"
   dependencies:
     bluebird-lst "^1.0.5"
-    builder-util "~5.20.0"
+    builder-util "~6.0.0"
     builder-util-runtime "^4.4.1"
     chalk "^2.4.1"
     fs-extra-p "^4.6.1"
@@ -8075,24 +8073,26 @@ envify@^3.0.0:
     jstransform "^11.0.3"
     through "~2.3.4"
 
-enzyme-adapter-react-16@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.1.1.tgz#a8f4278b47e082fbca14f5bfb1ee50ee650717b4"
+enzyme-adapter-react-16@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.2.0.tgz#c6e80f334e0a817873262d7d01ee9e4747e3c97e"
   dependencies:
-    enzyme-adapter-utils "^1.3.0"
-    lodash "^4.17.4"
-    object.assign "^4.0.4"
+    enzyme-adapter-utils "^1.5.0"
+    function.prototype.name "^1.1.0"
+    object.assign "^4.1.0"
     object.values "^1.0.4"
-    prop-types "^15.6.0"
+    prop-types "^15.6.2"
+    react-is "^16.4.2"
     react-reconciler "^0.7.0"
     react-test-renderer "^16.0.0-0"
 
-enzyme-adapter-utils@^1.3.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/enzyme-adapter-utils/-/enzyme-adapter-utils-1.4.0.tgz#c403b81e8eb9953658569e539780964bdc98de62"
+enzyme-adapter-utils@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/enzyme-adapter-utils/-/enzyme-adapter-utils-1.5.0.tgz#a020ab3ae79bb1c85e1d51f48f35e995e0eed810"
   dependencies:
+    function.prototype.name "^1.1.0"
     object.assign "^4.1.0"
-    prop-types "^15.6.0"
+    prop-types "^15.6.2"
 
 enzyme-to-json@3.3.4:
   version "3.3.4"
@@ -8100,20 +8100,21 @@ enzyme-to-json@3.3.4:
   dependencies:
     lodash "^4.17.4"
 
-enzyme@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.3.0.tgz#0971abd167f2d4bf3f5bd508229e1c4b6dc50479"
+enzyme@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.0.tgz#085c66fe647d8c9c4becd1fee3042c040cda88a6"
   dependencies:
+    array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
-    function.prototype.name "^1.0.3"
-    has "^1.0.1"
+    function.prototype.name "^1.1.0"
+    has "^1.0.3"
     is-boolean-object "^1.0.0"
-    is-callable "^1.1.3"
+    is-callable "^1.1.4"
     is-number-object "^1.0.3"
     is-string "^1.0.4"
     is-subset "^0.1.1"
     lodash "^4.17.4"
-    object-inspect "^1.5.0"
+    object-inspect "^1.6.0"
     object-is "^1.0.1"
     object.assign "^4.1.0"
     object.entries "^1.0.4"
@@ -9575,7 +9576,7 @@ function-bind@^1.0.2, function-bind@^1.1.0, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
-function.prototype.name@^1.0.3, function.prototype.name@^1.1.0:
+function.prototype.name@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.1.0.tgz#8bd763cc0af860a859cc5d49384d74b932cd2327"
   dependencies:
@@ -11306,7 +11307,7 @@ is-bzip2@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-bzip2/-/is-bzip2-1.0.0.tgz#5ee58eaa5a2e9c80e21407bedf23ae5ac091b3fc"
 
-is-callable@^1.1.1, is-callable@^1.1.3:
+is-callable@^1.1.1, is-callable@^1.1.3, is-callable@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
 
@@ -11740,7 +11741,7 @@ isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
 
-isbinaryfile@^3.0.2:
+isbinaryfile@^3.0.2, isbinaryfile@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/isbinaryfile/-/isbinaryfile-3.0.3.tgz#5d6def3edebf6e8ca8cae9c30183a804b5f8be80"
   dependencies:
@@ -14456,7 +14457,7 @@ object-hash@^1.1.4, object-hash@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.3.0.tgz#76d9ba6ff113cf8efc0d996102851fe6723963e2"
 
-object-inspect@^1.5.0:
+object-inspect@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.6.0.tgz#c70b6cbf72f274aab4c34c0c82f5167bf82cf15b"
 
@@ -14482,7 +14483,7 @@ object-visit@^1.0.0:
   dependencies:
     isobject "^3.0.0"
 
-object.assign@^4.0.1, object.assign@^4.0.4, object.assign@^4.1.0:
+object.assign@^4.0.1, object.assign@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.0.tgz#968bf1100d7956bb3ca086f006f846b3bc4008da"
   dependencies:
@@ -18771,9 +18772,9 @@ sisteransi@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-0.1.1.tgz#5431447d5f7d1675aac667ccd0b865a4994cb3ce"
 
-size-limit@0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.19.0.tgz#ded4d29cbe3bd78a3adf153b925708235bccb46d"
+size-limit@0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-0.19.1.tgz#96e42f58a70cd86d76a5ca31a87ce1970feffb6c"
   dependencies:
     bytes "^3.0.0"
     chalk "^2.4.1"
@@ -18787,8 +18788,8 @@ size-limit@0.19.0:
     gzip-size "^5.0.0"
     memory-fs "^0.4.1"
     read-pkg-up "^4.0.0"
-    style-loader "^0.21.0"
-    webpack "^4.16.2"
+    style-loader "^0.22.0"
+    webpack "^4.16.5"
     webpack-bundle-analyzer "^2.13.1"
     yargs "^12.0.1"
 
@@ -19449,7 +19450,7 @@ stubs@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stubs/-/stubs-3.0.0.tgz#e8d2ba1fa9c90570303c030b6900f7d5f89abe5b"
 
-style-loader@0.22.0:
+style-loader@0.22.0, style-loader@^0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.22.0.tgz#2044d96156f454cc37b61f98eb49980239f4b8eb"
   dependencies:
@@ -19463,20 +19464,13 @@ style-loader@^0.20.3:
     loader-utils "^1.1.0"
     schema-utils "^0.4.5"
 
-style-loader@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.21.0.tgz#68c52e5eb2afc9ca92b6274be277ee59aea3a852"
-  dependencies:
-    loader-utils "^1.1.0"
-    schema-utils "^0.4.5"
-
 style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
-styled-components@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.1.tgz#a550783bba3a5bb9a41bf10d0e993c47d19a9125"
+styled-components@3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.2.tgz#8f518419932327e47fe9144824e3184b3e2da95d"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
@@ -19602,7 +19596,7 @@ sumchecker@^1.2.0:
     debug "^2.2.0"
     es6-promise "^4.0.5"
 
-sumchecker@^2.0.1, sumchecker@^2.0.2:
+sumchecker@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/sumchecker/-/sumchecker-2.0.2.tgz#0f42c10e5d05da5d42eea3e56c3399a37d6c5b3e"
   dependencies:
@@ -21471,7 +21465,7 @@ webpack-visualizer-plugin@0.1.11:
     react "^0.14.0"
     react-dom "^0.14.0"
 
-webpack@4.16.5:
+webpack@4.16.5, webpack@^4.16.5:
   version "4.16.5"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.16.5.tgz#29fb39462823d7eb8aefcab8b45f7f241db0d092"
   dependencies:
@@ -21527,36 +21521,6 @@ webpack@^3.11.0:
     watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
-
-webpack@^4.16.2:
-  version "4.16.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.16.2.tgz#c3e0e771adc94582e0543dd18d7436066051e885"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.13"
-    "@webassemblyjs/helper-module-context" "1.5.13"
-    "@webassemblyjs/wasm-edit" "1.5.13"
-    "@webassemblyjs/wasm-opt" "1.5.13"
-    "@webassemblyjs/wasm-parser" "1.5.13"
-    acorn "^5.6.2"
-    acorn-dynamic-import "^3.0.0"
-    ajv "^6.1.0"
-    ajv-keywords "^3.1.0"
-    chrome-trace-event "^1.0.0"
-    enhanced-resolve "^4.1.0"
-    eslint-scope "^4.0.0"
-    json-parse-better-errors "^1.0.2"
-    loader-runner "^2.3.0"
-    loader-utils "^1.1.0"
-    memory-fs "~0.4.1"
-    micromatch "^3.1.8"
-    mkdirp "~0.5.0"
-    neo-async "^2.5.0"
-    node-libs-browser "^2.0.0"
-    schema-utils "^0.4.4"
-    tapable "^1.0.0"
-    uglifyjs-webpack-plugin "^1.2.4"
-    watchpack "^1.5.0"
-    webpack-sources "^1.0.1"
 
 webpack@^4.16.3:
   version "4.16.4"
