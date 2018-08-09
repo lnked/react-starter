@@ -340,7 +340,7 @@
     "postcss-short-spacing": "3.0.0",
     "postcss-simple-vars": "4.1.0",
     "postcss-unique-selectors": "4.0.0",
-    "postcss-url": "7.3.2",
+    "postcss-url": "8.0.0",
     "postcss-will-change": "2.0.0",
     "postcss-will-change-transition": "1.2.0",
     "precss": "3.1.2",
