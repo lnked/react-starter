@@ -281,7 +281,7 @@
     "identity-obj-proxy": "3.0.0",
     "image-trace-loader": "0.1.0",
     "image-webpack-loader": "4.3.1",
-    "jest": "23.4.2",
+    "jest": "23.5.0",
     "jest-styled-components": "5.0.1",
     "lint-staged": "7.2.0",
     "markdown-loader": "3.0.0",
