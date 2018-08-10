@@ -7,7 +7,7 @@ import { Loading } from 'components'
 //     ErrorComponent: ({ error, props }) => <div>Oups an error occurs.</div>,
 // })
 
-export const loadComponent = (resolve: any, options: any): any =>
+export const loadComponent = (resolve: any, options: any = {}): any =>
     loadable(resolve, {
         LoadingComponent: Loading,
         // LoadingComponent: (props: any) => <div>{JSON.stringify(props)} Loading...</div>,

@@ -11,7 +11,7 @@ interface P {
 
 const cx = сlasses.bind(css)
 
-export const NoMatch = ({ location }: P) => {
+export const NoMatchPage = ({ location }: P) => {
     document.title = '404 Not Found'
 
     return (
@@ -30,4 +30,4 @@ export const NoMatch = ({ location }: P) => {
     )
 }
 
-export default NoMatch
+export default NoMatchPage
