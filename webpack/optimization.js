@@ -5,8 +5,6 @@ const define = require('./define');
 
 module.exports = {
     minimize: true,
-    sideEffects: true,
-    noEmitOnErrors: true,
     concatenateModules: true,
     runtimeChunk: {
         name: 'startup'
@@ -21,40 +19,42 @@ module.exports = {
         maxInitialRequests: 3,
         automaticNameDelimiter: '~',
         cacheGroups: {
+            // default: false,
             default: {
                 minChunks: 2,
                 priority: -20,
                 reuseExistingChunk: true
             },
-            polyfill: {
-                test: /core-js/,
-                reuseExistingChunk: true,
-                priority: 10
-            },
-            styles: {
-                name: 'styles',
-                test: /\.s?css$/,
-                chunks: 'all',
-                minChunks: 1,
-                reuseExistingChunk: true,
-                enforce: true
-            },
-            commons: {
+            bundle: {
                 test: /[\\/]node_modules[\\/]/,
-                name: 'commons',
-                minChunks: 2,
-                chunks: 'initial',
+                name: 'bundle',
+                minChunks: 1,
+                priority: 1,
+                chunks: 'all',
                 enforce: true,
                 reuseExistingChunk: true
             },
-            bundle: {
-                // test: /[\\/]node_modules[\\/]/,
-                // priority: -10
-                name: 'commons',
-                chunks: 'all',
-                minChunks: 3,
-                reuseExistingChunk: true
-            }
+            // polyfill: {
+            //     test: /core-js/,
+            //     reuseExistingChunk: true,
+            //     priority: 10
+            // },
+            // styles: {
+            //     name: 'styles',
+            //     test: /\.s?css$/,
+            //     chunks: 'all',
+            //     minChunks: 1,
+            //     // reuseExistingChunk: true,
+            //     // enforce: true
+            // },
+            // bundle: {
+            //     // test: /[\\/]node_modules[\\/]/,
+            //     // priority: -10
+            //     name: 'bundle',
+            //     chunks: 'all',
+            //     minChunks: 3,
+            //     reuseExistingChunk: true
+            // },
         }
     }
 };

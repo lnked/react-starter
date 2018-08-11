@@ -42,7 +42,7 @@ module.exports = {
     },
 
     module: {
-        unsafeCache: define.rs_development,
+        unsafeCache: false,
         wrappedContextCritical: true,
         strictExportPresence: true,
         exprContextCritical: false,
