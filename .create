@@ -78,7 +78,8 @@ cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tslint.json ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.babelrc ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.githooks ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.babelrc.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.travis.yml ${PATH_ROOT}/$FOLDER_NAME
@@ -87,7 +88,7 @@ cp -r ${SOURCE}/.gitignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.eslintignore ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.editorconfig ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.browserslistrc ${PATH_ROOT}/$FOLDER_NAME
-cp -r ${SOURCE}/.env ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/.env.local ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.env.development ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.env.production ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
