@@ -1,15 +1,14 @@
-// import React, { Component } from 'react'
-// import axios from 'axios'
+import * as React from 'react'
 
-// function refsHOC(WrappedComponent) {
-//     return class RefsHOC extends React.Component {
-//         proc(wrappedComponentInstance) {
-//             wrappedComponentInstance.method()
-//         }
+export const refsHOC = (WrappedComponent) => {
+    return class RefsHOC extends React.Component {
+        proc (wrappedComponentInstance) {
+            wrappedComponentInstance.method()
+        }
 
-//         render() {
-//             const props = Object.assign({}, this.props, {ref: this.proc.bind(this)})
-//             return <WrappedComponent {...props}/>
-//         }
-//     }
-// }
+        render () {
+            const props = Object.assign({}, this.props, {ref: this.proc.bind(this)})
+            return <WrappedComponent {...props}/>
+        }
+    }
+}

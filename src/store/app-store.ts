@@ -22,6 +22,14 @@ export class AppStore {
         }
     }
 
+    // async loadAll () {
+    //     this.isLoading = true;
+    //     await store.loadUsers();//вот первая
+    //     const { match } = this.props;
+    //     const userId = parseInt(match.params.id);
+    //     await this.user.loadStats(userId);
+    // }
+
     @action loadTags = (query: string) => {
         this.query = query
     }

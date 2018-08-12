@@ -20,6 +20,7 @@ const plugins = [
         basePath: define.rs_output_path,
         fileName: "../webpack-manifest.json"
     }),
+
     // new webpack.IgnorePlugin(/react-hot-loader$/),
 
     new UglifyJsParallelPlugin({
