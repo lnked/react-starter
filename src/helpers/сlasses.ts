@@ -9,7 +9,7 @@ export const сlasses: S = {
 
         if (args.length) {
             Object.keys(args).map(id => {
-                const item = args[id]
+                const item = args[id] || ''
 
                 const type = typeof item
 
@@ -17,7 +17,7 @@ export const сlasses: S = {
                     r.push(item)
                 } else {
                     Object.keys(item).map(name => {
-                        if (item[name]) {
+                        if (typeof item[name] !== 'undefined') {
                             r.push(css[name])
                         }
                     })
@@ -25,7 +25,7 @@ export const сlasses: S = {
             })
         }
 
-        return r.join(' ')
+        return r.filter(i => i !== '').join(' ')
     },
 
     bind: (css) => {
