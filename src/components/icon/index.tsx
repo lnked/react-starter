@@ -9,7 +9,7 @@ interface P {
     className?: string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export class Icon extends React.PureComponent<P, {}> {
     static defaultProps = {

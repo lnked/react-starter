@@ -9,7 +9,7 @@ export interface P {
     children?: React.ReactChild;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const Link = ({ href, children, className = '', ...props }: P) =>
     <a href={href} {...props} className={cx(css.link, className)}>{children}</a>

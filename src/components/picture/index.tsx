@@ -13,7 +13,7 @@ interface P {
     className?: string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export class Picture extends React.Component<P, {}> {
     static defaultProps = {

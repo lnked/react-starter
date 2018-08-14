@@ -7,7 +7,7 @@ interface P {
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const Layout = ({ children = '', className = '' }: P) => {
     return (

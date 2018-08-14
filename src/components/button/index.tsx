@@ -15,7 +15,7 @@ interface P {
     handleClick?: () => void | boolean;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export class Button extends React.PureComponent<P, {}> {
     static defaultProps = {

@@ -15,7 +15,7 @@ interface S {
     title: string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export class CoreLayout extends React.Component<P, S> {
     static defaultProps = {

@@ -8,7 +8,7 @@ interface P {
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const Present = ({ children }: P) => (
     <button className={cx({ button: true })}>

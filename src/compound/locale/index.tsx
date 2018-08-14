@@ -10,7 +10,7 @@ interface P {
     handleChange?: () => void | boolean;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export class Locale extends React.Component<P, {}> {
     static defaultProps = {

@@ -9,7 +9,7 @@ interface P {
     };
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const NoMatchPage = ({ location }: P) => {
     document.title = '404 Not Found'

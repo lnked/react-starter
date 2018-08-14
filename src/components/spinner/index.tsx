@@ -6,7 +6,7 @@ export interface P {
     className?: string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const Spinner = ({ className = '' }: P) => {
     return <div className={cx({ spinner: true }, className)} />

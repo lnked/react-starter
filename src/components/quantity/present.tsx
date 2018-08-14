@@ -6,7 +6,7 @@ interface P {
     value: string;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const Present = ({ value }: P) => {
     return (

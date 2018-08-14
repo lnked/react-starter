@@ -22,7 +22,7 @@ interface P {
     handleChange: (e: any) => void;
 }
 
-const cx = сlasses.bind(css)
+const cx = classes.bind(css)
 
 export const Present = ({ referrer, value, label, handleChange }: P) => (
     <div className={cx({ wrapper: true })}>
