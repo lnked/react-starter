@@ -57,6 +57,12 @@
         "SVGAltGlyphElement": false
     },
     "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "version": "16.4.2"
+        },
+        "propWrapperFunctions": [ "forbidExtraProps" ],
         "import/resolver": "webpack",
         "import/extensions": [
             ".js",
