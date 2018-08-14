@@ -3,6 +3,7 @@
     "buildOnSave": false,
     "compilerOptions": {
         "strict": true,
+        "allowJs": true,
         "jsx": "react",
         "target": "es5",
         "module": "esnext",
@@ -12,8 +13,8 @@
         "noLib": false,
         "listFiles": false,
         "sourceMap": true,
-        "declaration": false,
-        "declarationMap": false,
+        "declaration": true,
+        "declarationMap": true,
         "diagnostics": true,
         "removeComments": true,
         "importHelpers": true,
