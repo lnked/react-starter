@@ -3,7 +3,7 @@ interface S {
     styler: (css: any) => void;
 }
 
-export const сlasses: S = {
+export const classes: S = {
     styler: (css, ...args: Array<any>): string => {
         const r: Array<string> = []
 
@@ -29,6 +29,6 @@ export const сlasses: S = {
     },
 
     bind: (css) => {
-        return сlasses.styler.bind(сlasses, css)
+        return classes.styler.bind(classes, css)
     },
 }

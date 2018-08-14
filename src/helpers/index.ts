@@ -1,4 +1,4 @@
 // export * from './api'
-export * from './сlasses'
+export * from './classes'
 export * from './predicts'
 export * from './handlers'
