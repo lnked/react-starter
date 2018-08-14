@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { сlasses } from 'helpers'
+import { classes } from 'helpers'
 
 import { NavLink } from 'react-router-dom'
 

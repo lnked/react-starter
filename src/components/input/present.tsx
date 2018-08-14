@@ -13,7 +13,7 @@ import * as css from './styles.scss'
 //   <InfoName>Skip Rate</InfoName>
 // </Container>
 
-import { сlasses } from 'helpers'
+import { classes } from 'helpers'
 
 interface P {
     value?: string;

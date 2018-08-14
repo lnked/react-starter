@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as css from './styles.scss'
-import { сlasses } from 'helpers'
+import { classes } from 'helpers'
 
 export interface P {
     className?: string;
