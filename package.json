@@ -243,7 +243,7 @@
     "docz": "0.10.2",
     "dotenv": "6.0.0",
     "electron": "2.0.7",
-    "electron-builder": "20.27.1",
+    "electron-builder": "20.28.1",
     "electron-devtools-installer": "2.2.4",
     "electron-packager": "12.1.0",
     "electron-rebuild": "1.8.2",
