@@ -155,7 +155,7 @@ declare module 'fullcalendar/RenderQueue' {
         clearWait(): void;
         canRunNext(): boolean;
         runTask(task: any): void;
-        compoundTask(newTask: any): boolean;
+        modulesTask(newTask: any): boolean;
     }
     export default Default;
 }

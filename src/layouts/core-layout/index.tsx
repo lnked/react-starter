@@ -5,7 +5,7 @@ import { classes } from 'helpers'
 
 import { SvgFixer } from 'utils'
 
-import { Header } from 'compound'
+import { Header } from 'modules'
 
 interface P {
     children?: JSX.Element[] | JSX.Element | string;

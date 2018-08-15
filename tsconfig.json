@@ -75,8 +75,8 @@
             "hocs": [
                 "src/hocs"
             ],
-            "compound": [
-                "src/compound"
+            "modules": [
+                "src/modules"
             ],
             "layouts": [
                 "src/layouts"

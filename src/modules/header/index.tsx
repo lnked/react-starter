@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Locale, Navigation } from 'compound'
+import { Locale, Navigation } from 'modules'
 
 export const Header = () => {
     return (

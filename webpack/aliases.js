@@ -18,7 +18,7 @@ const alias =  {
     images: resolve(define.rs_root, 'assets/images'),
     styles: resolve(define.rs_root, 'assets/styles'),
     scripts: resolve(define.rs_root, 'assets/scripts'),
-    compound: resolve(define.rs_root, 'compound'),
+    modules: resolve(define.rs_root, 'modules'),
     svgstore: resolve(define.rs_root, 'assets/svgstore'),
     components: resolve(define.rs_root, 'components')
 }
