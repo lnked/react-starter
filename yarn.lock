@@ -9186,9 +9186,9 @@ find-versions@^1.0.0:
     meow "^3.5.0"
     semver-regex "^1.0.0"
 
-firebase-tools@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-4.1.0.tgz#79811118802be86d293321b22d88c979c1ecaec7"
+firebase-tools@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-4.1.1.tgz#506d860408cd258f7c8d37cd6d8de2bbe7df9793"
   dependencies:
     JSONStream "^1.2.1"
     archiver "^2.1.1"
