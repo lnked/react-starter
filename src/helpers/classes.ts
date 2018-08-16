@@ -17,7 +17,7 @@ export const classes: S = {
                     r.push(item)
                 } else {
                     Object.keys(item).map(name => {
-                        if (typeof item[name] !== 'undefined') {
+                        if (typeof item[name] !== 'undefined' && item[name]) {
                             r.push(css[name])
                         }
                     })
