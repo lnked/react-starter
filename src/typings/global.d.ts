@@ -2,21 +2,21 @@ declare var __VERSION__: string
 declare var __IN_DEBUG__: boolean
 
 // declare namespace React {
-//     interface ReactChild {
+//     export interface ReactChild {
 //         [elemName: string]: any;
 //     }
 // }
 
 declare namespace JSX {
-    interface IntrinsicElements {
+    export interface IntrinsicElements {
         [elemName: string]: any;
     }
 
-    interface ElementClass {
+    export interface ElementClass {
         render: any;
     }
 
-    interface ElementChildrenAttribute {
+    export interface ElementChildrenAttribute {
         children: {};
     }
 }

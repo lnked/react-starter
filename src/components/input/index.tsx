@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Present } from './present'
 
-interface P {
+export interface P {
     name: string;
     label?: string;
     value?: string | number;
@@ -10,7 +10,7 @@ interface P {
     floating?: boolean;
 }
 
-interface S {
+export interface S {
     value?: string | number;
 }
 

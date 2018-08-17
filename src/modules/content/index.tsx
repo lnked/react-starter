@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface P {
+export interface P {
     className?: string;
     children?: JSX.Element[] | JSX.Element | string;
 }

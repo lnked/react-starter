@@ -1,4 +1,4 @@
-interface S {
+export interface S {
     bind: (css: any, args: Array<any>) => string;
     styler: (css: any) => void;
 }

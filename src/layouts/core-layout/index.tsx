@@ -7,11 +7,11 @@ import { SvgFixer } from 'utils'
 
 import { Header } from 'modules'
 
-interface P {
+export interface P {
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-interface S {
+export interface S {
     title: string;
 }
 

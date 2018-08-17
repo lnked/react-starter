@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-interface P {
+export interface P {
     primary?: boolean;
     children?: JSX.Element[] | JSX.Element | string;
 }

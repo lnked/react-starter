@@ -1,7 +1,7 @@
 // import * as React from "react"
 // import { IWithPersonalizationProps, withPersonalization } from "./withPersonalization"
 
-// interface IWelcomeOwnProps {
+// export interface IWelcomeOwnProps {
 //     onClick: () => void
 // }
 

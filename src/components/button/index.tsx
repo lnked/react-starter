@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-interface P {
+export interface P {
     type?: string;
     size?: 'small' | 'large' | 'normal' | 'medium';
     label?: string;

@@ -1,6 +1,6 @@
 // import * as React from "react"
 
-// interface IWelcomeProps {
+// export interface IWelcomeProps {
 //     name: string
 //     onClick: () => void
 // }

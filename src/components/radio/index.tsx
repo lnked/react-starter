@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface P {
+export interface P {
     name: string;
     label?: string;
     checked?: boolean;
@@ -11,7 +11,7 @@ interface P {
     handleChange?: (value: number | string | boolean) => void | boolean;
 }
 
-interface S {
+export interface S {
     checked: any;
 }
 

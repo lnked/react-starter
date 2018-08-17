@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 import { classes } from 'helpers'
 
-interface P {
+export interface P {
     value: string;
 }
 

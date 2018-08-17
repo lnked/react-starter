@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Spinner } from 'components'
 
-interface P {
+export interface P {
     error: any | null;
     pastDelay: null;
     loading: boolean;

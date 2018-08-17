@@ -1,11 +1,11 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-interface P {
+export interface P {
     isOpened?: boolean;
 }
 
-interface S {
+export interface S {
     isOpened: boolean;
 }
 

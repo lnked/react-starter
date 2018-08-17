@@ -1,6 +1,6 @@
 // import { observable, action, reaction, computed } from 'mobx'
 
-// interface Todo {
+// export interface Todo {
 //   task: string
 //   isComplete: boolean
 // }

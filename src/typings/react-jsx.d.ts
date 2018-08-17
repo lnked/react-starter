@@ -1,4 +1,4 @@
 declare namespace JSX {
-    interface Element {}
-    interface IntrinsicElements { div: any; }
+    export interface Element {}
+    export interface IntrinsicElements { div: any; }
 }

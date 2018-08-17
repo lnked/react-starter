@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-interface P {
+export interface P {
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-interface S {
+export interface S {
     hasError: boolean;
 }
 
