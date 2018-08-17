@@ -8146,9 +8146,9 @@ enzyme-to-json@3.3.4:
   dependencies:
     lodash "^4.17.4"
 
-enzyme@3.4.3:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.3.tgz#86c4a1219a967cddb8d0359f28e119a93302014b"
+enzyme@3.4.4:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.4.tgz#92c7c6b9e59d4ef0c3d36a75dccc0e41a5c14d21"
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -8443,9 +8443,9 @@ eslint-plugin-optimize-regex@1.1.5:
   dependencies:
     regexp-tree "0.0.72"
 
-eslint-plugin-promise@3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.8.0.tgz#65ebf27a845e3c1e9d6f6a5622ddd3801694b621"
+eslint-plugin-promise@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.0.tgz#bc15a4aa04fa6116113b6c47488c421821b758fc"
 
 eslint-plugin-react@7.11.1:
   version "7.11.1"
