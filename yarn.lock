@@ -8146,9 +8146,9 @@ enzyme-to-json@3.3.4:
   dependencies:
     lodash "^4.17.4"
 
-enzyme@3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.2.tgz#17bcbec411b6b874c508d31edb51aaf431e88ae7"
+enzyme@3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.3.tgz#86c4a1219a967cddb8d0359f28e119a93302014b"
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -13928,9 +13928,9 @@ mksnapshot@^0.3.0:
     fs-extra "0.26.7"
     request "^2.79.0"
 
-mobx-react-devtools@6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-6.0.2.tgz#a940b32701625dd8b6659bae6234b192bd17a37b"
+mobx-react-devtools@6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-6.0.3.tgz#4d536c8cdd77d9f4b81f5e8415d7bedccc6a2a99"
 
 mobx-react-router@4.0.4:
   version "4.0.4"
