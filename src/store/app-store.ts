@@ -11,9 +11,10 @@ export class AppStore {
 
     // @observable isLoading: boolean
 
-    @observable query: string = ''
+    @observable
+    query: string = ''
 
-    constructor (initialState?: any) {
+    constructor(initialState?: any) {
         // console.log({...AppStore.defaultState, ...initialState})
 
         if (initialState && Object.keys(initialState).length) {
@@ -30,7 +31,8 @@ export class AppStore {
     //     await this.user.loadStats(userId);
     // }
 
-    @action loadTags = (query: string) => {
+    @action
+    loadTags = (query: string) => {
         this.query = query
     }
 }

@@ -1,11 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import {
-    STORE_UI,
-    STORE_APP,
-    STORE_ROUTER,
-} from 'settings/constants'
+import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
 import { inject, observer } from 'mobx-react'
 
@@ -28,9 +24,7 @@ export class ExamplePage extends React.Component<any, any> {
 
                 <Input type="text" />
 
-                <p className={css.description}>
-                    Reference site about Lorem Ipsum, giving information on its origins.
-                </p>
+                <p className={css.description}>Reference site about Lorem Ipsum, giving information on its origins.</p>
             </div>
         )
     }

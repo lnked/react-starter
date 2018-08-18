@@ -1,12 +1,12 @@
 import * as React from 'react'
 
 export interface P {
-    load: any;
-    children?: any;
+    load: any
+    children?: any
 }
 
 export interface S {
-    component: any;
+    component: any
 }
 
 export class DynamicImport extends React.Component<P, S> {
@@ -14,16 +14,15 @@ export class DynamicImport extends React.Component<P, S> {
         component: null,
     }
 
-    componentDidMount () {
-        this.props.load()
-            .then((component) => {
-                this.setState(() => ({
-                    component: component.default ? component.default : component,
-                }))
-            })
+    componentDidMount() {
+        this.props.load().then(component => {
+            this.setState(() => ({
+                component: component.default ? component.default : component,
+            }))
+        })
     }
 
-    render () {
+    render() {
         const { children } = this.props
         const { component } = this.state
 

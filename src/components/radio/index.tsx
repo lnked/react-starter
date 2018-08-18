@@ -2,17 +2,17 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    name: string;
-    label?: string;
-    checked?: boolean;
-    className?: string;
-    value?: string | number;
-    children?: JSX.Element[] | JSX.Element | string;
-    handleChange?: (value: number | string | boolean) => void | boolean;
+    name: string
+    label?: string
+    checked?: boolean
+    className?: string
+    value?: string | number
+    children?: JSX.Element[] | JSX.Element | string
+    handleChange?: (value: number | string | boolean) => void | boolean
 }
 
 export interface S {
-    checked: any;
+    checked: any
 }
 
 export class Radio extends React.PureComponent<P, S> {
@@ -30,7 +30,7 @@ export class Radio extends React.PureComponent<P, S> {
         checked: false,
     }
 
-    static getDerivedStateFromProps (props: P, state: S) {
+    static getDerivedStateFromProps(props: P, state: S) {
         if (state.checked !== props.checked) {
             return {
                 checked: props.checked,
@@ -43,18 +43,21 @@ export class Radio extends React.PureComponent<P, S> {
     handleChange = (e: any) => {
         const checked = e.target.value
 
-        this.setState((state: S) => {
-            return {
-                checked: !state.checked,
+        this.setState(
+            (state: S) => {
+                return {
+                    checked: !state.checked,
+                }
+            },
+            () => {
+                if (this.props.handleChange) {
+                    this.props.handleChange(checked)
+                }
             }
-        }, () => {
-            if (this.props.handleChange) {
-                this.props.handleChange(checked)
-            }
-        })
+        )
     }
 
-    render () {
+    render() {
         const { checked } = this.state
         const { name, value, label, children } = this.props
 

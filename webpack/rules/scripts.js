@@ -49,7 +49,7 @@ const rules = [
         enforce: 'pre',
         test: define.rs_regexp_scripts,
         options: {
-            fix: false
+            fix: true
         },
         loader: 'eslint-loader',
         include: define.rs_root
@@ -58,7 +58,7 @@ const rules = [
         enforce: 'pre',
         test: /\.ts[x]?$/,
         options: {
-            fix: false
+            fix: true
         },
         loader: 'tslint-loader',
         include: define.rs_root

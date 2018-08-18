@@ -3,15 +3,15 @@ import * as React from 'react'
 import { Present } from './present'
 
 export interface P {
-    name: string;
-    label?: string;
-    value?: string | number;
-    integer?: boolean;
-    floating?: boolean;
+    name: string
+    label?: string
+    value?: string | number
+    integer?: boolean
+    floating?: boolean
 }
 
 export interface S {
-    value?: string | number;
+    value?: string | number
 }
 
 export class Input extends React.Component<P, S> {
@@ -41,7 +41,7 @@ export class Input extends React.Component<P, S> {
     //     }
     // }
 
-    componentDidMount () {
+    componentDidMount() {
         if (this.input && this.input.current) {
             this.input.current.value = 'xxx'
         }
@@ -64,22 +64,16 @@ export class Input extends React.Component<P, S> {
 
         this.setState((state: S) => {
             return {
-                ...state, value,
+                ...state,
+                value,
             }
         })
     }
 
-    render () {
+    render() {
         const { value } = this.state
         const { label } = this.props
 
-        return (
-            <Present
-                label={label}
-                value={value}
-                referrer={this.input}
-                handleChange={this.handleChange}
-            />
-        )
+        return <Present label={label} value={value} referrer={this.input} handleChange={this.handleChange} />
     }
 }

@@ -2,12 +2,12 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    className?: string;
-    children?: JSX.Element[] | JSX.Element | string;
+    className?: string
+    children?: JSX.Element[] | JSX.Element | string
 }
 
 export class Content extends React.PureComponent<P, {}> {
-    render () {
+    render() {
         const cn: Array<string> = []
         const { className, children } = this.props
 
@@ -17,11 +17,7 @@ export class Content extends React.PureComponent<P, {}> {
             cn.push(className)
         }
 
-        return (
-            <div className={cn.join(' ')}>
-                {children}
-            </div>
-        )
+        return <div className={cn.join(' ')}>{children}</div>
     }
 }
 

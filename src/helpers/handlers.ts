@@ -1,5 +1,5 @@
 export const createMarkup = (data: any) => {
-    return {__html: data}
+    return { __html: data }
 }
 
 export const getDisplayName = (Component: any) => {
@@ -24,7 +24,7 @@ export const formatMoney = (num: number, penny: number = 0) => {
 export const formatDeclOfNum = (n: number, titles: Array<string>) => {
     const cases = [2, 0, 1, 1, 1, 2]
     n = Math.abs(n)
-    return titles[(n % 100 > 4 && n % 100 < 20) ? 2 : cases[(n % 10 < 5) ? n % 10 : 5]]
+    return titles[n % 100 > 4 && n % 100 < 20 ? 2 : cases[n % 10 < 5 ? n % 10 : 5]]
 }
 
 export const declOfNum = (n: number, titles: Array<string>) => {
@@ -33,4 +33,8 @@ export const declOfNum = (n: number, titles: Array<string>) => {
 
 export const trim = (str: string) => str.replace(/^\s+|\s+$/g, '')
 
-export const kebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
+export const kebabCase = (str: string) =>
+    str
+        .replace(/([a-z])([A-Z])/g, '$1-$2')
+        .replace(/\s+/g, '-')
+        .toLowerCase()

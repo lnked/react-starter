@@ -2,18 +2,18 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    name: string;
-    min: number;
-    max: number;
-    step: number;
-    count?: number;
-    type?: string;
-    item?: string | number;
-    handleChange?: (count: number) => void | boolean;
+    name: string
+    min: number
+    max: number
+    step: number
+    count?: number
+    type?: string
+    item?: string | number
+    handleChange?: (count: number) => void | boolean
 }
 
 export interface S {
-    count: number;
+    count: number
 }
 
 export class Quantity extends React.Component<P, S> {
@@ -23,7 +23,7 @@ export class Quantity extends React.Component<P, S> {
         max: 9999,
         step: 1,
         count: 1,
-        handleChange: (count) => {
+        handleChange: count => {
             console.log(': = ', count)
         },
     }
@@ -32,7 +32,7 @@ export class Quantity extends React.Component<P, S> {
         count: 0,
     }
 
-    static getDerivedStateFromProps (props: P, state: S) {
+    static getDerivedStateFromProps(props: P, state: S) {
         if (state.count !== props.count) {
             return {
                 ...state,
@@ -48,11 +48,8 @@ export class Quantity extends React.Component<P, S> {
     //     return nextProps.count !== this.state.count
     // }
 
-    changeValue = (count) => {
-        const {
-            min,
-            max,
-        } = this.props
+    changeValue = count => {
+        const { min, max } = this.props
 
         if (count > max || count < min) {
             count = max
@@ -63,12 +60,12 @@ export class Quantity extends React.Component<P, S> {
         // this.props.handleChange(this.props.item, count)
     }
 
-    changeCount = (input) => () => {
+    changeCount = input => () => {
         const { count } = this.state
         const { min, max, step } = this.props
 
         if ((input < 0 && count > min) || (input > 0 && count < max)) {
-            this.changeValue(count + (input * step))
+            this.changeValue(count + input * step)
         }
     }
 
@@ -80,7 +77,7 @@ export class Quantity extends React.Component<P, S> {
         }
     }
 
-    render () {
+    render() {
         const { count } = this.state
         const { min, max, name, type } = this.props
 
@@ -89,7 +86,9 @@ export class Quantity extends React.Component<P, S> {
 
         return (
             <div className={css.quantity}>
-                <button type="button" onClick={this.changeCount(-1)}className={decreaseClass}>-</button>
+                <button type="button" onClick={this.changeCount(-1)} className={decreaseClass}>
+                    -
+                </button>
                 <input
                     type={type}
                     name={name}
@@ -100,7 +99,9 @@ export class Quantity extends React.Component<P, S> {
                     autoComplete="off"
                     className={css.count}
                 />
-                <button type="button" onClick={this.changeCount(1)} className={increaseClass}>+</button>
+                <button type="button" onClick={this.changeCount(1)} className={increaseClass}>
+                    +
+                </button>
             </div>
         )
     }

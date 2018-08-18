@@ -2,11 +2,11 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    isOpened?: boolean;
+    isOpened?: boolean
 }
 
 export interface S {
-    isOpened: boolean;
+    isOpened: boolean
 }
 
 export class Sandwich extends React.PureComponent<P, S> {
@@ -41,12 +41,7 @@ export class Sandwich extends React.PureComponent<P, S> {
 
         return (
             <button className={css.sandwich} onClick={this.handleChange}>
-                <span className={!isOpened
-                    ? css.sandwich__ln
-                    : [
-                        css.sandwich__ln, css.sandwich__ln_open,
-                    ].join(' ')}
-                />
+                <span className={!isOpened ? css.sandwich__ln : [css.sandwich__ln, css.sandwich__ln_open].join(' ')} />
             </button>
         )
     }

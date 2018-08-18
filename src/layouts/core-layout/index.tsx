@@ -8,11 +8,11 @@ import { SvgFixer } from 'utils'
 import { Header } from 'modules'
 
 export interface P {
-    children?: JSX.Element[] | JSX.Element | string;
+    children?: JSX.Element[] | JSX.Element | string
 }
 
 export interface S {
-    title: string;
+    title: string
 }
 
 const cx = classes.bind(css)
@@ -44,8 +44,7 @@ export class CoreLayout extends React.Component<P, S> {
         document.title = this.state.title
     }
 
-    fixScroll = () =>
-        window.scrollTo(0, 0)
+    fixScroll = () => window.scrollTo(0, 0)
 
     render () {
         const { children } = this.props
@@ -54,9 +53,7 @@ export class CoreLayout extends React.Component<P, S> {
             <div className={cx({ layout: true })}>
                 <Header />
 
-                <section className={cx({ main: true })}>
-                    {children}
-                </section>
+                <section className={cx({ main: true })}>{children}</section>
             </div>
         )
     }

@@ -4,13 +4,13 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    image: any;
-    lqip?: string;
-    width?: number;
-    height?: number;
-    title?: string;
-    alt?: string;
-    className?: string;
+    image: any
+    lqip?: string
+    width?: number
+    height?: number
+    title?: string
+    alt?: string
+    className?: string
 }
 
 const cx = classes.bind(css)
@@ -28,7 +28,7 @@ export class Picture extends React.Component<P, {}> {
         loaded: false,
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.load()
     }
 
@@ -40,7 +40,7 @@ export class Picture extends React.Component<P, {}> {
         img.src = this.props.image
     }
 
-    render () {
+    render() {
         const { loaded } = this.state
         const { className, image, width, height, title, alt } = this.props
 
@@ -62,15 +62,7 @@ export class Picture extends React.Component<P, {}> {
 
         return (
             <div className={cx({ image: true }, className)}>
-                {loaded &&
-                    <img
-                        src={image}
-                        width={width}
-                        height={height}
-                        title={title}
-                        alt={alt}
-                    />
-                }
+                {loaded && <img src={image} width={width} height={height} title={title} alt={alt} />}
                 {/*
                 <picture>
                     <source srcset="your-image.webp" type="image/webp">

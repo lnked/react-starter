@@ -99,7 +99,7 @@
         "no-implicit-dependencies": false,
         "object-literal-sort-keys": false,
         "interface-over-type-literal": false,
-        "space-before-function-paren": true,
+        "space-before-function-paren": false,
         "no-consecutive-blank-lines": [true, 2],
         "no-object-literal-type-assertion": false
     },

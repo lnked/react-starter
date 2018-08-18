@@ -4,7 +4,7 @@ import * as css from './styles.scss'
 import { NavLink } from 'react-router-dom'
 
 export interface P {
-    link: string;
+    link: string
 }
 
 export class Logo extends React.PureComponent<P, {}> {

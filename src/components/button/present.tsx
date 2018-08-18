@@ -4,17 +4,13 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    primary?: boolean;
-    children?: JSX.Element[] | JSX.Element | string;
+    primary?: boolean
+    children?: JSX.Element[] | JSX.Element | string
 }
 
 const cx = classes.bind(css)
 
-export const Present = ({ children }: P) => (
-    <button className={cx({ button: true })}>
-        {children}
-    </button>
-)
+export const Present = ({ children }: P) => <button className={cx({ button: true })}>{children}</button>
 
 // // Здесь мы задаем свой обработчик событий
 // const onChangeHandler = event => onChange && onChange(event.target.value);

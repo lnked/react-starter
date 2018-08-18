@@ -1,13 +1,11 @@
-import React from 'react'
-import Link from '../../test-utils/link'
-import renderer from 'react-test-renderer'
+import React from 'react';
+import Link from '../../test-utils/link';
+import renderer from 'react-test-renderer';
 
 it('отображается корректно', () => {
-    const tree = renderer.create(
-        <Link page="http://www.facebook.com">Facebook</Link>
-    ).toJSON()
+    const tree = renderer.create(<Link page="http://www.facebook.com">Facebook</Link>).toJSON();
 
-    expect(tree).toMatchSnapshot()
+    expect(tree).toMatchSnapshot();
 })
 
 // // Link.react.test.js
@@ -15,7 +13,7 @@ it('отображается корректно', () => {
 // import Link from '../Link.react';
 // import renderer from 'react-test-renderer';
 
-test('test', () => {})
+test('test', () => {});
 
 // test('Link changes the class when hovered', () => {
 //   const component = renderer.create(

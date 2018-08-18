@@ -16,10 +16,10 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    value?: string;
-    label?: string;
-    referrer: any;
-    handleChange: (e: any) => void;
+    value?: string
+    label?: string
+    referrer: any
+    handleChange: (e: any) => void
 }
 
 const cx = classes.bind(css)
@@ -28,10 +28,6 @@ export const Present = ({ referrer, value, label, handleChange }: P) => (
     <div className={cx({ wrapper: true })}>
         <p>{label}</p>
         <p>value: {value}</p>
-        <input
-            ref={referrer}
-            value={value}
-            onChange={handleChange}
-        />
+        <input ref={referrer} value={value} onChange={handleChange} />
     </div>
 )

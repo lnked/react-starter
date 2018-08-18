@@ -2,17 +2,9 @@ import { History } from 'history'
 
 import { configure } from 'mobx'
 
-import {
-    UiStore,
-    AppStore,
-    RouterStore,
-} from 'store'
+import { UiStore, AppStore, RouterStore } from 'store'
 
-import {
-    STORE_UI,
-    STORE_APP,
-    STORE_ROUTER,
-} from 'settings/constants'
+import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
 export const createStore = (history: History, initialState?: any[]) => {
     // console.log(initialState)

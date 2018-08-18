@@ -27,21 +27,18 @@ export class Locale extends React.Component<P, {}> {
     }
 
     render () {
-        const list: Array<string> = [
-            'ru',
-            'en',
-            'de',
-        ]
+        const list: Array<string> = [ 'ru', 'en', 'de' ]
 
         const { className } = this.props
 
         return (
             <div className={cx({ locale: true }, className)}>
-                {list && list.map((lang: string) => (
-                    <NavLink key={lang} to={`/${lang}`} className={css.link} activeClassName={css.active}>
-                        {lang}
-                    </NavLink>
-                ))}
+                {list &&
+                    list.map((lang: string) => (
+                        <NavLink key={lang} to={`/${lang}`} className={css.link} activeClassName={css.active}>
+                            {lang}
+                        </NavLink>
+                    ))}
             </div>
         )
     }

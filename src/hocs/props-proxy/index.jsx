@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { getDisplayName } from 'helpers/handlers'
 
-export const ppHOC = (WrappedComponent) => {
+export const ppHOC = WrappedComponent => {
     return class PP extends React.Component {
         static displayName = `HOC(${getDisplayName(WrappedComponent)})`
 
@@ -9,7 +9,7 @@ export const ppHOC = (WrappedComponent) => {
             name: '',
         }
 
-        onNameChange = (e) => {
+        onNameChange = e => {
             this.setState({
                 name: e.target.value,
             })

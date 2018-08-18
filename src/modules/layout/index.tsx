@@ -3,16 +3,12 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    className?: string;
-    children?: JSX.Element[] | JSX.Element | string;
+    className?: string
+    children?: JSX.Element[] | JSX.Element | string
 }
 
 const cx = classes.bind(css)
 
 export const Layout = ({ children = '', className = '' }: P) => {
-    return (
-        <div className={cx({ layout: true }, className)}>
-            {children}
-        </div>
-    )
+    return <div className={cx({ layout: true }, className)}>{children}</div>
 }

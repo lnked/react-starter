@@ -1,4 +1,4 @@
-test('predicts', () => {})
+test('predicts', () => {});
 
 // import React from 'react'
 // import ReactDOM from 'react-dom'

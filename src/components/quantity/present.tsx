@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    value: string;
+    value: string
 }
 
 const cx = classes.bind(css)

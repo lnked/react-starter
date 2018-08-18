@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 // import { isActive } from 'helpers/predicts'
 
 export interface S {
-    isOpened: boolean;
+    isOpened: boolean
 }
 
 export class Navigation extends React.Component<{}, S> {
@@ -34,10 +34,14 @@ export class Navigation extends React.Component<{}, S> {
                     </NavLink>
                 </div>
 
-                <a href="https://github.com/lnked/react-starter"
+                <a
+                    href="https://github.com/lnked/react-starter"
                     target="_blank"
                     className={css.codeLink}
-                    rel="noopener noreferrer">Source Code</a>
+                    rel="noopener noreferrer"
+                >
+                    Source Code
+                </a>
             </nav>
         )
     }

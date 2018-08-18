@@ -4,11 +4,11 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 export interface P {
-    title?: string;
-    bolded?: boolean;
-    variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
-    children?: JSX.Element[] | JSX.Element | string;
-    className?: string;
+    title?: string
+    bolded?: boolean
+    variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger'
+    children?: JSX.Element[] | JSX.Element | string
+    className?: string
 }
 
 // color: ${props => props.variant};
@@ -27,7 +27,7 @@ const StyledBadge = styled.div`
     border-radius: 2px;
     display: inline-block;
     vertical-align: baseline;
-    font-weight: ${(props: P) => props.bolded ? '700' : '400'};
+    font-weight: ${(props: P) => (props.bolded ? '700' : '400')};
     color: $c-primary-color;
     border: 1px solid $c-info-border;
     background-color: $c-info-background;
@@ -40,12 +40,12 @@ export class Badge extends React.PureComponent<P, {}> {
         className: '',
     }
 
-    render () {
+    render() {
         const { title, className, children, ...rest } = this.props
 
         return (
             <StyledBadge className={className} {...rest}>
-                { title || children }
+                {title || children}
             </StyledBadge>
         )
     }

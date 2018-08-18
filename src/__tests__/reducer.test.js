@@ -1,4 +1,4 @@
-test('test', () => {})
+test('test', () => {});
 
 // // src/reducers/__tests__/index_spec.tsx
 // import reducers, {

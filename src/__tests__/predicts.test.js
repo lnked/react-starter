@@ -8,7 +8,7 @@
 //     // isUndefined
 // } from 'helpers/predicts'
 
-test('test', () => {})
+test('test', () => {});
 
 // test('isInt(1) to equal true', () => {
 //     expect(isInt(1)).toBeTruthy()

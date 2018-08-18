@@ -2,19 +2,19 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    name: string;
-    size?: string;
-    theme?: string;
-    label?: string;
-    checked?: boolean;
-    className?: string;
-    value?: string | number;
-    children?: JSX.Element[] | JSX.Element | string;
-    handleChange?: (checked: string, status: boolean) => void | boolean;
+    name: string
+    size?: string
+    theme?: string
+    label?: string
+    checked?: boolean
+    className?: string
+    value?: string | number
+    children?: JSX.Element[] | JSX.Element | string
+    handleChange?: (checked: string, status: boolean) => void | boolean
 }
 
 export interface S {
-    checked: boolean;
+    checked: boolean
 }
 
 export class Checkbox extends React.PureComponent<P, S> {
@@ -33,7 +33,7 @@ export class Checkbox extends React.PureComponent<P, S> {
         checked: false,
     }
 
-    static getDerivedStateFromProps (props: P, state: S) {
+    static getDerivedStateFromProps(props: P, state: S) {
         if (state.checked !== props.checked) {
             return {
                 checked: props.checked,
@@ -46,13 +46,16 @@ export class Checkbox extends React.PureComponent<P, S> {
     handleChange = (e: any) => {
         const checked = e.target.value
 
-        this.setState((state: S) => {
-            return { checked: !state.checked }
-        }, () => {
-            if (this.props.handleChange) {
-                this.props.handleChange(checked, this.state.checked)
+        this.setState(
+            (state: S) => {
+                return { checked: !state.checked }
+            },
+            () => {
+                if (this.props.handleChange) {
+                    this.props.handleChange(checked, this.state.checked)
+                }
             }
-        })
+        )
     }
 
     getInputProps = (id: string) => {
@@ -90,17 +93,13 @@ export class Checkbox extends React.PureComponent<P, S> {
 
     renderLabel = () => {
         if (this.props.label || this.props.children) {
-            return (
-                <span className={css.label}>
-                    {this.props.label || this.props.children}
-                </span>
-            )
+            return <span className={css.label}>{this.props.label || this.props.children}</span>
         }
 
         return ''
     }
 
-    render () {
+    render() {
         const cn: Array<string> = []
 
         const { name, size, className } = this.props
@@ -122,8 +121,8 @@ export class Checkbox extends React.PureComponent<P, S> {
         return (
             <label htmlFor={id} className={cn.join(' ')}>
                 <input {...props} />
-                { this.renderStatus() }
-                { this.renderLabel() }
+                {this.renderStatus()}
+                {this.renderLabel()}
             </label>
         )
     }

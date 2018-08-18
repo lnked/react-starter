@@ -1,6 +1,6 @@
 export interface S {
-    bind: (css: any, args: Array<any>) => string;
-    styler: (css: any) => void;
+    bind: (css: any, args: Array<any>) => string
+    styler: (css: any) => void
 }
 
 export const classes: S = {
@@ -28,7 +28,7 @@ export const classes: S = {
         return r.filter(i => i !== '').join(' ')
     },
 
-    bind: (css) => {
+    bind: css => {
         return classes.styler.bind(classes, css)
     },
 }

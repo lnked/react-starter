@@ -11,6 +11,7 @@
         "react",
         "jest",
         "import",
+        "prettier",
         "jsx-a11y",
         "security",
         "immutable",
@@ -78,6 +79,9 @@
         ]
     },
     "rules": {
+        "prettier/prettier": ["error", null, {
+            "usePrettierrc": true
+        }],
         "object-curly-newline": ["off", { "multiline": true }],
         "no-self-assign": ["error", { "props": false }],
         "for-direction": "off",
@@ -167,6 +171,16 @@
             "error",
             "never"
         ],
+        "object-curly-spacing": ["error", "always", {
+            "arraysInObjects": false,
+            "objectsInObjects": false
+        }],
+        "array-bracket-spacing": ["error", "never", {
+            "singleValue": true,
+            "arraysInArrays": true,
+            "objectsInArrays": true
+        }],
+        "computed-property-spacing": ["error", "never"],
         "comma-dangle": ["error", "always-multiline"],
         "init-declarations": "off",
         "no-catch-shadow": "error",
@@ -195,12 +209,10 @@
         "no-process-exit": "error",
         "no-restricted-modules": "off",
         "no-sync": "error",
-        "array-bracket-spacing": "error",
         "block-spacing": "error",
         "brace-style": "error",
         "comma-spacing": "error",
         "comma-style": "error",
-        "computed-property-spacing": "error",
         "consistent-this": [
             "error",
             "self"
@@ -275,7 +287,7 @@
         ],
         "space-before-function-paren": [
             "warn",
-            "always"
+            "never"
         ],
         "space-in-parens": [
             "warn",
