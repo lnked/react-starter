@@ -1,4 +1,4 @@
-test('test', () => {});
+test('test', () => {})
 
 // src/components/__tests__/counter_spec.tsx
 // import * as React from 'react'

@@ -12,7 +12,7 @@ export class Logo extends React.PureComponent<P, {}> {
         link: '/',
     }
 
-    render () {
+    render() {
         const { link } = this.props
 
         return (

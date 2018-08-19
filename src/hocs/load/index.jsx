@@ -6,7 +6,7 @@
 //         data: {},
 //     }
 
-//     componentDidMount () {
+//     componentDidMount() {
 //         // Create request metadata object
 //         const dataDeps = dataDepsFn(this.props)
 //         // Collect array of promises, one for each api request
@@ -25,7 +25,7 @@
 //             }))
 //     }
 
-//     render () {
+//     render() {
 //         const { isLoading, data } = this.state
 //         return isLoading
 //             ? <Loader />

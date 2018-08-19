@@ -2,7 +2,7 @@
 
 // export const HOC = (Component) => {
 //     return class extends React.Component {
-//         render () {
+//         render() {
 //             return <Component {...this.props} />
 //         }
 //     }

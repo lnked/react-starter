@@ -24,7 +24,7 @@
 //             })
 //         }
 
-//         render () {
+//         render() {
 //             // ... and renders the wrapped component with the fresh data!
 //             // Notice that we pass through any additional props
 //             return <WrappedComponent data={this.state.data} {...this.props} />

@@ -6,7 +6,7 @@ export const refsHOC = WrappedComponent => {
             wrappedComponentInstance.method()
         }
 
-        render () {
+        render() {
             const props = Object.assign({}, this.props, { ref: this.proc.bind(this) })
             return <WrappedComponent {...props} />
         }

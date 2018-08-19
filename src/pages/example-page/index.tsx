@@ -10,11 +10,11 @@ import { Input } from 'components'
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
 export class ExamplePage extends React.Component<any, any> {
-    componentDidMount () {
+    componentDidMount() {
         document.title = 'Example Page'
     }
 
-    render () {
+    render() {
         return (
             <div className={css.content}>
                 {/*

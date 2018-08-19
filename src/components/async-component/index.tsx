@@ -10,7 +10,7 @@
 //         Component: null,
 //     }
 
-//     componentDidMount () {
+//     componentDidMount() {
 //         if (!this.state.Component) {
 //             loader().then((Component: any) => {
 //                 this.setState({ Component })
@@ -18,7 +18,7 @@
 //         }
 //     }
 
-//     render () {
+//     render() {
 //         const { Component } = this.state
 
 //         if (Component) {

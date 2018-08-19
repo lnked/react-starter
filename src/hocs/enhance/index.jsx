@@ -3,7 +3,7 @@
 // export var Enhance = ComposedComponent => class extends Component {
 //     state = { data: null }
 
-//     componentDidMount () {
+//     componentDidMount() {
 //         this.setState({ data: 'Hello' })
 //     }
 

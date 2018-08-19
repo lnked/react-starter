@@ -12,13 +12,13 @@ if (process.mas) app.setName('Electron APIs')
 
 let mainWindow = null
 
-function initialize () {
+function initialize() {
     const shouldQuit = makeSingleInstance()
     if (shouldQuit) return app.quit()
 
     loadDemos()
 
-    function createWindow () {
+    function createWindow() {
         const windowOptions = {
             width: 1080,
             minWidth: 680,
@@ -69,7 +69,7 @@ function initialize () {
 //
 // Returns true if the current version of the app should quit instead of
 // launching.
-function makeSingleInstance () {
+function makeSingleInstance() {
     if (process.mas) return false
 
     return app.makeSingleInstance(() => {
@@ -81,7 +81,7 @@ function makeSingleInstance () {
 }
 
 // Require each JS file in the main-process dir
-function loadDemos () {
+function loadDemos() {
     const files = glob.sync(path.join(__dirname, 'main-process/**/*.js'))
     files.forEach(file => {
         require(file)

@@ -8,14 +8,14 @@
 //             component: null
 //         }
 
-//         componentDidMount () {
+//         componentDidMount() {
 //             importComponent()
 //                 .then(cmp => {
 //                     this.setState({component: cmp.default})
 //                 })
 //         }
 
-//         render () {
+//         render() {
 //             const C = this.state.component
 //             return C ? <C {...this.props}/> : null
 //         }

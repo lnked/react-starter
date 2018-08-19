@@ -50,7 +50,7 @@
 // );
 
 // render(shape);
-// render (
+// render(
 //     <svg
 //         style={{ background: '#333' }}
 //         viewBox="0 0 80 80"

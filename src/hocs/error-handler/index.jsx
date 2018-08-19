@@ -8,7 +8,7 @@
 //             console.log(error, info)
 //         }
 
-//         render () {
+//         render() {
 //             return <RComponent {...this.props} />
 //         }
 //     }

@@ -28,7 +28,7 @@ export class Input extends React.Component<P, S> {
         value: '',
     }
 
-    // static getDerivedStateFromProps (props: P, state: S) {
+    // static getDerivedStateFromProps(props: P, state: S) {
     //     if (state.value !== props.value) {
     //         return {
     //             value: props.value,

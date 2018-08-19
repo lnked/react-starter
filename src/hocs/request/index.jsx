@@ -7,7 +7,7 @@
 //             data: [],
 //         }
 
-//         componentDidMount () {
+//         componentDidMount() {
 //             this.get()
 //         }
 
@@ -50,7 +50,7 @@
 //                     this.setState({ data })
 //                 })
 
-//         render () {
+//         render() {
 //             return (
 //                 <RComponent
 //                     data={this.state.data}

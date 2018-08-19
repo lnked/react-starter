@@ -26,11 +26,11 @@ export class CoreLayout extends React.Component<P, S> {
         title: 'React Starter App',
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.withRender()
     }
 
-    componentDidUpdate () {
+    componentDidUpdate() {
         this.withRender()
     }
 
@@ -46,7 +46,7 @@ export class CoreLayout extends React.Component<P, S> {
 
     fixScroll = () => window.scrollTo(0, 0)
 
-    render () {
+    render() {
         const { children } = this.props
 
         return (

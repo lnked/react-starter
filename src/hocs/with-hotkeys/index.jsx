@@ -4,7 +4,7 @@ export function withHotkeys (RComponent) {
     class withHotkeysComponent extends React.Component {
         remove = (url, data) => this.register().delete(url, data || {})
 
-        render () {
+        render() {
             return <RComponent {...this.props} remove={this.remove} />
         }
     }

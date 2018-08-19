@@ -24,7 +24,7 @@ export const ppHOC = WrappedComponent => {
             }
         }
 
-        render () {
+        render() {
             return <WrappedComponent {...this.props} {...this.additions()} />
         }
     }
@@ -32,7 +32,7 @@ export const ppHOC = WrappedComponent => {
 
 // @ppHOC
 // class Example extends React.Component {
-//     render () {
+//     render() {
 //         return <input name="name" {...this.props.name} />
 //     }
 // }

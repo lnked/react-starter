@@ -33,7 +33,7 @@ export class App extends React.Component<{}, {}> {
         return null
     }
 
-    render () {
+    render() {
         return (
             <Provider {...rootStore}>
                 <ErrorBoundary>
