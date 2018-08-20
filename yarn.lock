@@ -20632,9 +20632,9 @@ type-is@^1.6.16, type-is@~1.6.15, type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
-typed-css-modules-loader@0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/typed-css-modules-loader/-/typed-css-modules-loader-0.0.13.tgz#c4f22fc034d35b58113e3103ac01695fb098c554"
+typed-css-modules-loader@0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/typed-css-modules-loader/-/typed-css-modules-loader-0.0.14.tgz#d107425f41dc395fddf5af523caa76f161fb34ba"
   dependencies:
     loader-utils "^1.1.0"
     typed-css-modules "^0.3.4"
