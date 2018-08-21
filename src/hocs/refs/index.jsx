@@ -2,7 +2,7 @@ import * as React from 'react'
 
 export const refsHOC = WrappedComponent => {
     return class RefsHOC extends React.Component {
-        proc (wrappedComponentInstance) {
+        proc(wrappedComponentInstance) {
             wrappedComponentInstance.method()
         }
 

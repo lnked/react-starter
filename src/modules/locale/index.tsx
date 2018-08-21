@@ -6,8 +6,8 @@ import { classes } from 'helpers'
 import { NavLink } from 'react-router-dom'
 
 export interface P {
-    className?: string;
-    handleChange?: () => void | boolean;
+    className?: string
+    handleChange?: () => void | boolean
 }
 
 const cx = classes.bind(css)
