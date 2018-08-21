@@ -2986,7 +2986,36 @@ app-builder-bin@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-2.1.2.tgz#528ce8e543aa595210c9595f91bdf5638cecd79b"
 
-app-builder-lib@20.28.1, app-builder-lib@~20.28.0:
+app-builder-lib@20.28.2:
+  version "20.28.2"
+  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-20.28.2.tgz#5e126190acc17f53d9b2f3e3f5a99f07c35263f3"
+  dependencies:
+    "7zip-bin" "~4.0.2"
+    app-builder-bin "2.1.2"
+    async-exit-hook "^2.0.1"
+    bluebird-lst "^1.0.5"
+    builder-util "6.1.2"
+    builder-util-runtime "4.4.1"
+    chromium-pickle-js "^0.2.0"
+    debug "^3.1.0"
+    ejs "^2.6.1"
+    electron-osx-sign "0.4.10"
+    electron-publish "20.28.0"
+    fs-extra-p "^4.6.1"
+    hosted-git-info "^2.7.1"
+    is-ci "^1.2.0"
+    isbinaryfile "^3.0.3"
+    js-yaml "^3.12.0"
+    lazy-val "^1.0.3"
+    minimatch "^3.0.4"
+    normalize-package-data "^2.4.0"
+    plist "^3.0.1"
+    read-config-file "3.1.2"
+    sanitize-filename "^1.6.1"
+    semver "^5.5.0"
+    temp-file "^3.1.3"
+
+app-builder-lib@~20.28.0:
   version "20.28.1"
   resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-20.28.1.tgz#df3aa47ba8bdbde75a4040f1d5500290f599cf70"
   dependencies:
@@ -5249,6 +5278,25 @@ builder-util@6.1.1, builder-util@~6.1.0:
     stat-mode "^0.2.2"
     temp-file "^3.1.3"
 
+builder-util@6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-6.1.2.tgz#c96db6b33f9f60603c0ccd298dd25bba1eb3596a"
+  dependencies:
+    "7zip-bin" "~4.0.2"
+    app-builder-bin "2.1.2"
+    bluebird-lst "^1.0.5"
+    builder-util-runtime "^4.4.1"
+    chalk "^2.4.1"
+    debug "^3.1.0"
+    fs-extra-p "^4.6.1"
+    is-ci "^1.2.0"
+    js-yaml "^3.12.0"
+    lazy-val "^1.0.3"
+    semver "^5.5.0"
+    source-map-support "^0.5.8"
+    stat-mode "^0.2.2"
+    temp-file "^3.1.3"
+
 builtin-modules@^1.0.0, builtin-modules@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -5422,9 +5470,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000870"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000870.tgz#f397cd64922c24f85d0ce7803c9bd5c5a1571b16"
 
-caniuse-lite@1.0.30000877, caniuse-lite@^1.0.30000877:
-  version "1.0.30000877"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000877.tgz#f189673b86ecc06436520e3e391de6a13ca923b4"
+caniuse-lite@1.0.30000878:
+  version "1.0.30000878"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000878.tgz#c644c39588dd42d3498e952234c372e5a40a4123"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000823, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864, caniuse-lite@^1.0.30000865:
   version "1.0.30000865"
@@ -5433,6 +5481,10 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, can
 caniuse-lite@^1.0.30000876:
   version "1.0.30000876"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000876.tgz#69fc1b696a35fd91089061aa916f677ee7057ada"
+
+caniuse-lite@^1.0.30000877:
+  version "1.0.30000877"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000877.tgz#f189673b86ecc06436520e3e391de6a13ca923b4"
 
 capitalize@^1.0.0:
   version "1.0.0"
@@ -5638,6 +5690,10 @@ chromium-pickle-js@^0.2.0:
 ci-info@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.1.3.tgz#710193264bb05c77b8c90d02f5aaf22216a667b2"
+
+ci-info@^1.3.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.4.0.tgz#4841d53cad49f11b827b648ebde27a6e189b412f"
 
 ci-job-number@^0.3.0:
   version "0.3.0"
@@ -7888,18 +7944,18 @@ ejs@^2.5.7, ejs@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
-electron-builder@20.28.1:
-  version "20.28.1"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.28.1.tgz#e87e71b74f3228d21e012d0b60ab7b0a384f5f25"
+electron-builder@20.28.2:
+  version "20.28.2"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.28.2.tgz#5ca19a117e9ee9c966ab4231958fe7463e598e62"
   dependencies:
-    app-builder-lib "20.28.1"
+    app-builder-lib "20.28.2"
     bluebird-lst "^1.0.5"
-    builder-util "6.1.1"
+    builder-util "6.1.2"
     builder-util-runtime "4.4.1"
     chalk "^2.4.1"
     dmg-builder "5.3.0"
     fs-extra-p "^4.6.1"
-    is-ci "^1.1.0"
+    is-ci "^1.2.0"
     lazy-val "^1.0.3"
     read-config-file "3.1.2"
     sanitize-filename "^1.6.1"
@@ -11441,6 +11497,12 @@ is-ci@^1.0.10, is-ci@^1.1.0:
   dependencies:
     ci-info "^1.0.0"
 
+is-ci@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-1.2.0.tgz#3f4a08d6303a09882cef3f0fb97439c5f5ce2d53"
+  dependencies:
+    ci-info "^1.3.0"
+
 is-color-stop@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-color-stop/-/is-color-stop-1.1.0.tgz#cfff471aee4dd5c9e158598fbe12967b5cdad345"
@@ -14038,9 +14100,9 @@ mobx-react@5.2.5:
     hoist-non-react-statics "^2.5.0"
     react-lifecycles-compat "^3.0.2"
 
-mobx@5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.0.3.tgz#53b97f2a0f9b0dd7774c96249f81bf2d513d8e1c"
+mobx@5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.0.4.tgz#3f0faa74d4214b012d957f6a559e2e3e1aae421e"
 
 modelo@^4.2.0:
   version "4.2.3"
@@ -20546,12 +20608,13 @@ ts-is-kind@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ts-is-kind/-/ts-is-kind-1.0.0.tgz#f9ca9c1af07ddb82d7a06744d8928952d4bd2426"
 
-ts-jest@23.1.3:
-  version "23.1.3"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.1.3.tgz#33e3187d3ef0d42adada6347acf2c3539ac56107"
+ts-jest@23.1.4:
+  version "23.1.4"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.1.4.tgz#66ac1d8d3fbf8f9a98432b11aa377aa850664b2b"
   dependencies:
     closest-file-data "^0.1.4"
     fs-extra "6.0.1"
+    json5 "^0.5.0"
     lodash "^4.17.10"
 
 tslib@1.9.0:
