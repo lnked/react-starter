@@ -11,7 +11,7 @@
         "react",
         "jest",
         "import",
-        "prettier",
+        /* "prettier", */
         "jsx-a11y",
         "security",
         "immutable",
@@ -79,9 +79,10 @@
         ]
     },
     "rules": {
+        /*
         "prettier/prettier": ["error", null, {
             "usePrettierrc": true
-        }],
+        }],*/
         "object-curly-newline": ["off", { "multiline": true }],
         "no-self-assign": ["error", { "props": false }],
         "for-direction": "off",

@@ -4,9 +4,9 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    symbol: string
-    hidden?: boolean
-    className?: string
+    symbol: string;
+    hidden?: boolean;
+    className?: string;
 }
 
 const cx = classes.bind(css)

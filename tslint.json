@@ -32,7 +32,7 @@
             }
         ],
         "semicolon": [
-            true, "never", "ignore-interfaces"
+            false, "never", "ignore-interfaces"
         ],
         "jsx-boolean-value": [
             "never",
