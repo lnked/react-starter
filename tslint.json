@@ -2,8 +2,8 @@
     "defaultSeverity": "error",
     "extends": [
         "tslint:recommended",
+        "tslint:latest",
         "tslint-react",
-        "tslint-config-standard",
         "tslint-config-prettier"
     ],
     "jsRules": {},

@@ -23,7 +23,7 @@ export class Quantity extends React.Component<P, S> {
         max: 9999,
         step: 1,
         count: 1,
-        handleChange: count => {
+        handleChange: (count: number) => {
             console.log(': = ', count)
         },
     }
@@ -48,7 +48,7 @@ export class Quantity extends React.Component<P, S> {
     //     return nextProps.count !== this.state.count
     // }
 
-    changeValue = count => {
+    changeValue = (count: number) => {
         const { min, max } = this.props
 
         if (count > max || count < min) {
@@ -60,7 +60,7 @@ export class Quantity extends React.Component<P, S> {
         // this.props.handleChange(this.props.item, count)
     }
 
-    changeCount = input => () => {
+    changeCount = (input: number) => () => {
         const { count } = this.state
         const { min, max, step } = this.props
 
