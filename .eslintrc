@@ -82,6 +82,7 @@
         "prettier/prettier": ["error", null, {
             "usePrettierrc": true
         }],
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
         "object-curly-newline": ["off", { "multiline": true }],
         "no-self-assign": ["error", { "props": false }],
         "for-direction": "off",

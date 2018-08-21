@@ -2,18 +2,18 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    name: string
-    min: number
-    max: number
-    step: number
-    count?: number
-    type?: string
-    item?: string | number
-    handleChange?: (count: number) => void | boolean
+    name: string;
+    min: number;
+    max: number;
+    step: number;
+    count?: number;
+    type?: string;
+    item?: string | number;
+    handleChange?: (count: number) => void | boolean;
 }
 
 export interface S {
-    count: number
+    count: number;
 }
 
 export class Quantity extends React.Component<P, S> {
