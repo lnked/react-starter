@@ -13,7 +13,7 @@ export interface P {
 }
 
 export interface S {
-    count: number;
+    count: number
 }
 
 export class Quantity extends React.Component<P, S> {

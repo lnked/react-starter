@@ -4,8 +4,8 @@ import * as css from './styles.scss'
 import { Spinner } from 'components'
 
 export interface P {
-    pending?: boolean
-    children?: React.ReactNode
+    pending?: boolean;
+    children?: React.ReactNode;
 }
 
 export const Fetching = ({ pending = true, children }: P) => {
