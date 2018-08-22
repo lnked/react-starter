@@ -3544,12 +3544,12 @@ author-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/author-regex/-/author-regex-1.0.0.tgz#d08885be6b9bbf9439fe087c76287245f0a81450"
 
-autoprefixer@9.1.2:
-  version "9.1.2"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.1.2.tgz#73672614e3ee43a433b84c1c2a4b1ca392d2f6a1"
+autoprefixer@9.1.3:
+  version "9.1.3"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.1.3.tgz#bd5940ccb9d1bfa3508308659915f0a14394c8d5"
   dependencies:
     browserslist "^4.0.2"
-    caniuse-lite "^1.0.30000877"
+    caniuse-lite "^1.0.30000878"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^7.0.2"
@@ -5601,7 +5601,7 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000870"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000870.tgz#f397cd64922c24f85d0ce7803c9bd5c5a1571b16"
 
-caniuse-lite@1.0.30000878:
+caniuse-lite@1.0.30000878, caniuse-lite@^1.0.30000878:
   version "1.0.30000878"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000878.tgz#c644c39588dd42d3498e952234c372e5a40a4123"
 
@@ -5612,10 +5612,6 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, can
 caniuse-lite@^1.0.30000876:
   version "1.0.30000876"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000876.tgz#69fc1b696a35fd91089061aa916f677ee7057ada"
-
-caniuse-lite@^1.0.30000877:
-  version "1.0.30000877"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000877.tgz#f189673b86ecc06436520e3e391de6a13ca923b4"
 
 capitalize@^1.0.0:
   version "1.0.0"
@@ -12281,9 +12277,9 @@ jest-snapshot@^23.5.0:
     pretty-format "^23.5.0"
     semver "^5.5.0"
 
-jest-styled-components@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-6.1.0.tgz#9938f171785c7e6d18e53b15a50b4e8a874ac722"
+jest-styled-components@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-6.1.1.tgz#2b9b6e3ded212b43ea71df72e82d55b856e9d1ed"
   dependencies:
     css "^2.2.1"
 
