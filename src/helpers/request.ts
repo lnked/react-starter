@@ -7,7 +7,7 @@ import { API_URL } from 'helpers/api'
 const authToken = TOKEN.get()
 
 const headers: any = {
-    Accept: 'application/json',
+    'Accept': 'application/json',
     'Content-Type': 'application/json',
 }
 
