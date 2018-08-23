@@ -43,31 +43,7 @@
     "build-storybook": "build-storybook",
     "dev-build": "yarn release --env development",
     "prod-build": "yarn release --env production",
-    "stage-build": "yarn release --env staging",
-    "electron-rebuild": "electron-rebuild --parallel --force --types prod,dev,optional --module-dir src",
-    "package": "yarn release --env production && electron-builder build --publish never",
-    "package-all": "yarn release --env production && electron-builder build -mwl",
-    "package-linux": "yarn release --env production && electron-builder build --linux",
-    "package-win": "yarn release --env production && electron-builder build --win --x64",
-    "pack": "electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]",
-    "package-mac0": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=darwin --arch=x64 --icon=./dist/icons/icon.icns --prune=true --out=./release-builds",
-    "package-mac": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=darwin --arch=x64 --prune=true --out=./release-builds",
-    "pack:dmg": "electron-installer-dmg ./dist react-starter.app --overwrite --asar=true --prune=true --icon=./dist/icons/icon.icns --background=./dist/img/background.png --out=./release-builds",
-    "xpackage-mac": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=darwin --arch=x64 --icon=./dist/icons/icon.icns --prune=true --out=./release-builds",
-    "xpackage-win": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=./dist/icons/icon.ico --prune=true --out=./release-builds",
-    "xpackage-linux": "electron-packager ./dist react-starter.app --overwrite --asar=true --platform=linux --arch=x64 --icon=./dist/icons/1024x1024.png --prune=true --out=./release-builds",
-    "xcreate-installer-mac": "electron-installer-dmg ./dist react-starter.app --out=./release-builds --overwrite --icon=./icons/icon.icns",
-    "electron-app": "electron ./src/assets/app/ --debug",
-    "el-start": "electron src/main.js",
-    "el-build": "./scripts/build-all.sh",
-    "build:osx": "./scripts/build.sh darwin x64",
-    "build:osx64": "./scripts/build.sh darwin x64",
-    "build:linux32": "./scripts/build.sh linux ia32",
-    "build:linux": "./scripts/build.sh linux x64",
-    "build:linux64": "./scripts/build.sh linux x64",
-    "build:win": ".\\scripts\\build-win32.bat win32 ia32",
-    "build:win32": ".\\scripts\\build-win32.bat win32 ia32",
-    "build:win64": ".\\scripts\\build-win32.bat win32 x64"
+    "stage-build": "yarn release --env staging"
   },
   "keywords": [
     "react"
@@ -85,48 +61,6 @@
     "*.(json|css|scss|md)|.(babelrc|eslintrc)": [
       "git add"
     ]
-  },
-  "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
-    "files": [
-      "dist/",
-      "node_modules/",
-      "app.html",
-      "main.prod.js",
-      "main.prod.js.map",
-      "package.json"
-    ],
-    "dmg": {
-      "contents": [
-        {
-          "x": 130,
-          "y": 220
-        },
-        {
-          "x": 410,
-          "y": 220,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
-    },
-    "win": {
-      "target": [
-        "nsis"
-      ]
-    },
-    "linux": {
-      "target": [
-        "deb",
-        "AppImage"
-      ],
-      "category": "Development"
-    },
-    "directories": {
-      "buildResources": "resources",
-      "output": "release"
-    }
   },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
@@ -240,11 +174,6 @@
     "cucumber": "4.2.1",
     "docz": "0.10.3",
     "dotenv": "6.0.0",
-    "electron": "2.0.8",
-    "electron-builder": "20.28.2",
-    "electron-devtools-installer": "2.2.4",
-    "electron-packager": "12.1.1",
-    "electron-rebuild": "1.8.2",
     "enzyme": "3.4.4",
     "enzyme-adapter-react-16": "1.2.0",
     "enzyme-to-json": "3.3.4",
