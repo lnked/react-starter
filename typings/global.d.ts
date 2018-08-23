@@ -20,3 +20,10 @@ declare module 'tslib' {
     export = __rest;
     export = __extends;
 }
+
+declare let Reflect: Reflect;
+
+interface Reflect {
+  deleteProperty: () => void;
+  prop: string;
+}
