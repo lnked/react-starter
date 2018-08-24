@@ -4,13 +4,13 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    image: any
-    lqip?: string
-    width?: number
-    height?: number
-    title?: string
-    alt?: string
-    className?: string
+    image: any;
+    lqip?: string;
+    width?: number;
+    height?: number;
+    title?: string;
+    alt?: string;
+    className?: string;
 }
 
 const cx = classes.bind(css)

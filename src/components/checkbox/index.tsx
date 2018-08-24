@@ -14,7 +14,7 @@ export interface P {
 }
 
 export interface S {
-    checked: boolean
+    checked: boolean;
 }
 
 export class Checkbox extends React.PureComponent<P, S> {

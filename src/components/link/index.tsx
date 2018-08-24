@@ -4,9 +4,9 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    href: string
-    className: string
-    children?: React.ReactChild
+    href: string;
+    className: string;
+    children?: React.ReactChild;
 }
 
 const cx = classes.bind(css)

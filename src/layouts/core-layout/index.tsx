@@ -8,11 +8,11 @@ import { SvgFixer } from 'utils'
 import { Header } from 'modules'
 
 export interface P {
-    children?: JSX.Element[] | JSX.Element | string
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 export interface S {
-    title: string
+    title: string;
 }
 
 const cx = classes.bind(css)

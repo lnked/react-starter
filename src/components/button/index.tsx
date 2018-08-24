@@ -4,15 +4,15 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    type?: string
-    size?: 'small' | 'large' | 'normal' | 'medium'
-    label?: string
-    isIcon?: boolean
-    variant?: 'pure' | 'link' | 'info' | 'danger' | 'normal' | 'primary' | 'success' | 'warning' | 'subtle-link'
-    className?: string
-    isDisabled?: boolean
-    children?: JSX.Element[] | JSX.Element | string
-    handleClick?: () => void | boolean
+    type?: string;
+    size?: 'small' | 'large' | 'normal' | 'medium';
+    label?: string;
+    isIcon?: boolean;
+    variant?: 'pure' | 'link' | 'info' | 'danger' | 'normal' | 'primary' | 'success' | 'warning' | 'subtle-link';
+    className?: string;
+    isDisabled?: boolean;
+    children?: JSX.Element[] | JSX.Element | string;
+    handleClick?: () => void | boolean;
 }
 
 const cx = classes.bind(css)
@@ -42,7 +42,7 @@ export class Button extends React.PureComponent<P, {}> {
             <button
                 type={type}
                 onClick={this.handleClick}
-                className={cx(css.button, { icon: isIcon }, [size], [variant], className)}
+                className={cx(css.button, { icon: isIcon }, [ size ], [ variant ], className)}
                 disabled={isDisabled}
             >
                 {label || children}

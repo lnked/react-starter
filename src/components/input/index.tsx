@@ -3,15 +3,15 @@ import * as React from 'react'
 import { Present } from './present'
 
 export interface P {
-    name: string
-    label?: string
-    value?: string | number
-    integer?: boolean
-    floating?: boolean
+    name: string;
+    label?: string;
+    value?: string | number;
+    integer?: boolean;
+    floating?: boolean;
 }
 
 export interface S {
-    value?: string | number
+    value?: string | number;
 }
 
 export class Input extends React.Component<P, S> {

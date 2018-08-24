@@ -4,8 +4,8 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    primary?: boolean
-    children?: JSX.Element[] | JSX.Element | string
+    primary?: boolean;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 const cx = classes.bind(css)

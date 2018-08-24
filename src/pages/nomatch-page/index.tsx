@@ -6,7 +6,7 @@ import { classes } from 'helpers'
 export interface P {
     location: {
         pathname: string
-    }
+    };
 }
 
 const cx = classes.bind(css)

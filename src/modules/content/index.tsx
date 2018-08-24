@@ -2,8 +2,8 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    className?: string
-    children?: JSX.Element[] | JSX.Element | string
+    className?: string;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 export class Content extends React.PureComponent<P, {}> {

@@ -1,12 +1,12 @@
 import * as React from 'react'
 
 export interface P {
-    load: any
-    children?: any
+    load: any;
+    children?: any;
 }
 
 export interface S {
-    component: any
+    component: any;
 }
 
 export class DynamicImport extends React.Component<P, S> {

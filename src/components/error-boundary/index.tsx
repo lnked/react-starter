@@ -1,11 +1,11 @@
 import * as React from 'react'
 
 export interface P {
-    children?: JSX.Element[] | JSX.Element | string
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 export interface S {
-    hasError: boolean
+    hasError: boolean;
 }
 
 export class ErrorBoundary extends React.PureComponent<P, S> {

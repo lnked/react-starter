@@ -2,17 +2,17 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    name: string
-    label?: string
-    checked?: boolean
-    className?: string
-    value?: string | number
-    children?: JSX.Element[] | JSX.Element | string
-    handleChange?: (value: number | string | boolean) => void | boolean
+    name: string;
+    label?: string;
+    checked?: boolean;
+    className?: string;
+    value?: string | number;
+    children?: JSX.Element[] | JSX.Element | string;
+    handleChange?: (value: number | string | boolean) => void | boolean;
 }
 
 export interface S {
-    checked: any
+    checked: any;
 }
 
 export class Radio extends React.PureComponent<P, S> {

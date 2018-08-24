@@ -3,12 +3,12 @@ import * as React from 'react'
 // import styled, { ThemeProvider } from 'styled-components'
 
 export interface P {
-    size: 'tiny' | 'small' | 'normal' | 'medium' | 'huge'
-    type: 'primary' | 'secondary'
-    label: string
-    center: boolean
-    className: string
-    children?: JSX.Element[] | JSX.Element | string
+    size: 'tiny' | 'small' | 'normal' | 'medium' | 'huge';
+    type: 'primary' | 'secondary';
+    label: string;
+    center: boolean;
+    className: string;
+    children?: JSX.Element[] | JSX.Element | string;
 }
 
 // color: ${(props: P) =>

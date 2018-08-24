@@ -2,11 +2,11 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    isOpened?: boolean
+    isOpened?: boolean;
 }
 
 export interface S {
-    isOpened: boolean
+    isOpened: boolean;
 }
 
 export class Sandwich extends React.PureComponent<P, S> {

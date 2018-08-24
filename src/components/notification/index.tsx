@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    children?: React.ReactChild
+    children?: React.ReactChild;
 }
 
 export const Notification = ({ children }: P) => {

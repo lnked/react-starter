@@ -4,10 +4,10 @@ import * as css from './styles.scss'
 import { Icon, Input, Button } from 'components'
 
 export interface P {
-    type?: 'alert' | 'prompt' | 'confirm'
-    title?: string
-    value?: string | number
-    placeholder?: string
+    type?: 'alert' | 'prompt' | 'confirm';
+    title?: string;
+    value?: string | number;
+    placeholder?: string;
 }
 
 export class Dialog extends React.PureComponent<P, {}> {

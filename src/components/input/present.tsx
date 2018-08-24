@@ -16,10 +16,10 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    value?: string
-    label?: string
-    referrer: any
-    handleChange: (e: any) => void
+    value?: string;
+    label?: string;
+    referrer: any;
+    handleChange: (e: any) => void;
 }
 
 const cx = classes.bind(css)

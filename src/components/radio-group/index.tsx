@@ -1,14 +1,14 @@
 import * as React from 'react'
 
 export interface P {
-    name: string
-    checked?: boolean | string | number
-    children?: JSX.Element[] | JSX.Element | string
-    handleChange?: (value: number | string | boolean) => void | boolean
+    name: string;
+    checked?: boolean | string | number;
+    children?: JSX.Element[] | JSX.Element | string;
+    handleChange?: (value: number | string | boolean) => void | boolean;
 }
 
 export interface S {
-    checked: boolean | string | number
+    checked: boolean | string | number;
 }
 
 export class RadioGroup extends React.Component<P, S> {
