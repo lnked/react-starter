@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 const glob = require('glob')
 const webpack = require('webpack')
@@ -37,7 +35,7 @@ const plugins = [
 
     new ReplacePlugin([
         {
-            partten: /\/Users\/lnked\/web\/[\w\-\d\.\s]+\/(src\/)?[\w\d\-\/\.\<\>\s]+/gi,
+            partten: /\/users\/lnked\/web\/[\s\w\-.]+\/(src\/)?[\s\w\-./<>]+/gi,
             replacement: () => {
                 return ''
             },

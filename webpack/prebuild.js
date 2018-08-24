@@ -1,9 +1,7 @@
-'use strict';
+const { resolve } = require('path')
 
-const { resolve } = require('path');
-
-const webpack = require('webpack');
-const define = require('./define');
+const webpack = require('webpack')
+const define = require('./define')
 
 module.exports = {
     mode: 'production',
@@ -14,11 +12,10 @@ module.exports = {
 
     output: {
         path: define.rs_root,
-        filename: '../.cache/svgstore/[name].js'
+        filename: '../.cache/svgstore/[name].js',
     },
 
     plugins: require('./plugins/prebuild').config,
 
-    stats: require('./stats').config
-
+    stats: require('./stats').config,
 }

@@ -1,21 +1,16 @@
-'use strict';
+const define = require('./define')
+const path = require('path')
 
-const define = require('./define');
-const path = require('path');
-
-const webpack = require('webpack');
+const webpack = require('webpack')
 // const resolver = require('postcss-import-resolver')
 
-const plugins = [];
+const plugins = []
 
 plugins.push(
     // require('precss'),
     require('postcss-import')({
         addDependencyTo: webpack,
-        path: [
-            define.rs_root,
-            path.resolve(define.rs_root, 'assets/styles')
-        ]
+        path: [define.rs_root, path.resolve(define.rs_root, 'assets/styles')],
         // resolve: resolver({
         //     alias: {
         //       '~': 'src/'
@@ -49,18 +44,18 @@ plugins.push(
     require('postcss-reduce-transforms'),
     require('postcss-unique-selectors'),
     require('pleeease-filters'),
-    require("postcss-cssnext")({
+    require('postcss-cssnext')({
         autoprefixer: false,
-        warnForDuplicates: false
+        warnForDuplicates: false,
     }),
     require('css-mqpacker'),
     require('pixrem')({
-        rootValue: 10
+        rootValue: 10,
     }),
     require('postcss-reporter')({
-        clearReportedMessages: true
+        clearReportedMessages: true,
     })
-);
+)
 
 if (define.rs_production) {
     plugins.push(
@@ -87,17 +82,17 @@ if (define.rs_production) {
             autoprefixer: false,
             normalizeCharset: true,
             convertValues: { length: false },
-            colormin: true
+            colormin: true,
         }),
         require('postcss-flexbugs-fixes'),
         require('autoprefixer')({
-            flexbox: 'no-2009'
+            flexbox: 'no-2009',
         })
-    );
+    )
 }
 
 module.exports = ({ file, options, env }) => ({
     // parser: require('postcss-sass'),
     // syntax: require('postcss-sass'),
-    plugins: plugins
+    plugins,
 })

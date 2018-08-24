@@ -1,23 +1,21 @@
-'use strict';
-
-const { resolve } = require('path');
-const define = require('../define');
-const svgo = require('../svgo');
-const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
+const { resolve } = require('path')
+const define = require('../define')
+const svgo = require('../svgo')
+const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
 
 const options = {
     style: true,
     images: true,
     imagesPlaceholders: true,
-    traceColor: '#F0F0F0'
-};
+    traceColor: '#F0F0F0',
+}
 
-const loaders = [];
+const loaders = []
 
 loaders.push({
     test: /\.svg$/,
     use: SvgSpriteHtmlWebpackPlugin.getLoader(),
-    include: resolve(define.rs_root, '/assets/svgstore')
+    include: resolve(define.rs_root, '/assets/svgstore'),
 })
 
 loaders.push({
@@ -49,15 +47,12 @@ loaders.push({
             options: {
                 name: define.rs_asset_name,
                 hash: 'sha512',
-                digest: 'hex'
+                digest: 'hex',
             },
         },
     ],
-    exclude: [
-        resolve(define.rs_root, '/assets/fonts'),
-        resolve(define.rs_root, '/assets/svgstore')
-    ]
-});
+    exclude: [resolve(define.rs_root, '/assets/fonts'), resolve(define.rs_root, '/assets/svgstore')],
+})
 
 loaders.push({
     test: define.rs_regexp_images,
@@ -66,31 +61,31 @@ loaders.push({
         bypassOnDebug: define.rs_development,
         mozjpeg: {
             quality: 80,
-            progressive: define.rs_release
+            progressive: define.rs_release,
         },
         pngquant: {
             quality: '65-90',
-            speed: 4
+            speed: 4,
         },
         gifsicle: {
             colors: 256,
             interlaced: false,
-            optimizationLevel: 3
+            optimizationLevel: 3,
         },
         optipng: {
             enabled: define.rs_release,
-            optimizationLevel: 7
+            optimizationLevel: 7,
         },
         webp: {
             enabled: define.rs_release,
-            quality: 75
+            quality: 75,
         },
-        svgo: svgo.config
+        svgo: svgo.config,
     },
     exclude: [
         resolve(define.rs_root, '/assets/fonts'),
         // resolve(define.rs_root, '/assets/svgstore')
-    ]
-});
+    ],
+})
 
-module.exports.config = loaders;
+module.exports.config = loaders

@@ -1,26 +1,24 @@
-'use strict';
+const path = require('path')
+const { resolve } = require('path')
 
-const path = require('path');
-const { resolve } = require('path');
-
-const webpack = require('webpack');
-const define = require('../define');
-const helpers = require('../helpers');
+const webpack = require('webpack')
+const define = require('../define')
+const helpers = require('../helpers')
 const scripts = require('../rules/scripts')
-const environment = require('../environment').config;
-const formatter = require('../environment').formatter;
+const environment = require('../environment').config
+const formatter = require('../environment').formatter
 
-const SvgStore = require('webpack-svgstore-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const CssUrlRelativePlugin = require('css-url-relative-plugin');
+const SvgStore = require('webpack-svgstore-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const CssUrlRelativePlugin = require('css-url-relative-plugin')
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
-const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
+const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
 
-const HappyPack = require('happypack');
+const HappyPack = require('happypack')
 
 // const layouts = {};
 
@@ -35,12 +33,12 @@ const plugins = [
 
     new webpack.DefinePlugin({
         'process.env': Object.assign(formatter(environment, true), {
-            'BROWSER': true
+            BROWSER: true,
         }),
         'process.env.NODE_ENV': JSON.stringify(define.rs_mode),
         'process.env.BABEL_ENV': JSON.stringify(define.rs_mode),
-        '__DEV__': define.rs_development,
-        '__PROD__': define.rs_production
+        __DEV__: define.rs_development,
+        __PROD__: define.rs_production,
     }),
 
     // new webpack.DllPlugin({
@@ -49,23 +47,24 @@ const plugins = [
     // }),
 
     // /(en-gb|en|ru)/
-    new webpack.ContextReplacementPlugin(/moment[\\/]locale$/, /^\.\/(ru)$/),
+    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /^\.\/(ru)$/),
 
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production,
-        options: {}
+        options: {},
     }),
 
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
 
     new SvgSpriteHtmlWebpackPlugin({
-        includeFiles: [
-            './src/assets/svgstore/*.svg'
-        ],
-        generateSymbolId: function(svgFilePath) {
-            return path.basename(svgFilePath).replace(/\.svg/gi, '').toString()
-        }
+        includeFiles: [ './src/assets/svgstore/*.svg' ],
+        generateSymbolId(svgFilePath) {
+            return path
+                .basename(svgFilePath)
+                .replace(/\.svg/gi, '')
+                .toString()
+        },
     }),
 
     new HtmlWebpackPolyfillIOPlugin({
@@ -92,9 +91,7 @@ const plugins = [
         camelCase: true,
         sourceMap: define.rs_sourceMap,
         minimize: define.rs_production,
-        localIdentName: define.rs_development
-            ? '[path][name]__[local]--[hash:base64:5]'
-            : '[sha1:hash:hex:4]'
+        localIdentName: define.rs_development ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:4]',
     }),
 
     new MiniCssExtractPlugin({
@@ -105,55 +102,55 @@ const plugins = [
     new ScriptExtHtmlWebpackPlugin({
         defer: [/vendors/, /bundle/, /.*bundle/],
         inline: 'startup',
-        defaultAttribute: 'async'
+        defaultAttribute: 'async',
     }),
 
-    new CopyWebpackPlugin([
-        {
-            context: `assets/misc-${define.rs_environment}`,
-            from: { glob: '**/*', dot: true },
-            to: define.rs_dist,
-            force: true,
-            cache: true
-        }, {
-            context: 'assets/misc',
-            from: { glob: '**/*', dot: true },
-            to: define.rs_dist,
-            force: true,
-            cache: true
-        }, {
-            context: 'assets/images',
-            from: { glob: '**/*', dot: true },
-            to: resolve(define.rs_dist, 'img'),
-            force: true,
-            cache: true
-        }, {
-            context: 'assets/fonts/SF',
-            from: { glob: '**/*', dot: true },
-            to: resolve(define.rs_dist, 'assets/fonts/SF'),
-            force: true,
-            cache: true
-        }
-    ], {
-        ignore: [
-            '.cache',
-            '.gitkeep',
-            '.DS_Store',
-            '*.js',
-            '*.css'
+    new CopyWebpackPlugin(
+        [
+            {
+                context: `assets/misc-${define.rs_environment}`,
+                from: { glob: '**/*', dot: true },
+                to: define.rs_dist,
+                force: true,
+                cache: true,
+            },
+            {
+                context: 'assets/misc',
+                from: { glob: '**/*', dot: true },
+                to: define.rs_dist,
+                force: true,
+                cache: true,
+            },
+            {
+                context: 'assets/images',
+                from: { glob: '**/*', dot: true },
+                to: resolve(define.rs_dist, 'img'),
+                force: true,
+                cache: true,
+            },
+            {
+                context: 'assets/fonts/SF',
+                from: { glob: '**/*', dot: true },
+                to: resolve(define.rs_dist, 'assets/fonts/SF'),
+                force: true,
+                cache: true,
+            },
         ],
-        copyUnmodified: true
-    })
-];
+        {
+            ignore: ['.cache', '.gitkeep', '.DS_Store', '*.js', '*.css'],
+            copyUnmodified: true,
+        }
+    ),
+]
 
 if (define.rs_parallel) {
     plugins.push(
         new HappyPack({
             loaders: scripts.loaders,
             threads: define.rs_parallel,
-            verbose: false
-        }),
+            verbose: false,
+        })
     )
 }
 
-module.exports.config = plugins;
+module.exports.config = plugins

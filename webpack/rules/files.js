@@ -1,16 +1,14 @@
-'use strict';
-
-const { resolve } = require('path');
-const define = require('../define');
+const { resolve } = require('path')
+const define = require('../define')
 
 const rules = [
     {
         test: define.rs_regexp_files,
-        use: ['file-loader']
+        use: [ 'file-loader' ],
     },
     {
         test: /\.txt$/,
-        use: ['raw-loader']
+        use: [ 'raw-loader' ],
     },
     {
         test: /\.xml$/,
@@ -19,11 +17,11 @@ const rules = [
                 loader: 'xml-loader',
                 options: {
                     name: '[name].[ext]',
-                    explicitChildren: false
-                }
-            }
-        ]
-    }
-];
+                    explicitChildren: false,
+                },
+            },
+        ],
+    },
+]
 
-module.exports.config = rules;
+module.exports.config = rules

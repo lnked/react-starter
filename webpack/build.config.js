@@ -1,16 +1,14 @@
-'use strict';
+const { resolve, relative } = require('path')
 
-const { resolve, relative } = require('path');
+const webpack = require('webpack')
+const webpackMerge = require('webpack-merge')
+const config = require('./config')
 
-const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
-const config = require('./config');
+const stats = require('./stats')
+const define = require('./define')
 
-const stats = require('./stats');
-const define = require('./define');
-
-const optimization = require('./optimization');
-const minimizer = require('./minimizer');
+const optimization = require('./optimization')
+const minimizer = require('./minimizer')
 
 module.exports = webpackMerge(config, {
     mode: 'production',
@@ -26,15 +24,14 @@ module.exports = webpackMerge(config, {
         path: resolve(define.rs_dist, 'assets'),
         filename: 'js/[name].[chunkhash:3].js',
         chunkFilename: 'js/[name].[chunkhash:3].min.js',
-        devtoolModuleFilenameTemplate: info =>
-            relative(define.rs_root, info.absoluteResourcePath).replace(/\\/g, '/')
+        devtoolModuleFilenameTemplate: info => relative(define.rs_root, info.absoluteResourcePath).replace(/\\/g, '/'),
     },
 
     performance: define.rs_release && {
         hints: 'warning',
         maxAssetSize: 500000,
         maxEntrypointSize: 500000,
-        assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename))
+        assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
     },
 
     optimization: webpackMerge(optimization, minimizer),
@@ -45,5 +42,5 @@ module.exports = webpackMerge(config, {
         net: 'empty',
         tls: 'empty',
         child_process: 'empty',
-    }
-});
+    },
+})

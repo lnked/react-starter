@@ -1,7 +1,5 @@
-'use strict';
-
-const { resolve } = require('path');
-const define = require('../define');
+const { resolve } = require('path')
+const define = require('../define')
 
 const rules = [
     {
@@ -10,11 +8,11 @@ const rules = [
             {
                 loader: 'file-loader',
                 options: {
-                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : 'media/[hash:5].[ext]'
-                }
-            }
-        ]
-    }
-];
+                    name: define.rs_development ? '[path][name].[ext]?[hash:8]' : 'media/[hash:5].[ext]',
+                },
+            },
+        ],
+    },
+]
 
-module.exports.config = rules;
+module.exports.config = rules

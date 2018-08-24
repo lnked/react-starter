@@ -1,7 +1,5 @@
-'use strict';
-
-const { resolve } = require('path');
-const define = require('../define');
+const { resolve } = require('path')
+const define = require('../define')
 
 const rules = [
     {
@@ -10,11 +8,11 @@ const rules = [
             {
                 loader: 'pug-loader',
                 options: {
-                    pretty: define.rs_development
-                }
-            }
+                    pretty: define.rs_development,
+                },
+            },
         ],
-        include: define.rs_root
+        include: define.rs_root,
     },
     {
         test: /\.html$/,
@@ -22,12 +20,12 @@ const rules = [
             {
                 loader: 'prerender-loader',
                 options: {
-                    string: true
-                }
-            }
+                    string: true,
+                },
+            },
         ],
-        include: define.rs_root
-    }
-];
+        include: define.rs_root,
+    },
+]
 
-module.exports.config = rules;
+module.exports.config = rules

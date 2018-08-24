@@ -1,10 +1,8 @@
-'use strict';
+const webpack = require('webpack')
+const define = require('../define')
+const { resolve } = require('path')
 
-const webpack = require('webpack');
-const define = require('../define');
-const { resolve } = require('path');
-
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const plugins = [
     new BundleAnalyzerPlugin({
@@ -28,8 +26,8 @@ const plugins = [
         // See more options here: https://github.com/webpack/webpack/blob/webpack-1/lib/Stats.js#L21
         statsOptions: null,
         // Log level. Can be 'info', 'warn', 'error' or 'silent'.
-        logLevel: 'info'
-    })
-];
+        logLevel: 'info',
+    }),
+]
 
-module.exports.config = plugins;
+module.exports.config = plugins

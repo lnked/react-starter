@@ -1,13 +1,10 @@
-
-'use strict';
-
-const define = require('./define');
+const define = require('./define')
 
 module.exports = {
     minimize: true,
     concatenateModules: true,
     runtimeChunk: {
-        name: 'startup'
+        name: 'startup',
     },
     splitChunks: {
         chunks: 'async',
@@ -20,19 +17,19 @@ module.exports = {
         name: true,
         cacheGroups: {
             bundle: {
-                test: /[\\/]node_modules[\\/]/,
+                test: /[/\\]node_modules[/\\]/,
                 name: 'bundle',
                 minChunks: 1,
                 priority: -10,
                 chunks: 'all',
                 enforce: true,
-                reuseExistingChunk: true
+                reuseExistingChunk: true,
             },
-            default: {
+            'default': {
                 minChunks: 2,
                 priority: -20,
-                reuseExistingChunk: true
+                reuseExistingChunk: true,
             },
-        }
-    }
-};
+        },
+    },
+}

@@ -1,8 +1,6 @@
-'use strict';
-
-const fs = require('fs');
-const define = require('./define');
-const { resolve } = require('path');
+const fs = require('fs')
+const define = require('./define')
+const { resolve } = require('path')
 
 const config = {
     hash: false,
@@ -10,8 +8,8 @@ const config = {
     inject: true,
     compile: false,
     filetype: 'pug',
-    prefetch: ['**/*.min.js'],
-    preload: ['**/*.min.js'],
+    prefetch: [ '**/*.min.js' ],
+    preload: [ '**/*.min.js' ],
     chunksSortMode: 'dependency',
     production: define.rs_production,
     minify: define.rs_release && {
@@ -35,31 +33,31 @@ const config = {
         useShortDoctype: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true
-    }
+        minifyURLs: true,
+    },
 }
 
-const fileContent = function (filePath) {
-    const content = fs.readFileSync(resolve(define.rs_base, filePath), 'utf8');
-    return content.toString().replace(/<svg.*?>|<\/svg>/gi, '');
+const fileContent = function(filePath) {
+    const content = fs.readFileSync(resolve(define.rs_base, filePath), 'utf8')
+    return content.toString().replace(/<svg.*?>|<\/svg>/gi, '')
 }
 
 module.exports.fileContent = fileContent
 
 module.exports.generateConfig = (script, template, chunksList) => {
     if (!template) {
-        template = 'app';
+        template = 'app'
     }
 
-    config.template = [template, 'pug'].join('.');
-    config.filename = resolve(define.rs_dist, [script, 'html'].join('.'));
+    config.template = [template, 'pug'].join('.')
+    config.filename = resolve(define.rs_dist, [script, 'html'].join('.'))
     // config.svgContext = fileContent('.cache/svgstore/svgstore.svg');
 
-    config.basePath = define.rs_base_path;
+    config.basePath = define.rs_base_path
 
     if (chunksList !== undefined) {
-        config.chunks = chunksList;
+        config.chunks = chunksList
     }
 
-    return config;
+    return config
 }

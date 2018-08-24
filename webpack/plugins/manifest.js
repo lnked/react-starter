@@ -1,13 +1,11 @@
-'use strict';
+const { resolve } = require('path')
 
-const { resolve } = require('path');
+const webpack = require('webpack')
+const define = require('../define')
+const environment = require('../environment').config
 
-const webpack = require('webpack');
-const define = require('../define');
-const environment = require('../environment').config;
-
-const WebpackPwaManifest = require('webpack-pwa-manifest');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const plugins = [
     new FaviconsWebpackPlugin({
@@ -29,12 +27,12 @@ const plugins = [
             opengraph: false,
             twitter: false,
             yandex: false,
-            windows: false
-        }
+            windows: false,
+        },
     }),
     new WebpackPwaManifest({
         inject: true,
-        filename: "/manifest.webmanifest",
+        filename: '/manifest.webmanifest',
         fingerprints: false,
         ios: false,
         publicPath: null,
@@ -63,14 +61,14 @@ const plugins = [
         icons: [
             {
                 src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
-                sizes: [96, 128, 192, 256, 384, 512]
+                sizes: [96, 128, 192, 256, 384, 512],
             },
             {
                 src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
-                size: '1024x1024'
-            }
-        ]
-    })
-];
+                size: '1024x1024',
+            },
+        ],
+    }),
+]
 
-module.exports.config = plugins;
+module.exports.config = plugins

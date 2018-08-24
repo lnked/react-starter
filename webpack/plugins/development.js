@@ -1,16 +1,10 @@
-'use strict';
-
-const define = require('../define');
-const webpack = require('webpack');
-const WebpackNotifierPlugin = require('webpack-notifier');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const define = require('../define')
+const webpack = require('webpack')
+const WebpackNotifierPlugin = require('webpack-notifier')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 
 const plugins = [
-    new webpack.WatchIgnorePlugin([
-        /css\.d\.ts$/,
-        /scss\.d\.ts$/,
-        /node_modules/
-    ]),
+    new webpack.WatchIgnorePlugin([/cs{2}\.d\.ts$/, /scs{2}\.d\.ts$/, /node_modules/]),
 
     new WebpackNotifierPlugin({ alwaysNotify: true }),
 
@@ -26,6 +20,6 @@ const plugins = [
     new webpack.NoEmitOnErrorsPlugin(),
 
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-];
+]
 
-module.exports.config = plugins;
+module.exports.config = plugins

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * This file includes polyfills and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -15,9 +13,9 @@
  *
  */
 
-const polyfills = [];
+const polyfills = []
 
-/***************************************************************************************************
+/** *************************************************************************************************
  * BROWSER POLYFILLS
  */
 
@@ -70,4 +68,4 @@ const polyfills = [];
  **/
 // polyfills.push('web-animations-js');  // Run `npm install --save web-animations-js`.
 
-module.exports.polyfills = polyfills;
+module.exports.polyfills = polyfills

@@ -1,6 +1,4 @@
-'use strict';
-
-const webpack = require('webpack');
+const webpack = require('webpack')
 // const SvgStore = require('webpack-svgstore-plugin');
 
 const plugins = [
@@ -50,6 +48,6 @@ const plugins = [
     //     },
     //     prefix: ''
     // })
-];
+]
 
-module.exports.config = plugins;
+module.exports.config = plugins

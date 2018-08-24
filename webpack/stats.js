@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports.config = {
     assets: true,
     children: false,
@@ -14,5 +12,5 @@ module.exports.config = {
     optimizationBailout: true,
     colors: {
         green: '\u001b[32m',
-    }
+    },
 }

@@ -1,12 +1,12 @@
-'use strict';
+const { join, resolve } = require('path')
 
-const { join, resolve } = require('path');
+const define = require('../define')
+const environment = require('../environment').config
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
-const define  = require('../define');
-const environment = require('../environment').config;
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-
-const cache = JSON.parse(environment.APP_NAME).toLowerCase().replace(/\s/g, '-');
+const cache = JSON.parse(environment.APP_NAME)
+    .toLowerCase()
+    .replace(/\s/g, '-')
 
 const plugins = [
     // @ts-ignore
@@ -19,7 +19,7 @@ const plugins = [
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
         navigateFallback: '/index.html',
-        navigateFallbackWhitelist: [/^(?!\/__).*/],
+        navigateFallbackWhitelist: [ /^(?!\/_{2}).*/ ],
 
         staticFileGlobs: [
             `${define.rs_distBase}/**/*.js`,
@@ -35,7 +35,7 @@ const plugins = [
             `${define.rs_distBase}/**/*.html`,
             `${define.rs_distBase}/**/*.woff2?`,
             `${define.rs_distBase}/assets/images/**.*`,
-            `${define.rs_distBase}/assets/manifest.webmanifest`
+            `${define.rs_distBase}/assets/manifest.webmanifest`,
         ],
 
         importScripts: [],
@@ -47,13 +47,13 @@ const plugins = [
         staticFileGlobsIgnorePatterns: [
             /\.map$/,
             /\.DS_Store$/,
-            /\.htaccess$/,
+            /\.htac{2}es{2}$/,
             /\.cache$/,
-            /\.gitkeep$/,
+            /\.gitke{2}p$/,
             /\.robots.txt$/,
             /react-loadable\.json$/,
-            /asset-manifest\.json$/,
-            /webpack-manifest\.json$/
+            /as{2}et-manifest\.json$/,
+            /webpack-manifest\.json$/,
         ],
 
         runtimeCaching: [
@@ -61,15 +61,15 @@ const plugins = [
                 urlPattern: /\/api(.*)/,
                 handler: 'networkFirst',
                 options: {
-                    debug: true
-                }
+                    debug: true,
+                },
             },
             {
                 handler: 'cacheFirst',
                 urlPattern: /(.*?)/,
-            }
-        ]
-    })
-];
+            },
+        ],
+    }),
+]
 
-module.exports.config = plugins;
+module.exports.config = plugins

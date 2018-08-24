@@ -1,9 +1,9 @@
 module.exports.randomInteger = (min, max) => {
-    const rand = min + Math.random() * (max - min);
-    return Math.round(rand);
+    const rand = min + Math.random() * (max - min)
+    return Math.round(rand)
 }
 
-module.exports.parseArguments = (argv) => {
+module.exports.parseArguments = argv => {
     const data = {}
 
     argv.map((item, index) => {
@@ -15,5 +15,5 @@ module.exports.parseArguments = (argv) => {
         }
     })
 
-    return data;
+    return data
 }

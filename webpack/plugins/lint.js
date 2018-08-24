@@ -1,7 +1,5 @@
-'use strict';
+const webpack = require('webpack')
 
-const webpack = require('webpack');
+const plugins = []
 
-const plugins = [];
-
-module.exports.config = plugins;
+module.exports.config = plugins

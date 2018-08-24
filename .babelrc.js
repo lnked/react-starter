@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const entry = require('./webpack/entry-point').config;
+const entry = require('./webpack/entry-point').config
 
 const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'development'
 const loose = true
@@ -25,33 +25,34 @@ const imports = [
     {
         libraryName: 'core-js',
         libraryDirectory: 'modules',
-        camel2DashComponentName: true
+        camel2DashComponentName: true,
     },
     {
         libraryName: 'lodash',
         libraryDirectory: '_',
-        camel2DashComponentName: false
+        camel2DashComponentName: false,
     },
     {
         libraryName: 'react-router',
         libraryDirectory: 'es',
-        camel2DashComponentName: false
+        camel2DashComponentName: false,
     },
     {
         libraryName: 'react-router-dom',
         libraryDirectory: 'es',
-        camel2DashComponentName: false
-    }
+        camel2DashComponentName: false,
+    },
 ]
 
 ///////////////////////////////////////////////////////////////
 //////////////////   PRESETS   ////////////////////////////////
 ///////////////////////////////////////////////////////////////
 
-presets.push(
-    ['@babel/preset-env', {
+presets.push([
+    '@babel/preset-env',
+    {
         targets: {
-            node: 'current'
+            node: 'current',
         },
         loose,
         debug: false,
@@ -59,11 +60,9 @@ presets.push(
         useBuiltIns,
         shippedProposals: false,
         forceAllTransforms: production,
-        exclude: [
-            'web.dom.iterable'
-        ]
-    }]
-)
+        exclude: ['web.dom.iterable'],
+    },
+])
 
 presets.push('@babel/preset-typescript')
 
@@ -78,44 +77,44 @@ if (production) {
 ///////////////////////////////////////////////////////////////
 
 imports.map(item => {
-    plugins.push(
-        [
-            'import', {
-                libraryName: item.libraryName,
-                libraryDirectory: item.libraryDirectory,
-                camel2DashComponentName: item.camel2DashComponentName
-            },
-            item.libraryName
-        ]
-    );
+    plugins.push([
+        'import',
+        {
+            libraryName: item.libraryName,
+            libraryDirectory: item.libraryDirectory,
+            camel2DashComponentName: item.camel2DashComponentName,
+        },
+        item.libraryName,
+    ])
 })
 
 plugins.push('transform-async-to-generator')
 
-plugins.push(["@babel/plugin-proposal-pipeline-operator", { "proposal": "minimal" }]);
+plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
 // Stage 2
-plugins.push(["@babel/plugin-proposal-decorators", { "legacy": true }]);
-plugins.push("@babel/plugin-proposal-function-sent");
-plugins.push("@babel/plugin-proposal-export-namespace-from");
-plugins.push("@babel/plugin-proposal-numeric-separator");
-plugins.push("@babel/plugin-proposal-throw-expressions");
+plugins.push(['@babel/plugin-proposal-decorators', { legacy: true }])
+plugins.push('@babel/plugin-proposal-function-sent')
+plugins.push('@babel/plugin-proposal-export-namespace-from')
+plugins.push('@babel/plugin-proposal-numeric-separator')
+plugins.push('@babel/plugin-proposal-throw-expressions')
 
 // Stage 3
-plugins.push("@babel/plugin-syntax-dynamic-import");
-plugins.push("@babel/plugin-syntax-import-meta");
-plugins.push(["@babel/plugin-proposal-class-properties", { "loose": false }]);
-plugins.push("@babel/plugin-proposal-json-strings");
+plugins.push('@babel/plugin-syntax-dynamic-import')
+plugins.push('@babel/plugin-syntax-import-meta')
+plugins.push(['@babel/plugin-proposal-class-properties', { loose: false }])
+plugins.push('@babel/plugin-proposal-json-strings')
 
-plugins.push(
-    ['babel-plugin-styled-components', {
+plugins.push([
+    'babel-plugin-styled-components',
+    {
         ssr: true,
         minify: false,
         preprocess: true,
         uglifyPure: false,
-        displayName: false
-    }]
-);
+        displayName: false,
+    },
+])
 
 if (development) {
     plugins.push('react-hot-loader/babel')
@@ -150,8 +149,8 @@ module.exports = {
     sourceMaps,
     presets,
     plugins,
-    ignore
-};
+    ignore,
+}
 
 // const path = require('path');
 // const aliases = require('./webpack/aliases');

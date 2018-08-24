@@ -1,23 +1,21 @@
-'use strict';
-
-const marked = require("marked");
+const marked = require('marked')
 
 const rules = [
     {
         test: /\.md$/,
         use: [
             {
-                loader: "html-loader"
+                loader: 'html-loader',
             },
             {
-                loader: "markdown-loader",
+                loader: 'markdown-loader',
                 options: {
                     pedantic: true,
-                    renderer: new marked.Renderer()
-                }
-            }
-        ]
-    }
-];
+                    renderer: new marked.Renderer(),
+                },
+            },
+        ],
+    },
+]
 
-module.exports.config = rules;
+module.exports.config = rules
