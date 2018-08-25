@@ -7,7 +7,7 @@ export interface P {
 }
 
 export class Content extends React.PureComponent<P, {}> {
-    render() {
+    render () {
         const cn: string[] = []
         const { className, children } = this.props
 

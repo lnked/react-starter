@@ -18,7 +18,7 @@ export class Dialog extends React.PureComponent<P, {}> {
         placeholder: '',
     }
 
-    render() {
+    render () {
         const props: any = {}
         const { title, value, placeholder } = this.props
 

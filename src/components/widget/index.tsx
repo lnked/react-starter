@@ -8,7 +8,7 @@ export interface P {
 }
 
 export class Widget extends React.PureComponent<P, {}> {
-    render() {
+    render () {
         const cn: string[] = []
         const { title, children, className } = this.props
 

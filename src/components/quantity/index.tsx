@@ -32,7 +32,7 @@ export class Quantity extends React.Component<P, S> {
         count: 0,
     }
 
-    static getDerivedStateFromProps(props: P, state: S) {
+    static getDerivedStateFromProps (props: P, state: S) {
         if (state.count !== props.count) {
             return {
                 ...state,
@@ -77,7 +77,7 @@ export class Quantity extends React.Component<P, S> {
         }
     }
 
-    render() {
+    render () {
         const { count } = this.state
         const { min, max, name, type } = this.props
 

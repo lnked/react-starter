@@ -25,7 +25,7 @@ export class RadioGroup extends React.Component<P, S> {
 
     handleChange = (checked: boolean | string | number) => this.setState({ checked })
 
-    render() {
+    render () {
         const { checked } = this.state
         const { name, children } = this.props
 

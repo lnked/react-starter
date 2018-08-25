@@ -33,7 +33,7 @@ export class Checkbox extends React.PureComponent<P, S> {
         checked: false,
     }
 
-    static getDerivedStateFromProps(props: P, state: S) {
+    static getDerivedStateFromProps (props: P, state: S) {
         if (state.checked !== props.checked) {
             return {
                 checked: props.checked,
@@ -99,7 +99,7 @@ export class Checkbox extends React.PureComponent<P, S> {
         return ''
     }
 
-    render() {
+    render () {
         const cn: string[] = []
 
         const { name, size, className } = this.props

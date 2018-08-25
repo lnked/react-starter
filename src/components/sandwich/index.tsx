@@ -18,7 +18,7 @@ export class Sandwich extends React.PureComponent<P, S> {
         isOpened: false,
     }
 
-    static getDerivedStateFromProps(props: P, state: S) {
+    static getDerivedStateFromProps (props: P, state: S) {
         if (state.isOpened !== props.isOpened) {
             return {
                 isOpened: props.isOpened,
@@ -36,7 +36,7 @@ export class Sandwich extends React.PureComponent<P, S> {
         })
     }
 
-    render() {
+    render () {
         const { isOpened } = this.state
 
         return (

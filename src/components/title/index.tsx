@@ -33,7 +33,7 @@ export class Title extends React.PureComponent<P, {}> {
         className: '',
     }
 
-    render() {
+    render () {
         const { label, children, className, ...rest } = this.props
 
         return (

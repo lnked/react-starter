@@ -30,7 +30,7 @@ export class Radio extends React.PureComponent<P, S> {
         checked: false,
     }
 
-    static getDerivedStateFromProps(props: P, state: S) {
+    static getDerivedStateFromProps (props: P, state: S) {
         if (state.checked !== props.checked) {
             return {
                 checked: props.checked,
@@ -57,7 +57,7 @@ export class Radio extends React.PureComponent<P, S> {
         )
     }
 
-    render() {
+    render () {
         const { checked } = this.state
         const { name, value, label, children } = this.props
 

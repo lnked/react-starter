@@ -40,7 +40,7 @@ export class Badge extends React.PureComponent<P, {}> {
         className: '',
     }
 
-    render() {
+    render () {
         const { title, className, children, ...rest } = this.props
 
         return (
