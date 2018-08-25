@@ -8,7 +8,7 @@ export interface P {
 
 export class Content extends React.PureComponent<P, {}> {
     render() {
-        const cn: Array<string> = []
+        const cn: string[] = []
         const { className, children } = this.props
 
         cn.push(css.content)

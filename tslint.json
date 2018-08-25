@@ -31,7 +31,9 @@
             }
         ],
         "semicolon": [
-            false, "never", "ignore-interfaces"
+            false,
+            "never",
+            "ignore-interfaces"
         ],
         "jsx-boolean-value": [
             "never",
@@ -76,7 +78,7 @@
         "no-empty": false,
         "no-namespace": false,
         "member-access": false,
-        "array-type": false,
+        "array-type": [true, "array"],
         "arrow-parens": false,
         "no-var-requires": false,
         "ordered-imports": false,
@@ -97,7 +99,7 @@
         "no-implicit-dependencies": false,
         "object-literal-sort-keys": false,
         "interface-over-type-literal": false,
-        "space-before-function-paren": false,
+        "space-before-function-paren": true,
         "no-consecutive-blank-lines": [true, 2],
         "no-object-literal-type-assertion": false
     },

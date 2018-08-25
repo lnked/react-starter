@@ -4,8 +4,8 @@ export interface S {
 }
 
 export const classes: S = {
-    styler: (css, ...args: Array<any>): string => {
-        const r: Array<string> = []
+    styler: (css, ...args: any[]): string => {
+        const r: string[] = []
 
         if (args.length) {
             Object.keys(args).map(id => {
