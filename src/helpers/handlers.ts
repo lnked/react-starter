@@ -6,6 +6,12 @@ export const getDisplayName = (Component: any) => {
     return Component.displayName || Component.name || 'Component'
 }
 
+export const objectSort = (prop: string) => {
+    return (a: any, b: any) => {
+        return a[prop] - b[prop]
+    }
+}
+
 export const concat = (...rest: string[]) => {
     return rest.concat(' ')
 }
