@@ -6,7 +6,6 @@ const define = require('../define')
 const Critters = require('critters-webpack-plugin')
 const WebpackChunkHash = require('webpack-chunk-hash')
 const WebpackManifestPlugin = require('webpack-manifest-plugin')
-const PrepackWebpackPlugin = require('prepack-webpack-plugin').default
 // const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
@@ -54,11 +53,6 @@ const plugins = [
     //     penthouse: {
     //         blockJSRequests: false
     //     }
-    // }),
-
-    // new PrepackWebpackPlugin({
-    //     sourceMaps: define.rs_sourceMap,
-    //     inlineExpressions: true
     // }),
 
     new webpack.HashedModuleIdsPlugin(),

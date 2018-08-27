@@ -8,7 +8,6 @@ const scripts = require('../rules/scripts')
 const environment = require('../environment').config
 const formatter = require('../environment').formatter
 
-const SvgStore = require('webpack-svgstore-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -58,7 +57,7 @@ const plugins = [
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
 
     new SvgSpriteHtmlWebpackPlugin({
-        includeFiles: [ './src/assets/svgstore/*.svg' ],
+        includeFiles: ['./src/assets/svgstore/*.svg'],
         generateSymbolId(svgFilePath) {
             return path
                 .basename(svgFilePath)
