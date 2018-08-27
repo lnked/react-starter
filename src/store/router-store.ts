@@ -8,7 +8,7 @@ export class RouterStore extends BaseRouterStore {
     @observable
     history: any = null
 
-    constructor(history?: History) {
+    constructor (history?: History) {
         super()
 
         if (history) {

@@ -41,7 +41,7 @@ export class Input extends React.Component<P, S> {
     //     }
     // }
 
-    componentDidMount() {
+    componentDidMount () {
         if (this.input && this.input.current) {
             this.input.current.value = 'xxx'
         }
@@ -70,7 +70,7 @@ export class Input extends React.Component<P, S> {
         })
     }
 
-    render() {
+    render () {
         const { value } = this.state
         const { label } = this.props
 

@@ -24,7 +24,7 @@ export const ppHOC = WrappedComponent => {
             }
         }
 
-        render() {
+        render () {
             return <WrappedComponent {...this.props} {...this.additions()} />
         }
     }

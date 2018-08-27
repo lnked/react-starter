@@ -35,7 +35,7 @@ export class Button extends React.PureComponent<P, {}> {
         }
     }
 
-    render() {
+    render () {
         const { label, children, type, size, variant, isIcon, isDisabled, className } = this.props
 
         return (

@@ -20,11 +20,11 @@ export class Icon extends React.PureComponent<P, {}> {
 
     baseUrl: string = ''
 
-    componentDidMount() {
+    componentDidMount () {
         this.baseUrl = window.location.href.replace(window.location.hash, '')
     }
 
-    render() {
+    render () {
         const { symbol, hidden, className } = this.props
 
         return (

@@ -283,7 +283,7 @@
         ],
         "space-before-function-paren": [
             "warn",
-            "never"
+            "always"
         ],
         "space-in-parens": [
             "warn",

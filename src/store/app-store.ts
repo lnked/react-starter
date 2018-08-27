@@ -14,7 +14,7 @@ export class AppStore {
     @observable
     query: string = ''
 
-    constructor(initialState?: any) {
+    constructor (initialState?: any) {
         // console.log({...AppStore.defaultState, ...initialState})
 
         if (initialState && Object.keys(initialState).length) {

@@ -13,12 +13,12 @@ export class ErrorBoundary extends React.PureComponent<P, S> {
         hasError: false,
     }
 
-    componentDidCatch(error: any, info: any) {
+    componentDidCatch (error: any, info: any) {
         this.setState({ hasError: true })
         console.error({ error }, { info })
     }
 
-    render() {
+    render () {
         if (this.state.hasError) {
             return <h1>Something went wrong.</h1>
         }

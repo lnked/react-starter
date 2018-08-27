@@ -21,7 +21,7 @@ export class Navigation extends React.Component<{}, S> {
             }
         })
 
-    render() {
+    render () {
         return (
             <nav className={css.navigation}>
                 <div className={css.group}>

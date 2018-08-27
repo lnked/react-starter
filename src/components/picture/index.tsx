@@ -28,7 +28,7 @@ export class Picture extends React.Component<P, {}> {
         loaded: false,
     }
 
-    componentDidMount() {
+    componentDidMount () {
         this.load()
     }
 
@@ -40,7 +40,7 @@ export class Picture extends React.Component<P, {}> {
         img.src = this.props.image
     }
 
-    render() {
+    render () {
         const { loaded } = this.state
         const { className, image, width, height, title, alt } = this.props
 

@@ -26,7 +26,7 @@ export class Locale extends React.Component<P, {}> {
         }
     }
 
-    render() {
+    render () {
         const list: string[] = ['ru', 'en', 'de']
 
         const { className } = this.props
