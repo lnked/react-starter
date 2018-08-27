@@ -2,6 +2,10 @@ export const createMarkup = (data: any) => {
     return { __html: data }
 }
 
+export const _typeof = (obj: unknown) => {
+    return typeof obj
+}
+
 export const getDisplayName = (Component: any) => {
     return Component.displayName || Component.name || 'Component'
 }

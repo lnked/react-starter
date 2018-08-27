@@ -17,7 +17,7 @@ declare module '*.scss' {
 
 // shared folder
 declare module "pages/*";
-declare module "modules/*";
+declare module "fragments/*";
 declare module "components/*";
 declare module "segments/*";
 declare module "helpers/*";

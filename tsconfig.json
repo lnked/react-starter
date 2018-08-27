@@ -77,8 +77,8 @@
             "hocs": [
                 "src/hocs"
             ],
-            "modules": [
-                "src/modules"
+            "fragments": [
+                "src/fragments"
             ],
             "layouts": [
                 "src/layouts"

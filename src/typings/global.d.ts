@@ -1,6 +1,11 @@
 declare var __VERSION__: string
 declare var __IN_DEBUG__: boolean
 
+declare global {
+    // how io-ts's `mixed` type is currently defined
+    type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
+}
+
 // declare namespace React {
 //     export interface ReactChild {
 //         [elemName: string]: any;
@@ -46,7 +51,7 @@ declare module 'images'
 declare module 'styles'
 declare module 'scripts'
 declare module 'svgstore'
-declare module 'modules'
+declare module 'fragments'
 declare module 'settings'
 declare module 'settings/routes'
 declare module 'settings/firebase'
