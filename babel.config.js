@@ -41,8 +41,6 @@ module.exports = function (api) {
 
     const sourceMaps = development
 
-    console.log({ env })
-
     const plugins = []
     const presets = []
     const ignore = []
