@@ -174,7 +174,7 @@
         "array-bracket-spacing": ["error", "never", {
             "singleValue": true,
             "arraysInArrays": true,
-            "objectsInArrays": true
+            "objectsInArrays": false
         }],
         "computed-property-spacing": ["error", "never"],
         "comma-dangle": ["error", "always-multiline"],
