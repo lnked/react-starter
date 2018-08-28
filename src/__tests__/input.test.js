@@ -16,6 +16,6 @@ test('should add 2 numbers', () => {
 })
 
 test('should say hello to you', () => {
-    const result = hello('rupav')
-    expect(result).toBe('Hello rupav')
+    const result = hello('name')
+    expect(result).toBe('Hello name')
 })

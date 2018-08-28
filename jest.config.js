@@ -1,10 +1,7 @@
 // Jest configuration
 // https://facebook.github.io/jest/docs/en/configuration.html
 module.exports = {
-    setupFiles: [
-        '<rootDir>/webpack/jest/shim.js',
-        '<rootDir>/webpack/jest/setup.js',
-    ],
+    setupFiles: ['<rootDir>/webpack/jest/shim.js', '<rootDir>/webpack/jest/setup.js'],
 
     // Modules can be explicitly auto-mocked using jest.mock(moduleName).
     // https://facebook.github.io/jest/docs/en/configuration.html#automock-boolean
@@ -31,22 +28,13 @@ module.exports = {
     // collectCoverage: false, // [boolean]
 
     // https://facebook.github.io/jest/docs/en/configuration.html#collectcoveragefrom-array
-    collectCoverageFrom: [
-        'src/**/*.{js,jsx,ts,tsx}',
-        '!**/node_modules/**',
-    ],
+    collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!**/node_modules/**'],
 
     testURL: 'http://localhost',
 
-    modulePaths: [
-        '<rootDir>/src',
-        '<rootDir>/node_modules',
-    ],
+    modulePaths: ['<rootDir>/src', '<rootDir>/node_modules'],
 
-    testMatch: [
-        '<rootDir>/src/**/__tests__/**/*.(ts|tsx|js|jsx)',
-        '<rootDir>/src/**/?(*.)(spec|test).(ts|tsx|js|jsx)',
-    ],
+    testMatch: ['<rootDir>/src/**/__tests__/**/*.(ts|tsx|js|jsx)', '<rootDir>/src/**/?(*.)(spec|test).(ts|tsx|js|jsx)'],
 
     testEnvironment: 'jest-environment-jsdom',
 
@@ -59,17 +47,11 @@ module.exports = {
         // '\\.(tsx?)$': '<rootDir>/node_modules/ts-jest/preprocessor.js'
     },
 
-    testPathIgnorePatterns: [
-        '/node_modules/', '__snapshots__',
-    ],
+    testPathIgnorePatterns: ['/node_modules/', '__snapshots__'],
 
-    transformIgnorePatterns: [
-        '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx|)$',
-    ],
+    transformIgnorePatterns: [ '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx|)$' ],
 
-    coveragePathIgnorePatterns: [
-        '/node_modules/',
-    ],
+    coveragePathIgnorePatterns: [ '/node_modules/' ],
 
     // https://facebook.github.io/jest/docs/en/configuration.html#coveragedirectory-string
     coverageDirectory: '<rootDir>/coverage', // [string]
@@ -87,19 +69,9 @@ module.exports = {
 
     // The default extensions Jest will look for.
     // https://facebook.github.io/jest/docs/en/configuration.html#modulefileextensions-array-string
-    moduleFileExtensions: [
-        'ts',
-        'tsx',
-        'js',
-        'jsx',
-        'json',
-        'node',
-    ],
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 
-    moduleDirectories: [
-        'node_modules',
-        'src',
-    ],
+    moduleDirectories: ['node_modules', 'src'],
 
     // A map from regular expressions to module names that allow to stub out resources,
     // like images or styles with a single module.

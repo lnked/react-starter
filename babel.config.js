@@ -28,10 +28,8 @@ module.exports = function (api) {
     const loose = true
 
     let useBuiltIns = false
-    let usePolyfile = false
 
     if (entry.bundle.indexOf('@babel/polyfill') >= 0 || entry.bundle.indexOf('babel-polyfill') >= 0) {
-        usePolyfile = true
         useBuiltIns = 'usage'
     }
 
@@ -44,8 +42,6 @@ module.exports = function (api) {
     const plugins = []
     const presets = []
     const ignore = []
-
-    // const plugins: [ env === 'production' && 'babel-plugin-that-is-cool' ].filter(Boolean)
 
     // ///////////////////////////////////////////////////////////
     // //////////////   PRESETS   ////////////////////////////////
@@ -71,6 +67,10 @@ module.exports = function (api) {
 
     presets.push('@babel/preset-react')
 
+    // /////////////////////////////////////////////////////////////
+    // ////////////////   PLUGINS   ////////////////////////////////
+    // /////////////////////////////////////////////////////////////
+
     imports.map(item => {
         plugins.push([
             'import',
@@ -83,12 +83,24 @@ module.exports = function (api) {
         ])
     })
 
+    // const plugins: [ env === 'production' && 'babel-plugin-that-is-cool' ].filter(Boolean)
+
     plugins.push('transform-async-to-generator')
 
-    plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' } ])
+    plugins.push([
+        '@babel/plugin-proposal-pipeline-operator',
+        {
+            proposal: 'minimal',
+        },
+    ])
 
     // Stage 2
-    plugins.push(['@babel/plugin-proposal-decorators', { legacy: true } ])
+    plugins.push([
+        '@babel/plugin-proposal-decorators',
+        {
+            legacy: true,
+        },
+    ])
     plugins.push('@babel/plugin-proposal-function-sent')
     plugins.push('@babel/plugin-proposal-export-namespace-from')
     plugins.push('@babel/plugin-proposal-numeric-separator')
@@ -97,7 +109,12 @@ module.exports = function (api) {
     // Stage 3
     plugins.push('@babel/plugin-syntax-dynamic-import')
     plugins.push('@babel/plugin-syntax-import-meta')
-    plugins.push(['@babel/plugin-proposal-class-properties', { loose: false } ])
+    plugins.push([
+        '@babel/plugin-proposal-class-properties',
+        {
+            loose: false,
+        },
+    ])
     plugins.push('@babel/plugin-proposal-json-strings')
 
     plugins.push([
@@ -127,7 +144,7 @@ module.exports = function (api) {
     }
 
     // /////////////////////////////////////////////////////////////
-    // ////////////////   PLUGINS   ////////////////////////////////
+    // ////////////////   IGNORE   /////////////////////////////////
     // /////////////////////////////////////////////////////////////
 
     if (production) {

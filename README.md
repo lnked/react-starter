@@ -6,7 +6,7 @@
 
 ---
 
-React-starter a react web sterter kit.
+React-starter a react web starter kit.
 
 ## Installation
 
