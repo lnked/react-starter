@@ -3,7 +3,7 @@ export const content: string;
 export const list: string;
 export const iconSet: string;
 export const icon: string;
-export const b: string;
+export const a: string;
 export const icon1: string;
 export const icon2: string;
 export const icon3: string;
