@@ -189,6 +189,7 @@
     "git-hooks": "1.1.10",
     "happypack": "5.0.0",
     "html-loader": "0.5.5",
+    "html-webpack-harddisk-plugin": "0.2.0",
     "html-webpack-plugin": "3.2.0",
     "html-webpack-polyfill-io-plugin2": "0.0.2",
     "husky": "0.14.3",

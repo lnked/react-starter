@@ -37,7 +37,7 @@ const config = {
     },
 }
 
-const fileContent = function(filePath) {
+const fileContent = function (filePath) {
     const content = fs.readFileSync(resolve(define.rs_base, filePath), 'utf8')
     return content.toString().replace(/<svg.*?>|<\/svg>/gi, '')
 }
@@ -54,6 +54,7 @@ module.exports.generateConfig = (script, template, chunksList) => {
     // config.svgContext = fileContent('.cache/svgstore/svgstore.svg');
 
     config.basePath = define.rs_base_path
+    config.alwaysWriteToDisk = true
 
     if (chunksList !== undefined) {
         config.chunks = chunksList

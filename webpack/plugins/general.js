@@ -16,6 +16,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const CssUrlRelativePlugin = require('css-url-relative-plugin')
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 
 const HappyPack = require('happypack')
 
@@ -55,6 +56,7 @@ const plugins = [
     }),
 
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
+    new HtmlWebpackHarddiskPlugin(),
 
     new SvgSpriteHtmlWebpackPlugin({
         includeFiles: ['./src/assets/svgstore/*.svg'],
