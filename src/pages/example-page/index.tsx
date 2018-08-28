@@ -9,7 +9,7 @@ import { Input } from 'components'
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
-export class ExamplePage extends React.Component<any, any> {
+class ExamplePage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Example Page'
     }
@@ -30,4 +30,5 @@ export class ExamplePage extends React.Component<any, any> {
     }
 }
 
-export default ExamplePage
+export { ExamplePage }
+// export default ExamplePage

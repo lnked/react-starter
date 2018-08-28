@@ -15,7 +15,7 @@ const cx = classes.bind(css)
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
-export class MainPage extends React.Component<any, any> {
+class MainPage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Main Page'
     }
@@ -61,4 +61,5 @@ export class MainPage extends React.Component<any, any> {
     }
 }
 
-export default MainPage
+export { MainPage }
+// export default MainPage
