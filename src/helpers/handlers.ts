@@ -2,7 +2,7 @@ export const createMarkup = (data: any) => {
     return { __html: data }
 }
 
-export const _typeof = (obj: unknown) => {
+export const _typeof = (obj: any) => {
     return typeof obj
 }
 
