@@ -15,7 +15,7 @@ jsConfig.push({
 jsConfig.push({
     loader: 'babel-loader',
     options: {
-        // babelrc: true,
+        babelrc: false,
         compact: define.rs_production,
         cacheDirectory: define.rs_development,
     },
