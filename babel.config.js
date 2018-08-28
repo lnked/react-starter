@@ -1,5 +1,7 @@
 const entry = require('./webpack/entry-point').config
 
+console.log(entry)
+
 const imports = [
     {
         libraryName: 'core-js',
@@ -40,6 +42,7 @@ module.exports = function (api) {
 
     const sourceMaps = development
 
+    const overrides = []
     const plugins = []
     const presets = []
     const ignore = []
@@ -162,8 +165,6 @@ module.exports = function (api) {
         plugins,
         ignore,
     }
-
-    const overrides = []
 
     // overrides: [
     //     {
