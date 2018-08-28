@@ -49,12 +49,13 @@ module.exports.generateConfig = (script, template, chunksList) => {
         template = 'app'
     }
 
+    config.alwaysWriteToDisk = true
+
     config.template = [template, 'pug'].join('.')
     config.filename = resolve(define.rs_dist, [script, 'html'].join('.'))
     // config.svgContext = fileContent('.cache/svgstore/svgstore.svg');
 
     config.basePath = define.rs_base_path
-    config.alwaysWriteToDisk = true
 
     if (chunksList !== undefined) {
         config.chunks = chunksList

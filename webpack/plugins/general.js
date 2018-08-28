@@ -59,8 +59,8 @@ const plugins = [
     new HtmlWebpackHarddiskPlugin(),
 
     new SvgSpriteHtmlWebpackPlugin({
-        includeFiles: ['./src/assets/svgstore/*.svg'],
-        generateSymbolId(svgFilePath) {
+        includeFiles: [ './src/assets/svgstore/*.svg' ],
+        generateSymbolId (svgFilePath) {
             return path
                 .basename(svgFilePath)
                 .replace(/\.svg/gi, '')
