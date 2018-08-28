@@ -1,6 +1,10 @@
 /* eslint-disable */
 /* tslint:disable:max-line-length */
 
+// import { routes } from 'pages/main-page'
+// import { routes } from 'pages/example-page'
+// import { routes } from 'pages/nomatch-page'
+
 import { loadComponent } from 'utils'
 
 export const MainPage = loadComponent(

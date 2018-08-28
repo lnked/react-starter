@@ -3,13 +3,11 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
+import { Icon } from 'components'
+
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
 import { inject, observer } from 'mobx-react'
-
-import { Icon } from 'components'
-
-// import src from 'pages/main-page/assets/image.jpg'
 
 const cx = classes.bind(css)
 

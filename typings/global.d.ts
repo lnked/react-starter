@@ -13,12 +13,16 @@ declare module '*.scss' {
     export = styles;
 }
 
+// ... existing global typing defs
 declare module 'tslib' {
-    const __rest: any;
-    const __extends: any;
-
-    export = __rest;
-    export = __extends;
+    export function __extends(d: Function, b: Function): void;
+    export function __assign(t: any, ...sources: any[]): any;
+    export function __rest(t: any, propertyNames: string[]): any;
+    export function __decorate(decorators: Function[], target: any, key?: string | symbol, desc?: any): any;
+    export function __param(paramIndex: number, decorator: Function): Function;
+    export function __metadata(metadataKey: any, metadataValue: any): Function;
+    export function __awaiter(thisArg: any, _arguments: any, P: Function, generator: Function): any;
+    export function __generator(thisArg: any, body: Function): any;
 }
 
 declare let Reflect: Reflect;

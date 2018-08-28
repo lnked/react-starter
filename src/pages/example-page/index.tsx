@@ -1,11 +1,11 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { Input } from 'components'
+
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
 import { inject, observer } from 'mobx-react'
-
-import { Input } from 'components'
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
