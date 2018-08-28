@@ -61,5 +61,5 @@ class MainPage extends React.Component<any, any> {
     }
 }
 
-export { MainPage }
-// export default MainPage
+// export { MainPage }
+export default MainPage

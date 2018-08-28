@@ -30,5 +30,5 @@ class ExamplePage extends React.Component<any, any> {
     }
 }
 
-export { ExamplePage }
-// export default ExamplePage
+// export { ExamplePage }
+export default ExamplePage
