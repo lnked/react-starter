@@ -15,7 +15,7 @@ jsConfig.push({
 jsConfig.push({
     loader: 'babel-loader',
     options: {
-        babelrc: true,
+        // babelrc: true,
         compact: define.rs_production,
         cacheDirectory: define.rs_development,
     },
@@ -69,7 +69,7 @@ const rules = [
     {
         test: /\.tsx?$/,
         // exclude: [/(node_modules|bower_components)/, /\.(spec|e2e)\.ts(x?)$/],
-        exclude: [ /(node_modules|bower_components)/ ],
+        exclude: [/(node_modules|bower_components)/],
         use: [...jsConfig, ...tsConfig],
     },
 ]

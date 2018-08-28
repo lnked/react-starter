@@ -26,6 +26,7 @@ const imports = [
 module.exports = function (api) {
     const env = api.env()
     const loose = true
+    console.log({ env })
 
     let useBuiltIns = false
 
@@ -82,8 +83,6 @@ module.exports = function (api) {
             item.libraryName,
         ])
     })
-
-    // const plugins: [ env === 'production' && 'babel-plugin-that-is-cool' ].filter(Boolean)
 
     plugins.push('transform-async-to-generator')
 
@@ -184,7 +183,8 @@ module.exports = function (api) {
     // if (process.env['REMOVE_DEBUG'] === 1) {
     //     plugins.push('babel-plugin-remove-console-debug')
     // }
-
+    console.log({ presets })
+    console.log({ plugins })
     return {
         sourceMaps,
         presets,
