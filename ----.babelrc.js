@@ -1,4 +1,3 @@
-'use strict'
 
 const entry = require('./webpack/entry-point').config
 
@@ -44,9 +43,9 @@ const imports = [
     },
 ]
 
-///////////////////////////////////////////////////////////////
-//////////////////   PRESETS   ////////////////////////////////
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
+// ////////////////   PRESETS   ////////////////////////////////
+// /////////////////////////////////////////////////////////////
 
 presets.push([
     '@babel/preset-env',
@@ -60,7 +59,7 @@ presets.push([
         useBuiltIns,
         shippedProposals: false,
         forceAllTransforms: production,
-        exclude: ['web.dom.iterable'],
+        exclude: [ 'web.dom.iterable' ],
     },
 ])
 
@@ -72,9 +71,9 @@ if (production) {
     presets.push('minify')
 }
 
-///////////////////////////////////////////////////////////////
-//////////////////   PLUGINS   ////////////////////////////////
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
+// ////////////////   PLUGINS   ////////////////////////////////
+// /////////////////////////////////////////////////////////////
 
 imports.map(item => {
     plugins.push([
@@ -90,10 +89,10 @@ imports.map(item => {
 
 plugins.push('transform-async-to-generator')
 
-plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
+plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' } ])
 
 // Stage 2
-plugins.push(['@babel/plugin-proposal-decorators', { legacy: true }])
+plugins.push(['@babel/plugin-proposal-decorators', { legacy: true } ])
 plugins.push('@babel/plugin-proposal-function-sent')
 plugins.push('@babel/plugin-proposal-export-namespace-from')
 plugins.push('@babel/plugin-proposal-numeric-separator')
@@ -102,7 +101,7 @@ plugins.push('@babel/plugin-proposal-throw-expressions')
 // Stage 3
 plugins.push('@babel/plugin-syntax-dynamic-import')
 plugins.push('@babel/plugin-syntax-import-meta')
-plugins.push(['@babel/plugin-proposal-class-properties', { loose: false }])
+plugins.push(['@babel/plugin-proposal-class-properties', { loose: false } ])
 plugins.push('@babel/plugin-proposal-json-strings')
 
 plugins.push([
@@ -131,9 +130,9 @@ if (test) {
     plugins.push('transform-es2015-modules-commonjs')
 }
 
-///////////////////////////////////////////////////////////////
-//////////////////   PLUGINS   ////////////////////////////////
-///////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
+// ////////////////   PLUGINS   ////////////////////////////////
+// /////////////////////////////////////////////////////////////
 
 if (production) {
     ignore.push('dist')
@@ -142,7 +141,7 @@ if (production) {
 }
 
 if (!test) {
-    ignore.push(`**/__tests__`)
+    ignore.push('**/__tests__')
 }
 
 module.exports = {
