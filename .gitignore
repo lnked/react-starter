@@ -5,7 +5,6 @@
 /features.md
 /code-example
 /release-builds
-*.scss.d.ts
 
 # Compiled output
 /dist
@@ -24,6 +23,7 @@
 *.swo
 *.swp
 *.vi
+*.scss.d.ts
 *~
 
 # ignore log files and databases
