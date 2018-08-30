@@ -13,7 +13,7 @@ export const createStore = (history: History, initialState?: any[]) => {
     const routerStore = new RouterStore(history)
 
     configure({
-        enforceActions: true,
+        enforceActions: 'observed', // 'never' | 'always' | 'observed'
     })
 
     return {
