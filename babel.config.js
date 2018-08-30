@@ -69,7 +69,7 @@ module.exports = function (api) {
             useBuiltIns,
             debug: development,
             modules: false,
-            shippedProposals: false,
+            shippedProposals: true,
             forceAllTransforms: production,
             exclude: [ 'web.dom.iterable' ],
         },
