@@ -14059,10 +14059,6 @@ tryer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
 
-ts-is-kind@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ts-is-kind/-/ts-is-kind-1.0.0.tgz#f9ca9c1af07ddb82d7a06744d8928952d4bd2426"
-
 ts-jest@23.1.4:
   version "23.1.4"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.1.4.tgz#66ac1d8d3fbf8f9a98432b11aa377aa850664b2b"
@@ -14170,11 +14166,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-plugin-styled-components@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-0.0.6.tgz#e8489b72436aa1780e859243b519230b2c6b53d1"
-  dependencies:
-    ts-is-kind "^1.0.0"
+typescript-plugin-styled-components@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-0.0.7.tgz#b36e6ac87aa9448f859f3394fba9e0473481f8d2"
 
 typescript-styled-plugin@0.10.0:
   version "0.10.0"
