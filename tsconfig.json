@@ -13,7 +13,7 @@
         "noLib": false,
         "listFiles": false,
         "sourceMap": true,
-        "composite": true,
+        "composite": false,
         "declaration": true,
         "declarationMap": true,
         "diagnostics": true,

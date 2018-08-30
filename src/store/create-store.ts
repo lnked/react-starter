@@ -6,15 +6,15 @@ import { UiStore, AppStore, RouterStore } from 'store'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
+configure({
+    enforceActions: 'observed', // 'never' | 'always' | 'observed'
+})
+
 export const createStore = (history: History, initialState?: any[]) => {
-    // console.log(initialState)
+    console.log(initialState)
     const uiStore = new UiStore()
     const appStore = new AppStore()
     const routerStore = new RouterStore(history)
-
-    configure({
-        enforceActions: 'observed', // 'never' | 'always' | 'observed'
-    })
 
     return {
         [STORE_UI]: uiStore,

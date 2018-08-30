@@ -1,5 +1,6 @@
-module.exports = function (api) {
-    const env = api.env()
+module.exports = function () {
+    const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'production'
+    console.log({ env })
 
     const imports = [
         {
@@ -41,6 +42,8 @@ module.exports = function (api) {
 
     const sourceMaps = development
 
+    console.log({ development }, { production }, { test })
+
     // ///////////////////////////////////////////////////////////
     // //////////////   PRESETS   ////////////////////////////////
     // ///////////////////////////////////////////////////////////
@@ -49,7 +52,7 @@ module.exports = function (api) {
         '@babel/preset-env',
         {
             targets: {
-                node: production ? '6.9' : 'current',
+                node: 'current',
             },
             loose,
             useBuiltIns,
