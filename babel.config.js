@@ -81,8 +81,6 @@ module.exports = function (api) {
         ])
     })
 
-    plugins.push(development && 'react-hot-loader/babel')
-
     plugins.push('transform-async-to-generator')
 
     plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
