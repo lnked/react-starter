@@ -28,6 +28,10 @@ declare module 'tslib' {
 declare let Reflect: Reflect;
 
 interface Reflect {
-  deleteProperty: () => void;
+  get: (target: any, propertyKey: any) => void;
+  has: (target: any, propertyKey: any) => boolean;
+  apply: (target: any, thisArgument: any, argumentsList: any[]) => void;
+  defineProperty: (target: any, propertyKey: number | string, attributes: any) => boolean;
+  deleteProperty: (target: any, propertyKey: number | string) => boolean;
   prop: string;
 }
