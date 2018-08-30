@@ -1,5 +1,16 @@
-module.exports = function () {
-    const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'production'
+module.exports = function (api) {
+    // api.cache(false)
+    // api.cache.forever() // api.cache(true)
+    api.cache.never()
+
+    // Cached based on the value of some function. If this function returns a value different from
+    // a previously-encountered value, the plugins will re-evaluate.
+    const env = api.cache(() => process.env.NODE_ENV)
+    const test = api.cache.invalidate(() => process.env.NODE_ENV === 'test')
+    const production = api.cache.invalidate(() => process.env.NODE_ENV === 'production')
+    const development = api.cache.invalidate(() => process.env.NODE_ENV === 'development')
+
+    // const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'production'
     console.log({ env })
 
     const imports = [
@@ -36,9 +47,9 @@ module.exports = function () {
     const overrides = []
     const ignore = []
 
-    const test = env === 'test'
-    const production = env === 'production'
-    const development = env === 'development'
+    // const test = env === 'test'
+    // const production = env === 'production'
+    // const development = env === 'development'
 
     const sourceMaps = development
 
