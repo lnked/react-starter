@@ -31,7 +31,7 @@ module.exports = {
     rs_dist: _dist_,
     rs_node: _node_,
     rs_stats: resolve(_dist_, 'stats'),
-    rs_parallel: 4, // integet(1-8) or false
+    rs_parallel: false, // integet(1-8) or false
     rs_protocol: _protocol_,
     rs_preact: false,
     rs_sourceMap: true,

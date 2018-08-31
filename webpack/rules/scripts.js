@@ -15,7 +15,8 @@ jsConfig.push({
 jsConfig.push({
     loader: 'babel-loader',
     options: {
-        // babelrc: false,
+        envName: process.env.BABEL_ENV || process.env.NODE_ENV || 'development',
+        configFile: resolve(define.rs_base, 'babel.config.js'),
         compact: define.rs_production,
         cacheDirectory: define.rs_development,
     },

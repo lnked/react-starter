@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    api.cache(false)
+    // api.cache(false)
     // api.cache.forever() // api.cache(true)
     // api.cache.never() // api.cache(false)
 
@@ -11,9 +11,11 @@ module.exports = function (api) {
     // const production = api.cache.invalidate(() => process.env.NODE_ENV === 'production')
     // const development = api.cache.invalidate(() => process.env.NODE_ENV === 'development')
 
-    const test = env === 'test'
-    const production = env === 'production'
-    const development = env === 'development'
+    const test = api.env('test')
+    const production = api.env('production')
+    const development = api.env('development')
+
+    console.log('env: ', env, api.env())
 
     console.log({ env })
 
@@ -40,10 +42,8 @@ module.exports = function (api) {
         },
     ]
 
-    const entry = require('./webpack/entry-point').config
-
     const loose = true
-    const useBuiltIns = entry.bundle.indexOf('@babel/polyfill') >= 0 ? 'usage' : false
+    const useBuiltIns = 'usage'
 
     const plugins = []
     const presets = []
@@ -60,16 +60,16 @@ module.exports = function (api) {
     // ///////////////////////////////////////////////////////////
 
     presets.push([
-        '@babel/preset-env',
+        '@babel/env',
         {
             targets: {
                 node: 'current',
             },
             loose,
+            modules: false,
             useBuiltIns,
             debug: development,
-            modules: false,
-            shippedProposals: true,
+            shippedProposals: false,
             forceAllTransforms: production,
             exclude: [ 'web.dom.iterable' ],
         },
