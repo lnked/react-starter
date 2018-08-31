@@ -4,9 +4,10 @@
     "compilerOptions": {
         "strict": true,
         "watch": true,
+        "noEmit": true,
         "allowJs": true,
         "jsx": "react",
-        "target": "es5",
+        "target": "esnext",
         "module": "esnext",
         "baseUrl": "./",
         "rootDir": "src",
@@ -14,16 +15,13 @@
         "noLib": false,
         "listFiles": false,
         "sourceMap": true,
-        "composite": false,
-        "declaration": true,
-        "declarationMap": true,
         "diagnostics": true,
-        "removeComments": true,
-        "noEmit": true,
+        "declaration": true,
+        "isolatedModules": false,
         "noEmitHelpers": true,
         "importHelpers": true,
+        "removeComments": true,
         "downlevelIteration": true,
-        "isolatedModules": false,
         "skipLibCheck": true,
         "strictFunctionTypes": true,
         "noStrictGenericChecks": true,
@@ -38,7 +36,7 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "suppressImplicitAnyIndexErrors": true,
-        "resolveJsonModule": true,
+        /* "resolveJsonModule": true,*/
         "moduleResolution": "node",
         "preserveSymlinks": true,
         "allowSyntheticDefaultImports": true,
@@ -123,7 +121,7 @@
         }
     },
     "include": [
-        "src/**/*"
+        "src"
     ],
     "exclude": [
         "dist",

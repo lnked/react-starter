@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '../../test-utils/link'
+import Link from '../__utils__/link'
 import renderer from 'react-test-renderer'
 
 it('отображается корректно', () => {

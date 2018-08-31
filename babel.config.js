@@ -60,7 +60,8 @@ module.exports = function (api) {
     // ///////////////////////////////////////////////////////////
 
     presets.push([
-        '@babel/preset-env',
+        // '@babel/preset-env',
+        '@babel/env',
         {
             targets: {
                 node: 'current',
