@@ -51,7 +51,7 @@ const store = observable({
         if (!this.enrollment.get(courseId)) {
             this.enrollment.set(courseId, observable.array([]))
             this.enrollment.get(courseId).push(studentId)
-        } else if (!this.enrollment.get(courseId).includes(studentId)){
+        } else if (!this.enrollment.get(courseId).includes(studentId)) {
             this.enrollment.get(courseId).push(studentId)
         }
     },

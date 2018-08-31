@@ -3,6 +3,7 @@
     "buildOnSave": false,
     "compilerOptions": {
         "strict": true,
+        "watch": true,
         "allowJs": true,
         "jsx": "react",
         "target": "es5",
