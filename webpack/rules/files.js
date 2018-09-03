@@ -11,6 +11,21 @@ const rules = [
         use: [ 'raw-loader' ],
     },
     {
+        test: /\.json$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                },
+            },
+            {
+                loader: 'json-loader',
+            },
+        ],
+    },
+    {
         test: /\.xml$/,
         use: [
             {

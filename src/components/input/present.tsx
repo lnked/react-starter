@@ -25,9 +25,16 @@ export interface P {
 const cx = classes.bind(css)
 
 export const Present = ({ referrer, value, label, handleChange }: P) => (
-    <div className={cx({ wrapper: true })}>
-        <p>{label}</p>
-        <p>value: {value}</p>
-        <input ref={referrer} value={value} onChange={handleChange} />
-    </div>
+    <label className={cx({ wrapper: true })}>
+        {label &&
+            <div className={cx(css.label)}>{label}</div>
+        }
+
+        <input
+            ref={referrer}
+            value={value}
+            onChange={handleChange}
+            className={cx(css.control, css.controlInput)}
+        />
+    </label>
 )

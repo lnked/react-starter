@@ -51,7 +51,7 @@ module.exports = function (api) {
             loose,
             modules: false,
             useBuiltIns,
-            debug: development,
+            debug: false,
             shippedProposals: true,
             forceAllTransforms: production,
             exclude: [ 'web.dom.iterable' ],

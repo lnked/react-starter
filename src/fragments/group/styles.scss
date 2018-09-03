@@ -1,23 +1,22 @@
 @import 'styles/_global.scss';
 
 .layout {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid blue;
 }
 
 .exact {
     &:after {
         content: '';
-        flex: 1 1 auto;
+        flex: 1 10 auto;
     }
 }
 
 .grid {
+    margin-left: -8px;
+    margin-right: -8px;
     align-items: stretch;
-    margin-bottom: -10px;
 }
 
 .list {
@@ -27,9 +26,7 @@
 }
 
 .item {
-    width: calc(25% - 10px);
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border: 1px solid red;
+    width: 20%;
+    padding: 0 8px;
+    margin-bottom: 16px;
 }

@@ -1,61 +1,18 @@
 @import 'styles/_global.scss';
 
 .wrapper {
-    margin: 10px;
-    padding: 10px;
     display: block;
     position: relative;
-    border: 2px solid lime;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
 }
 
 .label {
-    font-size: 0;
+    font-size: 1.2rem;
     display: block;
     position: relative;
-}
-
-.error,
-.hint {
-    margin-top: 5px;
-    display: block;
-    font-size: 1.2rem;
-    line-height: 1;
-    letter-spacing: .02ex;
-}
-
-.error {
-    color: $c-amaranth;
-}
-
-.hint {
-    color: $c-pink-swan;
-    text-align: right;
-}
-
-.clear {
-    border: 0;
-    padding: 0;
-    outline: 0;
-    font-size: 0;
-    line-height: 0;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    width: 10px;
-    height: 10px;
-    margin-top: -5px;
-    text-align: center;
-    background-color: transparent;
-    background-image: url(components/input/assets/clear.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 10px 10px;
-    color: $c-pink-swan;
-    cursor: pointer;
-
-    &:hover {
-        color: $c-black;
-    }
 }
 
 .control {
@@ -64,7 +21,7 @@
     cursor: auto;
     font-size: 1.3rem;
     font-weight: 400;
-    font-family: $font-family-base;
+    font-family: Arial, sans-serif;
     background-color: $c-white;
     transition: border-color $a-time $a-func, color $a-time $a-func;
     user-select: text;
@@ -120,5 +77,49 @@
     &:disabled {
         opacity: .4;
         cursor: default;
+    }
+}
+
+.error,
+.hint {
+    margin-top: 5px;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1;
+    letter-spacing: .02ex;
+}
+
+.error {
+    color: $c-amaranth;
+}
+
+.hint {
+    color: $c-pink-swan;
+    text-align: right;
+}
+
+.clear {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    text-align: center;
+    background-color: transparent;
+    background-image: url(components/input/assets/clear.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 10px 10px;
+    color: $c-pink-swan;
+    cursor: pointer;
+
+    &:hover {
+        color: $c-black;
     }
 }

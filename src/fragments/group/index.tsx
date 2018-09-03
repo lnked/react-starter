@@ -14,15 +14,14 @@ const cx = classes.bind(css)
 export const Group = ({ type = 'grid', children = [], className = '' }: P) => {
     let items: any = null
 
-    const count = children.length || 0
-    const division = count % 4
+    const division = children.length % 4
 
     if (children && children.length) {
-        items = React.Children.map(children, (card: any) => {
-            return React.cloneElement(card, {
+        items = React.Children.map(children, (card: any) =>
+            React.cloneElement(<div>{card}</div>, {
                 className: cx(css.item),
             })
-        })
+        )
     }
 
     return (

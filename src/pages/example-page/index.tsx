@@ -14,7 +14,11 @@ import { inject, observer } from 'mobx-react'
 class ExamplePage extends React.Component<any, any> {
     componentDidMount () {
         document.title = 'Example Page'
+
+        this.loadData()
     }
+
+    loadData = () => {}
 
     render () {
         const type = 'grid'
@@ -29,6 +33,12 @@ class ExamplePage extends React.Component<any, any> {
                 <Input type="text" />
 
                 <Group type={type}>
+                    <Card>
+                        <div>XXX</div>
+                    </Card>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
                     <Card>xxx</Card>
                     <Card>xxx</Card>
                     <Card>xxx</Card>
