@@ -1,0 +1,35 @@
+@import 'styles/_global.scss';
+
+.layout {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid blue;
+}
+
+.exact {
+    &:after {
+        content: '';
+        flex: 1 1 auto;
+    }
+}
+
+.grid {
+    align-items: stretch;
+    margin-bottom: -10px;
+}
+
+.list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.item {
+    width: calc(25% - 10px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+}

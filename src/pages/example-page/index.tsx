@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { Group } from 'fragments'
+
 import { Card, Input } from 'components'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
@@ -15,6 +17,8 @@ class ExamplePage extends React.Component<any, any> {
     }
 
     render () {
+        const type = 'grid'
+
         return (
             <div className={css.content}>
                 {/*
@@ -24,17 +28,14 @@ class ExamplePage extends React.Component<any, any> {
 
                 <Input type="text" />
 
-                <Card>
-                    xxx
-                </Card>
-
-                <Card>
-                    xxx
-                </Card>
-
-                <Card>
-                    xxx
-                </Card>
+                <Group type={type}>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
+                    <Card>xxx</Card>
+                </Group>
             </div>
         )
     }
