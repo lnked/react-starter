@@ -97,7 +97,7 @@ module.exports = function (api) {
     })
 
     plugins.push('transform-async-to-generator')
-    plugins.push('@babel/transform-arrow-functions')
+    plugins.push('@babel/plugin-transform-arrow-functions')
     plugins.push('@babel/plugin-transform-object-assign')
     plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
