@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Input } from 'components'
+import { Card, Input } from 'components'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
@@ -24,7 +24,17 @@ class ExamplePage extends React.Component<any, any> {
 
                 <Input type="text" />
 
-                <p className={css.description}>Reference site about Lorem Ipsum, giving information on its origins.</p>
+                <Card>
+                    xxx
+                </Card>
+
+                <Card>
+                    xxx
+                </Card>
+
+                <Card>
+                    xxx
+                </Card>
             </div>
         )
     }

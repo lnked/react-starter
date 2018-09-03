@@ -5,7 +5,7 @@
 /features.md
 /code-example
 /release-builds
-styles.scss.d.ts
+**/styles.scss.d.ts
 
 # Compiled output
 /dist
