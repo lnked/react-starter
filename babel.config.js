@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    api.cache(false)
+    // api.cache(false)
     // api.cache.forever() // api.cache(true)
     // api.cache.never() // api.cache(false)
 

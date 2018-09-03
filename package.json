@@ -312,7 +312,6 @@
     "webpack-merge": "4.1.4",
     "webpack-notifier": "1.6.0",
     "webpack-pwa-manifest": "3.7.1",
-    "webpack-uglify-parallel": "0.1.4",
     "webpack-visualizer-plugin": "0.1.11",
     "xml-loader": "1.2.1"
   }

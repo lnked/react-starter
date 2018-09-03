@@ -14219,7 +14219,7 @@ uglify-js@3.4.x:
     commander "~2.16.0"
     source-map "~0.6.1"
 
-uglify-js@^2.6, uglify-js@^2.6.1, uglify-js@^2.6.2:
+uglify-js@^2.6, uglify-js@^2.6.1:
   version "2.8.29"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
   dependencies:
@@ -14930,13 +14930,6 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0:
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
-
-webpack-uglify-parallel@0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/webpack-uglify-parallel/-/webpack-uglify-parallel-0.1.4.tgz#1c3eee081b388323a360167e5a633e4e01d31919"
-  dependencies:
-    uglify-js "^2.6.2"
-    webpack-core "^0.6.8"
 
 webpack-visualizer-plugin@0.1.11:
   version "0.1.11"
