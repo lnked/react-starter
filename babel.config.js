@@ -76,9 +76,7 @@ module.exports = function (api) {
             exclude: [ 'web.dom.iterable' ],
         },
     ])
-
     presets.push('@babel/preset-react')
-
     presets.push('@babel/preset-typescript')
 
     // ///////////////////////////////////////////////////////////
@@ -130,8 +128,8 @@ module.exports = function (api) {
     ])
 
     plugins.push('transform-async-to-generator')
-    plugins.push('@babel/plugin-transform-arrow-functions')
     plugins.push('@babel/plugin-transform-object-assign')
+    plugins.push('@babel/plugin-transform-arrow-functions')
     plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
     plugins.push(production && 'transform-react-pure-class-to-function')
