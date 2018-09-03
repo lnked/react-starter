@@ -45,6 +45,7 @@ module.exports = function (api) {
     ]
 
     const loose = true
+    const legacy = true
     const useBuiltIns = 'usage'
 
     const plugins = []
@@ -96,13 +97,10 @@ module.exports = function (api) {
         ])
     })
 
-    plugins.push('transform-async-to-generator')
-    plugins.push('@babel/plugin-transform-arrow-functions')
-    plugins.push('@babel/plugin-transform-object-assign')
-    plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
+    plugins.push(['@babel/plugin-proposal-decorators', { legacy }])
+    plugins.push(['@babel/plugin-proposal-class-properties', { loose }])
 
     // Stage 2
-    plugins.push(['@babel/plugin-proposal-decorators', { legacy: true }])
     plugins.push('@babel/plugin-proposal-function-sent')
     plugins.push('@babel/plugin-proposal-export-namespace-from')
     plugins.push('@babel/plugin-proposal-numeric-separator')
@@ -111,7 +109,6 @@ module.exports = function (api) {
     // Stage 3
     plugins.push('@babel/plugin-syntax-dynamic-import')
     plugins.push('@babel/plugin-syntax-import-meta')
-    plugins.push(['@babel/plugin-proposal-class-properties', { loose }])
     plugins.push([
         '@babel/plugin-proposal-object-rest-spread',
         {
@@ -132,7 +129,10 @@ module.exports = function (api) {
         },
     ])
 
-    plugins.push(development && 'react-hot-loader/babel')
+    plugins.push('transform-async-to-generator')
+    plugins.push('@babel/plugin-transform-arrow-functions')
+    plugins.push('@babel/plugin-transform-object-assign')
+    plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
     plugins.push(production && 'transform-react-pure-class-to-function')
     plugins.push(production && 'transform-react-remove-prop-types')
@@ -140,6 +140,8 @@ module.exports = function (api) {
     plugins.push(production && '@babel/plugin-transform-react-constant-elements')
 
     plugins.push(test && 'transform-es2015-modules-commonjs')
+
+    plugins.push(development && 'react-hot-loader/babel')
 
     // /////////////////////////////////////////////////////////////
     // ////////////////   IGNORE   /////////////////////////////////
