@@ -16,9 +16,8 @@ module.exports = function (api) {
     const development = api.env('development')
 
     console.log('api: ', api)
-    console.log('env: ', env, api.env())
-
-    console.log({ env })
+    console.log('env: ', env)
+    console.log('api.env: ', api.env())
 
     console.log({ development }, { production }, { test })
 
@@ -99,6 +98,7 @@ module.exports = function (api) {
 
     plugins.push('transform-async-to-generator')
     plugins.push('@babel/transform-arrow-functions')
+    plugins.push('@babel/plugin-transform-object-assign')
     plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
     // Stage 2
