@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    // api.cache(false)
+    api.cache(false)
     // api.cache.forever() // api.cache(true)
     // api.cache.never() // api.cache(false)
 
@@ -15,9 +15,12 @@ module.exports = function (api) {
     const production = api.env('production')
     const development = api.env('development')
 
+    console.log('api: ', api)
     console.log('env: ', env, api.env())
 
     console.log({ env })
+
+    console.log({ development }, { production }, { test })
 
     const imports = [
         {
@@ -53,8 +56,6 @@ module.exports = function (api) {
 
     const sourceMaps = development
 
-    console.log({ development }, { production }, { test })
-
     // ///////////////////////////////////////////////////////////
     // //////////////   PRESETS   ////////////////////////////////
     // ///////////////////////////////////////////////////////////
@@ -68,16 +69,17 @@ module.exports = function (api) {
             loose,
             modules: false,
             useBuiltIns,
-            debug: development,
-            shippedProposals: false,
+            // debug: development,
+            debug: true,
+            shippedProposals: true,
             forceAllTransforms: production,
             exclude: [ 'web.dom.iterable' ],
         },
     ])
 
-    presets.push('@babel/preset-typescript')
-
     presets.push('@babel/preset-react')
+
+    presets.push('@babel/preset-typescript')
 
     // ///////////////////////////////////////////////////////////
     // //////////////   PLUGINS   ////////////////////////////////
@@ -96,7 +98,7 @@ module.exports = function (api) {
     })
 
     plugins.push('transform-async-to-generator')
-
+    plugins.push('@babel/transform-arrow-functions')
     plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
     // Stage 2
