@@ -26,8 +26,7 @@ export const Group = ({ type = 'grid', children = [], className = '' }: P) => {
     }
 
     return (
-        <div className={cx({
-            layout: true,
+        <div className={cx(css.layout, {
             exact: division !== 0,
             grid: type === 'grid',
             list: type === 'list',
