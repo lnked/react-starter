@@ -11,8 +11,8 @@ const cx = classes.bind(css)
 
 export const Card = ({ children }: P) => {
     return (
-        <div className={cx({card: true})}>
-           {children}
+        <div className={cx({ card: true })}>
+            {children}
         </div>
     )
 }

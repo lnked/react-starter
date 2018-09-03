@@ -5,6 +5,7 @@
 /features.md
 /code-example
 /release-builds
+**/client.scss.d.ts
 **/styles.scss.d.ts
 
 # Compiled output
