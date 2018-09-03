@@ -6,19 +6,13 @@ const tsConfig = []
 const jsConfig = []
 
 jsConfig.push({
-    loader: 'cache-loader',
-    options: {
-        cacheDirectory: resolve(define.rs_base, '.cache/loader'),
-    },
-})
-
-jsConfig.push({
     loader: 'babel-loader',
     options: {
         envName: process.env.BABEL_ENV || process.env.NODE_ENV || 'development',
         configFile: resolve(define.rs_base, 'babel.config.js'),
         compact: define.rs_production,
-        cacheDirectory: define.rs_development,
+        // cacheDirectory: define.rs_development,
+        cacheDirectory: false,
     },
 })
 

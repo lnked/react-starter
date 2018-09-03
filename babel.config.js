@@ -1,25 +1,7 @@
 module.exports = function (api) {
-    // api.cache(false)
-    // api.cache.forever() // api.cache(true)
-    // api.cache.never() // api.cache(false)
-
-    // Cached based on the value of some function. If this function returns a value different from
-    // a previously-encountered value, the plugins will re-evaluate.
-    // const env = api.cache(() => process.env.NODE_ENV)
-    const env = process.env.BABEL_ENV || process.env.NODE_ENV || 'production'
-    // const test = api.cache.invalidate(() => process.env.NODE_ENV === 'test')
-    // const production = api.cache.invalidate(() => process.env.NODE_ENV === 'production')
-    // const development = api.cache.invalidate(() => process.env.NODE_ENV === 'development')
-
     const test = api.env('test')
     const production = api.env('production')
     const development = api.env('development')
-
-    console.log('api: ', api)
-    console.log('env: ', env)
-    console.log('api.env: ', api.env())
-
-    console.log({ development }, { production }, { test })
 
     const imports = [
         {
@@ -69,8 +51,7 @@ module.exports = function (api) {
             loose,
             modules: false,
             useBuiltIns,
-            // debug: development,
-            debug: true,
+            debug: development,
             shippedProposals: true,
             forceAllTransforms: production,
             exclude: [ 'web.dom.iterable' ],
