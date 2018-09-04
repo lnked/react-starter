@@ -1,4 +1,4 @@
-// export * from './api'
+export * from './api'
 export * from './classes'
 export * from './utils/uc-first'
 export * from './utils/trim'

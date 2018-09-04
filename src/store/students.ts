@@ -62,7 +62,7 @@ const store = observable({
 
     enrolledStudents(courseId: number) {
         return computed(() => this.enrollment.get(courseId).map((n: any) => this.students.get(n))).get()
-     }
+    },
 })
 
 export default store

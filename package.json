@@ -16,7 +16,7 @@
     "analyze": "yarn run build-config --opts analyze",
     "deploy": "yarn run build-config --opts deploy",
     "stats": "yarn run build-config --json --profile > stats.json",
-    "start": "NODE_ENV=development webpack-dev-server --config webpack/dev.config --opts development",
+    "start": "NODE_ENV=development webpack-dev-server --config webpack/dev.config --opts development --env development",
     "lint:scripts": "node_modules/.bin/eslint ./src --ext .js,.jsx",
     "lint:styles": "node_modules/.bin/stylelint 'src/**/*.{css,less,styl,scss,sass,sss}'",
     "lint:fix-scripts": "node_modules/.bin/eslint ./src --ext .js,.jsx --fix",
