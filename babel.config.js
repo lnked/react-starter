@@ -6,11 +6,6 @@ module.exports = function (api) {
     const imports = [
         {
             libraryName: 'core-js',
-            libraryDirectory: 'modules',
-            camel2DashComponentName: true,
-        },
-        {
-            libraryName: 'core-js',
             libraryDirectory: 'es6',
             camel2DashComponentName: true,
         },
