@@ -10,6 +10,11 @@ module.exports = function (api) {
             camel2DashComponentName: true,
         },
         {
+            libraryName: 'core-js',
+            libraryDirectory: 'es6',
+            camel2DashComponentName: true,
+        },
+        {
             libraryName: 'lodash',
             libraryDirectory: '_',
             camel2DashComponentName: false,
