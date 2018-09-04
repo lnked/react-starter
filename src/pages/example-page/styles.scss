@@ -38,6 +38,12 @@
     }
 
     &_price {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+    }
+
+    &_footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }

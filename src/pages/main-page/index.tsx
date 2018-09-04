@@ -26,7 +26,6 @@ class MainPage extends React.Component<any, any> {
                 <Title size="small" type="primary" center>Main Page</Title>
                 <Title size="medium" type="secondary" center>Main Page</Title>
                 */}
-
                 <p className={css.description}>Отличный сборщик рекат проектов</p>
 
                 <ul className={css.list}>

@@ -18,7 +18,7 @@ export const classes: S = {
                 } else {
                     Object.keys(item).map(name => {
                         if (typeof item[name] !== 'undefined' && item[name]) {
-                            r.push(css[name])
+                            r.push(item.length ? css[item[name]] : css[name])
                         }
                     })
                 }

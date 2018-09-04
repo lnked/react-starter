@@ -1,11 +1,11 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { request } from 'helpers'
+import { request, formatMoney } from 'helpers'
 
 import { Group } from 'fragments'
 
-import { Card, Input } from 'components'
+import { Card, Input, Button } from 'components'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
@@ -58,7 +58,11 @@ class ExamplePage extends React.Component<any, any> {
                             <img src="https://via.placeholder.com/500x500" className={css.productImage} alt=""/>
                             <div className={css.productTitle}>{item.name}</div>
                             <div className={css.productCategory}>{item.category}</div>
-                            <div className={css.productPrice}>{item.price} {item.currency}</div>
+
+                            <footer className={css.productFooter}>
+                                <div className={css.productPrice}>{formatMoney(item.price)} ₽</div>
+                                <Button variant="primary">В КОРЗИНУ</Button>
+                            </footer>
                         </Card>
                     ))}
                 </Group>

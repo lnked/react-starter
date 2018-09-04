@@ -10,7 +10,11 @@ export interface P {
 
 const cx = classes.bind(css)
 
-export const Present = ({ children }: P) => <button className={cx({ button: true })}>{children}</button>
+export const Present = ({ children, primary }: P) => (
+    <button className={cx(css.button, { primary })}>
+        {children}
+    </button>
+)
 
 // // Здесь мы задаем свой обработчик событий
 // const onChangeHandler = event => onChange && onChange(event.target.value);
