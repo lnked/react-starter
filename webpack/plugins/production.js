@@ -9,6 +9,16 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin')
 const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
 const plugins = [
+    new webpack.HashedModuleIdsPlugin(),
+
+    new WebpackChunkHash(),
+
+    new webpack.optimize.ModuleConcatenationPlugin(),
+
+    new webpack.optimize.AggressiveMergingPlugin({
+        minSizeReduce: 1.6,
+    }),
+
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
         fileName: '../webpack-manifest.json',
@@ -29,13 +39,6 @@ const plugins = [
             },
         },
     ]),
-
-    new webpack.HashedModuleIdsPlugin(),
-
-    new WebpackChunkHash(),
-
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
 ]
 
 module.exports.config = plugins
