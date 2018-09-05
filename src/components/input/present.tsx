@@ -1,26 +1,9 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-// const Number = styled.h1`
-//   font-size: 36px;
-//   line-height: 40px;
-//   margin-right: 5px;
-//   padding: 0px;
-// `;
-// //..
-// <Container>
-//   <Number>{skipRatePre}</Number>
-//   <InfoName>Skip Rate</InfoName>
-// </Container>
+import { P } from './props'
 
 import { classes } from 'helpers'
-
-export interface P {
-    value?: string;
-    label?: string;
-    referrer: any;
-    handleChange: (e: any) => void;
-}
 
 const cx = classes.bind(css)
 

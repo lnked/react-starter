@@ -55,13 +55,13 @@ class ExamplePage extends React.Component<any, any> {
                 <Group type={type}>
                     {products && products.map((item: Product) => (
                         <Card key={item.id} className={css.product}>
-                            <img src="https://via.placeholder.com/500x500" className={css.productImage} alt=""/>
+                            <img src="https://via.placeholder.com/250x180" className={css.productImage} alt=""/>
                             <div className={css.productTitle}>{item.name}</div>
                             <div className={css.productCategory}>{item.category}</div>
 
                             <footer className={css.productFooter}>
                                 <div className={css.productPrice}>{formatMoney(item.price)} ₽</div>
-                                <Button variant="primary">В КОРЗИНУ</Button>
+                                <Button size="small" primary>В корзину</Button>
                             </footer>
                         </Card>
                     ))}

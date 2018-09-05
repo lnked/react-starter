@@ -1,32 +1,16 @@
 import * as React from 'react'
-import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Present } from './present'
 
-export interface P {
-    type?: string;
-    size?: 'small' | 'large' | 'normal' | 'medium';
-    label?: string;
-    isIcon?: boolean;
-    variant?: 'pure' | 'link' | 'info' | 'danger' | 'normal' | 'primary' | 'success' | 'warning' | 'subtle-link';
-    className?: string;
-    isDisabled?: boolean;
-    children?: JSX.Element[] | JSX.Element | string;
-    handleClick?: () => void | boolean;
-}
-
-const cx = classes.bind(css)
+import { P } from './props'
 
 export class Button extends React.PureComponent<P, {}> {
     static defaultProps = {
-        size: 'normal',
         type: 'button',
-        variant: 'normal',
-        isIcon: false,
-        isDisabled: false,
-        handleClick: () => {
-            console.log(' click button ')
-        },
+        icon: false,
+        normal: false,
+        disabled: false,
+        handleClick: false,
     }
 
     handleClick = () => {
@@ -36,17 +20,8 @@ export class Button extends React.PureComponent<P, {}> {
     }
 
     render () {
-        const { label, children, type, size, variant, isIcon, isDisabled, className } = this.props
-
         return (
-            <button
-                type={type}
-                onClick={this.handleClick}
-                className={cx(css.button, { icon: isIcon }, [ size ], [ variant ], className)}
-                disabled={isDisabled}
-            >
-                {label || children}
-            </button>
+            <Present {...this.props} handleClick={this.handleClick} />
         )
     }
 }

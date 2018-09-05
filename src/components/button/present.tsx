@@ -3,33 +3,35 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-export interface P {
-    primary?: boolean;
-    children?: JSX.Element[] | JSX.Element | string;
-}
+import { P } from './props'
 
 const cx = classes.bind(css)
 
-export const Present = ({ children, primary }: P) => (
-    <button className={cx(css.button, { primary })}>
-        {children}
-    </button>
-)
+export const Present = ({ type, size, circle, label, loading, children, handleClick, ...rest }: P) => {
+    const {
+        info,
+        danger,
+        normal,
+        success,
+        primary,
+        warning,
+    } = rest
 
-// // Здесь мы задаем свой обработчик событий
-// const onChangeHandler = event => onChange && onChange(event.target.value);
-
-// export const OnChange = ({ onChange, children }) => {
-//    // Проверка на то, что нам передали
-//    // только один компонент в виде children
-//    const Child = React.Children.only(children);
-
-//    // Клонируем элемент и передаем в него новые props
-//    return React.cloneElement(Child, {onChange: onChangeHandler});
-// }
-
-// // Здесь мы задаем свой обработчик событий
-// const onChangeHandler = event => onChange(event.target.value);
-
-// export const OnChange = ({ onChange, children }) =>
-//    React.cloneElement(children, {...children.props, onChange: onChangeHandler});
+    return (
+        <button
+            type={type}
+            onClick={handleClick}
+            className={cx(css.button, {
+                info,
+                normal,
+                danger,
+                success,
+                primary,
+                warning,
+                circle,
+                loading,
+            }, [ `size-${size}` ])}>
+            {label || children}
+        </button>
+    )
+}
