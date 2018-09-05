@@ -24,10 +24,6 @@ html(
         meta(name='author', content='Edik Bulikyan <ed.proff@gmail.com>')
 
     body.loading
-        //- svg(xmlns='http://www.w3.org/2000/svg', style='position:absolute;width:0;height:0')
-        //-     != htmlWebpackPlugin.options.svgContext
-        //-     //- != htmlWebpackPlugin.files.svgstore
-
         main#app.layout-wrapper
 
         noscript
@@ -38,10 +34,3 @@ html(
                     | Please upgrade to
                     a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
                     | , Safari or Firefox for a better experience.
-
-        script.
-            if ('serviceWorker' in navigator && location.protocol.indexOf('https') >= 0) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/sw.js');
-                });
-            }

@@ -1,7 +1,5 @@
 import * as React from 'react'
 
-import { routes } from 'settings/routes'
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { createBrowserHistory } from 'history'
@@ -10,20 +8,21 @@ import { ErrorBoundary } from 'components'
 
 import { CoreLayout } from 'layouts'
 
+import { Provider } from 'mobx-react'
+
 import { createStore } from 'store'
 
-import { Provider } from 'mobx-react'
+import { routes } from 'settings/routes'
 
 const initialState = {
     app: { query: 'initial state query' },
     ui: { type: 'test 1' },
 }
 
-// prepare MobX stores
 const history = createBrowserHistory()
 const rootStore = createStore(history, initialState)
 
-export class App extends React.Component<{}, {}> {
+export class App extends React.Component<void, void> {
     renderDevTool = () => {
         if (process.env.NODE_ENV !== 'production') {
             const DevTools = require('mobx-react-devtools').default

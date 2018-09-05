@@ -3,20 +3,24 @@ import { render } from 'react-dom'
 import 'styles/client.scss'
 import { App } from './app'
 
-const rootElement = document.getElementById('app')
+const appRoot = document.getElementById('app')
 
-if (rootElement == null) {
+if (appRoot == null) {
     throw new Error('No root element')
 }
 
 const renderApp = () => {
-    render(<App />, rootElement)
+    render(<App />, appRoot)
     document.body.classList.remove('loading')
 }
 
-if (process.env.NODE_ENV !== 'production') {
-    if (module.hot) {
-        module.hot.accept('./app', renderApp)
+if (process.env.NODE_ENV === 'development' && module.hot) {
+    module.hot.accept('./app', renderApp)
+} else if (process.env.NODE_ENV === 'production') {
+    const isHttps = location.protocol.indexOf('https') >= 0
+
+    if ('serviceWorker' in navigator && isHttps) {
+        navigator.serviceWorker.register('/sw.js')
     }
 }
 
