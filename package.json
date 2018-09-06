@@ -5,8 +5,7 @@
   "main": "index.js",
   "description": "React boilerplate, pwa, router",
   "scripts": {
-    "clean": "rimraf dist",
-    "prebuild": "rimraf .cache && webpack --config webpack/prebuild",
+    "clean": "rimraf dist && rimraf .cache",
     "prebuild-config": "yarn run clean && yarn run lint",
     "postdeploy": "gh-pages -d dist",
     "postrelease": "yarn size-limit",
