@@ -1,7 +1,7 @@
 import { observable, action, extendObservable } from 'mobx'
 
 export class AppStore {
-    static defaultState: any = {
+    static defaultState = {
         query: '',
         isLoading: false,
         results: [],

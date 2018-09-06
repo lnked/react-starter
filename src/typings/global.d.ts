@@ -1,6 +1,4 @@
-declare let Event: any;
-
-type Func = () => void;
+type Func = (...args?: any[]) => void;
 
 declare let Reflect: Reflect;
 
@@ -8,6 +6,29 @@ declare global {
     // how io-ts's `mixed` type is currently defined
     type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
 }
+
+interface EventTarget {
+    value: string;
+    addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
+    dispatchEvent(evt: Event): boolean;
+    removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
+}
+
+interface SyntheticEvent<T> {
+    bubbles: boolean;
+    cancelable: boolean;
+    currentTarget: EventTarget & T;
+    defaultPrevented: boolean;
+    eventPhase: number;
+    isTrusted: boolean;
+    nativeEvent: Event;
+    target: EventTarget & T;
+    timeStamp: Date;
+    type: string;
+    preventDefault(): void;
+    stopPropagation(): void;
+}
+
 /**
  * Describe a new type to require non-typescript source files like CSS and other resources.
  */

@@ -23,9 +23,7 @@ export class Quantity extends React.Component<P, S> {
         max: 9999,
         step: 1,
         count: 1,
-        handleChange: (count: number) => {
-            console.log(': = ', count)
-        },
+        handleChange: false,
     }
 
     state = {
@@ -69,7 +67,7 @@ export class Quantity extends React.Component<P, S> {
         }
     }
 
-    handleChange = (e: any) => {
+    handleChange = (e: SyntheticEvent) => {
         const re = /^\d+$/
 
         if (re.test(e.target.value)) {
@@ -95,9 +93,9 @@ export class Quantity extends React.Component<P, S> {
                     min={min}
                     max={max}
                     value={count}
-                    onChange={this.handleChange}
                     autoComplete="off"
                     className={css.count}
+                    onChange={this.handleChange}
                 />
                 <button type="button" onClick={this.changeCount(1)} className={increaseClass}>
                     +

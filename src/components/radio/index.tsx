@@ -40,7 +40,7 @@ export class Radio extends React.PureComponent<P, S> {
         return null
     }
 
-    handleChange = (e: any) => {
+    handleChange = (e: SyntheticEvent) => {
         const checked = e.target.value
 
         this.setState(

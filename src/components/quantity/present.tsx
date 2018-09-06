@@ -10,7 +10,7 @@ const cx = classes.bind(css)
 
 export const Present = ({ value }: P) => {
     return (
-        <div className={cx({})}>
+        <div className={cx(css.quantity)}>
             <p>value: {value}</p>
         </div>
     )

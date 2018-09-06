@@ -43,8 +43,8 @@ export class Checkbox extends React.PureComponent<P, S> {
         return null
     }
 
-    handleChange = (e: any) => {
-        const checked = e.target.value
+    handleChange = (e: Event) => {
+        const checked = e && e.target && e.target.value
 
         this.setState(
             (state: S) => {

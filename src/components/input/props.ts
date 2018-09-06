@@ -5,5 +5,5 @@ export interface P {
     integer?: boolean;
     floating?: boolean;
     referrer?: any;
-    handleChange?: (e: any) => void;
+    handleChange?: (e: SyntheticEvent) => void;
 }
