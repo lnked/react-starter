@@ -13,7 +13,6 @@ const uglifyJsOptions = {
     parse: {
         html5_comments: false,
     },
-    content: true,
     compress: {
         inline: false,
         unused: true,
