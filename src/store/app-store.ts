@@ -1,6 +1,13 @@
 import { observable, action, extendObservable } from 'mobx'
 
 export class AppStore {
+    static mobxLoggerConfig: {
+        enabled: false,
+        methods: {
+            loadTags: true,
+        },
+    }
+
     static defaultState = {
         query: '',
         isLoading: false,

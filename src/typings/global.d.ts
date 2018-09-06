@@ -1,10 +1,17 @@
 type Func = (...args?: any[]) => void;
 
-declare let Reflect: Reflect;
-
 declare global {
     // how io-ts's `mixed` type is currently defined
     type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
+}
+
+interface Reflect {
+    get: (target: any, propertyKey: any) => void;
+    has: (target: any, propertyKey: any) => boolean;
+    apply: (target: any, thisArgument: any, argumentsList: any[]) => void;
+    defineProperty: (target: any, propertyKey: number | string, attributes: any) => boolean;
+    deleteProperty: (target: any, propertyKey: number | string) => boolean;
+    prop: string;
 }
 
 interface EventTarget {
@@ -28,6 +35,12 @@ interface SyntheticEvent<T> {
     preventDefault(): void;
     stopPropagation(): void;
 }
+
+declare const __DEV__: boolean;
+
+declare const __PROD__: boolean;
+
+declare const Reflect: Reflect;
 
 /**
  * Describe a new type to require non-typescript source files like CSS and other resources.
@@ -54,15 +67,6 @@ declare module 'tslib' {
     export function __metadata(metadataKey: any, metadataValue: any): Func;
     export function __awaiter(thisArg: any, _arguments: any, P: Func, generator: Func): any;
     export function __generator(thisArg: any, body: Func): any;
-}
-
-interface Reflect {
-  get: (target: any, propertyKey: any) => void;
-  has: (target: any, propertyKey: any) => boolean;
-  apply: (target: any, thisArgument: any, argumentsList: any[]) => void;
-  defineProperty: (target: any, propertyKey: number | string, attributes: any) => boolean;
-  deleteProperty: (target: any, propertyKey: number | string) => boolean;
-  prop: string;
 }
 
 declare namespace JSX {
