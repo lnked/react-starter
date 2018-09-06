@@ -1,6 +1,6 @@
 export interface S {
     styler: (css: any) => string;
-    bind: (css: any) => void;
+    bind: (css: any) => any;
 }
 
 export const classes: S = {

@@ -22,15 +22,18 @@ export const Present = ({ type, size, circle, label, loading, children, handleCl
             type={type}
             onClick={handleClick}
             className={cx(css.button, {
-                info,
-                normal,
-                danger,
-                success,
-                primary,
-                warning,
-                circle,
-                loading,
-            }, [ `size-${size}` ])}>
+                // info,
+                // normal,
+                // danger,
+                // success,
+                // primary,
+                // warning,
+                // circle,
+                // loading,
+            },
+            // [ `size-${size}` ]
+            )
+        }>
             {label || children}
         </button>
     )
