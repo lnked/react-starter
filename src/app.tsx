@@ -14,13 +14,9 @@ import { createStore } from 'store'
 
 import { routes } from 'settings/routes'
 
-const initialState = {
-    app: { query: 'initial state query' },
-    ui: { type: 'test 1' },
-}
-
 const history = createBrowserHistory()
-const rootStore = createStore(history, initialState)
+const initialState = (window && window.__INITIAL_STATE__) || {}
+const store = createStore(history, initialState)
 
 export class App extends React.Component<void, void> {
     renderDevTool = () => {
@@ -34,7 +30,7 @@ export class App extends React.Component<void, void> {
 
     render () {
         return (
-            <Provider {...rootStore}>
+            <Provider {...store}>
                 <ErrorBoundary>
                     <Router>
                         <CoreLayout>

@@ -3,6 +3,6 @@ declare module '*.svg' {
     export default content;
 }
 
-declare module 'classNames';
+declare module 'firebase';
 
-// declare module 'firebase';
+declare module 'classNames';

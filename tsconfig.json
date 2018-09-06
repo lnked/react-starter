@@ -56,7 +56,6 @@
             "jest-styled-components"
         ],
         "typeRoots": [
-			"typings/**/*.d.ts",
             "src/typings/**/*.d.ts",
             "node_modules/tslib/tslib.d.ts",
             "node_modules/@types"
