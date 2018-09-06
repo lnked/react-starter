@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from '../__utils__/link'
-import renderer from 'react-test-renderer'
+// import React from 'react'
+// import Link from '../__utils__/link'
+// import renderer from 'react-test-renderer'
 
-it('отображается корректно', () => {
-    const tree = renderer.create(<Link page="http://www.facebook.com">Facebook</Link>).toJSON()
-
-    expect(tree).toMatchSnapshot()
-})
+// it('отображается корректно', () => {
+//     const component = renderer.create(<Link page="http://www.facebook.com">Facebook</Link>)
+//     const tree = component.toJSON()
+//     expect(tree).toMatchSnapshot()
+// })
 
 // // Link.react.test.js
 // import React from 'react';
@@ -34,34 +34,3 @@ test('test', () => {})
 //   tree = component.toJSON();
 //   expect(tree).toMatchSnapshot();
 // });
-
-// // __tests__/__snapshots__/Link.react.test.js.snap
-// exports[`Link changes the class when hovered 1`] = `
-// <a
-//   className="normal"
-//   href="http://www.facebook.com"
-//   onMouseEnter={[Function]}
-//   onMouseLeave={[Function]}>
-//   Facebook
-// </a>
-// `;
-
-// exports[`Link changes the class when hovered 2`] = `
-// <a
-//   className="hovered"
-//   href="http://www.facebook.com"
-//   onMouseEnter={[Function]}
-//   onMouseLeave={[Function]}>
-//   Facebook
-// </a>
-// `;
-
-// exports[`Link changes the class when hovered 3`] = `
-// <a
-//   className="normal"
-//   href="http://www.facebook.com"
-//   onMouseEnter={[Function]}
-//   onMouseLeave={[Function]}>
-//   Facebook
-// </a>
-// `;
