@@ -57,6 +57,7 @@ module.exports = {
     coverageDirectory: '<rootDir>/coverage', // [string]
 
     globals: {
+        __DEV__: true,
         NODE_ENV: 'test',
         'ts-jest': {
             useBabelrc: true,
