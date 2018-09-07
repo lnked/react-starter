@@ -1,16 +1,25 @@
 import axios from 'axios'
-// import { TOKEN } from './token'
+
+import { TOKEN } from 'helpers/token'
 
 export const API_URL = process.env.REACT_APP_API_URL
 
+const authToken = TOKEN.get()
+
 const headers: any = {
+    'baseURL': API_URL,
     'Accept': 'application/json',
-    // 'Authorization': `Token ${TOKEN.get()}`,
-    // 'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json; charset=utf-8',
 }
 
-export const request: any = axios.create({
-    baseURL: API_URL,
-    headers,
+if (authToken) {
+    headers.Authorization = `Token ${authToken}`
+}
+
+// axios.defaults.baseURL = API_URL
+// axios.defaults.headers.common.Accept = 'application/json'
+// axios.defaults.headers.post['Content-Type'] = 'application/json'
+
+export const request = axios.create({
+    ...headers,
 })

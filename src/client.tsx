@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import 'styles/client.scss'
 import { App } from './app'
+import 'styles/client.scss'
 
 const appRoot = document.getElementById('app')
 
