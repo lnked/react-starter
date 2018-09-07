@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import { Helmet } from 'react-helmet'
+
 import { history } from 'helpers'
 
 import { ErrorBoundary } from 'components'
@@ -34,8 +36,23 @@ export class App extends React.Component<void, void> {
                     <Router>
                         <CoreLayout>
                             <Switch>
-                                {routes.map(({ ...rest }: any, index: number) => (
-                                    <Route key={index} {...rest} />
+                                {routes && routes.map(({
+                                    title,
+                                    description,
+                                    component: Component,
+                                    ...rest
+                                }: any, idx: number) => (
+                                    // <Route key={index} {...rest} />
+                                    <Route key={idx} {...rest} render={(props: any) => (
+                                        <React.Fragment>
+                                            <Helmet>
+                                                <title>{title}</title>
+                                                <meta name="description" content={description} />
+                                            </Helmet>
+
+                                            <Component {...props}/>
+                                        </React.Fragment>
+                                    )}/>
                                 ))}
                             </Switch>
 
