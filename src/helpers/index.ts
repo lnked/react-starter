@@ -1,4 +1,5 @@
 export * from './api'
+export * from './history'
 export * from './classes'
 export * from './utils/uc-first'
 export * from './utils/trim'

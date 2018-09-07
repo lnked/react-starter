@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { createBrowserHistory } from 'history'
+import { history } from 'helpers'
 
 import { ErrorBoundary } from 'components'
 
@@ -14,7 +14,6 @@ import { createStore } from 'store'
 
 import { routes } from 'settings/routes'
 
-const history = createBrowserHistory()
 const initialState = (window && window.__INITIAL_STATE__) || {}
 const store = createStore(history, initialState)
 
