@@ -5,6 +5,8 @@
   "main": "index.js",
   "description": "React boilerplate, pwa, router",
   "scripts": {
+    "precommit": "lint-staged",
+    "postcommit": "git update-index --again",
     "clean": "rimraf dist && rimraf .cache",
     "prebuild-config": "yarn run clean && yarn run lint",
     "postdeploy": "gh-pages -d dist",
@@ -16,20 +18,18 @@
     "deploy": "yarn run build-config --opts deploy",
     "stats": "yarn run build-config --json --profile > stats.json",
     "start": "NODE_ENV=development webpack-dev-server --config webpack/dev.config --opts development --env development",
-    "lint:scripts": "node_modules/.bin/eslint ./src --ext .js,.jsx",
+    "lint:scripts": "node_modules/.bin/eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" ./src --ext .js,.jsx",
     "lint:styles": "node_modules/.bin/stylelint 'src/**/*.{css,less,styl,scss,sass,sss}'",
-    "lint:fix-scripts": "node_modules/.bin/eslint ./src --ext .js,.jsx --fix",
+    "lint:fix-scripts": "node_modules/.bin/eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" ./src --ext .js,.jsx --fix",
     "lint:fix-tslint": "node_modules/.bin/tslint 'src/**/*.{ts,tsx}' --fix",
     "lint:fix-styles": "node_modules/.bin/stylelint ./src --fix",
     "lint:fix": "yarn run lint:fix-scripts && yarn run lint:fix-tslint && yarn run lint:fix-styles",
     "lint:tslint": "node_modules/.bin/tslint 'src/**/*.{ts,tsx}'",
     "lint": "yarn run lint:scripts && yarn run lint:styles && yarn run lint:tslint",
     "test": "NODE_ENV=test jest",
-    "test-watch": "NODE_ENV=test yarn run test --watch --notify",
-    "test-cover": "NODE_ENV=test yarn run test --coverage",
-    "test-coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
-    "precommit": "lint-staged",
-    "postcommit": "git update-index --again",
+    "test-watch": "yarn run test --watch --notify",
+    "test-cover": "yarn run test --coverage",
+    "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
     "publish": "npm puublish --access=public",
     "dev-build": "yarn release --env development",
     "prod-build": "yarn release --env production",
@@ -39,18 +39,27 @@
     "react"
   ],
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
-      "yarn run lint:fix",
-      "git add"
+    "ignore": [
+        "package.json"
     ],
-    "*.(js|jsx)": [
-      "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
-      "git add"
-    ],
-    "*.(json|css|scss|md)|.(babelrc|eslintrc)": [
-      "git add"
-    ]
+    "linters": {
+        "*.{ts,tsx,js,jsx}": [
+            "node_modules/.bin/eslint --max-warnings=0",
+            "yarn run lint:fix",
+            "git add"
+        ],
+        "*.(js|jsx)": [
+            "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
+            "git add"
+        ],
+        "*.(json|md)": [
+            "git add"
+        ],
+        "*.{css,less,styl,scss,sass,sss}": [
+            "stylelint --fix",
+            "git add --force"
+        ]
+      }
   },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
