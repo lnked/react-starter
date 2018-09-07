@@ -1,39 +1,9 @@
-/* eslint-disable */
-/* tslint:disable:max-line-length */
-
-// import { routes } from 'pages/main-page'
-// import { routes } from 'pages/example-page'
-// import { routes } from 'pages/nomatch-page'
-
-import { loadComponent } from 'utils'
-
-export const MainPage = loadComponent(
-    () => import(/* webpackMode: "lazy", webpackChunkName: "MainPage" */ 'pages/main-page')
-)
-
-export const ExamplePage = loadComponent(
-    () => import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "ExamplePage" */ 'pages/example-page')
-)
-
-export const NoMatchPage = loadComponent(
-    () => import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ 'pages/nomatch-page')
-)
-
-const locale: string = '/:locale(ru|en|de)'
+import { routes as MainRoute } from 'pages/main-page/route'
+import { routes as ExampleRoute } from 'pages/example-page/route'
+import { routes as NoMatchRoute } from 'pages/nomatch-page/route'
 
 export const routes: any = [
-    {
-        exact: true,
-        path: `${locale}?`,
-        component: MainPage
-    },
-    {
-        path: `${locale}/example`,
-        component: ExamplePage,
-    },
-    {
-        status: 404,
-        statusCode: 404,
-        component: NoMatchPage
-    }
+    ...MainRoute,
+    ...ExampleRoute,
+    ...NoMatchRoute,
 ]

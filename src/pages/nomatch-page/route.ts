@@ -1,0 +1,17 @@
+/* eslint-disable */
+/* tslint:disable:max-line-length */
+
+import { loadComponent } from 'utils'
+
+export const routes: Route[] = [
+    {
+        path: '(.*)',
+        status: 404,
+        statusCode: 404,
+        component: loadComponent(() =>
+            import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "NoMatch" */ './')
+        ),
+        title: 'Error Page',
+        description: 'React starter kit',
+    }
+]

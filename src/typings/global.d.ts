@@ -14,6 +14,16 @@ interface Reflect {
     prop: string;
 }
 
+interface Route {
+    path: string,
+    component: any,
+    exact?: boolean,
+    title?: string,
+    status?: number,
+    statusCode?: number,
+    description?: string,
+}
+
 interface EventTarget {
     value: string;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
