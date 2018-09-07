@@ -1,0 +1,26 @@
+@import 'styles/_global.scss';
+
+.progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lime;;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute 0;
+    margin: auto;
+    color: $c-black;
+    opacity: .6;
+    font-size: 1.2rem;
+}
+
+.circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}

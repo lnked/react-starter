@@ -10,7 +10,7 @@ export const routes: Route[] = [
         exact: true,
         path: `${locale}?`,
         component: loadComponent(() =>
-            import(/* webpackMode: "lazy", webpackChunkName: "MainPage" */ './')
+            import(/* webpackMode: "lazy", webpackChunkName: "main.page" */ './')
         ),
         title: 'Main Page',
         description: 'React starter kit',

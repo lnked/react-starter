@@ -5,7 +5,7 @@ import { classes } from 'helpers'
 
 export interface P {
     type?: 'grid' | 'list';
-    children?: JSX.Element[];
+    children?: JSX.Element[] | JSX.Element | string;
     className?: string;
 }
 
@@ -14,9 +14,9 @@ const cx = classes.bind(css)
 export const Group = ({ type = 'grid', children = [], className = '' }: P) => {
     let items: any = null
 
-    const division = children.length % 4
+    const division = children && Object.keys(children).length % 4
 
-    if (children && children.length) {
+    if (children && Object.keys(children).length) {
         items = React.Children.map(children, (card: any) =>
             React.cloneElement(<div>{card}</div>, {
                 className: cx(css.item),

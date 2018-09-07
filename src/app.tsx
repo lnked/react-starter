@@ -15,7 +15,7 @@ import { createStore } from 'store'
 import { routes } from 'settings/routes'
 
 const initialState = (window && window.__INITIAL_STATE__) || {}
-const store = createStore(history, initialState)
+const stores = createStore(history, initialState)
 
 export class App extends React.Component<void, void> {
     renderDevTool = () => {
@@ -29,7 +29,7 @@ export class App extends React.Component<void, void> {
 
     render () {
         return (
-            <Provider {...store}>
+            <Provider {...stores}>
                 <ErrorBoundary>
                     <Router>
                         <CoreLayout>

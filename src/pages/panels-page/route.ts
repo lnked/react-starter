@@ -3,15 +3,15 @@
 
 import { loadComponent } from 'utils'
 
+const locale: string = '/:locale(ru|en|de)'
+
 export const routes: Route[] = [
     {
-        path: '(.*)',
-        status: 404,
-        statusCode: 404,
+        path: `${locale}/panels`,
         component: loadComponent(() =>
-            import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "nomatch.page */ './')
+            import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "panels.page" */ './')
         ),
-        title: 'Error Page',
+        title: 'Panels Page',
         description: 'React starter kit',
     }
 ]
