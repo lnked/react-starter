@@ -11,7 +11,7 @@ export const routes: Route[] = [
         component: loadComponent(() =>
             import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "nomatch.page */ './')
         ),
-        title: 'Error Page',
+        title: 'Error Page title',
         description: 'React starter kit',
     }
 ]

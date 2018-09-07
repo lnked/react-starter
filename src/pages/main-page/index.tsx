@@ -14,10 +14,6 @@ const cx = classes.bind(css)
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
 class MainPage extends React.Component<any, any> {
-    static componentDidMount () {
-        document.title = 'Main Page'
-    }
-
     render () {
         return (
             <div className={css.content}>

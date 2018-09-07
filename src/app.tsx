@@ -41,8 +41,8 @@ export class App extends React.Component<void, void> {
                                     description,
                                     component: Component,
                                     ...rest
-                                }: any, index: number) => (
-                                    <Route key={index} {...rest} render={(props: any) => (
+                                }: any) => (
+                                    <Route key={rest.path} {...rest} render={(props: any) => (
                                         <React.Fragment>
                                             <Helmet
                                                 title={title}
@@ -50,6 +50,10 @@ export class App extends React.Component<void, void> {
                                                     {
                                                         name: 'description',
                                                         content: description,
+                                                    },
+                                                    {
+                                                        name: 'keywords',
+                                                        content: 'React, starter, pwa',
                                                     },
                                                 ]}
                                             />

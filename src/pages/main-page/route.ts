@@ -12,7 +12,7 @@ export const routes: Route[] = [
         component: loadComponent(() =>
             import(/* webpackMode: "lazy", webpackChunkName: "main.page" */ './')
         ),
-        title: 'Main Page',
+        title: 'Main Page title',
         description: 'React starter kit',
     }
 ]

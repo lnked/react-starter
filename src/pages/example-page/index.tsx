@@ -27,8 +27,6 @@ class ExamplePage extends React.Component<any, any> {
     }
 
     componentDidMount () {
-        document.title = 'Example Page'
-
         this.loadData()
     }
 

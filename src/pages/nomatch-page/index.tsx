@@ -12,8 +12,6 @@ export interface P {
 const cx = classes.bind(css)
 
 export const NoMatchPage = ({ location }: P) => {
-    document.title = '404 Not Found'
-
     return (
         <div className={cx(css.error)}>
             <div className={cx(css.figure)}>
