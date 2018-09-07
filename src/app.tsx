@@ -41,14 +41,18 @@ export class App extends React.Component<void, void> {
                                     description,
                                     component: Component,
                                     ...rest
-                                }: any, idx: number) => (
-                                    // <Route key={index} {...rest} />
-                                    <Route key={idx} {...rest} render={(props: any) => (
+                                }: any, index: number) => (
+                                    <Route key={index} {...rest} render={(props: any) => (
                                         <React.Fragment>
-                                            <Helmet>
-                                                <title>{title}</title>
-                                                <meta name="description" content={description} />
-                                            </Helmet>
+                                            <Helmet
+                                                title={title}
+                                                meta={[
+                                                    {
+                                                        name: 'description',
+                                                        content: description,
+                                                    },
+                                                ]}
+                                            />
 
                                             <Component {...props}/>
                                         </React.Fragment>
