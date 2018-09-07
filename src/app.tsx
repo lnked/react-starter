@@ -38,6 +38,7 @@ export class App extends React.Component<void, void> {
                             <Switch>
                                 {routes && routes.map(({
                                     title,
+                                    keywords,
                                     description,
                                     component: Component,
                                     ...rest
@@ -53,7 +54,7 @@ export class App extends React.Component<void, void> {
                                                     },
                                                     {
                                                         name: 'keywords',
-                                                        content: 'React, starter, pwa',
+                                                        content: keywords,
                                                     },
                                                 ]}
                                             />

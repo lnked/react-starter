@@ -21,6 +21,8 @@ interface Route {
     title?: string,
     status?: number,
     statusCode?: number,
+    robots?: string,
+    keywords?: string,
     description?: string,
 }
 
