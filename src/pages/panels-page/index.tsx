@@ -20,8 +20,10 @@ class PanelsPage extends React.Component<any, S> {
         progress: 0,
     }
 
+    interval: any[] = []
+
     componentDidMount () {
-        const interval = setInterval(() => {
+        this.interval[1] = setInterval(() => {
             this.setState((state: S) => {
                 return {
                     progress: state.progress + 1,
@@ -29,9 +31,13 @@ class PanelsPage extends React.Component<any, S> {
             })
 
             if (this.state.progress === 100) {
-                clearInterval(interval)
+                clearInterval(this.interval[1])
             }
         }, 100)
+    }
+
+    componentWillUnMount () {
+        clearInterval(this.interval[1])
     }
 
     render () {
