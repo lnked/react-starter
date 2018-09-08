@@ -62,7 +62,7 @@ export default class FormSimpleWithValidation extends React.Component {
                 <br />
                 <label htmlFor="password">{touched.password ? errors.password : ''}</label>
                 <br />
-                <button type='submite'>Submite</button>
+                <button type="submite">Submite</button>
             </form>
         )
     }

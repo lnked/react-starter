@@ -25,7 +25,7 @@ export default class FormSimple extends React.Component {
                 <br />
                 <input id="password" type="password" />
                 <br />
-                <button type='submite'>Submite</button>
+                <button type="submite">Submite</button>
             </form>
         )
     }
