@@ -40,26 +40,26 @@
   ],
   "lint-staged": {
     "ignore": [
-        "package.json"
+      "package.json"
     ],
     "linters": {
-        "*.{ts,tsx,js,jsx}": [
-            "node_modules/.bin/eslint --max-warnings=0",
-            "yarn run lint:fix",
-            "git add"
-        ],
-        "*.(js|jsx)": [
-            "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
-            "git add"
-        ],
-        "*.(json|md)": [
-            "git add"
-        ],
-        "*.{css,less,styl,scss,sass,sss}": [
-            "stylelint --fix",
-            "git add --force"
-        ]
-      }
+      "*.{ts,tsx,js,jsx}": [
+        "node_modules/.bin/eslint --max-warnings=0",
+        "yarn run lint:fix",
+        "git add"
+      ],
+      "*.(js|jsx)": [
+        "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
+        "git add"
+      ],
+      "*.(json|md)": [
+        "git add"
+      ],
+      "*.{css,less,styl,scss,sass,sss}": [
+        "stylelint --fix",
+        "git add --force"
+      ]
+    }
   },
   "repository": {
     "url": "git+https://github.com/lnked/react-template.git",
@@ -129,7 +129,7 @@
     "@types/classnames": "2.2.6",
     "@types/enzyme": "3.1.13",
     "@types/history": "4.7.0",
-    "@types/jest": "23.3.1",
+    "@types/jest": "23.3.2",
     "@types/jsdom": "11.0.6",
     "@types/lodash": "4.14.116",
     "@types/node": "10.9.4",
@@ -204,7 +204,7 @@
     "image-trace-loader": "0.1.0",
     "image-webpack-loader": "4.3.1",
     "jest": "23.5.0",
-    "jest-styled-components": "6.1.1",
+    "jest-styled-components": "6.2.0",
     "json-loader": "0.5.7",
     "lint-staged": "7.2.2",
     "markdown-loader": "4.0.0",
@@ -276,7 +276,7 @@
     "react-hot-loader": "4.3.6",
     "react-test-renderer": "16.5.0",
     "replace-bundle-webpack-plugin": "1.0.0",
-    "resolve-url-loader": "2.3.0",
+    "resolve-url-loader": "2.3.1",
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
     "script-ext-html-webpack-plugin": "2.0.1",

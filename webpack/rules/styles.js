@@ -28,7 +28,7 @@ const cssConfig = [
     {
         loader: 'css-loader',
         options: {
-            importLoaders: 2,
+            importLoaders: 3,
             modules: true,
             camelCase: true,
             sourceMap: define.rs_sourceMap,
@@ -36,9 +36,9 @@ const cssConfig = [
             localIdentName: define.rs_development ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:6]',
         },
     },
-    // {
-    //     loader: 'resolve-url-loader'
-    // }
+    {
+        loader: 'resolve-url-loader'
+    }
 ]
 
 const usesConfig = []
