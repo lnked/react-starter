@@ -9,7 +9,7 @@ export const routes: Route[] = [
     {
         path: `${locale}/panels`,
         component: loadComponent(() =>
-            import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "panels.page" */ './')
+            import(/* webpackChunkName: "panels.page" */ './')
         ),
         title: 'Panels Page title',
         description: 'React starter kit',
