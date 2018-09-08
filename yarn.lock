@@ -18,6 +18,12 @@
   optionalDependencies:
     chokidar "^2.0.3"
 
+"@babel/code-frame@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/code-frame/-/code-frame-7.0.0-beta.44.tgz#2a02643368de80916162be70865c97774f3adbd9"
+  dependencies:
+    "@babel/highlight" "7.0.0-beta.44"
+
 "@babel/code-frame@7.0.0-beta.54", "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.54"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.54.tgz#0024f96fdf7028a21d68e273afd4e953214a1ead"
@@ -73,6 +79,16 @@
     resolve "^1.3.2"
     semver "^5.4.1"
     source-map "^0.5.0"
+
+"@babel/generator@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/generator/-/generator-7.0.0-beta.44.tgz#c7e67b9b5284afcf69b309b50d7d37f3e5033d42"
+  dependencies:
+    "@babel/types" "7.0.0-beta.44"
+    jsesc "^2.5.1"
+    lodash "^4.2.0"
+    source-map "^0.5.0"
+    trim-right "^1.0.1"
 
 "@babel/generator@7.0.0-beta.54":
   version "7.0.0-beta.54"
@@ -147,6 +163,14 @@
     "@babel/traverse" "^7.0.0"
     "@babel/types" "^7.0.0"
 
+"@babel/helper-function-name@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.0.0-beta.44.tgz#e18552aaae2231100a6e485e03854bc3532d44dd"
+  dependencies:
+    "@babel/helper-get-function-arity" "7.0.0-beta.44"
+    "@babel/template" "7.0.0-beta.44"
+    "@babel/types" "7.0.0-beta.44"
+
 "@babel/helper-function-name@7.0.0-beta.54":
   version "7.0.0-beta.54"
   resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.0.0-beta.54.tgz#307875507a1eda2482a09a9a4df6a25632ffb34b"
@@ -170,6 +194,12 @@
     "@babel/helper-get-function-arity" "^7.0.0"
     "@babel/template" "^7.0.0"
     "@babel/types" "^7.0.0"
+
+"@babel/helper-get-function-arity@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0-beta.44.tgz#d03ca6dd2b9f7b0b1e6b32c56c72836140db3a15"
+  dependencies:
+    "@babel/types" "7.0.0-beta.44"
 
 "@babel/helper-get-function-arity@7.0.0-beta.54":
   version "7.0.0-beta.54"
@@ -267,6 +297,12 @@
     "@babel/template" "^7.0.0"
     "@babel/types" "^7.0.0"
 
+"@babel/helper-split-export-declaration@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.0.0-beta.44.tgz#c0b351735e0fbcb3822c8ad8db4e583b05ebd9dc"
+  dependencies:
+    "@babel/types" "7.0.0-beta.44"
+
 "@babel/helper-split-export-declaration@7.0.0-beta.54":
   version "7.0.0-beta.54"
   resolved "https://registry.yarnpkg.com/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.0.0-beta.54.tgz#89cd8833c95481a0827ac6a1bfccddb92b75a109"
@@ -309,6 +345,14 @@
     "@babel/template" "^7.0.0"
     "@babel/traverse" "^7.0.0"
     "@babel/types" "^7.0.0"
+
+"@babel/highlight@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/highlight/-/highlight-7.0.0-beta.44.tgz#18c94ce543916a80553edcdcf681890b200747d5"
+  dependencies:
+    chalk "^2.0.0"
+    esutils "^2.0.2"
+    js-tokens "^3.0.0"
 
 "@babel/highlight@7.0.0-beta.54":
   version "7.0.0-beta.54"
@@ -870,6 +914,15 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/template@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
+  dependencies:
+    "@babel/code-frame" "7.0.0-beta.44"
+    "@babel/types" "7.0.0-beta.44"
+    babylon "7.0.0-beta.44"
+    lodash "^4.2.0"
+
 "@babel/template@7.0.0-beta.54":
   version "7.0.0-beta.54"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.54.tgz#d5b0d2d2d55c0e78b048c61a058f36cfd7d91af3"
@@ -895,6 +948,21 @@
     "@babel/code-frame" "^7.0.0"
     "@babel/parser" "^7.0.0"
     "@babel/types" "^7.0.0"
+
+"@babel/traverse@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/traverse/-/traverse-7.0.0-beta.44.tgz#a970a2c45477ad18017e2e465a0606feee0d2966"
+  dependencies:
+    "@babel/code-frame" "7.0.0-beta.44"
+    "@babel/generator" "7.0.0-beta.44"
+    "@babel/helper-function-name" "7.0.0-beta.44"
+    "@babel/helper-split-export-declaration" "7.0.0-beta.44"
+    "@babel/types" "7.0.0-beta.44"
+    babylon "7.0.0-beta.44"
+    debug "^3.1.0"
+    globals "^11.1.0"
+    invariant "^2.2.0"
+    lodash "^4.2.0"
 
 "@babel/traverse@7.0.0-rc.1":
   version "7.0.0-rc.1"
@@ -937,6 +1005,14 @@
     debug "^3.1.0"
     globals "^11.1.0"
     lodash "^4.17.5"
+
+"@babel/types@7.0.0-beta.44":
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/@babel/types/-/types-7.0.0-beta.44.tgz#6b1b164591f77dec0a0342aca995f2d046b3a757"
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.2.0"
+    to-fast-properties "^2.0.0"
 
 "@babel/types@7.0.0-beta.54":
   version "7.0.0-beta.54"
@@ -1946,6 +2022,17 @@ babel-eslint@9.0.0:
     eslint-scope "3.7.1"
     eslint-visitor-keys "^1.0.0"
 
+babel-eslint@^8.2.3:
+  version "8.2.6"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.6.tgz#6270d0c73205628067c0f7ae1693a9e797acefd9"
+  dependencies:
+    "@babel/code-frame" "7.0.0-beta.44"
+    "@babel/traverse" "7.0.0-beta.44"
+    "@babel/types" "7.0.0-beta.44"
+    babylon "7.0.0-beta.44"
+    eslint-scope "3.7.1"
+    eslint-visitor-keys "^1.0.0"
+
 babel-generator@^6.18.0, babel-generator@^6.26.0:
   version "6.26.1"
   resolved "https://registry.yarnpkg.com/babel-generator/-/babel-generator-6.26.1.tgz#1844408d3b8f0d35a404ea7ac180f087a601bd90"
@@ -2348,6 +2435,10 @@ babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.24.1, babel-types@^6.26.
     esutils "^2.0.2"
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
+
+babylon@7.0.0-beta.44:
+  version "7.0.0-beta.44"
+  resolved "http://registry.npmjs.org/babylon/-/babylon-7.0.0-beta.44.tgz#89159e15e6e30c5096e22d738d8c0af8a0e8ca1d"
 
 babylon@^6.18.0:
   version "6.18.0"
@@ -8815,7 +8906,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-"lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@~4.17.10:
+"lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.3.0, lodash@~4.17.10:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -10670,7 +10761,14 @@ postcss-custom-properties@^6.1.0:
     balanced-match "^1.0.0"
     postcss "^6.0.18"
 
-postcss-custom-selectors@4.0.1, postcss-custom-selectors@^4.0.1:
+postcss-custom-selectors@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-selectors/-/postcss-custom-selectors-5.0.0.tgz#709741ecd2ec180ab432a63164c612af558e7104"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-selector-parser "^5.0.0-rc.3"
+
+postcss-custom-selectors@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/postcss-custom-selectors/-/postcss-custom-selectors-4.0.1.tgz#781382f94c52e727ef5ca4776ea2adf49a611382"
   dependencies:
@@ -11348,6 +11446,15 @@ postcss-selector-parser@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-4.0.0.tgz#50c6570f40579036d8e63f23e6c0626fe5743527"
   dependencies:
+    cssesc "^1.0.1"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+
+postcss-selector-parser@^5.0.0-rc.3:
+  version "5.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-5.0.0-rc.3.tgz#c4525dcc8eb90166c53dcbf0cb9317ceff5a15b5"
+  dependencies:
+    babel-eslint "^8.2.3"
     cssesc "^1.0.1"
     indexes-of "^1.0.1"
     uniq "^1.0.1"
