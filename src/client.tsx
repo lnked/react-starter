@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { render } from 'react-dom'
+import * as ReactDOM from 'react-dom'
 import { App } from './app'
-import 'styles/client.scss'
+// import * as serviceWorker from './serviceWorker'
 
 const appRoot = document.getElementById('app')
 
@@ -10,7 +10,7 @@ if (appRoot == null) {
 }
 
 const renderApp = () => {
-    render(<App />, appRoot)
+    ReactDOM.render(<App />, appRoot)
     document.body.classList.remove('loading')
 }
 
@@ -25,3 +25,8 @@ if (process.env.NODE_ENV === 'development' && module.hot) {
 }
 
 renderApp()
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+// serviceWorker.unregister()

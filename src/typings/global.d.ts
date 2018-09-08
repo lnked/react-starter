@@ -5,7 +5,7 @@ declare global {
     type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
 }
 
-interface Reflect {
+declare interface Reflect {
     get: (target: any, propertyKey: any) => void;
     has: (target: any, propertyKey: any) => boolean;
     apply: (target: any, thisArgument: any, argumentsList: any[]) => void;
@@ -14,7 +14,7 @@ interface Reflect {
     prop: string;
 }
 
-interface Route {
+declare interface Route {
     path: string,
     component: any,
     exact?: boolean,
@@ -26,14 +26,14 @@ interface Route {
     description?: string,
 }
 
-interface EventTarget {
+declare interface EventTarget {
     value: string;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
     dispatchEvent(evt: Event): boolean;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 
-interface SyntheticEvent<T> {
+declare interface SyntheticEvent<T> {
     bubbles: boolean;
     cancelable: boolean;
     currentTarget: EventTarget & T;
@@ -46,6 +46,11 @@ interface SyntheticEvent<T> {
     type: string;
     preventDefault(): void;
     stopPropagation(): void;
+}
+
+declare interface ServiceWorkerConfig {
+    onSuccess: (registration: ServiceWorkerRegistration) => void
+    onUpdate: (registration: ServiceWorkerRegistration) => void
 }
 
 declare const __DEV__: boolean;
