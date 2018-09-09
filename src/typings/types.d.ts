@@ -16,14 +16,19 @@ declare namespace Express {
     }
 }
 
-declare module "*.svg" {
+declare module '*.svg' {
     const content: any;
     export default content;
 }
 
-declare module "*.png" {
+declare module '*.png' {
     const content: any;
     export default content;
+}
+
+declare module '*.scss' {
+    const styles: any;
+    export = styles;
 }
 
 declare module '*.scss' {

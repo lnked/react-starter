@@ -68,12 +68,6 @@ declare const require: {
     ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
 };
 
-// for style loader
-declare module '*.scss' {
-    const styles: any;
-    export = styles;
-}
-
 // ... existing global typing defs
 declare module 'tslib' {
     export function __extends(d: Func, b: Func): void;
@@ -84,18 +78,4 @@ declare module 'tslib' {
     export function __metadata(metadataKey: any, metadataValue: any): Func;
     export function __awaiter(thisArg: any, _arguments: any, P: Func, generator: Func): any;
     export function __generator(thisArg: any, body: Func): any;
-}
-
-declare namespace JSX {
-    export interface IntrinsicElements {
-        [elemName: string]: any;
-    }
-
-    export interface ElementClass {
-        render: any;
-    }
-
-    export interface ElementChildrenAttribute {
-        children: {};
-    }
 }
