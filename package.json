@@ -245,7 +245,7 @@
     "postcss-minify-selectors": "4.0.0",
     "postcss-mixins": "6.2.0",
     "postcss-mq-keyframes": "0.3.0",
-    "postcss-nested": "4.0.0",
+    "postcss-nested": "4.1.0",
     "postcss-nesting": "6.0.0",
     "postcss-normalize-positions": "4.0.0",
     "postcss-normalize-repeat-style": "4.0.0",

@@ -11111,9 +11111,9 @@ postcss-mq-keyframes@0.3.0:
   dependencies:
     postcss "^5.0.19"
 
-postcss-nested@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-4.0.0.tgz#c5d0f8d04b661d5b4cb041e7f8a668accafdfb4a"
+postcss-nested@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-4.1.0.tgz#271da8a047f2ee378139410ae2400b1c67d0bf30"
   dependencies:
     postcss "^7.0.2"
     postcss-selector-parser "^3.1.1"
