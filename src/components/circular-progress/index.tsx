@@ -5,14 +5,15 @@ import { classes } from 'helpers'
 
 export interface P {
     color: string;
-    radius: number;
     stroke: number;
+    radius?: number;
+    content?: string | number;
     progress: number;
 }
 
 const cx = classes.bind(css)
 
-export const CircularProgress = ({ color, radius, stroke, progress }: P) => {
+export const CircularProgress = ({ color, radius = 60, stroke, content, progress }: P) => {
     const normalizedRadius = radius - stroke * 2
     const circumference = normalizedRadius * 2 * Math.PI
 
@@ -20,7 +21,7 @@ export const CircularProgress = ({ color, radius, stroke, progress }: P) => {
 
     return (
         <div className={cx(css.progress)}>
-            <div className={cx(css.value)}>{progress}</div>
+            <div className={cx(css.value)}>{content}</div>
 
             <svg
                 height={radius * 2}
