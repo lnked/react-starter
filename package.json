@@ -294,7 +294,7 @@
     "svg-sprite-html-webpack": "2.1.0",
     "svg-url-loader": "2.3.2",
     "svgo": "1.0.5",
-    "svgo-loader": "2.1.0",
+    "svgo-loader": "2.2.0",
     "sw-precache-webpack-plugin": "0.11.5",
     "ts-jest": "23.1.4",
     "tslib": "1.9.3",

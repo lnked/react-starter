@@ -13929,10 +13929,11 @@ svg2png@~3.0.1:
     pn "^1.0.0"
     yargs "^3.31.0"
 
-svgo-loader@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-2.1.0.tgz#e86c0ca08c1149bb1fb4b3a469dabac847f5e24a"
+svgo-loader@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-2.2.0.tgz#f29eb43efc14c34a15c4023f56ba12775ccdbe5f"
   dependencies:
+    js-yaml "^3.12.0"
     loader-utils "^1.0.3"
 
 svgo@1.0.5, svgo@^1.0.0, svgo@^1.0.5:
