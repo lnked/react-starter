@@ -28,6 +28,10 @@ declare module 'settings/routes'
 declare module 'settings/firebase'
 declare module 'settings/constants'
 
+declare module 'firebase';
+
+declare module 'classNames';
+
 declare module 'mobx';
 declare module 'mobx-react';
 declare module 'mobx-logger';
