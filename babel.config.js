@@ -1,47 +1,31 @@
-module.exports = function (api) {
-    const test = api.env('test')
-    const production = api.env('production')
-    const development = api.env('development')
+const imports = [
+    {
+        libraryName: 'core-js',
+        libraryDirectory: 'es6',
+        camel2DashComponentName: true,
+    },
+    {
+        libraryName: 'lodash',
+        libraryDirectory: '_',
+        camel2DashComponentName: false,
+    },
+    {
+        libraryName: 'react-router',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false,
+    },
+    {
+        libraryName: 'react-router-dom',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false,
+    },
+]
 
-    const imports = [
-        {
-            libraryName: 'core-js',
-            libraryDirectory: 'es6',
-            camel2DashComponentName: true,
-        },
-        {
-            libraryName: 'lodash',
-            libraryDirectory: '_',
-            camel2DashComponentName: false,
-        },
-        {
-            libraryName: 'react-router',
-            libraryDirectory: 'es',
-            camel2DashComponentName: false,
-        },
-        {
-            libraryName: 'react-router-dom',
-            libraryDirectory: 'es',
-            camel2DashComponentName: false,
-        },
-    ]
-
-    const loose = true
-    const legacy = true
-    const useBuiltIns = 'usage'
-
-    const plugins = []
+// ///////////////////////////////////////////////////////////
+// //////////////   PRESETS   ////////////////////////////////
+// ///////////////////////////////////////////////////////////
+const getPresets = ({ loose, useBuiltIns, production }) => {
     const presets = []
-
-    const overrides = []
-    const ignore = []
-
-    const sourceMaps = development
-
-    // ///////////////////////////////////////////////////////////
-    // //////////////   PRESETS   ////////////////////////////////
-    // ///////////////////////////////////////////////////////////
-
     presets.push([
         '@babel/env',
         {
@@ -60,21 +44,14 @@ module.exports = function (api) {
     presets.push('@babel/preset-react')
     presets.push('@babel/preset-typescript')
 
-    // ///////////////////////////////////////////////////////////
-    // //////////////   PLUGINS   ////////////////////////////////
-    // ///////////////////////////////////////////////////////////
+    return presets
+}
 
-    imports.map(item => {
-        plugins.push([
-            'import',
-            {
-                libraryName: item.libraryName,
-                libraryDirectory: item.libraryDirectory,
-                camel2DashComponentName: item.camel2DashComponentName,
-            },
-            item.libraryName,
-        ])
-    })
+// ///////////////////////////////////////////////////////////
+// //////////////   PLUGINS   ////////////////////////////////
+// ///////////////////////////////////////////////////////////
+const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
+    const plugins = []
 
     plugins.push(['@babel/plugin-proposal-decorators', { legacy }])
     plugins.push(['@babel/plugin-proposal-class-properties', { loose }])
@@ -95,6 +72,7 @@ module.exports = function (api) {
             loose,
         },
     ])
+
     plugins.push('@babel/plugin-proposal-json-strings')
 
     plugins.push([
@@ -122,9 +100,26 @@ module.exports = function (api) {
 
     plugins.push(development && 'react-hot-loader/babel')
 
-    // /////////////////////////////////////////////////////////////
-    // ////////////////   IGNORE   /////////////////////////////////
-    // /////////////////////////////////////////////////////////////
+    imports.map(item => {
+        plugins.push([
+            'import',
+            {
+                libraryName: item.libraryName,
+                libraryDirectory: item.libraryDirectory,
+                camel2DashComponentName: item.camel2DashComponentName,
+            },
+            item.libraryName,
+        ])
+    })
+
+    return plugins
+}
+
+// /////////////////////////////////////////////////////////////
+// ////////////////   IGNORE   /////////////////////////////////
+// /////////////////////////////////////////////////////////////
+const getIgnore = ({ test, production }) => {
+    const ignore = []
 
     ignore.push('packages/*/test/fixtures')
     ignore.push('packages/*/lib')
@@ -134,6 +129,26 @@ module.exports = function (api) {
     ignore.push(!test && '**/__tests__')
     // ignore.push('packages/babel-standalone/babel.js')
     // ignore.push('packages/babel-preset-env-standalone/babel-preset-env.js')
+
+    return ignore
+}
+
+module.exports = function (api) {
+    const test = api.env('test')
+    const production = api.env('production')
+    const development = api.env('development')
+
+    const loose = true
+    const legacy = true
+    const useBuiltIns = 'usage'
+
+    const presets = getPresets({ loose, useBuiltIns, production })
+    const plugins = getPlugins({ loose, legacy, useBuiltIns, test, development, production })
+    const ignore = getIgnore({ test, production })
+
+    const overrides = []
+
+    const sourceMaps = development
 
     return {
         sourceMaps,

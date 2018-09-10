@@ -18,8 +18,6 @@ const plugins = [
 
     // don't spit out any errors in compiled assets
     new webpack.NoEmitOnErrorsPlugin(),
-
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 ]
 
 module.exports.config = plugins

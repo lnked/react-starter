@@ -49,6 +49,8 @@ const plugins = [
     // /(en-gb|en|ru)/
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /^\.\/(ru)$/),
 
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+
     new webpack.LoaderOptionsPlugin({
         debug: define.rs_development,
         minimize: define.rs_production,
