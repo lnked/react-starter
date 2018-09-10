@@ -15,15 +15,16 @@ declare interface Reflect {
 }
 
 declare interface Route {
-    path: string,
-    component: any,
-    exact?: boolean,
-    title?: string,
-    status?: number,
-    statusCode?: number,
-    robots?: string,
-    keywords?: string,
-    description?: string,
+    path: string;
+    component: any;
+    exact?: boolean;
+    title?: string;
+    status?: number;
+    statusCode?: number;
+    robots?: string;
+    keywords?: string;
+    description?: string;
+    rest: any;
 }
 
 declare interface EventTarget {

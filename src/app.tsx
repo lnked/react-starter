@@ -30,6 +30,32 @@ export class App extends React.Component<void, void> {
         return null
     }
 
+    renderRoute = ({ title, keywords, description, component: Component, ...rest }: Route) => {
+        console.log(title, keywords, description, Component, rest)
+
+        return (
+            <Route key={rest.path} {...rest} render={(props: any) => (
+                <React.Fragment>
+                    <Helmet
+                        title={title}
+                        meta={[
+                            {
+                                name: 'description',
+                                content: description,
+                            },
+                            {
+                                name: 'keywords',
+                                content: keywords,
+                            },
+                        ]}
+                    />
+
+                    <Component {...props} />
+                </React.Fragment>
+            )}/>
+        )
+    }
+
     render () {
         return (
             <Provider {...stores}>
@@ -37,33 +63,7 @@ export class App extends React.Component<void, void> {
                     <Router>
                         <CoreLayout>
                             <Switch>
-                                {routes && routes.map(({
-                                    title,
-                                    keywords,
-                                    description,
-                                    component: Component,
-                                    ...rest
-                                }: any) => (
-                                    <Route key={rest.path} {...rest} render={(props: any) => (
-                                        <React.Fragment>
-                                            <Helmet
-                                                title={title}
-                                                meta={[
-                                                    {
-                                                        name: 'description',
-                                                        content: description,
-                                                    },
-                                                    {
-                                                        name: 'keywords',
-                                                        content: keywords,
-                                                    },
-                                                ]}
-                                            />
-
-                                            <Component {...props}/>
-                                        </React.Fragment>
-                                    )}/>
-                                ))}
+                                {routes && routes.map(this.renderRoute)}
                             </Switch>
 
                             {this.renderDevTool()}

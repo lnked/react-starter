@@ -14,6 +14,8 @@ declare interface HTMLInputElement {
 declare namespace JSX {
     export interface Element {}
 
+    export interface ErrorBoundary {}
+
     export interface IntrinsicElements { div: any; }
 
     // export interface IntrinsicElements {
