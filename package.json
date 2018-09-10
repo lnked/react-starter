@@ -169,7 +169,7 @@
     "css-mqpacker": "7.0.0",
     "css-url-relative-plugin": "1.0.0",
     "cssnano": "4.1.0",
-    "cucumber": "4.2.1",
+    "cucumber": "5.0.0",
     "dotenv": "6.0.0",
     "enzyme": "3.6.0",
     "enzyme-adapter-react-16": "1.5.0",
