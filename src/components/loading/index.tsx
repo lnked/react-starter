@@ -15,12 +15,8 @@ export const Loading = ({ error, loading, pastSpinnerDelay, timedOut, pastDelay 
         return <div>Error!</div>
     }
 
-    if (loading || pastDelay) {
+    if (loading || pastDelay || pastSpinnerDelay) {
         return <Spinner />
-    }
-
-    if (pastSpinnerDelay) {
-        return <div>pastSpinnerDelay...</div>
     }
 
     if (timedOut) {
