@@ -88,7 +88,7 @@
     "loadable-components": "2.2.3",
     "mobx": "5.1.0",
     "mobx-logger": "0.7.1",
-    "mobx-react": "5.2.6",
+    "mobx-react": "5.2.7",
     "mobx-react-router": "4.0.5",
     "react": "16.5.0",
     "react-animated-css": "1.0.4",

@@ -9409,9 +9409,9 @@ mobx-react-router@4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/mobx-react-router/-/mobx-react-router-4.0.5.tgz#5f270eebceb64c256bc2f3c6bde8c5d88e76819e"
 
-mobx-react@5.2.6:
-  version "5.2.6"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.2.6.tgz#1acf6bbbf4f3b52874b91ff4a1d49fc3aae9a5d5"
+mobx-react@5.2.7:
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.2.7.tgz#e43455a71943521cf336263f6484fa6afc77d8b0"
   dependencies:
     hoist-non-react-statics "^2.5.0"
     react-lifecycles-compat "^3.0.2"
