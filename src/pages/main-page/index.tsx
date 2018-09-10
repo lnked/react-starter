@@ -14,14 +14,23 @@ const cx = classes.bind(css)
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
 class MainPage extends React.Component<any, any> {
+    renderIcons = () => {
+        return (
+            <div className={css.iconSet}>
+                <Icon symbol="favorite" className={cx({ icon: true, icon1: true })} />
+                <Icon symbol="favorite" className={cx({ icon: true, icon2: true })} />
+                <Icon symbol="favorite" className={cx({ icon: true, icon3: true })} />
+                <Icon symbol="favorite" className={cx({ icon: true, icon4: true })} />
+                <Icon symbol="favorite" className={cx({ icon: true, icon5: true })} />
+                <Icon symbol="favorite" className={cx({ icon: true, icon6: true })} />
+                <Icon symbol="favorite" className={cx({ icon: true, icon7: true })} />
+            </div>
+        )
+    }
+
     render () {
         return (
             <div className={css.content}>
-                {/*
-                <Title type="secondary" center>Main Page</Title>
-                <Title size="small" type="primary" center>Main Page</Title>
-                <Title size="medium" type="secondary" center>Main Page</Title>
-                */}
                 <p className={css.description}>Отличный сборщик рекат проектов</p>
 
                 <ul className={css.list}>
@@ -33,15 +42,7 @@ class MainPage extends React.Component<any, any> {
 
                 <p>You can use SVG Sprite icons</p>
 
-                <div className={css.iconSet}>
-                    <Icon symbol="favorite" className={cx({ icon: true, icon1: true })} />
-                    <Icon symbol="favorite" className={cx({ icon: true, icon2: true })} />
-                    <Icon symbol="favorite" className={cx({ icon: true, icon3: true })} />
-                    <Icon symbol="favorite" className={cx({ icon: true, icon4: true })} />
-                    <Icon symbol="favorite" className={cx({ icon: true, icon5: true })} />
-                    <Icon symbol="favorite" className={cx({ icon: true, icon6: true })} />
-                    <Icon symbol="favorite" className={cx({ icon: true, icon7: true })} />
-                </div>
+                {this.renderIcons()}
 
                 {/*
                 <div className={css.group}>

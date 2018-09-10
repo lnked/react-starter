@@ -13,15 +13,23 @@ export interface P {
 export const Loading = ({ error, loading, pastSpinnerDelay, timedOut, pastDelay }: P) => {
     if (error) {
         return <div>Error!</div>
-    } else if (loading) {
-        return <div>Loading...</div>
-    } else if (pastSpinnerDelay) {
-        return <div>pastSpinnerDelay...</div>
-    } else if (timedOut) {
-        return <div>Taking a long time...</div>
-    } else if (pastDelay) {
-        return <Spinner />
-    } else {
-        return null
     }
+
+    if (loading) {
+        return <div>Loading...</div>
+    }
+
+    if (pastSpinnerDelay) {
+        return <div>pastSpinnerDelay...</div>
+    }
+
+    if (timedOut) {
+        return <div>Taking a long time...</div>
+    }
+
+    if (pastDelay) {
+        return <Spinner />
+    }
+
+    return null
 }
