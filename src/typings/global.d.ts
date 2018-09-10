@@ -29,7 +29,7 @@ declare interface Route {
 declare interface EventTarget {
     value: string;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
-    dispatchEvent(evt: Event): boolean;
+    dispatchEvent(e: Event): boolean;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 
