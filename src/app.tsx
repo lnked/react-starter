@@ -18,7 +18,7 @@ import { createStore } from 'store'
 import { routes } from 'settings/routes'
 
 const initialState = (window && window.__INITIAL_STATE__) || {}
-const stores = createStore(history, initialState)
+const store = createStore(history, initialState)
 
 export class App extends React.Component<void, void> {
     renderDevTool = () => {
@@ -30,35 +30,31 @@ export class App extends React.Component<void, void> {
         return null
     }
 
-    renderRoute = ({ title, keywords, description, component: Component, ...rest }: Route) => {
-        console.log(title, keywords, description, Component, rest)
+    renderRoute = ({ title, keywords, description, component: Component, ...rest }: Route) => (
+        <Route key={rest.path} {...rest} render={(props: any) => (
+            <React.Fragment>
+                <Helmet
+                    title={title}
+                    meta={[
+                        {
+                            name: 'description',
+                            content: description,
+                        },
+                        {
+                            name: 'keywords',
+                            content: keywords,
+                        },
+                    ]}
+                />
 
-        return (
-            <Route key={rest.path} {...rest} render={(props: any) => (
-                <React.Fragment>
-                    <Helmet
-                        title={title}
-                        meta={[
-                            {
-                                name: 'description',
-                                content: description,
-                            },
-                            {
-                                name: 'keywords',
-                                content: keywords,
-                            },
-                        ]}
-                    />
-
-                    <Component {...props} />
-                </React.Fragment>
-            )}/>
-        )
-    }
+                <Component {...props} />
+            </React.Fragment>
+        )} />
+    )
 
     render () {
         return (
-            <Provider {...stores}>
+            <Provider {...store}>
                 <ErrorBoundary>
                     <Router>
                         <CoreLayout>
