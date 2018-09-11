@@ -1,4 +1,4 @@
-module.exports = function (wallaby) {
+module.exports = (wallaby) => {
     return {
         files: [
             'src/**/*.{js,jsx,ts,tsx}',
