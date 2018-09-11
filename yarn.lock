@@ -42,9 +42,9 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0.tgz#0cb0c0fd2e78a0a2bec97698f549ae9ce0b99515"
+"@babel/core@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.1.tgz#406658caed0e9686fa4feb5c2f3cefb6161c0f41"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/generator" "^7.0.0"
@@ -8592,6 +8592,10 @@ kuler@1.0.x:
   resolved "https://registry.yarnpkg.com/kuler/-/kuler-1.0.0.tgz#904ad31c373b781695854d32be33818bf1d60250"
   dependencies:
     colornames "^1.1.1"
+
+ky@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.2.0.tgz#275f88e42d41ae9cfed8ced9b4518b7e261a3d9a"
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
