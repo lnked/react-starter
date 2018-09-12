@@ -17,6 +17,7 @@
         "sourceMap": true,
         "diagnostics": true,
         "declaration": true,
+        "declarationMap": false,
         "isolatedModules": false,
         "noEmitHelpers": true,
         "importHelpers": true,
