@@ -169,7 +169,7 @@
             "never"
         ],
         "object-curly-spacing": ["error", "always", {
-            "arraysInObjects": false,
+            "arraysInObjects": true,
             "objectsInObjects": true
         }],
         "array-bracket-spacing": ["error", "never", {
