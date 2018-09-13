@@ -1,6 +1,34 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+// function dec(id){
+//     console.log('evaluated', id);
+//     return (target, property, descriptor) => console.log('executed', id);
+// }
+
+// class Example {
+//     @dec(1)
+//     @dec(2)
+//     method(){}
+// }
+
+// function dec(target, prop, descriptor){
+//     let {initializer} = descriptor;
+//     delete descriptor.initializer;
+//     delete descriptor.writable;
+
+//     descriptor.get = function(){
+//         return initializer.call(this);
+//     };
+// }
+
+// var i = 0;
+
+// class Example {
+//     @dec
+//     static prop = i++;
+// }
+
 import { classes } from 'helpers'
 
 import { Icon } from 'components'
