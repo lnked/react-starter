@@ -28,6 +28,7 @@ tsConfig.push({
         errorsAsWarnings: true,
         useTranspileModule: true,
         forceIsolatedModules: false,
+        configFileName: resolve(define.rs_base, 'tsconfig.json'),
     },
 })
 
