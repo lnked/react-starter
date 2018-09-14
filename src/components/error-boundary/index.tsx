@@ -1,25 +1,25 @@
 import * as React from 'react'
 
-export interface P {
+export interface PropsErrorBoundary {
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-export interface S {
-    hasError: boolean;
+export interface StateErrorBoundary {
+    error: boolean;
 }
 
-export class ErrorBoundary extends React.PureComponent<P, S> {
+export class ErrorBoundary extends React.PureComponent<PropsErrorBoundary, StateErrorBoundary> {
     state = {
-        hasError: false,
+        error: false,
     }
 
-    componentDidCatch (error: any, info: any) {
-        this.setState({ hasError: true })
-        console.error({ error }, { info })
+    componentDidCatch (err: any, info: any) {
+        this.setState({ error: true })
+        console.error({ err }, { info })
     }
 
     render () {
-        if (this.state.hasError) {
+        if (this.state.error) {
             return <h1>Something went wrong.</h1>
         }
 

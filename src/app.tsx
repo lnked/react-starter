@@ -2,10 +2,11 @@ import * as React from 'react'
 import 'styles/client.scss'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 
 import { Helmet } from 'react-helmet'
 
-import { history } from 'helpers'
+import { browserHistory } from 'helpers'
 
 import { ErrorBoundary } from 'components'
 
@@ -17,8 +18,13 @@ import { createStore } from 'store'
 
 import { routes } from 'settings/routes'
 
+const routingStore = new RouterStore()
+
+const history = syncHistoryWithStore(browserHistory, routingStore)
+
 const initialState = (window && window.__INITIAL_STATE__) || {}
-const store = createStore(history, initialState)
+
+const stores = createStore(routingStore, initialState)
 
 export class App extends React.Component<void, void> {
     renderDevTool = () => {
@@ -54,9 +60,9 @@ export class App extends React.Component<void, void> {
 
     render () {
         return (
-            <Provider {...store}>
+            <Provider {...stores}>
                 <ErrorBoundary>
-                    <Router>
+                    <Router history={history}>
                         <CoreLayout>
                             <Switch>
                                 {routes && routes.map(this.renderRoute)}

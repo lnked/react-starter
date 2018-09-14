@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { App } from './app'
 // import * as serviceWorker from './serviceWorker'
 
@@ -10,7 +10,7 @@ if (appRoot == null) {
 }
 
 const renderApp = () => {
-    ReactDOM.render(<App />, appRoot)
+    render(<App />, appRoot)
     document.body.classList.remove('loading')
 }
 
