@@ -25,6 +25,8 @@ declare module 'store2';
 
 declare module 'firebase';
 
+declare module 'dateformat';
+
 declare module 'classNames';
 
 declare module 'mobx';
@@ -32,9 +34,12 @@ declare module 'mobx-react';
 declare module 'mobx-logger';
 declare module 'mobx-react-router';
 
+declare module 'react-table';
+
 declare module 'react-yandex-maps';
 
 declare module 'react';
 declare module 'react-dom';
 declare module 'react-helmet';
+declare module 'react-router';
 declare module 'react-router-dom';
