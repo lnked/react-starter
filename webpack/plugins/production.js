@@ -40,7 +40,7 @@ const plugins = [
         },
     ]),
 
-    new webpack.IgnorePlugin(/^mobx\-react\-devtools$/),
+    // new webpack.IgnorePlugin(/^mobx\-react\-devtools$/),
 ]
 
 module.exports.config = plugins
