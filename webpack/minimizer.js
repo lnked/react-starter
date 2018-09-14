@@ -27,7 +27,7 @@ const uglifyJsOptions = {
         },
     },
     output: {
-        ecma: 8,
+        // ecma: 8,
         ascii_only: true,
         comments: false,
         beautify: false,
