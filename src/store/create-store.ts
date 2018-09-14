@@ -20,10 +20,11 @@ enableLogging({
     compute: true,
 })
 
-export const createStore = (routingStore: any, initialState?: any[]) => {
-    console.log({ initialState })
-    const uiStore = new UiStore()
-    const appStore = new AppStore()
+export const createStore = (routingStore: any, initialState: any) => {
+    const { ui, app } = initialState
+
+    const uiStore = new UiStore(ui)
+    const appStore = new AppStore(app)
 
     return {
         [STORE_UI]: uiStore,

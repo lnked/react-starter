@@ -3,10 +3,11 @@
 import * as React from 'react'
 import 'styles/client.scss'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
+
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 
-import DevTools, { configureDevtool } from 'mobx-react-devtools'
+import { MobXDevTools } from 'utils'
 
 import { createStore } from 'store'
 
@@ -31,18 +32,10 @@ const initialState = (window && window.__INITIAL_STATE__) || {}
 
 const stores = createStore(routingStore, initialState)
 
-configureDevtool({
-    logEnabled: true,
-    updatesEnabled: false,
-    graphEnabled: false,
-    logFilter: change => change.type === 'reaction',
-})
-
 export class App extends React.Component<void, void> {
-    renderDevTool = () => {
+    renderDevTools = () => {
         if (__DEV__) {
-            // const DevTools: any = require('mobx-react-devtools').default
-            return <DevTools noPanel />
+            return <MobXDevTools />
         }
 
         return null
@@ -80,7 +73,7 @@ export class App extends React.Component<void, void> {
                                 {routes && routes.map(this.renderRoute)}
                             </Switch>
 
-                            {this.renderDevTool()}
+                            {this.renderDevTools()}
                         </CoreLayout>
                     </Router>
                 </ErrorBoundary>
