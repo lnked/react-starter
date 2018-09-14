@@ -57,8 +57,14 @@ class MainPage extends React.Component<any, any> {
     }
 
     render () {
+        const { location, push, goBack } = this.props[STORE_ROUTER]
+
         return (
             <div className={css.content}>
+                <span>Current pathname: {location.pathname}</span>
+                <button onClick={() => push('/test')}>Change url</button>
+                <button onClick={() => goBack()}>Go Back</button>
+
                 <p className={css.description}>Отличный сборщик рекат проектов</p>
 
                 <ul className={css.list}>

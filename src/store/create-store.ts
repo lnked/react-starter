@@ -1,7 +1,5 @@
 /* global __DEV__ */
 
-// import { History } from 'history'
-
 import { configure } from 'mobx'
 
 import { enableLogging } from 'mobx-logger'
@@ -23,7 +21,7 @@ enableLogging({
 })
 
 export const createStore = (routingStore: any, initialState?: any[]) => {
-    console.log({initialState})
+    console.log({ initialState })
     const uiStore = new UiStore()
     const appStore = new AppStore()
 

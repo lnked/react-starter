@@ -20,8 +20,10 @@ const isProduction = isDeploy || isRelease || isAnalyze || isAssemply
 const isDevelopment = options.opts === 'development' || !isProduction
 
 const _host_ = process.env.HOST || '0.0.0.0'
-const _port_ = parseInt(process.env.PORT, 10) || 4002
+const _port_ = parseInt(process.env.PORT, 10) || randomInteger(4000, 4100)
 const _protocol_ = process.env.HTTPS === 'true' ? 'https' : 'http'
+
+process.env.PORT = _port_
 
 module.exports = {
     rs_host: _host_,
