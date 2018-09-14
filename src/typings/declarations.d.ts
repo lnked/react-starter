@@ -21,6 +21,8 @@ declare module 'settings/routes'
 declare module 'settings/firebase'
 declare module 'settings/constants'
 
+declare module 'store2';
+
 declare module 'firebase';
 
 declare module 'classNames';
@@ -29,6 +31,8 @@ declare module 'mobx';
 declare module 'mobx-react';
 declare module 'mobx-logger';
 declare module 'mobx-react-router';
+
+declare module 'react-yandex-maps';
 
 declare module 'react';
 declare module 'react-dom';
