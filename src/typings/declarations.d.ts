@@ -31,6 +31,8 @@ declare module 'firebase';
 
 declare module 'classNames';
 
+declare module 'styled-components';
+
 declare module 'react-infinite-scroller';
 
 declare module 'mobx';

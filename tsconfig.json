@@ -17,7 +17,6 @@
         "sourceMap": true,
         "diagnostics": true,
         "declaration": true,
-        "declarationMap": false,
         "isolatedModules": false,
         "noEmitHelpers": true,
         "importHelpers": true,
@@ -63,10 +62,12 @@
         ],
         "lib": [
             "es5",
+            "es6",
             "dom",
-            "scripthost",
-            "es2018",
             "es2015",
+            "es2017",
+            "es2018",
+            "scripthost",
             "es2015.iterable"
         ],
         "paths": {
@@ -121,7 +122,7 @@
         }
     },
     "include": [
-        "src"
+        "src/**/*"
     ],
     "exclude": [
         "dist",

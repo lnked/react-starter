@@ -141,6 +141,7 @@
     "@types/react-input-mask": "2.0.0",
     "@types/react-router": "4.0.31",
     "@types/react-router-dom": "4.3.1",
+    "@types/styled-components": "3.0.1",
     "@types/stylelint": "9.4.0",
     "@types/uglify-js": "3.0.3",
     "@types/webpack-dev-server": "3.1.1",
