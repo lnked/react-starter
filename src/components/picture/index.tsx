@@ -3,15 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-export interface P {
-    image: any;
-    lqip?: string;
-    width?: number;
-    height?: number;
-    title?: string;
-    alt?: string;
-    className?: string;
-}
+import { P } from './types'
 
 const cx = classes.bind(css)
 

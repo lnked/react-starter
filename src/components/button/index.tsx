@@ -4,9 +4,10 @@ import { Present } from './present'
 
 import { P } from './props'
 
-export class Button extends React.PureComponent<P, {}> {
+export class Button extends React.PureComponent<P, any> {
     static defaultProps = {
         type: 'button',
+        size: 'normal',
         icon: false,
         normal: false,
         disabled: false,

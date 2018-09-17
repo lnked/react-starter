@@ -108,7 +108,7 @@ class PanelsPage extends React.Component<any, S> {
                                 <CircularProgress
                                     stroke={4}
                                     color={progress[id].color}
-                                    content={`${progress[id].progress}`}
+                                    content={progress[id].progress}
                                     progress={value}
                                 />
                             </Card>

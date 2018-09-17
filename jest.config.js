@@ -57,11 +57,11 @@ module.exports = {
     coverageDirectory: '<rootDir>/coverage', // [string]
 
     globals: {
-        __DEV__: true,
+        __DEV__: false,
         NODE_ENV: 'test',
         'ts-jest': {
             useBabelrc: true,
-            // tsConfigFile: './tsconfig.jest.json'
+            tsConfigFile: './tsconfig.jest.json',
         },
     },
 

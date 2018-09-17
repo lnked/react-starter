@@ -3,10 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-export interface P {
-    children?: JSX.Element | JSX.Element[] | string;
-    className?: string;
-}
+import { P } from './types'
 
 const cx = classes.bind(css)
 

@@ -2,13 +2,7 @@ import * as React from 'react'
 
 import { Spinner } from 'components'
 
-export interface P {
-    error: any | null;
-    pastDelay: null;
-    loading: boolean;
-    timedOut: boolean;
-    pastSpinnerDelay: boolean;
-}
+import { P } from './types'
 
 export const Loading = ({ error, loading, pastSpinnerDelay, timedOut, pastDelay }: P) => {
     if (error) {

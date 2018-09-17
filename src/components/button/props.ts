@@ -1,6 +1,6 @@
 export interface P {
     type?: string;
-    size?: 'small' | 'default' | 'large';
+    size?: 'small' | 'normal' | 'large';
     label?: string;
     icon?: boolean;
     info?: boolean;

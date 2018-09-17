@@ -30,7 +30,7 @@ module.exports = {
         mainFiles: [ 'index' ],
         enforceExtension: false,
         enforceModuleExtension: false,
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.es', '.es6', '.mjs', '.scss', '.css', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css', '.json'],
         descriptionFiles: ['package.json', 'bower.json'],
         alias: aliases.config,
     },

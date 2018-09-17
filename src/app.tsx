@@ -35,7 +35,9 @@ const stores = createStore(routingStore, initialState)
 export class App extends React.Component<void, void> {
     renderDevTools = () => {
         if (__DEV__) {
-            return <MobXDevTools />
+            return (
+                <MobXDevTools />
+            )
         }
 
         return null

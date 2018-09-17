@@ -10,6 +10,7 @@ export interface S {
 
 export class Input extends React.Component<P, S> {
     static defaultProps = {
+        type: 'text',
         label: '',
         value: '',
         integer: false,
