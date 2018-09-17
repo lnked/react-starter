@@ -71,54 +71,24 @@
             "es2015.iterable"
         ],
         "paths": {
+            "src/*": ["src/*"],
+            "hocs/*": ["src/hocs/*"],
+            "pages/*": ["src/pages/*"],
+            "utils/*": ["src/utils/*"],
+            "config/*": ["src/config/*"],
+            "assets/*": ["src/assets/*"],
+            "typings/*": ["src/typings/*"],
+            "layouts/*": ["src/layouts/*"],
+            "fragments/*": ["src/fragments/*"],
+            "variables/*": ["src/variables/*"],
+            "styles/*": ["src/assets/styles/*"],
+            "images/*": ["src/assets/images/*"],
+            "scripts/*": ["src/assets/scripts/*"],
+            "svgstore/*": ["src/assets/svgstore/*"],
+            "components/*": ["src/components/*"],
             "*": [
-                "src/*"
+                "node_modules/*", "node_modules/@types/*"
             ],
-            "tslib": [
-                "node_modules/tslib/tslib.d.ts"
-            ],
-            "hocs": [
-                "src/hocs"
-            ],
-            "fragments": [
-                "src/fragments"
-            ],
-            "layouts": [
-                "src/layouts"
-            ],
-            "variables": [
-                "src/variables"
-            ],
-            "pages": [
-                "src/pages"
-            ],
-            "components": [
-                "src/components"
-            ],
-            "typings": [
-                "src/typings"
-            ],
-            "assets": [
-                "src/assets"
-            ],
-            "utils": [
-                "src/utils"
-            ],
-            "config": [
-                "src/config"
-            ],
-            "styles": [
-                "src/assets/styles"
-            ],
-            "images": [
-                "src/assets/images"
-            ],
-            "scripts": [
-                "src/assets/scripts"
-            ],
-            "svgstore": [
-                "src/assets/svgstore"
-            ]
         }
     },
     "include": [
@@ -128,7 +98,7 @@
         "dist",
         "tests",
         "webpack",
-        "node_modules/**"
+        "node_modules"
     ],
     "plugins": [
         {
