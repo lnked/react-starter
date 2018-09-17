@@ -56,9 +56,9 @@
             "jest-styled-components"
         ],
         "typeRoots": [
-            "src/typings/**/*.d.ts",
-            "node_modules/tslib/tslib.d.ts",
-            "node_modules/@types"
+            "src/typings/**/*",
+            "node_modules/@types",
+            "node_modules/tslib/tslib.d.ts"
         ],
         "lib": [
             "es5",
