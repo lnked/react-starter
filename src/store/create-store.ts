@@ -15,9 +15,9 @@ configure({
 enableLogging({
     predicate: () => __DEV__ && Boolean(window.navigator.userAgent),
     action: true,
-    reaction: true,
-    transaction: true,
-    compute: true,
+    reaction: false,
+    transaction: false,
+    compute: false,
 })
 
 export const createStore = (routingStore: any, initialState: any) => {

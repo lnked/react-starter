@@ -21,13 +21,17 @@ declare module 'settings/routes'
 declare module 'settings/firebase'
 declare module 'settings/constants'
 
-declare module 'store2';
+declare module 'history';
 
-declare module 'firebase';
+declare module 'store2';
 
 declare module 'dateformat';
 
+declare module 'firebase';
+
 declare module 'classNames';
+
+declare module 'react-infinite-scroller';
 
 declare module 'mobx';
 declare module 'mobx-react';
