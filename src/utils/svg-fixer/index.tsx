@@ -1,5 +1,5 @@
 export const SvgFixer = () => {
-    const baseUrl: string = window.location.href.replace(window.location.hash, '')
+    const baseUrl: string = window.location.origin || `${window.location.protocol}://${window.location.host}`
     const useList: any = document.querySelectorAll('use[*|href]')
 
     if (Object.keys(useList).length) {

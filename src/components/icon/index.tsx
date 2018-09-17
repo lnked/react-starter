@@ -3,34 +3,24 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-export interface P {
-    symbol: string;
+export interface PropsIcon {
     hidden?: boolean;
+    symbol?: string;
     className?: string;
 }
 
 const cx = classes.bind(css)
 
-export class Icon extends React.PureComponent<P, {}> {
-    static defaultProps = {
-        symbol: '',
-        hidden: false,
-        className: '',
-    }
+export const Icon = ({ symbol = '', hidden = false, className = '' }: PropsIcon) => {
+    const baseUrl: string = window.location.origin || `${window.location.protocol}://${window.location.host}`
 
-    baseUrl: string = ''
-
-    componentDidMount () {
-        this.baseUrl = window.location.href.replace(window.location.hash, '')
-    }
-
-    render () {
-        const { symbol, hidden, className } = this.props
-
-        return (
-            <svg key={`ico_${symbol}`} role="presentation" aria-hidden={hidden} className={cx(css.icon, className)}>
-                <use xlinkHref={`${this.baseUrl}#${symbol}`} />
-            </svg>
-        )
-    }
+    return (
+        <svg
+            className={cx({ icon: true }, className)}
+            role="presentation"
+            key={`icon_${symbol}`}
+            aria-hidden={hidden}>
+            <use xlinkHref={`${baseUrl}#${symbol}`} />
+        </svg>
+    )
 }
