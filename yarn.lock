@@ -1210,9 +1210,9 @@
   version "10.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.2.tgz#f19f05314d5421fe37e74153254201a7bf00a707"
 
-"@types/node@10.9.4":
-  version "10.9.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.9.4.tgz#0f4cb2dc7c1de6096055357f70179043c33e9897"
+"@types/node@10.10.0":
+  version "10.10.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.10.0.tgz#2b08a1a7d1fa317173a776c2130bf240545cc33e"
 
 "@types/node@^8.0.53":
   version "8.10.21"
@@ -14267,9 +14267,9 @@ svgo-loader@2.2.0:
     js-yaml "^3.12.0"
     loader-utils "^1.0.3"
 
-svgo@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.1.0.tgz#d564c460e9035150702339e11851d47bda1da090"
+svgo@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.1.1.tgz#12384b03335bcecd85cfa5f4e3375fed671cb985"
   dependencies:
     coa "~2.0.1"
     colors "~1.1.2"
