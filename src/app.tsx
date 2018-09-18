@@ -32,7 +32,7 @@ const initialState = (window && window.__INITIAL_STATE__) || {}
 
 const stores = createStore(routingStore, initialState)
 
-export class App extends React.Component<void, void> {
+export class App extends React.Component<any, any> {
     renderDevTools = () => {
         if (__DEV__) {
             return (

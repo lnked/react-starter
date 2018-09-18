@@ -1,30 +1,26 @@
 type Func = (...args?: any[]) => void;
 
+declare const __DEV__: boolean;
+
+declare const __PROD__: boolean;
+
+declare const Reflect: Reflect;
+
 declare global {
-    // how io-ts's `mixed` type is currently defined
     type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
 }
 
-declare interface Reflect {
-    get: (target: any, propertyKey: any) => void;
-    has: (target: any, propertyKey: any) => boolean;
-    apply: (target: any, thisArgument: any, argumentsList: any[]) => void;
-    defineProperty: (target: any, propertyKey: number | string, attributes: any) => boolean;
-    deleteProperty: (target: any, propertyKey: number | string) => boolean;
-    prop: string;
-}
-
-declare interface Route {
+export interface Route {
     path: string;
     component: any;
     exact?: boolean;
     title?: string;
     status?: number;
-    statusCode?: number;
     robots?: string;
     keywords?: string;
     description?: string;
-    rest: any;
+    statusCode?: number;
+    rest?: any;
 }
 
 declare interface EventTarget {
@@ -34,7 +30,7 @@ declare interface EventTarget {
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 
-declare interface SyntheticEvent<T> {
+declare interface SyntheticEvent {
     bubbles: boolean;
     cancelable: boolean;
     currentTarget: EventTarget & T;
@@ -49,16 +45,19 @@ declare interface SyntheticEvent<T> {
     stopPropagation(): void;
 }
 
+declare interface Reflect {
+    get: (target: any, propertyKey: any) => void;
+    has: (target: any, propertyKey: any) => boolean;
+    apply: (target: any, thisArgument: any, argumentsList: any[]) => void;
+    defineProperty: (target: any, propertyKey: number | string, attributes: any) => boolean;
+    deleteProperty: (target: any, propertyKey: number | string) => boolean;
+    prop: string;
+}
+
 declare interface ServiceWorkerConfig {
     onSuccess: (registration: ServiceWorkerRegistration) => void
     onUpdate: (registration: ServiceWorkerRegistration) => void
 }
-
-declare const __DEV__: boolean;
-
-declare const __PROD__: boolean;
-
-declare const Reflect: Reflect;
 
 /**
  * Describe a new type to require non-typescript source files like CSS and other resources.

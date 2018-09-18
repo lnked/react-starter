@@ -120,4 +120,5 @@ class PanelsPage extends React.Component<any, S> {
     }
 }
 
+export {PanelsPage}
 export default PanelsPage

@@ -1,14 +1,22 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Locale, Navigation } from 'fragments'
+import {
+    Title,
+} from 'components'
+
+import {
+    Locale,
+    Navigation,
+} from 'fragments'
 
 export const Header = () => {
     return (
         <div className={css.header}>
-            <h1 className={css.title}>React Starter Kit</h1>
+            <Title className={css.title}>React Starter Kit</Title>
 
             <Navigation />
+
             <Locale checked="ru" />
         </div>
     )

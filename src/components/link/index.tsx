@@ -5,14 +5,14 @@ import { classes } from 'helpers'
 
 export interface P {
     href: string;
+    children: JSX.Element[] | JSX.Element | any;
     className: string;
-    children?: React.ReactChild;
 }
 
 const cx = classes.bind(css)
 
-export const Link = ({ href, children, className = '', ...props }: P) => (
-    <a href={href} {...props} className={cx(css.link, className)}>
+export const Link = ({ href, children = '', className = '', ...props }: P) => (
+    <a href={href} className={cx(css.link, className)} {...props}>
         {children}
     </a>
 )

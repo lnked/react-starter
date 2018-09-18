@@ -89,5 +89,5 @@ class MainPage extends React.Component<any, any> {
     }
 }
 
-// export { MainPage }
+export { MainPage }
 export default MainPage

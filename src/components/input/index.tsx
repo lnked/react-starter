@@ -1,14 +1,25 @@
 import * as React from 'react'
+import * as css from './styles.scss'
 
-import { Present } from './present'
+import { classes } from 'helpers'
 
-import { P } from './props'
+export interface Props {
+    name?: string;
+    type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
+    label?: string;
+    value?: string | number;
+    integer?: boolean;
+    floating?: boolean;
+    handleChange?: (e: SyntheticEvent) => void;
+}
 
-export interface S {
+export interface State {
     value?: string | number;
 }
 
-export class Input extends React.Component<P, S> {
+const cx = classes.bind(css)
+
+export class Input extends React.Component<Props, State> {
     static defaultProps = {
         type: 'text',
         label: '',
@@ -23,7 +34,7 @@ export class Input extends React.Component<P, S> {
         value: '',
     }
 
-    // static getDerivedStateFromProps(props: P, state: S) {
+    // static getDerivedStateFromProps(props: Props, state: State) {
     //     if (state.value !== props.value) {
     //         return {
     //             value: props.value,
@@ -57,7 +68,7 @@ export class Input extends React.Component<P, S> {
     handleChange = (e: any) => {
         const value = this.prepared(e.target.value)
 
-        this.setState((state: S) => {
+        this.setState((state: State) => {
             return {
                 ...state,
                 value,
@@ -69,6 +80,19 @@ export class Input extends React.Component<P, S> {
         const { value } = this.state
         const { label } = this.props
 
-        return <Present label={label} value={value} referrer={this.input} handleChange={this.handleChange} />
+        return (
+            <label className={cx({ wrapper: true })}>
+                {label &&
+                    <div className={cx(css.label)}>{label}</div>
+                }
+
+                <input
+                    ref={this.input}
+                    value={value}
+                    onChange={this.handleChange}
+                    className={cx(css.control, css.controlInput)}
+                />
+            </label>
+        )
     }
 }

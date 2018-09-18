@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    children?: React.ReactChild;
+    children?: JSX.Element[] | JSX.Element | any;
 }
 
 export const Notification = ({ children }: P) => {
@@ -20,7 +20,7 @@ export const Notification = ({ children }: P) => {
     //     })
     // }
 
-    return <div className={css.content}>xxx</div>
+    return <div className={css.content}>{children}</div>
 }
 
 export default Notification

@@ -1,7 +1,9 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export interface P {
+import { classes } from 'helpers'
+
+export interface Props {
     name: string;
     min: number;
     max: number;
@@ -12,11 +14,13 @@ export interface P {
     handleChange?: (count: number) => void | boolean;
 }
 
-export interface S {
+export interface State {
     count: number;
 }
 
-export class Quantity extends React.Component<P, S> {
+const cx = classes.bind(css)
+
+export class Quantity extends React.Component<Props, State> {
     static defaultProps = {
         type: 'number',
         min: 1,
@@ -30,7 +34,7 @@ export class Quantity extends React.Component<P, S> {
         count: 0,
     }
 
-    static getDerivedStateFromProps (props: P, state: S) {
+    static getDerivedStateFromProps (props: Props, state: State) {
         if (state.count !== props.count) {
             return {
                 ...state,
@@ -70,7 +74,7 @@ export class Quantity extends React.Component<P, S> {
     handleChange = (e: SyntheticEvent) => {
         const re = /^\d+$/
 
-        if (re.test(e.target.value)) {
+        if (e.target && re.test(e.target.value)) {
             this.changeValue(parseInt(e.target.value, 10))
         }
     }
@@ -83,7 +87,7 @@ export class Quantity extends React.Component<P, S> {
         const increaseClass = [css.control, css.increase].join(' ')
 
         return (
-            <div className={css.quantity}>
+            <div className={cx(css.quantity)}>
                 <button type="button" onClick={this.changeCount(-1)} className={decreaseClass}>
                     -
                 </button>

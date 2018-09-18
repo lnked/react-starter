@@ -1,4 +1,4 @@
-export * from './main-page'
-export * from './panels-page'
-export * from './example-page'
-export * from './nomatch-page'
+export { MainPage } from './main-page'
+export { PanelsPage } from './panels-page'
+export { ExamplePage } from './example-page'
+export { NoMatchPage } from './nomatch-page'

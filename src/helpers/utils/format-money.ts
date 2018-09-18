@@ -1,4 +1,4 @@
-export const formatMoneyNative = (num: number) => {
+export const formatMoneyNative = (num: number | string) => {
     const formatter = new Intl.NumberFormat('ru-RU', {
         style: 'currency',
         currency: 'RUB',
@@ -8,7 +8,7 @@ export const formatMoneyNative = (num: number) => {
     return formatter.format(num)
 }
 
-export const formatMoney = (num: number, penny: number, breaking = true) => {
+export const formatMoney = (num: number | string, penny: number = 2, breaking = true) => {
     if (typeof penny === 'undefined') {
         penny = 2
     }

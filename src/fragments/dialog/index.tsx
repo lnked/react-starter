@@ -3,14 +3,14 @@ import * as css from './styles.scss'
 
 import { Icon, Input, Button } from 'components'
 
-export interface P {
+export interface Props {
     type?: 'alert' | 'prompt' | 'confirm';
     title?: string;
     value?: string | number;
     placeholder?: string;
 }
 
-export class Dialog extends React.PureComponent<P, {}> {
+export class Dialog extends React.PureComponent<Props, {}> {
     static defaultProps = {
         type: 'alert',
         title: '',
@@ -37,10 +37,10 @@ export class Dialog extends React.PureComponent<P, {}> {
                 </div>
 
                 <footer className={css.footer}>
-                    <Button variant="danger" className={css.button}>
+                    <Button className={css.button} danger>
                         Отмена
                     </Button>
-                    <Button variant="success" className={css.button}>
+                    <Button className={css.button} success>
                         Подтвердить
                     </Button>
                 </footer>

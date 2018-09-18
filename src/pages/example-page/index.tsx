@@ -1,13 +1,24 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { request, formatMoney } from 'helpers'
+import {
+    request,
+    formatMoney,
+} from 'helpers'
 
 import { Group } from 'fragments'
 
-import { Card, Input, Button } from 'components'
+import {
+    Card,
+    Input,
+    Button,
+} from 'components'
 
-import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
+import {
+    STORE_UI,
+    STORE_APP,
+    STORE_ROUTER,
+} from 'settings/constants'
 
 import { inject, observer } from 'mobx-react'
 
@@ -48,7 +59,7 @@ class ExamplePage extends React.Component<any, any> {
                 <Title size="medium" type="secondary" center>Example Page</Title>
                 */}
 
-                <Input type="text" />
+                <Input name="test" type="text" />
 
                 <Group type={type}>
                     {products && products.map((item: Product) => (
@@ -69,5 +80,5 @@ class ExamplePage extends React.Component<any, any> {
     }
 }
 
-// export { ExamplePage }
+export { ExamplePage }
 export default ExamplePage
