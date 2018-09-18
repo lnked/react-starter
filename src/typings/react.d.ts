@@ -9,32 +9,6 @@ declare interface HTMLInputElement {
 
 }
 
-// declare global {
-//     namespace JSX {
-//         interface App {}
-
-//         interface Element {}
-
-//         interface ErrorBoundary {}
-
-//         interface IntrinsicElements {
-//             [elemName: string]: any;
-//         }
-
-//         interface ElementClass {
-//             render: any;
-//         }
-
-//         interface ElementAttributesProperty {
-//             props: {};
-//         }
-
-//         interface ElementChildrenAttribute {
-//             children: {};
-//         }
-//     }
-// }
-
 declare global {
     namespace JSX {
         // tslint:disable-next-line:no-empty-interface
