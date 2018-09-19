@@ -6,10 +6,10 @@ import { classes } from 'helpers'
 export interface P {
     // size: 'tiny' | 'small' | 'normal' | 'medium' | 'huge';
     // type: 'primary' | 'secondary';
-    label: string;
-    center: boolean;
-    children: string;
-    className: string;
+    label?: string;
+    center?: boolean;
+    children?: string;
+    className?: string;
 }
 
 const cx = classes.bind(css)

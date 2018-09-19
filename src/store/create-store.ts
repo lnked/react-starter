@@ -1,5 +1,3 @@
-/* global __DEV__ */
-
 import { configure } from 'mobx'
 
 import { enableLogging } from 'mobx-logger'
@@ -11,6 +9,8 @@ import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 configure({
     enforceActions: 'observed', // 'never' | 'always' | 'observed'
 })
+
+const { __DEV__ } = process.env
 
 enableLogging({
     predicate: () => __DEV__ && Boolean(window.navigator.userAgent),

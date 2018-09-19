@@ -1,6 +1,6 @@
-/* global __DEV__ */
-
 import * as React from 'react'
+
+const { __DEV__ } = process.env
 
 if (__DEV__) {
     const { configureDevtool } = require('mobx-react-devtools')

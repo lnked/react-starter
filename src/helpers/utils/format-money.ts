@@ -1,11 +1,11 @@
-export const formatMoneyNative = (num: number | string) => {
+export const formatMoneyNative = (num: string) => {
     const formatter = new Intl.NumberFormat('ru-RU', {
         style: 'currency',
         currency: 'RUB',
         maximumSignificantDigits: 2,
     })
 
-    return formatter.format(num)
+    return formatter.format(parseFloat(num))
 }
 
 export const formatMoney = (num: number | string, penny: number = 2, breaking = true) => {

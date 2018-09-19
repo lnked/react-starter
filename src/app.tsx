@@ -1,5 +1,3 @@
-/* global __DEV__ */
-
 import * as React from 'react'
 import 'styles/client.scss'
 
@@ -34,6 +32,8 @@ const stores = createStore(routingStore, initialState)
 
 export class App extends React.Component<any, any> {
     renderDevTools = () => {
+        const { __DEV__ } = process.env
+
         if (__DEV__) {
             return (
                 <MobXDevTools />

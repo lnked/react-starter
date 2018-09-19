@@ -22,7 +22,7 @@ export class Dialog extends React.PureComponent<Props, {}> {
         const props: any = {}
         const { title, value, placeholder } = this.props
 
-        props.defaultValue = value
+        props.value = value
         props.placeholder = placeholder
 
         return (

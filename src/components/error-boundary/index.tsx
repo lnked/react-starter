@@ -1,14 +1,14 @@
 import * as React from 'react'
 
-export interface P {
+export interface Props {
     children?: JSX.Element | JSX.Element[];
 }
 
-export interface S {
+export interface State {
     error: boolean;
 }
 
-export class ErrorBoundary extends React.PureComponent<P, S> {
+class ErrorBoundary extends React.PureComponent<Props, State> {
     state = {
         error: false,
     }
@@ -27,3 +27,4 @@ export class ErrorBoundary extends React.PureComponent<P, S> {
 }
 
 export default ErrorBoundary
+export { ErrorBoundary }

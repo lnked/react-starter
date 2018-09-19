@@ -1,27 +1,8 @@
-type Func = (...args?: any[]) => void;
-
 declare const __DEV__: boolean;
 
 declare const __PROD__: boolean;
 
 declare const Reflect: Reflect;
-
-declare global {
-    type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
-}
-
-export interface Route {
-    path: string;
-    component: any;
-    exact?: boolean;
-    title?: string;
-    status?: number;
-    robots?: string;
-    keywords?: string;
-    description?: string;
-    statusCode?: number;
-    rest?: any;
-}
 
 declare interface EventTarget {
     value: string;
@@ -67,6 +48,12 @@ declare const require: {
     (paths: string[], callback: (...modules: any[]) => void): void;
     ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
 };
+
+// declare const module: {
+//     hot: {
+//         accept (paths: string, callback: () => void | Promise<void>): void;
+//     }
+// }
 
 // ... existing global typing defs
 declare module 'tslib' {

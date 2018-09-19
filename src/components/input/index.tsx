@@ -10,7 +10,8 @@ export interface Props {
     value?: string | number;
     integer?: boolean;
     floating?: boolean;
-    handleChange?: (e: Event) => void;
+    placeholder?: string;
+    handleChange?: (e: Event) => void | boolean;
 }
 
 export interface State {
@@ -72,6 +73,10 @@ export class Input extends React.Component<Props, State> {
             return {
                 ...state,
                 value,
+            }
+        }, () => {
+            if (this.props.handleChange) {
+                this.props.handleChange(value)
             }
         })
     }

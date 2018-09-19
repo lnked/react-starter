@@ -5,7 +5,7 @@ import { classes } from 'helpers'
 
 export type P = {
     type?: string;
-    size: 'small' | 'normal' | 'large';
+    size?: 'small' | 'normal' | 'large';
     label?: string;
     icon?: boolean;
     info?: boolean;
