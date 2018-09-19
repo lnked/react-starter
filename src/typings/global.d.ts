@@ -30,20 +30,20 @@ declare interface EventTarget {
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 
-declare interface SyntheticEvent {
-    bubbles: boolean;
-    cancelable: boolean;
-    currentTarget: EventTarget & T;
-    defaultPrevented: boolean;
-    eventPhase: number;
-    isTrusted: boolean;
-    nativeEvent: Event;
-    target: EventTarget & T;
-    timeStamp: Date;
-    type: string;
-    preventDefault(): void;
-    stopPropagation(): void;
-}
+// declare interface SyntheticEvent {
+//     bubbles: boolean;
+//     cancelable: boolean;
+//     currentTarget: EventTarget & T;
+//     defaultPrevented: boolean;
+//     eventPhase: number;
+//     isTrusted: boolean;
+//     nativeEvent: Event;
+//     target: EventTarget & T;
+//     timeStamp: Date;
+//     type: string;
+//     preventDefault(): void;
+//     stopPropagation(): void;
+// }
 
 declare interface Reflect {
     get: (target: any, propertyKey: any) => void;

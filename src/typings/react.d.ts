@@ -16,10 +16,16 @@ declare interface HTMLInputElement {
 //     color: string
 // }
 
-declare global {
-    type MouseEvent = React.TouchEvent | React.MouseEvent
-    // type MouseEvent = React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>
+type SyntheticEvent = React.SyntheticEvent
 
+type MouseEvent = React.TouchEvent | React.MouseEvent
+
+type EventHandler<E extends SyntheticEvent<any>> = (event: E) => void;
+
+// React.SyntheticEvent<HTMLLinkElement>
+// type MouseEvent = React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>
+
+declare global {
     namespace JSX {
         // tslint:disable-next-line:no-empty-interface
         interface Element extends React.ReactElement<any> { }

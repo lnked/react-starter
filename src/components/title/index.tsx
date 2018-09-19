@@ -16,7 +16,7 @@ const cx = classes.bind(css)
 
 export const Title = ({ label = '', children = '', center = false, className = '' }: P) => {
     return (
-        <div className={cx(css.title, [center], className)}>
+        <div className={cx(css.title, [ center ], className)}>
             {label || children}
         </div>
     )
