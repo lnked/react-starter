@@ -10,7 +10,7 @@ export interface Props {
     value?: string | number;
     integer?: boolean;
     floating?: boolean;
-    handleChange?: (e: SyntheticEvent) => void;
+    handleChange?: (e: Event) => void;
 }
 
 export interface State {
