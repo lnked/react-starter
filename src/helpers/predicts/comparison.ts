@@ -8,14 +8,16 @@ export const shallowCompare = (prev: any, next: any, uniq: string | number): boo
     return diffData && diffData.length === 0
 }
 
-// export const isEq = (a, b) => {
-//     if(a == b) return true;
+// const isEq = exports.isEq = function isEq(a, b) {
+//     if (a == b) return true;
 
-// 	for(var i in a){
-// 		if(!isEq(a[i], b[i])) return false;
-// 	}
-// 	for(var i in b){
-// 		if(!isEq(a[i], b[i])) return false;
-// 	}
-// 	return true;
+//     for (let i in a) {
+//         if (!isEq(a[i], b[i])) return false
+//     }
+
+//     for (let i in b) {
+//         if (!isEq(a[i], b[i])) return false
+//     }
+
+//     return true
 // }
