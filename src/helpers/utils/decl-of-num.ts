@@ -1,9 +1,8 @@
-export const formatDeclOfNum = (n: number, titles: string[]) => {
+export const formatDeclOfNum = (n: string, titles: string[]): string | number => {
     const cases = [2, 0, 1, 1, 1, 2]
-    n = Math.abs(n)
-    return titles[n % 100 > 4 && n % 100 < 20 ? 2 : cases[n % 10 < 5 ? n % 10 : 5]]
+    const x = Math.abs(parseInt(n, 10))
+    return x && titles && titles[x % 100 > 4 && x % 100 < 20 ? 2 : cases[x % 10 < 5 ? x % 10 : 5]]
 }
 
-export const declOfNum = (n: number, titles: string[]) => {
-    return [n, formatDeclOfNum(n, titles)].join(' ')
-}
+export const declOfNum = (n: string, titles: string[]): string | number =>
+    n && titles && titles.length && [n, formatDeclOfNum(n, titles)].join(' ')

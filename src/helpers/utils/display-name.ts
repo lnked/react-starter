@@ -1,3 +1,2 @@
-export const getDisplayName = (Component: any) => {
-    return Component.displayName || Component.name || 'Component'
-}
+export const getDisplayName = (component: any): string =>
+    component && (component.displayName || component.name || 'Component')

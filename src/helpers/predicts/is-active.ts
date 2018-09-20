@@ -1,10 +1,7 @@
-// (name: string, …rest: string[]) => string;
-// (name: string = 'test', …rest: string[]) => string;
+export const isActive = (match?: any, location?: Location) => {
+    if (!match) {
+        return false
+    }
 
-export const isActive = (match: any = false, location: any): boolean => {
-    // if (!match) {
-    //     return false
-    // }
-
-    return location.pathname === match.url
+    return match && location && location.pathname === match.url
 }

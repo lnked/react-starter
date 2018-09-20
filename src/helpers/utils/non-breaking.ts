@@ -1,1 +1,2 @@
-export const nonBreaking = (str: string) => str.replace(/\s/g, '&nbsp;')
+export const nonBreaking = (str: string): string =>
+    str && str.replace(/\s/g, '&nbsp;')

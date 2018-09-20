@@ -14,5 +14,5 @@ export const parseQuery = (search: string) => {
         })
     }
 
-    return params
+    return search && params
 }

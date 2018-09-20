@@ -8,5 +8,5 @@ export const hasClass = (element: any, classList: string[]) => {
         }
     })
 
-    return includes
+    return element && includes
 }

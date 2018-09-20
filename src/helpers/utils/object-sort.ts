@@ -1,1 +1,2 @@
-export const objectSort = (v: string) => (a: any, b: any) => a[v] - b[v]
+export const objectSort = (v: string): any =>
+    (a: any, b: any) => a && b && a[v] - b[v]
