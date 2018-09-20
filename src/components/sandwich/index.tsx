@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { classes } from 'helpers'
+
 export interface P {
     isOpened?: boolean;
 }
@@ -8,6 +10,8 @@ export interface P {
 export interface S {
     isOpened: boolean;
 }
+
+const cx = classes.bind(css)
 
 export class Sandwich extends React.PureComponent<P, S> {
     static defaultProps = {
@@ -41,7 +45,7 @@ export class Sandwich extends React.PureComponent<P, S> {
 
         return (
             <button className={css.sandwich} onClick={this.handleChange}>
-                <span className={!isOpened ? css.sandwich__ln : [css.sandwich__ln, css.sandwich__ln_open].join(' ')} />
+                <span className={cx(css.line, { lineOpen: isOpened })} />
             </button>
         )
     }
