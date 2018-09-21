@@ -2512,9 +2512,9 @@ babel-plugin-transform-react-pure-class-to-function@1.0.1:
   dependencies:
     babel-helper-is-react-class "^1.0.0"
 
-babel-plugin-transform-react-remove-prop-types@0.4.15:
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.15.tgz#7ba830e77276a0e788cd58ea527b5f70396e12a7"
+babel-plugin-transform-react-remove-prop-types@0.4.18:
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.18.tgz#85ff79d66047b34288c6f7cc986b8854ab384f8c"
 
 babel-plugin-transform-regexp-constructors@^0.4.3:
   version "0.4.3"
@@ -11108,9 +11108,9 @@ postcss-cssnext@3.1.0:
     postcss-selector-matches "^3.0.1"
     postcss-selector-not "^3.0.1"
 
-postcss-custom-media@7.0.2, postcss-custom-media@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-7.0.2.tgz#e55fcd3a5ffe0d42c1cf99fe4a716a24f5228248"
+postcss-custom-media@7.0.3, postcss-custom-media@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-7.0.3.tgz#da0a3aa24831fcaa045e1231a517a15e0dcdfa1b"
   dependencies:
     postcss "^7.0.2"
 
@@ -11120,9 +11120,9 @@ postcss-custom-media@^6.0.0:
   dependencies:
     postcss "^6.0.1"
 
-postcss-custom-properties@8.0.3, postcss-custom-properties@^8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-8.0.3.tgz#5c8f398ed3296b782a087c72fc53bda9e8ef70fb"
+postcss-custom-properties@8.0.4, postcss-custom-properties@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-8.0.4.tgz#8d8bf5ae865b3e9b70daedd04509531d6ca3e485"
   dependencies:
     postcss "^7.0.2"
     postcss-values-parser "^2.0.0"
@@ -11141,9 +11141,9 @@ postcss-custom-properties@^7.0.0:
     balanced-match "^1.0.0"
     postcss "^6.0.18"
 
-postcss-custom-selectors@5.1.1, postcss-custom-selectors@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-custom-selectors/-/postcss-custom-selectors-5.1.1.tgz#2fc76266eeab537cb19a15c2f513b24d99529bce"
+postcss-custom-selectors@5.1.2, postcss-custom-selectors@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/postcss-custom-selectors/-/postcss-custom-selectors-5.1.2.tgz#64858c6eb2ecff2fb41d0b28c9dd7b3db4de7fba"
   dependencies:
     postcss "^7.0.2"
     postcss-selector-parser "^5.0.0-rc.3"
@@ -11197,9 +11197,9 @@ postcss-emptymediaqueries@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/postcss-emptymediaqueries/-/postcss-emptymediaqueries-0.0.2.tgz#300e00eff2b508c2e5d9be9899e7320dbd811546"
 
-postcss-env-function@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-env-function/-/postcss-env-function-2.0.1.tgz#d1f38482f79e3a9840ac4ec16da229bd3032b7c1"
+postcss-env-function@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-env-function/-/postcss-env-function-2.0.2.tgz#0f3e3d3c57f094a92c2baf4b6241f0b0da5365d7"
   dependencies:
     postcss "^7.0.2"
     postcss-values-parser "^2.0.0"
@@ -11240,14 +11240,6 @@ postcss-font-family-system-ui@^3.0.0:
   resolved "https://registry.yarnpkg.com/postcss-font-family-system-ui/-/postcss-font-family-system-ui-3.0.0.tgz#675fe7a9e029669f05f8dba2e44c2225ede80623"
   dependencies:
     postcss "^6.0"
-
-postcss-font-family-system-ui@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-font-family-system-ui/-/postcss-font-family-system-ui-4.1.0.tgz#2bacc716428f50acfc7ecef4eec8bfa31905fa67"
-  dependencies:
-    browserslist "^4.0.1"
-    caniuse-lite "^1.0.30000865"
-    postcss "^7.0.0"
 
 postcss-font-variant@^3.0.0:
   version "3.0.0"
@@ -11654,9 +11646,9 @@ postcss-position@1.0.0:
   dependencies:
     postcss "^6.0.7"
 
-postcss-preset-env@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.0.0.tgz#a7afd0ec098bca8312c95dbbd11efa88f15da30e"
+postcss-preset-env@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.0.2.tgz#f16a3e8b87d48f7e99b6f126e9b8443b0c3f5b6d"
   dependencies:
     autoprefixer "^9.1.5"
     browserslist "^4.1.1"
@@ -11668,14 +11660,13 @@ postcss-preset-env@6.0.0:
     postcss-color-hex-alpha "^5.0.2"
     postcss-color-mod-function "^3.0.1"
     postcss-color-rebeccapurple "^4.0.1"
-    postcss-custom-media "^7.0.2"
-    postcss-custom-properties "^8.0.3"
-    postcss-custom-selectors "^5.1.1"
+    postcss-custom-media "^7.0.3"
+    postcss-custom-properties "^8.0.4"
+    postcss-custom-selectors "^5.1.2"
     postcss-dir-pseudo-class "^5.0.0"
-    postcss-env-function "^2.0.1"
+    postcss-env-function "^2.0.2"
     postcss-focus-visible "^4.0.0"
     postcss-focus-within "^3.0.0"
-    postcss-font-family-system-ui "^4.1.0"
     postcss-font-variant "^4.0.0"
     postcss-gap-properties "^2.0.0"
     postcss-image-set-function "^3.0.1"
@@ -12515,9 +12506,9 @@ react-helmet@5.2.0:
     prop-types "^15.5.4"
     react-side-effect "^1.1.0"
 
-react-hot-loader@4.3.10:
-  version "4.3.10"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.3.10.tgz#10290b4a554cd91d2684a94724aa3a70e002007a"
+react-hot-loader@4.3.11:
+  version "4.3.11"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.3.11.tgz#fe5cf7be7700c249b58293f977c1e6e0900f0d87"
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
@@ -14832,9 +14823,9 @@ tryer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
 
-ts-jest@23.10.0:
-  version "23.10.0"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.10.0.tgz#1b1ce1d795791dedf0229b7577b35eaed8565bbd"
+ts-jest@23.10.1:
+  version "23.10.1"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.10.1.tgz#ad0196f7b81f08888897004d9ed870c1a901511a"
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
@@ -14943,9 +14934,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-plugin-styled-components@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-0.0.7.tgz#b36e6ac87aa9448f859f3394fba9e0473481f8d2"
+typescript-plugin-styled-components@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-1.0.0.tgz#b4de4ecd668fedd225d5c94bb5fe9cafbc0f045d"
 
 typescript-styled-plugin@0.11.0:
   version "0.11.0"
