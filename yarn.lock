@@ -3257,9 +3257,9 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@1.0.30000885, caniuse-lite@^1.0.30000885:
-  version "1.0.30000885"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000885.tgz#e889e9f8e7e50e769f2a49634c932b8aee622984"
+caniuse-lite@1.0.30000886:
+  version "1.0.30000886"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000886.tgz#2127186c4f57da10d3ba26fc3e87dce4a5ddd3ae"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000823, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000865:
   version "1.0.30000865"
@@ -3272,6 +3272,10 @@ caniuse-lite@^1.0.30000878:
 caniuse-lite@^1.0.30000884:
   version "1.0.30000884"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000884.tgz#eb82a959698745033b26a4dcd34d89dba7cc6eb3"
+
+caniuse-lite@^1.0.30000885:
+  version "1.0.30000885"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000885.tgz#e889e9f8e7e50e769f2a49634c932b8aee622984"
 
 capture-exit@^1.2.0:
   version "1.2.0"
@@ -5380,9 +5384,9 @@ eslint-plugin-import@2.14.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jest@21.22.0:
-  version "21.22.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.22.0.tgz#1b9e49b3e5ce9a3d0a51af4579991d517f33726e"
+eslint-plugin-jest@21.22.1:
+  version "21.22.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.22.1.tgz#bc805e9b1c75c3bc92e47c44dd41370c1af7ebcc"
 
 eslint-plugin-jsx-a11y@6.1.1:
   version "6.1.1"
