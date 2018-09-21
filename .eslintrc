@@ -5,7 +5,8 @@
         "standard",
         "plugin:import/warnings",
         "plugin:react/recommended",
-        "plugin:jsx-a11y/recommended"
+        "plugin:jsx-a11y/recommended",
+        "plugin:you-dont-need-momentjs/recommended"
     ],
     "plugins": [
         "react",
