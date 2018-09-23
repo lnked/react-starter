@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 import {
-    request,
+    // request,
     formatMoney,
 } from 'helpers'
 
@@ -37,16 +37,16 @@ class ExamplePage extends React.Component<any, any> {
         products: [],
     }
 
-    componentDidMount () {
-        this.loadData()
-    }
+    // componentDidMount () {
+    //     this.loadData()
+    // }
 
-    loadData = () => {
-        request.get('/data/products.json')
-            .then((res: any) => res.data)
-            .then((response: any) => this.setState({ products: response.splice(0, 40) }))
-            .catch((error: any) => console.log(error))
-    }
+    // loadData = () => {
+    //     request.get('/data/products.json')
+    //         .then((res: any) => res.data)
+    //         .then((response: any) => this.setState({ products: response.splice(0, 40) }))
+    //         .catch((error: any) => console.log(error))
+    // }
 
     render () {
         const type = 'grid'
@@ -54,11 +54,6 @@ class ExamplePage extends React.Component<any, any> {
 
         return (
             <div className={css.content}>
-                {/*
-                <Title size="huge" type="primary" center>Example Page</Title>
-                <Title size="medium" type="secondary" center>Example Page</Title>
-                */}
-
                 <Input name="test" type="text" />
 
                 <Group type={type}>

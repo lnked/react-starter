@@ -17,6 +17,17 @@
     justify-content: space-between;
 }
 
+.location {
+    font-size: 1.6rem;
+
+    button {
+        font-size: 1.4rem;
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
 .content {
     clear: both;
     padding: 20px;

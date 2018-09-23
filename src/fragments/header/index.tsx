@@ -1,6 +1,8 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { classes } from 'helpers'
+
 import {
     Title,
 } from 'components'
@@ -10,10 +12,12 @@ import {
     Navigation,
 } from 'fragments'
 
+const cx = classes.bind(css)
+
 export const Header = () => {
     return (
-        <div className={css.header}>
-            <Title className={css.title}>React Starter Kit</Title>
+        <div className={cx(css.header)}>
+            <Title className={cx(css.title)}>React Starter Kit</Title>
 
             <Navigation />
 

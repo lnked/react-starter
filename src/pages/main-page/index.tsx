@@ -61,9 +61,11 @@ class MainPage extends React.Component<any, any> {
 
         return (
             <div className={css.content}>
-                <span>Current pathname: {location.pathname}</span>
-                <button onClick={() => push('/test')}>Change url</button>
-                <button onClick={() => goBack()}>Go Back</button>
+                <div className={css.location}>
+                    <span>Current pathname: {location.pathname}</span>
+                    <button onClick={() => push('/test')}>Change url</button>
+                    <button onClick={() => goBack()}>Go Back</button>
+                </div>
 
                 <p className={css.description}>Отличный сборщик рекат проектов</p>
 
