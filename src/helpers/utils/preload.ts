@@ -1,21 +1,19 @@
 export const preload = (stack: any[], pending = false): void => {
-    if (stack && stack.length) {
-        let index = stack.length
+    const cb = (data: any, index: number = 0) => {
+        const fn = stack.shift()
 
-        const cb = (data: any) => {
-            const fn = stack.shift()
-
-            if (typeof fn === 'function') {
-                fn(cb, data)
-            }
-
-            if (index === 0 && pending) {
-                console.log('with pending')
-            }
-
-            index--
+        if (typeof fn === 'function') {
+            fn(cb, data)
         }
 
-        cb(null)
+        if (index === 0 && pending) {
+            console.log('with pending')
+        }
+
+        index--
+    }
+
+    if (stack && stack.length) {
+        cb(null, stack.length)
     }
 }
