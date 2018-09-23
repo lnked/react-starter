@@ -26,11 +26,11 @@ export const cart = observable({
         this.Products.delete(id)
     },
 
-    unenrollProduct(courseId: number, ProductId: number) {
-        this.enrollment.get(courseId).remove(ProductId)
-    },
+    // unenrollProduct(courseId: number, ProductId: number) {
+    //     this.enrollment.get(courseId).remove(ProductId)
+    // },
 
-    enrolledProducts(courseId: number) {
-        return computed(() => this.enrollment.get(courseId).map((n: any) => this.Products.get(n))).get()
-    },
+    // enrolledProducts(courseId: number) {
+    //     return computed(() => this.enrollment.get(courseId).map((n: any) => this.Products.get(n))).get()
+    // },
 })

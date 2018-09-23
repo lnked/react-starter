@@ -1,71 +1,71 @@
-import { observable, computed } from 'mobx'
+// import { observable, computed } from 'mobx'
 
-export interface Student {
-    id: number;
-    name: string;
-}
+// export interface Student {
+//     id: number;
+//     name: string;
+// }
 
-export interface Course {
-    id: number;
-    name: string;
-}
+// export interface Course {
+//     id: number;
+//     name: string;
+// }
 
-const store = observable({
-    students: observable.map(),
-    courses: observable.map(),
-    enrollment: observable.map(),
+// const store = observable({
+//     students: observable.map(),
+//     courses: observable.map(),
+//     enrollment: observable.map(),
 
-    addStudent (student: Student) {
-        if (this.students.has(student.id)) {
-            throw new Error('student already exists')
-        } else {
-            this.students.set(student.id, student)
-        }
-    },
+//     addStudent (student: Student) {
+//         if (this.students.has(student.id)) {
+//             throw new Error('student already exists')
+//         } else {
+//             this.students.set(student.id, student)
+//         }
+//     },
 
-    updateStudent (student: Student) {
-        this.students.set(student.id, student)
-    },
+//     updateStudent (student: Student) {
+//         this.students.set(student.id, student)
+//     },
 
-    removeStudent (id: any) {
-        this.students.delete(id)
-    },
+//     removeStudent (id: any) {
+//         this.students.delete(id)
+//     },
 
-    addCourse (course: Course) {
-        if (this.courses.has(course.id)) {
-            throw new Error('course already exists')
-        } else {
-            this.courses.set(course.id, course)
-        }
-    },
+//     addCourse (course: Course) {
+//         if (this.courses.has(course.id)) {
+//             throw new Error('course already exists')
+//         } else {
+//             this.courses.set(course.id, course)
+//         }
+//     },
 
-    updateCourse (course: Course) {
-        this.courses.set(course.id, course)
-    },
+//     updateCourse (course: Course) {
+//         this.courses.set(course.id, course)
+//     },
 
-    removeCourse (id: number) {
-        this.courses.delete(id)
-    },
+//     removeCourse (id: number) {
+//         this.courses.delete(id)
+//     },
 
-    enrollStudent (courseId: number, studentId: number) {
-        if (!this.enrollment.get(courseId)) {
-            this.enrollment.set(courseId, observable.array([]))
-            this.enrollment.get(courseId).push(studentId)
-        } else if (!this.enrollment.get(courseId).includes(studentId)) {
-            this.enrollment.get(courseId).push(studentId)
-        }
-    },
+//     enrollStudent (courseId: number, studentId: number) {
+//         if (!this.enrollment.get(courseId)) {
+//             this.enrollment.set(courseId, observable.array([]))
+//             this.enrollment.get(courseId).push(studentId)
+//         } else if (!this.enrollment.get(courseId).includes(studentId)) {
+//             this.enrollment.get(courseId).push(studentId)
+//         }
+//     },
 
-    unenrollStudent(courseId: number, studentId: number) {
-        this.enrollment.get(courseId).remove(studentId)
-    },
+//     unenrollStudent(courseId: number, studentId: number) {
+//         this.enrollment.get(courseId).remove(studentId)
+//     },
 
-    enrolledStudents(courseId: number) {
-        return computed(() => this.enrollment.get(courseId).map((n: any) => this.students.get(n))).get()
-    },
-})
+//     enrolledStudents(courseId: number) {
+//         return computed(() => this.enrollment.get(courseId).map((n: any) => this.students.get(n))).get()
+//     },
+// })
 
-export default store
+// export default store
 
 // import React from 'react'
 // import { observer } from 'mobx-react'
