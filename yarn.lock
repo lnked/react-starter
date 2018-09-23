@@ -11015,9 +11015,9 @@ postcss-color-mod-function@^2.4.2:
     postcss "^6.0.23"
     postcss-values-parser "^1.5.0"
 
-postcss-color-mod-function@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-3.0.2.tgz#10f23adae5867dc07ff853bdbea6d2565bdfabf0"
+postcss-color-mod-function@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-3.0.3.tgz#816ba145ac11cc3cb6baa905a75a49f903e4d31d"
   dependencies:
     "@csstools/convert-colors" "^1.4.0"
     postcss "^7.0.2"
@@ -11651,9 +11651,9 @@ postcss-position@1.0.0:
   dependencies:
     postcss "^6.0.7"
 
-postcss-preset-env@6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.0.4.tgz#dd3e1a6ab0d50aff6b71d869383739df41d6b258"
+postcss-preset-env@6.0.5:
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.0.5.tgz#43a0d3401bbb5963ce8231ad7723e6d8a0218cb6"
   dependencies:
     autoprefixer "^9.1.5"
     browserslist "^4.1.1"
@@ -11663,7 +11663,7 @@ postcss-preset-env@6.0.4:
     postcss-attribute-case-insensitive "^4.0.0"
     postcss-color-functional-notation "^2.0.1"
     postcss-color-hex-alpha "^5.0.2"
-    postcss-color-mod-function "^3.0.2"
+    postcss-color-mod-function "^3.0.3"
     postcss-color-rebeccapurple "^4.0.1"
     postcss-custom-media "^7.0.3"
     postcss-custom-properties "^8.0.5"
