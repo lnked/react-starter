@@ -29,7 +29,8 @@ loaders.push({
                     loader: 'svg-url-loader',
                     options: {
                         name: define.rs_asset_name,
-                        limit: 4 * 1024, // 4kb
+                        noquotes: true,
+                        limit: 10 * 1024, // 10kb
                     },
                 },
                 {
@@ -37,7 +38,7 @@ loaders.push({
                     options: {
                         name: define.rs_asset_name,
                         noquotes: true,
-                        limit: 10 * 1024, // 8kb
+                        limit: 10 * 1024, // 10kb
                     },
                 },
             ],
@@ -57,6 +58,7 @@ loaders.push({
 loaders.push({
     test: define.rs_regexp_images,
     loader: 'image-webpack-loader',
+    enforce: 'pre',
     options: {
         bypassOnDebug: define.rs_development,
         mozjpeg: {

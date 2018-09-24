@@ -1,6 +1,7 @@
 const define = require('./define')
 
 module.exports = {
+    nodeEnv: define.rs_mode,
     minimize: true,
     concatenateModules: true,
     runtimeChunk: {
