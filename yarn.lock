@@ -11113,9 +11113,9 @@ postcss-cssnext@3.1.0:
     postcss-selector-matches "^3.0.1"
     postcss-selector-not "^3.0.1"
 
-postcss-custom-media@7.0.3, postcss-custom-media@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-7.0.3.tgz#da0a3aa24831fcaa045e1231a517a15e0dcdfa1b"
+postcss-custom-media@7.0.4, postcss-custom-media@^7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/postcss-custom-media/-/postcss-custom-media-7.0.4.tgz#98e593c4a9a38fefee848434131fa16d316ee165"
   dependencies:
     postcss "^7.0.2"
 
@@ -11651,9 +11651,9 @@ postcss-position@1.0.0:
   dependencies:
     postcss "^6.0.7"
 
-postcss-preset-env@6.0.5:
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.0.5.tgz#43a0d3401bbb5963ce8231ad7723e6d8a0218cb6"
+postcss-preset-env@6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.0.6.tgz#f728b9a43bf01c24eb06efeeff59de0b31ee1105"
   dependencies:
     autoprefixer "^9.1.5"
     browserslist "^4.1.1"
@@ -11665,7 +11665,7 @@ postcss-preset-env@6.0.5:
     postcss-color-hex-alpha "^5.0.2"
     postcss-color-mod-function "^3.0.3"
     postcss-color-rebeccapurple "^4.0.1"
-    postcss-custom-media "^7.0.3"
+    postcss-custom-media "^7.0.4"
     postcss-custom-properties "^8.0.5"
     postcss-custom-selectors "^5.1.2"
     postcss-dir-pseudo-class "^5.0.0"
@@ -14933,16 +14933,16 @@ type-is@~1.6.15, type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
-typed-css-modules-loader@0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/typed-css-modules-loader/-/typed-css-modules-loader-0.0.14.tgz#d107425f41dc395fddf5af523caa76f161fb34ba"
+typed-css-modules-loader@0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/typed-css-modules-loader/-/typed-css-modules-loader-0.0.15.tgz#0945bfa12f992b310b3b4f165697f4016d7f90a3"
   dependencies:
     loader-utils "^1.1.0"
-    typed-css-modules "^0.3.4"
+    typed-css-modules "^0.3.6"
 
-typed-css-modules@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/typed-css-modules/-/typed-css-modules-0.3.4.tgz#dffa67497fb44531dfe4547336e7ef14b720e04c"
+typed-css-modules@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/typed-css-modules/-/typed-css-modules-0.3.6.tgz#39d17f7e65f4ee51a769e282f599347a6cf01cd5"
   dependencies:
     camelcase "^4.1.0"
     chalk "^2.1.0"
