@@ -4,7 +4,7 @@ export const hasClass = (element: any, classList: string[]) => {
 
     classList.map(cn => {
         if (!includes) {
-            includes = cn.indexOf(className) > -1
+            includes = cn && className && className.length && className.indexOf(cn) > -1
         }
     })
 
