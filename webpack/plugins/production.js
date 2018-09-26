@@ -19,6 +19,8 @@ const plugins = [
         minSizeReduce: 1.6,
     }),
 
+    new webpack.IgnorePlugin(/^(mongoose|mobx-react-devtools)$/),
+
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
         fileName: '../webpack-manifest.json',

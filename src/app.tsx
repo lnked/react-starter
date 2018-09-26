@@ -5,8 +5,6 @@ import { Router, Route, Switch } from 'react-router-dom'
 
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 
-import { MobXDevTools } from 'utils'
-
 import { createStore } from 'store'
 
 import { Provider } from 'mobx-react'
@@ -35,9 +33,18 @@ export class App extends React.Component<any, any> {
         const { __DEV__ } = process.env
 
         if (__DEV__) {
-            return (
-                <MobXDevTools />
-            )
+            const { configureDevtool } = require('mobx-react-devtools')
+
+            configureDevtool({
+                logEnabled: true,
+                updatesEnabled: false,
+                graphEnabled: false,
+                logFilter: (change: any) => change.type === 'reaction',
+            })
+
+            const DevTools = require('mobx-react-devtools').default
+
+            return <DevTools noPanel />
         }
 
         return null
