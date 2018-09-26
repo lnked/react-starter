@@ -1,3 +1,3 @@
-export * from './dev-tools'
-export * from './svg-fixer'
-export * from './load-component'
+export { SvgFixer } from './svg-fixer'
+export { MobXDevTools } from './dev-tools'
+export { loadComponent } from './load-component'

@@ -1,3 +1,3 @@
-export * from './ui-store'
-export * from './app-store'
-export * from './create-store'
+export { UiStore } from './ui-store'
+export { AppStore } from './app-store'
+export { createStore } from './create-store'
