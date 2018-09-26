@@ -41,9 +41,8 @@ const plugins = [
         __PROD__: define.rs_production,
     }),
 
-    // new webpack.DllPlugin({
-    //     path: resolve(define.rs_dist, '[name]-manifest.json'),
-    //     name: '[name]_[hash]',
+    // new webpack.DllReferencePlugin({
+    //     manifest: require(path.join(resolve(define.rs_dist, 'dll'), 'bundle-manifest.json')),
     // }),
 
     // /(en-gb|en|ru)/
