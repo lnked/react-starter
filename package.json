@@ -260,7 +260,7 @@
     "postcss-normalize-unicode": "4.0.1",
     "postcss-normalize-whitespace": "4.0.1",
     "postcss-position": "1.0.0",
-    "postcss-preset-env": "6.0.6",
+    "postcss-preset-env": "6.0.7",
     "postcss-quantity-queries": "0.5.0",
     "postcss-reduce-idents": "4.0.1",
     "postcss-reduce-transforms": "4.0.1",
