@@ -19,7 +19,7 @@ const plugins = [
         minSizeReduce: 1.6,
     }),
 
-    new webpack.IgnorePlugin(/^(mobx-logger|react-dev-utils|mobx-react-devtools)$/),
+    new webpack.IgnorePlugin(/^(react-dev-utils|mobx-react-devtools)$/),
 
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
