@@ -3,7 +3,7 @@
         "stylelint-processor-styled-components"
     ],
     "extends": [
-        "stylelint-config-standard",
+        "stylelint-config-recommended",
         "stylelint-config-styled-components"
     ],
     "plugins": [
@@ -18,6 +18,7 @@
                     "if",
                     "else",
                     "mixin",
+                    "import",
                     "extend",
                     "include",
                     "critical",
