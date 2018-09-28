@@ -198,7 +198,7 @@
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-sonarjs": "0.1.1",
+    "eslint-plugin-sonarjs": "0.2.0",
     "eslint-plugin-standard": "4.0.0",
     "eslint-plugin-you-dont-need-momentjs": "1.4.0",
     "favicons-webpack-plugin": "0.0.9",
