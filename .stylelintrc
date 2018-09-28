@@ -11,57 +11,36 @@
     ],
     "syntax": "scss",
     "rules": {
-        "at-rule-no-unknown": [
-            true,
-            {
-                "ignoreAtRules": [
-                    "if",
-                    "else",
-                    "mixin",
-                    "import",
-                    "extend",
-                    "include",
-                    "critical",
-                    "custom-media",
-                    "custom-selector"
-                ]
-            }
-        ],
-        "selector-pseudo-class-no-unknown": [
-            true,
-            {
-                "ignorePseudoClasses": ["global", "default"]
-            }
-        ],
         "indentation": 4,
         "string-quotes": "single",
-        "no-duplicate-selectors": true,
         "color-hex-case": "lower",
         "color-hex-length": "short",
         "color-named": "never",
         "selector-no-qualifying-type": true,
         "selector-combinator-space-after": "always",
-        "selector-attribute-quotes": "never",
-        "selector-attribute-operator-space-before": "never",
+        "selector-attribute-quotes": "always",
+        "selector-attribute-operator-space-before": "always",
+        "selector-attribute-operator-space-after": "always",
+        "selector-attribute-brackets-space-inside": "never",
         "declaration-block-trailing-semicolon": "always",
         "declaration-no-important": true,
         "declaration-colon-space-before": "never",
         "declaration-colon-space-after": "always",
+        "property-no-vendor-prefix": true,
         "number-leading-zero": "never",
         "function-url-quotes": "never",
         "font-weight-notation": "numeric",
-        "font-family-name-quotes": "always-where-recommended",
+        "font-family-name-quotes": "always-unless-keyword",
         "comment-empty-line-before": "always",
         "at-rule-no-vendor-prefix": true,
+        "rule-empty-line-before": "always",
         "selector-pseudo-element-colon-notation": "single",
         "selector-pseudo-class-parentheses-space-inside": "never",
         "selector-no-vendor-prefix": true,
+        "media-feature-range-operator-space-before": "always",
+        "media-feature-range-operator-space-after": "always",
         "media-feature-parentheses-space-inside": "never",
-        "media-feature-name-no-vendor-prefix": true,
-        "declaration-colon-newline-after": "always-multi-line",
-        "no-missing-end-of-source-newline": "never",
-        "property-no-vendor-prefix": true,
-        "value-no-vendor-prefix": true,
-        "value-list-max-empty-lines": 1
+        "media-feature-colon-space-before": "always",
+        "media-feature-colon-space-after": "always"
     }
 }
