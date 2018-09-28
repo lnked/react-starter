@@ -34,6 +34,7 @@
         "comment-empty-line-before": "always",
         "at-rule-no-vendor-prefix": true,
         "rule-empty-line-before": "always",
+        "function-comma-space-after": "always",
         "selector-pseudo-element-colon-notation": "single",
         "selector-pseudo-class-parentheses-space-inside": "never",
         "selector-no-vendor-prefix": true,
