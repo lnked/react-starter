@@ -1,6 +1,14 @@
 // react.d.ts
 // function createRef<T>(): RefObject<T>
 
+export const fail = <T>(message: string): T => {
+    throw message;
+}
+
+// let fromStage: Stage = stages
+//         .filter(s => s.id === stageRelation.fromId)
+//         .shift() || fail<Stage>('Should have found at least one stage.');
+
 declare interface RefObject<T> {
     readonly current: T | null
 }

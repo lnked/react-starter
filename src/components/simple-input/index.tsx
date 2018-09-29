@@ -5,7 +5,7 @@ import { classes } from 'helpers'
 
 export interface Props {
     name?: string;
-    type?: 'text' | 'password' | 'hidden';
+    type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
     label?: string;
     value?: string | number;
     focus?: boolean;
