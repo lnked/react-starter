@@ -1,113 +1,21 @@
 {
-    "compileOnSave": true,
-    "buildOnSave": false,
     "compilerOptions": {
-        "strict": true,
-        "watch": true,
-        "noEmit": true,
-        "allowJs": true,
-        "jsx": "react",
-        "target": "esnext",
-        "module": "esnext",
-        "baseUrl": ".",
-        "rootDir": ".",
-        "outDir": "dist",
-        "sourceMap": true,
-        "diagnostics": true,
-        "declaration": true,
-        "noEmitHelpers": true,
-        "importHelpers": true,
-        "removeComments": true,
-        "skipLibCheck": true,
-        "noImplicitAny": true,
-        "noImplicitThis": true,
         "strictNullChecks": true,
-        "stripInternal": true,
-        "noUnusedLocals": true,
-        "esModuleInterop": true,
-        "noImplicitReturns": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node",
-        "preserveSymlinks": true,
-        "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true,
-        "preserveConstEnums": true,
-        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "types": [
-            "node",
-            "jest",
-            "react",
-            "enzyme",
-            "react-dom",
-            "react-router",
-            "react-router-dom",
-            "styled-components",
-            "jest-styled-components"
-        ],
-        "typeRoots": [
-            "src/typings/**/*",
-            "node_modules/@types",
-            "node_modules/tslib/tslib.d.ts"
-        ],
+        "jsx": "preserve",
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitAny": true,
+        "target": "es6",
         "lib": [
             "dom",
-            "es2015.core",
-            "es2015.iterable",
-            "es5",
-            "es6",
-            "es2015",
-            "scripthost",
-        ],
-        "paths": {
-            "*": [
-                "*",
-                "src/*",
-                "src/typings/*",
-                "node_modules/*"
-            ],
-            "src/*": ["src/*"],
-            "hocs/*": ["src/hocs/*"],
-            "pages/*": ["src/pages/*"],
-            "utils/*": ["src/utils/*"],
-            "config/*": ["src/config/*"],
-            "assets/*": ["src/assets/*"],
-            "typings/*": ["src/typings/*"],
-            "layouts/*": ["src/layouts/*"],
-            "fragments/*": ["src/fragments/*"],
-            "variables/*": ["src/variables/*"],
-            "styles/*": ["src/assets/styles/*"],
-            "images/*": ["src/assets/images/*"],
-            "scripts/*": ["src/assets/scripts/*"],
-            "svgstore/*": ["src/assets/svgstore/*"],
-            "components/*": ["src/components/*"],
-        }
+            "es7"
+        ]
     },
-    "include": [
-        "src/**/*"
-    ],
     "exclude": [
-        "dist",
-        "tests",
-        "webpack",
-        "node_modules"
-    ],
-    "plugins": [
-        {
-            "name": "typescript-styled-plugin",
-            "validate": false,
-            "lint": {
-                "vendorPrefix": "error",
-                "zeroUnits": "ignore",
-                "important": "warning"
-            },
-            "tags": [
-                "styled",
-                "css",
-                "sty"
-            ]
-        }
+        "node_modules",
+        "lib",
+        "es"
     ]
 }

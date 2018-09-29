@@ -1,4 +1,6 @@
 {
-    "extends": "./tsconfig",
-    "compilerOptions": {}
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true
+    }
 }
