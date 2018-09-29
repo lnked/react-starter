@@ -1,9 +1,14 @@
 {
+    "buildOnSave": false,
+    "compileOnSave": true,
     "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": ".",
+        "outDir": "dist",
         "strictNullChecks": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
-        "jsx": "preserve",
+        "jsx": "react",
         "noUnusedParameters": true,
         "noUnusedLocals": true,
         "noImplicitAny": true,
@@ -11,11 +16,59 @@
         "lib": [
             "dom",
             "es7"
-        ]
+        ],
+        "typeRoots": [
+            "src/typings/**/*",
+            "node_modules/@types"
+        ],
+        "paths": {
+            "*": [
+                "*",
+                "src/*",
+                "src/typings/*",
+                "node_modules/*"
+            ],
+            "src/*": ["src/*"],
+            "hocs/*": ["src/hocs/*"],
+            "pages/*": ["src/pages/*"],
+            "utils/*": ["src/utils/*"],
+            "config/*": ["src/config/*"],
+            "assets/*": ["src/assets/*"],
+            "typings/*": ["src/typings/*"],
+            "layouts/*": ["src/layouts/*"],
+            "fragments/*": ["src/fragments/*"],
+            "variables/*": ["src/variables/*"],
+            "styles/*": ["src/assets/styles/*"],
+            "images/*": ["src/assets/images/*"],
+            "scripts/*": ["src/assets/scripts/*"],
+            "svgstore/*": ["src/assets/svgstore/*"],
+            "components/*": ["src/components/*"],
+        }
     },
+    "include": [
+        "src/**/*"
+    ],
     "exclude": [
         "node_modules",
+        "webpack",
+        "dist",
         "lib",
         "es"
+    ],
+    "plugins": [
+        {
+            "name": "typescript-styled-plugin",
+            "validate": false,
+            "lint": {
+                "vendorPrefix": "error",
+                "zeroUnits": "ignore",
+                "important": "warning"
+            },
+            "tags": [
+                "styled",
+                "css",
+                "sty"
+            ]
+        }
     ]
 }

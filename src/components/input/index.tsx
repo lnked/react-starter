@@ -1,9 +1,12 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { Omit } from 'utils'
+
 import { classes } from 'helpers'
 
-export interface Props {
+export interface InputProps extends Omit<React.Props<any>, 'size' | 'prefix'> {
+// export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
     name?: string;
     type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
     label?: string;
@@ -20,7 +23,7 @@ export interface State {
 
 const cx = classes.bind(css)
 
-export class Input extends React.Component<Props, State> {
+export class Input extends React.Component<InputProps, State> {
     static defaultProps = {
         type: 'text',
         label: '',

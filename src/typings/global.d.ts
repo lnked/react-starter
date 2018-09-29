@@ -2,8 +2,6 @@ declare const __DEV__: boolean;
 
 declare const __PROD__: boolean;
 
-declare const Reflect: Reflect;
-
 declare interface EventTarget {
     value: string;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
@@ -39,15 +37,6 @@ declare interface ServiceWorkerConfig {
     onSuccess: (registration: ServiceWorkerRegistration) => void
     onUpdate: (registration: ServiceWorkerRegistration) => void
 }
-
-/**
- * Describe a new type to require non-typescript source files like CSS and other resources.
- */
-declare const require: {
-    <T>(path: string): T;
-    (paths: string[], callback: (...modules: any[]) => void): void;
-    ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
-};
 
 // declare const module: {
 //     hot: {

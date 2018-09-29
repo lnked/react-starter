@@ -3,8 +3,14 @@ interface Window {
     __REDUX_DEVTOOLS_EXTENSION__: () => any;
 }
 
+declare module '*.json' {
+    const value: any;
+    export const version: string;
+    export default value;
+}
+
 declare module 'json-loader!*';
-declare module '*.json';
+
 declare module '*.css' {
     const content: any;
     export default content;
@@ -28,17 +34,12 @@ declare module '*.png' {
 
 declare module '*.scss' {
     const styles: any;
-    export = styles;
 }
 
 declare module '*.scss' {
     interface IClassNames {
         [className: string]: string
     }
-
-    const classNames: IClassNames
-
-    export = classNames
 }
 
 declare module '*.woff';

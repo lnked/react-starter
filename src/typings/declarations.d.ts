@@ -50,6 +50,14 @@ declare module 'enzyme';
 
 declare module 'react-table';
 
+declare module 'shallowequal';
+
+declare module 'warning';
+
+declare module 'css-animation*';
+
+declare module 'omit.js';
+
 declare module 'react-yandex-maps';
 
 declare module 'react';
@@ -57,3 +65,19 @@ declare module 'react-dom';
 declare module 'react-helmet';
 declare module 'react-router';
 declare module 'react-router-dom';
+
+declare module 'react-lazy-load';
+
+declare module 'dom-closest';
+
+declare module 'lodash/debounce';
+
+declare module 'lodash/uniqBy';
+
+declare module 'intersperse';
+
+declare module 'raf';
+
+declare module 'react-lifecycles-compat';
+
+declare module 'react-copy-to-clipboard';
