@@ -92,12 +92,7 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
     plugins.push(['@babel/plugin-proposal-pipeline-operator', { proposal: 'minimal' }])
 
     plugins.push(production && 'transform-react-pure-class-to-function')
-    // plugins.push(production && 'transform-react-remove-prop-types')
-
-    plugins.push(production && ['transform-react-remove-prop-types', {
-        mode: 'wrap',
-        ignoreFilenames: [ 'node_modules' ],
-    }])
+    plugins.push(production && 'transform-react-remove-prop-types')
 
     plugins.push(production && ['transform-imports', {
         'react-router': {
