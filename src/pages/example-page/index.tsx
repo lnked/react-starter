@@ -54,7 +54,10 @@ class ExamplePage extends React.Component<any, any> {
 
         return (
             <div className={css.content}>
-                <Input name="test" type="text" />
+                <Input
+                    name="test"
+                    type="text"
+                />
 
                 <Group type={type}>
                     {products && products.map((item: Product) => (

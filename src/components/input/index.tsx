@@ -1,12 +1,9 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { Omit } from 'utils'
-
 import { classes } from 'helpers'
 
-export interface InputProps extends Omit<React.Props<any>, 'size' | 'prefix'> {
-// export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     name?: string;
     type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
     label?: string;

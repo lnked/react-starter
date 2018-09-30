@@ -56,23 +56,25 @@ class PanelsPage extends React.Component<any, S> {
     startInterval = () => {
         const { progress } = this.state
 
-        progress && Object.keys(progress).map(name => {
-            this.interval[name] = setInterval(() => {
+        progress && Object.keys(progress).map((id: number) => {
+            this.interval[id] = setInterval(() => {
                 this.setState((state: S) => {
                     return {
                         progress: {
                             ...state.progress,
-                            [name]: {
-                                ...state.progress[name],
-                                progress: state.progress[name].progress - 1,
+                            [id]: {
+                                ...state.progress[id],
+                                progress: state.progress[id].progress - 1,
                             },
                         },
                     }
-                })
+                }, () => {
+                    const prog: any = this.state.progress
 
-                if (this.state.progress[name].progress === 0) {
-                    this.stopInterval(name)
-                }
+                    if (prog && prog[id] && prog[id].progress === 0) {
+                        this.stopInterval(id)
+                    }
+                })
             }, 500)
         })
     }
@@ -85,8 +87,8 @@ class PanelsPage extends React.Component<any, S> {
         })
     }
 
-    stopInterval = (name: string) => {
-        clearInterval(this.interval[name])
+    stopInterval = (id: number) => {
+        clearInterval(this.interval[id])
     }
 
     progress = (seconds: number, value: number) => {
