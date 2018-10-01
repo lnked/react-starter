@@ -37,7 +37,7 @@ const rules = [
         enforce: 'pre',
         test: define.rs_regexp_scripts,
         options: {
-            fix: true,
+            fix: false,
         },
         loader: 'eslint-loader',
         include: define.rs_root,
@@ -46,7 +46,7 @@ const rules = [
         enforce: 'pre',
         test: /\.tsx?$/,
         options: {
-            fix: true,
+            fix: false,
         },
         loader: 'tslint-loader',
         include: define.rs_root,
