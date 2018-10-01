@@ -26,7 +26,7 @@
     "lint:fix-scripts": "node_modules/.bin/eslint --ignore-path .gitignore ./src --ext .js,.jsx --fix",
     "lint:fix-tslint": "node_modules/.bin/tslint 'src/**/*.{ts,tsx}' --fix",
     "lint:fix-styles": "node_modules/.bin/stylelint 'src/**/*.{css,less,styl,scss,sass,sss}' --fix",
-    "lint:fix": "yarn run lint:fix-scripts && yarn run lint:fix-tslint && yarn run lint:fix-styles && yarn lint lint:styled-components",
+    "lint:fix": "yarn run lint:fix-scripts && yarn run lint:fix-tslint && yarn run lint:fix-styles && yarn lint:styled-components",
     "lint:tslint": "node_modules/.bin/tslint 'src/**/*.{ts,tsx}'",
     "lint": "yarn run lint:scripts && yarn run lint:styles && yarn run lint:tslint",
     "test": "cross-env NODE_ENV=test jest",
