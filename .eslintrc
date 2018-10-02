@@ -79,6 +79,7 @@
         ]
     },
     "rules": {
+        "standard/no-callback-literal": ["off", ["cb", "callback"]],
         "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
         "object-curly-newline": ["off", { "multiline": true }],
         "no-self-assign": ["error", { "props": false }],
