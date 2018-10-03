@@ -1,0 +1,102 @@
+@import 'styles/_global.scss';
+
+.calendar {
+    position: relative;
+    font-size: 0;
+    background-color: $c-alice-blue;
+    border-bottom: 1px solid $c-input-border;
+
+    &:after {
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+        z-index: 1;
+        width: 15px;
+        height: 15px;
+        content: '';
+        pointer-events: none;
+        background: url(/assets/img/calendar.svg) no-repeat 50% 50%;
+        background-size: 15px 15px;
+    }
+}
+
+.group {
+    position: relative;
+    padding-right: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:after {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        content: '–';
+        width: 10px;
+        height: 100%;
+        display: flex;
+        margin-top: -1px;
+        align-items: center;
+        text-align: center;
+        margin-left: -20px;
+        z-index: 1;
+        color: $c-text-color;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.half {
+    width: 86px;
+    // width: calc(50% - 5px);
+}
+
+.label {
+    opacity: .7;
+    padding: 5px 5px;
+    color: $c-text-color;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+:global {
+    $datepicker__background-color: #f0f0f0;
+    $datepicker__border-color: #aeaeae;
+    $datepicker__highlighted-color: #3dcc4a;
+    $datepicker__muted-color: #ccc;
+    $datepicker__selected-color: #216ba5;
+    $datepicker__text-color: #000;
+    $datepicker__header-color: #000;
+    $datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 10%);
+
+    $datepicker__border-radius: 0;
+    $datepicker__day-margin: .2rem;
+    $datepicker__font-size: 1.2rem;
+    $datepicker__font-family: $font-family-base;
+    $datepicker__item-size: 2rem;
+    $datepicker__margin: 1.5rem;
+    $datepicker__navigation-size: .45rem;
+    $datepicker__triangle-size: 8px;
+
+    @import './datepicker.scss';
+
+    .react-datepicker-wrapper,
+    .react-datepicker__input-container {
+        width: 100%;
+    }
+
+    .react-datepicker__input-container input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        padding: 7px 5px 8px;
+        color: $c-text-color;
+        font-size: 1.4rem;
+        font-weight: 400;
+        background-color: transparent;
+    }
+}
