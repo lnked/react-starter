@@ -53,6 +53,14 @@ const getPresets = ({ loose, useBuiltIns, production }) => {
 const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
     const plugins = []
 
+    plugins.push(['module-resolver', {
+        root: [ './src' ],
+        alias: {
+            // 'test': './test',
+            // 'underscore': 'lodash',
+        },
+    }])
+
     plugins.push(['@babel/plugin-proposal-decorators', { legacy }])
     plugins.push(['@babel/plugin-proposal-class-properties', { loose }])
 
