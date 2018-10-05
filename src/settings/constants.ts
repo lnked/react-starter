@@ -12,3 +12,9 @@ export const STORE_ROUTER = 'router'
 //     order = 'order',
 //     emptyCart = 'emptyCart',
 // };
+
+// enum A {
+//     a = 'a',
+//     b = 'b',
+//     c = 'c'
+// }

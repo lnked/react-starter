@@ -5780,10 +5780,10 @@ enzyme-to-json@3.3.4:
   dependencies:
     lodash "^4.17.4"
 
-enzyme@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.6.0.tgz#d213f280a258f61e901bc663d4cc2d6fd9a9dec8"
-  integrity sha512-onsINzVLGqKIapTVfWkkw6bYvm1o4CyJ9s8POExtQhAkVa4qFDW6DGCQGRy/5bfZYk+gmUbMNyayXiWDzTkHFQ==
+enzyme@3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.7.0.tgz#9b499e8ca155df44fef64d9f1558961ba1385a46"
+  integrity sha512-QLWx+krGK6iDNyR1KlH5YPZqxZCQaVF6ike1eDJAOg0HvSkSCVImPsdWaNw6v+VrnK92Kg8jIOYhuOSS9sBpyg==
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -8073,10 +8073,10 @@ humanize-url@^1.0.0:
     normalize-url "^1.0.0"
     strip-url-auth "^1.0.0"
 
-husky@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.0.tgz#7271e85f5d98b54349788839b720c9a60cd95dba"
-  integrity sha512-jnUD0PK3xGLB5Jc3f3UEwl8qOZeLd0WiWABhVyHPS5R298HOccGZJMOMBSk3gFksAa1BeK9FQYYEfPNlqkfBxg==
+husky@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.1.tgz#7179043184f68a4d1ffc975cbd1c6132ef1fd7b3"
+  integrity sha512-D8ly8eIZdWzWVG4mh4apaX1PP47uLSaN8CS0RyuuLtHJ20Gt6Ccky5pSecaPsqxNzQj0zon3x6QX/0kCc5/TOQ==
   dependencies:
     cosmiconfig "^5.0.6"
     execa "^0.9.0"
