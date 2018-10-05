@@ -2,21 +2,26 @@
     "buildOnSave": false,
     "compileOnSave": true,
     "compilerOptions": {
-        "baseUrl": ".",
+        "reactNamespace": "",
+        "baseUrl": "src",
         "rootDir": ".",
-        "outDir": "dist",
-        "strictNullChecks": true,
-        "moduleResolution": "node",
-        "experimentalDecorators": true,
+        "outDir": "./dist/",
+        "sourceMap": true,
         "jsx": "react",
-        "noUnusedParameters": true,
-        "noUnusedLocals": true,
+        "target": "esnext",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "alwaysStrict": true,
         "noImplicitAny": true,
-        "target": "es6",
-        "module": "esnext",
+        "noUnusedLocals": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "noUnusedParameters": true,
+        "experimentalDecorators": true,
         "lib": [
-            "dom",
-            "es7"
+            "ES2017",
+            "DOM"
         ],
         "typeRoots": [
             "src/typings/**/*"
@@ -40,7 +45,8 @@
         }
     },
     "include": [
-        "src/**/*"
+        "src/**/*.ts",
+        "src/**/*.tsx"
     ],
     "exclude": [
         "node_modules",
@@ -64,5 +70,8 @@
                 "sty"
             ]
         }
-    ]
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "silent": true
+    }
 }
