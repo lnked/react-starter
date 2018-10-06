@@ -4856,10 +4856,10 @@ cucumber-tag-expressions@^1.1.1:
   resolved "https://registry.yarnpkg.com/cucumber-tag-expressions/-/cucumber-tag-expressions-1.1.1.tgz#7f5c7b70009bc2b666591bfe64854578bedee85a"
   integrity sha1-f1x7cACbwrZmWRv+ZIVFeL7e6Fo=
 
-cucumber@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/cucumber/-/cucumber-5.0.1.tgz#0b78d18e8c59750d7195277a5ea801ada57b6c31"
-  integrity sha512-sY9zW1E6G60b7bhUpPEcuJDfAowKgAPabMtr6+8tn2iMeBtF37hiKJvZIS/FO/KBvrxRJ5HDriLP3905NXcbDQ==
+cucumber@5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/cucumber/-/cucumber-5.0.2.tgz#ffdeea0b47eaf21a63dedb49cd880425f2d7eb52"
+  integrity sha512-0A5VkH4UKk5tkbo/jtUGDrAb7pUGuMqAvJAgpjm3n303sXfG8ntu0ESGjss4YKBAMl//qnBzGpB4cdSt5raH2A==
   dependencies:
     assertion-error-formatter "^2.0.1"
     babel-runtime "^6.11.6"
@@ -4867,6 +4867,7 @@ cucumber@5.0.1:
     cli-table3 "^0.5.1"
     colors "^1.1.2"
     commander "^2.9.0"
+    cross-spawn "^6.0.5"
     cucumber-expressions "^6.0.0"
     cucumber-tag-expressions "^1.1.1"
     duration "^0.2.1"
