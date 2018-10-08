@@ -8,6 +8,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const uglifyJsOptions = {
     ie8: false,
+    ecma: 5,
     mangle: true,
     toplevel: false,
     parse: {
