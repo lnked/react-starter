@@ -1,7 +1,3 @@
-const { resolve } = require('path')
-
-const webpack = require('webpack')
-
 const aliases = require('./aliases')
 const rules = require('./rules')
 const define = require('./define')
