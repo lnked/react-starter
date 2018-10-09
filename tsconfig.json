@@ -3,7 +3,7 @@
     "compileOnSave": true,
     "compilerOptions": {
         "reactNamespace": "",
-        "baseUrl": "src",
+        "baseUrl": ".",
         "rootDir": ".",
         "outDir": "./dist/",
         "sourceMap": true,
@@ -27,6 +27,7 @@
             "src/typings/**/*"
         ],
         "paths": {
+            "*": ["src/*"],
             "src/*": ["src/*"],
             "hocs/*": ["src/hocs/*"],
             "pages/*": ["src/pages/*"],
