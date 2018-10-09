@@ -6,7 +6,7 @@ const imports = [
     },
     {
         libraryName: 'lodash',
-        libraryDirectory: '_',
+        libraryDirectory: 'fp',
         camel2DashComponentName: false,
     },
     {
