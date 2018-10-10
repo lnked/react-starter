@@ -221,7 +221,7 @@
     "markdown-loader": "4.0.0",
     "marked": "0.5.1",
     "memory-fs": "0.4.1",
-    "mini-css-extract-plugin": "0.4.3",
+    "mini-css-extract-plugin": "0.4.4",
     "mobx-react-devtools": "6.0.3",
     "node-sass": "4.9.3",
     "opn-cli": "3.1.0",
@@ -327,7 +327,7 @@
     "webpack-dev-server": "3.1.9",
     "webpack-manifest-plugin": "2.0.4",
     "webpack-merge": "4.1.4",
-    "webpack-notifier": "1.6.0",
+    "webpack-notifier": "1.7.0",
     "webpack-pwa-manifest": "3.7.1",
     "webpack-visualizer-plugin": "0.1.11",
     "xml-loader": "1.2.1"
