@@ -2,30 +2,35 @@
     "buildOnSave": false,
     "compileOnSave": true,
     "compilerOptions": {
+        "target": "esnext",
         "reactNamespace": "",
         "baseUrl": ".",
         "rootDir": ".",
-        "outDir": "./dist/",
-        "sourceMap": true,
+        "outDir": "dist",
         "jsx": "react",
-        "target": "esnext",
         "module": "commonjs",
         "moduleResolution": "node",
-        "allowJs": true,
+        "allowJs": false,
+        "sourceMap": true,
+        "declaration": true,
         "alwaysStrict": true,
         "noImplicitAny": true,
         "noUnusedLocals": true,
         "noImplicitThis": true,
+        "removeComments": true,
         "strictNullChecks": true,
         "noUnusedParameters": true,
+        "skipDefaultLibCheck": true,
         "experimentalDecorators": true,
+        "noFallthroughCasesInSwitch": true,
+        "suppressImplicitAnyIndexErrors": true,
         "lib": [
-            "ES2017",
-            "DOM"
+            "es6", "dom"
         ],
         "typeRoots": [
             "src/typings/**/*"
         ],
+        "types" : ["node", "lodash", "react", "react-dom", "react-router", "react-router-dom"],
         "paths": {
             "*": ["src/*"],
             "src/*": ["src/*"],
