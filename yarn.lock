@@ -1384,10 +1384,10 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@types/styled-components@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-3.0.1.tgz#0f591a38e005aeb10687e85eb078c92d9b988ed1"
-  integrity sha512-H9RYkx3jQnL1VCvIie8dXQAnpgEgOMUnvuOy6B7DMiNal2gLdY6/aT1BHptxXxH/CVdWk/K8ouk78AtSK84yYw==
+"@types/styled-components@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.0.0.tgz#33b47071885003878a62689e0883aa2fc59f970a"
+  integrity sha512-06GJvW+J7uueNBarChV4JNX2+xG912R2JU9pMPCWdqPhAi5zX9ogonIg8k+A1X9GtYxDpgnF6PQ2EQYD29KuTA==
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
@@ -9849,10 +9849,10 @@ kuler@1.0.x:
   dependencies:
     colornames "^1.1.1"
 
-ky@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ky/-/ky-0.4.0.tgz#0e33b2032fbc0e75313b856e647ee6ccb0d129bb"
-  integrity sha512-FIIkFAEYO7Bl44obFAyLJb+N6O7FWPD3q3RXGQdf8WJ6RgeVtCtlG+zu0Qs/B04ltSw8QdH1mhNTtQYLWS94fw==
+ky@0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.4.1.tgz#f58a8d67086e26c23895e10b56b7b34d3e5abbe0"
+  integrity sha512-XPUHrQcAOV0jFeOLG0LhfXEOqjtbXpHOtAMW5cOB5M851sx+auA3r/6ZJbNlE45+zo2gsk0SOHeS3KyCvBYO7g==
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
@@ -13683,12 +13683,12 @@ postcss-selector-parser@^5.0.0-rc.3:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-short-spacing@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-short-spacing/-/postcss-short-spacing-3.0.0.tgz#360c5e496fca1250aeeac5988d82e7c409352ca0"
-  integrity sha1-NgxeSW/KElCu6sWYjYLnxAk1LKA=
+postcss-short-spacing@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-short-spacing/-/postcss-short-spacing-4.0.0.tgz#0de9bf226915c66aca6f4262fb691de817e817f1"
+  integrity sha512-ThWP8vse9jtT26+l8fqfCriPVR7QGYUX7gEXYNPJ2+smD4XHpMJAmbhqa8aKuYsCMhvzeC9ZxCsR/B+nXA7iEw==
   dependencies:
-    postcss "^6.0.1"
+    postcss "^7.0.5"
 
 postcss-simple-vars@5.0.1:
   version "5.0.1"
@@ -17269,10 +17269,10 @@ typescript-template-language-service-decorator@^1.7.1:
   resolved "https://registry.yarnpkg.com/typescript-template-language-service-decorator/-/typescript-template-language-service-decorator-1.7.1.tgz#60f825b6b2bab725c9a73eaff65cb598e81a1bc8"
   integrity sha512-Gk0WBNe73T87lpiSj37Xmwzvt5zkKaHT1chY5+v2KP4uhpHktqIcV1hMpxmzAong38EIEhGZWeKtxjxGmTMbqg==
 
-typescript@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.1.tgz#3362ba9dd1e482ebb2355b02dfe8bcd19a2c7c96"
-  integrity sha512-Veu0w4dTc/9wlWNf2jeRInNodKlcdLgemvPsrNpfu5Pq39sgfFjvIIgTsvUHCoLBnMhPoUA+tFxsXjU6VexVRQ==
+typescript@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.2.tgz#c03a5d16f30bb60ad8bb6fe8e7cb212eedeec950"
+  integrity sha512-gOoGJWbNnFAfP9FlrSV63LYD5DJqYJHG5ky1kOXSl3pCImn4rqWy/flyq1BRd4iChQsoCqjbQaqtmXO4yCVPCA==
 
 typings-for-css-modules-loader@1.7.0:
   version "1.7.0"
