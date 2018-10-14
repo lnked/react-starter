@@ -36,13 +36,12 @@ module.exports = {
     },
 
     module: {
-        unsafeCache: false,
         wrappedContextCritical: true,
         strictExportPresence: true,
         exprContextCritical: false,
 
         rules: rules.config,
-        noParse: [ /(?:[/\\]react){2}\.js[/\\]jquery[/\\]zepto\.js$/ ],
+        noParse: /jquery|lodash/,
     },
 
     plugins: plugins.config,

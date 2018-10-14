@@ -21,13 +21,19 @@ OR
 ```bash
 git init
 git remote add origin git@github.com:lnked/react-starter.git
-git fetch
+git fetch origin
 ```
 
 Then run command
 
 ```bash
-yarn install
+yarn
+```
+
+OR
+
+```bash
+npm i
 ```
 
 ## Run tasks
