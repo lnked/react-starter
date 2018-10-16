@@ -9,8 +9,6 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin')
 const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
 const plugins = [
-    new webpack.HashedModuleIdsPlugin(),
-
     new WebpackChunkHash(),
 
     new webpack.optimize.ModuleConcatenationPlugin(),
@@ -43,6 +41,8 @@ const plugins = [
             },
         },
     ]),
+
+    new webpack.HashedModuleIdsPlugin(),
 ]
 
 module.exports.config = plugins

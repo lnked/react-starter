@@ -6,11 +6,11 @@
 }
 
 .button {
+    @extend %button;
     margin: 0;
     outline: 0;
     font-size: 1.1rem;
     padding: .4em 1em .5em;
-    cursor: pointer;
     border-width: 1px;
     border-style: solid;
     border-radius: 1px;

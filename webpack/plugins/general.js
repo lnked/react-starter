@@ -17,6 +17,7 @@ const CssUrlRelativePlugin = require('css-url-relative-plugin')
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 const HappyPack = require('happypack')
 
@@ -40,6 +41,8 @@ const plugins = [
         __DEV__: define.rs_development,
         __PROD__: define.rs_production,
     }),
+
+    new HardSourceWebpackPlugin(),
 
     // new webpack.DllReferencePlugin({
     //     manifest: require(path.join(resolve(define.rs_dist, 'dll'), 'bundle-manifest.json')),
