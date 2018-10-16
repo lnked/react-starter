@@ -1,4 +1,7 @@
-import { observable, computed } from 'mobx'
+import {
+    // computed,
+    observable,
+} from 'mobx'
 
 export interface Product {
     id: number;

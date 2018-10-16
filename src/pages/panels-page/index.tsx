@@ -14,6 +14,7 @@ export interface Action {
         name: string;
         color: string,
         seconds: number;
+        progress: any;
     }
 }
 
@@ -82,12 +83,12 @@ class PanelsPage extends React.Component<any, S> {
     componentWillUnMount () {
         const { progress } = this.state
 
-        progress && Object.keys(progress).map(name => {
-            this.stopInterval(name)
+        progress && Object.keys(progress).map((id: number) => {
+            this.stopInterval(id)
         })
     }
 
-    stopInterval = (id: number) => {
+    stopInterval = (id: number): void => {
         clearInterval(this.interval[id])
     }
 

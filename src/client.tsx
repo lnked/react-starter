@@ -3,6 +3,8 @@ import { render } from 'react-dom'
 import { App } from './app'
 // import * as serviceWorker from './serviceWorker'
 
+import { environment } from 'settings/environment'
+
 const appRoot = document.getElementById('app')
 
 if (appRoot == null) {
@@ -14,9 +16,9 @@ const renderApp = () => {
     document.body.classList.remove('loading')
 }
 
-if (process.env.NODE_ENV === 'development' && module.hot) {
+if (environment.development && module.hot) {
     module.hot.accept('./app', renderApp)
-} else if (process.env.NODE_ENV === 'production') {
+} else if (environment.production) {
     const isHttps = location.protocol.indexOf('https') >= 0
 
     if ('serviceWorker' in navigator && isHttps) {

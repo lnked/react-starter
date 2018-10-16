@@ -2,18 +2,25 @@ import { configure } from 'mobx'
 
 import { enableLogging } from 'mobx-logger'
 
-import { UiStore, AppStore } from 'store'
+import {
+    UiStore,
+    AppStore,
+} from 'store'
 
-import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
+import {
+    STORE_UI,
+    STORE_APP,
+    STORE_ROUTER,
+} from 'settings/constants'
+
+import { environment } from 'settings/environment'
 
 configure({
     enforceActions: 'observed', // 'never' | 'always' | 'observed'
 })
 
-const { __DEV__ } = process.env
-
 enableLogging({
-    predicate: () => __DEV__ && Boolean(window.navigator.userAgent),
+    predicate: () => environment.development && Boolean(window.navigator.userAgent),
     action: true,
     reaction: false,
     transaction: false,

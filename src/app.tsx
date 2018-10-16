@@ -19,6 +19,8 @@ import { browserHistory } from 'helpers'
 
 import { routes } from 'settings/routes'
 
+import { environment } from 'settings/environment'
+
 // Stores
 const routingStore = new RouterStore()
 
@@ -30,9 +32,7 @@ const stores = createStore(routingStore, initialState)
 
 export class App extends React.Component<any, any> {
     renderDevTools = () => {
-        const { __DEV__ } = process.env
-
-        if (__DEV__) {
+        if (environment.development) {
             const { configureDevtool } = require('mobx-react-devtools')
 
             configureDevtool({

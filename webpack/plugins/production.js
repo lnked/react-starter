@@ -21,6 +21,8 @@ const plugins = [
 
     new webpack.IgnorePlugin(/^(react-dev-utils|mobx-react-devtools)$/),
 
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+
     new WebpackManifestPlugin({
         basePath: define.rs_output_path,
         fileName: '../webpack-manifest.json',

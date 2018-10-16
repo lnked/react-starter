@@ -1,11 +1,10 @@
 {
     "buildOnSave": false,
-    "compileOnSave": true,
+    "compileOnSave": false,
     "compilerOptions": {
         "target": "esnext",
         "reactNamespace": "",
-        "baseUrl": ".",
-        "rootDir": ".",
+        "baseUrl": "./",
         "outDir": "dist",
         "jsx": "react",
         "module": "commonjs",
@@ -21,13 +20,13 @@
         "strictNullChecks": true,
         "noUnusedParameters": true,
         "skipDefaultLibCheck": true,
+        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "noFallthroughCasesInSwitch": true,
         "suppressImplicitAnyIndexErrors": true,
-        "lib": [
-            "es6", "dom"
-        ],
+        "lib": [ "dom", "es7" ],
         "typeRoots": [
+            "node_modules/@types",
             "src/typings/**/*"
         ],
         "types" : ["node", "lodash", "react", "react-dom", "react-router", "react-router-dom"],

@@ -29,7 +29,6 @@ export class Checkbox extends React.PureComponent<P, S> {
     }
 
     state = {
-        // checked: this.props.checked || false
         checked: false,
     }
 
