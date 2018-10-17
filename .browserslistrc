@@ -1,5 +1,5 @@
 [production staging]
->1%
+> 1%
 last 4 versions
 Firefox ESR
 not ie < 9
@@ -7,3 +7,12 @@ not ie < 9
 [development]
 last 1 chrome version
 last 1 firefox version
+
+[modern]
+Firefox >= 53
+Edge >= 15
+Chrome >= 58
+iOS >= 10.1
+
+[legacy]
+> 1%

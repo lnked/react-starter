@@ -157,7 +157,7 @@ module.exports = function (api) {
 
     const loose = true
     const legacy = true
-    const useBuiltIns = 'usage'
+    const useBuiltIns = 'entry'
 
     const presets = getPresets({ loose, useBuiltIns, production })
     const plugins = getPlugins({ loose, legacy, useBuiltIns, test, development, production })

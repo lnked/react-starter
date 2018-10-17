@@ -58,6 +58,9 @@ polyfills.push('core-js/es7/reflect');
 // fetch() polyfill for making API calls.
 // polyfills.push('whatwg-fetch');
 
+// polyfills for modern browsers (if any)
+// polyfills.push('intersection-observer');
+
 // In tests, polyfill requestAnimationFrame since jsdom doesn't provide it yet.
 // We don't polyfill it in the browser--this is user's responsibility.
 // polyfills.push('raf');
