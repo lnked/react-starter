@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { NavLink } from 'react-router-dom'
 
-export const Navigation = () => {
+export function Navigation () {
     return (
         <nav className={css.navigation}>
             <div className={css.group}>

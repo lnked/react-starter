@@ -13,7 +13,7 @@ export interface P {
 
 const cx = classes.bind(css)
 
-export const Locale = ({ checked, className = '' }: P) => {
+export function Locale ({ checked, className = '' }: P) {
     const list: string[] = ['ru', 'en', 'de']
 
     return (

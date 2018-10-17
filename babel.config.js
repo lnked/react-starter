@@ -82,6 +82,7 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
     ])
 
     plugins.push('@babel/plugin-proposal-json-strings')
+    plugins.push('@babel/plugin-proposal-do-expressions')
 
     plugins.push([
         'babel-plugin-styled-components',

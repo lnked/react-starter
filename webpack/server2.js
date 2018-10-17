@@ -4,7 +4,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 
 const stats = require('./stats')
 const define = require('./define')
-const config = require('./dev.config')
+const config = require('./development.config')
 
 const app = new (require('express'))()
 const port = 3000

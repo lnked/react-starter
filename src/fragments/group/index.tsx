@@ -7,7 +7,7 @@ import { P } from './types'
 
 const cx = classes.bind(css)
 
-export const Group = ({ type = 'grid', children = [], className = '' }: P) => {
+export function Group ({ type = 'grid', children = [], className = '' }: P) {
     let items: any = null
 
     const division = children && Object.keys(children).length % 4

@@ -32,6 +32,7 @@ module.exports = {
     rs_root: _root_,
     rs_dist: _dist_,
     rs_node: _node_,
+    rs_cachePath: resolve(_base_, '.cache'),
     rs_stats: resolve(_dist_, 'stats'),
     rs_parallel: false, // integet(1-8) or false
     rs_protocol: _protocol_,

@@ -4,7 +4,7 @@ const signale = require('signale')
 
 const stats = require('./stats')
 const define = require('./define')
-const config = require('./dev.config')
+const config = require('./development.config')
 
 const compiler = webpack(config)
 

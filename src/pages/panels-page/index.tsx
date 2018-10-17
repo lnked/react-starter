@@ -80,10 +80,10 @@ class PanelsPage extends React.Component<any, S> {
         })
     }
 
-    componentWillUnMount () {
+    componentWillUnmount () {
         const { progress } = this.state
 
-        progress && Object.keys(progress).map((id: number) => {
+        progress && Object.keys(progress).map((id: any) => {
             this.stopInterval(id)
         })
     }

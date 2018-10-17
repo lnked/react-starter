@@ -8,7 +8,7 @@ export interface P {
 
 const cx = classes.bind(css)
 
-export const Present = ({ value }: P) => {
+export function Present ({ value }: P) {
     return (
         <div className={cx(css.quantity)}>
             <p>value: {value}</p>

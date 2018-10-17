@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const { join, resolve } = require('path')
 
 const define = require('../define')
 
@@ -6,13 +6,16 @@ const tsConfig = []
 const jsConfig = []
 
 jsConfig.push({
+    loader: 'cache-loader',
+})
+
+jsConfig.push({
     loader: 'babel-loader',
     options: {
         envName: process.env.BABEL_ENV || process.env.NODE_ENV || 'development',
         configFile: resolve(define.rs_base, 'babel.config.js'),
         compact: define.rs_production,
-        // cacheDirectory: define.rs_development,
-        cacheDirectory: false,
+        cacheDirectory: join(define.rs_cachePath, '/babel'),
     },
 })
 
@@ -59,6 +62,7 @@ const rules = [
     },
     {
         test: define.rs_regexp_scripts,
+        include: resolve('src'),
         exclude: /(node_modules|bower_components)/,
         use: define.rs_parallel ? 'happypack/loader' : jsConfig,
     },

@@ -11,7 +11,7 @@ export interface PropsIcon {
 
 const cx = classes.bind(css)
 
-export const Icon = ({ symbol = '', hidden = false, className = '' }: PropsIcon) => {
+export function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon) {
     const baseUrl: string = window.location.origin || `${window.location.protocol}://${window.location.host}`
 
     return (

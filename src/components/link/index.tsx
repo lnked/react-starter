@@ -11,8 +11,10 @@ export interface P {
 
 const cx = classes.bind(css)
 
-export const Link = ({ href, children = '', className = '', ...props }: P) => (
-    <a href={href} className={cx(css.link, className)} {...props}>
-        {children}
-    </a>
-)
+export function Link ({ href, children = '', className = '', ...props }: P) {
+    return (
+        <a href={href} className={cx(css.link, className)} {...props}>
+            {children}
+        </a>
+    )
+}

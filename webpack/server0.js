@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 const stats = require('./stats')
 const define = require('./define')
-const config = require('./dev.config')
+const config = require('./development.config')
 
 const compiler = webpack(config)
 const { publicPath } = config.output

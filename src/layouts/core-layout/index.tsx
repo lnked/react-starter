@@ -3,8 +3,6 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-import { SvgFixer } from 'utils'
-
 import { Header } from 'fragments'
 
 export interface P {
@@ -27,21 +25,11 @@ export class CoreLayout extends React.Component<P, S> {
     }
 
     componentDidMount () {
-        this.withRender()
+        this.fixScroll()
     }
 
     componentDidUpdate () {
-        this.withRender()
-    }
-
-    withRender = () => {
-        SvgFixer()
         this.fixScroll()
-        this.documentTitle()
-    }
-
-    documentTitle = () => {
-        document.title = this.state.title
     }
 
     fixScroll = () => window.scrollTo(0, 0)

@@ -46,12 +46,12 @@ declare interface ServiceWorkerConfig {
 
 // ... existing global typing defs
 declare module 'tslib' {
-    export function __extends(d: Func, b: Func): void;
-    export function __assign(t: any, ...sources: any[]): any;
-    export function __rest(t: any, propertyNames: string[]): any;
-    export function __decorate(decorators: Func[], target: any, key?: string | symbol, desc?: any): any;
-    export function __param(paramIndex: number, decorator: Func): Func;
-    export function __metadata(metadataKey: any, metadataValue: any): Func;
-    export function __awaiter(thisArg: any, _arguments: any, P: Func, generator: Func): any;
-    export function __generator(thisArg: any, body: Func): any;
+    export function __extends (d: Func, b: Func): void;
+    export function __assign (t: any, ...sources: any[]): any;
+    export function __rest (t: any, propertyNames: string[]): any;
+    export function __decorate (decorators: Func[], target: any, key?: string | symbol, desc?: any): any;
+    export function __param (paramIndex: number, decorator: Func): Func;
+    export function __metadata (metadataKey: any, metadataValue: any): Func;
+    export function __awaiter (thisArg: any, _arguments: any, P: Func, generator: Func): any;
+    export function __generator (thisArg: any, body: Func): any;
 }

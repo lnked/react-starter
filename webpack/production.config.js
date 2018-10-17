@@ -15,7 +15,7 @@ module.exports = webpackMerge(config, {
 
     devtool: false,
 
-    bail: false,
+    bail: true,
 
     stats: stats.config,
 

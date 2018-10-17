@@ -14,7 +14,7 @@ export interface P {
 
 const cx = classes.bind(css)
 
-export const Title = ({ label = '', children = '', center = false, className = '' }: P) => {
+export function Title ({ label = '', children = '', center = false, className = '' }: P) {
     return (
         <div className={cx(css.title, [ center ], className)}>
             {label || children}

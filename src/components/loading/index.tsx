@@ -4,7 +4,7 @@ import { Spinner } from 'components'
 
 import { P } from './types'
 
-export const Loading = ({ error, loading, pastSpinnerDelay, timedOut, pastDelay }: P) => {
+export function Loading ({ error, loading, pastSpinnerDelay, timedOut, pastDelay }: P) {
     if (error) {
         return <div>Error!</div>
     }

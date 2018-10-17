@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-export const Loader = () => {
+export function Loader () {
     return (
         <div className={css.preloader}>
             <span className={css.preloader__bullet} />

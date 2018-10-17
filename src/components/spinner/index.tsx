@@ -7,6 +7,6 @@ import { P } from './types'
 
 const cx = classes.bind(css)
 
-export const Spinner = ({ className = '' }: P) => {
+export function Spinner ({ className = '' }: P) {
     return <div className={cx({ spinner: true }, className)} />
 }

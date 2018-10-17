@@ -7,7 +7,7 @@ import { P } from './types'
 
 const cx = classes.bind(css)
 
-export const Card = ({ children, className = '' }: P) => {
+export function Card ({ children, className = '' }: P) {
     return (
         <div className={cx({ card: true }, className)}>
             {children}

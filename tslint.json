@@ -1,10 +1,15 @@
 {
-    "defaultSeverity": "error",
+    "defaultSeverity": "warning",
     "extends": [
         "tslint:recommended",
         "tslint:latest",
         "tslint-react"
     ],
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**/*.ts"
+        ]
+    },
     "jsRules": {},
     "rules": {
         "eofline": true,
@@ -99,7 +104,7 @@
         "no-implicit-dependencies": false,
         "object-literal-sort-keys": false,
         "interface-over-type-literal": false,
-        "space-before-function-paren": [true, {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
+        "space-before-function-paren": [true, {"anonymous": "always", "named": "always", "asyncArrow": "always"}],
         "no-consecutive-blank-lines": [true, 2],
         "no-object-literal-type-assertion": false
     },
