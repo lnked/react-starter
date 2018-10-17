@@ -35,7 +35,7 @@
         "experimentalDecorators": true,
         "noFallthroughCasesInSwitch": true,
         "suppressImplicitAnyIndexErrors": true,
-        "lib": [ "dom", "es5" ],
+        "lib": [ "dom", "es6" ],
         /*
         "types" : ["node", "lodash", "react", "react-dom", "react-router", "react-router-dom"],
         */
@@ -64,7 +64,8 @@
     },
     "include": [
         "src/**/*.ts",
-        "src/**/*.tsx"
+        "src/**/*.tsx",
+        "src/typings/*.ts"
     ],
     "exclude": [
         "node_modules",
