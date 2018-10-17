@@ -108,13 +108,6 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
     plugins.push(production && 'transform-react-pure-class-to-function')
     plugins.push(production && 'transform-react-remove-prop-types')
 
-    plugins.push(production && ['transform-imports', {
-        'react-router': {
-            transform: 'react-router/${member}',
-            preventFullImport: true,
-        },
-    }])
-
     plugins.push(production && '@babel/plugin-transform-react-inline-elements')
     plugins.push(production && '@babel/plugin-transform-react-constant-elements')
 

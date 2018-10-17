@@ -12,6 +12,7 @@ const alias = {
     typings: resolve(define.rs_root, "typings"),
     helpers: resolve(define.rs_root, "helpers"),
     layouts: resolve(define.rs_root, "layouts"),
+    settings: resolve(define.rs_root, "settings"),
     fragments: resolve(define.rs_root, "fragments"),
     components: resolve(define.rs_root, "components"),
     assets: resolve(define.rs_root, "assets"),

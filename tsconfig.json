@@ -2,8 +2,6 @@
     "buildOnSave": false,
     "compileOnSave": false,
     "compilerOptions": {
-        "extendedDiagnostics": false,
-
         "target": "esnext",
         "reactNamespace": "",
         "baseUrl": "./src",
@@ -25,7 +23,6 @@
         "noUnusedLocals": true,
         "noImplicitThis": true,
         "removeComments": true,
-        "isolatedModules": true,
         "strictNullChecks": true,
         "noImplicitReturns": true,
         "noUnusedParameters": true,
@@ -36,9 +33,7 @@
         "noFallthroughCasesInSwitch": true,
         "suppressImplicitAnyIndexErrors": true,
         "lib": [ "dom", "es6" ],
-        /*
-        "types" : ["node", "lodash", "react", "react-dom", "react-router", "react-router-dom"],
-        */
+        "types" : ["react", "react-dom", "react-router", "react-router-dom"],
         "typeRoots": [
             "node_modules/@types",
             "src/typings/**/*"
@@ -53,6 +48,7 @@
             "assets/*": ["src/assets/*"],
             "typings/*": ["src/typings/*"],
             "layouts/*": ["src/layouts/*"],
+            "settings/*": ["src/settings/*"],
             "fragments/*": ["src/fragments/*"],
             "variables/*": ["src/variables/*"],
             "styles/*": ["src/assets/styles/*"],
