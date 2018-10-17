@@ -7,6 +7,9 @@ const jsConfig = []
 
 jsConfig.push({
     loader: 'cache-loader',
+    options: {
+        cacheDirectory: join(define.rs_cachePath, '/cache-loader'),
+    },
 })
 
 jsConfig.push({
