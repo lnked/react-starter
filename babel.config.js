@@ -1,12 +1,17 @@
 const imports = [
     {
         libraryName: 'core-js',
-        libraryDirectory: 'es6',
+        libraryDirectory: 'modules',
         camel2DashComponentName: true,
     },
     {
         libraryName: 'lodash',
-        libraryDirectory: 'fp',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+    },
+    {
+        libraryName: 'history',
+        libraryDirectory: 'es',
         camel2DashComponentName: false,
     },
     {
