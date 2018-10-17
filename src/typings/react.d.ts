@@ -68,8 +68,6 @@ declare class Component<P, S> {
     setState<K extends keyof S>(f: (prevState: S, props: P) => Pick<S, K>, callback?: () => any): void;
 }
 
-type unknown = { [key: string]: any } | object | number | string | boolean | symbol | undefined | null | void
-
 // function setState<T, K extends keyof T>(obj: T, state: Pick<T, K>) {
 //     for (let k in state) {
 //         obj[k] = state[k];

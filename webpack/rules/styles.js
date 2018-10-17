@@ -24,24 +24,25 @@ const miniCssLoader = [
     },
 ]
 
-const cssConfig = [
-    {
-        loader: 'css-loader',
-        options: {
-            importLoaders: 2,
-            modules: true,
-            camelCase: true,
-            sourceMap: define.rs_sourceMap,
-            minimize: define.rs_production,
-            localIdentName: define.rs_development ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:6]',
-        },
-    },
-    // {
-    //     loader: 'resolve-url-loader',
-    // },
-]
-
+const cssConfig = []
+const preConfig = []
 const usesConfig = []
+
+cssConfig.push({
+    loader: 'css-loader',
+    options: {
+        importLoaders: 2,
+        modules: true,
+        camelCase: true,
+        sourceMap: define.rs_sourceMap,
+        minimize: define.rs_production,
+        localIdentName: define.rs_development ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:6]',
+    },
+})
+
+// cssConfig.push({
+//     loader: 'resolve-url-loader',
+// })
 
 usesConfig.push({
     loader: 'typed-css-modules-loader',
@@ -76,6 +77,7 @@ usesConfig.push({
 
 const rules = define.rs_generate_css
     ? [
+        ...preConfig,
         {
             test: define.rs_regexp_styles,
             use: [...miniCssLoader, ...cssConfig, ...usesConfig],
@@ -87,6 +89,7 @@ const rules = define.rs_generate_css
         },
     ]
     : [
+        ...preConfig,
         {
             test: define.rs_regexp_styles,
             use: [...styleLoader, ...cssConfig, ...usesConfig],
