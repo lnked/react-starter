@@ -20,6 +20,7 @@ declare module 'settings'
 declare module 'settings/routes'
 declare module 'settings/firebase'
 declare module 'settings/constants'
+declare module 'settings/environment'
 
 declare module 'history';
 
