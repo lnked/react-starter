@@ -28,7 +28,9 @@
             "jsx": true,
             "classes": true,
             "globalReturn": false,
-            "impliedStrict": true
+            "impliedStrict": true,
+            "legacyDecorators": true,
+            "experimentalObjectRestSpread": true
         }
     },
     "env": {
@@ -38,6 +40,7 @@
         "jasmine": true
     },
     "globals": {
+        "$": true,
         "module": true,
         "process": true,
         "window": true,

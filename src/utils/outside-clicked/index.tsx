@@ -12,7 +12,7 @@ export class OutsideClicked extends React.Component<P, S> {
     wrapper: any = React.createRef()
 
     state = {
-        opened: null
+        opened: null,
     }
 
     componentDidMount () {
@@ -26,14 +26,14 @@ export class OutsideClicked extends React.Component<P, S> {
     handleClickOutside = (e: Event) => {
         if (this.wrapper && !this.wrapper.contains(e.target)) {
             this.setState({
-                opened: null
+                opened: null,
             })
         }
     }
 
     onChildClick = (name: string) => {
         this.setState({
-            opened: name
+            opened: name,
         })
     }
 
@@ -45,7 +45,7 @@ export class OutsideClicked extends React.Component<P, S> {
             <div ref={this.wrapper}>
                 {React.cloneElement(children, {
                     opened,
-                    onChildClick: this.onChildClick
+                    onChildClick: this.onChildClick,
                 })}
             </div>
         )
