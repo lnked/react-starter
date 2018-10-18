@@ -61,25 +61,25 @@ const plugins = [
         icons: [
             {
                 src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
-                sizes: [120, 152, 167, 180, 1024],
-                destination: join('icons', 'ios'),
-                ios: true,
-            },
-            {
-                src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
                 size: 1024,
                 destination: join('pwa', 'ios'),
                 ios: 'startup',
             },
             {
                 src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
-                destination: join('icons', 'android'),
-                sizes: [36, 48, 72, 96, 144],
+                sizes: [120, 152, 167, 180],
+                destination: join('icons', 'ios'),
+                ios: true,
             },
             {
                 src: resolve(define.rs_root, 'assets/favicon/favicon.png'),
                 destination: join('icons', 'android'),
                 sizes: [192, 512],
+            },
+            {
+                src: resolve(define.rs_root, 'assets/favicon/favicon.svg'),
+                destination: join('icons', 'android'),
+                sizes: [36, 48, 72, 96, 144],
             },
         ],
     }),
