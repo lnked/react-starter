@@ -1,6 +1,6 @@
 {
   "name": "awesome-react-starter",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "license": "MIT",
   "main": "index.js",
   "description": "React boilerplate, pwa, router",
