@@ -45,3 +45,8 @@ module.exports = webpackMerge(config, {
     ],
 })
 
+// conf.entry = {
+//     bundle: entryPoint.config.bundle,
+// };
+
+// module.exports = conf;
