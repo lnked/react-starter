@@ -16,20 +16,20 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const CssUrlRelativePlugin = require('css-url-relative-plugin')
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 
 const HappyPack = require('happypack')
 
-// const layouts = {};
+// const layouts = {}
 
 // glob.sync(`${basePath}/src/layouts/*.?(pug|jade)`).forEach((item) => {
 //     layouts.plugins.push(
 //         new HtmlWebpackPlugin(helpers.generateConfig(item, 'app', 'bundle'))
-//     );
-// });
+//     )
+// })
 
-const cacheDirectory = join(define.rs_cachePath, `/hard-source/${define.rs_environment}/[confighash]`);
+const cacheDirectory = join(define.rs_cachePath, `/hard-source/${define.rs_environment}/[confighash]`)
 
 const plugins = [
     new ProgressBarPlugin(),
@@ -46,16 +46,20 @@ const plugins = [
 
     new HardSourceWebpackPlugin({
         cacheDirectory,
-        configHash: (webpackConfig) => require('node-object-hash')({sort: false}).hash(webpackConfig),
+        configHash: (webpackConfig) => (
+            require('node-object-hash')({
+                sort: false
+            }).hash(webpackConfig)
+        ),
         environmentHash: {
             root: process.cwd(),
-            files: ['package-lock.json', 'npm-shrinkwrap.json', 'yarn.lock'],
+            files: ['yarn.lock', 'package-lock.json', 'npm-shrinkwrap.json'],
             directories: ['node_modules'],
         },
-        info: {
-            mode: 'none',
-            level: 'debug',
-        },
+        // info: {
+        //     mode: 'none',
+        //     level: 'debug',
+        // },
         cachePrune: {
             // Caches younger than `maxAge` are not considered for deletion. They must
             // be at least this (default: 2 days) old in milliseconds.
