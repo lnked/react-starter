@@ -9,6 +9,17 @@
 //         .filter(s => s.id === stageRelation.fromId)
 //         .shift() || fail<Stage>('Should have found at least one stage.');
 
+// interface F<P> {
+//     test(p: P): P
+//     (p: P): P
+// };
+
+// function create<P>(): F<P> {
+//     const f = (p: P): P => p;
+//     f.test = (p: P): P => p;
+//     return f as F<P>;
+// }
+
 declare interface RefObject<T> {
     readonly current: T | null
 }
