@@ -57,11 +57,9 @@ export class RangeCalendar extends React.Component<P, S> {
     }
 
     handleChange = (name: string, date: string) =>
-        this.setState((state: S) => {
-            return {
-                ...state, [name]: date,
-            }
-        }, () => {
+        this.setState((state: S) => ({
+            ...state, [name]: date,
+        }), () => {
             const { requestFormat } = this.props
 
             if (this.props.handleChange) {

@@ -33,11 +33,9 @@ export class Sandwich extends React.PureComponent<P, S> {
     }
 
     handleChange = () => {
-        this.setState((state: S) => {
-            return {
-                isOpened: !state.isOpened,
-            }
-        })
+        this.setState((state: S) => ({
+            isOpened: !state.isOpened,
+        }))
     }
 
     render () {
