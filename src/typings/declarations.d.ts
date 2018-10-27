@@ -28,6 +28,8 @@ declare module 'firebase';
 
 declare module 'classNames';
 
+declare module 'react-hot-loader'
+
 declare module 'loadable-components'
 
 declare module 'react-infinite-scroller';

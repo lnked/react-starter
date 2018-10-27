@@ -103,8 +103,6 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
 
     plugins.push(test && 'transform-es2015-modules-commonjs')
 
-    plugins.push(development && 'react-hot-loader/babel')
-
     imports.map(item => {
         plugins.push([
             'import',

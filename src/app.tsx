@@ -1,5 +1,8 @@
 import * as React from 'react'
+
 import 'styles/client.scss'
+
+import { hot } from 'react-hot-loader'
 
 import { Router, Switch } from 'react-router-dom'
 
@@ -30,7 +33,7 @@ const initialState = (window && window.__INITIAL_STATE__) || {}
 
 const stores = createStore(routingStore, initialState)
 
-export function App () {
+function App () {
     return (
         <Provider {...stores}>
             <ErrorBoundary>
@@ -47,3 +50,5 @@ export function App () {
         </Provider>
     )
 }
+
+export default hot(module)(App)
