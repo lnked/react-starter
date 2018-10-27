@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-import { Icon } from 'components'
+import { Icon, RangeCalendar } from 'components'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
@@ -40,6 +40,8 @@ class MainPage extends React.Component<any, any> {
                 </div>
 
                 <p className={css.description}>Отличный сборщик рекат проектов</p>
+
+                <RangeCalendar />
 
                 <ul className={css.list}>
                     <li>HMR</li>
