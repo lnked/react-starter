@@ -34,7 +34,7 @@ install:
 script:
   - npm run lint
   - npm run test
-  - npm run prod-build
+  - npm run example-build
 
 after_success:
   - npm run deploy
