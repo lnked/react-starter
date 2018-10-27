@@ -18,15 +18,15 @@ module.exports = {
         name: true,
         cacheGroups: {
             bundle: {
-                test: /[/\\]node_modules[/\\]/,
+                test: /[\\/]node_modules[\\/]/,
                 name: 'bundle',
                 minChunks: 1,
                 priority: -10,
-                chunks: 'all',
+                chunks: 'initial',
                 enforce: true,
                 reuseExistingChunk: true,
             },
-            'default': {
+            default: {
                 minChunks: 2,
                 priority: -20,
                 reuseExistingChunk: true,

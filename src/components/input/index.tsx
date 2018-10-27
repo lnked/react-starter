@@ -14,13 +14,13 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
     handleChange?: (e: Event) => void | boolean;
 }
 
-export interface State {
+export interface S {
     value?: string | number;
 }
 
 const cx = classes.bind(css)
 
-export class Input extends React.Component<InputProps, State> {
+export class Input extends React.Component<InputProps, S> {
     static defaultProps = {
         type: 'text',
         label: '',
@@ -35,7 +35,7 @@ export class Input extends React.Component<InputProps, State> {
         value: '',
     }
 
-    // static getDerivedStateFromProps(props: Props, state: State) {
+    // static getDerivedStateFromProps(props: Props, state: S) {
     //     if (state.value !== props.value) {
     //         return {
     //             value: props.value,
@@ -69,12 +69,9 @@ export class Input extends React.Component<InputProps, State> {
     handleChange = (e: any) => {
         const value = this.prepared(e.target.value)
 
-        this.setState((state: State) => {
-            return {
-                ...state,
-                value,
-            }
-        }, () => {
+        this.setState((state: S) => ({
+            ...state, value,
+        }), () => {
             if (this.props.handleChange) {
                 this.props.handleChange(value)
             }

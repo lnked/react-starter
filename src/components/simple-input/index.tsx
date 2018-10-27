@@ -21,7 +21,7 @@ export interface Props {
     handleKeyPress?: (keyCode: number) => void | boolean;
 }
 
-export interface State {
+export interface S {
     value?: string | number;
 }
 
@@ -38,7 +38,7 @@ export class SimpleInput extends React.Component<Props, State> {
         clearable: false,
     }
 
-    static getDerivedStateFromProps(props: Props, state: State) {
+    static getDerivedStateFromProps(props: Props, state: S) {
         if (state.value !== props.value) {
             return {
                 value: props.value,
@@ -76,11 +76,9 @@ export class SimpleInput extends React.Component<Props, State> {
     }
 
     handleClear = () => {
-        this.setState((state: State) => {
-            return {
-                ...state, value: '',
-            }
-        }, () => {
+        this.setState((state: S) => ({
+            ...state, value: '',
+        }), () => {
             if (this.props.handleChange) {
                 this.props.handleChange('')
             }
@@ -90,12 +88,9 @@ export class SimpleInput extends React.Component<Props, State> {
     handleChange = (e: any) => {
         const value = this.prepared(e.target.value)
 
-        this.setState((state: State) => {
-            return {
-                ...state,
-                value,
-            }
-        }, () => {
+        this.setState((state: S) => ({
+            ...state, value,
+        }), () => {
             if (this.props.handleChange) {
                 this.props.handleChange(value)
             }

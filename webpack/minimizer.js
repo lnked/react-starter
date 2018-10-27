@@ -11,6 +11,7 @@ const uglifyJsOptions = {
     ecma: 5,
     mangle: true,
     toplevel: false,
+    warnings: false,
     parse: {
         html5_comments: false,
     },

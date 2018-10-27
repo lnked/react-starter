@@ -1,24 +1,21 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
+import { classes } from 'helpers'
+
 export interface P {
     className?: string;
     children?: JSX.Element[] | JSX.Element | string;
 }
 
-export class Content extends React.PureComponent<P, {}> {
-    render () {
-        const cn: string[] = []
-        const { className, children } = this.props
+const cx = classes.bind(css)
 
-        cn.push(css.content)
-
-        if (className) {
-            cn.push(className)
-        }
-
-        return <div className={cn.join(' ')}>{children}</div>
-    }
+export function Content ({ children, className = '' }: P) {
+    return (
+        <div className={cx(css.content, className)}>
+            {children}
+        </div>
+    )
 }
 
 export default Content

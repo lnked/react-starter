@@ -1,12 +1,31 @@
 const imports = [
     {
+        libraryName: 'components',
+        libraryDirectory: 'components',
+        'camel2DashComponentName': false,
+    },
+    // {
+    //     "libraryName": "antd",
+    //     "style": (name: string, file: Object) => {
+    //       if(name === 'antd/lib/utils'){
+    //         return false;
+    //       }
+    //       return `${name}/style/2x`;
+    //     }
+    //   }
+    {
         libraryName: 'core-js',
-        libraryDirectory: 'es6',
+        libraryDirectory: 'modules',
         camel2DashComponentName: true,
     },
     {
         libraryName: 'lodash',
-        libraryDirectory: 'fp',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+    },
+    {
+        libraryName: 'history',
+        libraryDirectory: 'es',
         camel2DashComponentName: false,
     },
     {
@@ -102,13 +121,6 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
 
     plugins.push(production && 'transform-react-pure-class-to-function')
     plugins.push(production && 'transform-react-remove-prop-types')
-
-    plugins.push(production && ['transform-imports', {
-        'react-router': {
-            transform: 'react-router/${member}',
-            preventFullImport: true,
-        },
-    }])
 
     plugins.push(production && '@babel/plugin-transform-react-inline-elements')
     plugins.push(production && '@babel/plugin-transform-react-constant-elements')

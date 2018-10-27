@@ -2,7 +2,7 @@ const define = require('./define')
 const path = require('path')
 
 const webpack = require('webpack')
-// const resolver = require('postcss-import-resolver')
+const resolver = require('postcss-import-resolver')
 
 const plugins = []
 
@@ -11,11 +11,12 @@ plugins.push(
     require('postcss-import')({
         addDependencyTo: webpack,
         path: [define.rs_root, path.resolve(define.rs_root, 'assets/styles')],
-        // resolve: resolver({
-        //     alias: {
-        //       '~': 'src/'
-        //     }
-        // })
+        resolve: resolver({
+            alias: {
+              '~': 'src/',
+              'styles': 'src/assets/styles/'
+            }
+        })
     }),
     require('postcss-nested'),
     require('postcss-nesting'),

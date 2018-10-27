@@ -1,7 +1,7 @@
 import * as React from 'react'
 import 'styles/client.scss'
 
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router, Switch } from 'react-router-dom'
 
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router'
 
@@ -9,13 +9,13 @@ import { createStore } from 'store'
 
 import { Provider } from 'mobx-react'
 
-import { Helmet } from 'react-helmet'
-
 import { CoreLayout } from 'layouts'
 
 import { ErrorBoundary } from 'components'
 
 import { browserHistory } from 'helpers'
+
+import { renderRoute, renderDevTools } from 'utils'
 
 import { routes } from 'settings/routes'
 
@@ -30,65 +30,20 @@ const initialState = (window && window.__INITIAL_STATE__) || {}
 
 const stores = createStore(routingStore, initialState)
 
-export class App extends React.Component<any, any> {
-    renderDevTools = () => {
-        if (environment.development) {
-            const { configureDevtool } = require('mobx-react-devtools')
+export function App () {
+    return (
+        <Provider {...stores}>
+            <ErrorBoundary>
+                <Router history={history}>
+                    <CoreLayout>
+                        <Switch>
+                            {routes && routes.map(renderRoute)}
+                        </Switch>
 
-            configureDevtool({
-                logEnabled: true,
-                updatesEnabled: false,
-                graphEnabled: false,
-                logFilter: (change: any) => change.type === 'reaction',
-            })
-
-            const DevTools = require('mobx-react-devtools').default
-
-            return <DevTools noPanel />
-        }
-
-        return null
-    }
-
-    renderRoute = ({ title, keywords, description, component: Component, ...rest }: Route) => (
-        <Route key={rest.path} {...rest} render={(props: any) => (
-            <React.Fragment>
-                <Helmet
-                    title={title}
-                    meta={[
-                        {
-                            name: 'description',
-                            content: description,
-                        },
-                        {
-                            name: 'keywords',
-                            content: keywords,
-                        },
-                    ]}
-                />
-
-                <Component {...props} />
-            </React.Fragment>
-        )} />
+                        {environment.development && renderDevTools()}
+                    </CoreLayout>
+                </Router>
+            </ErrorBoundary>
+        </Provider>
     )
-
-    render () {
-        return (
-            <Provider {...stores}>
-                <ErrorBoundary>
-                    <Router history={history}>
-                        <CoreLayout>
-                            <Switch>
-                                {routes && routes.map(this.renderRoute)}
-                            </Switch>
-
-                            {this.renderDevTools()}
-                        </CoreLayout>
-                    </Router>
-                </ErrorBoundary>
-            </Provider>
-        )
-    }
 }
-
-export default App

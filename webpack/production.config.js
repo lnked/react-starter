@@ -35,12 +35,4 @@ module.exports = webpackMerge(config, {
     },
 
     optimization: webpackMerge(optimization, minimizer),
-
-    node: {
-        dgram: 'empty',
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-        child_process: 'empty',
-    },
 })
