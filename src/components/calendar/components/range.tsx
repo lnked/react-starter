@@ -36,8 +36,8 @@ export class RangeCalendar extends React.Component<P, S> {
     }
 
     static getDerivedStateFromProps (props: P, state: S) {
-        const { startDate, endDate } = props
         const next: S = {}
+        const { startDate, endDate } = props
 
         if (!moment(state.startDate).isSame(startDate)) {
             next.startDate = (startDate && moment(startDate)) || null
@@ -67,6 +67,17 @@ export class RangeCalendar extends React.Component<P, S> {
             }
         })
 
+    renderDatePicker (name: string, props: any) {
+        return (
+            <div className={cx({ half: true })}>
+                <DatePicker
+                    {...props}
+                    onChange={this.handleChange.bind(this, name)}
+                />
+            </div>
+        )
+    }
+
     render () {
         const { label, format } = this.props
         const { startDate, endDate } = this.state
@@ -76,41 +87,30 @@ export class RangeCalendar extends React.Component<P, S> {
             format,
         }
 
-        const propsStartDate: any = {}
-        const propsEndDate: any = {}
-
-        props.endDate = endDate
         props.startDate = startDate
+        props.endDate = endDate
 
-        propsEndDate.selected = endDate
-        propsStartDate.selected = startDate
+        const propsStartDate: any = {
+            ...props,
+            selected: startDate,
+            selectsStart: true,
+        }
+
+        const propsEndDate: any = {
+            ...props,
+            selected: endDate,
+            selectsEnd: true,
+        }
 
         return (
             <div className={cx({ calendar: true })}>
                 {label &&
-                    <div className={css.label}>
-                        {label}
-                    </div>
+                    <div className={css.label}>{label}</div>
                 }
 
                 <div className={cx({ group: true })}>
-                    <div className={cx({ half: true })}>
-                        <DatePicker
-                            {...props}
-                            {...propsStartDate}
-                            onChange={this.handleChange.bind(this, 'startDate')}
-                            selectsStart
-                        />
-                    </div>
-
-                    <div className={cx({ half: true })}>
-                        <DatePicker
-                            {...props}
-                            {...propsEndDate}
-                            onChange={this.handleChange.bind(this, 'endDate')}
-                            selectsEnd
-                        />
-                    </div>
+                    {this.renderDatePicker('startDate', propsStartDate)}
+                    {this.renderDatePicker('endDate', propsEndDate)}
                 </div>
             </div>
         )

@@ -3,6 +3,7 @@ fabfile.py
 fabfile.pyc
 coverage
 .coverage
+.deepcheck
 features.md
 code-example
 release-builds
