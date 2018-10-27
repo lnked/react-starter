@@ -1,10 +1,13 @@
 const { resolve } = require('path')
+const dotenv = require('dotenv')
 
 const define = require('./define')
 
-const fs = require('fs')
-const file = `.env.${define.rs_environment}`
-const dotenv = require('dotenv')
+let file = '.env'
+
+if (define.rs_environment !== 'local') {
+    file += `.${define.rs_environment}`
+}
 
 const config = dotenv.config({
     path: resolve(process.cwd(), file),

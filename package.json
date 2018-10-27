@@ -34,9 +34,7 @@
     "test-cover": "yarn run test --coverage",
     "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
     "publish": "npm puublish --access=public",
-    "dev-build": "yarn release --env development",
-    "prod-build": "yarn release --env production",
-    "stage-build": "yarn release --env staging"
+    "example-build": "yarn release --env example"
   },
   "keywords": [
     "react"
