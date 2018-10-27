@@ -1,19 +1,5 @@
 const imports = [
     {
-        libraryName: 'components',
-        libraryDirectory: 'components',
-        'camel2DashComponentName': false,
-    },
-    // {
-    //     "libraryName": "antd",
-    //     "style": (name: string, file: Object) => {
-    //       if(name === 'antd/lib/utils'){
-    //         return false;
-    //       }
-    //       return `${name}/style/2x`;
-    //     }
-    //   }
-    {
         libraryName: 'core-js',
         libraryDirectory: 'modules',
         camel2DashComponentName: true,
@@ -25,16 +11,6 @@ const imports = [
     },
     {
         libraryName: 'history',
-        libraryDirectory: 'es',
-        camel2DashComponentName: false,
-    },
-    {
-        libraryName: 'react-router',
-        libraryDirectory: 'es',
-        camel2DashComponentName: false,
-    },
-    {
-        libraryName: 'react-router-dom',
         libraryDirectory: 'es',
         camel2DashComponentName: false,
     },

@@ -66,7 +66,7 @@
     "url": "git+https://github.com/lnked/react-template.git",
     "type": "git"
   },
-  "author": "Edik Bulikyan <ed.proff@gmail.com> (https://celebro.ru)",
+  "author": "Edik Bulikyan <ed.proff@gmail.com>",
   "size-limit": [
     {
       "path": [
