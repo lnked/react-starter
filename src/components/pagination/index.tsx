@@ -48,14 +48,19 @@ class Pagination extends React.Component<P, {}> {
 
     getInterval = (pages: number) => {
         const { current, displayedPages } = this.props
-
         const halfDisplayed = displayedPages / 2
 
-        /* eslint-disable */
-        /* tslint:disable */
         return {
-            start: Math.ceil(current > halfDisplayed ? Math.max(Math.min(current - halfDisplayed, (pages - displayedPages)), 0) : 0),
-            end: Math.ceil(current > halfDisplayed ? Math.min(current + halfDisplayed, pages) : Math.min(displayedPages, pages)),
+            start: Math.ceil(
+                current > halfDisplayed
+                    ? Math.max(Math.min(current - halfDisplayed, (pages - displayedPages)), 0)
+                    : 0
+                ),
+            end: Math.ceil(
+                current > halfDisplayed
+                    ? Math.min(current + halfDisplayed, pages)
+                    : Math.min(displayedPages, pages)
+                ),
         }
     }
 
@@ -72,7 +77,14 @@ class Pagination extends React.Component<P, {}> {
     }
 
     renderPages = () => {
-        const { edges, items, itemsOnPage, current, useEndEdge, useStartEdge } = this.props
+        const {
+            edges,
+            items,
+            current,
+            useEndEdge,
+            itemsOnPage,
+            useStartEdge,
+        } = this.props
 
         const nodes: any[] = []
         const pages = Math.ceil(items / itemsOnPage)
