@@ -12,15 +12,13 @@ export interface PropsIcon {
 const cx = classes.bind(css)
 
 export function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon) {
-    const baseUrl: string = window.location.origin || `${window.location.protocol}://${window.location.host}`
-
     return (
         <svg
             className={cx({ icon: true }, className)}
             role="presentation"
             key={`icon_${symbol}`}
             aria-hidden={hidden}>
-            <use xlinkHref={`${baseUrl}#${symbol}`} />
+            <use xlinkHref={`#${symbol}`} />
         </svg>
     )
 }

@@ -34,7 +34,14 @@ export class Picture extends React.Component<P, {}> {
 
     render () {
         const { loaded } = this.state
-        const { className, image, width, height, title, alt } = this.props
+        const {
+            className,
+            image,
+            width,
+            height,
+            title,
+            alt,
+        } = this.props
 
         // const props: any = {
         //     width,

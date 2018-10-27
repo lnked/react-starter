@@ -1,5 +1,5 @@
 const define = require("./define");
-const { resolve } = require("path");
+const { join, resolve } = require("path");
 
 const alias = {
     src: define.rs_root,
@@ -19,7 +19,8 @@ const alias = {
     images: resolve(define.rs_root, "assets/images"),
     styles: resolve(define.rs_root, "assets/styles"),
     scripts: resolve(define.rs_root, "assets/scripts"),
-    svgstore: resolve(define.rs_root, "assets/svgstore")
+    svgstore: resolve(define.rs_root, "assets/svgstore"),
+    'babel-core': resolve(join(define.rs_node, "/@babel/core")),
 };
 
 module.exports.config = {

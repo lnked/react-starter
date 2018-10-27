@@ -42,48 +42,31 @@ const webpackConfig = webpackMerge(config, {
 
     devServer: {
         hot: true,
-
         open: true,
-
+        inline: true,
         contentBase: define.rs_contentBase,
-
         compress: true,
-
         watchContentBase: true,
-
         disableHostCheck: true,
-
         clientLogLevel: 'none',
-
         publicPath: config.output.publicPath,
-
         quiet: false,
-
         watchOptions: {
             ignored: ignoredFiles(define.rs_root),
         },
-
         overlay: {
             errors: true,
-            warnings: true,
+            warnings: false,
         },
-
         historyApiFallback: {
             disableDotRule: true,
         },
-
         https: define.rs_protocol === 'https',
-
         port: define.rs_port,
-
         host: define.rs_host,
-
-        'public': `${define.rs_protocol}://${define.rs_host}:${define.rs_port}`,
-
+        public: `${define.rs_protocol}://${define.rs_host}:${define.rs_port}`,
         stats: stats.config,
-
         // proxy: proxy.config,
-
         before(app) {
             // This lets us open files from the runtime error overlay.
             app.use(errorOverlayMiddleware())

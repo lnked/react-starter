@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import { App } from './app'
+import App from './app'
 // import * as serviceWorker from './serviceWorker'
 
 import { environment } from 'settings/environment'
