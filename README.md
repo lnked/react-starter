@@ -36,13 +36,6 @@ OR
 npm i
 ```
 
-## Build with environment
-```bash
-yarn release --env example
-```
-Requires a file `.env.example` file in the root folder of the project
-You can add any files to your environments
-
 ## Run tasks
 
 Start dev-server
@@ -98,6 +91,13 @@ Fix
 ```bash
 yarn run lint:fix
 ```
+
+## Build with environment
+```bash
+yarn release --env example
+```
+Requires a file `.env.example` file in the root folder of the project
+You can add any files to your environments
 
 ## Features
 - [x] TypeScript
