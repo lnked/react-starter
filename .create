@@ -33,10 +33,10 @@ XY   () { printf "\e[${2};${1}H${3}";   } #                            |
 line () { printf %.s"${1}" $(seq ${2}); } #                            |
 #----------------------------------------------------------------------+
 
-# Название папки нового проекта
+# New project folder name
 FOLDER_NAME=$1
 
-# Копировать проект
+# Copy Project
 create=$2
 
 GREEN='\033[0;32m'
@@ -51,7 +51,7 @@ cd $PATH_ROOT
 echo -e "$PATH_ROOT"
 
 
-# Создаем папку проекта если ее нет
+# Create a project folder if it is not present
 #
 if [ -d "$FOLDER_NAME" ] ; then
     echo -e "${RED}Папка $FOLDER_NAME существует${NC}\n"
@@ -60,13 +60,11 @@ else
     echo -e "${GREEN}Создана папка $FOLDER_NAME${NC} \n"
 fi
 
-# Переходим в папку
+# Go to the folder
 #
 cd ./$FOLDER_NAME
 
-# Создаем папку проекта если ее нет
-#
-echo "Копирование файлов";
+echo "Copying files...";
 
 ln -s ${SOURCE}/node_modules ${PATH_ROOT}/$FOLDER_NAME
 
@@ -93,7 +91,7 @@ cp -r ${SOURCE}/.env.production ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintrc ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.stylelintignore ${PATH_ROOT}/$FOLDER_NAME
 
-echo -e "Проект ${GREEN}$FOLDER_NAME${NC} успешно создан"
+echo -e "Project ${GREEN}$FOLDER_NAME${NC} successfully created"
 
 cd ${PATH_ROOT}/$FOLDER_NAME/
 
