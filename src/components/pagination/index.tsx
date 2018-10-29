@@ -106,7 +106,7 @@ class Pagination extends React.Component<P, {}> {
                 nodes.push({
                     node: this.renderEllipse(1)
                 })
-            } else if (interval.start - edges == 1) {
+            } else if (interval.start - edges === 1) {
                 nodes.push({
                     page: edges
                 })
@@ -124,7 +124,7 @@ class Pagination extends React.Component<P, {}> {
                 nodes.push({
                     node: this.renderEllipse(2)
                 })
-            } else if (pages - edges - interval.end == 1) {
+            } else if (pages - edges - interval.end === 1) {
                 nodes.push({
                     page: interval.end
                 })

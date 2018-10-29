@@ -29,8 +29,8 @@ const getPresets = ({ loose, useBuiltIns, production }) => {
             },
             loose,
             modules: false,
-            useBuiltIns,
             debug: false,
+            useBuiltIns,
             shippedProposals: true,
             forceAllTransforms: production,
             exclude: [ 'web.dom.iterable' ],
@@ -143,7 +143,7 @@ module.exports = function (api) {
 
     const loose = true
     const legacy = true
-    const useBuiltIns = 'entry'
+    const useBuiltIns = true
 
     const presets = getPresets({ loose, useBuiltIns, production })
     const plugins = getPlugins({ loose, legacy, useBuiltIns, test, development, production })
