@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "jsx": "react",
+    "paths": {
+        "hocs/*": ["./hocs/*"],
+        "pages/*": ["./pages/*"],
+        "utils/*": ["./utils/*"],
+        "config/*": ["./config/*"],
+        "assets/*": ["./assets/*"],
+        "typings/*": ["./typings/*"],
+        "layouts/*": ["./layouts/*"],
+        "settings/*": ["./settings/*"],
+        "fragments/*": ["./fragments/*"],
+        "components/*": ["./components/*"],
+        "variables/*": ["./variables/*"],
+        "styles/*": ["./assets/styles/*"],
+        "images/*": ["./assets/images/*"],
+        "scripts/*": ["./assets/scripts/*"],
+        "svgstore/*": ["./assets/svgstore/*"],
+    }
+  },
+  "include": ["src/**",]
+ }
