@@ -5,8 +5,6 @@
   "main": "index.js",
   "description": "React boilerplate, pwa, router",
   "scripts": {
-    "precommit": "lint-staged",
-    "postcommit": "git update-index --again",
     "clean": "rimraf dist",
     "prebuild-config": "yarn run clean && yarn run lint",
     "postdeploy": "gh-pages -d dist",
@@ -39,6 +37,12 @@
   "keywords": [
     "react"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "git update-index --again"
+    }
+  },
   "lint-staged": {
     "ignore": [
       "package.json"
@@ -162,6 +166,7 @@
     "enzyme-adapter-react-16": "1.6.0",
     "enzyme-to-json": "3.3.4",
     "eslint": "5.8.0",
+    "eslint-config-jest-enzyme": "7.0.1",
     "eslint-config-standard": "12.0.0",
     "eslint-loader": "2.1.1",
     "eslint-plugin-immutable": "1.0.0",

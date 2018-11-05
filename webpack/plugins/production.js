@@ -29,7 +29,7 @@ const plugins = [
     new Critters({
         fonts: false,
         external: false,
-        preload: 'swap',
+        preload: 'js-lazy',
         preloadFonts: true,
     }),
 
