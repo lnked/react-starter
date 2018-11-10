@@ -2,6 +2,7 @@ const plugins = []
 const define = require('./define')
 
 if (define.rs_development) {
+    plugins.push(...require('./plugins/hard-cache').config)
     plugins.push(...require('./plugins/development').config)
 }
 
