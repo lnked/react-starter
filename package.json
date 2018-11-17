@@ -96,7 +96,7 @@
     "mobx-react": "5.3.6",
     "mobx-react-router": "4.0.5",
     "react": "16.6.3",
-    "react-datepicker": "1.8.0",
+    "react-datepicker": "2.0.0",
     "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
     "react-router-dom": "4.3.1",
