@@ -28,8 +28,6 @@ const HappyPack = require('happypack')
 //     )
 // })
 
-const cacheDirectory = join(define.rs_cachePath, `/hard-source/${define.rs_environment}/[confighash]`)
-
 const plugins = [
     new ProgressBarPlugin(),
 

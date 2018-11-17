@@ -1,4 +1,10 @@
+const { join, resolve } = require('path')
+
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+
+const define = require('../define')
+
+const cacheDirectory = join(define.rs_cachePath, `/hard-source/${define.rs_environment}/[confighash]`)
 
 const plugins = [
     new HardSourceWebpackPlugin({
