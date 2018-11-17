@@ -22,7 +22,7 @@ const imports = [
 const getPresets = ({ loose, useBuiltIns, production }) => {
     const presets = []
     presets.push([
-        '@babel/env',
+        '@babel/preset-env',
         {
             targets: {
                 node: 'current',
