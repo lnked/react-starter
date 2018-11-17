@@ -74,6 +74,7 @@ cp -r ${SOURCE}/typings.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/yarn.lock ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/package.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tsconfig.json ${PATH_ROOT}/$FOLDER_NAME
+cp -r ${SOURCE}/jest.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/babel.config.js ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/tslint.json ${PATH_ROOT}/$FOLDER_NAME
 cp -r ${SOURCE}/.githooks ${PATH_ROOT}/$FOLDER_NAME

@@ -24,7 +24,10 @@ if (define.rs_release || define.rs_deploy) {
 }
 
 if (define.rs_analyzer) {
-    plugins.push(...require('./plugins/visualizer').config, ...require('./plugins/analyzer').config)
+    plugins.push(
+        ...require('./plugins/visualizer').config,
+        ...require('./plugins/analyzer').config
+    )
 }
 
 module.exports.config = plugins
