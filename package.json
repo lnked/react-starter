@@ -6,7 +6,8 @@
   "description": "React boilerplate, pwa, router",
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild-config": "yarn run clean && yarn run lint",
+    "clear:babel-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*",
+    "prebuild-config": "yarn run clean && yarn run lint && yarn run clear:babel-cache",
     "postdeploy": "gh-pages -d dist",
     "postrelease": "yarn size-limit",
     "build-config": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack/production.config -p",
