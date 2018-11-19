@@ -209,7 +209,7 @@
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pixrem": "4.0.1",
     "pleeease-filters": "4.0.0",
-    "postcss": "7.0.5",
+    "postcss": "7.0.6",
     "postcss-calc": "7.0.1",
     "postcss-color-rgba-fallback": "3.0.0",
     "postcss-conditionals": "2.1.0",
