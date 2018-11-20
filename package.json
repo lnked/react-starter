@@ -203,7 +203,7 @@
     "json-loader": "0.5.7",
     "lint-staged": "8.0.5",
     "markdown-loader": "4.0.0",
-    "marked": "0.5.1",
+    "marked": "0.5.2",
     "mini-css-extract-plugin": "0.4.4",
     "mobx-react-devtools": "6.0.3",
     "node-sass": "4.10.0",
