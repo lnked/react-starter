@@ -95,7 +95,7 @@
     "loadable-components": "2.2.3",
     "mobx": "5.6.0",
     "mobx-logger": "0.7.1",
-    "mobx-react": "5.4.1",
+    "mobx-react": "5.4.2",
     "mobx-react-router": "4.0.5",
     "react": "16.6.3",
     "react-datepicker": "2.0.0",
