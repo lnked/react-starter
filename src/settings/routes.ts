@@ -1,11 +1,7 @@
-import { routes as MainRoute } from 'pages/main-page/route'
-import { routes as PanelsRoute } from 'pages/panels-page/route'
-import { routes as ExampleRoute } from 'pages/example-page/route'
-import { routes as NoMatchRoute } from 'pages/nomatch-page/route'
+import * as pages from 'pages'
 
-export const routes: any = [
-    ...MainRoute,
-    ...PanelsRoute,
-    ...ExampleRoute,
-    ...NoMatchRoute,
-]
+const routes: any = []
+
+Object.keys(pages).map((name: string) => routes.push(...pages[name]))
+
+export { routes }

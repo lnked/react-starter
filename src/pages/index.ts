@@ -1,4 +1,6 @@
-export { MainPage } from './main-page'
-export { PanelsPage } from './panels-page'
-export { ExamplePage } from './example-page'
-export { NoMatchPage } from './nomatch-page'
+export { routes as MainPage } from './main-page/route'
+export { routes as PanelsPage } from './panels-page/route'
+export { routes as ExamplePage } from './example-page/route'
+
+// Should always be the last
+export { routes as NoMatchPage } from './nomatch-page/route'

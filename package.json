@@ -201,7 +201,7 @@
     "jest": "23.6.0",
     "jest-styled-components": "6.3.1",
     "json-loader": "0.5.7",
-    "lint-staged": "8.0.5",
+    "lint-staged": "8.1.0",
     "markdown-loader": "4.0.0",
     "marked": "0.5.2",
     "mini-css-extract-plugin": "0.4.4",
