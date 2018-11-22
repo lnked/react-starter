@@ -9,29 +9,29 @@ export interface P {
 
 export class Widget extends React.PureComponent<P, {}> {
 
-    render () {
+  render () {
 
-        const cn: string[] = []
-        const { title, children, className } = this.props
+    const cn: string[] = []
+    const { title, children, className } = this.props
 
-        cn.push(css.widget)
+    cn.push(css.widget)
 
-        if (className) {
+    if (className) {
 
-            cn.push(className)
-
-        }
-
-        return (
-            <div className={cn.join(' ')}>
-                <div className={css.content}>
-                    <div className={css.title}>{title}</div>
-
-                    {children}
-                </div>
-            </div>
-        )
+      cn.push(className)
 
     }
+
+    return (
+      <div className={cn.join(' ')}>
+        <div className={css.content}>
+          <div className={css.title}>{title}</div>
+
+          {children}
+        </div>
+      </div>
+    )
+
+  }
 
 }

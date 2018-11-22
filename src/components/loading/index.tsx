@@ -6,24 +6,24 @@ import { P } from './types'
 
 export function Loading ({ error, loading, pastSpinnerDelay, timedOut, pastDelay }: P) {
 
-    if (error) {
+  if (error) {
 
-        return <div>Error!</div>
+    return <div>Error!</div>
 
-    }
+  }
 
-    if (loading || pastDelay || pastSpinnerDelay) {
+  if (loading || pastDelay || pastSpinnerDelay) {
 
-        return <Spinner />
+    return <Spinner />
 
-    }
+  }
 
-    if (timedOut) {
+  if (timedOut) {
 
-        return <div>Taking a long time...</div>
+    return <div>Taking a long time...</div>
 
-    }
+  }
 
-    return null
+  return null
 
 }

@@ -10,9 +10,9 @@ export class AppStore {
     }
 
     static defaultState = {
-        query: '',
-        isLoading: false,
-        results: [],
+      query: '',
+      isLoading: false,
+      results: [],
     }
 
     // @observable results: string[]
@@ -24,14 +24,14 @@ export class AppStore {
 
     constructor (initialState?: any) {
 
-        // console.log({...AppStore.defaultState, ...initialState})
+      // console.log({...AppStore.defaultState, ...initialState})
 
-        if (initialState && Object.keys(initialState).length) {
+      if (initialState && Object.keys(initialState).length) {
 
-            // extendObservable(this, {...AppStore.defaultState, ...initialState})
-            extendObservable(this, initialState)
+        // extendObservable(this, {...AppStore.defaultState, ...initialState})
+        extendObservable(this, initialState)
 
-        }
+      }
 
     }
 
@@ -46,7 +46,7 @@ export class AppStore {
     @action
     loadTags = (query: string) => {
 
-        this.query = query
+      this.query = query
 
     }
 

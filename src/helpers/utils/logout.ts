@@ -4,15 +4,15 @@ import { TOKEN } from '../token'
 
 export const logout = (reload?: boolean): void => {
 
-    TOKEN.del()
+  TOKEN.del()
 
-    store.remove('company')
-    store.remove('company_id')
+  store.remove('company')
+  store.remove('company_id')
 
-    if (reload) {
+  if (reload) {
 
-        location.href = '/auth/sign-in'
+    location.href = '/auth/sign-in'
 
-    }
+  }
 
 }

@@ -10,19 +10,19 @@ export interface P {
 export class Logo extends React.PureComponent<P, {}> {
 
     static defaultProps = {
-        link: '/',
+      link: '/',
     }
 
     render () {
 
-        const { link } = this.props
+      const { link } = this.props
 
-        return (
-            <NavLink to={link} className={css.logo}>
-                <span className={css.image} />
-                <span className={css.title}>React Starter</span>
-            </NavLink>
-        )
+      return (
+        <NavLink to={link} className={css.logo}>
+          <span className={css.image} />
+          <span className={css.title}>React Starter</span>
+        </NavLink>
+      )
 
     }
 

@@ -16,10 +16,10 @@ const cx = classes.bind(css)
 
 export function Title ({ label = '', children = '', center = false, className = '' }: P) {
 
-    return (
-        <div className={cx(css.title, [ center ], className)}>
-            {label || children}
-        </div>
-    )
+  return (
+    <div className={cx(css.title, [ center ], className)}>
+      {label || children}
+    </div>
+  )
 
 }

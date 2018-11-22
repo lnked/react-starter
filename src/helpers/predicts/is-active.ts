@@ -1,11 +1,11 @@
 export const isActive = (match?: any, location?: Location) => {
 
-    if (!match) {
+  if (!match) {
 
-        return false
+    return false
 
-    }
+  }
 
-    return match && location && location.pathname === match.url
+  return match && location && location.pathname === match.url
 
 }

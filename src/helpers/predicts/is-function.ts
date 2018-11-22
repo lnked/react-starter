@@ -1,2 +1,2 @@
 export const isFunction = (fn: any): boolean =>
-    !!(fn && typeof fn === 'function')
+  !!(fn && typeof fn === 'function')

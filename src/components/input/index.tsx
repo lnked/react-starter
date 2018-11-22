@@ -23,17 +23,17 @@ const cx = classes.bind(css)
 export class Input extends React.Component<InputProps, S> {
 
     static defaultProps = {
-        type: 'text',
-        label: '',
-        value: '',
-        integer: false,
-        floating: false,
+      type: 'text',
+      label: '',
+      value: '',
+      integer: false,
+      floating: false,
     }
 
     input: any = React.createRef()
 
     state = {
-        value: '',
+      value: '',
     }
 
     // static getDerivedStateFromProps(props: Props, state: S) {
@@ -51,69 +51,69 @@ export class Input extends React.Component<InputProps, S> {
 
     componentDidMount () {
 
-        if (this.input && this.input.current) {
+      if (this.input && this.input.current) {
 
-            this.input.current.value = 'xxx'
+        this.input.current.value = 'xxx'
 
-        }
+      }
 
     }
 
     prepared = (value: string) => {
 
-        const { integer, floating } = this.props
+      const { integer, floating } = this.props
 
-        if (integer) {
+      if (integer) {
 
-            return parseInt(value, 10)
+        return parseInt(value, 10)
 
-        } else if (floating) {
+      } else if (floating) {
 
-            return parseFloat(value)
+        return parseFloat(value)
 
-        }
+      }
 
-        return value
+      return value
 
     }
 
     handleChange = (e: any) => {
 
-        const value = this.prepared(e.target.value)
+      const value = this.prepared(e.target.value)
 
-        this.setState((state: S) => ({
-            ...state, value,
-        }), () => {
+      this.setState((state: S) => ({
+        ...state, value,
+      }), () => {
 
-            if (this.props.handleChange) {
+        if (this.props.handleChange) {
 
-                this.props.handleChange(value)
+          this.props.handleChange(value)
 
-            }
+        }
 
-        })
+      })
 
     }
 
     render () {
 
-        const { value } = this.state
-        const { label } = this.props
+      const { value } = this.state
+      const { label } = this.props
 
-        return (
-            <label className={cx({ wrapper: true })}>
-                {label &&
+      return (
+        <label className={cx({ wrapper: true })}>
+          {label &&
                     <div className={cx(css.label)}>{label}</div>
-                }
+          }
 
-                <input
-                    ref={this.input}
-                    value={value}
-                    onChange={this.handleChange}
-                    className={cx(css.control, css.controlInput)}
-                />
-            </label>
-        )
+          <input
+            ref={this.input}
+            value={value}
+            onChange={this.handleChange}
+            className={cx(css.control, css.controlInput)}
+          />
+        </label>
+      )
 
     }
 

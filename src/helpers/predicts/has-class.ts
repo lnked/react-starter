@@ -1,18 +1,18 @@
 export const hasClass = (element: any, classList: string[]) => {
 
-    let includes = false
-    const { className } = element
+  let includes = false
+  const { className } = element
 
-    classList.map(cn => {
+  classList.map(cn => {
 
-        if (!includes) {
+    if (!includes) {
 
-            includes = cn && className && className.length && className.indexOf(cn) > -1
+      includes = cn && className && className.length && className.indexOf(cn) > -1
 
-        }
+    }
 
-    })
+  })
 
-    return element && includes
+  return element && includes
 
 }

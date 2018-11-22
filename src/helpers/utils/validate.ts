@@ -4,72 +4,72 @@ import { isUndefined } from '../predicts/is-undefined'
 
 export const validateBlocks = (value: string, options: any): boolean => {
 
-    const blocks = trim(value).split(' ')
+  const blocks = trim(value).split(' ')
 
-    if (blocks.length !== options.length) {
+  if (blocks.length !== options.length) {
 
-        return false
+    return false
 
-    }
+  }
 
-    const failed = blocks.filter((part: any, index: number) => {
+  const failed = blocks.filter((part: any, index: number) => {
 
-        return !options[index] || part.length < options[index]
+    return !options[index] || part.length < options[index]
 
-    })
+  })
 
-    return !failed.length
+  return !failed.length
 
 }
 
 export const validate = (data: any, options: any): any => {
 
-    const errors = {}
+  const errors = {}
 
-    Object.keys(options).map(name => {
+  Object.keys(options).map(name => {
 
-        const check = options[name]
+    const check = options[name]
 
-        if (check) {
+    if (check) {
 
-            if (!data[name] && (isUndefined(check.required) || check.required)) {
+      if (!data[name] && (isUndefined(check.required) || check.required)) {
 
-                errors[name] = true
+        errors[name] = true
 
-            } else if (check.hasOwnProperty('cyrillic') && !/[ЁА-яё]/.test(data[name])) {
+      } else if (check.hasOwnProperty('cyrillic') && !/[ЁА-яё]/.test(data[name])) {
 
-                errors[name] = 'Можно использовать только кириллицу'
+        errors[name] = 'Можно использовать только кириллицу'
 
-            } else if (check.hasOwnProperty('blocks') && !validateBlocks(data[name], check.blocks)) {
+      } else if (check.hasOwnProperty('blocks') && !validateBlocks(data[name], check.blocks)) {
 
-                errors[name] = 'Не правильный формат'
+        errors[name] = 'Не правильный формат'
 
-            }
+      }
 
-            if (check.isEmail && (data[name] && !check.required && !isEmail(data[name]))) {
+      if (check.isEmail && (data[name] && !check.required && !isEmail(data[name]))) {
 
-                errors[name] = 'Неправильный адрес электронной почты'
+        errors[name] = 'Неправильный адрес электронной почты'
 
-            }
+      }
 
-            if (typeof data[name] === 'object') {
+      if (typeof data[name] === 'object') {
 
-                Object.keys(check).map(k => {
+        Object.keys(check).map(k => {
 
-                    if (typeof data[name][k] === 'undefined' || data[name][k] === '') {
+          if (typeof data[name][k] === 'undefined' || data[name][k] === '') {
 
-                        errors[name] = true
+            errors[name] = true
 
-                    }
+          }
 
-                })
+        })
 
-            }
+      }
 
-        }
+    }
 
-    })
+  })
 
-    return errors
+  return errors
 
 }

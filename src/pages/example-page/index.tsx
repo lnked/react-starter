@@ -2,22 +2,22 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 import {
-    // request,
-    formatMoney,
+  // request,
+  formatMoney,
 } from 'helpers'
 
 import { Group } from 'fragments'
 
 import {
-    Card,
-    Input,
-    Button,
+  Card,
+  Input,
+  Button,
 } from 'components'
 
 import {
-    STORE_UI,
-    STORE_APP,
-    STORE_ROUTER,
+  STORE_UI,
+  STORE_APP,
+  STORE_ROUTER,
 } from 'settings/constants'
 
 import { inject, observer } from 'mobx-react'
@@ -35,7 +35,7 @@ export interface Product {
 class ExamplePage extends React.Component<any, any> {
 
     state = {
-        products: [],
+      products: [],
     }
 
     // componentDidMount () {
@@ -51,32 +51,32 @@ class ExamplePage extends React.Component<any, any> {
 
     render () {
 
-        const type = 'grid'
-        const { products } = this.state
+      const type = 'grid'
+      const { products } = this.state
 
-        return (
-            <div className={css.content}>
-                <Input
-                    name="test"
-                    type="text"
-                />
+      return (
+        <div className={css.content}>
+          <Input
+            name="test"
+            type="text"
+          />
 
-                <Group type={type}>
-                    {products && products.map((item: Product) => (
-                        <Card key={item.id} className={css.product}>
-                            <img src="https://via.placeholder.com/250x180" className={css.productImage} alt=""/>
-                            <div className={css.productTitle}>{item.name}</div>
-                            <div className={css.productCategory}>{item.category}</div>
+          <Group type={type}>
+            {products && products.map((item: Product) => (
+              <Card key={item.id} className={css.product}>
+                <img src="https://via.placeholder.com/250x180" className={css.productImage} alt=""/>
+                <div className={css.productTitle}>{item.name}</div>
+                <div className={css.productCategory}>{item.category}</div>
 
-                            <footer className={css.productFooter}>
-                                <div className={css.productPrice}>{formatMoney(item.price)} ₽</div>
-                                <Button size="small" primary>В корзину</Button>
-                            </footer>
-                        </Card>
-                    ))}
-                </Group>
-            </div>
-        )
+                <footer className={css.productFooter}>
+                  <div className={css.productPrice}>{formatMoney(item.price)} ₽</div>
+                  <Button size="small" primary>В корзину</Button>
+                </footer>
+              </Card>
+            ))}
+          </Group>
+        </div>
+      )
 
     }
 

@@ -8,12 +8,12 @@ export const STORAGE_BUCKET = process.env.FIREBASE_STORAGE_BUCKET
 export const MESSAGING_SENDER_ID = process.env.FIREBASE_MESSAGING_SENDER_ID
 
 const config = {
-    apiKey: API_KEY,
-    projectId: PROJECT_ID,
-    authDomain: AUTH_DOMAIN,
-    databaseURL: DATABASE_URL,
-    storageBucket: STORAGE_BUCKET,
-    messagingSenderId: MESSAGING_SENDER_ID,
+  apiKey: API_KEY,
+  projectId: PROJECT_ID,
+  authDomain: AUTH_DOMAIN,
+  databaseURL: DATABASE_URL,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
 }
 
 firebase.initializeApp(config)

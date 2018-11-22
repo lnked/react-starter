@@ -1,26 +1,26 @@
 export const parseQuery = (search: string) => {
 
-    const params = {}
+  const params = {}
 
-    if (search.substr(0, 1) === '?') {
+  if (search.substr(0, 1) === '?') {
 
-        search = search.substr(1)
+    search = search.substr(1)
 
-    }
+  }
 
-    const temp = search.split('&')
+  const temp = search.split('&')
 
-    if (temp.length) {
+  if (temp.length) {
 
-        temp.map(item => {
+    temp.map(item => {
 
-            const cache = item.split('=')
-            params[cache[0]] = cache[1]
+      const cache = item.split('=')
+      params[cache[0]] = cache[1]
 
-        })
+    })
 
-    }
+  }
 
-    return search && params
+  return search && params
 
 }

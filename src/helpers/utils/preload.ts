@@ -1,21 +1,21 @@
 export const preload = (stack: any[]): void => {
 
-    if (stack && stack.length) {
+  if (stack && stack.length) {
 
-        const cb = (data: any) => {
+    const cb = (data: any) => {
 
-            const fn = stack.shift()
+      const fn = stack.shift()
 
-            if (typeof fn === 'function') {
+      if (typeof fn === 'function') {
 
-                fn(cb, data)
+        fn(cb, data)
 
-            }
-
-        }
-
-        cb(null)
+      }
 
     }
+
+    cb(null)
+
+  }
 
 }

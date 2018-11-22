@@ -3,40 +3,40 @@ import { getDisplayName } from 'helpers/handlers'
 
 export const ppHOC = WrappedComponent => {
 
-    return class PP extends React.Component {
+  return class PP extends React.Component {
 
         static displayName = `HOC(${getDisplayName(WrappedComponent)})`
 
         state = {
-            name: '',
+          name: '',
         }
 
         onNameChange = e => {
 
-            this.setState({
-                name: e.target.value,
-            })
+          this.setState({
+            name: e.target.value,
+          })
 
         }
 
         additions = () => {
 
-            return {
-                name: {
-                    value: this.state.name,
-                    onChange: this.onNameChange,
-                },
-            }
+          return {
+            name: {
+              value: this.state.name,
+              onChange: this.onNameChange,
+            },
+          }
 
         }
 
         render () {
 
-            return <WrappedComponent {...this.props} {...this.additions()} />
+          return <WrappedComponent {...this.props} {...this.additions()} />
 
         }
 
-    }
+  }
 
 }
 

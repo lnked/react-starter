@@ -1,9 +1,9 @@
 export const en = {
-    open: 'open',
-    close: 'close',
+  open: 'open',
+  close: 'close',
 }
 
 export const ru = {
-    open: 'открыть',
-    close: 'закрыть',
+  open: 'открыть',
+  close: 'закрыть',
 }

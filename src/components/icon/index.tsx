@@ -13,14 +13,14 @@ const cx = classes.bind(css)
 
 export function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon) {
 
-    return (
-        <svg
-            className={cx({ icon: true }, className)}
-            role="presentation"
-            key={`icon_${symbol}`}
-            aria-hidden={hidden}>
-            <use xlinkHref={`#${symbol}`} />
-        </svg>
-    )
+  return (
+    <svg
+      className={cx({ icon: true }, className)}
+      role="presentation"
+      key={`icon_${symbol}`}
+      aria-hidden={hidden}>
+      <use xlinkHref={`#${symbol}`} />
+    </svg>
+  )
 
 }

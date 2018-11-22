@@ -15,20 +15,20 @@ const cx = classes.bind(css)
 
 export function Locale ({ checked, className = '' }: P) {
 
-    const list: string[] = ['ru', 'en', 'de']
+  const list: string[] = ['ru', 'en', 'de']
 
-    return (
-        <div className={cx({ locale: true }, className)}>
-            {list &&
+  return (
+    <div className={cx({ locale: true }, className)}>
+      {list &&
                 list.map((lang: string) => (
-                    <Link
-                        key={lang}
-                        to={`/${lang}`}
-                        className={cx(css.link, { active: checked === lang })}>
-                        {lang}
-                    </Link>
+                  <Link
+                    key={lang}
+                    to={`/${lang}`}
+                    className={cx(css.link, { active: checked === lang })}>
+                    {lang}
+                  </Link>
                 ))}
-        </div>
-    )
+    </div>
+  )
 
 }

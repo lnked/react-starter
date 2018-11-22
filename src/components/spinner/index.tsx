@@ -9,6 +9,6 @@ const cx = classes.bind(css)
 
 export function Spinner ({ className = '' }: P) {
 
-    return <div className={cx({ spinner: true }, className)} />
+  return <div className={cx({ spinner: true }, className)} />
 
 }

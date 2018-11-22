@@ -7,14 +7,11 @@ indent_style = space
 end_of_line = lf
 max_line_length = 100
 insert_final_newline = true
-indent_size = 4
+indent_size = 2
 
 [*.{js,jsx,ts,tsx}]
 file_type = jsx
 trim_trailing_whitespace = true
-
-[*.{json,html}]
-indent_size = 2
 
 [.flowconfig]
 file_type = shell

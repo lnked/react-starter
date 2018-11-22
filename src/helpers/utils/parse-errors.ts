@@ -1,25 +1,25 @@
 export const parseError = (json: any): any => {
 
-    const response = {}
+  const response = {}
 
-    if (json && Object.keys(json).length) {
+  if (json && Object.keys(json).length) {
 
-        Object.keys(json).map(name => {
+    Object.keys(json).map(name => {
 
-            let error = json[name]
+      let error = json[name]
 
-            if (error.length === 1) {
+      if (error.length === 1) {
 
-                error = error.shift()
+        error = error.shift()
 
-            }
+      }
 
-            response[name] = error
+      response[name] = error
 
-        })
+    })
 
-    }
+  }
 
-    return response
+  return response
 
 }

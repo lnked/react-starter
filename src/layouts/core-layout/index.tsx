@@ -18,22 +18,22 @@ const cx = classes.bind(css)
 export class CoreLayout extends React.Component<P, S> {
 
     static defaultProps = {
-        children: '',
+      children: '',
     }
 
     state = {
-        title: 'React Starter App',
+      title: 'React Starter App',
     }
 
     componentDidMount () {
 
-        this.fixScroll()
+      this.fixScroll()
 
     }
 
     componentDidUpdate () {
 
-        this.fixScroll()
+      this.fixScroll()
 
     }
 
@@ -41,15 +41,15 @@ export class CoreLayout extends React.Component<P, S> {
 
     render () {
 
-        const { children } = this.props
+      const { children } = this.props
 
-        return (
-            <div className={cx({ layout: true })}>
-                <Header />
+      return (
+        <div className={cx({ layout: true })}>
+          <Header />
 
-                <section className={cx({ main: true })}>{children}</section>
-            </div>
-        )
+          <section className={cx({ main: true })}>{children}</section>
+        </div>
+      )
 
     }
 

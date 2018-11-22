@@ -27,121 +27,121 @@ export interface S {
 class PanelsPage extends React.Component<any, S> {
 
     state = {
-        progress: {
-            1: {
-                name: '1',
-                color: 'red',
-                seconds: 25,
-                progress: 25,
-            },
-            2: {
-                name: '2',
-                color: 'green',
-                seconds: 60,
-                progress: 60,
-            },
-            3: {
-                name: '3',
-                color: 'blue',
-                seconds: 120,
-                progress: 120,
-            },
+      progress: {
+        1: {
+          name: '1',
+          color: 'red',
+          seconds: 25,
+          progress: 25,
         },
+        2: {
+          name: '2',
+          color: 'green',
+          seconds: 60,
+          progress: 60,
+        },
+        3: {
+          name: '3',
+          color: 'blue',
+          seconds: 120,
+          progress: 120,
+        },
+      },
     }
 
     interval: any[] = []
 
     componentDidMount () {
 
-        this.startInterval()
+      this.startInterval()
 
     }
 
     startInterval = () => {
 
-        const { progress } = this.state
+      const { progress } = this.state
 
-        progress && Object.keys(progress).map((id: string) => {
+      progress && Object.keys(progress).map((id: string) => {
 
-            this.interval[id] = setInterval(() => {
+        this.interval[id] = setInterval(() => {
 
-                this.setState((state: S) => ({
-                    progress: {
-                        ...state.progress,
-                        [id]: {
-                            ...state.progress[id],
-                            progress: state.progress[id].progress - 1,
-                        },
-                    },
-                }), () => {
+          this.setState((state: S) => ({
+            progress: {
+              ...state.progress,
+              [id]: {
+                ...state.progress[id],
+                progress: state.progress[id].progress - 1,
+              },
+            },
+          }), () => {
 
-                    const prog: any = this.state.progress
+            const prog: any = this.state.progress
 
-                    if (prog && prog[id] && prog[id].progress === 0) {
+            if (prog && prog[id] && prog[id].progress === 0) {
 
-                        this.stopInterval(id)
+              this.stopInterval(id)
 
-                    }
+            }
 
-                })
+          })
 
-            }, 500)
+        }, 500)
 
-        })
+      })
 
     }
 
     componentWillUnmount () {
 
-        const { progress } = this.state
+      const { progress } = this.state
 
-        progress && Object.keys(progress).map((id: any) => {
+      progress && Object.keys(progress).map((id: any) => {
 
-            this.stopInterval(id)
+        this.stopInterval(id)
 
-        })
+      })
 
     }
 
     stopInterval = (id: string): void => {
 
-        clearInterval(this.interval[id])
+      clearInterval(this.interval[id])
 
     }
 
     progress = (seconds: number, value: number) => {
 
-        return value / seconds * 100
+      return value / seconds * 100
 
     }
 
     render () {
 
-        const type = 'grid'
-        const { progress } = this.state
+      const type = 'grid'
+      const { progress } = this.state
 
-        return (
-            <div className={css.content}>
-                <Group type={type}>
-                    {progress && Object.keys(progress).map(id => {
+      return (
+        <div className={css.content}>
+          <Group type={type}>
+            {progress && Object.keys(progress).map(id => {
 
-                        const value = this.progress(progress[id].seconds, progress[id].seconds - progress[id].progress)
+              const value = this.progress(progress[id].seconds, progress[id].seconds - progress[id].progress)
 
-                        return (
-                            <Card key={id} className={css.product}>
-                                <CircularProgress
-                                    stroke={4}
-                                    color={progress[id].color}
-                                    content={progress[id].progress}
-                                    progress={value}
-                                />
-                            </Card>
-                        )
+              return (
+                <Card key={id} className={css.product}>
+                  <CircularProgress
+                    stroke={4}
+                    color={progress[id].color}
+                    content={progress[id].progress}
+                    progress={value}
+                  />
+                </Card>
+              )
 
-                    })}
-                </Group>
-            </div>
-        )
+            })}
+          </Group>
+        </div>
+      )
 
     }
 

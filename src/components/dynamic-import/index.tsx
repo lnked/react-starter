@@ -12,27 +12,27 @@ export interface S {
 export class DynamicImport extends React.Component<P, S> {
 
     state = {
-        component: null,
+      component: null,
     }
 
     componentDidMount () {
 
-        this.props.load().then((component: any) => {
+      this.props.load().then((component: any) => {
 
-            this.setState(() => ({
-                component: component.default ? component.default : component,
-            }))
+        this.setState(() => ({
+          component: component.default ? component.default : component,
+        }))
 
-        })
+      })
 
     }
 
     render () {
 
-        const { children } = this.props
-        const { component } = this.state
+      const { children } = this.props
+      const { component } = this.state
 
-        return children && children(component)
+      return children && children(component)
 
     }
 

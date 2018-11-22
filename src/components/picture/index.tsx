@@ -10,80 +10,80 @@ const cx = classes.bind(css)
 export class Picture extends React.Component<P, {}> {
 
     static defaultProps = {
-        width: 'auto',
-        height: 'auto',
-        alt: '',
-        preload: false,
-        className: '',
+      width: 'auto',
+      height: 'auto',
+      alt: '',
+      preload: false,
+      className: '',
     }
 
     state = {
-        loaded: false,
+      loaded: false,
     }
 
     componentDidMount () {
 
-        this.load()
+      this.load()
 
     }
 
     load = () => {
 
-        const img = new Image()
+      const img = new Image()
 
-        img.onload = () => this.setState({ loaded: true })
+      img.onload = () => this.setState({ loaded: true })
 
-        img.src = this.props.image
+      img.src = this.props.image
 
     }
 
     render () {
 
-        const { loaded } = this.state
-        const {
-            className,
-            image,
-            width,
-            height,
-            title,
-            alt,
-        } = this.props
+      const { loaded } = this.state
+      const {
+        className,
+        image,
+        width,
+        height,
+        title,
+        alt,
+      } = this.props
 
-        // const props: any = {
-        //     width,
-        //     height
-        // }
+      // const props: any = {
+      //     width,
+      //     height
+      // }
 
-        // if (title) {
-        //     props.title = title
-        // }
+      // if (title) {
+      //     props.title = title
+      // }
 
-        // const img = {
-        //     width,
-        //     height,
-        //     maxWidth: '100%',
-        //     border: '1px solid red'
-        // }
+      // const img = {
+      //     width,
+      //     height,
+      //     maxWidth: '100%',
+      //     border: '1px solid red'
+      // }
 
-        return (
-            <div className={cx({ image: true }, className)}>
-                {loaded && <img src={image} width={width} height={height} title={title} alt={alt} />}
-                {/*
+      return (
+        <div className={cx({ image: true }, className)}>
+          {loaded && <img src={image} width={width} height={height} title={title} alt={alt} />}
+          {/*
                 <picture>
                     <source srcset="your-image.webp" type="image/webp">
                     <img src="your-image.jpg">
                 </picture>
                 */}
-                {/* {loaded && <img src={image} {...props} alt={alt} />} */}
-                {/* {!loaded && <svg style={img} />} */}
+          {/* {loaded && <img src={image} {...props} alt={alt} />} */}
+          {/* {!loaded && <svg style={img} />} */}
 
-                {/*
+          {/*
                 <div style={{background: `no-repeat cover url("${lqip}")`}}>
                     <svg width={width} height={height} />
                 </div>
                  */}
-            </div>
-        )
+        </div>
+      )
 
     }
 

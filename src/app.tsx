@@ -35,21 +35,21 @@ const stores = createStore(routingStore, initialState)
 
 function App () {
 
-    return (
-        <Provider {...stores}>
-            <ErrorBoundary>
-                <Router history={history}>
-                    <CoreLayout>
-                        <Switch>
-                            {routes && routes.map(renderRoute)}
-                        </Switch>
+  return (
+    <Provider {...stores}>
+      <ErrorBoundary>
+        <Router history={history}>
+          <CoreLayout>
+            <Switch>
+              {routes && routes.map(renderRoute)}
+            </Switch>
 
-                        {environment.development && renderDevTools()}
-                    </CoreLayout>
-                </Router>
-            </ErrorBoundary>
-        </Provider>
-    )
+            {environment.development && renderDevTools()}
+          </CoreLayout>
+        </Router>
+      </ErrorBoundary>
+    </Provider>
+  )
 
 }
 

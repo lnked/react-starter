@@ -12,11 +12,11 @@ const cx = classes.bind(css)
 
 export function Content ({ children, className = '' }: P) {
 
-    return (
-        <div className={cx(css.content, className)}>
-            {children}
-        </div>
-    )
+  return (
+    <div className={cx(css.content, className)}>
+      {children}
+    </div>
+  )
 
 }
 

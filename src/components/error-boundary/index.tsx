@@ -11,24 +11,24 @@ export interface State {
 class ErrorBoundary extends React.PureComponent<Props, State> {
 
     state = {
-        error: false,
+      error: false,
     }
 
     componentDidCatch (err: any, info: any) {
 
-        this.setState({ error: true }, () => console.error({ err }, { info }))
+      this.setState({ error: true }, () => console.error({ err }, { info }))
 
     }
 
     render () {
 
-        if (this.state.error) {
+      if (this.state.error) {
 
-            return <h1>Something went wrong.</h1>
+        return <h1>Something went wrong.</h1>
 
-        }
+      }
 
-        return this.props.children
+      return this.props.children
 
     }
 

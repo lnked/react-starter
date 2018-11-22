@@ -4,11 +4,11 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 export interface P {
-    title?: string;
-    bolded?: boolean;
-    variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
-    children?: JSX.Element[] | JSX.Element | string;
-    className?: string;
+  title?: string;
+  bolded?: boolean;
+  variant?: 'info' | 'normal' | 'primary' | 'success' | 'warning' | 'danger';
+  children?: JSX.Element[] | JSX.Element | string;
+  className?: string;
 }
 
 // color: ${props => props.variant};
@@ -21,36 +21,36 @@ export interface P {
 // };
 
 const StyledBadge = styled.div`
-    padding: 3px;
-    font-size: 1.3rem;
-    line-height: 1;
-    border-radius: 2px;
-    display: inline-block;
-    vertical-align: baseline;
-    font-weight: ${(props: P) => (props.bolded ? '700' : '400')};
-    color: $c-primary-color;
-    border: 1px solid $c-info-border;
-    background-color: $c-info-background;
+  padding: 3px;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: baseline;
+  font-weight: ${(props: P) => (props.bolded ? '700' : '400')};
+  color: $c-primary-color;
+  border: 1px solid $c-info-border;
+  background-color: $c-info-background;
 `
 
 export class Badge extends React.PureComponent<P, {}> {
 
-    static defaultProps = {
-        title: '',
-        variant: 'normal',
-        className: '',
-    }
+  static defaultProps = {
+    title: '',
+    variant: 'normal',
+    className: '',
+  }
 
-    render () {
+  render () {
 
-        const { title, className, children, ...rest } = this.props
+    const { title, className, children, ...rest } = this.props
 
-        return (
-            <StyledBadge className={className} {...rest}>
-                {title || children}
-            </StyledBadge>
-        )
+    return (
+      <StyledBadge className={className} {...rest}>
+        {title || children}
+      </StyledBadge>
+    )
 
-    }
+  }
 
 }

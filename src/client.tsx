@@ -9,30 +9,30 @@ const appRoot = document.getElementById('app')
 
 if (appRoot == null) {
 
-    throw new Error('No root element')
+  throw new Error('No root element')
 
 }
 
 const renderApp = () => {
 
-    render(<App />, appRoot)
-    document.body.classList.remove('loading')
+  render(<App />, appRoot)
+  document.body.classList.remove('loading')
 
 }
 
 if (environment.development && module.hot) {
 
-    module.hot.accept('./app', renderApp)
+  module.hot.accept('./app', renderApp)
 
 } else if (environment.production) {
 
-    const isHttps = location.protocol.indexOf('https') >= 0
+  const isHttps = location.protocol.indexOf('https') >= 0
 
-    if ('serviceWorker' in navigator && isHttps) {
+  if ('serviceWorker' in navigator && isHttps) {
 
-        navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/sw.js')
 
-    }
+  }
 
 }
 

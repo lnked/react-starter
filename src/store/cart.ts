@@ -1,6 +1,6 @@
 import {
-    // computed,
-    observable,
+  // computed,
+  observable,
 } from 'mobx'
 
 export interface ProductProps {
@@ -11,39 +11,39 @@ export interface ProductProps {
 }
 
 export const cart = observable({
-    products: observable.map(),
+  products: observable.map(),
 
-    addProduct (product: ProductProps) {
+  addProduct (product: ProductProps) {
 
-        if (this.Products.has(product.id)) {
+    if (this.Products.has(product.id)) {
 
-            throw new Error('Product already exists')
+      throw new Error('Product already exists')
 
-        } else {
+    } else {
 
-            this.Products.set(product.id, product)
+      this.Products.set(product.id, product)
 
-        }
+    }
 
-    },
+  },
 
-    updateProduct (product: ProductProps) {
+  updateProduct (product: ProductProps) {
 
-        this.Products.set(product.id, product)
+    this.Products.set(product.id, product)
 
-    },
+  },
 
-    removeProduct (id: any) {
+  removeProduct (id: any) {
 
-        this.Products.delete(id)
+    this.Products.delete(id)
 
-    },
+  },
 
-    // unenrollProduct(courseId: number, ProductId: number) {
-    //     this.enrollment.get(courseId).remove(ProductId)
-    // },
+  // unenrollProduct(courseId: number, ProductId: number) {
+  //     this.enrollment.get(courseId).remove(ProductId)
+  // },
 
-    // enrolledProducts(courseId: number) {
-    //     return computed(() => this.enrollment.get(courseId).map((n: any) => this.Products.get(n))).get()
-    // },
+  // enrolledProducts(courseId: number) {
+  //     return computed(() => this.enrollment.get(courseId).map((n: any) => this.Products.get(n))).get()
+  // },
 })

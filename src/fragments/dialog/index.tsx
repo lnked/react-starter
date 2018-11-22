@@ -13,41 +13,41 @@ export interface Props {
 export class Dialog extends React.PureComponent<Props, {}> {
 
     static defaultProps = {
-        type: 'alert',
-        title: '',
-        value: '',
-        placeholder: '',
+      type: 'alert',
+      title: '',
+      value: '',
+      placeholder: '',
     }
 
     render () {
 
-        const props: any = {}
-        const { title, value, placeholder } = this.props
+      const props: any = {}
+      const { title, value, placeholder } = this.props
 
-        props.value = value
-        props.placeholder = placeholder
+      props.value = value
+      props.placeholder = placeholder
 
-        return (
-            <div className={css.dialog}>
-                <button type="button" className={css.close}>
-                    <Icon symbol="close" className={css.icon} />
-                </button>
+      return (
+        <div className={css.dialog}>
+          <button type="button" className={css.close}>
+            <Icon symbol="close" className={css.icon} />
+          </button>
 
-                <div className={css.body}>
-                    <div className={css.title}>{title}</div>
-                    <Input {...props} />
-                </div>
+          <div className={css.body}>
+            <div className={css.title}>{title}</div>
+            <Input {...props} />
+          </div>
 
-                <footer className={css.footer}>
-                    <Button className={css.button} danger>
+          <footer className={css.footer}>
+            <Button className={css.button} danger>
                         Отмена
-                    </Button>
-                    <Button className={css.button} success>
+            </Button>
+            <Button className={css.button} success>
                         Подтвердить
-                    </Button>
-                </footer>
-            </div>
-        )
+            </Button>
+          </footer>
+        </div>
+      )
 
     }
 

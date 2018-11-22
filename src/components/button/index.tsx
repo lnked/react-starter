@@ -26,32 +26,32 @@ const cx = classes.bind(css)
 
 export function Button ({ type, size = 'small', circle, label, loading, children, handleClick, ...rest }: P) {
 
-    const {
+  const {
+    info,
+    danger,
+    normal,
+    success,
+    primary,
+    warning,
+  } = rest
+
+  return (
+    <button
+      type={type}
+      onClick={handleClick}
+      className={cx(css.button, {
         info,
-        danger,
         normal,
+        circle,
+        danger,
         success,
         primary,
         warning,
-    } = rest
-
-    return (
-        <button
-            type={type}
-            onClick={handleClick}
-            className={cx(css.button, {
-                info,
-                normal,
-                circle,
-                danger,
-                success,
-                primary,
-                warning,
-                loading,
-            },
-            [ `size-${size}` ])}>
-            {label || children}
-        </button>
-    )
+        loading,
+      },
+      [ `size-${size}` ])}>
+      {label || children}
+    </button>
+  )
 
 }
