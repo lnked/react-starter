@@ -276,7 +276,7 @@
         "operator-linebreak": "error",
         "padded-blocks": [
             "error",
-            "never"
+            "always"
         ],
         "quote-props": ["error", "as-needed", { "keywords": true, "unnecessary": false }],
         "quotes": [

@@ -4,6 +4,7 @@ import * as css from './styles.scss'
 import { NavLink } from 'react-router-dom'
 
 export function Navigation () {
+
     return (
         <nav className={css.navigation}>
             <div className={css.group}>
@@ -30,4 +31,5 @@ export function Navigation () {
             </a>
         </nav>
     )
+
 }

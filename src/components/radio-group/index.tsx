@@ -12,10 +12,13 @@ export interface S {
 }
 
 export class RadioGroup extends React.Component<P, S> {
+
     static defaultProps = {
         checked: false,
         handleChange: (value: string | number) => {
+
             console.log('check radio: = ', value)
+
         },
     }
 
@@ -26,6 +29,7 @@ export class RadioGroup extends React.Component<P, S> {
     handleChange = (checked: boolean | string | number) => this.setState({ checked })
 
     render () {
+
         const { checked } = this.state
         const { name, children } = this.props
 
@@ -38,5 +42,7 @@ export class RadioGroup extends React.Component<P, S> {
         )
 
         return <React.Fragment>{items}</React.Fragment>
+
     }
+
 }

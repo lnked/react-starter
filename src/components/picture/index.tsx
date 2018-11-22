@@ -8,6 +8,7 @@ import { P } from './types'
 const cx = classes.bind(css)
 
 export class Picture extends React.Component<P, {}> {
+
     static defaultProps = {
         width: 'auto',
         height: 'auto',
@@ -21,18 +22,23 @@ export class Picture extends React.Component<P, {}> {
     }
 
     componentDidMount () {
+
         this.load()
+
     }
 
     load = () => {
+
         const img = new Image()
 
         img.onload = () => this.setState({ loaded: true })
 
         img.src = this.props.image
+
     }
 
     render () {
+
         const { loaded } = this.state
         const {
             className,
@@ -78,7 +84,9 @@ export class Picture extends React.Component<P, {}> {
                  */}
             </div>
         )
+
     }
+
 }
 
 // <picture>

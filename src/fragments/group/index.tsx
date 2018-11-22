@@ -8,16 +8,19 @@ import { P } from './types'
 const cx = classes.bind(css)
 
 export function Group ({ type = 'grid', children = [], className = '' }: P) {
+
     let items: any = null
 
     const division = children && Object.keys(children).length % 4
 
     if (children && Object.keys(children).length) {
+
         items = React.Children.map(children, (card: any) =>
             React.cloneElement(<div>{card}</div>, {
                 className: cx(css.item),
             })
         )
+
     }
 
     return (
@@ -27,4 +30,5 @@ export function Group ({ type = 'grid', children = [], className = '' }: P) {
             list: type === 'list',
         }, className)}>{items}</div>
     )
+
 }

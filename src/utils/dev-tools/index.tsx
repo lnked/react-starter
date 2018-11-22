@@ -2,7 +2,9 @@ import * as React from 'react'
 import { environment } from 'settings/environment'
 
 export function renderDevTools (noPanel = false) {
+
     if (environment.development) {
+
         const { configureDevtool } = require('mobx-react-devtools')
 
         configureDevtool({
@@ -15,7 +17,9 @@ export function renderDevTools (noPanel = false) {
         const DevTools = require('mobx-react-devtools').default
 
         return <DevTools noPanel={noPanel} />
+
     }
 
     return null
+
 }

@@ -16,6 +16,7 @@ export interface S {
 const cx = classes.bind(css)
 
 export class CoreLayout extends React.Component<P, S> {
+
     static defaultProps = {
         children: '',
     }
@@ -25,16 +26,21 @@ export class CoreLayout extends React.Component<P, S> {
     }
 
     componentDidMount () {
+
         this.fixScroll()
+
     }
 
     componentDidUpdate () {
+
         this.fixScroll()
+
     }
 
     fixScroll = () => window.scrollTo(0, 0)
 
     render () {
+
         const { children } = this.props
 
         return (
@@ -44,7 +50,9 @@ export class CoreLayout extends React.Component<P, S> {
                 <section className={cx({ main: true })}>{children}</section>
             </div>
         )
+
     }
+
 }
 
 export default CoreLayout

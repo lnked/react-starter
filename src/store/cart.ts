@@ -3,7 +3,7 @@ import {
     observable,
 } from 'mobx'
 
-export interface Product {
+export interface ProductProps {
     id: number;
     name: string;
     price: number;
@@ -13,20 +13,30 @@ export interface Product {
 export const cart = observable({
     products: observable.map(),
 
-    addProduct (Product: Product) {
-        if (this.Products.has(Product.id)) {
+    addProduct (product: ProductProps) {
+
+        if (this.Products.has(product.id)) {
+
             throw new Error('Product already exists')
+
         } else {
-            this.Products.set(Product.id, Product)
+
+            this.Products.set(product.id, product)
+
         }
+
     },
 
-    updateProduct (Product: Product) {
-        this.Products.set(Product.id, Product)
+    updateProduct (product: ProductProps) {
+
+        this.Products.set(product.id, product)
+
     },
 
     removeProduct (id: any) {
+
         this.Products.delete(id)
+
     },
 
     // unenrollProduct(courseId: number, ProductId: number) {

@@ -8,5 +8,7 @@ import { P } from './types'
 const cx = classes.bind(css)
 
 export function Spinner ({ className = '' }: P) {
+
     return <div className={cx({ spinner: true }, className)} />
+
 }

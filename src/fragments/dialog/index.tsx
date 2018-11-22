@@ -11,6 +11,7 @@ export interface Props {
 }
 
 export class Dialog extends React.PureComponent<Props, {}> {
+
     static defaultProps = {
         type: 'alert',
         title: '',
@@ -19,6 +20,7 @@ export class Dialog extends React.PureComponent<Props, {}> {
     }
 
     render () {
+
         const props: any = {}
         const { title, value, placeholder } = this.props
 
@@ -46,7 +48,9 @@ export class Dialog extends React.PureComponent<Props, {}> {
                 </footer>
             </div>
         )
+
     }
+
 }
 
 export default Dialog

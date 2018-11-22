@@ -33,6 +33,7 @@ export interface Product {
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer
 class ExamplePage extends React.Component<any, any> {
+
     state = {
         products: [],
     }
@@ -49,6 +50,7 @@ class ExamplePage extends React.Component<any, any> {
     // }
 
     render () {
+
         const type = 'grid'
         const { products } = this.state
 
@@ -75,7 +77,9 @@ class ExamplePage extends React.Component<any, any> {
                 </Group>
             </div>
         )
+
     }
+
 }
 
 export { ExamplePage }

@@ -21,6 +21,7 @@ export interface State {
 const cx = classes.bind(css)
 
 export class Quantity extends React.Component<Props, State> {
+
     static defaultProps = {
         type: 'number',
         min: 1,
@@ -35,14 +36,18 @@ export class Quantity extends React.Component<Props, State> {
     }
 
     static getDerivedStateFromProps (props: Props, state: State) {
+
         if (state.count !== props.count) {
+
             return {
                 ...state,
                 ...props,
             }
+
         }
 
         return null
+
     }
 
     // shouldComponentUpdate (nextProps) {
@@ -51,35 +56,48 @@ export class Quantity extends React.Component<Props, State> {
     // }
 
     changeValue = (count: number) => {
+
         const { min, max } = this.props
 
         if (count > max || count < min) {
+
             count = max
+
         }
 
         this.setState({ count })
 
         // this.props.handleChange(this.props.item, count)
+
     }
 
     changeCount = (input: number) => () => {
+
         const { count } = this.state
         const { min, max, step } = this.props
 
         if ((input < 0 && count > min) || (input > 0 && count < max)) {
+
             this.changeValue(count + input * step)
+
         }
+
     }
 
-    handleChange = (e: SyntheticEvent) => {
+    handleChange = (e: React.SyntheticEvent) => {
+
         const re = /^\d+$/
 
         if (e.target && re.test(e.target.value)) {
+
             this.changeValue(parseInt(e.target.value, 10))
+
         }
+
     }
 
     render () {
+
         const { count } = this.state
         const { min, max, name, type } = this.props
 
@@ -106,5 +124,7 @@ export class Quantity extends React.Component<Props, State> {
                 </button>
             </div>
         )
+
     }
+
 }

@@ -34,6 +34,7 @@ const initialState = (window && window.__INITIAL_STATE__) || {}
 const stores = createStore(routingStore, initialState)
 
 function App () {
+
     return (
         <Provider {...stores}>
             <ErrorBoundary>
@@ -49,6 +50,7 @@ function App () {
             </ErrorBoundary>
         </Provider>
     )
+
 }
 
 export default hot(module)(App)

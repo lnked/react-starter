@@ -24,7 +24,7 @@
     "lint:styled-components": "./node_modules/.bin/stylelint 'src/**/*.{ts,tsx,js,jsx}'",
     "lint:tslint": "./node_modules/.bin/tslint 'src/**/*.{ts,tsx}' --project ./tsconfig.json --config ./tslint.json -t verbose",
     "lint": "yarn run lint:scripts && yarn run lint:styles && yarn run lint:tslint",
-    "lint:fix-scripts": "./node_modules/.bin/eslint ./src --ext .js,.jsx --fix",
+    "lint:fix-scripts": "./node_modules/.bin/eslint ./src --ext .ts,.tsx,.js,.jsx --fix",
     "lint:fix-tslint": "./node_modules/.bin/tslint 'src/**/*.{ts,tsx}' --fix",
     "lint:fix-styles": "./node_modules/.bin/stylelint 'src/**/*.{css,less,styl,scss,sass,sss}' --fix",
     "lint:fix": "yarn run lint:fix-scripts && yarn run lint:fix-tslint && yarn run lint:fix-styles && yarn lint:styled-components",

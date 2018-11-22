@@ -8,14 +8,18 @@ export interface P {
 }
 
 export class Widget extends React.PureComponent<P, {}> {
+
     render () {
+
         const cn: string[] = []
         const { title, children, className } = this.props
 
         cn.push(css.widget)
 
         if (className) {
+
             cn.push(className)
+
         }
 
         return (
@@ -27,5 +31,7 @@ export class Widget extends React.PureComponent<P, {}> {
                 </div>
             </div>
         )
+
     }
+
 }

@@ -18,6 +18,7 @@ export interface S {
 }
 
 export class Checkbox extends React.PureComponent<P, S> {
+
     static defaultProps = {
         size: 'normal',
         theme: '',
@@ -33,31 +34,44 @@ export class Checkbox extends React.PureComponent<P, S> {
     }
 
     static getDerivedStateFromProps (props: P, state: S) {
+
         if (state.checked !== props.checked) {
+
             return {
                 checked: props.checked,
             }
+
         }
 
         return null
+
     }
 
     handleChange = (e: Event) => {
+
         const checked = e && e.target && e.target.value
 
         this.setState(
             (state: S) => {
+
                 return { checked: !state.checked }
+
             },
             () => {
+
                 if (this.props.handleChange) {
+
                     this.props.handleChange(checked, this.state.checked)
+
                 }
+
             }
         )
+
     }
 
     getInputProps = (id: string) => {
+
         const { checked } = this.state
 
         const { name, value } = this.props
@@ -73,9 +87,11 @@ export class Checkbox extends React.PureComponent<P, S> {
         }
 
         return props
+
     }
 
     renderStatus = () => {
+
         const cn: string[] = []
 
         const { theme } = this.props
@@ -84,21 +100,29 @@ export class Checkbox extends React.PureComponent<P, S> {
         cn.push(css.status)
 
         if (theme) {
+
             cn.push(css[`status_${theme}`])
+
         }
 
         return <span className={cn.join(' ')} aria-checked={checked} />
+
     }
 
     renderLabel = () => {
+
         if (this.props.label || this.props.children) {
+
             return <span className={css.label}>{this.props.label || this.props.children}</span>
+
         }
 
         return ''
+
     }
 
     render () {
+
         const cn: string[] = []
 
         const { name, size, className } = this.props
@@ -108,11 +132,15 @@ export class Checkbox extends React.PureComponent<P, S> {
         cn.push(css.checkbox)
 
         if (className) {
+
             cn.push(className)
+
         }
 
         if (size) {
+
             cn.push(css[`checkbox_${size}`])
+
         }
 
         const props = this.getInputProps(id)
@@ -124,5 +152,7 @@ export class Checkbox extends React.PureComponent<P, S> {
                 {this.renderLabel()}
             </label>
         )
+
     }
+
 }

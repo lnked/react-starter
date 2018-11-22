@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-export interface Props {
+export interface P {
     name?: string;
     type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
     label?: string;
@@ -27,7 +27,8 @@ export interface S {
 
 const cx = classes.bind(css)
 
-export class SimpleInput extends React.Component<Props, State> {
+export class SimpleInput extends React.Component<P, S> {
+
     static defaultProps = {
         type: 'text',
         label: '',
@@ -38,17 +39,21 @@ export class SimpleInput extends React.Component<Props, State> {
         clearable: false,
     }
 
-    static getDerivedStateFromProps(props: Props, state: S) {
+    static getDerivedStateFromProps (props: P, state: S) {
+
         if (state.value !== props.value) {
+
             return {
                 value: props.value,
-                touch: false
+                touch: false,
             }
+
         }
 
         return {
-            touch: false
+            touch: false,
         }
+
     }
 
     state = {
@@ -58,68 +63,103 @@ export class SimpleInput extends React.Component<Props, State> {
     input: any = React.createRef()
 
     componentDidMount () {
+
         if (this.props.focus) {
+
             this.input.current.focus()
+
         }
+
     }
 
     prepared = (value: string) => {
+
         const { integer, floating } = this.props
 
         if (integer) {
+
             return parseInt(value, 10)
+
         } else if (floating) {
+
             return parseFloat(value)
+
         }
 
         return value
+
     }
 
     handleClear = () => {
+
         this.setState((state: S) => ({
             ...state, value: '',
         }), () => {
+
             if (this.props.handleChange) {
+
                 this.props.handleChange('')
+
             }
+
         })
+
     }
 
     handleChange = (e: any) => {
+
         const value = this.prepared(e.target.value)
 
         this.setState((state: S) => ({
             ...state, value,
         }), () => {
+
             if (this.props.handleChange) {
+
                 this.props.handleChange(value)
+
             }
+
         })
+
     }
 
     handleFocus = (e: any) => {
+
         if (this.props.handleFocus) {
+
             this.props.handleFocus(e)
+
         }
+
     }
 
     handleBlur = (e: any) => {
+
         const value = this.prepared(e.target.value)
 
         if (this.props.handleBlur) {
+
             this.props.handleBlur(value)
+
         }
+
     }
 
     handleKeyPress = (e: any) => {
+
         const keyCode = e.keyCode || e.charCode || e.which
 
         if (this.props.handleKeyPress) {
+
             this.props.handleKeyPress(keyCode)
+
         }
+
     }
 
-    render() {
+    render () {
+
         const { value } = this.state
         const { label, clearable, placeholder, wrapperClassName, className } = this.props
 
@@ -145,5 +185,7 @@ export class SimpleInput extends React.Component<Props, State> {
                 }
             </label>
         )
+
     }
+
 }

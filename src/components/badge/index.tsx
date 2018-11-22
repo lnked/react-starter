@@ -34,6 +34,7 @@ const StyledBadge = styled.div`
 `
 
 export class Badge extends React.PureComponent<P, {}> {
+
     static defaultProps = {
         title: '',
         variant: 'normal',
@@ -41,6 +42,7 @@ export class Badge extends React.PureComponent<P, {}> {
     }
 
     render () {
+
         const { title, className, children, ...rest } = this.props
 
         return (
@@ -48,5 +50,7 @@ export class Badge extends React.PureComponent<P, {}> {
                 {title || children}
             </StyledBadge>
         )
+
     }
+
 }

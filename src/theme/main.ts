@@ -2,7 +2,7 @@ export const type = {
     base: 'IBMPlexSans',
     medium: 'IBMPlexSans-Medium',
     semiBold: 'IBMPlexSans-SemiBold',
-    italic: 'IBMPlexSans-Italic'
+    italic: 'IBMPlexSans-Italic',
 }
 
 export const size = {
@@ -11,5 +11,5 @@ export const size = {
     normal: 14,
     big: 16,
     large: 24,
-    extraLarge: 32
+    extraLarge: 32,
 }

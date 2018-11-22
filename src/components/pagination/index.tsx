@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes, createMarkup } from 'helpers'
+import { range, classes, createMarkup } from 'helpers'
 
 export interface P {
     items?: number;
@@ -19,6 +19,7 @@ export interface P {
 const cx = classes.bind(css)
 
 class Pagination extends React.Component<P, {}> {
+
     static defaultProps = {
         items: 0,
         itemsOnPage: 0,
@@ -33,20 +34,27 @@ class Pagination extends React.Component<P, {}> {
     }
 
     shouldComponentUpdate (props: P) {
+
         const { items, itemsOnPage, current } = this.props
 
         return !(items === props.items) ||
                !(itemsOnPage === props.itemsOnPage) ||
                !(current === props.current)
+
     }
 
     handleChange = (page: number) => {
+
         if (this.props.handleChange) {
+
             this.props.handleChange(page)
+
         }
+
     }
 
     getInterval = (pages: number) => {
+
         const { current, displayedPages } = this.props
         const halfDisplayed = displayedPages / 2
 
@@ -55,16 +63,18 @@ class Pagination extends React.Component<P, {}> {
                 current > halfDisplayed
                     ? Math.max(Math.min(current - halfDisplayed, (pages - displayedPages)), 0)
                     : 0
-                ),
+            ),
             end: Math.ceil(
                 current > halfDisplayed
                     ? Math.min(current + halfDisplayed, pages)
                     : Math.min(displayedPages, pages)
-                ),
+            ),
         }
+
     }
 
     renderEllipse = (key: number) => {
+
         const { ellipseText } = this.props
 
         return (
@@ -74,9 +84,11 @@ class Pagination extends React.Component<P, {}> {
                 dangerouslySetInnerHTML={createMarkup(ellipseText)}
             />
         )
+
     }
 
     renderPages = () => {
+
         const {
             edges,
             items,
@@ -92,62 +104,70 @@ class Pagination extends React.Component<P, {}> {
         const interval = this.getInterval(pages)
 
         if (interval.start > 0 && edges > 0) {
+
             if (useStartEdge) {
+
                 const end = Math.min(edges, interval.start)
 
-                for (let i = 0; i < end; i++) {
-                    nodes.push({
-                        page: i + 1
-                    })
-                }
+                range(0, end).map((i: number) => nodes.push({ page: i + 1 }))
+
             }
 
             if (edges < interval.start && (interval.start - edges !== 1)) {
+
                 nodes.push({
-                    node: this.renderEllipse(1)
+                    node: this.renderEllipse(1),
                 })
+
             } else if (interval.start - edges === 1) {
+
                 nodes.push({
-                    page: edges
+                    page: edges,
                 })
+
             }
+
         }
 
-        for (let i = interval.start; i < interval.end; i++) {
-            nodes.push({
-                page: i + 1
-            })
-        }
+        range(interval.start, interval.end).map((i: number) => nodes.push({ page: i + 1 }))
 
         if (interval.end < pages && edges > 0) {
+
             if (pages - edges > interval.end && (pages - edges - interval.end !== 1)) {
+
                 nodes.push({
-                    node: this.renderEllipse(2)
+                    node: this.renderEllipse(2),
                 })
+
             } else if (pages - edges - interval.end === 1) {
+
                 nodes.push({
-                    page: interval.end
+                    page: interval.end,
                 })
+
             }
 
             if (useEndEdge) {
-                const begin = Math.max(pages - edges, interval.end)
 
-                for (let i = begin; i < pages; i++) {
-                    nodes.push({
-                        page: i + 1
-                    })
-                }
+                const begin = Math.max(pages - edges, interval.end)
+                range(begin, pages).map((i: number) => nodes.push({ page: i + 1 }))
+
             }
+
         }
 
         if ((itemsOnPage <= 0) || (pages < 2)) {
+
             return null
+
         }
 
         return nodes && nodes.map((item: any, idx: number) => {
+
             if (item.node) {
+
                 return item.node
+
             }
 
             return (
@@ -159,10 +179,13 @@ class Pagination extends React.Component<P, {}> {
                     {item.page}
                 </button>
             )
+
         })
+
     }
 
     renderControl = (symbol: string, next: number, disabled: boolean = false) => {
+
         return (
             <button
                 type="button"
@@ -171,9 +194,11 @@ class Pagination extends React.Component<P, {}> {
                 disabled={disabled}
             />
         )
+
     }
 
     render () {
+
         const { current, items, itemsOnPage, className } = this.props
         const pages = Math.ceil(items / itemsOnPage)
 
@@ -187,7 +212,9 @@ class Pagination extends React.Component<P, {}> {
                 {this.renderControl('next', next, current === pages)}
             </div>
         )
+
     }
+
 }
 
 export default Pagination

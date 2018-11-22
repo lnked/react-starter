@@ -8,9 +8,11 @@ import { P } from './types'
 const cx = classes.bind(css)
 
 export function Card ({ children, className = '' }: P) {
+
     return (
         <div className={cx({ card: true }, className)}>
             {children}
         </div>
     )
+
 }

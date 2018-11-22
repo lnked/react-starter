@@ -9,14 +9,19 @@ const headers: any = {
 }
 
 export const request: any = (options?: any): any => {
+
     const authToken = TOKEN.get()
 
     if (authToken) {
+
         headers.Authorization = `Token ${authToken}`
+
     }
 
     if (options && Object.keys(options).length && options.hasOwnProperty('noToken') && options.noToken) {
+
         Reflect.deleteProperty(headers, 'Authorization')
+
     }
 
     const config: any = {
@@ -29,4 +34,5 @@ export const request: any = (options?: any): any => {
     const instance = axios.create(config)
 
     return instance
+
 }

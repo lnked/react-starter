@@ -35,12 +35,12 @@ declare interface HTMLInputElement {
 //     color: string
 // }
 
-type Func = (...args: any[]) => void;
+// type Func = (...args: any[]) => void;
 
 // React.SyntheticEvent<HTMLLinkElement>
 // type MouseEvent = React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>
 
-type SyntheticEvent = React.SyntheticEvent
+// type SyntheticEvent = React.SyntheticEvent
 
 // type MouseEvent = React.TouchEvent | React.MouseEvent
 

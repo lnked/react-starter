@@ -9,6 +9,7 @@ export interface S {
 }
 
 export class OutsideClicked extends React.Component<P, S> {
+
     wrapper: any = React.createRef()
 
     state = {
@@ -16,28 +17,39 @@ export class OutsideClicked extends React.Component<P, S> {
     }
 
     componentDidMount () {
+
         document.addEventListener('mousedown', this.handleClickOutside)
+
     }
 
     componentWillUnmount () {
+
         document.removeEventListener('mousedown', this.handleClickOutside)
+
     }
 
     handleClickOutside = (e: Event) => {
+
         if (this.wrapper && !this.wrapper.contains(e.target)) {
+
             this.setState({
                 opened: null,
             })
+
         }
+
     }
 
     onChildClick = (name: string) => {
+
         this.setState({
             opened: name,
         })
+
     }
 
     render () {
+
         const { opened } = this.state
         const { children } = this.props
 
@@ -49,5 +61,7 @@ export class OutsideClicked extends React.Component<P, S> {
                 })}
             </div>
         )
+
     }
+
 }

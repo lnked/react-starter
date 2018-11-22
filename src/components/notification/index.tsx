@@ -6,6 +6,7 @@ export interface P {
 }
 
 export function Notification ({ children }: P) {
+
     // if (location.protocol.indexOf('https') >= 0) {
     //     Notification.requestPermission((permission) => {
     //         console.log('Результат запроса прав:', permission)
@@ -21,6 +22,7 @@ export function Notification ({ children }: P) {
     // }
 
     return <div className={css.content}>{children}</div>
+
 }
 
 export default Notification

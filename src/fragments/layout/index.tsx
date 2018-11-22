@@ -10,9 +10,11 @@ export interface P {
 const cx = classes.bind(css)
 
 export function Layout ({ children = '', className = '' }: P) {
+
     return (
         <div className={cx({ layout: true }, className)}>
             {children}
         </div>
     )
+
 }

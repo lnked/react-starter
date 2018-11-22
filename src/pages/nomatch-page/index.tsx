@@ -12,6 +12,7 @@ export interface P {
 const cx = classes.bind(css)
 
 const NoMatchPage = ({ location }: P) => {
+
     return (
         <div className={cx(css.error)}>
             <div className={cx(css.figure)}>
@@ -26,6 +27,7 @@ const NoMatchPage = ({ location }: P) => {
             </div>
         </div>
     )
+
 }
 
 export { NoMatchPage }

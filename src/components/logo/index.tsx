@@ -8,11 +8,13 @@ export interface P {
 }
 
 export class Logo extends React.PureComponent<P, {}> {
+
     static defaultProps = {
         link: '/',
     }
 
     render () {
+
         const { link } = this.props
 
         return (
@@ -21,5 +23,7 @@ export class Logo extends React.PureComponent<P, {}> {
                 <span className={css.title}>React Starter</span>
             </NavLink>
         )
+
     }
+
 }
