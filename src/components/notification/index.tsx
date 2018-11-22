@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    children?: JSX.Element[] | JSX.Element | any;
+  children?: JSX.Element[] | JSX.Element | any;
 }
 
 export function Notification ({ children }: P) {

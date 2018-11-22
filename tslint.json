@@ -83,7 +83,10 @@
         "no-empty": false,
         "no-namespace": false,
         "member-access": false,
-        "array-type": [true, "array"],
+        "array-type": [
+            true,
+            "array"
+        ],
         "arrow-parens": false,
         "no-var-requires": false,
         "ordered-imports": false,
@@ -104,8 +107,18 @@
         "no-implicit-dependencies": false,
         "object-literal-sort-keys": false,
         "interface-over-type-literal": false,
-        "space-before-function-paren": [true, {"anonymous": "always", "named": "always", "asyncArrow": "always"}],
-        "no-consecutive-blank-lines": [true, 2],
+        "space-before-function-paren": [
+            true,
+            {
+                "anonymous": "always",
+                "named": "always",
+                "asyncArrow": "always"
+            }
+        ],
+        "no-consecutive-blank-lines": [
+            true,
+            2
+        ],
         "no-object-literal-type-assertion": false
     },
     "rulesDirectory": []

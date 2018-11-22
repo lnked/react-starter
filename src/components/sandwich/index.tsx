@@ -4,57 +4,57 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    isOpened?: boolean;
+  isOpened?: boolean;
 }
 
 export interface S {
-    isOpened: boolean;
+  isOpened: boolean;
 }
 
 const cx = classes.bind(css)
 
 export class Sandwich extends React.PureComponent<P, S> {
 
-    static defaultProps = {
-      isOpened: false,
-    }
+  static defaultProps = {
+    isOpened: false,
+  }
 
-    state = {
-      isOpened: false,
-    }
+  state = {
+    isOpened: false,
+  }
 
-    static getDerivedStateFromProps (props: P, state: S) {
+  static getDerivedStateFromProps (props: P, state: S) {
 
-      if (state.isOpened !== props.isOpened) {
+    if (state.isOpened !== props.isOpened) {
 
-        return {
-          isOpened: props.isOpened,
-        }
-
+      return {
+        isOpened: props.isOpened,
       }
 
-      return null
-
     }
 
-    handleChange = () => {
+    return null
 
-      this.setState((state: S) => ({
-        isOpened: !state.isOpened,
-      }))
+  }
 
-    }
+  handleChange = () => {
 
-    render () {
+    this.setState((state: S) => ({
+      isOpened: !state.isOpened,
+    }))
 
-      const { isOpened } = this.state
+  }
 
-      return (
-        <button className={css.sandwich} onClick={this.handleChange}>
-          <span className={cx(css.line, { lineOpen: isOpened })} />
-        </button>
-      )
+  render () {
 
-    }
+    const { isOpened } = this.state
+
+    return (
+      <button className={css.sandwich} onClick={this.handleChange}>
+        <span className={cx(css.line, { lineOpen: isOpened })} />
+      </button>
+    )
+
+  }
 
 }

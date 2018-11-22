@@ -4,9 +4,9 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface PropsIcon {
-    hidden?: boolean;
-    symbol?: string;
-    className?: string;
+  hidden?: boolean;
+  symbol?: string;
+  className?: string;
 }
 
 const cx = classes.bind(css)

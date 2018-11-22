@@ -6,52 +6,52 @@ import { classes } from 'helpers'
 import { Header } from 'fragments'
 
 export interface P {
-    children?: JSX.Element[] | JSX.Element | string;
+  children?: JSX.Element[] | JSX.Element | string;
 }
 
 export interface S {
-    title: string;
+  title: string;
 }
 
 const cx = classes.bind(css)
 
 export class CoreLayout extends React.Component<P, S> {
 
-    static defaultProps = {
-      children: '',
-    }
+  static defaultProps = {
+    children: '',
+  }
 
-    state = {
-      title: 'React Starter App',
-    }
+  state = {
+    title: 'React Starter App',
+  }
 
-    componentDidMount () {
+  componentDidMount () {
 
-      this.fixScroll()
+    this.fixScroll()
 
-    }
+  }
 
-    componentDidUpdate () {
+  componentDidUpdate () {
 
-      this.fixScroll()
+    this.fixScroll()
 
-    }
+  }
 
-    fixScroll = () => window.scrollTo(0, 0)
+  fixScroll = () => window.scrollTo(0, 0)
 
-    render () {
+  render () {
 
-      const { children } = this.props
+    const { children } = this.props
 
-      return (
-        <div className={cx({ layout: true })}>
-          <Header />
+    return (
+      <div className={cx({ layout: true })}>
+        <Header />
 
-          <section className={cx({ main: true })}>{children}</section>
-        </div>
-      )
+        <section className={cx({ main: true })}>{children}</section>
+      </div>
+    )
 
-    }
+  }
 
 }
 

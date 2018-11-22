@@ -2,157 +2,157 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    name: string;
-    size?: string;
-    theme?: string;
-    label?: string;
-    checked?: boolean;
-    className?: string;
-    value?: string | number;
-    children?: JSX.Element[] | JSX.Element | string;
-    handleChange?: (checked: string, status: boolean) => void | boolean;
+  name: string;
+  size?: string;
+  theme?: string;
+  label?: string;
+  checked?: boolean;
+  className?: string;
+  value?: string | number;
+  children?: JSX.Element[] | JSX.Element | string;
+  handleChange?: (checked: string, status: boolean) => void | boolean;
 }
 
 export interface S {
-    checked: boolean;
+  checked: boolean;
 }
 
 export class Checkbox extends React.PureComponent<P, S> {
 
-    static defaultProps = {
-      size: 'normal',
-      theme: '',
-      label: '',
-      value: '',
-      className: '',
-      checked: false,
-      handleChange: false,
+  static defaultProps = {
+    size: 'normal',
+    theme: '',
+    label: '',
+    value: '',
+    className: '',
+    checked: false,
+    handleChange: false,
+  }
+
+  state = {
+    checked: false,
+  }
+
+  static getDerivedStateFromProps (props: P, state: S) {
+
+    if (state.checked !== props.checked) {
+
+      return {
+        checked: props.checked,
+      }
+
     }
 
-    state = {
-      checked: false,
-    }
+    return null
 
-    static getDerivedStateFromProps (props: P, state: S) {
+  }
 
-      if (state.checked !== props.checked) {
+  handleChange = (e: Event) => {
 
-        return {
-          checked: props.checked,
+    const checked = e && e.target && e.target.value
+
+    this.setState(
+      (state: S) => {
+
+        return { checked: !state.checked }
+
+      },
+      () => {
+
+        if (this.props.handleChange) {
+
+          this.props.handleChange(checked, this.state.checked)
+
         }
 
       }
+    )
 
-      return null
+  }
+
+  getInputProps = (id: string) => {
+
+    const { checked } = this.state
+
+    const { name, value } = this.props
+
+    const props: any = {
+      id,
+      type: 'checkbox',
+      name,
+      value,
+      checked,
+      className: css.input,
+      onChange: this.handleChange,
+    }
+
+    return props
+
+  }
+
+  renderStatus = () => {
+
+    const cn: string[] = []
+
+    const { theme } = this.props
+    const { checked } = this.state
+
+    cn.push(css.status)
+
+    if (theme) {
+
+      cn.push(css[`status_${theme}`])
 
     }
 
-    handleChange = (e: Event) => {
+    return <span className={cn.join(' ')} aria-checked={checked} />
 
-      const checked = e && e.target && e.target.value
+  }
 
-      this.setState(
-        (state: S) => {
+  renderLabel = () => {
 
-          return { checked: !state.checked }
+    if (this.props.label || this.props.children) {
 
-        },
-        () => {
-
-          if (this.props.handleChange) {
-
-            this.props.handleChange(checked, this.state.checked)
-
-          }
-
-        }
-      )
+      return <span className={css.label}>{this.props.label || this.props.children}</span>
 
     }
 
-    getInputProps = (id: string) => {
+    return ''
 
-      const { checked } = this.state
+  }
 
-      const { name, value } = this.props
+  render () {
 
-      const props: any = {
-        id,
-        type: 'checkbox',
-        name,
-        value,
-        checked,
-        className: css.input,
-        onChange: this.handleChange,
-      }
+    const cn: string[] = []
 
-      return props
+    const { name, size, className } = this.props
 
-    }
+    const id = `checkbox_${name}`
 
-    renderStatus = () => {
+    cn.push(css.checkbox)
 
-      const cn: string[] = []
+    if (className) {
 
-      const { theme } = this.props
-      const { checked } = this.state
-
-      cn.push(css.status)
-
-      if (theme) {
-
-        cn.push(css[`status_${theme}`])
-
-      }
-
-      return <span className={cn.join(' ')} aria-checked={checked} />
+      cn.push(className)
 
     }
 
-    renderLabel = () => {
+    if (size) {
 
-      if (this.props.label || this.props.children) {
-
-        return <span className={css.label}>{this.props.label || this.props.children}</span>
-
-      }
-
-      return ''
+      cn.push(css[`checkbox_${size}`])
 
     }
 
-    render () {
+    const props = this.getInputProps(id)
 
-      const cn: string[] = []
+    return (
+      <label htmlFor={id} className={cn.join(' ')}>
+        <input {...props} />
+        {this.renderStatus()}
+        {this.renderLabel()}
+      </label>
+    )
 
-      const { name, size, className } = this.props
-
-      const id = `checkbox_${name}`
-
-      cn.push(css.checkbox)
-
-      if (className) {
-
-        cn.push(className)
-
-      }
-
-      if (size) {
-
-        cn.push(css[`checkbox_${size}`])
-
-      }
-
-      const props = this.getInputProps(id)
-
-      return (
-        <label htmlFor={id} className={cn.join(' ')}>
-          <input {...props} />
-          {this.renderStatus()}
-          {this.renderLabel()}
-        </label>
-      )
-
-    }
+  }
 
 }

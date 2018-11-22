@@ -4,9 +4,9 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    href: string;
-    children: JSX.Element[] | JSX.Element | any;
-    className: string;
+  href: string;
+  children: JSX.Element[] | JSX.Element | any;
+  className: string;
 }
 
 const cx = classes.bind(css)

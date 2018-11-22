@@ -29,7 +29,7 @@ export const request: any = (options?: any): any => {
     headers,
   }
 
-  if (options) {}
+  if (options) { }
 
   const instance = axios.create(config)
 

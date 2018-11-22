@@ -2,53 +2,53 @@ import { observable, action, extendObservable } from 'mobx'
 
 export class AppStore {
 
-    static mobxLoggerConfig: {
-        enabled: false,
-        methods: {
-            loadTags: true,
-        },
-    }
+  static mobxLoggerConfig: {
+    enabled: false,
+    methods: {
+      loadTags: true,
+    },
+  }
 
-    static defaultState = {
-      query: '',
-      isLoading: false,
-      results: [],
-    }
+  static defaultState = {
+    query: '',
+    isLoading: false,
+    results: [],
+  }
 
-    // @observable results: string[]
+  // @observable results: string[]
 
-    // @observable isLoading: boolean
+  // @observable isLoading: boolean
 
-    @observable
-    query: string = ''
+  @observable
+  query: string = ''
 
-    constructor (initialState?: any) {
+  constructor (initialState?: any) {
 
-      // console.log({...AppStore.defaultState, ...initialState})
+    // console.log({...AppStore.defaultState, ...initialState})
 
-      if (initialState && Object.keys(initialState).length) {
+    if (initialState && Object.keys(initialState).length) {
 
-        // extendObservable(this, {...AppStore.defaultState, ...initialState})
-        extendObservable(this, initialState)
-
-      }
+      // extendObservable(this, {...AppStore.defaultState, ...initialState})
+      extendObservable(this, initialState)
 
     }
 
-    // async loadAll () {
-    //     this.isLoading = true;
-    //     await store.loadUsers();//вот первая
-    //     const { match } = this.props;
-    //     const userId = parseInt(match.params.id);
-    //     await this.user.loadStats(userId);
-    // }
+  }
 
-    @action
-    loadTags = (query: string) => {
+  // async loadAll () {
+  //     this.isLoading = true;
+  //     await store.loadUsers();//вот первая
+  //     const { match } = this.props;
+  //     const userId = parseInt(match.params.id);
+  //     await this.user.loadStats(userId);
+  // }
 
-      this.query = query
+  @action
+  loadTags = (query: string) => {
 
-    }
+    this.query = query
+
+  }
 
 }
 

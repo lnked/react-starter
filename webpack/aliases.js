@@ -27,10 +27,10 @@ module.exports.config = {
     ...alias,
     ...(define.rs_preact
         ? {
-              react: "preact-compat",
-              "react-dom": "preact-compat",
-              "create-react-class": "preact-compat/lib/create-react-class",
-              "react-dom-factories": "preact-compat/lib/react-dom-factories"
-          }
+            react: "preact-compat",
+            "react-dom": "preact-compat",
+            "create-react-class": "preact-compat/lib/create-react-class",
+            "react-dom-factories": "preact-compat/lib/react-dom-factories"
+        }
         : [])
 };

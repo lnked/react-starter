@@ -5,36 +5,36 @@ export const ppHOC = WrappedComponent => {
 
   return class PP extends React.Component {
 
-        static displayName = `HOC(${getDisplayName(WrappedComponent)})`
+    static displayName = `HOC(${getDisplayName(WrappedComponent)})`
 
-        state = {
-          name: '',
-        }
+    state = {
+      name: '',
+    }
 
-        onNameChange = e => {
+    onNameChange = e => {
 
-          this.setState({
-            name: e.target.value,
-          })
+      this.setState({
+        name: e.target.value,
+      })
 
-        }
+    }
 
-        additions = () => {
+    additions = () => {
 
-          return {
-            name: {
-              value: this.state.name,
-              onChange: this.onNameChange,
-            },
-          }
+      return {
+        name: {
+          value: this.state.name,
+          onChange: this.onNameChange,
+        },
+      }
 
-        }
+    }
 
-        render () {
+    render () {
 
-          return <WrappedComponent {...this.props} {...this.additions()} />
+      return <WrappedComponent {...this.props} {...this.additions()} />
 
-        }
+    }
 
   }
 

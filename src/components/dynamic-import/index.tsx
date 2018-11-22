@@ -1,39 +1,39 @@
 import * as React from 'react'
 
 export interface P {
-    load: any;
-    children?: any;
+  load: any;
+  children?: any;
 }
 
 export interface S {
-    component: any;
+  component: any;
 }
 
 export class DynamicImport extends React.Component<P, S> {
 
-    state = {
-      component: null,
-    }
+  state = {
+    component: null,
+  }
 
-    componentDidMount () {
+  componentDidMount () {
 
-      this.props.load().then((component: any) => {
+    this.props.load().then((component: any) => {
 
-        this.setState(() => ({
-          component: component.default ? component.default : component,
-        }))
+      this.setState(() => ({
+        component: component.default ? component.default : component,
+      }))
 
-      })
+    })
 
-    }
+  }
 
-    render () {
+  render () {
 
-      const { children } = this.props
-      const { component } = this.state
+    const { children } = this.props
+    const { component } = this.state
 
-      return children && children(component)
+    return children && children(component)
 
-    }
+  }
 
 }

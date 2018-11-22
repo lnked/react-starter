@@ -2,9 +2,9 @@ import * as React from 'react'
 import * as css from './styles.scss'
 
 export interface P {
-    title: string;
-    className?: string;
-    children?: JSX.Element[] | JSX.Element | string;
+  title: string;
+  className?: string;
+  children?: JSX.Element[] | JSX.Element | string;
 }
 
 export class Widget extends React.PureComponent<P, {}> {

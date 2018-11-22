@@ -17,4 +17,4 @@
 //     // expect(tree).toMatchSnapshot()
 // })
 
-test('test', () => {})
+test('test', () => { })

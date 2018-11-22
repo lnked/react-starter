@@ -4,22 +4,22 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export type P = {
-    type?: string;
-    size?: 'small' | 'normal' | 'large';
-    label?: string;
-    icon?: boolean;
-    info?: boolean;
-    danger?: boolean;
-    normal?: boolean;
-    success?: boolean;
-    primary?: boolean;
-    warning?: boolean;
-    circle?: boolean;
-    loading?: boolean;
-    disabled?: boolean;
-    className?: string;
-    children?: JSX.Element[] | JSX.Element | string;
-    handleClick?: () => void | boolean;
+  type?: string;
+  size?: 'small' | 'normal' | 'large';
+  label?: string;
+  icon?: boolean;
+  info?: boolean;
+  danger?: boolean;
+  normal?: boolean;
+  success?: boolean;
+  primary?: boolean;
+  warning?: boolean;
+  circle?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
+  className?: string;
+  children?: JSX.Element[] | JSX.Element | string;
+  handleClick?: () => void | boolean;
 }
 
 const cx = classes.bind(css)

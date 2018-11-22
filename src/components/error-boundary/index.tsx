@@ -1,36 +1,36 @@
 import * as React from 'react'
 
 export interface Props {
-    children?: JSX.Element | JSX.Element[];
+  children?: JSX.Element | JSX.Element[];
 }
 
 export interface State {
-    error: boolean;
+  error: boolean;
 }
 
 class ErrorBoundary extends React.PureComponent<Props, State> {
 
-    state = {
-      error: false,
-    }
+  state = {
+    error: false,
+  }
 
-    componentDidCatch (err: any, info: any) {
+  componentDidCatch (err: any, info: any) {
 
-      this.setState({ error: true }, () => console.error({ err }, { info }))
+    this.setState({ error: true }, () => console.error({ err }, { info }))
 
-    }
+  }
 
-    render () {
+  render () {
 
-      if (this.state.error) {
+    if (this.state.error) {
 
-        return <h1>Something went wrong.</h1>
-
-      }
-
-      return this.props.children
+      return <h1>Something went wrong.</h1>
 
     }
+
+    return this.props.children
+
+  }
 
 }
 

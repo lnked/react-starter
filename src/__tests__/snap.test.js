@@ -1,4 +1,4 @@
-test('test', () => {})
+test('test', () => { })
 
 // describe('YourComponent test', () => {
 // let component

@@ -24,7 +24,7 @@ declare namespace Express {
 
 declare module '*.scss' {
     const _: string;
-    export default  _;
+    export default _;
 
     interface IClassNames {
         [className: string]: string

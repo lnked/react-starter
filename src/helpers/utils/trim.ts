@@ -6,12 +6,12 @@ export const trim = (str: string): string =>
 export const clean = (str: string): string =>
   (
     str &&
-            str
-              .toString()
-              .replace(/\s+/gm, '')
-              .replace(/_/gm, '')
-              .replace(/-/gm, '')
-              .replace(/[()]+/gm, '')
+    str
+      .toString()
+      .replace(/\s+/gm, '')
+      .replace(/_/gm, '')
+      .replace(/-/gm, '')
+      .replace(/[()]+/gm, '')
   ) || ''
 
 export const trimmed = (str: string): string =>

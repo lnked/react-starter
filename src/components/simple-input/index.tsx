@@ -4,188 +4,188 @@ import * as css from './styles.scss'
 import { classes } from 'helpers'
 
 export interface P {
-    name?: string;
-    type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
-    label?: string;
-    value?: string | number;
-    focus?: boolean;
-    integer?: boolean;
-    floating?: boolean;
-    clearable?: boolean;
-    placeholder?: string;
-    className: string;
-    wrapperClassName: string;
-    handleBlur?: (value: string) => void | boolean;
-    handleFocus?: (e: Event) => void | boolean;
-    handleChange?: (e: Event) => void | boolean;
-    handleKeyPress?: (keyCode: number) => void | boolean;
+  name?: string;
+  type?: 'button' | 'checkbox' | 'file' | 'hidden' | 'password' | 'radio' | 'text';
+  label?: string;
+  value?: string | number;
+  focus?: boolean;
+  integer?: boolean;
+  floating?: boolean;
+  clearable?: boolean;
+  placeholder?: string;
+  className: string;
+  wrapperClassName: string;
+  handleBlur?: (value: string) => void | boolean;
+  handleFocus?: (e: Event) => void | boolean;
+  handleChange?: (e: Event) => void | boolean;
+  handleKeyPress?: (keyCode: number) => void | boolean;
 }
 
 export interface S {
-    value?: string | number;
+  value?: string | number;
 }
 
 const cx = classes.bind(css)
 
 export class SimpleInput extends React.Component<P, S> {
 
-    static defaultProps = {
-      type: 'text',
-      label: '',
-      value: '',
-      focus: false,
-      integer: false,
-      floating: false,
-      clearable: false,
-    }
+  static defaultProps = {
+    type: 'text',
+    label: '',
+    value: '',
+    focus: false,
+    integer: false,
+    floating: false,
+    clearable: false,
+  }
 
-    static getDerivedStateFromProps (props: P, state: S) {
+  static getDerivedStateFromProps (props: P, state: S) {
 
-      if (state.value !== props.value) {
-
-        return {
-          value: props.value,
-          touch: false,
-        }
-
-      }
+    if (state.value !== props.value) {
 
       return {
+        value: props.value,
         touch: false,
       }
 
     }
 
-    state = {
-      value: '',
+    return {
+      touch: false,
     }
 
-    input: any = React.createRef()
+  }
 
-    componentDidMount () {
+  state = {
+    value: '',
+  }
 
-      if (this.props.focus) {
+  input: any = React.createRef()
 
-        this.input.current.focus()
+  componentDidMount () {
+
+    if (this.props.focus) {
+
+      this.input.current.focus()
+
+    }
+
+  }
+
+  prepared = (value: string) => {
+
+    const { integer, floating } = this.props
+
+    if (integer) {
+
+      return parseInt(value, 10)
+
+    } else if (floating) {
+
+      return parseFloat(value)
+
+    }
+
+    return value
+
+  }
+
+  handleClear = () => {
+
+    this.setState((state: S) => ({
+      ...state, value: '',
+    }), () => {
+
+      if (this.props.handleChange) {
+
+        this.props.handleChange('')
 
       }
 
-    }
+    })
 
-    prepared = (value: string) => {
+  }
 
-      const { integer, floating } = this.props
+  handleChange = (e: any) => {
 
-      if (integer) {
+    const value = this.prepared(e.target.value)
 
-        return parseInt(value, 10)
+    this.setState((state: S) => ({
+      ...state, value,
+    }), () => {
 
-      } else if (floating) {
+      if (this.props.handleChange) {
 
-        return parseFloat(value)
+        this.props.handleChange(value)
 
       }
 
-      return value
+    })
+
+  }
+
+  handleFocus = (e: any) => {
+
+    if (this.props.handleFocus) {
+
+      this.props.handleFocus(e)
 
     }
 
-    handleClear = () => {
+  }
 
-      this.setState((state: S) => ({
-        ...state, value: '',
-      }), () => {
+  handleBlur = (e: any) => {
 
-        if (this.props.handleChange) {
+    const value = this.prepared(e.target.value)
 
-          this.props.handleChange('')
+    if (this.props.handleBlur) {
 
+      this.props.handleBlur(value)
+
+    }
+
+  }
+
+  handleKeyPress = (e: any) => {
+
+    const keyCode = e.keyCode || e.charCode || e.which
+
+    if (this.props.handleKeyPress) {
+
+      this.props.handleKeyPress(keyCode)
+
+    }
+
+  }
+
+  render () {
+
+    const { value } = this.state
+    const { label, clearable, placeholder, wrapperClassName, className } = this.props
+
+    return (
+      <label className={cx({ wrapper: true }, wrapperClassName)}>
+        {label &&
+          <div className={cx(css.label)}>{label}</div>
         }
 
-      })
+        <input
+          ref={this.input}
+          value={value}
+          onBlur={this.handleBlur}
+          onFocus={this.handleFocus}
+          onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
+          placeholder={placeholder}
+          className={cx(css.control, css.controlInput, className)}
+        />
 
-    }
-
-    handleChange = (e: any) => {
-
-      const value = this.prepared(e.target.value)
-
-      this.setState((state: S) => ({
-        ...state, value,
-      }), () => {
-
-        if (this.props.handleChange) {
-
-          this.props.handleChange(value)
-
+        {value && clearable &&
+          <button type="button" onClick={this.handleClear} className={css.cleaner} />
         }
+      </label>
+    )
 
-      })
-
-    }
-
-    handleFocus = (e: any) => {
-
-      if (this.props.handleFocus) {
-
-        this.props.handleFocus(e)
-
-      }
-
-    }
-
-    handleBlur = (e: any) => {
-
-      const value = this.prepared(e.target.value)
-
-      if (this.props.handleBlur) {
-
-        this.props.handleBlur(value)
-
-      }
-
-    }
-
-    handleKeyPress = (e: any) => {
-
-      const keyCode = e.keyCode || e.charCode || e.which
-
-      if (this.props.handleKeyPress) {
-
-        this.props.handleKeyPress(keyCode)
-
-      }
-
-    }
-
-    render () {
-
-      const { value } = this.state
-      const { label, clearable, placeholder, wrapperClassName, className } = this.props
-
-      return (
-        <label className={cx({ wrapper: true }, wrapperClassName)}>
-          {label &&
-                    <div className={cx(css.label)}>{label}</div>
-          }
-
-          <input
-            ref={this.input}
-            value={value}
-            onBlur={this.handleBlur}
-            onFocus={this.handleFocus}
-            onChange={this.handleChange}
-            onKeyPress={this.handleKeyPress}
-            placeholder={placeholder}
-            className={cx(css.control, css.controlInput, className)}
-          />
-
-          {value && clearable &&
-                    <button type="button" onClick={this.handleClear} className={css.cleaner} />
-          }
-        </label>
-      )
-
-    }
+  }
 
 }

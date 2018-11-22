@@ -33,7 +33,7 @@ const webpackConfig = webpackMerge(config, {
 
     resolve: {
         ...config.resolve,
-        plugins: [ new ModuleScopePlugin(define.rs_root, [ define.packageJson ]) ],
+        plugins: [new ModuleScopePlugin(define.rs_root, [define.packageJson])],
     },
 
     cache: true,
@@ -67,7 +67,7 @@ const webpackConfig = webpackMerge(config, {
         public: `${define.rs_protocol}://${define.rs_host}:${define.rs_port}`,
         stats: stats.config,
         // proxy: proxy.config,
-        before(app) {
+        before (app) {
             // This lets us open files from the runtime error overlay.
             app.use(errorOverlayMiddleware())
             // This service worker file is effectively a 'no-op' that will reset any
