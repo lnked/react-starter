@@ -4,7 +4,7 @@ const define = require('../define')
 const environment = require('../environment').config
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
-const cache = JSON.parse(environment.APP_NAME)
+const cache = JSON.parse(environment.REACT_APP_NAME)
     .toLowerCase()
     .replace(/\s/g, '-')
 
