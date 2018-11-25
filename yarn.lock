@@ -978,16 +978,10 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@csstools/postcss-image-set-function@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@csstools/postcss-image-set-function/-/postcss-image-set-function-1.0.0.tgz#1ef0913d90a9c4440495eb41624c202e53a703f3"
-  dependencies:
-    postcss "^6.0.20"
-    postcss-value-parser "^3.3.0"
-
-"@csstools/sass-import-resolve@^1":
+"@csstools/sass-import-resolve@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@csstools/sass-import-resolve/-/sass-import-resolve-1.0.0.tgz#32c3cdb2f7af3cd8f0dca357b592e7271f3831b5"
+  integrity sha512-pH4KCsbtBLLe7eqUrw8brcuFO8IZlN36JjdKlOublibVdAIPHCzEnpBWOVUXK5sCf+DpBi8ZtuWtjF0srybdeA==
 
 "@emmetio/extract-abbreviation@0.1.6":
   version "0.1.6"
@@ -2559,13 +2553,6 @@ browserslist@^2.0.0, browserslist@^2.11.3:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
 
-browserslist@^3.2.4:
-  version "3.2.8"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-3.2.8.tgz#b0005361d6471f0f5952797a76fc985f1f978fc6"
-  dependencies:
-    caniuse-lite "^1.0.30000844"
-    electron-to-chromium "^1.3.47"
-
 browserslist@^4.0.0, browserslist@^4.1.0, browserslist@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.2.1.tgz#257a24c879d1cd4016348eee5c25de683260b21d"
@@ -2844,7 +2831,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000823, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000884, caniuse-lite@^1.0.30000890, caniuse-lite@^1.0.30000892:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000884, caniuse-lite@^1.0.30000890, caniuse-lite@^1.0.30000892:
   version "1.0.30000893"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000893.tgz#284b20932bd41b93e21626975f2050cb01561986"
 
@@ -3812,10 +3799,6 @@ css@^2.0.0, css@^2.2.1, css@^2.2.4:
     source-map-resolve "^0.5.2"
     urix "^0.1.0"
 
-cssdb@^1.6.0:
-  version "1.6.0"
-  resolved "http://registry.npmjs.org/cssdb/-/cssdb-1.6.0.tgz#3360c4163e07cf4d1efe58c1bc15170535f4d393"
-
 cssdb@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/cssdb/-/cssdb-4.2.0.tgz#89623ec696121d0688080ccdcd4627c7e6c6ee0d"
@@ -4611,7 +4594,7 @@ ejs@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
-electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.47, electron-to-chromium@^1.3.62, electron-to-chromium@^1.3.79:
+electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.62, electron-to-chromium@^1.3.79:
   version "1.3.80"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.80.tgz#e99ec7efe64c2c6a269d3885ff411ea88852fa53"
 
@@ -4904,10 +4887,10 @@ eslint-plugin-import@2.14.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jest@22.0.0:
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.0.0.tgz#87dc52bbdd47f37f23bf2b10bb8469458bb3ed68"
-  integrity sha512-YOj8cYI5ZXEZUrX2kUBLachR1ffjQiicIMBoivN7bXXHnxi8RcwNvmVzwlu3nTmjlvk5AP3kIpC5i8HcinmhPA==
+eslint-plugin-jest@22.0.1:
+  version "22.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.0.1.tgz#796af66d2f86a1cb4193d4baefca9d2479c06e6c"
+  integrity sha512-thHQBWZefGO0yhjj8QA1iZ7V9S9LVk6nBK9s8B52Mg//Ly9OppFSGrrIruJ3hzgLpsLx6iIP/8/a8CfI8ESvRA==
 
 eslint-plugin-jsx-a11y@6.1.2:
   version "6.1.2"
@@ -10343,24 +10326,17 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
 
-postcss-advanced-variables@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/postcss-advanced-variables/-/postcss-advanced-variables-2.3.3.tgz#80ac5b05988d02f63352974491e319910f33337e"
+postcss-advanced-variables@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-advanced-variables/-/postcss-advanced-variables-3.0.0.tgz#d1ca9a0da920c0be41213dd33ce6033d14f0b150"
+  integrity sha512-e5tcG0+l2qaqV65+qQCAW91vX4+mYbh2m5tdBYrzOhYjFgtNmtehmZWotvzWTGbtgbP11tgGirEYy2P7m6HceQ==
   dependencies:
-    "@csstools/sass-import-resolve" "^1"
-    postcss "^6"
+    "@csstools/sass-import-resolve" "^1.0.0"
+    postcss "^7.0.6"
 
 postcss-apply@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/postcss-apply/-/postcss-apply-0.8.0.tgz#14e544bbb5cb6f1c1e048857965d79ae066b1343"
-  dependencies:
-    babel-runtime "^6.23.0"
-    balanced-match "^0.4.2"
-    postcss "^6.0.0"
-
-postcss-apply@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/postcss-apply/-/postcss-apply-0.9.0.tgz#a152e6e34a6c55d0895751929319c262c5d8c289"
   dependencies:
     babel-runtime "^6.23.0"
     balanced-match "^0.4.2"
@@ -10477,14 +10453,6 @@ postcss-color-hwb@^3.0.0:
     postcss "^6.0.1"
     postcss-message-helpers "^2.0.0"
     reduce-function-call "^1.0.2"
-
-postcss-color-mod-function@^2.4.2:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-2.4.3.tgz#14a97f5b17a5f19396e9dea7ffcb5be732592baf"
-  dependencies:
-    "@csstools/convert-colors" "^1.4.0"
-    postcss "^6.0.23"
-    postcss-values-parser "^1.5.0"
 
 postcss-color-mod-function@^3.0.3:
   version "3.0.3"
@@ -10611,13 +10579,6 @@ postcss-custom-properties@^6.1.0:
     balanced-match "^1.0.0"
     postcss "^6.0.18"
 
-postcss-custom-properties@^7.0.0:
-  version "7.0.0"
-  resolved "http://registry.npmjs.org/postcss-custom-properties/-/postcss-custom-properties-7.0.0.tgz#24dc4fbe6d6ed550ea4fd3b11204660e9ffa3b33"
-  dependencies:
-    balanced-match "^1.0.0"
-    postcss "^6.0.18"
-
 postcss-custom-selectors@5.1.2, postcss-custom-selectors@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/postcss-custom-selectors/-/postcss-custom-selectors-5.1.2.tgz#64858c6eb2ecff2fb41d0b28c9dd7b3db4de7fba"
@@ -10631,13 +10592,6 @@ postcss-custom-selectors@^4.0.1:
   dependencies:
     postcss "^6.0.1"
     postcss-selector-matches "^3.0.0"
-
-postcss-dir-pseudo-class@^3.0.0:
-  version "3.0.0"
-  resolved "http://registry.npmjs.org/postcss-dir-pseudo-class/-/postcss-dir-pseudo-class-3.0.0.tgz#31a18af3b9b1b33be635599b998a9829896c3fed"
-  dependencies:
-    postcss "^6.0.20"
-    postcss-selector-parser "^3.1.1"
 
 postcss-dir-pseudo-class@^5.0.0:
   version "5.0.0"
@@ -10688,24 +10642,19 @@ postcss-env-function@^2.0.2:
     postcss "^7.0.2"
     postcss-values-parser "^2.0.0"
 
-postcss-extend-rule@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-extend-rule/-/postcss-extend-rule-1.1.0.tgz#11e4d590ffe4253b853ef1fc03be7167da607d38"
+postcss-extend-rule@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-extend-rule/-/postcss-extend-rule-2.0.0.tgz#031fe6f608cf6efd20cb58b11f343b164c18d370"
+  integrity sha512-dgr1GJzW3lUBczZJO5Fm51rktn34Uc99xR1uQyC2Td8JPep/Y+TRx6TjK0yngikOd4LxV1xyuohMMpcaOBgrfA==
   dependencies:
-    postcss "^6.0.11"
-    postcss-nesting "^4.2.1"
+    postcss "^6.0.22"
+    postcss-nesting "^5.0.0"
 
 postcss-flexbugs-fixes@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-4.1.0.tgz#e094a9df1783e2200b7b19f875dcad3b3aff8b20"
   dependencies:
     postcss "^7.0.0"
-
-postcss-focus-visible@^2.0.0:
-  version "2.0.0"
-  resolved "http://registry.npmjs.org/postcss-focus-visible/-/postcss-focus-visible-2.0.0.tgz#a6b9881f6710f6251790e2f151c94b161e23eeb6"
-  dependencies:
-    postcss "^6.0"
 
 postcss-focus-visible@^4.0.0:
   version "4.0.0"
@@ -10842,12 +10791,6 @@ postcss-loader@3.0.0:
     postcss "^7.0.0"
     postcss-load-config "^2.0.0"
     schema-utils "^1.0.0"
-
-postcss-logical@^1.1.1:
-  version "1.1.1"
-  resolved "http://registry.npmjs.org/postcss-logical/-/postcss-logical-1.1.1.tgz#bcabf0638d8aa747743b32bc52f9d90d4a3313d2"
-  dependencies:
-    postcss "^6.0.20"
 
 postcss-logical@^3.0.0:
   version "3.0.0"
@@ -10996,18 +10939,11 @@ postcss-mq-keyframes@0.3.0:
   dependencies:
     postcss "^5.0.19"
 
-postcss-nested@4.1.0:
+postcss-nested@4.1.0, postcss-nested@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-4.1.0.tgz#271da8a047f2ee378139410ae2400b1c67d0bf30"
   dependencies:
     postcss "^7.0.2"
-    postcss-selector-parser "^3.1.1"
-
-postcss-nested@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-3.0.0.tgz#cde40bd07a078565f3df72e2dc2665871c724852"
-  dependencies:
-    postcss "^6.0.14"
     postcss-selector-parser "^3.1.1"
 
 postcss-nesting@7.0.0, postcss-nesting@^7.0.0:
@@ -11016,11 +10952,18 @@ postcss-nesting@7.0.0, postcss-nesting@^7.0.0:
   dependencies:
     postcss "^7.0.2"
 
-postcss-nesting@^4.0.1, postcss-nesting@^4.2.1:
+postcss-nesting@^4.0.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-4.2.1.tgz#0483bce338b3f0828ced90ff530b29b98b00300d"
   dependencies:
     postcss "^6.0.11"
+
+postcss-nesting@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-5.0.0.tgz#973e3a7dc6426543affc0b0beb367c3b2a8d9923"
+  integrity sha512-Yoe3w2mcVslnEJl5zLyz1yBxCFUpYu138apEEOCwS2HRdDw/TDxTwD1fXBrIarL8J1cPzHfVwO1m40B2/UpGCw==
+  dependencies:
+    postcss "^6.0.21"
 
 postcss-normalize-charset@^4.0.1:
   version "4.0.1"
@@ -11108,12 +11051,6 @@ postcss-overflow-shorthand@^2.0.0:
   dependencies:
     postcss "^7.0.2"
 
-postcss-page-break@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npmjs.org/postcss-page-break/-/postcss-page-break-1.0.0.tgz#09a63b6e03db092d38569b33dcba42a343ace60b"
-  dependencies:
-    postcss "^6.0.16"
-
 postcss-page-break@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-page-break/-/postcss-page-break-2.0.0.tgz#add52d0e0a528cabe6afee8b46e2abb277df46bf"
@@ -11133,7 +11070,7 @@ postcss-position@1.0.0:
   dependencies:
     postcss "^6.0.7"
 
-postcss-preset-env@6.4.0:
+postcss-preset-env@6.4.0, postcss-preset-env@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/postcss-preset-env/-/postcss-preset-env-6.4.0.tgz#f5466550b177454fc98ca5054b4478e8e5caa714"
   integrity sha512-0jCyY/T9kWv1i2abt5DOOoh0uHJia0HUTWMV72Tw75tGx3pH628oSS8WBMCE5L1Ou3LvoAl9pe07u8g/afvc3A==
@@ -11173,38 +11110,6 @@ postcss-preset-env@6.4.0:
     postcss-replace-overflow-wrap "^3.0.0"
     postcss-selector-matches "^4.0.0"
     postcss-selector-not "^4.0.0"
-
-postcss-preset-env@^3.2.2:
-  version "3.5.0"
-  resolved "http://registry.npmjs.org/postcss-preset-env/-/postcss-preset-env-3.5.0.tgz#b3aae2c65e5b3fa61d735b70392fa758a665b785"
-  dependencies:
-    "@csstools/postcss-image-set-function" "^1.0.0"
-    browserslist "^3.2.4"
-    caniuse-lite "^1.0.30000823"
-    cssdb "^1.6.0"
-    postcss "^6.0.21"
-    postcss-apply "^0.9.0"
-    postcss-attribute-case-insensitive "^2.0.0"
-    postcss-color-hex-alpha "^3.0.0"
-    postcss-color-mod-function "^2.4.2"
-    postcss-color-rebeccapurple "^3.0.0"
-    postcss-color-rgb "^2.0.0"
-    postcss-custom-media "^6.0.0"
-    postcss-custom-properties "^7.0.0"
-    postcss-custom-selectors "^4.0.1"
-    postcss-dir-pseudo-class "^3.0.0"
-    postcss-focus-visible "^2.0.0"
-    postcss-font-family-system-ui "^3.0.0"
-    postcss-font-variant "^3.0.0"
-    postcss-initial "^2.0.0"
-    postcss-logical "^1.1.1"
-    postcss-media-minmax "^3.0.0"
-    postcss-nesting "^4.2.1"
-    postcss-page-break "^1.0.0"
-    postcss-pseudo-class-any-link "^4.0.0"
-    postcss-replace-overflow-wrap "^2.0.0"
-    postcss-selector-matches "^3.0.1"
-    postcss-selector-not "^3.0.1"
 
 postcss-property-lookup@^2.0.0:
   version "2.0.0"
@@ -11474,7 +11379,7 @@ postcss@6.0.1:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@7.0.6:
+postcss@7.0.6, postcss@^7.0.6:
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.6.tgz#6dcaa1e999cdd4a255dcd7d4d9547f4ca010cdc2"
   integrity sha512-Nq/rNjnHFcKgCDDZYO0lNsl6YWe6U7tTy+ESN+PnLxebL8uBtYX59HZqvrj7YLK5UCyll2hqDsJOo3ndzEW8Ug==
@@ -11492,7 +11397,7 @@ postcss@^5.0.19, postcss@^5.0.4, postcss@^5.0.5:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6, postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.13, postcss@^6.0.14, postcss@^6.0.16, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.19, postcss@^6.0.20, postcss@^6.0.21, postcss@^6.0.22, postcss@^6.0.23, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.7, postcss@^6.0.9:
+postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.13, postcss@^6.0.14, postcss@^6.0.17, postcss@^6.0.18, postcss@^6.0.21, postcss@^6.0.22, postcss@^6.0.23, postcss@^6.0.5, postcss@^6.0.6, postcss@^6.0.7, postcss@^6.0.9:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   dependencies:
@@ -11528,16 +11433,17 @@ prebuild-install@^2.3.0:
     tunnel-agent "^0.6.0"
     which-pm-runs "^1.0.0"
 
-precss@3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/precss/-/precss-3.1.2.tgz#c82c0aa4ca5fe1e879799d697db0fac6d15d23bc"
+precss@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/precss/-/precss-4.0.0.tgz#518ce5c4d31eac9bd268c538ae6fb462f3bf57b3"
+  integrity sha512-cRPZMKpHLZXR6gJlrXRjJe7SQMf+wYxg6rKp+TwYsYABjApSj9z8E8yIlagqADaWyikeIZttaNU6xqSjFIAP/g==
   dependencies:
-    postcss "^6.0.19"
-    postcss-advanced-variables "^2.3.3"
+    postcss "^7.0.6"
+    postcss-advanced-variables "^3.0.0"
     postcss-atroot "^0.1.3"
-    postcss-extend-rule "^1.1.0"
-    postcss-nested "^3.0.0"
-    postcss-preset-env "^3.2.2"
+    postcss-extend-rule "^2.0.0"
+    postcss-nested "^4.1.0"
+    postcss-preset-env "^6.4.0"
     postcss-property-lookup "^2.0.0"
 
 prelude-ls@~1.1.2:
