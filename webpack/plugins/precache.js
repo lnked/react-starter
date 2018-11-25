@@ -19,7 +19,7 @@ const plugins = [
         directoryIndex: '/',
         dontCacheBustUrlsMatching: /\.\w{8}\./,
         navigateFallback: '/index.html',
-        navigateFallbackWhitelist: [ /^(?!\/_{2}).*/ ],
+        navigateFallbackWhitelist: [/^(?!\/_{2}).*/],
 
         staticFileGlobs: [
             `${define.rs_distBase}/**/*.js`,

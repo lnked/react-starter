@@ -3,7 +3,7 @@ const BowerWebpackPlugin = require('bower-webpack-plugin')
 
 const plugins = [
     new BowerWebpackPlugin({
-        modulesDirectories: [ 'bower_components' ],
+        modulesDirectories: ['bower_components'],
         manifestFiles: 'bower.json',
         includes: /.*/,
         excludes: [],

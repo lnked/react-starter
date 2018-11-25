@@ -57,7 +57,7 @@ const plugins = [
     new HtmlWebpackPlugin(helpers.generateConfig('index', 'app', 'bundle')),
 
     new SvgSpriteHtmlWebpackPlugin({
-        includeFiles: [ './src/assets/svgstore/*.svg' ],
+        includeFiles: ['./src/assets/svgstore/*.svg'],
         generateSymbolId (svgFilePath) {
             return path
                 .basename(svgFilePath)

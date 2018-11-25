@@ -13,8 +13,8 @@ plugins.push(
         path: [define.rs_root, path.resolve(define.rs_root, 'assets/styles')],
         resolve: resolver({
             alias: {
-              '~': 'src/',
-              'styles': 'src/assets/styles/'
+                '~': 'src/',
+                'styles': 'src/assets/styles/'
             }
         })
     }),

@@ -8,8 +8,8 @@ const config = {
     inject: true,
     compile: false,
     filetype: 'pug',
-    prefetch: [ '**/*.min.js' ],
-    preload: [ '**/*.min.js' ],
+    prefetch: ['**/*.min.js'],
+    preload: ['**/*.min.js'],
     chunksSortMode: 'dependency',
     production: define.rs_production,
     minify: define.rs_release && {
