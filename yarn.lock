@@ -1114,10 +1114,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.7.10":
-  version "16.7.10"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.10.tgz#a0ebd3af6632d6997506f6d1aac67fed8d0851b0"
-  integrity sha512-8EFSjCFLUA7JJQ6lJ9+9/99urIrdHACwH8GqPlYAPyIjxOkz2snkttOzItwUwXgqc2xg+r/IYW8M1J8WXax7xg==
+"@types/react@16.7.11":
+  version "16.7.11"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.11.tgz#1743b82ea6a0c659467f0c7317c233edb1f10be9"
+  integrity sha512-KZvX2XjzBPz+Dh7cjgDzzLxUmg4k8CnCSsB1V2Vtt1YtSIGe1sfHp2+Htl3S5DzeKrHnioaDHTMN/fjAvnEsSg==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -14874,9 +14874,10 @@ webpack-notifier@1.7.0:
     object-assign "^4.1.0"
     strip-ansi "^3.0.1"
 
-webpack-pwa-manifest@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/webpack-pwa-manifest/-/webpack-pwa-manifest-3.7.1.tgz#ef3ca4571b1f799a470225be537c0ca6a1ac9505"
+webpack-pwa-manifest@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/webpack-pwa-manifest/-/webpack-pwa-manifest-3.8.0.tgz#7f1d409f2fe872e78ace6b729ba03c8cb5d923ef"
+  integrity sha512-W+svkP+u2WJsMw+R+bLSD4O/LkPumGCnFlD0BBMPubqD9v7nnmnVeO8cZYGPIiuRQ9x+WFWdmEfiA6XecvkkWA==
   dependencies:
     css-color-names "0.0.4"
     jimp "^0.2.28"
