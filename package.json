@@ -137,7 +137,7 @@
     "@types/react-helmet": "5.0.7",
     "@types/react-router": "4.4.1",
     "@types/react-router-dom": "4.3.1",
-    "autoprefixer": "9.3.1",
+    "autoprefixer": "9.4.0",
     "awesome-typescript-loader": "5.2.1",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
