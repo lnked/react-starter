@@ -15,17 +15,17 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler))
 
 app.get('/', (req, res) => {
-    res.sendFile(`${define.rs_contentBase}/index.html`)
+  res.sendFile(`${define.rs_contentBase}/index.html`)
 })
 
 app.listen(define.rs_port, error => {
-    if (error) {
-        console.error(error)
-    } else {
-        console.info(
-            '==> 🌎 Listening on port %s. Open up http://localhost:%s/ in your browser.',
-            define.rs_port,
-            define.rs_port
-        )
-    }
+  if (error) {
+    console.error(error)
+  } else {
+    console.info(
+      '==> 🌎 Listening on port %s. Open up http://localhost:%s/ in your browser.',
+      define.rs_port,
+      define.rs_port
+    )
+  }
 })
