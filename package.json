@@ -108,9 +108,9 @@
   "devDependencies": {
     "@babel/cli": "7.2.0",
     "@babel/core": "7.2.0",
-    "@babel/node": "7.0.0",
-    "@babel/plugin-proposal-class-properties": "7.1.0",
-    "@babel/plugin-proposal-decorators": "7.1.6",
+    "@babel/node": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.2.0",
+    "@babel/plugin-proposal-decorators": "7.2.0",
     "@babel/plugin-proposal-do-expressions": "7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "7.0.0",
     "@babel/plugin-proposal-function-sent": "7.1.0",
