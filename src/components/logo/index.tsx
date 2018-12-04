@@ -14,7 +14,6 @@ export class Logo extends React.PureComponent<P, {}> {
   }
 
   render () {
-
     const { link } = this.props
 
     return (
@@ -23,7 +22,6 @@ export class Logo extends React.PureComponent<P, {}> {
         <span className={css.title}>React Starter</span>
       </NavLink>
     )
-
   }
 
 }

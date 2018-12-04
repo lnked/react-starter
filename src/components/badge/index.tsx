@@ -42,7 +42,6 @@ export class Badge extends React.PureComponent<P, {}> {
   }
 
   render () {
-
     const { title, className, children, ...rest } = this.props
 
     return (
@@ -50,7 +49,6 @@ export class Badge extends React.PureComponent<P, {}> {
         {title || children}
       </StyledBadge>
     )
-
   }
 
 }

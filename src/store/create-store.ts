@@ -28,7 +28,6 @@ enableLogging({
 })
 
 export const createStore = (routingStore: any, initialState: any) => {
-
   const { ui, app } = initialState
 
   const uiStore = new UiStore(ui)
@@ -39,5 +38,4 @@ export const createStore = (routingStore: any, initialState: any) => {
     [STORE_APP]: appStore,
     [STORE_ROUTER]: routingStore,
   }
-
 }

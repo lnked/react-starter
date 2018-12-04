@@ -8,32 +8,22 @@ import { environment } from 'settings/environment'
 const appRoot = document.getElementById('app')
 
 if (appRoot == null) {
-
   throw new Error('No root element')
-
 }
 
 const renderApp = () => {
-
   render(<App />, appRoot)
   document.body.classList.remove('loading')
-
 }
 
 if (environment.development && module.hot) {
-
   module.hot.accept('./app', renderApp)
-
 } else if (environment.production) {
-
   const isHttps = location.protocol.indexOf('https') >= 0
 
   if ('serviceWorker' in navigator && isHttps) {
-
     navigator.serviceWorker.register('/sw.js')
-
   }
-
 }
 
 renderApp()

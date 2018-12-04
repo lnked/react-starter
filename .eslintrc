@@ -342,10 +342,7 @@
     ],
     "operator-linebreak": "error",
     "padded-blocks": [
-      "error",
-      {
-        "classes": "always"
-      }
+      "error", { "classes": "always", "switches": "never", "blocks": "never" }
     ],
     "quote-props": [
       "error",

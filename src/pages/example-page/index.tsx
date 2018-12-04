@@ -50,7 +50,6 @@ class ExamplePage extends React.Component<any, any> {
   // }
 
   render () {
-
     const type = 'grid'
     const { products } = this.state
 
@@ -77,7 +76,6 @@ class ExamplePage extends React.Component<any, any> {
         </Group>
       </div>
     )
-
   }
 
 }

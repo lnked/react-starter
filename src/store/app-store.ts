@@ -23,16 +23,12 @@ export class AppStore {
   query: string = ''
 
   constructor (initialState?: any) {
-
     // console.log({...AppStore.defaultState, ...initialState})
 
     if (initialState && Object.keys(initialState).length) {
-
       // extendObservable(this, {...AppStore.defaultState, ...initialState})
       extendObservable(this, initialState)
-
     }
-
   }
 
   // async loadAll () {
@@ -45,9 +41,7 @@ export class AppStore {
 
   @action
   loadTags = (query: string) => {
-
     this.query = query
-
   }
 
 }

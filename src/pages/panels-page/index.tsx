@@ -52,19 +52,14 @@ class PanelsPage extends React.Component<any, S> {
   interval: any[] = []
 
   componentDidMount () {
-
     this.startInterval()
-
   }
 
   startInterval = () => {
-
     const { progress } = this.state
 
     progress && Object.keys(progress).map((id: string) => {
-
       this.interval[id] = setInterval(() => {
-
         this.setState((state: S) => ({
           progress: {
             ...state.progress,
@@ -74,49 +69,33 @@ class PanelsPage extends React.Component<any, S> {
             },
           },
         }), () => {
-
           const prog: any = this.state.progress
 
           if (prog && prog[id] && prog[id].progress === 0) {
-
             this.stopInterval(id)
-
           }
-
         })
-
       }, 500)
-
     })
-
   }
 
   componentWillUnmount () {
-
     const { progress } = this.state
 
     progress && Object.keys(progress).map((id: any) => {
-
       this.stopInterval(id)
-
     })
-
   }
 
   stopInterval = (id: string): void => {
-
     clearInterval(this.interval[id])
-
   }
 
   progress = (seconds: number, value: number) => {
-
     return value / seconds * 100
-
   }
 
   render () {
-
     const type = 'grid'
     const { progress } = this.state
 
@@ -124,7 +103,6 @@ class PanelsPage extends React.Component<any, S> {
       <div className={css.content}>
         <Group type={type}>
           {progress && Object.keys(progress).map(id => {
-
             const value = this.progress(progress[id].seconds, progress[id].seconds - progress[id].progress)
 
             return (
@@ -137,12 +115,10 @@ class PanelsPage extends React.Component<any, S> {
                 />
               </Card>
             )
-
           })}
         </Group>
       </div>
     )
-
   }
 
 }

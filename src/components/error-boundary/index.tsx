@@ -15,21 +15,15 @@ class ErrorBoundary extends React.PureComponent<Props, State> {
   }
 
   componentDidCatch (err: any, info: any) {
-
     this.setState({ error: true }, () => console.error({ err }, { info }))
-
   }
 
   render () {
-
     if (this.state.error) {
-
       return <h1>Something went wrong.</h1>
-
     }
 
     return this.props.children
-
   }
 
 }

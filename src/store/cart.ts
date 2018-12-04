@@ -14,29 +14,19 @@ export const cart = observable({
   products: observable.map(),
 
   addProduct (product: ProductProps) {
-
     if (this.Products.has(product.id)) {
-
       throw new Error('Product already exists')
-
     } else {
-
       this.Products.set(product.id, product)
-
     }
-
   },
 
   updateProduct (product: ProductProps) {
-
     this.Products.set(product.id, product)
-
   },
 
   removeProduct (id: any) {
-
     this.Products.delete(id)
-
   },
 
   // unenrollProduct(courseId: number, ProductId: number) {

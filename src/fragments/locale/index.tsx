@@ -14,7 +14,6 @@ export interface P {
 const cx = classes.bind(css)
 
 export function Locale ({ checked, className = '' }: P) {
-
   const list: string[] = ['ru', 'en', 'de']
 
   return (
@@ -30,5 +29,4 @@ export function Locale ({ checked, className = '' }: P) {
         ))}
     </div>
   )
-
 }

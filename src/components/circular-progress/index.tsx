@@ -14,7 +14,6 @@ export interface P {
 const cx = classes.bind(css)
 
 export function CircularProgress ({ color, radius = 60, stroke, content, progress }: P) {
-
   const normalizedRadius = radius - stroke * 2
   const circumference = normalizedRadius * 2 * Math.PI
 
@@ -42,5 +41,4 @@ export function CircularProgress ({ color, radius = 60, stroke, content, progres
       </svg>
     </div>
   )
-
 }

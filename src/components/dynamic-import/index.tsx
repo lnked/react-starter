@@ -16,24 +16,18 @@ export class DynamicImport extends React.Component<P, S> {
   }
 
   componentDidMount () {
-
     this.props.load().then((component: any) => {
-
       this.setState(() => ({
         component: component.default ? component.default : component,
       }))
-
     })
-
   }
 
   render () {
-
     const { children } = this.props
     const { component } = this.state
 
     return children && children(component)
-
   }
 
 }

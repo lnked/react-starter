@@ -24,29 +24,22 @@ export class Sandwich extends React.PureComponent<P, S> {
   }
 
   static getDerivedStateFromProps (props: P, state: S) {
-
     if (state.isOpened !== props.isOpened) {
-
       return {
         isOpened: props.isOpened,
       }
-
     }
 
     return null
-
   }
 
   handleChange = () => {
-
     this.setState((state: S) => ({
       isOpened: !state.isOpened,
     }))
-
   }
 
   render () {
-
     const { isOpened } = this.state
 
     return (
@@ -54,7 +47,6 @@ export class Sandwich extends React.PureComponent<P, S> {
         <span className={cx(css.line, { lineOpen: isOpened })} />
       </button>
     )
-
   }
 
 }

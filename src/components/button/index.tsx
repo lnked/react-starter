@@ -25,7 +25,6 @@ export type P = {
 const cx = classes.bind(css)
 
 export function Button ({ type, size = 'small', circle, label, loading, children, handleClick, ...rest }: P) {
-
   const {
     info,
     danger,
@@ -53,5 +52,4 @@ export function Button ({ type, size = 'small', circle, label, loading, children
       {label || children}
     </button>
   )
-
 }

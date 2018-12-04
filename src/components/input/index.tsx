@@ -50,53 +50,36 @@ export class Input extends React.Component<InputProps, S> {
   // }
 
   componentDidMount () {
-
     if (this.input && this.input.current) {
-
       this.input.current.value = 'xxx'
-
     }
-
   }
 
   prepared = (value: string) => {
-
     const { integer, floating } = this.props
 
     if (integer) {
-
       return parseInt(value, 10)
-
     } else if (floating) {
-
       return parseFloat(value)
-
     }
 
     return value
-
   }
 
   handleChange = (e: any) => {
-
     const value = this.prepared(e.target.value)
 
     this.setState((state: S) => ({
       ...state, value,
     }), () => {
-
       if (this.props.handleChange) {
-
         this.props.handleChange(value)
-
       }
-
     })
-
   }
 
   render () {
-
     const { value } = this.state
     const { label } = this.props
 
@@ -114,7 +97,6 @@ export class Input extends React.Component<InputProps, S> {
         />
       </label>
     )
-
   }
 
 }

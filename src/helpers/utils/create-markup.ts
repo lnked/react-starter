@@ -3,7 +3,5 @@ export interface MarkupProps {
 }
 
 export const createMarkup = (data: any): MarkupProps => {
-
   return { __html: data }
-
 }

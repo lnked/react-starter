@@ -16,7 +16,6 @@ const cx = classes.bind(css)
 class MainPage extends React.Component<any, any> {
 
   renderIcons = () => {
-
     return (
       <div className={css.iconSet}>
         <Icon symbol="favorite" className={cx({ icon: true, icon1: true })} />
@@ -28,11 +27,9 @@ class MainPage extends React.Component<any, any> {
         <Icon symbol="favorite" className={cx({ icon: true, icon7: true })} />
       </div>
     )
-
   }
 
   render () {
-
     const { location, push, goBack } = this.props[STORE_ROUTER]
 
     return (
@@ -64,7 +61,6 @@ class MainPage extends React.Component<any, any> {
                 */}
       </div>
     )
-
   }
 
 }

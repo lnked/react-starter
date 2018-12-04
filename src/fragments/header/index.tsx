@@ -11,7 +11,6 @@ import {
 const cx = classes.bind(css)
 
 export function Header () {
-
   return (
     <div className={cx(css.header)}>
       <div className={cx(css.title)}>React Starter Kit</div>
@@ -21,5 +20,4 @@ export function Header () {
       <Locale checked="ru" />
     </div>
   )
-
 }

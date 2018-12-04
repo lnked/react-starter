@@ -12,7 +12,6 @@ export interface PropsIcon {
 const cx = classes.bind(css)
 
 export function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon) {
-
   return (
     <svg
       className={cx({ icon: true }, className)}
@@ -22,5 +21,4 @@ export function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon
       <use xlinkHref={`#${symbol}`} />
     </svg>
   )
-
 }

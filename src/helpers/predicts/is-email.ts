@@ -1,5 +1,4 @@
 export const isEmail = (str: string) => {
-
   /* eslint-disable */
   const re = new RegExp(
     // tslint:disable-next-line
@@ -8,5 +7,4 @@ export const isEmail = (str: string) => {
   /* eslint-enable */
 
   return str && !re.test(str[name])
-
 }

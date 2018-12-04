@@ -10,16 +10,12 @@ export class UiStore {
 
   @computed
   get view_type () {
-
     return this.type
-
   }
 
   @action
   set (type: string) {
-
     this.type = type
-
   }
 
 }
