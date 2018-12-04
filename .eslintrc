@@ -343,7 +343,9 @@
     "operator-linebreak": "error",
     "padded-blocks": [
       "error",
-      "always"
+      {
+        "classes": "always"
+      }
     ],
     "quote-props": [
       "error",
