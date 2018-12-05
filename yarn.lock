@@ -89,10 +89,10 @@
     "@babel/traverse" "^7.1.0"
     "@babel/types" "^7.0.0"
 
-"@babel/helper-create-class-features-plugin@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.2.0.tgz#8d52930558897042444e670f26ae6581ec9a4a4a"
-  integrity sha512-INigeagreiKKZ4Ouo8Wun2y+XT4KxAdNztesU3C/AynDsdtIu00qjgw6QXSM3hVzQ7FvAL4sFmoEpFPuXkeHiw==
+"@babel/helper-create-class-features-plugin@^7.2.1":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.2.1.tgz#f6e8027291669ef64433220dc8327531233f1161"
+  integrity sha512-EsEP7XLFmcJHjcuFYBxYD1FkP0irC8C9fsrt2tX/jrAi/eTnFI6DOPgVFb+WREeg1GboF+Ib+nCHbGBodyAXSg==
   dependencies:
     "@babel/helper-function-name" "^7.1.0"
     "@babel/helper-member-expression-to-functions" "^7.0.0"
@@ -274,12 +274,12 @@
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.2.0"
 
-"@babel/plugin-proposal-class-properties@7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.2.0.tgz#12ade6dc7b92ea4fa4c84b4d7b87e9d0f446b4f8"
-  integrity sha512-pdBj4Hvyt/L1LA0Vvm/Tkp9gNDGLIkSbX8IrYfWcoA5xUZIg8qjSOTChUSaCjYdvoMcB9y2bXVGNVZ5DH62CZg==
+"@babel/plugin-proposal-class-properties@7.2.1":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.2.1.tgz#c734a53e0a1ec40fe5c22ee5069d26da3b187d05"
+  integrity sha512-/4FKFChkQ2Jgb8lBDsvFX496YTi7UWTetVgS8oJUpX1e/DlaoeEK57At27ug8Hu2zI2g8bzkJ+8k9qrHZRPGPA==
   dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.2.0"
+    "@babel/helper-create-class-features-plugin" "^7.2.1"
     "@babel/helper-plugin-utils" "^7.0.0"
 
 "@babel/plugin-proposal-decorators@7.2.0":
@@ -1657,10 +1657,10 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autoprefixer@9.4.1, autoprefixer@^9.0.0, autoprefixer@^9.3.1:
-  version "9.4.1"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.4.1.tgz#a3d7e9c5940ba85778ab780536f1cc51bd2dfbd6"
-  integrity sha512-T15Bt8akUOGqhkXPLKipYzzmmOOQ+H4dmZtk3VUNBbFiYuUh5uvXb/THxGGxbRlaNG+i39Qm3UdpLtpdiCMw9w==
+autoprefixer@9.4.2:
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.4.2.tgz#0234d20900684fc4bfb67926493deb68384067f5"
+  integrity sha512-tYQYJvZvqlJCzF+BLC//uAcdT/Yy4ik9bwZRXr/EehUJ/bjjpTthsWTy8dpowdoIE1sLCDf1ch4Eb2cOSzZC9w==
   dependencies:
     browserslist "^4.3.5"
     caniuse-lite "^1.0.30000914"
@@ -1680,6 +1680,18 @@ autoprefixer@^7.1.1:
     num2fraction "^1.2.2"
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
+
+autoprefixer@^9.0.0, autoprefixer@^9.3.1:
+  version "9.4.1"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.4.1.tgz#a3d7e9c5940ba85778ab780536f1cc51bd2dfbd6"
+  integrity sha512-T15Bt8akUOGqhkXPLKipYzzmmOOQ+H4dmZtk3VUNBbFiYuUh5uvXb/THxGGxbRlaNG+i39Qm3UdpLtpdiCMw9w==
+  dependencies:
+    browserslist "^4.3.5"
+    caniuse-lite "^1.0.30000914"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^7.0.6"
+    postcss-value-parser "^3.3.1"
 
 awesome-typescript-loader@5.2.1:
   version "5.2.1"
