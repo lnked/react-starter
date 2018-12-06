@@ -1,4 +1,8 @@
 module.exports.config = [
+  // {
+  //   path: '**',
+  //   target: 'http://localhost:3000',
+  // },
   //   "/subject": "http://localhost:3000",
   //   "/tag": "http://localhost:3000",
   //   "/book": "http://localhost:3000",

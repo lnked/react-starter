@@ -66,6 +66,7 @@ const webpackConfig = webpackMerge(config, {
         host: define.rs_host,
         public: `${define.rs_protocol}://${define.rs_host}:${define.rs_port}`,
         stats: stats.config,
+        headers: { 'Access-Control-Allow-Origin': '*' },
         // proxy: proxy.config,
         before (app) {
             // This lets us open files from the runtime error overlay.
