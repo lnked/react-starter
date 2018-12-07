@@ -1,109 +1,110 @@
 @import 'styles/_global.scss';
 
 @keyframes spinner {
-    0%,
-    100% {
-        transform: scale(.2) rotate(0deg);
-    }
 
-    50% {
-        transform: scale(1) rotate(360deg);
-    }
+  0%,
+  100% {
+    transform: scale(.2) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(360deg);
+  }
 }
 
 .group {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .location {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 
-    button {
-        font-size: 1.4rem;
-        margin-left: 10px;
-        display: inline-block;
-        vertical-align: middle;
-    }
+  button {
+    font-size: 1.4rem;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .content {
-    clear: both;
-    padding: 20px;
+  clear: both;
+  padding: 20px;
 }
 
 .list {
-    margin-bottom: 20px;
-    list-style-type: lower-roman;
+  margin-bottom: 20px;
+  list-style-type: lower-roman;
 }
 
 .icon-set {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .icon {
-    margin: 5px;
-    animation: spinner 3s infinite ease-in-out;
+  margin: 5px;
+  animation: spinner 3s infinite ease-in-out;
 }
 
 .icon1 {
-    width: 20px;
-    height: 20px;
-    color: hsla(calc(0 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(238, 15, 15);
+  width: 20px;
+  height: 20px;
+  color: hsla(calc(0 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(238, 15, 15);
 }
 
 .icon2 {
-    width: 30px;
-    height: 30px;
-    color: hsla(calc(1 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(238, 135, 17);
+  width: 30px;
+  height: 30px;
+  color: hsla(calc(1 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(238, 135, 17);
 }
 
 .icon3 {
-    width: 40px;
-    height: 40px;
-    color: hsla(calc(2 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(247, 231, 9);
+  width: 40px;
+  height: 40px;
+  color: hsla(calc(2 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(247, 231, 9);
 }
 
 .icon4 {
-    width: 50px;
-    height: 50px;
-    color: hsla(calc(3 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(0, 165, 102);
+  width: 50px;
+  height: 50px;
+  color: hsla(calc(3 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(0, 165, 102);
 }
 
 .icon5 {
-    width: 60px;
-    height: 60px;
-    color: hsla(calc(4 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(67, 202, 247);
+  width: 60px;
+  height: 60px;
+  color: hsla(calc(4 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(67, 202, 247);
 }
 
 .icon6 {
-    width: 70px;
-    height: 70px;
-    color: hsla(calc(5 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(25, 64, 236);
+  width: 70px;
+  height: 70px;
+  color: hsla(calc(5 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(25, 64, 236);
 }
 
 .icon7 {
-    width: 80px;
-    height: 80px;
-    color: hsla(calc(6 * 360 / 7), 60%, 70%, .6);
-    // color: rgb(201, 27, 201);
+  width: 80px;
+  height: 80px;
+  color: hsla(calc(6 * 360 / 7), 60%, 70%, .6);
+  // color: rgb(201, 27, 201);
 }
 
 .description {
-    color: $c-text-color;
-    font-size: 21px;
-    font-weight: 300;
-    line-height: 36px;
-    text-align: center;
+  color: $c-text-color;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: center;
 }
 
 // .image {

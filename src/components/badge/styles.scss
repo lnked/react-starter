@@ -1,50 +1,50 @@
 @import 'styles/_global.scss';
 
 .badge {
-    line-height: 1;
-    font-size: 1.3rem;
-    border-radius: 2px;
-    padding: 3px;
-    display: inline-block;
-    vertical-align: baseline;
+  line-height: 1;
+  font-size: 1.3rem;
+  border-radius: 2px;
+  padding: 3px;
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .info {
-    color: $c-info-color;
-    border: 1px solid $c-info-border;
-    background-color: $c-info-background;
+  color: $c-info-color;
+  border: 1px solid $c-info-border;
+  background-color: $c-info-background;
 }
 
 .normal {
-    color: $c-normal-color;
-    border: 1px solid $c-normal-border;
-    background-color: $c-normal-background;
+  color: $c-normal-color;
+  border: 1px solid $c-normal-border;
+  background-color: $c-normal-background;
 }
 
 .primary {
-    color: $c-primary-color;
-    border: 1px solid $c-primary-border;
-    background-color: $c-primary-background;
+  color: $c-primary-color;
+  border: 1px solid $c-primary-border;
+  background-color: $c-primary-background;
 }
 
 .success {
-    color: $c-success-color;
-    border: 1px solid $c-success-border;
-    background-color: $c-success-background;
+  color: $c-success-color;
+  border: 1px solid $c-success-border;
+  background-color: $c-success-background;
 }
 
 .danger {
-    color: $c-danger-color;
-    border: 1px solid $c-danger-border;
-    background-color: $c-danger-background;
+  color: $c-danger-color;
+  border: 1px solid $c-danger-border;
+  background-color: $c-danger-background;
 }
 
 .warning {
-    color: $c-warning-color;
-    border: 1px solid $c-warning-border;
-    background-color: $c-warning-background;
+  color: $c-warning-color;
+  border: 1px solid $c-warning-border;
+  background-color: $c-warning-background;
 }

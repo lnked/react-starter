@@ -1,16 +1,16 @@
 @import 'styles/_global.scss';
 
 .card {
-    padding: 15px;
-    position: relative;
-    text-align: left;
-    background-color: $c-white;
-    border: 1px solid $c-border;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
-    transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  background-color: $c-white;
+  border: 1px solid $c-border;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+  transition: border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 
-    // &:hover {
-    //     border-color: #8da60d;
-    //     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-    // }
+  // &:hover {
+  //     border-color: #8da60d;
+  //     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  // }
 }

@@ -1,66 +1,71 @@
 :global {
-    .fade-exit,
-    .fade-enter {
-        transition: opacity .3s ease-in-out,
-                    transform .3s ease-in-out;
-    }
 
-    .fade-exit {
-        opacity: 1;
-        z-index: 1;
-        transform: translate3d(0, 0, 0);
-    }
+  .fade-exit,
+  .fade-enter {
+    transition: opacity .3s ease-in-out,
+      transform .3s ease-in-out;
+  }
 
-    .fade-enter {
-        opacity: 0;
-        z-index: 2;
-        transform: translate3d(0, 100px, 0);
-    }
+  .fade-exit {
+    opacity: 1;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
+  }
 
-    .fade-exit.fade-exit-active {
-        opacity: 0;
-        transform: translate3d(0, 100px, 0);
-    }
+  .fade-enter {
+    opacity: 0;
+    z-index: 2;
+    transform: translate3d(0, 100px, 0);
+  }
 
-    .fade-enter.fade-enter-active {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  .fade-exit.fade-exit-active {
+    opacity: 0;
+    transform: translate3d(0, 100px, 0);
+  }
+
+  .fade-enter.fade-enter-active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes spinner {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  0% { transform: rotate(0deg); }
+
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes SVGRotate {
-    to {
-        stroke-dashoffset: 0;
-    }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes swing {
-    15% {
-        transform: translateX(5px);
-    }
 
-    30% {
-        transform: translateX(-5px);
-    }
+  15% {
+    transform: translateX(5px);
+  }
 
-    50% {
-        transform: translateX(3px);
-    }
+  30% {
+    transform: translateX(-5px);
+  }
 
-    65% {
-        transform: translateX(-3px);
-    }
+  50% {
+    transform: translateX(3px);
+  }
 
-    80% {
-        transform: translateX(2px);
-    }
+  65% {
+    transform: translateX(-3px);
+  }
 
-    100% {
-        transform: translateX(0);
-    }
+  80% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

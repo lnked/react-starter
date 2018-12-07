@@ -1,17 +1,17 @@
 @mixin outline($color, $shadow-size: 2, $box-shadow: true, $text-shadow: false, $add-shadow: '') {
-    outline: 0;
+  outline: 0;
 
-    &:focus {
-        @if $box-shadow == true {
-            box-shadow: 0 0 0 $shadow-size #fff, 0 0 0 $shadow-size + $shadow-size $color $add-shadow;
-        }
-
-        @if $text-shadow == true {
-            text-shadow: 1px 1px 0 $color;
-        }
-
-        @else {
-            box-shadow: 0 0 0 $shadow-size rgba($color, .5) $add-shadow;
-        }
+  &:focus {
+    @if $box-shadow == true {
+      box-shadow: 0 0 0 $shadow-size #fff, 0 0 0 $shadow-size + $shadow-size $color $add-shadow;
     }
+
+    @if $text-shadow == true {
+      text-shadow: 1px 1px 0 $color;
+    }
+
+    @else {
+      box-shadow: 0 0 0 $shadow-size rgba($color, .5) $add-shadow;
+    }
+  }
 }

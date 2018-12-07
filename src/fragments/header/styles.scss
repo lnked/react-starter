@@ -1,22 +1,22 @@
 @import 'styles/_global.scss';
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 120px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    margin-bottom: 30px;
-    padding: $content-padding;
-    background-color: #29323d
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  margin-bottom: 30px;
+  padding: $content-padding;
+  background-color: #29323d;
 }
 
 .title {
-    color: #fff;
-    font-size: 1.8rem;
-    margin-right: 10px;
-    white-space: nowrap;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-right: 10px;
+  white-space: nowrap;
 }

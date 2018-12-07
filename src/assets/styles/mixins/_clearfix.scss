@@ -1,14 +1,14 @@
 %clearfix {
-    zoom: 1;
+  zoom: 1;
 
-    &:after {
-        clear: both;
-    }
+  &:after {
+    clear: both;
+  }
 
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-        line-height: 0;
-    }
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    line-height: 0;
+  }
 }

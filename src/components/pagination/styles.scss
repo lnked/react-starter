@@ -1,69 +1,69 @@
 @import 'styles/_global.scss';
 
 .nav {
-    font-size: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .btn,
 .ellipse {
-    margin: 0 5px;
-    height: 28px;
-    outline: 0;
-    border: 0;
-    line-height: 28px;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 28px;
+  margin: 0 5px;
+  height: 28px;
+  outline: 0;
+  border: 0;
+  line-height: 28px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 .ellipse {
-    color: $c-text-color;
+  color: $c-text-color;
 }
 
 .btn {
-    padding: 0 5px;
-    color: $c-jelly-bean;
-    cursor: pointer;
-    background: none;
+  padding: 0 5px;
+  color: $c-jelly-bean;
+  cursor: pointer;
+  background: none;
 
-    &.active {
-        color: $c-text-color;
-        font-weight: 500;
-    }
+  &.active {
+    color: $c-text-color;
+    font-weight: 500;
+  }
 }
 
 .control {
-    width: 28px;
-    height: 28px;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    font-size: 0;
-    cursor: pointer;
-    line-height: 28px;
-    text-align: center;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 10px 19px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  line-height: 28px;
+  text-align: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 10px 19px;
 
-    &.prev {
-        background-image: url(components/pagination/assets/prev.svg);
-    }
+  &:disabled {
+    cursor: default;
+    opacity: .4;
+    pointer-events: none;
+  }
 
-    &.next {
-        background-image: url(components/pagination/assets/next.svg);
-    }
+  &.prev {
+    background-image: url(components/pagination/assets/prev.svg);
+  }
 
-    &:disabled {
-        cursor: default;
-        opacity: .4;
-        pointer-events: none;
-    }
+  &.next {
+    background-image: url(components/pagination/assets/next.svg);
+  }
 }

@@ -1,27 +1,27 @@
 @mixin button-reset {
-    padding: 0;
-    border: 0;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 
-    &::-moz-focus-inner {
-        border: none;
-    }
+  &::-moz-focus-inner {
+    border: none;
+  }
 }
 
 %button {
-    @include button-reset;
-    margin: 0;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    overflow: visible;
-    position: relative;
-    user-select: none;
-    text-decoration: none;
-    display: inline-block;
-    appearance: none;
-    transition: background-color $a-time $a-func, border-color $a-time $a-func, color $a-time $a-func;
+  @include button-reset;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  overflow: visible;
+  position: relative;
+  user-select: none;
+  text-decoration: none;
+  display: inline-block;
+  appearance: none;
+  transition: background-color $a-time $a-func, border-color $a-time $a-func, color $a-time $a-func;
 }

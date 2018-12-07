@@ -1,71 +1,71 @@
 @import 'styles/_global.scss';
 
 .sandwich {
+  width: 42px;
+  height: 38px;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid $c-gainsboro;
+
+  @media (--tablet) {
     width: 42px;
     height: 38px;
-    outline: 0;
-    cursor: pointer;
-    position: relative;
-    background-color: #fff;
-    border: 1px solid $c-gainsboro;
-
-    @media (--tablet) {
-        width: 42px;
-        height: 38px;
-    }
+  }
 }
 
 .line {
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
-    transition: background-color .3s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color .3s ease-in-out;
+  margin-top: -1px;
+
+  @media (--tablet) {
     margin-top: -1px;
+  }
 
-    @media (--tablet) {
-        margin-top: -1px;
-    }
+  &:before,
+  &:after {
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    transition: transform .3s ease-in-out;
+  }
 
-    &,
-    &:before,
-    &:after {
-        width: 17px;
-        height: 1px;
-        position: absolute;
-        background-color: $c-cobalt;
+  &:before {
+    transform: translate3d(0, -5px, 0);
+  }
 
-        @media (--tablet) {
-            width: 17px;
-            height: 1px;
-        }
-    }
+  &:after {
+    transform: translate3d(0, 5px, 0);
+  }
 
-    &:before,
-    &:after {
-        content: '';
-        display: block;
-        left: 0;
-        top: 0;
-        transition: transform .3s ease-in-out;
-    }
+  &_open {
+    background-color: #fff;
 
     &:before {
-        transform: translate3d(0, -5px, 0);
+      transform: translateY(0) rotate(45deg);
     }
 
     &:after {
-        transform: translate3d(0, 5px, 0);
+      transform: translateY(0) rotate(-45deg);
     }
+  }
 
-    &_open {
-        background-color: #fff;
+  &,
+  &:before,
+  &:after {
+    position: absolute;
+    width: 17px;
+    height: 1px;
+    background-color: $c-cobalt;
 
-        &:before {
-            transform: translateY(0) rotate(45deg);
-        }
-
-        &:after {
-            transform: translateY(0) rotate(-45deg);
-        }
+    @media (--tablet) {
+      width: 17px;
+      height: 1px;
     }
+  }
 }

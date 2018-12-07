@@ -1,36 +1,36 @@
 @import 'styles/_global.scss';
 
 .navigation {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .group {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .link {
-    color: #fafafa;
-    font-size: 1.6rem;
-    line-height: 1;
-    margin: 0 30px;
-    text-decoration: underline;
+  color: #fafafa;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin: 0 30px;
+  text-decoration: underline;
 }
 
 .active {
-    color: #ffcc00;
-    text-decoration: none;
+  color: #fc0;
+  text-decoration: none;
 }
 
 .code-link {
-    color: #fafafa;
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 1;
-    margin-right: 15px;
+  color: #fafafa;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-right: 15px;
 }

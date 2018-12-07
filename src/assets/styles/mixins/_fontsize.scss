@@ -1,15 +1,16 @@
 @mixin fontsize($min_font, $max_font, $min_width: 480, $max_width: 1000) {
-    font-size: #{$min_font}px;
+  font-size: #{$min_font}px;
 
-    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
-        .navigation__link {
-            font-size: calc((#{$min_font} * 1px) + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / (#{$max_width} - #{$min_width})));
-        }
-    }
+  @media (min-width : #{$min_width}px) and (max-width : #{$max_width}px) {
 
-    @media (min-width: #{$max_width}px) {
-        font-size: #{$max_font}px;
+    .navigation__link {
+      font-size: calc((#{$min_font} * 1px) + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / (#{$max_width} - #{$min_width})));
     }
+  }
+
+  @media (min-width : #{$max_width}px) {
+    font-size: #{$max_font}px;
+  }
 }
 
 /*

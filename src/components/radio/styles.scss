@@ -1,70 +1,71 @@
 @import 'styles/_global.scss';
 
 .radio {
-    font-size: 0;
-    cursor: pointer;
-    color: $c-black;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    transition: color .1s ease;
+  font-size: 0;
+  cursor: pointer;
+  color: $c-black;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  transition: color .1s ease;
 }
 
 .input {
-    position: absolute;
-    left: -15px;
-    top: -15px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .label {
-    color: $c-black;
-    font-size: 1.4rem;
-    line-height: 1.15;
-    padding-left: 26px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+  color: $c-black;
+  font-size: 1.4rem;
+  line-height: 1.15;
+  padding-left: 26px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 
-    &:after,
-    &:before {
-        content: '';
-        position: absolute;
-    }
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+  }
 
-    &:before {
-        left: 0;
-        top: 0;
-        width: 16px;
-        height: 16px;
-        border-radius: 16px;
-        background-color: $c-white;
-        border: solid 1px $c-whisper;
-    }
+  &:before {
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: $c-white;
+    border: solid 1px $c-whisper;
+  }
 
-    &:after {
-        content: '';
-        width: 8px;
-        height: 8px;
-        position: absolute;
-        left: 4px;
-        top: 4px;
-        opacity: 0;
-        border-radius: 8px;
-        background-color: $c-cobalt;
-        transition: opacity $a-micro-time $a-func;
-    }
+  &:after {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+    border-radius: 8px;
+    background-color: $c-cobalt;
+    transition: opacity $a-micro-time $a-func;
+  }
 }
 
 .input:checked + .label {
-    &:before {
-        border-color: $c-cobalt;
-    }
 
-    &:after {
-        opacity: 1;
-    }
+  &:before {
+    border-color: $c-cobalt;
+  }
+
+  &:after {
+    opacity: 1;
+  }
 }

@@ -1,54 +1,54 @@
 @import 'styles/_global.scss';
 
 .dialog {
-    width: 400px;
-    position: relative;
-    border: 1px solid #ddd;
+  width: 400px;
+  position: relative;
+  border: 1px solid #ddd;
 }
 
 .close {
-    width: 16px;
-    height: 16px;
-    padding: 0;
-    color: $c-pink-swan;
-    border: 0;
-    outline: 0;
-    line-height: 1;
-    text-align: center;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  color: $c-pink-swan;
+  border: 0;
+  outline: 0;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
 
-    &:hover {
-        color: $c-blue;
-    }
+  &:hover {
+    color: $c-blue;
+  }
 }
 
 .icon {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
 
 .title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .body {
-    padding: 20px 15px;
+  padding: 20px 15px;
 }
 
 .footer {
-    padding: 15px;
-    text-align: center;
-    background-color: #efefef;
+  padding: 15px;
+  text-align: center;
+  background-color: #efefef;
 }
 
 .button {
-    margin: 0 10px;
+  margin: 0 10px;
 }

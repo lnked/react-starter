@@ -11,11 +11,55 @@
     ],
     "syntax": "scss",
     "rules": {
+        "order/properties-order": [
+          "position",
+          "z-index",
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "order/order": [
+          "declarations",
+          {
+            "type": "at-rule",
+            "name": "media"
+          },
+          {
+            "type": "rule",
+            "selector": "^&::(before|after)"
+          },
+          {
+            "type": "rule",
+            "selector": "^&:\\w"
+          },
+          {
+            "type": "rule",
+            "selector": "^&_"
+          },
+          {
+            "type": "rule",
+            "selector": "^."
+          }
+        ],
+        "at-rule-no-unknown": [ true, {
+          "ignoreAtRules": [
+            "if",
+            "else",
+            "each",
+            "media",
+            "extends",
+            "include",
+            "function",
+            "custom-media"
+          ]
+        }],
         "indentation": 2,
         "string-quotes": "single",
         "color-hex-case": "lower",
         "color-hex-length": "short",
         "selector-no-qualifying-type": true,
+        "selector-combinator-space-before": "always",
         "selector-combinator-space-after": "always",
         "selector-attribute-quotes": "always",
         "selector-attribute-operator-space-before": "always",

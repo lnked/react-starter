@@ -1,41 +1,41 @@
 @import 'styles/_global.scss';
 
 .content {
-    clear: both;
-    padding: 20px;
+  clear: both;
+  padding: 20px;
 }
 
 .product {
-    height: 100%;
+  height: 100%;
 
-    &_image {
-        max-width: 100%;
-        margin-bottom: 10px;
-    }
+  &_image {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 
-    &_title {
-        color: $c-blue;
-        font-size: 1.6rem;
-        line-height: 1.4;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
+  &_title {
+    color: $c-blue;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 
-    &_category {
-        font-size: 1.5rem;
-        line-height: 1.4;
-        color: $c-black;
-        opacity: 0.5;
-        margin-bottom: 10px;
-    }
+  &_category {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: $c-black;
+    opacity: .5;
+    margin-bottom: 10px;
+  }
 
-    &_price {
-        font-size: 1.4rem;
-    }
+  &_price {
+    font-size: 1.4rem;
+  }
 
-    &_footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+  &_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
