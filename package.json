@@ -293,7 +293,7 @@
     "tslint-loader": "3.6.0",
     "tslint-react": "3.6.0",
     "typed-css-modules-loader": "0.0.17",
-    "typescript": "3.2.1",
+    "typescript": "3.2.2",
     "typescript-plugin-styled-components": "1.0.0",
     "typescript-styled-plugin": "0.13.0",
     "typings-for-css-modules-loader": "1.7.0",
@@ -307,7 +307,7 @@
     "webpack-manifest-plugin": "2.0.4",
     "webpack-merge": "4.1.4",
     "webpack-notifier": "1.7.0",
-    "webpack-pwa-manifest": "3.8.0",
+    "webpack-pwa-manifest": "4.0.0",
     "webpack-visualizer-plugin": "0.1.11",
     "xml-loader": "1.2.1"
   }
