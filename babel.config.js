@@ -86,7 +86,9 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
     'babel-plugin-styled-components',
     {
       ssr: true,
+      pure: true,
       minify: false,
+      fileName: false,
       preprocess: true,
       uglifyPure: false,
       displayName: false,
