@@ -7,14 +7,12 @@ $max_font: 24;
 :root { font-size: #{$min_font}px; }
 
 @media (min-width : #{$min_width}px) and (max-width : #{$max_width}px) {
-
   :root {
     font-size: calc(#{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width})));
   }
 }
 
 @media (min-width : #{$max_width}px) {
-
   :root {
     font-size: #{$max_font}px;
   }

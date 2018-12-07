@@ -1,5 +1,4 @@
 :global {
-
   .fade-exit,
   .fade-enter {
     transition: opacity .3s ease-in-out,
@@ -37,14 +36,12 @@
 }
 
 @keyframes SVGRotate {
-
   to {
     stroke-dashoffset: 0;
   }
 }
 
 @keyframes swing {
-
   15% {
     transform: translateX(5px);
   }

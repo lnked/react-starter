@@ -2,7 +2,6 @@
   font-size: #{$min_font}px;
 
   @media (min-width : #{$min_width}px) and (max-width : #{$max_width}px) {
-
     .navigation__link {
       font-size: calc((#{$min_font} * 1px) + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / (#{$max_width} - #{$min_width})));
     }

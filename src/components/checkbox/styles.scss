@@ -45,7 +45,6 @@ $checkbox-normal-margin:    10px;
 }
 
 .status {
-
   &:after,
   &:before {
     content: '';
@@ -71,7 +70,6 @@ $checkbox-normal-margin:    10px;
   }
 
   &_dark {
-
     &:before {
       border-color: #ccb661;
     }
@@ -84,7 +82,6 @@ $checkbox-normal-margin:    10px;
 }
 
 .checkbox_small > .status {
-
   &:before {
     width: $checkbox-small-size;
     height: $checkbox-small-size;
@@ -105,7 +102,6 @@ $checkbox-normal-margin:    10px;
 }
 
 .checkbox_normal > .status {
-
   &:before {
     width: $checkbox-normal-size;
     height: $checkbox-normal-size;
@@ -121,7 +117,6 @@ $checkbox-normal-margin:    10px;
 }
 
 .input:checked + .status {
-
   &:after {
     opacity: 1;
   }

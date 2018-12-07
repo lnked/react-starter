@@ -27,6 +27,11 @@
   transition: border-color $a-time $a-func, color $a-time $a-func;
   border-bottom: 1px solid $c-input-border;
 
+  &:disabled {
+    opacity: .4;
+    cursor: default;
+  }
+
   &:placeholder {
     color: $c-text-color;
     opacity: 1;
@@ -37,11 +42,6 @@
   &:focus:placeholder {
     color: transparent;
     opacity: 0;
-  }
-
-  &:disabled {
-    opacity: .4;
-    cursor: default;
   }
 
   &_input {

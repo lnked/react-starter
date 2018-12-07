@@ -22,15 +22,16 @@
 //
 // =========================================================================
 
-@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+/* stylelint-disable */
+@mixin fluid-type($properties, $min-vw, $max-vw, $min_value, $max_value) {
   @each $property in $properties {
-    #{$property}: $min-value;
+    #{$property}: $min_value;
   }
 
   @media (min-width : $min-vw) {
     @each $property in $properties {
       #{$property}: calc(
-        #{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit(
+        #{$min_value} + #{strip-unit($max_value - $min_value)} * (100vw - #{$min-vw}) / #{strip-unit(
           $max-vw - $min-vw
         )}
       );
@@ -39,7 +40,7 @@
 
   @media (min-width : $max-vw) {
     @each $property in $properties {
-      #{$property}: $max-value;
+      #{$property}: $max_value;
     }
   }
 }

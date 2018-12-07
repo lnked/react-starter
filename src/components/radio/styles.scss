@@ -60,7 +60,6 @@
 }
 
 .input:checked + .label {
-
   &:before {
     border-color: $c-cobalt;
   }

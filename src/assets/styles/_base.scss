@@ -67,12 +67,11 @@ template {
   display: none;
 }
 
-[role = button] {
+[role = 'button'] {
   cursor: pointer;
 }
 
 :global {
-
   .layout-wrapper {
     width: 100%;
     min-height: 100%;
