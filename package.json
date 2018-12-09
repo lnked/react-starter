@@ -205,7 +205,7 @@
     "lint-staged": "8.1.0",
     "markdown-loader": "4.0.0",
     "marked": "0.5.2",
-    "mini-css-extract-plugin": "0.4.5",
+    "mini-css-extract-plugin": "0.5.0",
     "mobx-react-devtools": "6.0.3",
     "node-sass": "4.11.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
