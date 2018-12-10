@@ -6361,10 +6361,10 @@ har-validator@~5.1.0:
     ajv "^6.5.5"
     har-schema "^2.0.0"
 
-hard-source-webpack-plugin@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/hard-source-webpack-plugin/-/hard-source-webpack-plugin-0.12.0.tgz#ea21f0407538fcb62f6995371541baab0a5f679e"
-  integrity sha512-xELLABhB3WtdVxDZ4iku8W5Xi0Tq5w+1fOXrSWjeML90uWikykkiQmTV6Lk0MKC5uFEKUZcSuTY5BZS+8ZXr8A==
+hard-source-webpack-plugin@0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/hard-source-webpack-plugin/-/hard-source-webpack-plugin-0.13.0.tgz#63c7b7077c9d2dc64e09ec947569de42f9923479"
+  integrity sha512-g7fIXx+i7NvU4ovkceajWQKEYMx1e76ZDtelRW2Y724BH1ok+dOwFpEicWAJWYcnfWpLqrExh1jOp6amNpQwjQ==
   dependencies:
     chalk "^2.4.1"
     find-cache-dir "^2.0.0"
@@ -6374,6 +6374,7 @@ hard-source-webpack-plugin@0.12.0:
     node-object-hash "^1.2.0"
     pkg-dir "^3.0.0"
     rimraf "^2.6.2"
+    semver "^5.6.0"
     tapable "^1.0.0-beta.5"
     webpack-sources "^1.0.1"
     write-json-file "^2.3.0"
@@ -15693,10 +15694,10 @@ webpack-manifest-plugin@2.0.4:
     lodash ">=3.5 <5"
     tapable "^1.0.0"
 
-webpack-merge@4.1.4:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.4.tgz#0fde38eabf2d5fd85251c24a5a8c48f8a3f4eb7b"
-  integrity sha512-TmSe1HZKeOPey3oy1Ov2iS3guIZjWvMT2BBJDzzT5jScHTjVC3mpjJofgueEzaEd6ibhxRDD6MIblDr8tzh8iQ==
+webpack-merge@4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.5.tgz#2be31e846c20767d1bef56bdca64c328a681190a"
+  integrity sha512-sVcM+MMJv6DO0C0GLLltx8mUlGMKXE0zBsuMqZ9jz2X9gsekALw6Rs0cAfTWc97VuWS6NpVUa78959zANnMMLQ==
   dependencies:
     lodash "^4.17.5"
 
