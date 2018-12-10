@@ -31,12 +31,13 @@ const usesConfig = []
 cssConfig.push({
   loader: 'css-loader',
   options: {
-    importLoaders: 2,
+    url: false,
+    import: true,
     modules: true,
+    importLoaders: 2,
     camelCase: true,
     sourceMap: define.rs_sourceMap,
-    minimize: define.rs_production,
-    localIdentName: define.rs_development ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:6]',
+    localIdentName: define.rs_classname,
   },
 })
 

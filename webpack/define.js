@@ -54,6 +54,7 @@ module.exports = {
     rs_regexp_medias: /\.(mp4|webm|wav|avi|mp3|mov|m4a|a{2}c|oga)$/i,
     rs_regexp_styles: /\.(les{2}|styl|(sa|sc|c|s)s{2})$/i,
     rs_regexp_images: /\.(?:ico|bmp|gif|png|jpe?g|webp|svg)$/i, // /.*\.(jpe?g|png|gif|webp|svg)$/i,
+    rs_classname: isDevelopment ? '[path][name]__[local]--[hash:base64:5]' : '[sha1:hash:hex:6]',
     rs_production: isProduction,
     rs_development: isDevelopment,
     rs_base_path: isProduction ? '/assets/' : '/',
