@@ -6,7 +6,7 @@ import { classes } from 'helpers'
 import {
   Locale,
   Navigation,
-} from 'fragments'
+} from './components'
 
 const cx = classes.bind(css)
 

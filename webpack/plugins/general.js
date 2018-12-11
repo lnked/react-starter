@@ -18,6 +18,7 @@ const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const SizePlugin = require('size-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 
 const HappyPack = require('happypack')
 
@@ -42,6 +43,15 @@ const plugins = [
     }),
     __DEV__: define.rs_development,
     __PROD__: define.rs_production,
+  }),
+
+  new CircularDependencyPlugin({
+    // exclude detection of files based on a RegExp
+    exclude: /a\.js|node_modules/,
+    // add errors to webpack instead of warnings
+    failOnError: true,
+    // set the current working directory for displaying module paths
+    cwd: process.cwd(),
   }),
 
   // new webpack.DllReferencePlugin({

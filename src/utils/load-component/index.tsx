@@ -1,6 +1,6 @@
 import loadable from 'loadable-components'
 
-import { Loading } from 'components'
+import { Loading } from 'fragments'
 
 // export const Home = loadable(() => import('./Home'), {
 //     LoadingComponent: (props) => <div>Loading...</div>,

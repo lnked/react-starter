@@ -1,4 +1,4 @@
-import { isUndefined } from 'helpers'
+import { isUndefined } from '../predicts/is-undefined'
 
 export const trim = (str: string): string =>
   str && str.toString().replace(/^\s+|\s+$/g, '')

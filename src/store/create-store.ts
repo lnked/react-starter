@@ -5,7 +5,7 @@ import { enableLogging } from 'mobx-logger'
 import {
   UiStore,
   AppStore,
-} from 'store'
+} from './providers'
 
 import {
   STORE_UI,
