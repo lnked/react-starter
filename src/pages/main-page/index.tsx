@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-import { Icon } from 'components'
+import { Icon, Button } from 'components'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
 
@@ -36,8 +36,8 @@ class MainPage extends React.Component<any, any> {
       <div className={css.content}>
         <div className={css.location}>
           <span>Current pathname: {location.pathname}</span>
-          <button onClick={() => push('/test')}>Change url</button>
-          <button onClick={() => goBack()}>Go Back</button>
+          <Button handleClick={() => push('/test')}>Change url</Button>
+          <Button handleClick={() => goBack()}>Go Back</Button>
         </div>
 
         <p className={css.description}>Отличный сборщик рекат проектов</p>
