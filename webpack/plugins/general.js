@@ -17,6 +17,7 @@ const CssUrlRelativePlugin = require('css-url-relative-plugin')
 const HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin2')
 const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
+const SizePlugin = require('size-plugin');
 
 const HappyPack = require('happypack')
 
@@ -30,6 +31,8 @@ const HappyPack = require('happypack')
 
 const plugins = [
   new ProgressBarPlugin(),
+
+  new SizePlugin(),
 
   new webpack.DefinePlugin({
     'process.env': Object.assign(formatter(environment, true), {
