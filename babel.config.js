@@ -106,7 +106,7 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
   plugins.push(production && '@babel/plugin-transform-react-inline-elements')
   plugins.push(production && '@babel/plugin-transform-react-constant-elements')
 
-  plugins.push(test && 'transform-es2015-modules-commonjs')
+  plugins.push((test || production) && 'transform-es2015-modules-commonjs')
 
   imports.map(item => {
 

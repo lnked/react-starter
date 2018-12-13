@@ -1,131 +1,133 @@
 {
-    "buildOnSave": false,
-    "compileOnSave": false,
-    "compilerOptions": {
-        "target": "esnext",
-        "reactNamespace": "",
-        "baseUrl": "./src",
-        "outDir": "./dist",
-        "jsx": "react",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "strict": true,
-        "watch": true,
-        "pretty": true,
-        "noEmit": true,
-        "allowJs": false,
-        "sourceMap": true,
-        "declaration": true,
-        "alwaysStrict": true,
-        "noImplicitAny": true,
-        "importHelpers": true,
-        "noEmitHelpers": true,
-        "noUnusedLocals": true,
-        "noImplicitThis": true,
-        "removeComments": true,
-        "strictNullChecks": true,
-        "noImplicitReturns": true,
-        "noUnusedParameters": true,
-        "preserveConstEnums": true,
-        "skipDefaultLibCheck": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "noFallthroughCasesInSwitch": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "lib": [
-            "dom",
-            "es6"
-        ],
-        "types": [
-            "react",
-            "react-dom",
-            "react-router",
-            "react-router-dom"
-        ],
-        "typeRoots": [
-            "node_modules/@types",
-            "./src/typings/**/*"
-        ],
-        "paths": {
-            "*": [
-                "./*"
-            ],
-            "hocs/*": [
-                "./hocs/*"
-            ],
-            "pages/*": [
-                "./pages/*"
-            ],
-            "utils/*": [
-                "./utils/*"
-            ],
-            "config/*": [
-                "./config/*"
-            ],
-            "assets/*": [
-                "./assets/*"
-            ],
-            "typings/*": [
-                "./typings/*"
-            ],
-            "layouts/*": [
-                "./layouts/*"
-            ],
-            "settings/*": [
-                "./settings/*"
-            ],
-            "fragments/*": [
-                "./fragments/*"
-            ],
-            "components/*": [
-                "./components/*"
-            ],
-            "variables/*": [
-                "./variables/*"
-            ],
-            "styles/*": [
-                "./assets/styles/*"
-            ],
-            "images/*": [
-                "./assets/images/*"
-            ],
-            "scripts/*": [
-                "./assets/scripts/*"
-            ],
-            "svgstore/*": [
-                "./assets/svgstore/*"
-            ],
-        }
-    },
-    "include": [
-        "./src/**/*.ts",
-        "./src/**/*.tsx",
-        "./src/typings/*.ts"
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "reactNamespace": "",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "watch": true,
+    "pretty": true,
+    "noEmit": true,
+    "allowJs": false,
+    "sourceMap": true,
+    "declaration": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "skipDefaultLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "es2016",
+      "dom",
+      "es6",
+      "es5"
     ],
-    "exclude": [
-        "node_modules",
-        "webpack",
-        "dist",
-        "lib",
-        "es"
+    "types": [
+      "react",
+      "react-dom",
+      "react-router",
+      "react-router-dom"
     ],
-    "plugins": [
-        {
-            "name": "typescript-styled-plugin",
-            "validate": false,
-            "lint": {
-                "vendorPrefix": "error",
-                "zeroUnits": "ignore",
-                "important": "warning"
-            },
-            "tags": [
-                "styled",
-                "css",
-                "sty"
-            ]
-        }
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/typings/**/*"
     ],
-    "awesomeTypescriptLoaderOptions": {
-        "silent": true
+    "paths": {
+      "*": [
+        "./*"
+      ],
+      "hocs/*": [
+        "./hocs/*"
+      ],
+      "pages/*": [
+        "./pages/*"
+      ],
+      "utils/*": [
+        "./utils/*"
+      ],
+      "config/*": [
+        "./config/*"
+      ],
+      "assets/*": [
+        "./assets/*"
+      ],
+      "typings/*": [
+        "./typings/*"
+      ],
+      "layouts/*": [
+        "./layouts/*"
+      ],
+      "settings/*": [
+        "./settings/*"
+      ],
+      "fragments/*": [
+        "./fragments/*"
+      ],
+      "components/*": [
+        "./components/*"
+      ],
+      "variables/*": [
+        "./variables/*"
+      ],
+      "styles/*": [
+        "./assets/styles/*"
+      ],
+      "images/*": [
+        "./assets/images/*"
+      ],
+      "scripts/*": [
+        "./assets/scripts/*"
+      ],
+      "svgstore/*": [
+        "./assets/svgstore/*"
+      ],
     }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/typings/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "webpack",
+    "dist",
+    "lib",
+    "es"
+  ],
+  "plugins": [
+    {
+      "name": "typescript-styled-plugin",
+      "validate": false,
+      "lint": {
+        "vendorPrefix": "error",
+        "zeroUnits": "ignore",
+        "important": "warning"
+      },
+      "tags": [
+        "styled",
+        "css",
+        "sty"
+      ]
+    }
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "silent": true
+  }
 }
