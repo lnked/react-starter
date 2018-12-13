@@ -20,7 +20,6 @@ const imports = [
 // //////////////   PRESETS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
 const getPresets = ({ loose, useBuiltIns, production }) => {
-
   const presets = []
   presets.push([
     '@babel/preset-env',
@@ -41,14 +40,12 @@ const getPresets = ({ loose, useBuiltIns, production }) => {
   presets.push('@babel/preset-typescript')
 
   return presets
-
 }
 
 // ///////////////////////////////////////////////////////////
 // //////////////   PLUGINS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
 const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
-
   const plugins = []
 
   plugins.push(['module-resolver', {
@@ -109,7 +106,6 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
   plugins.push((test || production) && 'transform-es2015-modules-commonjs')
 
   imports.map(item => {
-
     plugins.push([
       'import',
       {
@@ -119,18 +115,15 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
       },
       item.libraryName,
     ])
-
   })
 
   return plugins
-
 }
 
 // /////////////////////////////////////////////////////////////
 // ////////////////   IGNORE   /////////////////////////////////
 // /////////////////////////////////////////////////////////////
 const getIgnore = ({ test, production }) => {
-
   const ignore = []
 
   ignore.push('packages/*/test/fixtures')
@@ -143,11 +136,9 @@ const getIgnore = ({ test, production }) => {
   // ignore.push('packages/babel-preset-env-standalone/babel-preset-env.js')
 
   return ignore
-
 }
 
 module.exports = function (api) {
-
   const test = api.env('test')
   const production = api.env('production')
   const development = api.env('development')
@@ -173,5 +164,4 @@ module.exports = function (api) {
     plugins: plugins.filter(Boolean),
     overrides: overrides.filter(Boolean),
   }
-
 }
