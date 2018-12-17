@@ -252,6 +252,7 @@
     "postcss-reduce-idents": "4.0.1",
     "postcss-reduce-transforms": "4.0.1",
     "postcss-reporter": "6.0.0",
+    "postcss-safe-parser": "4.0.1",
     "postcss-selector-matches": "4.0.0",
     "postcss-selector-not": "4.0.0",
     "postcss-short-spacing": "4.0.0",
