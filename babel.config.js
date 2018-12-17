@@ -33,7 +33,11 @@ const getPresets = ({ loose, useBuiltIns, production }) => {
       useBuiltIns,
       shippedProposals: true,
       forceAllTransforms: production,
-      exclude: [ 'web.dom.iterable' ],
+      exclude: [
+        'web.dom.iterable',
+        'es6.regexp.to-string',
+        'es6.number.constructor',
+      ],
     },
   ])
   presets.push('@babel/preset-react')
