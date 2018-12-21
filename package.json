@@ -152,7 +152,7 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.21",
     "bower-webpack-plugin": "0.1.9",
     "brotli-gzip-webpack-plugin": "0.5.0",
-    "cache-loader": "1.2.5",
+    "cache-loader": "2.0.0",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
     "circular-dependency-plugin": "5.0.2",
