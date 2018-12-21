@@ -6,12 +6,12 @@
 
 // // module.exports = function render(initialState) {
 // export const render = () => {
-//     // const store = configureStore(initialState)
-//     const content = renderToString(
-//         // <Provider store={store}>
-//         <App />
-//         // </Provider>
-//     )
+//   // const store = configureStore(initialState)
+//   const content = renderToString(
+//     // <Provider store={store}>
+//     <App />
+//     // </Provider>
+//   )
 
 //     // const preloadedState = store.getState()
 //     // return { content, preloadedState }
