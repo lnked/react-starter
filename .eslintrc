@@ -3,9 +3,12 @@
   "parser": "babel-eslint",
   "extends": [
     "standard",
+    "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:promise/recommended",
     "plugin:you-dont-need-momentjs/recommended",
     "plugin:jest/recommended",
     "jest-enzyme"
@@ -13,6 +16,7 @@
   "plugins": [
     "react",
     "jest",
+    "compat",
     "import",
     "jsx-a11y",
     "security",
@@ -83,9 +87,11 @@
       ".css",
       ".scss",
       ".scss.d.ts"
-    ]
+    ],
+    "polyfills": ["fetch"]
   },
   "rules": {
+    "compat/compat": "warn",
     "standard/no-callback-literal": [
       "off",
       [
@@ -146,10 +152,6 @@
         "allowChildren": false
       }
     ],
-    "sonarjs/cognitive-complexity": [
-      "error",
-      30
-    ],
     "no-loops/no-loops": "error",
     "no-use-extend-native/no-use-extend-native": "error",
     "no-debugger": "error",
@@ -166,6 +168,7 @@
     "allowTernary": true,
     "no-switch-case-fall-through": true,
     "optimize-regex/optimize-regex": "warn",
+    "sonarjs/cognitive-complexity": ["error", 30],
     "immutable/no-let": "off",
     "immutable/no-this": "off",
     "immutable/no-mutation": "off",
