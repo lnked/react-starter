@@ -16,8 +16,8 @@
   "plugins": [
     "react",
     "jest",
-    "compat",
     "import",
+    "compat",
     "jsx-a11y",
     "security",
     "immutable",
@@ -130,7 +130,15 @@
       }
     ],
     "jsx-a11y/click-events-have-key-events": "off",
-    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "import/no-unresolved": [2, {
+      "caseSensitive": false,
+      "commonjs": true,
+      "amd": true
+    }],
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
     "import/no-extraneous-dependencies": [
       "error",
       {
