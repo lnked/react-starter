@@ -41,6 +41,7 @@ tsConfig.push({
 const rules = [
   {
     enforce: 'pre',
+    test: define.rs_sourceMap,
     test: define.rs_regexp_scripts,
     options: {
       fix: false,
@@ -59,7 +60,7 @@ const rules = [
   },
   {
     enforce: 'pre',
-    test: /\.([jt])sx?$/,
+    test: define.rs_regexp_scripts,
     loader: 'source-map-loader',
     exclude: /(node_modules|bower_components)/,
   },

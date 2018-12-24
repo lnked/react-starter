@@ -1,5 +1,3 @@
-const path = require('path')
-const glob = require('glob')
 const webpack = require('webpack')
 const define = require('../define')
 
@@ -9,6 +7,10 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin')
 const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
 const plugins = [
+  new webpack.SourceMapDevToolPlugin({
+    filename: '[name].js.map'
+  }),
+
   new WebpackChunkHash(),
 
   new webpack.optimize.ModuleConcatenationPlugin(),

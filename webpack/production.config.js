@@ -13,7 +13,7 @@ const minimizer = require('./minimizer')
 module.exports = webpackMerge(config, {
     mode: 'production',
 
-    // devtool: 'cheap-source-map',
+    devtool: 'cheap-module-source-map',
 
     bail: true,
 

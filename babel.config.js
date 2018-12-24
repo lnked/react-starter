@@ -104,8 +104,8 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
   plugins.push(production && 'transform-react-pure-class-to-function')
   plugins.push(production && 'transform-react-remove-prop-types')
 
-  plugins.push(production && '@babel/plugin-transform-react-inline-elements')
   plugins.push(production && '@babel/plugin-transform-react-constant-elements')
+  plugins.push(production && '@babel/plugin-transform-react-inline-elements')
 
   plugins.push((test || production) && 'transform-es2015-modules-commonjs')
 
@@ -157,11 +157,10 @@ module.exports = function (api) {
 
   const overrides = []
 
-  const sourceMaps = development
+  const sourceMaps = production
 
   return {
     sourceMaps,
-    sourceType: 'module',
     comments: false,
     ignore: ignore.filter(Boolean),
     presets: presets.filter(Boolean),
