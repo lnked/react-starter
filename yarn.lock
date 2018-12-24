@@ -5130,15 +5130,15 @@ eslint-plugin-no-loops@0.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-no-loops/-/eslint-plugin-no-loops-0.3.0.tgz#e81fecb4eaaf494a926d9caba9a7cd84d1fede7d"
   integrity sha1-6B/stOqvSUqSbZyrqafNhNH+3n0=
 
-eslint-plugin-no-use-extend-native@0.3.12:
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-no-use-extend-native/-/eslint-plugin-no-use-extend-native-0.3.12.tgz#3ad9a00c2df23b5d7f7f6be91550985a4ab701ea"
-  integrity sha1-OtmgDC3yO11/f2vpFVCYWkq3Aeo=
+eslint-plugin-no-use-extend-native@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-no-use-extend-native/-/eslint-plugin-no-use-extend-native-0.4.0.tgz#ececdf248a2336555a554f7b1217a612240c4eaf"
+  integrity sha512-9W2747CwC7aTJknLKY6ftdzj3AZz8DSaa64zONOMIemxH7YRr0+hqrvsNtHK/v9DusPuMxM9y9hBnfHwzKFmww==
   dependencies:
     is-get-set-prop "^1.0.0"
     is-js-type "^2.0.0"
     is-obj-prop "^1.0.0"
-    is-proto-prop "^1.0.0"
+    is-proto-prop "^2.0.0"
 
 eslint-plugin-node@8.0.0:
   version "8.0.0"
@@ -7801,13 +7801,13 @@ is-promise@^2.0.0, is-promise@^2.1.0:
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
   integrity sha1-eaKp7OfwlugPNtKy87wWwf9L8/o=
 
-is-proto-prop@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-proto-prop/-/is-proto-prop-1.0.1.tgz#c8a0455c28fe38c8843d0c22af6f95f01ed4abc4"
-  integrity sha512-dkmgrJB7nfJhH1ySK1/Qn9xLPMv3ZNlPSAPoyUseD6DQzBF6YmbgQnoyy9OM8derNUlDVJlUGdCEhYbcCPfN5A==
+is-proto-prop@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-proto-prop/-/is-proto-prop-2.0.0.tgz#99ab2863462e44090fd083efd1929058f9d935e1"
+  integrity sha512-jl3NbQ/fGLv5Jhan4uX+Ge9ohnemqyblWVVCpAvtTQzNFvV2xhJq+esnkIbYQ9F1nITXoLfDDQLp7LBw/zzncg==
   dependencies:
     lowercase-keys "^1.0.0"
-    proto-props "^1.1.0"
+    proto-props "^2.0.0"
 
 is-redirect@^1.0.0:
   version "1.0.0"
@@ -12424,10 +12424,10 @@ proto-list@~1.2.1:
   resolved "https://registry.yarnpkg.com/proto-list/-/proto-list-1.2.4.tgz#212d5bfe1318306a420f6402b8e26ff39647a849"
   integrity sha1-IS1b/hMYMGpCD2QCuOJv85ZHqEk=
 
-proto-props@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/proto-props/-/proto-props-1.1.0.tgz#e2606581dd24aa22398aeeeb628fc08e2ec89c91"
-  integrity sha512-A377CdhQBRjYVsSWrm2jo0KJa+N/IBew6lGLm0pdzZjtVqlUT23wEqg7q1/bk5gBEgVoBBbaErZY+UUNrcKOug==
+proto-props@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/proto-props/-/proto-props-2.0.0.tgz#8ac6e6dec658545815c623a3bc81580deda9a181"
+  integrity sha512-2yma2tog9VaRZY2mn3Wq51uiSW4NcPYT1cQdBagwyrznrilKSZwIZ0UG3ZPL/mx+axEns0hE35T5ufOYZXEnBQ==
 
 proxy-addr@~2.0.4:
   version "2.0.4"
@@ -12761,10 +12761,10 @@ react-datepicker@2.0.0:
     react-onclickoutside "^6.7.1"
     react-popper "^1.0.2"
 
-react-dev-utils@6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-6.1.1.tgz#a07e3e8923c4609d9f27e5af5207e3ca20724895"
-  integrity sha512-ThbJ86coVd6wV/QiTo8klDTvdAJ1WsFCGQN07+UkN+QN9CtCSsl/+YuDJToKGeG8X4j9HMGXNKbk2QhPAZr43w==
+react-dev-utils@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-7.0.0.tgz#b99d87aea260294bf7ea087cdbd6b099fac3eb27"
+  integrity sha512-Rlt+rbsSIrv5h3jr8Z6I0fOIts/UxpPu0nB4wxYlpO48vpdnG9tCshOJGmaYjGfNBSNhaBpisIAGhK6c8X2/kw==
   dependencies:
     "@babel/code-frame" "7.0.0"
     address "1.0.3"
@@ -12784,7 +12784,7 @@ react-dev-utils@6.1.1:
     loader-utils "1.1.0"
     opn "5.4.0"
     pkg-up "2.0.0"
-    react-error-overlay "^5.1.0"
+    react-error-overlay "^5.1.1"
     recursive-readdir "2.2.2"
     shell-quote "1.6.1"
     sockjs-client "1.1.5"
@@ -12806,10 +12806,10 @@ react-dom@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.9.tgz#05064a3dcf0fb1880a3b2bfc9d58c55d8d9f6293"
   integrity sha1-BQZKPc8PsYgKOyv8nVjFXY2fYpM=
 
-react-error-overlay@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.0.tgz#c516995a5652e7bfbed8b497910d5280df74a7e8"
-  integrity sha512-akMy/BQT5m1J3iJIHkSb4qycq2wzllWsmmolaaFVnb+LPV9cIJ/nTud40ZsiiT0H3P+/wXIdbjx2fzF61OaeOQ==
+react-error-overlay@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.1.tgz#56f0439f001ff3588da0f479a86482ccb1e708cb"
+  integrity sha512-gJcOyak5ri9mzhpFObSAkCqNNBCVZE8LaR/mX37agULgSL0dobgX11NVSIetvNzhHMkr6CIqV0xiutvvcjBtkw==
 
 react-helmet@5.2.0:
   version "5.2.0"
