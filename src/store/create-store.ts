@@ -8,12 +8,11 @@ import {
 } from './providers'
 
 import {
+  environment,
   STORE_UI,
   STORE_APP,
   STORE_ROUTER,
-} from 'settings/constants'
-
-import { environment } from 'settings/environment'
+} from 'settings'
 
 configure({
   enforceActions: 'observed', // 'never' | 'always' | 'observed'
@@ -27,11 +26,15 @@ enableLogging({
   compute: false,
 })
 
-export const createStore = (routingStore: any, initialState: any) => {
+export const createStore = (routingStore: any) => {
+  const initialState = (window && window.__INITIAL_STATE__) || {}
+
   const { ui, app } = initialState
 
   const uiStore = new UiStore(ui)
   const appStore = new AppStore(app)
+
+  Reflect.deleteProperty(window, '__INITIAL_STATE__')
 
   return {
     [STORE_UI]: uiStore,

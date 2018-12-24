@@ -5,7 +5,7 @@ import { classes } from 'helpers'
 
 import { Icon, Button } from 'components'
 
-import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings/constants'
+import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings'
 
 import { inject, observer } from 'mobx-react'
 

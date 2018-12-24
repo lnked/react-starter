@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { environment } from 'settings/environment'
+import { environment } from 'settings'
 
 export function renderDevTools (noPanel = false) {
   if (environment.development) {

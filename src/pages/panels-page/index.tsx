@@ -5,7 +5,7 @@ import { Group } from 'fragments'
 
 import { Card, CircularProgress } from 'components'
 
-import { STORE_UI, STORE_APP } from 'settings/constants'
+import { STORE_UI, STORE_APP } from 'settings'
 
 import { inject, observer } from 'mobx-react'
 

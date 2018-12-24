@@ -18,7 +18,7 @@ import {
   STORE_UI,
   STORE_APP,
   STORE_ROUTER,
-} from 'settings/constants'
+} from 'settings'
 
 import { inject, observer } from 'mobx-react'
 
