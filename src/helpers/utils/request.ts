@@ -8,7 +8,7 @@ const headers: any = {
   'Content-Type': 'application/json',
 }
 
-export const request: any = (options?: any = {}): any => {
+export const request: any = (options: any = { noToken: false }): any => {
   const noToken = Object.keys(options).length && options.hasOwnProperty('noToken') && options.noToken
 
   if (!noToken) {
@@ -19,14 +19,8 @@ export const request: any = (options?: any = {}): any => {
     }
   }
 
-  const config: any = {
+  return axios.create({
     baseURL: API_URL,
     headers,
-  }
-
-  if (options) {}
-
-  const instance = axios.create(config)
-
-  return instance
+  })
 }

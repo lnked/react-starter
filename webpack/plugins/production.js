@@ -20,7 +20,6 @@ const plugins = [
   }),
 
   new webpack.IgnorePlugin(/^(react-dev-utils|mobx-react-devtools)$/),
-
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
   new WebpackManifestPlugin({
