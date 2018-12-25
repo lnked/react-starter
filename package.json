@@ -85,7 +85,6 @@
     "port": "3000"
   },
   "dependencies": {
-    "@babel/polyfill": "7.2.5",
     "axios": "0.18.0",
     "core-js": "2.6.1",
     "dateformat": "3.0.3",

@@ -19,11 +19,9 @@ const polyfills = []
  * BROWSER POLYFILLS
  */
 
-// polyfills.push('@babel/polyfill');
-
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 polyfills.push('core-js/es6/symbol'); // 'es6-symbol/implement'
-// polyfills.push('core-js/es6/object');
+polyfills.push('core-js/es6/object');
 // polyfills.push('core-js/es6/function');
 // polyfills.push('core-js/es6/parse-int');
 // polyfills.push('core-js/es6/parse-float');
@@ -33,15 +31,18 @@ polyfills.push('core-js/es6/symbol'); // 'es6-symbol/implement'
 // polyfills.push('core-js/es6/date');
 // polyfills.push('core-js/es6/array');
 // polyfills.push('core-js/es6/regexp');
-// polyfills.push('core-js/es6/map');
+polyfills.push('core-js/es6/map');
 // polyfills.push('core-js/es6/weak-map');
 // polyfills.push('core-js/es6/set');
+polyfills.push('core-js/es6/promise');
+
+polyfills.push('core-js/fn/array/includes');
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js');  // Run `npm install --save classlist.js`.
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-// polyfills.push('core-js/es6/reflect');
+polyfills.push('core-js/es6/reflect');
 
 // if (typeof Promise === 'undefined') {
 //     // Rejection tracking prevents a common issue where React gets into an
@@ -53,7 +54,7 @@ polyfills.push('core-js/es6/symbol'); // 'es6-symbol/implement'
 
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT, you can remove.
-// polyfills.push('core-js/es7/reflect');
+polyfills.push('core-js/es7/reflect');
 
 // fetch() polyfill for making API calls.
 // polyfills.push('whatwg-fetch');
