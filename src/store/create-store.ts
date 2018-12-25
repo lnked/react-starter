@@ -27,7 +27,7 @@ enableLogging({
 })
 
 export const createStore = (routingStore: any) => {
-  const initialState = (window && window.__INITIAL_STATE__) || {}
+  const initialState = window && window.__INITIAL_STATE__ || {}
 
   const { ui, app } = initialState
 

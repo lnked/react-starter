@@ -15,6 +15,11 @@ export class UiStore {
     return this.type
   }
 
+  @computed
+  get getState () {
+    return []
+  }
+
   @action
   set (type: string) {
     this.type = type

@@ -1,4 +1,4 @@
-import { observable, action, extendObservable } from 'mobx'
+import { observable, action, computed, extendObservable } from 'mobx'
 
 export class AppStore {
 
@@ -29,6 +29,11 @@ export class AppStore {
       // extendObservable(this, {...AppStore.defaultState, ...initialState})
       extendObservable(this, initialState)
     }
+  }
+
+  @computed
+  get getState () {
+    return []
   }
 
   // async loadAll () {

@@ -21,7 +21,7 @@
 // }
 
 declare interface RefObject<T> {
-    readonly current: T | null
+  readonly current: T | null
 }
 
 declare interface HTMLInputElement {
@@ -47,36 +47,36 @@ declare interface HTMLInputElement {
 // type EventHandler<E extends SyntheticEvent<any>> = (event: E) => void;
 
 type Route = {
-    path: string;
-    component: any;
-    exact?: boolean;
-    title?: string;
-    status?: number;
-    robots?: string;
-    keywords?: string;
-    description?: string;
-    statusCode?: number;
-    rest?: any;
+  path: string;
+  component: any;
+  exact?: boolean;
+  title?: string;
+  status?: number;
+  robots?: string;
+  keywords?: string;
+  description?: string;
+  statusCode?: number;
+  rest?: any;
 }
 
 declare interface NodeModule {
-    hot: {
-        accept(dependencies: string[], callback: (updatedDependencies: string[]) => void): void;
-        accept(dependency: string, callback: () => void): void;
-        accept(errHandler?: (err: any) => void): void;
-        decline(dependencies?: string[]): void;
-        // decline(dependency: string): void;
-        // decline(): void;
-        dispose(callback: (data: any) => void): void;
-        addDisposeHandler(callback: (data: any) => void): void;
+  hot: {
+      accept(dependencies: string[], callback: (updatedDependencies: string[]) => void): void;
+      accept(dependency: string, callback: () => void): void;
+      accept(errHandler?: (err: any) => void): void;
+      decline(dependencies?: string[]): void;
+      // decline(dependency: string): void;
+      // decline(): void;
+      dispose(callback: (data: any) => void): void;
+      addDisposeHandler(callback: (data: any) => void): void;
 
-        removeDisposeHandler(callback: (data: any) => void): void;
-        // ...
-    }
+      removeDisposeHandler(callback: (data: any) => void): void;
+      // ...
+  }
 }
 
 declare class Component<P, S> {
-    setState<K extends keyof S>(f: (prevState: S, props: P) => Pick<S, K>, callback?: () => any): void;
+  setState<K extends keyof S>(f: (prevState: S, props: P) => Pick<S, K>, callback?: () => any): void;
 }
 
 // function setState<T, K extends keyof T>(obj: T, state: Pick<T, K>) {

@@ -3,7 +3,6 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "esnext",
-    "reactNamespace": "",
     "baseUrl": "./src",
     "outDir": "./dist",
     "jsx": "react",
@@ -45,8 +44,8 @@
       "react-router-dom"
     ],
     "typeRoots": [
-      "node_modules/@types",
-      "./src/typings/**/*"
+      "/node_modules/@types",
+      "/src/typings/**/*"
     ],
     "paths": {
       "*": [
