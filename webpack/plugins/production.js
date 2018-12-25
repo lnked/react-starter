@@ -34,6 +34,9 @@ const plugins = [
     mergeStylesheets: false,
   }),
 
+  // /(en-gb|en|ru)/
+  new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru|en/),
+
   new ReplacePlugin([
     {
       pattern: /\/users\/lnked\/web\/[\s\w\-.]+\/(src\/)?[\s\w\-./<>]+/gi,

@@ -19,16 +19,14 @@ const imports = [
 // ///////////////////////////////////////////////////////////
 // //////////////   PRESETS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
-const getPresets = ({ loose, useBuiltIns, production }) => {
+const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
   const presets = []
   presets.push([
     '@babel/preset-env',
     {
-      targets: {
-        node: 'current',
-      },
+      targets,
+      modules,
       loose,
-      modules: false,
       debug: false,
       useBuiltIns,
       shippedProposals: true,
@@ -143,15 +141,20 @@ const getIgnore = ({ test, production }) => {
 }
 
 module.exports = function (api) {
+  const web = api.caller((caller) => Boolean(caller && caller.target === 'web'))
+  const babel = api.caller((caller) => Boolean(caller && caller.name === 'babel-loader'))
+
   const test = api.env('test')
   const production = api.env('production')
   const development = api.env('development')
 
   const loose = true
   const legacy = true
-  const useBuiltIns = 'usage'
+  const useBuiltIns = web ? 'usage' : undefined
+  const targets = !web ? { node: 'current' } : undefined
+  const modules = babel ? false : 'commonjs'
 
-  const presets = getPresets({ loose, useBuiltIns, production })
+  const presets = getPresets({ loose, useBuiltIns, production, modules, targets })
   const plugins = getPlugins({ loose, legacy, useBuiltIns, test, development, production })
   const ignore = getIgnore({ test, production })
 
@@ -161,7 +164,7 @@ module.exports = function (api) {
 
   return {
     sourceMaps,
-    comments: false,
+    comments: true,
     ignore: ignore.filter(Boolean),
     presets: presets.filter(Boolean),
     plugins: plugins.filter(Boolean),

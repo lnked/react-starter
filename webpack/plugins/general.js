@@ -58,9 +58,6 @@ const plugins = [
   //     manifest: require(path.join(resolve(define.rs_dist, 'dll'), 'bundle-manifest.json')),
   // }),
 
-  // /(en-gb|en|ru)/
-  new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /^\.\/(ru)$/),
-
   new webpack.LoaderOptionsPlugin({
     debug: define.rs_development,
     minimize: define.rs_production,

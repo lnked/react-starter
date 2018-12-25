@@ -85,12 +85,12 @@
     "port": "3000"
   },
   "dependencies": {
+    "@loadable/component": "5.2.2",
     "axios": "0.18.0",
     "core-js": "2.6.1",
     "dateformat": "3.0.3",
     "dayjs": "1.7.8",
     "history": "4.7.2",
-    "loadable-components": "2.2.3",
     "mobx": "5.8.0",
     "mobx-logger": "0.7.1",
     "mobx-react": "5.4.3",
