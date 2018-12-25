@@ -1,26 +1,66 @@
-// class BigPhoto extends React.Component {
-//     state = {
-//         isLoading: false,
-//     }
+import * as React from 'react'
+import * as css from './styles.scss'
 
-//     componentDidMount() {
-//         this.loadImage(this.props.url)
-//     }
+import { classes } from 'helpers'
 
-//     loadImage = src => {
-//         this.setState({ isLoading: true })
+export interface P {
+  source?: any;
+  title: string;
+}
 
-//         let img = new Image()
-//         img.onload = () => {
-//             this.setState({ isLoading: false })
-//         }
+export interface S {
+  isLoading: boolean;
+}
 
-//         img.src = src
-//     }
+const cx = classes.bind(css)
 
-//     render() {
-//         const { isLoading } = this.state
-//         const { url } = this.props
-//         return isLoading ? <p>Загружаю...</p> : <img src={url} alt="big vk" />
-//     }
-// }
+export class Image extends React.Component<P, S> {
+
+  static defaultProps = {
+    title: '',
+    source: {
+      webp: false,
+      jpg: false,
+    },
+    aspectRatio: 1,
+  }
+
+  state = {
+    isLoading: true,
+  }
+
+  componentDidMount() {
+    this.loadImage(this.props.url)
+  }
+
+  loadImage = (src: string) => {
+    this.setState({ isLoading: true })
+
+    const img = new Image()
+
+    img.onload = () => {
+      this.setState({ isLoading: false })
+    }
+
+    img.src = src
+  }
+
+  render () {
+    const { isLoading } = this.state
+    const { source, title } = this.props
+    const { webp, jpg } = source
+
+    if (isLoading) {
+      return <p>Загружаю...</p>
+    }
+
+    return (
+      <picture className={cx({ content: true })}>
+        <source type="image/webp" srcSet={webp} />
+        <source type="image/jpeg" srcSet={jpg} />
+        <img src={jpg} alt={title} />
+      </picture>
+    )
+  }
+
+}

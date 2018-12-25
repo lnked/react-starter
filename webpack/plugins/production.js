@@ -28,10 +28,10 @@ const plugins = [
   }),
 
   new Critters({
-    fonts: false,
-    external: false,
-    preload: 'js-lazy',
+    fonts: true,
+    preload: 'swap"',
     preloadFonts: true,
+    mergeStylesheets: false,
   }),
 
   new ReplacePlugin([
