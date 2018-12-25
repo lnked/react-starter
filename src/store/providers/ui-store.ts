@@ -17,7 +17,7 @@ export class UiStore {
 
   @computed
   get getState () {
-    return []
+    return this.type
   }
 
   @action

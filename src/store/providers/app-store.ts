@@ -33,7 +33,7 @@ export class AppStore {
 
   @computed
   get getState () {
-    return []
+    return this.query
   }
 
   // async loadAll () {
