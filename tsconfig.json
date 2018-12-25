@@ -3,6 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "esnext",
+    "reactNamespace": "",
     "baseUrl": "./src",
     "outDir": "./dist",
     "jsx": "react",
@@ -17,8 +18,8 @@
     "declaration": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
+    "importHelpers": true,
     "noEmitHelpers": true,
-    "importHelpers": false,
     "noUnusedLocals": true,
     "noImplicitThis": true,
     "removeComments": true,
@@ -44,8 +45,8 @@
       "react-router-dom"
     ],
     "typeRoots": [
-      "/node_modules/@types",
-      "/src/typings/**/*"
+      "node_modules/@types",
+      "./src/typings/**/*"
     ],
     "paths": {
       "*": [
