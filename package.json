@@ -159,7 +159,7 @@
     "copy-webpack-plugin": "4.6.0",
     "critters-webpack-plugin": "2.1.1",
     "cross-env": "5.2.0",
-    "css-loader": "2.0.2",
+    "css-loader": "2.1.0",
     "css-mqpacker": "7.0.0",
     "css-url-relative-plugin": "1.0.0",
     "cssnano": "4.1.8",

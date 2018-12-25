@@ -21,6 +21,8 @@ const imports = [
 // ///////////////////////////////////////////////////////////
 const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
   const presets = []
+  presets.push('@babel/preset-react')
+  presets.push('@babel/preset-typescript')
   presets.push([
     '@babel/preset-env',
     {
@@ -38,8 +40,6 @@ const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
       ],
     },
   ])
-  presets.push('@babel/preset-react')
-  presets.push('@babel/preset-typescript')
 
   return presets
 }
