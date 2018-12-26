@@ -1,3 +1,4 @@
+import * as React from 'react'
 import loadable from '@loadable/component'
 
 import { Loading } from 'fragments'
@@ -7,18 +8,8 @@ import { Loading } from 'fragments'
 //     ErrorComponent: ({ error, props }) => <div>Oups an error occurs.</div>,
 // })
 
-export const loadComponent = (resolve: any, options: any = {}): any =>
-  loadable(resolve, {
-    LoadingComponent: Loading,
-    // LoadingComponent: (props: any) => <div>{JSON.stringify(props)} Loading...</div>,
-    // ErrorComponent: ({ error, props }: { error: any, props: any }) => (
-    //     <div>
-    //         {JSON.stringify(error)}
-    //         {JSON.stringify(props)}
-    //         Oups an error occurs.
-    //     </div>
-    // ),
-    ...options,
-  })
+export const loadComponent = (resolve: any): any => loadable(resolve, {
+  fallback: <Loading />,
+})
 
 export default loadComponent

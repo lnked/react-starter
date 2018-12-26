@@ -19,7 +19,7 @@ const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const SizePlugin = require('size-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin')
-
+const LoadablePlugin = require('@loadable/webpack-plugin')
 const HappyPack = require('happypack')
 
 // const layouts = {}
@@ -34,6 +34,8 @@ const plugins = [
   new ProgressBarPlugin(),
 
   new SizePlugin(),
+
+  new LoadablePlugin(),
 
   new webpack.DefinePlugin({
     'process.env': Object.assign(formatter(environment, true), {

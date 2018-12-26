@@ -50,6 +50,8 @@ const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
 const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
   const plugins = []
 
+  plugins.push('@loadable/babel-plugin')
+
   plugins.push(['module-resolver', {
     root: [ './src' ],
     alias: {

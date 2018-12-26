@@ -1,7 +1,7 @@
 const define = require('./define')
 
 module.exports = {
-  minimize: true,
+  minimize: define.rs_release,
   chunkIds: 'named',
   nodeEnv: define.rs_mode,
   concatenateModules: true,
@@ -9,28 +9,18 @@ module.exports = {
     name: 'startup',
   },
   splitChunks: {
-    chunks: 'async',
-    minSize: 30000,
-    maxSize: 0,
-    minChunks: 1,
-    maxAsyncRequests: 5,
-    maxInitialRequests: 3,
-    automaticNameDelimiter: '~',
-    name: true,
     cacheGroups: {
-      bundle: {
-        test: /[\\/]node_modules[\\/]/,
-        name: 'bundle',
-        minChunks: 1,
-        priority: -10,
-        chunks: 'initial',
-        enforce: true,
-        reuseExistingChunk: true,
-      },
       default: {
         minChunks: 2,
         priority: -20,
         reuseExistingChunk: true,
+      },
+      bundle: {
+        test: /[\\/]node_modules[\\/]/,
+        chunks: 'all',
+        name: 'bundle',
+        priority: -10,
+        enforce: true,
       },
     },
   },

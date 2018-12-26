@@ -445,7 +445,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-dynamic-import@7.2.0":
+"@babel/plugin-syntax-dynamic-import@7.2.0", "@babel/plugin-syntax-dynamic-import@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.2.0.tgz#69c159ffaf4998122161ad8ebc5e6d1f55df8612"
   integrity sha512-mVxuJ0YroI/h/tbFTPGZR8cv6ai+STMKNBq0f8hFxsxWjl94qqhsb+wXbpNMDPU3cfR1TIsVFzU3nXyZMqyK4w==
@@ -1028,12 +1028,31 @@
     log-update "^2.3.0"
     strip-ansi "^3.0.1"
 
+"@loadable/babel-plugin@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@loadable/babel-plugin/-/babel-plugin-5.2.2.tgz#448f21ce984cee827a7bd4ce7c625c343c3b12e6"
+  integrity sha512-gTi0ZXI4s/Nwdr25PyyPQfe465eMM30AtQqMmJU2cSfB9bRHNAtKb666W3ZccgmL35LV4Px3qTo5hYC6OyGzNg==
+  dependencies:
+    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
+
 "@loadable/component@5.2.2":
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.2.2.tgz#64db5fb1e93d6bc93596947336283979f055d5d2"
   integrity sha512-trM/wBZbD1kL5CdBOD8pxbVZeKoycrb+qJs3FqKezUnzm6RTmYNYFYYDDzzapH9rc60/rPJYVXa9IP0TJF6Q6A==
   dependencies:
     hoist-non-react-statics "^3.2.1"
+
+"@loadable/server@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@loadable/server/-/server-5.2.2.tgz#39e682d13f1f682402a5e6774ed1e882a207f9f0"
+  integrity sha512-RyNfqAJLgvcZXXkvwyR572lfzZaiMwnehnlMVU9/uez45qNn82PH9j2nm58y83jHCUBZR7jh/UqAyLtLv3JhfQ==
+  dependencies:
+    lodash "^4.17.11"
+
+"@loadable/webpack-plugin@5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@loadable/webpack-plugin/-/webpack-plugin-5.2.2.tgz#b8d43fdc2393eb334fa678d3df1e9cbc4bc5e0b8"
+  integrity sha512-P190PIPWIQwLaO4FjkM/BcNvoZmkHChrLHybVC1Av+cz7qJn1sEGejScfKAZ3kYXh/v1eVAoRprFC0Ew5Z6PDA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

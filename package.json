@@ -86,6 +86,7 @@
   },
   "dependencies": {
     "@loadable/component": "5.2.2",
+    "@loadable/server": "5.2.2",
     "axios": "0.18.0",
     "core-js": "2.6.1",
     "dateformat": "3.0.3",
@@ -127,6 +128,8 @@
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "7.1.0",
     "@babel/register": "7.0.0",
+    "@loadable/babel-plugin": "5.2.2",
+    "@loadable/webpack-plugin": "5.2.2",
     "@types/axios": "0.14.0",
     "@types/es6-promise": "3.3.0",
     "@types/history": "4.7.2",
