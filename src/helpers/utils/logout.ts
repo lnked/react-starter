@@ -1,9 +1,9 @@
 import store from 'store2'
 
-import { TOKEN } from '../token'
+import { AccessToken } from '../access-token'
 
 export const logout = (reload?: boolean): void => {
-  TOKEN.del()
+  AccessToken.clear()
 
   store.remove('company')
   store.remove('company_id')

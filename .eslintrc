@@ -50,6 +50,7 @@
     "module": true,
     "process": true,
     "window": true,
+    "unknown": true,
     "location": true,
     "document": true,
     "typeof": true,
