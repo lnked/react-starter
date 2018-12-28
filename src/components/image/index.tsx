@@ -64,3 +64,35 @@ export class Image extends React.Component<P, S> {
   }
 
 }
+
+// <picture class="x jsx-803673281 gray">
+//   <source media="(max-width: 767px)" type="image/webp" srcSet="/static/xxx@1x.webp,
+//   /static/xxx@2x.webp 2x,
+//   /static/xxx@3x.webp 3x" class="x" />
+//   <source media="(max-width: 767px)" srcSet="/static/xxx@1x.png,
+//   /static/xxx@2x.png 2x,
+//   /static/xxx@3x.png 3x" class="x" />
+//   <source media="(max-width: 1279px)" type="image/webp" srcSet="/static/images/school/1024/xxx2@1x.webp,
+//   /static/images/school/1024/xxx2@2x.webp 2x,
+//   /static/images/school/1024/xxx2@3x.webp 3x" class="x" />
+//   <source media="(max-width: 1279px)" srcSet="/static/images/school/1024/xxx2@1x.png,
+//   /static/images/school/1024/xxx2@2x.png 2x,
+//   /static/images/school/1024/xxx2@3x.png 3x" class="x" />
+//   <source media="(max-width: 1359px)" type="image/webp" srcSet="/static/images/school/1280/xxx2@1x.webp,
+//   /static/images/school/1280/xxx2@2x.webp 2x,
+//   /static/images/school/1280/xxx2@3x.webp 3x" class="x" />
+//   <source media="(max-width: 1359px)" srcSet="/static/images/school/1280/xxx2@1x.png,
+//   /static/images/school/1280/xxx2@2x.png 2x,
+//   /static/images/school/1280/xxx2@3x.png 3x" class="x" />
+//   <source media="(max-width: 1919px)" type="image/webp" srcSet="/static/images/school/1360/xxx2@1x.webp,
+//   /static/images/school/1360/xxx2@2x.webp 2x,
+//   /static/images/school/1360/xxx2@3x.webp 3x" class="x" />
+//   <source media="(max-width: 1919px)" srcSet="/static/images/school/1360/xxx2@1x.png,
+//   /static/images/school/1360/xxx2@2x.png 2x,
+//   /static/images/school/1360/xxx2@3x.png 3x" class="x" />
+//   <source type="image/webp" srcSet="/static/images/school/1920/xxx2@1x.webp,
+//   /static/images/school/1920/xxx2@2x.webp 2x,
+//   /static/images/school/1920/xxx2@3x.webp 3x" class="x" /><img srcSet="/static/images/school/1920/xxx2@1x.png,
+//   /static/images/school/1920/xxx2@2x.png 2x,
+//   /static/images/school/1920/xxx2@3x.png 3x" src="/static/images/school/1920/xxx2@1x.png" alt="High Middle React разработчик" class="x jsx-803673281 gray" />
+// </picture>
