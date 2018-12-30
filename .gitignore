@@ -15,6 +15,7 @@ release-builds
 
 # Compiled output
 dist
+profiling
 .docz
 .cache
 .awcache

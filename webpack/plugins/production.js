@@ -11,6 +11,10 @@ const plugins = [
     filename: '[name].js.map'
   }),
 
+  new webpack.debug.ProfilingPlugin({
+    outputPath: 'profiling/events.json'
+  }),
+
   new WebpackChunkHash(),
 
   new webpack.optimize.ModuleConcatenationPlugin(),
