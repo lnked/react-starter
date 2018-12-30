@@ -212,7 +212,7 @@
     "mobx-react-devtools": "6.0.3",
     "node-sass": "4.11.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
-    "pixrem": "4.0.1",
+    "pixrem": "5.0.0",
     "pleeease-filters": "4.0.0",
     "postcss": "7.0.7",
     "postcss-calc": "7.0.1",

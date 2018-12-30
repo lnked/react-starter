@@ -94,5 +94,6 @@ export class Image extends React.Component<P, S> {
 //   /static/images/school/1920/xxx2@2x.webp 2x,
 //   /static/images/school/1920/xxx2@3x.webp 3x" class="x" /><img srcSet="/static/images/school/1920/xxx2@1x.png,
 //   /static/images/school/1920/xxx2@2x.png 2x,
-//   /static/images/school/1920/xxx2@3x.png 3x" src="/static/images/school/1920/xxx2@1x.png" alt="High Middle React разработчик" class="x jsx-803673281 gray" />
+//   /static/images/school/1920/xxx2@3x.png 3x"
+// src="/static/images/school/1920/xxx2@1x.png" alt="High Middle React разработчик" class="x jsx-803673281 gray" />
 // </picture>

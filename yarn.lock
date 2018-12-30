@@ -10892,7 +10892,16 @@ pixelmatch@^4.0.0:
   dependencies:
     pngjs "^3.0.0"
 
-pixrem@4.0.1, pixrem@^4.0.0:
+pixrem@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/pixrem/-/pixrem-5.0.0.tgz#460c534fbc19e4e9fbf39012ae26c7107cd40bca"
+  integrity sha512-ugJ4Imy92u55zeznaN/5d7iqOBIZjZ7q10/T+dcd0IuFtbLlsGDvAUabFu1cafER+G9f0T1WtTqvzm4KAdcDgQ==
+  dependencies:
+    browserslist "^4.3.6"
+    postcss "^7.0.7"
+    reduce-css-calc "^2.1.5"
+
+pixrem@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/pixrem/-/pixrem-4.0.1.tgz#2da4a1de6ec4423c5fc3794e930b81d4490ec686"
   integrity sha1-LaSh3m7EQjxfw3lOkwuB1EkOxoY=
@@ -12229,7 +12238,7 @@ postcss@6.0.1:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@7.0.7:
+postcss@7.0.7, postcss@^7.0.7:
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.7.tgz#2754d073f77acb4ef08f1235c36c5721a7201614"
   integrity sha512-HThWSJEPkupqew2fnuQMEI2YcTj/8gMV3n80cMdJsKxfIh5tHf7nM5JigNX6LxVMqo6zkgQNAI88hyFvBk41Pg==
@@ -13127,7 +13136,7 @@ reduce-css-calc@^1.2.7:
     math-expression-evaluator "^1.2.14"
     reduce-function-call "^1.0.1"
 
-reduce-css-calc@^2.0.0:
+reduce-css-calc@^2.0.0, reduce-css-calc@^2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/reduce-css-calc/-/reduce-css-calc-2.1.5.tgz#f283712f0c9708ef952d328f4b16112d57b03714"
   integrity sha512-AybiBU03FKbjYzyvJvwkJZY6NLN+80Ufc2EqEs+41yQH+8wqBEslD6eGiS0oIeq5TNLA5PrhBeYHXWdn8gtW7A==
