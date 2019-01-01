@@ -1,5 +1,3 @@
-const path = require('path')
-const glob = require('glob')
 const webpack = require('webpack')
 const define = require('../define')
 
@@ -9,6 +7,14 @@ const WebpackManifestPlugin = require('webpack-manifest-plugin')
 const ReplacePlugin = require('replace-bundle-webpack-plugin')
 
 const plugins = [
+  new webpack.SourceMapDevToolPlugin({
+    filename: '[name].js.map'
+  }),
+
+  new webpack.debug.ProfilingPlugin({
+    outputPath: 'profiling/events.json'
+  }),
+
   new WebpackChunkHash(),
 
   new webpack.optimize.ModuleConcatenationPlugin(),
@@ -18,7 +24,6 @@ const plugins = [
   }),
 
   new webpack.IgnorePlugin(/^(react-dev-utils|mobx-react-devtools)$/),
-
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
   new WebpackManifestPlugin({
@@ -27,11 +32,14 @@ const plugins = [
   }),
 
   new Critters({
-    fonts: false,
-    external: false,
-    preload: 'js-lazy',
+    fonts: true,
+    preload: 'swap"',
     preloadFonts: true,
+    mergeStylesheets: false,
   }),
+
+  // /(en-gb|en|ru)/
+  new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru|en/),
 
   new ReplacePlugin([
     {

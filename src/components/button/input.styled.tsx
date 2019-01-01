@@ -25,6 +25,7 @@ const StyledButton = styled.button`
 const Container = styled.div`
   text-align: center;
 `
+
 export type P = {
   type?: string;
   size?: 'small' | 'normal' | 'large';

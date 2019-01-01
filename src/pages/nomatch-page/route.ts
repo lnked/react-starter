@@ -9,7 +9,7 @@ export const routes: Route[] = [
     status: 404,
     statusCode: 404,
     component: loadComponent(() =>
-      import(/* webpackMode: "lazy", webpackPrefetch: true, webpackChunkName: "nomatch-page */ './')
+      import(/* webpackPrefetch: true */ './')
     ),
     title: 'Error Page title',
     description: 'React starter kit',

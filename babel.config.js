@@ -19,16 +19,16 @@ const imports = [
 // ///////////////////////////////////////////////////////////
 // //////////////   PRESETS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
-const getPresets = ({ loose, useBuiltIns, production }) => {
+const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
   const presets = []
+  presets.push('@babel/preset-react')
+  presets.push('@babel/preset-typescript')
   presets.push([
     '@babel/preset-env',
     {
-      targets: {
-        node: 'current',
-      },
+      targets,
+      modules,
       loose,
-      modules: false,
       debug: false,
       useBuiltIns,
       shippedProposals: true,
@@ -40,8 +40,6 @@ const getPresets = ({ loose, useBuiltIns, production }) => {
       ],
     },
   ])
-  presets.push('@babel/preset-react')
-  presets.push('@babel/preset-typescript')
 
   return presets
 }
@@ -51,6 +49,8 @@ const getPresets = ({ loose, useBuiltIns, production }) => {
 // ///////////////////////////////////////////////////////////
 const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
   const plugins = []
+
+  plugins.push('@loadable/babel-plugin')
 
   plugins.push(['module-resolver', {
     root: [ './src' ],
@@ -104,8 +104,8 @@ const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production 
   plugins.push(production && 'transform-react-pure-class-to-function')
   plugins.push(production && 'transform-react-remove-prop-types')
 
-  plugins.push(production && '@babel/plugin-transform-react-inline-elements')
   plugins.push(production && '@babel/plugin-transform-react-constant-elements')
+  plugins.push(production && '@babel/plugin-transform-react-inline-elements')
 
   plugins.push((test || production) && 'transform-es2015-modules-commonjs')
 
@@ -143,26 +143,30 @@ const getIgnore = ({ test, production }) => {
 }
 
 module.exports = function (api) {
+  const web = api.caller((caller) => Boolean(caller && caller.target === 'web'))
+  const babel = api.caller((caller) => Boolean(caller && caller.name === 'babel-loader'))
+
   const test = api.env('test')
   const production = api.env('production')
   const development = api.env('development')
 
   const loose = true
   const legacy = true
-  const useBuiltIns = 'usage'
+  const useBuiltIns = web ? 'usage' : undefined
+  const targets = !web ? { node: 'current' } : undefined
+  const modules = babel ? false : 'commonjs'
 
-  const presets = getPresets({ loose, useBuiltIns, production })
+  const presets = getPresets({ loose, useBuiltIns, production, modules, targets })
   const plugins = getPlugins({ loose, legacy, useBuiltIns, test, development, production })
   const ignore = getIgnore({ test, production })
 
   const overrides = []
 
-  const sourceMaps = development
+  const sourceMaps = production
 
   return {
     sourceMaps,
-    sourceType: 'module',
-    comments: false,
+    comments: true,
     ignore: ignore.filter(Boolean),
     presets: presets.filter(Boolean),
     plugins: plugins.filter(Boolean),

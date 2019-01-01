@@ -30,7 +30,7 @@ declare module 'classNames';
 
 declare module 'react-hot-loader'
 
-declare module 'loadable-components'
+declare module '@loadable/component'
 
 declare module 'react-infinite-scroller';
 

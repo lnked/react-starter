@@ -3,7 +3,7 @@ const { resolve } = require('path')
 const { polyfills } = require('./polyfills')
 
 const bundle = [
-    ...polyfills,
+    // ...polyfills,
     'react',
     // 'mobx',
     // 'mobx-react'
@@ -15,7 +15,6 @@ const bundle = [
 const client = [
     ...(define.rs_development
         ? [
-            '@babel/polyfill',
             'react-dev-utils/webpackHotDevClient',
             // `webpack-dev-server/client?http://${define.rs_host}:${define.rs_port}`,
             // 'webpack/hot/only-dev-server',
