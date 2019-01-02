@@ -1,39 +1,39 @@
 doctype html
 html(
-    lang='ru'
-    class='no-js'
+  lang='ru'
+  class='no-js'
 )
-    head
-        meta(charset='UTF-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
-        link(rel='dns-prefetch', href='https://cdn.polyfill.io')
-        link(rel='preload', href='https://cdn.polyfill.io/v2/polyfill.min.js', as="script")
+    link(rel='dns-prefetch', href='https://cdn.polyfill.io')
+    link(rel='preload', href='https://cdn.polyfill.io/v2/polyfill.min.js', as="script")
 
-        title React template
+    title React template
 
-        meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=5')
+    meta(name='viewport', content='width=device-width,initial-scale=1,maximum-scale=5')
 
-        base(href=htmlWebpackPlugin.options.basePath)
-        meta(name='fragment', content='!')
+    base(href=htmlWebpackPlugin.options.basePath)
+    meta(name='fragment', content='!')
 
-        meta(name='google', content='notranslate')
-        meta(name='mobile-web-app-capable', content='yes')
+    meta(name='google', content='notranslate')
+    meta(name='mobile-web-app-capable', content='yes')
 
-        //- Article Specific Metadata
-        meta(name='robots', content='index,follow')
-        //- meta(name='keywords', content='React, starter, pwa')
-        //- meta(name='description', content='React-starter a react web sterter kit')
-        meta(name='author', content='Edik Bulikyan <ed.proff@gmail.com>')
+    //- Article Specific Metadata
+    meta(name='robots', content='index,follow')
+    //- meta(name='keywords', content='React, starter, pwa')
+    //- meta(name='description', content='React-starter a react web sterter kit')
+    meta(name='author', content='Edik Bulikyan <ed.proff@gmail.com>')
 
-    body.loading
-        main#app.layout-wrapper
+  body.loading
+    main#app.layout-wrapper
 
-        noscript
-            .bulletin
-                p.headline MODERN BROWSER EXPERIENCE
-                p Your browser doesn't support the main features of this website.
-                p
-                    | Please upgrade to
-                    a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
-                    | , Safari or Firefox for a better experience.
+    noscript
+      .bulletin
+        p.headline MODERN BROWSER EXPERIENCE
+        p Your browser doesn't support the main features of this website.
+        p
+          | Please upgrade to
+          a(target='_blank', href='https://www.google.com/chrome/browser/desktop/index.html') Google Chrome
+          | , Safari or Firefox for a better experience.
