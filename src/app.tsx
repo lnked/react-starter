@@ -12,9 +12,9 @@ import { ErrorBoundary } from 'components'
 
 import { renderRoute, renderDevTools } from 'utils'
 
-import { routes } from './routes'
-
 import { environment } from 'settings'
+
+import { routes } from './routes'
 
 function App ({ history }: any) {
   return (
