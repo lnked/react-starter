@@ -54,6 +54,7 @@ type Route = {
   status?: number;
   robots?: string;
   keywords?: string;
+  privated?: boolean;
   description?: string;
   statusCode?: number;
   rest?: any;
