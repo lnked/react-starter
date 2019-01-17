@@ -1010,10 +1010,10 @@
   dependencies:
     lodash "^4.17.11"
 
-"@loadable/webpack-plugin@5.2.2":
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/@loadable/webpack-plugin/-/webpack-plugin-5.2.2.tgz#b8d43fdc2393eb334fa678d3df1e9cbc4bc5e0b8"
-  integrity sha512-P190PIPWIQwLaO4FjkM/BcNvoZmkHChrLHybVC1Av+cz7qJn1sEGejScfKAZ3kYXh/v1eVAoRprFC0Ew5Z6PDA==
+"@loadable/webpack-plugin@5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@loadable/webpack-plugin/-/webpack-plugin-5.4.0.tgz#308ca702c071c61448ca8f824c12de643348955f"
+  integrity sha512-ajapZW6Ypj8YYh35vsgqdQvzQM/Xjd1Apq2xe68K8bGCYYCvg/Bjt9ZuRDoxiJmK6fNMuu0IZTFQYwwWpJ368A==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

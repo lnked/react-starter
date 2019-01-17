@@ -129,7 +129,7 @@
     "@babel/preset-typescript": "7.1.0",
     "@babel/register": "7.0.0",
     "@loadable/babel-plugin": "5.2.2",
-    "@loadable/webpack-plugin": "5.2.2",
+    "@loadable/webpack-plugin": "5.4.0",
     "@types/axios": "0.14.0",
     "@types/es6-promise": "3.3.0",
     "@types/history": "4.7.2",
