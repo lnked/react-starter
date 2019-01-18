@@ -298,7 +298,7 @@
     "tslint-loader": "3.6.0",
     "tslint-react": "3.6.0",
     "typed-css-modules-loader": "0.0.17",
-    "typescript": "3.2.2",
+    "typescript": "3.2.4",
     "typescript-plugin-styled-components": "1.0.0",
     "typescript-styled-plugin": "0.13.0",
     "typings-for-css-modules-loader": "1.7.0",
