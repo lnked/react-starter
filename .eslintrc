@@ -78,7 +78,8 @@
     ],
     "import/resolver": {
       "node": {
-        "extensions": [ ".js", ".jsx", ".es6" ]
+        "extensions": [ ".js", ".jsx", ".es6" ],
+        "moduleDirectory": [ "node_modules", "src" ]
       }
     },
     "import/extensions": [
