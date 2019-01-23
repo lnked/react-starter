@@ -76,7 +76,12 @@
     "propWrapperFunctions": [
       "forbidExtraProps"
     ],
-    "import/resolver": "webpack",
+    "import/resolver": {
+      "node": {
+        "extensions": [ ".js", ".jsx", ".es6" ]
+      },
+      "moduleDirectory": [ "node_modules", "src" ]
+    },
     "import/extensions": [
       ".js",
       ".jsx",
