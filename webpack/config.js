@@ -1,3 +1,5 @@
+const { resolve } = require('path')
+
 const aliases = require('./aliases')
 const rules = require('./rules')
 const define = require('./define')
@@ -39,9 +41,8 @@ module.exports = {
     wrappedContextCritical: true,
     strictExportPresence: true,
     exprContextCritical: false,
-
-    rules: rules.config,
     noParse: /jquery|lodash/,
+    rules: rules.config,
   },
 
   plugins: plugins.config,
