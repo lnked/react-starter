@@ -31,6 +31,9 @@ declare module 'classNames';
 
 declare module 'react-hot-loader'
 
+declare module 'react-countup'
+declare module 'react-animate-number'
+
 declare module '@loadable/component'
 
 declare module 'react-infinite-scroller';

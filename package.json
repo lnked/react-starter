@@ -92,7 +92,6 @@
     "axios": "0.18.0",
     "core-js": "2.6.3",
     "dateformat": "3.0.3",
-    "dayjs": "1.8.0",
     "history": "4.7.2",
     "mobx": "5.9.0",
     "mobx-logger": "0.7.1",
