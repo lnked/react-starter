@@ -1,7 +1,13 @@
-import store from 'store2'
+// import { session, local } from 'storage.io'
+// https://www.npmjs.com/package/storage.io
+import { session } from 'storage.io'
 
-export const AccessToken = {
-  set: (value: string) => store.set('token', value),
-  get: () => store.get('token'),
-  clear: () => store.remove('token'),
+export class Storage {
+
+  get = (name: string = 'token') => session.get(name)
+
+  set = (name: string = 'token', value: string) => session.set(name, value)
+
+  clear = (name: string = 'token') => session.remove(name)
+
 }

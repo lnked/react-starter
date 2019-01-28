@@ -9,7 +9,6 @@ const bundle = [
     // 'mobx-react'
     // 'react-router-dom',
     // 'axios'
-    // 'store2'
 ]
 
 const client = [

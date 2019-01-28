@@ -21,6 +21,7 @@ declare module 'settings/*'
 declare module 'history';
 
 declare module 'store2';
+declare module 'storage.io';
 
 declare module 'dateformat';
 

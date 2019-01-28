@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-import { AccessToken } from '../access-token'
 import { API_URL } from '../api'
+import { Storage } from '../access-token'
 
 export const refreshToken = () => ({})
 
@@ -14,6 +14,7 @@ export const request: any = (options: any = { noToken: false }) => {
   }
 
   if (!noToken) {
+    const AccessToken = new Storage()
     const authorizationToken = AccessToken.get()
 
     if (authorizationToken) {

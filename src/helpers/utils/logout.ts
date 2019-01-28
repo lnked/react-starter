@@ -1,12 +1,9 @@
-import store from 'store2'
-
-import { AccessToken } from '../access-token'
+import { Storage } from '../access-token'
 
 export const logout = (reload?: boolean): void => {
-  AccessToken.clear()
+  const AccessToken = new Storage()
 
-  store.remove('company')
-  store.remove('company_id')
+  AccessToken.clear()
 
   if (reload) {
     location.href = '/auth/sign-in'
