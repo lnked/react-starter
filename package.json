@@ -88,6 +88,7 @@
   "dependencies": {
     "@loadable/component": "5.5.0",
     "@loadable/server": "5.5.0",
+    "animated-number-react": "0.0.2",
     "axios": "0.18.0",
     "core-js": "2.6.3",
     "dateformat": "3.0.3",
@@ -101,6 +102,7 @@
     "react-datepicker": "2.0.0",
     "react-dom": "16.7.0",
     "react-helmet": "5.2.0",
+    "react-loading-skeleton": "1.0.0",
     "react-router-dom": "4.3.1",
     "storage.io": "1.2.0",
     "styled-components": "4.1.3"
