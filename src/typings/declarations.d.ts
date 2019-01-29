@@ -33,6 +33,7 @@ declare module 'react-hot-loader'
 
 declare module 'react-countup'
 declare module 'react-animate-number'
+declare module 'react-loading-skeleton'
 
 declare module '@loadable/component'
 

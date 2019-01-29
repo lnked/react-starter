@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { classes } from 'helpers'
 
-import { Icon, Button } from 'components'
+import { Icon, Button, Post } from 'components'
 
 import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings'
 
@@ -41,6 +41,9 @@ class MainPage extends React.Component<any, any> {
         </div>
 
         <p className={css.description}>Отличный сборщик рекат проектов</p>
+
+        <Post />
+        <Post />
 
         <ul className={css.list}>
           <li>HMR</li>

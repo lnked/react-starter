@@ -1,4 +1,5 @@
 export { Icon } from './icon'
+export { Post } from './post'
 export { Card } from './card'
 export { Title } from './title'
 export { Input } from './input'
