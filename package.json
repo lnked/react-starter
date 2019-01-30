@@ -34,6 +34,11 @@
     "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
     "publish": "npm puublish --access=public",
     "example-build": "yarn release --env example --reset-cache",
+    "preadd-component": "rm -rf ./src/components/test-component",
+    "add-component": "node webpack/utils/add --essence component --name 'test component'",
+    "add-page": "node webpack/utils/add --essence page --name 'test component'",
+    "add-layout": "node webpack/utils/add --essence layout --name 'test component'",
+    "add-fragment": "node webpack/utils/add --essence fragment --name 'test component'",
     "lh": "lighthouse-ci"
   },
   "keywords": [

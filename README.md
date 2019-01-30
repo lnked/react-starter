@@ -99,6 +99,17 @@ yarn release --env example
 Requires a file `.env.example` file in the root folder of the project
 You can add any files to your environments
 
+```bash
+yarn add-component --name component-name
+yarn add-component --name 'component-name'
+```
+
+# Optional
+```bash
+yarn add-component --name component-name --type class
+```
+you can use --type function (default) or --type class
+
 ## Features
 - [x] TypeScript
 - [x] Styled Components
