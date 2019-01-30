@@ -33,7 +33,8 @@
     "test-cover": "yarn run test --coverage",
     "coverage": "yarn run test-cover && opn coverage/lcov-report/index.html",
     "publish": "npm puublish --access=public",
-    "example-build": "yarn release --env example --reset-cache"
+    "example-build": "yarn release --env example --reset-cache",
+    "lh": "lighthouse-ci"
   },
   "keywords": [
     "react"
@@ -179,8 +180,8 @@
     "eslint-loader": "2.1.1",
     "eslint-plugin-compat": "2.6.3",
     "eslint-plugin-immutable": "1.0.0",
-    "eslint-plugin-import": "2.15.0",
-    "eslint-plugin-jest": "22.1.3",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jest": "22.2.1",
     "eslint-plugin-jsx-a11y": "6.2.0",
     "eslint-plugin-no-loops": "0.3.0",
     "eslint-plugin-no-use-extend-native": "0.4.0",
@@ -269,7 +270,7 @@
     "postcss-will-change-transition": "1.2.0",
     "precss": "4.0.0",
     "prerender-loader": "1.2.0",
-    "progress-bar-webpack-plugin": "1.12.0",
+    "progress-bar-webpack-plugin": "1.12.1",
     "pug": "2.0.3",
     "pug-loader": "2.4.0",
     "raw-loader": "1.0.0",

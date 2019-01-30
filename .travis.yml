@@ -38,6 +38,8 @@ script:
 
 after_success:
   - npm run deploy
+  # - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+  # - npm run lh -- https://staging.example.com
 
 addons:
   code_climate:
