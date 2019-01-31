@@ -104,6 +104,21 @@ yarn add-component --name component-name
 yarn add-component --name 'component-name'
 ```
 
+```bash
+yarn add-layout --name test-layout
+yarn add-layout --name 'test layout'
+```
+
+```bash
+yarn add-page --name test-page
+yarn add-page --name 'test page'
+```
+
+```bash
+yarn add-fragment --name test-fragment
+yarn add-fragment --name 'test fragment'
+```
+
 # Optional
 ```bash
 yarn add-component --name component-name --type class
