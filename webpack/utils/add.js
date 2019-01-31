@@ -33,12 +33,14 @@ if (!name) {
 if (!fs.existsSync(componentPath)) {
   const componentIndex = `${componentPath}/index.tsx`
   const componentTypes = `${componentPath}/types.ts`
-  const componentStyles = `${componentPath}/styled.ts`
+  const componentStyles = `${componentPath}/styles.scss`
+  const componentStyled = `${componentPath}/styled.ts`
 
   fs.mkdirSync(componentPath);
   fs.writeFileSync(componentIndex, getTemplate(type, componentName(name)));
   fs.writeFileSync(componentTypes, getTemplate(`types.${type}`));
-  fs.writeFileSync(componentStyles, getTemplate('styled'));
+  fs.writeFileSync(componentStyles, getTemplate('styles'));
+  fs.writeFileSync(componentStyled, getTemplate('styled'));
 
   signale.success(`A ${essence} called ${componentName(name)} created successfully!`)
 }

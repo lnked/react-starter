@@ -1,6 +1,15 @@
 module.exports.getTemplate = (type = 'class', name) => {
   const template = []
 
+  if (type === 'styles') {
+    template.push(
+      `@import 'styles/_global.scss';\n`,
+      `.radio {`,
+      `\tcolor: $c-black;`,
+      `}\n`,
+    )
+  }
+
   if (type === 'function') {
     template.push(
       `import * as React from 'react'\n`,
