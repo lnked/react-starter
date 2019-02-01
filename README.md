@@ -101,61 +101,63 @@ You can add any files to your environments
 
 # Code generation commands
 
-## Add component
-```bash
-yarn add-component --name component-name
-yarn add-component --name 'component-name'
-```
-
-### Optional
-```bash
-yarn add-component --name test-layout --type class (default)
-yarn add-component --name 'test layout' --type function
-```
-
-## Add layout
+### Add layout
 ```bash
 yarn add-layout --name test-layout
 yarn add-layout --name 'test layout'
 ```
 
-### Optional
+#### Optional
 ```bash
 yarn add-layout --name test-layout --type class (default)
 yarn add-layout --name test-layout --type function
 ```
 
-## Add page
+### Add page
 ```bash
 yarn add-page --name test-page
 yarn add-page --name 'test page'
 ```
 
-### Optional
+#### Optional
 ```bash
 yarn add-page --name test-page --type class (default)
 yarn add-page --name test-page --type function
 ```
 
-## Add fragment
+### Add fragment
 ```bash
 yarn add-fragment --name test-fragment
 yarn add-fragment --name 'test fragment'
 ```
 
-### Optional
+#### Optional
 ```bash
 yarn add-fragment --name test-fragment --type class (default)
 yarn add-fragment --name test-fragment --type function
 ```
 
+### Add component
+```bash
+yarn add-component --name test-component
+yarn add-component --name 'test component'
+```
+
+#### Optional
+```bash
+yarn add-component --name test-component --type class (default)
+yarn add-component --name test-component' --type function
+```
+
 ## Features
+- [x] Webpack 4
 - [x] TypeScript
 - [x] Styled Components
 - [x] PostCss / scss
 - [x] Svg sprites
 - [x] MobX
 - [x] Tests
+- [x] Code generation
 
 ## Get in touch
 - Bugs / Suggestions: [open an issue](https://github.com/lnked/react-starter/issues)
