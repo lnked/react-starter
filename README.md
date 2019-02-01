@@ -99,45 +99,49 @@ yarn release --env example
 Requires a file `.env.example` file in the root folder of the project
 You can add any files to your environments
 
+## Add component
 ```bash
 yarn add-component --name component-name
 yarn add-component --name 'component-name'
 ```
 
-# Optional
+### Optional
 ```bash
 yarn add-component --name test-layout --type class (default)
 yarn add-component --name 'test layout' --type function
 ```
 
+## Add layout
 ```bash
 yarn add-layout --name test-layout
 yarn add-layout --name 'test layout'
 ```
 
-# Optional
+### Optional
 ```bash
 yarn add-layout --name test-layout --type class (default)
 yarn add-layout --name test-layout --type function
 ```
 
+## Add page
 ```bash
 yarn add-page --name test-page
 yarn add-page --name 'test page'
 ```
 
-# Optional
+### Optional
 ```bash
 yarn add-page --name test-page --type class (default)
 yarn add-page --name test-page --type function
 ```
 
+## Add fragment
 ```bash
 yarn add-fragment --name test-fragment
 yarn add-fragment --name 'test fragment'
 ```
 
-# Optional
+### Optional
 ```bash
 yarn add-fragment --name test-fragment --type class (default)
 yarn add-fragment --name test-fragment --type function
