@@ -104,14 +104,32 @@ yarn add-component --name component-name
 yarn add-component --name 'component-name'
 ```
 
+# Optional
+```bash
+yarn add-component --name test-layout --type class (default)
+yarn add-component --name 'test layout' --type function
+```
+
 ```bash
 yarn add-layout --name test-layout
 yarn add-layout --name 'test layout'
 ```
 
+# Optional
+```bash
+yarn add-layout --name test-layout --type class (default)
+yarn add-layout --name test-layout --type function
+```
+
 ```bash
 yarn add-page --name test-page
 yarn add-page --name 'test page'
+```
+
+# Optional
+```bash
+yarn add-page --name test-page --type class (default)
+yarn add-page --name test-page --type function
 ```
 
 ```bash
@@ -121,9 +139,9 @@ yarn add-fragment --name 'test fragment'
 
 # Optional
 ```bash
-yarn add-component --name component-name --type class
+yarn add-fragment --name test-fragment --type class (default)
+yarn add-fragment --name test-fragment --type function
 ```
-you can use --type function (default) or --type class
 
 ## Features
 - [x] TypeScript
