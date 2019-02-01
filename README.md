@@ -22,6 +22,7 @@ OR
 git init
 git remote add origin git@github.com:lnked/react-starter.git
 git fetch origin
+git pull origin master
 ```
 
 Then run command
