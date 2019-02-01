@@ -99,6 +99,8 @@ yarn release --env example
 Requires a file `.env.example` file in the root folder of the project
 You can add any files to your environments
 
+# Code generation commands
+
 ## Add component
 ```bash
 yarn add-component --name component-name
