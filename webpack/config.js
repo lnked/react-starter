@@ -18,6 +18,7 @@ module.exports = {
 
   output: {
     publicPath: define.rs_output_path,
+    sourceMapFilename: '[name].js.map',
     jsonpFunction: 'WJ',
     hotUpdateFunction: 'UF',
   },

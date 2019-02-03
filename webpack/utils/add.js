@@ -21,6 +21,7 @@ const type = options.type || 'class'
 
 const folder = folderName(name)
 
+const pathIndex = `${paths[essence]}/index.ts`
 const componentPath = `${paths[essence]}/${folder}`
 
 if (!name) {
@@ -30,6 +31,8 @@ if (!name) {
   return false
 }
 
+const exportName = componentName(name)
+
 if (!fs.existsSync(componentPath)) {
   const componentIndex = `${componentPath}/index.tsx`
   const componentTypes = `${componentPath}/types.ts`
@@ -37,13 +40,17 @@ if (!fs.existsSync(componentPath)) {
   const componentStyled = `${componentPath}/styled.ts`
 
   fs.mkdirSync(componentPath);
-  fs.writeFileSync(componentIndex, getTemplate(type, componentName(name)));
+  fs.writeFileSync(componentIndex, getTemplate(type, exportName));
   fs.writeFileSync(componentTypes, getTemplate(`types.${type}`));
   fs.writeFileSync(componentStyles, getTemplate('styles'));
   fs.writeFileSync(componentStyled, getTemplate('styled'));
 
-  signale.success(`A ${essence} called ${componentName(name)} created successfully!`)
+  // Append export
+  fs.appendFileSync(pathIndex, `export { ${exportName} } from './${folder}'\n`)
+
+  signale.success(`A ${essence} called ${exportName} created successfully!`)
+  signale.note(`import { ${exportName} } from '${essence}s'`)
 }
 else {
-  signale.debug(`The ${essence} named ${componentName(name)} already exists!`)
+  signale.debug(`The ${essence} named ${exportName} already exists!`)
 }
