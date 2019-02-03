@@ -38,6 +38,7 @@ if (!fs.existsSync(componentPath)) {
   const componentTypes = `${componentPath}/types.ts`
   const componentStyles = `${componentPath}/styles.scss`
   const componentStyled = `${componentPath}/styled.ts`
+  const componentRoute = `${componentPath}/route.ts`
 
   fs.mkdirSync(componentPath);
   fs.writeFileSync(componentIndex, getTemplate(type, exportName));
@@ -45,8 +46,15 @@ if (!fs.existsSync(componentPath)) {
   fs.writeFileSync(componentStyles, getTemplate('styles'));
   fs.writeFileSync(componentStyled, getTemplate('styled'));
 
-  // Append export
-  fs.appendFileSync(pathIndex, `export { ${exportName} } from './${folder}'\n`)
+  if (essence === 'page') {
+    const indexContents = fs.readFileSync(pathIndex, 'utf8')
+
+    fs.writeFileSync(componentRoute, getTemplate('route'));
+    fs.writeFileSync(pathIndex, `export { routes as ${exportName}Route } from './${folder}/route'\n${indexContents}`)
+  } else {
+    // Append export
+    fs.appendFileSync(pathIndex, `export { ${exportName} } from './${folder}'\n`)
+  }
 
   signale.success(`A ${essence} called ${exportName} created successfully!`)
   signale.note(`import { ${exportName} } from '${essence}s'`)

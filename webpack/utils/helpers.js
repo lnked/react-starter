@@ -1,6 +1,25 @@
 module.exports.getTemplate = (type = 'class', name) => {
   const template = []
 
+  if (type === 'route') {
+    template.push(
+      `/* eslint-disable */`,
+      `/* tslint:disable: max-line-length */\n`,
+      `import { loadComponent } from 'utils'\n`,
+      `export const routes: Route[] = [`,
+      `\t{`,
+      `\t\tpath: 'page',`,
+      `\t\tcomponent: loadComponent(() =>`,
+      `\t\t\timport(/* webpackPrefetch: true */ './')`,
+      `\t\t),`,
+      `\t\ttitle: 'Page title',`,
+      `\t\tdescription: 'Page description',`,
+      `\t}`,
+      `]\n`,
+
+    )
+  }
+
   if (type === 'styles') {
     template.push(
       `@import 'styles/_global.scss';\n`,
