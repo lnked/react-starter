@@ -49,7 +49,7 @@ if (!fs.existsSync(componentPath)) {
   if (essence === 'page') {
     const indexContents = fs.readFileSync(pathIndex, 'utf8')
 
-    fs.writeFileSync(componentRoute, getTemplate('route'));
+    fs.writeFileSync(componentRoute, getTemplate('route', folder));
     fs.writeFileSync(pathIndex, `export { routes as ${exportName}Route } from './${folder}/route'\n${indexContents}`)
   } else {
     // Append export

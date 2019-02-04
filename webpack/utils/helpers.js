@@ -10,7 +10,7 @@ module.exports.getTemplate = (type = 'class', name) => {
       `\t{`,
       `\t\tpath: 'page',`,
       `\t\tcomponent: loadComponent(() =>`,
-      `\t\t\timport(/* webpackPrefetch: true */ './')`,
+      `\t\t\timport(\n\t\t\t\t/* webpackChunkName: "${name}", webpackMode: "lazy-once", webpackPrefetch: true */\n\t\t\t\t'./'\n\t\t\t)`,
       `\t\t),`,
       `\t\ttitle: 'Page title',`,
       `\t\tdescription: 'Page description',`,
@@ -37,10 +37,10 @@ module.exports.getTemplate = (type = 'class', name) => {
       `import { P } from './types'`,
       `import { StyledDiv } from './styled'\n`,
       `const cx = classes.bind(css)\n`,
-      `export function ${name} ({ className = '' }: P) {`,
+      `export default function ${name} ({ className = '' }: P) {`,
       `\treturn <StyledDiv className={cx({ test: true }, className)} />`,
       `}\n`,
-      `export default ${name}\n`,
+      `export { ${name} }\n`,
     )
   }
 
@@ -52,7 +52,7 @@ module.exports.getTemplate = (type = 'class', name) => {
       `import { P, S } from './types'`,
       `import { StyledDiv, StyledButton } from './styled'\n`,
       `const cx = classes.bind(css)\n`,
-      `export class ${name} extends React.Component<P, S> {\n`,
+      `export default class ${name} extends React.Component<P, S> {\n`,
 
       `\tstatic defaultProps = {`,
       `\t\tvalue: '',`,
@@ -107,7 +107,7 @@ module.exports.getTemplate = (type = 'class', name) => {
       `\t\t)`,
       `\t}\n`,
       `}\n`,
-      `export default ${name}\n`,
+      `export { ${name} }\n`,
     )
   }
 
