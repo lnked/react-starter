@@ -5,6 +5,8 @@ module.exports = {
   chunkIds: 'named',
   nodeEnv: define.rs_mode,
   sideEffects: true,
+  usedExports: true,
+  providedExports: true,
   concatenateModules: true,
   runtimeChunk: {
     name: 'startup',
