@@ -21,6 +21,7 @@ module.exports = webpackMerge(config, {
 
     output: {
         ...config.output,
+        pathinfo: false,
         path: resolve(define.rs_dist, 'assets'),
         filename: 'js/[name].[chunkhash:7].js',
         chunkFilename: 'js/[name].[chunkhash:7].min.js',

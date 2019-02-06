@@ -11,8 +11,8 @@ const uglifyJsOptions = {
   ie8: false,
   ecma: 5,
   mangle: true,
+  warnings: define.rs_development,
   toplevel: false,
-  warnings: false,
   keep_fnames: false,
   parse: {
     html5_comments: false,
@@ -52,10 +52,11 @@ const uglifyJsOptions = {
 module.exports = {
   minimizer: [
     new UglifyJsPlugin({
+      test: /\.m?js$/,
       cache: true,
       parallel: true,
-      extractComments: 'all',
       sourceMap: define.rs_sourceMap,
+      extractComments: 'all',
       uglifyOptions: uglifyJsOptions,
     }),
     new OptimizeCSSAssetsPlugin({

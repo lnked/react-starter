@@ -20,7 +20,7 @@ export interface State {
 
 const cx = classes.bind(css)
 
-export class Quantity extends React.Component<Props, State> {
+export default class Quantity extends React.Component<Props, State> {
 
   static defaultProps = {
     type: 'number',
@@ -110,3 +110,5 @@ export class Quantity extends React.Component<Props, State> {
   }
 
 }
+
+export { Quantity }

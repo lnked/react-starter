@@ -4,6 +4,7 @@ module.exports = {
   minimize: define.rs_release,
   chunkIds: 'named',
   nodeEnv: define.rs_mode,
+  sideEffects: true,
   concatenateModules: true,
   runtimeChunk: {
     name: 'startup',
