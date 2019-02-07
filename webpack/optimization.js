@@ -6,7 +6,7 @@ module.exports = {
   nodeEnv: define.rs_mode,
   sideEffects: true,
   usedExports: true,
-  providedExports: true,
+  providedExports: false,
   concatenateModules: true,
   runtimeChunk: {
     name: 'startup',
