@@ -56,7 +56,7 @@ module.exports = {
       cache: true,
       parallel: true,
       sourceMap: define.rs_sourceMap,
-      extractComments: 'all',
+      extractComments: false,
       uglifyOptions: uglifyJsOptions,
     }),
     new OptimizeCSSAssetsPlugin({
