@@ -182,7 +182,7 @@
     "eslint-config-standard": "12.0.0",
     "eslint-import-resolver-node": "0.3.2",
     "eslint-loader": "2.1.2",
-    "eslint-plugin-compat": "2.6.3",
+    "eslint-plugin-compat": "2.7.0",
     "eslint-plugin-immutable": "1.0.0",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jest": "22.2.2",
