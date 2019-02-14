@@ -1134,10 +1134,10 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.1.tgz#48fd98c1561fe718b61733daed46ff115b496e18"
   integrity sha512-eqz8c/0kwNi/OEHQfvIuJVLTst3in0e7uTKeuY+WL/zfKn0xVujOTp42bS/vUUokhK5P2BppLd9JXMOMHcgbjA==
 
-"@types/react-dom@16.8.0":
-  version "16.8.0"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.8.0.tgz#c565f43f9d2ec911f9e0b8f3b74e25e67879aa3f"
-  integrity sha512-Jp4ufcEEjVJEB0OHq2MCZcE1u3KYUKO6WnSuiU/tZeYeiZxUoQavfa/TZeiIT+1XoN6l0lQVNM30VINZFDeolQ==
+"@types/react-dom@16.8.1":
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.8.1.tgz#e43810a5e44b37854a9c7cd99e6c43e4f522c7c6"
+  integrity sha512-Vyo4LqUvpjNC9RMXV6kXcsvW6U/WKOuHbz+mtY43Fu8AslHjQ5/Yx+sj0agGLkbnqOlQgyIgosewcxdjMirVXA==
   dependencies:
     "@types/react" "*"
 
@@ -1189,18 +1189,18 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.8.2":
-  version "16.8.2"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.2.tgz#3b7a7f7ea89d1c7d68b00849fb5de839011c077b"
-  integrity sha512-6mcKsqlqkN9xADrwiUz2gm9Wg4iGnlVGciwBRYFQSMWG6MQjhOZ/AVnxn+6v8nslFgfYTV8fNdE6XwKu6va5PA==
+"@types/react@16.8.3":
+  version "16.8.3"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.3.tgz#7b67956f682bea30a5a09b3242c0784ff196c848"
+  integrity sha512-PjPocAxL9SNLjYMP4dfOShW/rj9FDBJGu3JFRt0zEYf77xfihB6fq8zfDpMrV6s82KnAi7F1OEe5OsQX25Ybdw==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/styled-components@4.1.9":
-  version "4.1.9"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.9.tgz#68cecd5e15f8e1eef81b61a919e172c4053edbff"
-  integrity sha512-qg1VcvnQm6BHr7KV7Rneq2WUa6U0WVJCPasDfah0JafeE/wdNqxGXurefSVXGRCHzKqkoAvakjtA9n1dTizqdA==
+"@types/styled-components@4.1.10":
+  version "4.1.10"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.10.tgz#7d23d0f1f5b32a78a9207d0300480d47251a3e98"
+  integrity sha512-BrXaqsBG2iiT/U1SLLMa32rt3nYdKVBnMSgsbC7bmoGHp9sefmp6wF3FrEUCUFPTRuKf0AgYIP4HRaTo/pj0Ng==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
