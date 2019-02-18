@@ -9,7 +9,7 @@
     "clear:babel-cache": "rimraf -rf ./node_modules/.cache/babel-loader/*",
     "prebuild-config": "yarn run clean && yarn run lint && yarn run clear:babel-cache",
     "postdeploy": "gh-pages -d dist",
-    "postrelease": "yarn size-limit",
+    "postbuild-config": "yarn size-limit",
     "build-config": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack/production.config -p",
     "build": "yarn run build-config --opts assemply",
     "start:dll": "cross-env NODE_ENV=development ./node_modules/.bin/webpack --config webpack/dll.config",

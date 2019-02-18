@@ -1,3 +1,4 @@
+/* eslint-disable */
 const imports = [
   {
     libraryName: 'core-js',
@@ -19,23 +20,25 @@ const imports = [
 // ///////////////////////////////////////////////////////////
 // //////////////   PRESETS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
-// const transformPath = (prefix, preventFullImport) => {
-//   return {
-//     transform: importName => `${prefix}/${importName.toLowerCase()}`,
-//     preventFullImport,
-//   }
-// }
+const transformPath = (prefix, preventFullImport) => {
+  return {
+    // transform: importName => `${prefix}/${importName.toLowerCase()}`,
+    transform: importName => {
+      const name = importName.replace(/\.?([A-Z])/g, (x, y) => `-${y.toLowerCase()}`).replace(/^-/, "")
+      return `${prefix}/${name}`
+    },
+    preventFullImport,
+  }
+}
 
 const transforms = () => {
-  return {}
-  // return {
-  //   './components': transformPath('./components', true),
-  //   'pages\/?(((\\w*)?\/?)*)': transformPath('pages', false),
-  //   'services\/?(((\\w*)?\/?)*)': transformPath('services', false),
-  //   'fragments\/?(((\\w*)?\/?)*)': transformPath('fragments', false),
-  //   'components\/?(((\\w*)?\/?)*)': transformPath('components', false),
-  //   'containers\/?(((\\w*)?\/?)*)': transformPath('containers', false),
-  // }
+  return {
+    './components': transformPath('./components', true),
+    '^((?!node_modules))?\/?pages\/?(((\\w*)?\/?)*)': transformPath('pages', false),
+    '^((?!node_modules))?\/?layouts\/?(((\\w*)?\/?)*)': transformPath('layouts', false),
+    '^((?!node_modules))?\/?fragments\/?(((\\w*)?\/?)*)': transformPath('fragments', false),
+    '^((?!node_modules))?\/?components\/?(((\\w*)?\/?)*)': transformPath('components', false),
+  }
 }
 
 const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
