@@ -48,16 +48,16 @@ module.exports = {
 
   plugins: plugins.config,
 
-
-  node: {
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    global: true,
-    crypto: 'empty',
-    process: true,
-    module: false,
-    clearImmediate: false,
-    setImmediate: false,
-  },
+  node: false,
+  // node: {
+  //   fs: 'empty',
+  //   net: 'empty',
+  //   tls: 'empty',
+  //   global: true,
+  //   crypto: 'empty',
+  //   process: true,
+  //   module: false,
+  //   clearImmediate: false,
+  //   setImmediate: false,
+  // },
 }

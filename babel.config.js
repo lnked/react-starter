@@ -19,6 +19,25 @@ const imports = [
 // ///////////////////////////////////////////////////////////
 // //////////////   PRESETS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
+// const transformPath = (prefix, preventFullImport) => {
+//   return {
+//     transform: importName => `${prefix}/${importName.toLowerCase()}`,
+//     preventFullImport,
+//   }
+// }
+
+const transforms = () => {
+  return {}
+  // return {
+  //   './components': transformPath('./components', true),
+  //   'pages\/?(((\\w*)?\/?)*)': transformPath('pages', false),
+  //   'services\/?(((\\w*)?\/?)*)': transformPath('services', false),
+  //   'fragments\/?(((\\w*)?\/?)*)': transformPath('fragments', false),
+  //   'components\/?(((\\w*)?\/?)*)': transformPath('components', false),
+  //   'containers\/?(((\\w*)?\/?)*)': transformPath('containers', false),
+  // }
+}
+
 const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
   const presets = []
   presets.push([
@@ -50,6 +69,7 @@ const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
 const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
   const plugins = []
 
+  plugins.push(['transform-imports', transforms()])
   plugins.push('@loadable/babel-plugin')
 
   plugins.push(['module-resolver', {
