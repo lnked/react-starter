@@ -1,13 +1,13 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 import { P } from './types'
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export class Picture extends React.Component<P, {}> {
+export default class Picture extends React.Component<P, {}> {
 
   static defaultProps = {
     width: 'auto',

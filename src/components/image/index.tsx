@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface P {
   source?: any;
@@ -12,9 +12,9 @@ export interface S {
   isLoading: boolean;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export class Image extends React.Component<P, S> {
+export default class Image extends React.Component<P, S> {
 
   static defaultProps = {
     title: '',

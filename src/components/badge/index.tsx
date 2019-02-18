@@ -33,7 +33,7 @@ const StyledBadge = styled.div`
   background-color: $c-info-background;
 `
 
-export class Badge extends React.PureComponent<P, {}> {
+export default class Badge extends React.PureComponent<P, {}> {
 
   static defaultProps = {
     title: '',

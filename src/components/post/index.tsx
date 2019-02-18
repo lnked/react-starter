@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Skeleton from 'react-loading-skeleton'
 
-export class Post extends React.Component<{}, {}> {
+export default class Post extends React.Component<{}, {}> {
 
   static defaultProps = {}
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface P {
   location: {
@@ -9,7 +9,7 @@ export interface P {
   };
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 const NoMatchPage = ({ location }: P) => {
   return (

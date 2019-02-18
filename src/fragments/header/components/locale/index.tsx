@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 import { Link } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ export interface P {
   // handleChange?: () => void | boolean;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 export function Locale ({ checked, className = '' }: P) {
   const list: string[] = ['ru', 'en', 'de']

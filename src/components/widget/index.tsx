@@ -7,7 +7,7 @@ export interface P {
   children?: JSX.Element[] | JSX.Element | string;
 }
 
-export class Widget extends React.PureComponent<P, {}> {
+export default class Widget extends React.PureComponent<P, {}> {
 
   render () {
     const cn: string[] = []

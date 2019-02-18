@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export type P = {
   type?: string;
@@ -22,9 +22,9 @@ export type P = {
   handleClick?: () => void | boolean;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export function Button ({ type, size = 'small', circle, label, loading, children, handleClick, ...rest }: P) {
+export default function Button ({ type, size = 'small', circle, label, loading, children, handleClick, ...rest }: P) {
   const {
     info,
     danger,

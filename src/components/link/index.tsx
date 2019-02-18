@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface P {
   href: string;
@@ -9,9 +9,9 @@ export interface P {
   className: string;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export function Link ({ href, children = '', className = '', ...props }: P) {
+export default function Link ({ href, children = '', className = '', ...props }: P) {
   return (
     <a href={href} className={cx(css.link, className)} {...props}>
       {children}

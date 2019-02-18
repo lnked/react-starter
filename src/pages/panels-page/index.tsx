@@ -3,7 +3,7 @@ import * as css from './styles.scss'
 
 import { Group } from 'fragments'
 
-import { Card, CircularProgress } from 'components'
+import { CircularProgress } from 'components'
 
 import { STORE_UI, STORE_APP } from 'settings'
 
@@ -106,14 +106,14 @@ class PanelsPage extends React.Component<any, S> {
             const value = this.progress(progress[id].seconds, progress[id].seconds - progress[id].progress)
 
             return (
-              <Card key={id} className={css.product}>
+              <div key={id} className={css.product}>
                 <CircularProgress
                   stroke={4}
                   color={progress[id].color}
                   content={progress[id].progress}
                   progress={value}
                 />
-              </Card>
+              </div>
             )
           })}
         </Group>

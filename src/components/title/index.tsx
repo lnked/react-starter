@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface P {
   // size: 'tiny' | 'small' | 'normal' | 'medium' | 'huge';
@@ -12,9 +12,9 @@ export interface P {
   className?: string;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export function Title ({ label = '', children = '', center = false, className = '' }: P) {
+export default function Title ({ label = '', children = '', center = false, className = '' }: P) {
   return (
     <div className={cx(css.title, [ center ], className)}>
       {label || children}

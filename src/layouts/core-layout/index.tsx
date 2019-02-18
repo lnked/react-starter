@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 import { Header } from 'fragments'
 
@@ -13,7 +13,7 @@ export interface S {
   title: string;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 export class CoreLayout extends React.Component<P, S> {
 

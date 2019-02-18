@@ -16,7 +16,7 @@ export interface P {
   handleChange?: (page: number) => void | boolean;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 class Pagination extends React.Component<P, {}> {
 
@@ -180,4 +180,3 @@ class Pagination extends React.Component<P, {}> {
 }
 
 export default Pagination
-export { Pagination }

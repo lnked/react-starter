@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface PropsIcon {
   hidden?: boolean;
@@ -9,9 +9,9 @@ export interface PropsIcon {
   className?: string;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon) {
+export default function Icon ({ symbol = '', hidden = false, className = '' }: PropsIcon) {
   return (
     <svg
       className={cx({ icon: true }, className)}

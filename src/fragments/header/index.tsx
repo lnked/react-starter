@@ -1,14 +1,14 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 import {
   Locale,
   Navigation,
 } from './components'
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 export function Header () {
   return (

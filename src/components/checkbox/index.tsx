@@ -17,7 +17,7 @@ export interface S {
   checked: boolean;
 }
 
-export class Checkbox extends React.PureComponent<P, S> {
+export default class Checkbox extends React.PureComponent<P, S> {
 
   static defaultProps = {
     size: 'normal',

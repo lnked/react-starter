@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   name?: string;
@@ -18,9 +18,9 @@ export interface S {
   value?: string | number;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export class Input extends React.Component<InputProps, S> {
+export default class Input extends React.Component<InputProps, S> {
 
   static defaultProps = {
     type: 'text',

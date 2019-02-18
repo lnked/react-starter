@@ -1,4 +1,4 @@
-export const SvgFixer = () => {
+const SvgFixer = () => {
   const pattern = 'xlink:href'
   const baseUrl: string = window.location.origin || `${window.location.protocol}://${window.location.host}`
   const useList: any = document.querySelectorAll('use[*|href]')

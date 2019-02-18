@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 import { Icon, Button, Post } from 'components'
 
@@ -9,7 +9,7 @@ import { STORE_UI, STORE_APP, STORE_ROUTER } from 'settings'
 
 import { inject, observer } from 'mobx-react'
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 @inject(STORE_UI, STORE_APP, STORE_ROUTER)
 @observer

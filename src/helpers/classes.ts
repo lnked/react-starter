@@ -3,7 +3,7 @@ export interface S {
     bind: (css: any) => any;
 }
 
-export const classes: S = {
+const Classes: S = {
   styler: (css, ...args: any[]): string => {
     const r: string[] = []
 
@@ -29,6 +29,8 @@ export const classes: S = {
   },
 
   bind: css => {
-    return classes.styler.bind(classes, css)
+    return Classes.styler.bind(Classes, css)
   },
 }
+
+export default Classes

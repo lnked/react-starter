@@ -15,7 +15,7 @@ export interface S {
   checked: any;
 }
 
-export class Radio extends React.PureComponent<P, S> {
+export default class Radio extends React.PureComponent<P, S> {
 
   static defaultProps = {
     label: '',

@@ -20,10 +20,9 @@ const imports = [
 // ///////////////////////////////////////////////////////////
 // //////////////   PRESETS   ////////////////////////////////
 // ///////////////////////////////////////////////////////////
-const transformPath = (prefix, preventFullImport) => {
+const transform = (prefix, preventFullImport) => {
   return {
-    // transform: importName => `${prefix}/${importName.toLowerCase()}`,
-    transform: importName => {
+    transform: (importName, matches) => {
       const name = importName.replace(/\.?([A-Z])/g, (x, y) => `-${y.toLowerCase()}`).replace(/^-/, "")
       return `${prefix}/${name}`
     },
@@ -31,14 +30,14 @@ const transformPath = (prefix, preventFullImport) => {
   }
 }
 
-const transforms = () => {
-  return {
-    './components': transformPath('./components', true),
-    '^((?!node_modules))?\/?pages\/?(((\\w*)?\/?)*)': transformPath('pages', false),
-    '^((?!node_modules))?\/?layouts\/?(((\\w*)?\/?)*)': transformPath('layouts', false),
-    '^((?!node_modules))?\/?fragments\/?(((\\w*)?\/?)*)': transformPath('fragments', false),
-    '^((?!node_modules))?\/?components\/?(((\\w*)?\/?)*)': transformPath('components', false),
-  }
+const transforms = {
+  // './components': transform('./components', true),
+  // '^utils\/?(((\\w*)?\/?)*)': transform('utils', false),
+  // '^pages\/?(((\\w*)?\/?)*)': transform('pages', false),
+  // // '^helpers\/?(((\\w*)?\/?)*)': transform('helpers', false),
+  // '^layouts\/?(((\\w*)?\/?)*)': transform('layouts', false),
+  // '^fragments\/?(((\\w*)?\/?)*)': transform('fragments', false),
+  // '^components\/?(((\\w*)?\/?)*)': transform('components', false),
 }
 
 const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
@@ -72,7 +71,7 @@ const getPresets = ({ loose, useBuiltIns, production, modules, targets }) => {
 const getPlugins = ({ loose, legacy, useBuiltIns, test, development, production }) => {
   const plugins = []
 
-  plugins.push(['transform-imports', transforms()])
+  plugins.push(['transform-imports', transforms])
   plugins.push('@loadable/babel-plugin')
 
   plugins.push(['module-resolver', {

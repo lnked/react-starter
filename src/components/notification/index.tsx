@@ -5,7 +5,7 @@ export interface P {
   children?: JSX.Element[] | JSX.Element | any;
 }
 
-export function Notification ({ children }: P) {
+export default function Notification ({ children }: P) {
   // if (location.protocol.indexOf('https') >= 0) {
   //     Notification.requestPermission((permission) => {
   //         console.log('Результат запроса прав:', permission)

@@ -59,5 +59,4 @@ class ErrorBoundary extends React.PureComponent<Props, State> {
 
 }
 
-export { ErrorBoundary }
 export default ErrorBoundary

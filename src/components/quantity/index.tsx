@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface Props {
   name: string;
@@ -18,7 +18,7 @@ export interface State {
   count: number;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
 export default class Quantity extends React.Component<Props, State> {
 
@@ -110,5 +110,3 @@ export default class Quantity extends React.Component<Props, State> {
   }
 
 }
-
-export { Quantity }

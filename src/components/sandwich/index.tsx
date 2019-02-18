@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface P {
   isOpened?: boolean;
@@ -11,9 +11,9 @@ export interface S {
   isOpened: boolean;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export class Sandwich extends React.PureComponent<P, S> {
+export default class Sandwich extends React.PureComponent<P, S> {
 
   static defaultProps = {
     isOpened: false,

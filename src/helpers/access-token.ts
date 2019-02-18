@@ -2,7 +2,7 @@
 // https://www.npmjs.com/package/storage.io
 import { session } from 'storage.io'
 
-export class Storage {
+class Storage {
 
   get = (name: string = 'token') => session.get(name)
 
@@ -11,3 +11,5 @@ export class Storage {
   clear = (name: string = 'token') => session.remove(name)
 
 }
+
+export default Storage

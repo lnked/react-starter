@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as css from './styles.scss'
 
-import { classes } from 'helpers'
+import { Classes } from 'helpers'
 
 export interface P {
   color: string;
@@ -11,9 +11,9 @@ export interface P {
   progress: number;
 }
 
-const cx = classes.bind(css)
+const cx = Classes.bind(css)
 
-export function CircularProgress ({ color, radius = 60, stroke, content, progress }: P) {
+export default function CircularProgress ({ color, radius = 60, stroke, content, progress }: P) {
   const normalizedRadius = radius - stroke * 2
   const circumference = normalizedRadius * 2 * Math.PI
 

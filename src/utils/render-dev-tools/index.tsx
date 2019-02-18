@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { environment } from 'settings'
 
-export function renderDevTools (noPanel = false) {
+export default function renderDevTools (noPanel = false) {
   if (environment.development) {
     const { configureDevtool } = require('mobx-react-devtools')
 

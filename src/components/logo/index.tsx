@@ -7,7 +7,7 @@ export interface P {
   link: string
 }
 
-export class Logo extends React.PureComponent<P, {}> {
+export default class Logo extends React.PureComponent<P, {}> {
 
   static defaultProps = {
     link: '/',

@@ -45,7 +45,7 @@ export type P = {
   handleClick?: () => void | boolean;
 }
 
-export function Button ({ type, size = 'small', circle, label, loading, children, handleClick, ...rest }: P) {
+export default function Button ({ type, size = 'small', circle, label, loading, children, handleClick, ...rest }: P) {
   return (
     <Container>
       <StyledButton

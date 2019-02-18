@@ -8,7 +8,7 @@ export interface S {
   opened: null | string;
 }
 
-export class OutsideClicked extends React.Component<P, S> {
+export default class OutsideClicked extends React.Component<P, S> {
 
   wrapper: any = React.createRef()
 

@@ -9,7 +9,6 @@ import {
 import { Group } from 'fragments'
 
 import {
-  Card,
   Input,
   Button,
 } from 'components'
@@ -62,7 +61,7 @@ class ExamplePage extends React.Component<any, any> {
 
         <Group type={type}>
           {products && products.map((item: Product) => (
-            <Card key={item.id} className={css.product}>
+            <div key={item.id} className={css.product}>
               <img src="https://via.placeholder.com/250x180" className={css.productImage} alt="" />
               <div className={css.productTitle}>{item.name}</div>
               <div className={css.productCategory}>{item.category}</div>
@@ -71,7 +70,7 @@ class ExamplePage extends React.Component<any, any> {
                 <div className={css.productPrice}>{formatMoney(item.price)} ₽</div>
                 <Button size="small" primary>В корзину</Button>
               </footer>
-            </Card>
+            </div>
           ))}
         </Group>
       </div>

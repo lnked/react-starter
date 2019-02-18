@@ -9,7 +9,7 @@ export interface S {
   component: any;
 }
 
-export class DynamicImport extends React.Component<P, S> {
+export default class DynamicImport extends React.Component<P, S> {
 
   state = {
     component: null,
